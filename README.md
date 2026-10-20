@@ -1,24 +1,32 @@
 # superkasa.cz – prezentační web pokladny SuperKasa
 
-Statický web: čisté HTML a CSS, jeden malý skript na mobilní menu (`js/menu.js`). Žádný framework, žádné sestavování,
-žádné cookies ani sledovací skripty (proto není potřeba cookie lišta). Písmo je systémové, nic se nenačítá z cizích serverů.
+Statický web: hotové HTML a CSS, jeden malý skript na mobilní menu a filtr oborů (`js/site.js`). Žádný framework,
+na hosting se nahrávají soubory tak, jak jsou. Žádné cookies ani sledovací skripty (proto není potřeba cookie lišta).
+Písmo je systémové, nic se nenačítá z cizích serverů.
 
 ## Stránky
 
 | Soubor | Obsah |
 | --- | --- |
-| `index.html` | Úvod – co SuperKasa je, pro koho, hlavní výhody, jak začít |
+| `index.html` | Úvod – velké karty oborů (výběr jako v aplikaci, filtr Obchody / Gastro / Služby), výhody, jak začít |
+| `obory.html` | Pro koho – stejný výběr oboru |
+| `pokladna-*.html` | 14 stránek oborů: jak bude pokladna nastavená (skupiny, dlaždice, ukázkové položky, funkce, tarif) s náhledem |
 | `funkce.html` | Funkce pokladny |
-| `cenik.html` | Tarify, 199 Kč měsíčně / 2 149 Kč ročně s DPH, zkouška, pronájem a koupě |
-| `eet.html` | EET 2.0 – jak to pokladna dělá, odkazy na Finanční správu |
-| `ke-stazeni.html` | Místo pro instalátor pro Windows (zatím „připravujeme“) |
+| `cenik.html` | Tarify, 199 Kč měsíčně / 2 149 Kč ročně s DPH, zkouška, pronájem a koupě, časté otázky |
+| `eet.html` | EET 2.0 – jak to pokladna dělá, co zařídí podnikatel, odkazy na Finanční správu |
+| `ke-stazeni.html` | Místo pro instalátor pro Windows (zatím „připravujeme“) a potřebné vybavení |
 | `kontakt.html` | Kontakt na výrobce (bez DIČ – to se nezveřejňuje) |
 | `obchodni-podminky.html` | **Koncept** k právní kontrole (`noindex`, není v sitemap) |
 | `ochrana-osobnich-udaju.html` | **Koncept** k právní kontrole (`noindex`, není v sitemap) |
 | `404.html` | Chybová stránka (odkazy od kořene webu, funguje jen na serveru) |
 
-Další soubory: `css/style.css`, `img/` (logo, náhled pro sdílení `og.png`), `favicon.ico`, `favicon.svg`,
-`apple-touch-icon.png`, `sitemap.xml`, `robots.txt`, `.htaccess` (Apache: 404, bezpečnostní hlavičky, cache, komprese).
+Obory odpovídají typům provozu v pokladně (`src/domain/presets.ts` v repozitáři pokladny) – kromě stránky
+**Hospoda, bar, restaurace**: pokladna zatím nemá stoly ani účty na stůl, stránka to otevřeně říká a radí zvolit typ
+„Kavárna, bistro, stánek“.
+
+Další soubory: `css/style.css`, `img/` (logo, náhled pro sdílení `og.png`, `img/obory/` = kreslené obrázky skupin
+z pokladny), `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `sitemap.xml`, `robots.txt`, `.htaccess` (Apache: 404,
+bezpečnostní hlavičky, cache, komprese).
 
 ## Lokální náhled
 
@@ -26,24 +34,44 @@ Stačí otevřít `index.html` dvojklikem v prohlížeči – všechny odkazy js
 
 ## Úpravy
 
-- Hlavička a patička jsou v každé stránce zvlášť – když se mění menu nebo kontakt, upravte všechny `*.html`.
-- V hlavičce každé stránky je jeden vložený skript `document.documentElement.className+=" js"`. Jeho SHA-256 je
-  v `.htaccess` (Content-Security-Policy). Když ho změníte, přepočítejte hash, jinak se na serveru nespustí:
-  `node -e "console.log(require('crypto').createHash('sha256').update('document.documentElement.className+=\" js\"').digest('base64'))"`
+HTML stránky se skládají z podkladů ve složce `tools/stranky` (hlavička a patička jsou tak jen na jednom místě).
+**Neupravujte HTML ručně** – změňte podklady a spusťte (potřebuje Node.js):
+
+```
+node tools/sestavit.mjs
+```
+
+| Podklad | Co v něm je |
+| --- | --- |
+| `tools/stranky/parts.mjs` | hlavička, menu, patička, ikony |
+| `tools/stranky/obory.mjs` | data oborů: skupiny, dlaždice, ukázkové položky, funkce, tarify – podle repozitáře pokladny |
+| `tools/stranky/obory-stranky.mjs` | výběr oboru (karty) a šablona stránky oboru s náhledem pokladny |
+| `tools/stranky/pages1.mjs` | úvod a funkce |
+| `tools/stranky/pages2.mjs` | ceník, EET 2.0, ke stažení, kontakt |
+| `tools/stranky/pages3.mjs` | koncepty podmínek a ochrany osobních údajů, 404 |
+
+Skript zapíše i `sitemap.xml` (s dnešním datem) a `robots.txt` a zkontroluje, že hash vloženého skriptu sedí
+s Content-Security-Policy v `.htaccess`.
+
+- Když se v pokladně změní typ provozu, tarif nebo funkce, upravte `tools/stranky/obory.mjs`.
 - Po změně loga (`img/superkasa-logo.webp` nebo `favicon.svg`) znovu vyrobte obrázky: `node tools/make-images.mjs`
-  (potřebuje Node.js a Chrome nebo Edge).
-- Po změně stránek upravte `lastmod` v `sitemap.xml`.
-- Až bude instalátor veřejný, nahraďte v `ke-stazeni.html` tlačítko „Připravujeme“ odkazem na
-  `https://superkasa.cz/aktualizace/SuperKasa-Setup-X.Y.Z.exe` a upravte texty „připravujeme“ na úvodu a v hlavičce stránky.
+  (potřebuje Chrome nebo Edge). Obrázky oborů v `img/obory` jsou zkopírované z `public/img/art` v repozitáři pokladny.
+- Až bude instalátor veřejný, nahraďte v `tools/stranky/pages2.mjs` (stránka Ke stažení) tlačítko „Připravujeme“
+  odkazem na `https://superkasa.cz/aktualizace/SuperKasa-Setup-X.Y.Z.exe` a upravte texty „připravujeme“
+  (úvod, stránky oborů).
 
 ## Nahrání na hosting
 
 Před zveřejněním: nechat právně zkontrolovat obchodní podmínky a ochranu osobních údajů (do té doby jsou označené jako
-koncept), doplnit žlutě označená místa a ověřit texty o EET 2.0.
+koncept), doplnit žlutě označená místa a ověřit texty o EET 2.0 (stránka uvádí stav k 21. 10. 2026).
 
-1. **Hosting a doména.** Stačí nejlevnější webhosting se statickými soubory (PHP ani databáze nejsou potřeba), ideálně
-   s Apache, aby fungoval `.htaccess`. U registrátora domény nasměrujte DNS `superkasa.cz` a `www.superkasa.cz` na hosting
-   (záznamy A/AAAA nebo CNAME podle návodu hostingu). Změna DNS se projeví do několika hodin.
+**Jaký hosting:** pro samotný web stačí nejlevnější webhosting se statickými soubory (PHP ani databáze nejsou potřeba),
+ideálně s Apache, aby fungoval `.htaccess`. Sdílená databáze názvů zboží (`katalog.superkasa.cz`) ale potřebuje
+**VPS** s Node.js (viz `docs/sdilena-databaze.md` v repozitáři pokladny). Pokud bude VPS, může na něm běžet i tenhle web
+(Caddy zvládne obě domény) – pak se `.htaccess` nepoužije a hlavičky z něj je potřeba přenést do konfigurace Caddy.
+
+1. **Doména.** U registrátora nasměrujte DNS `superkasa.cz` a `www.superkasa.cz` na hosting (záznamy A/AAAA nebo
+   CNAME podle návodu hostingu). Změna DNS se projeví do několika hodin.
 2. **HTTPS.** V administraci hostingu zapněte certifikát (většinou Let's Encrypt zdarma). Pak v `.htaccess` odkomentujte
    blok „Přesměrování na https“.
 3. **Nahrání souborů.** Přes FTP/SFTP (např. WinSCP nebo FileZilla) nebo správce souborů hostingu nahrajte **obsah** této
@@ -54,10 +82,11 @@ koncept), doplnit žlutě označená místa a ověřit texty o EET 2.0.
 4. **Složka `aktualizace/` na serveru je pro pokladny.** Z ní si pokladny stahují `manifest.json` a instalátory
    (výchozí adresa `https://superkasa.cz/aktualizace/manifest.json`). Při nahrávání webu ji nepřepisujte ani nemažte –
    nepoužívejte „synchronizaci se smazáním“ celé složky webu. Postup vydání verze je v README repozitáře pokladny.
-5. **Kontrola.** Otevřete https://superkasa.cz, proklikejte menu na telefonu i počítači, zkuste neexistující adresu
-   (má se ukázat stránka „Stránku jsme nenašli“) a náhled odkazu např. v Messengeru nebo WhatsAppu (obrázek `og.png`).
+5. **Kontrola.** Otevřete https://superkasa.cz, proklikejte menu a výběr oboru na telefonu i počítači, zkuste
+   neexistující adresu (má se ukázat stránka „Stránku jsme nenašli“) a náhled odkazu např. v Messengeru nebo WhatsAppu
+   (obrázek `og.png`).
 6. **Vyhledávače (volitelně).** V Google Search Console a Bing Webmaster Tools ověřte doménu a odešlete
    `https://superkasa.cz/sitemap.xml`.
 
-Pokud hosting nepoužívá Apache (např. nginx nebo statický hosting typu Netlify / Cloudflare Pages), `.htaccess` se ignoruje:
-stránku 404 a hlavičky (hlavně Content-Security-Policy z `.htaccess`) je pak potřeba nastavit v jeho administraci.
+Pokud hosting nepoužívá Apache (nginx, Caddy, statický hosting typu Netlify / Cloudflare Pages), `.htaccess` se ignoruje:
+stránku 404 a hlavičky (hlavně Content-Security-Policy z `.htaccess`) je pak potřeba nastavit v jeho konfiguraci.

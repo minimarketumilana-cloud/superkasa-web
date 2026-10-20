@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
 <meta charset="utf-8">
@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.className+=" js"</script>
-<script src="js/menu.js" defer></script>
+<script src="js/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#obsah">Přeskočit na obsah</a>
@@ -34,6 +34,7 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span>Menu</button>
     <nav class="nav" id="nav" aria-label="Hlavní menu">
       <a href="index.html">Úvod</a>
+      <a href="obory.html">Pro koho</a>
       <a href="funkce.html">Funkce</a>
       <a href="cenik.html">Ceník</a>
       <a href="eet.html">EET 2.0</a>
@@ -55,31 +56,47 @@
     
 <div class="draft-banner" role="note">
   <strong>KONCEPT – zatím neplatí</strong>
-  <p>Tento text je pracovní návrh zásad ochrany osobních údajů a před zveřejněním projde právní kontrolou. Nejde o platné ani závazné znění. Žlutě označená místa je potřeba doplnit.</p>
+  <p>Tento text je pracovní návrh zásad ochrany osobních údajů a před zveřejněním projde právní kontrolou. Nejde o platné ani závazné znění. Žlutě označená místa je potřeba doplnit nebo ověřit.</p>
 </div>
 
     <h2>1. Správce</h2>
-    <p>Thanh Lam Nguyen, IČO 14161648, 1. května 117/141, 725 25 Ostrava, telefon +420 608 886 882. <span class="ph">[doplnit e-mail pro dotazy k osobním údajům]</span></p>
+    <p>Thanh Lam Nguyen, IČO 14161648, místo podnikání 1. května 117/141, 725 25 Ostrava, telefon +420&nbsp;608&nbsp;886&nbsp;882, e-mail <span class="ph">[doplnit e-mail pro dotazy k osobním údajům]</span> (dále „správce“).</p>
 
     <h2>2. Web superkasa.cz</h2>
     <ul>
       <li>Web nepoužívá cookies, analytické ani reklamní nástroje a nenačítá obsah z cizích serverů.</li>
-      <li>Poskytovatel hostingu může technicky zaznamenávat přístupy (např. IP adresu a čas) pro provoz a zabezpečení serveru. <span class="ph">[doplnit poskytovatele hostingu a dobu uchování záznamů]</span></li>
+      <li>Server webu může technicky zaznamenávat přístupy (IP adresu, čas, adresu stránky a údaje o prohlížeči) kvůli provozu a zabezpečení. Právní základ: oprávněný zájem (čl. 6 odst. 1 písm. f) GDPR). <span class="ph">[doplnit poskytovatele hostingu a dobu uchování záznamů]</span></li>
     </ul>
 
-    <h2>3. Zákazníci a zájemci</h2>
-    <p>Když nás kontaktujete nebo si objednáte licenci, zpracováváme údaje potřebné k vyřízení: jméno nebo název firmy, IČO, adresu, telefon a e-mail. Účelem je komunikace, uzavření a plnění smlouvy a plnění účetních a daňových povinností. <span class="ph">[doplnit právní základy a doby uchování]</span></p>
+    <h2>3. Zájemci a zákazníci</h2>
+    <div class="table-wrap"><table class="dtable">
+      <thead><tr><th scope="col">Účel</th><th scope="col">Údaje</th><th scope="col">Právní základ</th><th scope="col">Doba uchování</th></tr></thead>
+      <tbody>
+        <tr><td>Odpověď na dotaz, domluva zkušební instalace</td><td>jméno, telefon, e-mail, název firmy</td><td>kroky před uzavřením smlouvy, oprávněný zájem</td><td><span class="ph">[doplnit]</span></td></tr>
+        <tr><td>Licence, fakturace a podpora</td><td>jméno nebo název, IČO, DIČ, adresa, kontakt, číslo licence, tarif</td><td>plnění smlouvy (čl. 6 odst. 1 písm. b)</td><td>po dobu smlouvy a <span class="ph">[doplnit]</span></td></tr>
+        <tr><td>Účetnictví a daně</td><td>údaje na daňových dokladech</td><td>právní povinnost (čl. 6 odst. 1 písm. c)</td><td>po dobu stanovenou zákony <span class="ph">[ověřit – zákon o účetnictví, zákon o DPH]</span></td></tr>
+      </tbody>
+    </table></div>
 
     <h2>4. Data v pokladně</h2>
     <ul>
-      <li>Doklady, zboží, prodavači a další data pokladny jsou uložené na počítači uživatele v jeho provozovně. Poskytovatel k nim nemá přístup.</li>
-      <li>Tržby odesílá pokladna přímo do systému EET 2.0 Finanční správy.</li>
-      <li>Pokladna se připojuje k serveru superkasa.cz kvůli kontrole aktualizací. <span class="ph">[ověřit, jaké údaje se při tom zaznamenávají]</span></li>
-      <li>Sdílená databáze názvů zboží: pokladna se může zeptat na název zboží podle čárového kódu. Pokud uživatel zapne přispívání, posílá čárový kód, název, velikost balení, skupinu zboží a sazbu DPH. Nikdy se neposílají ceny, prodeje, údaje o obchodě ani o zákaznících.</li>
+      <li>Doklady, zboží, prodavači, uzávěrky a další data pokladny jsou uložené na počítači uživatele v jeho provozovně. Správce k nim nemá přístup. Za osobní údaje, které uživatel do pokladny ukládá, odpovídá uživatel jako jejich správce.</li>
+      <li>Tržby pokladna odesílá přímo do systému EET 2.0 Finanční správy, ne přes servery SuperKasa.</li>
+      <li>Licenční klíč pokladna ověřuje bez internetu.</li>
     </ul>
 
-    <h2>5. Vaše práva</h2>
-    <p>Máte právo na přístup k osobním údajům, jejich opravu, výmaz, omezení zpracování, přenositelnost a právo vznést námitku. Stížnost můžete podat u Úřadu pro ochranu osobních údajů (<a href="https://uoou.gov.cz/" rel="noopener">uoou.gov.cz</a>).</p>
+    <h2>5. Kdy se pokladna připojuje k internetu</h2>
+    <ul>
+      <li><strong>Aktualizace:</strong> pokladna si ze serveru superkasa.cz stahuje popis nové verze a instalátor. Server přitom vidí IP adresu a verzi pokladny. <span class="ph">[ověřit záznamy serveru a dobu jejich uchování]</span></li>
+      <li><strong>Sdílená databáze názvů zboží (katalog.superkasa.cz):</strong> pokladna se ptá na název podle čárového kódu a požadavky podepisuje vlastním klíčem pokladny. Server ukládá veřejný klíč pokladny, u placených pokladen číslo licence a – jen když uživatel zapne přispívání – čárový kód, název, velikost balení, skupinu a sazbu DPH. Ceny, prodeje ani údaje o obchodě a zákaznících se neodesílají. IP adresa se ukládá jen v denním počítadle proti zneužití a po týdnu se maže. Dohledávání jde ve Správě vypnout.</li>
+      <li><strong>Názvy a obrázky zboží z internetu:</strong> pokladna se může ptát služeb Open Food Facts a Wikimedia Commons na název nebo obrázek podle čárového kódu či názvu. Tyto služby vidí dotaz a IP adresu obchodu.</li>
+    </ul>
+
+    <h2>6. Příjemci a předání do zahraničí</h2>
+    <p>Údaje mohou zpracovávat dodavatelé správce: poskytovatel hostingu a serveru <span class="ph">[doplnit]</span>, účetní <span class="ph">[doplnit]</span>. Údaje nepředáváme mimo Evropskou unii <span class="ph">[ověřit podle zvoleného hostingu]</span>.</p>
+
+    <h2>7. Vaše práva</h2>
+    <p>Máte právo na přístup k osobním údajům, jejich opravu, výmaz, omezení zpracování, přenositelnost a právo vznést námitku proti zpracování na základě oprávněného zájmu. Žádost pošlete na kontakt výše. Stížnost můžete podat u Úřadu pro ochranu osobních údajů (<a href="https://uoou.gov.cz/" rel="noopener">uoou.gov.cz</a>).</p>
 
     <p class="small">Účinné od <span class="ph">[doplnit datum]</span>.</p>
   </div>
@@ -91,17 +108,32 @@
       <div>
         <div class="foot-brand"><img src="favicon.svg" alt="" width="40" height="40"><b>Super<span>Kasa</span></b></div>
         <p>Pokladní systém pro obchody, občerstvení a služby s EET&nbsp;2.0, skladem a cenovkami. Pro obsluhu i ve vietnamštině.</p>
-        <p><a href="tel:+420608886882">+420 608 886 882</a></p>
+        <p><a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
       </div>
       <div>
         <h2>Stránky</h2>
         <ul>
           <li><a href="index.html">Úvod</a></li>
+          <li><a href="obory.html">Pro koho</a></li>
           <li><a href="funkce.html">Funkce</a></li>
           <li><a href="cenik.html">Ceník</a></li>
           <li><a href="eet.html">EET 2.0</a></li>
           <li><a href="ke-stazeni.html">Ke stažení</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Obory</h2>
+        <ul>
+          <li><a href="pokladna-vecerka.html">Večerka a minimarket</a></li>
+          <li><a href="pokladna-trafika.html">Trafika</a></li>
+          <li><a href="pokladna-pekarna.html">Pekárna a cukrárna</a></li>
+          <li><a href="pokladna-drogerie.html">Drogerie</a></li>
+          <li><a href="pokladna-kavarna-bistro.html">Kavárna, bistro, stánek</a></li>
+          <li><a href="pokladna-hospoda-restaurace.html">Hospoda, bar, restaurace</a></li>
+          <li><a href="pokladna-kadernictvi.html">Kadeřnictví a holičství</a></li>
+          <li><a href="pokladna-nehtove-studio.html">Nehtové studio</a></li>
+          <li><a href="obory.html">Všechny obory</a></li>
         </ul>
       </div>
       <div>

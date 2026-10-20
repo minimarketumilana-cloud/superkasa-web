@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
 <meta charset="utf-8">
@@ -23,7 +23,8 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.className+=" js"</script>
-<script src="js/menu.js" defer></script>
+<script src="js/site.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Je cena konečná?","acceptedAnswer":{"@type":"Answer","text":"Ano, 199 Kč měsíčně a 2 149 Kč ročně jsou ceny včetně DPH."}},{"@type":"Question","name":"Kolik zařízení můžu používat?","acceptedAnswer":{"@type":"Answer","text":"V každém tarifu jsou 2 pokladní zařízení. Další zařízení jsou na dotaz."}},{"@type":"Question","name":"Co se stane s daty, když přestanu platit?","acceptedAnswer":{"@type":"Answer","text":"Data zůstávají na vašem počítači. Prodej i EET běží ještě 30 dní s upozorněním, potom se zastaví nový prodej. Doklady, uzávěrky, vratky a export dat fungují dál."}}]}</script>
 </head>
 <body>
 <a class="skip" href="#obsah">Přeskočit na obsah</a>
@@ -33,6 +34,7 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span>Menu</button>
     <nav class="nav" id="nav" aria-label="Hlavní menu">
       <a href="index.html">Úvod</a>
+      <a href="obory.html">Pro koho</a>
       <a href="funkce.html">Funkce</a>
       <a href="cenik.html" aria-current="page">Ceník</a>
       <a href="eet.html">EET 2.0</a>
@@ -46,7 +48,7 @@
 <section class="page-head">
   <div class="wrap">
     <h1>Ceník</h1>
-    <p class="lead">Jedna cena pro všechny obory. Tarif vyberete podle typu provozu a liší se jen funkcemi, které váš obor potřebuje.</p>
+    <p class="lead">Jedna cena pro všechny obory. Tarif se řídí typem provozu a liší se jen funkcemi, které váš obor potřebuje.</p>
   </div>
 </section>
 
@@ -67,7 +69,7 @@
           <li>Účtenky, hotovost a uzávěrky</li>
           <li>Sklad, akce, zákaznický displej a QR platby</li>
           <li>Čeština, vietnamština a angličtina pro obsluhu</li>
-          <li>Zálohy a export dat</li>
+          <li>Zálohy a export dat, aktualizace</li>
           <li>2 pokladní zařízení – další na dotaz</li>
         </ul>
       </div>
@@ -79,7 +81,7 @@
       <article class="card plan feat">
         <span class="badge">Všechny funkce</span>
         <h3>Potraviny</h3>
-        <p class="who">Večerka, minimarket, pekárna, zelenina, řeznictví.</p>
+        <p class="who">Večerka, minimarket, pekárna, ovoce a zelenina, řeznictví.</p>
         <div class="p">199 Kč <small>/ měsíc</small></div>
         <div class="py">nebo 2 149 Kč ročně · včetně DPH</div>
         <ul class="checks">
@@ -87,13 +89,17 @@
           <li>EET 2.0 a účtenky</li>
           <li>Hotovost a uzávěrky</li>
           <li>2 pokladní zařízení</li>
-          <li>Sklad, expirace a cenovky</li>
+          <li>Sklad</li>
+          <li>Expirace</li>
+          <li>Cenovky</li>
           <li>Zálohy na obaly</li>
           <li>Váha a vážené kódy</li>
-          <li>Akce, displej, QR platby</li>
+          <li>Akce a množstevní ceny</li>
+          <li>Zákaznický displej</li>
+          <li>QR platby</li>
         </ul>
+        <p class="plan-obory">Obory: <a href="pokladna-vecerka.html">Večerka a minimarket</a>, <a href="pokladna-pekarna.html">Pekárna a cukrárna</a>, <a href="pokladna-ovoce-zelenina.html">Ovoce a zelenina</a>, <a href="pokladna-reznictvi.html">Řeznictví a uzeniny</a></p>
       </article>
-      
       <article class="card plan">
         
         <h3>Obchod</h3>
@@ -105,16 +111,20 @@
           <li>EET 2.0 a účtenky</li>
           <li>Hotovost a uzávěrky</li>
           <li>2 pokladní zařízení</li>
-          <li>Sklad, expirace a cenovky</li>
+          <li>Sklad</li>
+          <li>Expirace</li>
+          <li>Cenovky</li>
           <li>Zálohy na obaly</li>
-          <li>Akce, displej, QR platby</li>
+          <li>Akce a množstevní ceny</li>
+          <li>Zákaznický displej</li>
+          <li>QR platby</li>
         </ul>
+        <p class="plan-obory">Obory: <a href="pokladna-trafika.html">Trafika</a>, <a href="pokladna-drogerie.html">Drogerie</a>, <a href="pokladna-obchod.html">Jiný obchod</a></p>
       </article>
-      
       <article class="card plan">
         
         <h3>Gastro</h3>
-        <p class="who">Kavárna, bistro, stánek s občerstvením.</p>
+        <p class="who">Kavárna, bistro, stánek, prodej u baru.</p>
         <div class="p">199 Kč <small>/ měsíc</small></div>
         <div class="py">nebo 2 149 Kč ročně · včetně DPH</div>
         <ul class="checks">
@@ -124,10 +134,12 @@
           <li>2 pokladní zařízení</li>
           <li>Sklad</li>
           <li>Zálohy na obaly</li>
-          <li>Akce, displej, QR platby</li>
+          <li>Akce a množstevní ceny</li>
+          <li>Zákaznický displej</li>
+          <li>QR platby</li>
         </ul>
+        <p class="plan-obory">Obory: <a href="pokladna-kavarna-bistro.html">Kavárna, bistro, stánek</a>, <a href="pokladna-hospoda-restaurace.html">Hospoda, bar, restaurace</a></p>
       </article>
-      
       <article class="card plan">
         
         <h3>Nehtové studio</h3>
@@ -140,10 +152,12 @@
           <li>Hotovost a uzávěrky</li>
           <li>2 pokladní zařízení</li>
           <li>Sklad</li>
-          <li>Akce, displej, QR platby</li>
+          <li>Akce a množstevní ceny</li>
+          <li>Zákaznický displej</li>
+          <li>QR platby</li>
         </ul>
+        <p class="plan-obory">Obory: <a href="pokladna-nehtove-studio.html">Nehtové studio</a></p>
       </article>
-      
       <article class="card plan">
         
         <h3>Služby</h3>
@@ -156,13 +170,16 @@
           <li>Hotovost a uzávěrky</li>
           <li>2 pokladní zařízení</li>
           <li>Sklad</li>
-          <li>Akce, displej, QR platby</li>
+          <li>Akce a množstevní ceny</li>
+          <li>Zákaznický displej</li>
+          <li>QR platby</li>
         </ul>
+        <p class="plan-obory">Obory: <a href="pokladna-kadernictvi.html">Kadeřnictví a holičství</a>, <a href="pokladna-kosmetika.html">Kosmetika a masáže</a>, <a href="pokladna-opravna.html">Opravna a servis</a>, <a href="pokladna-sluzby.html">Jiné služby</a></p>
       </article>
       <article class="card plan" style="background:var(--cream)">
         <h3>Nevíte, který tarif?</h3>
-        <p class="who">Zavolejte nám, poradíme podle toho, co prodáváte.</p>
-        <div class="actions" style="margin-top:auto"><a class="btn btn-ghost" href="tel:+420608886882">+420 608 886 882</a></div>
+        <p class="who">Tarif se vybere sám podle oboru, který zvolíte při prvním spuštění. <a href="obory.html">Najděte svůj obor</a>, nebo zavolejte – poradíme.</p>
+        <div class="actions" style="margin-top:auto"><a class="btn btn-ghost" href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></div>
       </article>
     </div>
   </div>
@@ -177,18 +194,18 @@
     
 <div class="table-wrap">
   <table>
-    <caption class="small" style="caption-side:bottom;padding:12px 16px;text-align:left">Funkce jdou v pokladně zapnout nebo vypnout podle potřeby (Správa → Systém → Funkce pokladny).</caption>
+    <caption class="small">Funkce jdou v pokladně zapnout nebo vypnout podle potřeby (Správa → Systém → Funkce pokladny).</caption>
     <thead><tr><th scope="col">Funkce</th><th scope="col">Potraviny</th><th scope="col">Obchod</th><th scope="col">Gastro</th><th scope="col">Nehtové studio</th><th scope="col">Služby</th></tr></thead>
     <tbody>
-      <tr><th scope="row" style="font-weight:600;text-align:left">Prodej, EET 2.0, účtenky, uzávěrky</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td></tr>
-      <tr><th scope="row" style="font-weight:600;text-align:left">Sklad (příjem, inventura)</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td></tr>
-      <tr><th scope="row" style="font-weight:600;text-align:left">Akce a množstevní ceny</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td></tr>
-      <tr><th scope="row" style="font-weight:600;text-align:left">Zákaznický displej</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td></tr>
-      <tr><th scope="row" style="font-weight:600;text-align:left">QR platby</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td></tr>
-      <tr><th scope="row" style="font-weight:600;text-align:left">Zálohy na obaly</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td></tr>
-      <tr><th scope="row" style="font-weight:600;text-align:left">Cenovky</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td></tr>
-      <tr><th scope="row" style="font-weight:600;text-align:left">Expirace</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td></tr>
-      <tr><th scope="row" style="font-weight:600;text-align:left">Váha a vážené kódy</th><td class="y">✓<span class="sr"> ano</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td></tr>
+      <tr><th scope="row">Prodej, EET 2.0, účtenky, uzávěrky</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td></tr>
+      <tr><th scope="row">Sklad</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td></tr>
+      <tr><th scope="row">Expirace</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td></tr>
+      <tr><th scope="row">Cenovky</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td></tr>
+      <tr><th scope="row">Zálohy na obaly</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td></tr>
+      <tr><th scope="row">Váha a vážené kódy</th><td class="y">✓<span class="sr"> ano</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td><td class="n">–<span class="sr"> ne</span></td></tr>
+      <tr><th scope="row">Akce a množstevní ceny</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td></tr>
+      <tr><th scope="row">Zákaznický displej</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td></tr>
+      <tr><th scope="row">QR platby</th><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td><td class="y">✓<span class="sr"> ano</span></td></tr>
     </tbody>
   </table>
 </div>
@@ -202,7 +219,7 @@
       <article class="card">
         <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
         <h3>Pronájem</h3>
-        <p>Platíte měsíčně (199 Kč) nebo ročně (2 149 Kč), vždy včetně DPH. Licence platí do zaplaceného data a aktualizace máte po celou dobu pronájmu.</p>
+        <p>Platíte měsíčně (199 Kč) nebo ročně (2 149 Kč), vždy včetně DPH. Licence platí do zaplaceného data, automaticky se neprodlužuje a aktualizace máte po celou dobu pronájmu.</p>
       </article>
       <article class="card">
         <div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13v4"/><rect x="3" y="9" width="18" height="11" rx="2"/><circle cx="16" cy="14.5" r="1.3"/></svg></div>
@@ -220,6 +237,7 @@
         <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
         <h3>30 dní zkouška zdarma</h3>
         <p>Nová pokladna běží 30 dní zdarma ve zkušebním režimu. Můžete prodávat, tisknout a nastavit si všechno potřebné, doklady jsou ale označené jako zkušební a <strong>do ostrého EET se neposílají</strong>. Ostré EET funguje jen s placenou licencí.</p>
+        <p>Po skončení zkoušky pokladna ještě 7 dní upozorňuje, potom bez licence nový prodej zastaví. Data zůstávají.</p>
       </article>
       <article class="card">
         <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
@@ -239,7 +257,7 @@
     </details>
     <details>
       <summary>Je v ceně počítač, tiskárna nebo čtečka?</summary>
-      <div><p>Ne, cena je za pokladní program. Počítač s Windows, pokladní tiskárnu, čtečku čárových kódů a případně váhu nebo zákaznický displej si pořizujete sami. Rádi poradíme, co se hodí.</p></div>
+      <div><p>Ne, cena je za pokladní program. Počítač s Windows, pokladní tiskárnu, čtečku čárových kódů a případně váhu nebo zákaznický displej si pořizujete sami. Rádi poradíme, co se hodí – <a href="ke-stazeni.html#vybaveni">co budete potřebovat</a>.</p></div>
     </details>
     <details>
       <summary>Kolik zařízení můžu používat?</summary>
@@ -248,6 +266,10 @@
     <details>
       <summary>Jak licenci zaplatím a zapnu?</summary>
       <div><p>Po objednání dostanete licenční klíč a vložíte ho do pokladny (Správa → Systém → Licence). Pokladna ho ověří i bez internetu.</p></div>
+    </details>
+    <details>
+      <summary>Prodlužuje se pronájem automaticky?</summary>
+      <div><p>Ne. Licence platí do zaplaceného data. Po zaplacení dalšího období dostanete nový klíč. Když ho nevložíte, pokladna běží ještě 30 dní s upozorněním.</p></div>
     </details>
     <details>
       <summary>Co se stane s daty, když přestanu platit?</summary>
@@ -261,7 +283,7 @@
     <h2>Vyzkoušejte SuperKasu 30 dní zdarma</h2>
     <p>Zavolejte nám a domluvíme se na zkušební instalaci.</p>
     <div class="actions">
-      <a class="btn btn-gold" href="tel:+420608886882">Zavolat +420 608 886 882</a>
+      <a class="btn btn-gold" href="tel:+420608886882">Zavolat&nbsp;+420&nbsp;608&nbsp;886&nbsp;882</a>
       <a class="btn btn-light" href="cenik.html">Zobrazit ceník</a>
     </div>
   </div>
@@ -273,17 +295,32 @@
       <div>
         <div class="foot-brand"><img src="favicon.svg" alt="" width="40" height="40"><b>Super<span>Kasa</span></b></div>
         <p>Pokladní systém pro obchody, občerstvení a služby s EET&nbsp;2.0, skladem a cenovkami. Pro obsluhu i ve vietnamštině.</p>
-        <p><a href="tel:+420608886882">+420 608 886 882</a></p>
+        <p><a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
       </div>
       <div>
         <h2>Stránky</h2>
         <ul>
           <li><a href="index.html">Úvod</a></li>
+          <li><a href="obory.html">Pro koho</a></li>
           <li><a href="funkce.html">Funkce</a></li>
           <li><a href="cenik.html">Ceník</a></li>
           <li><a href="eet.html">EET 2.0</a></li>
           <li><a href="ke-stazeni.html">Ke stažení</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Obory</h2>
+        <ul>
+          <li><a href="pokladna-vecerka.html">Večerka a minimarket</a></li>
+          <li><a href="pokladna-trafika.html">Trafika</a></li>
+          <li><a href="pokladna-pekarna.html">Pekárna a cukrárna</a></li>
+          <li><a href="pokladna-drogerie.html">Drogerie</a></li>
+          <li><a href="pokladna-kavarna-bistro.html">Kavárna, bistro, stánek</a></li>
+          <li><a href="pokladna-hospoda-restaurace.html">Hospoda, bar, restaurace</a></li>
+          <li><a href="pokladna-kadernictvi.html">Kadeřnictví a holičství</a></li>
+          <li><a href="pokladna-nehtove-studio.html">Nehtové studio</a></li>
+          <li><a href="obory.html">Všechny obory</a></li>
         </ul>
       </div>
       <div>
