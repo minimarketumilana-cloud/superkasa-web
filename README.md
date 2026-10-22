@@ -20,9 +20,8 @@ Písmo je systémové, nic se nenačítá z cizích serverů.
 | `ochrana-osobnich-udaju.html` | **Koncept** k právní kontrole (`noindex`, není v sitemap) |
 | `404.html` | Chybová stránka (odkazy od kořene webu, funguje jen na serveru) |
 
-Obory odpovídají typům provozu v pokladně (`src/domain/presets.ts` v repozitáři pokladny) – kromě stránky
-**Hospoda, bar, restaurace**: pokladna zatím nemá stoly ani účty na stůl, stránka to otevřeně říká a radí zvolit typ
-„Kavárna, bistro, stánek“.
+Obory odpovídají typům provozu v pokladně (`src/domain/presets.ts` v repozitáři pokladny), včetně typu
+**Hospoda, bar, restaurace** se stoly a účty na stůl (pokladna od commitu f4d5a8d).
 
 Další soubory: `css/style.css`, `img/` (logo, náhled pro sdílení `og.png`, `img/obory/` = kreslené obrázky skupin
 z pokladny), `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `sitemap.xml`, `robots.txt`, `.htaccess` (Apache: 404,

@@ -50,14 +50,14 @@ function mock(o) {
     <figure class="pos">
       <div class="pos-screen" aria-hidden="true">
         <div class="pos-main">
-          <div class="pos-search">Hledat nebo naskenovat…</div>
+          <div class="pos-search">${o.mockSearch ?? "Hledat nebo naskenovat…"}</div>
           <div class="pos-tiles">${tiles}</div>
           <div class="pos-tabs">${tabs}</div>
         </div>
         <div class="pos-cart">
           ${lines.map((l) => `<div class="row"><span>${l.name}${qtyFmt(l.q, l.unit) ? ` <i>${qtyFmt(l.q, l.unit)}</i>` : ""}</span><span>${kc(l.sum)}</span></div>`).join("\n          ")}
           <div class="sum"><span>Celkem</span><span>${kc(total)} Kč</span></div>
-          <div class="pay">Zaplatit</div>
+          <div class="pay">${o.mockPay ?? "Zaplatit"}</div>
         </div>
       </div>
       <figcaption>${cap}</figcaption>

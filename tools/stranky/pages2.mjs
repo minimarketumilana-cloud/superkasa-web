@@ -5,7 +5,7 @@ import { FEATURE_ORDER, FEATURES, OBORY, TARIFFS } from "./obory.mjs";
 const PLAN_TEXT = {
   potraviny: "Večerka, minimarket, pekárna, ovoce a zelenina, řeznictví.",
   obchod: "Trafika, drogerie, oblečení, dárky a další obchody.",
-  gastro: "Kavárna, bistro, stánek, prodej u baru.",
+  gastro: "Kavárna, bistro, stánek, hospoda, bar a restaurace.",
   nehty: "Manikúra, gelové nehty, pedikúra a prodej kosmetiky.",
   sluzby: "Kadeřnictví, kosmetika, opravna a další služby.",
 };
@@ -305,7 +305,7 @@ export const stazeni = {
       ${card("printer", "Pokladní tiskárna", "Tiskárna na termopapír, role 80 nebo 58 mm – Epson TM-T88 a kompatibilní. Pokladna na ni tiskne účtenky i cenovky napřímo a otevírá přes ni peněžní zásuvku.")}
       ${card("scan", "Čtečka čárových kódů", "Běžná USB čtečka, případně fotoaparát mobilu nebo tabletu.")}
       ${card("eet", "Internet", "Pro odesílání do EET 2.0, aktualizace a druhou kopii záloh v OneDrive. Při výpadku se prodává dál.")}
-      ${card("scale", "Podle oboru", "Váha se štítky, druhý monitor jako zákaznický displej, platební terminál pro karty, etiketová tiskárna na cenovky.")}
+      ${card("scale", "Podle oboru", "Váha se štítky, druhý monitor jako zákaznický displej, platební terminál pro karty, etiketová tiskárna na cenovky, tablet pro obsluhu u stolů a tiskárna na bony v kuchyni.")}
       ${card("shield", "Pokladní certifikát pro EET", "Pro ostrý provoz certifikát od Finanční správy – zdarma na portálu CA EET přes DIS+. <a href=\"eet.html\">Jak na EET 2.0</a>")}
     </div>
   </div>

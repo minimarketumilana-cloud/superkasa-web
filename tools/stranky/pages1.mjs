@@ -131,9 +131,10 @@ export const funkce = {
 <section class="page-head">
   <div class="wrap">
     <h1>Funkce</h1>
-    <p class="lead">Prodej, EET, účtenky, hotovost a uzávěrka fungují vždy. Další funkce – sklad, cenovky, zálohy na obaly, váhu, akce, zákaznický displej nebo QR platby – si zapnete podle toho, co váš provoz potřebuje. Co je zapnuté hned, záleží na <a href="obory.html">vašem oboru</a>.</p>
+    <p class="lead">Prodej, EET, účtenky, hotovost a uzávěrka fungují vždy. Další funkce – sklad, cenovky, zálohy na obaly, váhu, akce, zákaznický displej, QR platby nebo stoly a účty – si zapnete podle toho, co váš provoz potřebuje. Co je zapnuté hned, záleží na <a href="obory.html">vašem oboru</a>.</p>
     <nav class="toc" aria-label="Oddíly stránky">
       <a href="#prodej">Prodej a platby</a>
+      <a href="#stoly">Stoly a účty</a>
       <a href="#doklady">Doklady a EET</a>
       <a href="#sklad">Sklad a zboží</a>
       <a href="#provoz">Obsluha a provoz</a>
@@ -155,7 +156,21 @@ export const funkce = {
   </div>
 </section>
 
-<section class="section alt feature-group" id="doklady">
+<section class="section alt feature-group" id="stoly">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Stoly a účty</h2>
+      <p>Pro hospody, bary a restaurace – v tarifu Gastro. <a href="pokladna-hospoda-restaurace.html">Jak bude hospoda nastavená</a></p>
+    </div>
+    <div class="grid grid-3">
+      ${card("table", "Účty na stůl", "Obrazovka stolů po místnostech s útratou a časem od poslední objednávky. Víc účtů u jednoho stolu, účet na jméno u baru. Objednávat jde z pokladny i z tabletu u stolu.")}
+      ${card("split", "Rozdělit a přesunout", "Každý host zaplatí své položky. Položky nebo celý účet přesunete k jinému stolu či na nový účet. Doklad a EET vzniknou až při zaplacení.")}
+      ${card("printer", "Bony do kuchyně a na výčep", "Po objednání vyjede bon na pokladní tiskárně v kuchyni nebo u výčepu, i s poznámkou pro kuchyni. Při odebrání položky storno bon.")}
+    </div>
+  </div>
+</section>
+
+<section class="section feature-group" id="doklady">
   <div class="wrap">
     <div class="section-head"><h2>Doklady a EET</h2></div>
     <div class="grid grid-3">
@@ -169,7 +184,7 @@ export const funkce = {
   </div>
 </section>
 
-<section class="section feature-group" id="sklad">
+<section class="section alt feature-group" id="sklad">
   <div class="wrap">
     <div class="section-head"><h2>Sklad a zboží</h2></div>
     <div class="grid grid-3">
@@ -183,7 +198,7 @@ export const funkce = {
   </div>
 </section>
 
-<section class="section alt feature-group" id="provoz">
+<section class="section feature-group" id="provoz">
   <div class="wrap">
     <div class="section-head"><h2>Obsluha a provoz</h2></div>
     <div class="grid grid-3">

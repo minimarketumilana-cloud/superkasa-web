@@ -28,6 +28,8 @@ const P = {
   chart: '<path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-7"/>',
   undo: '<path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/>',
   calendar: '<rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/>',
+  table: '<path d="M3 8h18l-2 4H5z"/><path d="M6 12v8M18 12v8M9 16h6"/>',
+  split: '<path d="M12 3v6M12 9l-6 6v6M12 9l6 6v6"/>',
   wallet: '<path d="M3 7a2 2 0 0 1 2-2h13v4"/><rect x="3" y="9" width="18" height="11" rx="2"/><circle cx="16" cy="14.5" r="1.3"/>',
 };
 export const icon = (k, cls = "") =>
