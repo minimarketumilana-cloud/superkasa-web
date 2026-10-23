@@ -113,7 +113,7 @@ export const index = {
     </div>
     <ol class="steps">
       <li><strong>Nainstalujete SuperKasu na počítač s Windows</strong>Jeden instalační soubor, bez práv správce a bez dalších programů. Instalátor zatím připravujeme.</li>
-      <li><strong>Vyberete svůj obor a založíte prodavače</strong>Pokladna připraví skupiny, sazby DPH, dlaždice a funkce. Nebo popíšete vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky – bez internetu podle slov, s internetem pomůže AI. Všechno uvidíte a upravíte, sazby DPH ověřte s účetní. Prodavači se přihlašují svým PINem.</li>
+      <li><strong>Vyberete svůj obor a založíte prodavače</strong>Pokladna připraví skupiny, sazby DPH, dlaždice a funkce. Nebo popíšete vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky – zdarma a bez internetu, česky, vietnamsky i anglicky. Všechno uvidíte a upravíte, sazby DPH ověřte s účetní. Prodavači se přihlašují svým PINem.</li>
       <li><strong>30 dní zkoušíte zdarma</strong>Ve zkušebním režimu jsou doklady označené jako zkušební a do ostrého EET se neposílají.</li>
       <li><strong>Přejdete do ostrého provozu</strong>S placenou licencí a vlastním pokladním certifikátem od Finanční správy přepnete pokladnu do ostrého režimu. <a href="eet.html">Jak na EET 2.0</a></li>
     </ol>
@@ -193,7 +193,7 @@ export const funkce = {
       ${card("tag", "Cenovky na pokladní tiskárně", "Cenovky vytisknete na pokladní tiskárně (Epson TM-T88 a kompatibilní), na etiketové tiskárně nebo na A4. S cenou za kg, litr nebo 100 g, akční přeškrtnutou cenou a čárovým kódem. Snadno vyberete zboží, kterému se změnila cena.")}
       ${card("db", "Sdílená databáze názvů podle EAN", "Pokladny SuperKasa si navzájem napovídají názvy zboží podle čárového kódu – i u cigaret a místních výrobků. Přispívání zapínáte sami a posílá se jen kód, název, balení, skupina a DPH – nikdy ceny, prodeje ani údaje o obchodě.")}
       ${card("download", "Import zboží", "Zboží převezmete z CSV, i z exportu jiné pokladny. Opakovaný import nic nezdvojí, jen aktualizuje ceny. Fotky zboží se doplní podle EAN.")}
-      ${card("home", "Nastavená pro váš obor", "<p>Podle oboru se založí skupiny s DPH, dlaždice a ukázkové položky – pečivo, ovoce, zelenina, zálohy, káva nebo služby. <a href=\"obory.html\">Vyberte svůj obor</a></p><p>Nebo popíšete vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky – bez internetu podle slov, s internetem pomůže AI. Návrh uvidíte a upravíte. Sazby DPH ověřte s účetní.</p>")}
+      ${card("home", "Nastavená pro váš obor", "<p>Podle oboru se založí skupiny s DPH, dlaždice a ukázkové položky – pečivo, ovoce, zelenina, zálohy, káva nebo služby. <a href=\"obory.html\">Vyberte svůj obor</a></p><p>Nebo popíšete vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky – zdarma a bez internetu, česky, vietnamsky i anglicky. Návrh uvidíte a upravíte. Sazby DPH ověřte s účetní.</p>")}
     </div>
   </div>
 </section>
