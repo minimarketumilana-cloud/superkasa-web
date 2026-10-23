@@ -20,7 +20,10 @@ export const GROUPS = {
 };
 
 // Sazby DPH v nápojích ve stravovací službě (skupiny Nealko a Káva a čaj) – podle data zřízení pokladny.
-const DRINKS_VAT = "Nealko nápoje a káva podávané v kavárně, hospodě nebo restauraci mají do konce roku 2026 sazbu 21 %, od 1. 1. 2027 12 %. Pokladna při zřízení použije sazbu platnou k tomu dni – ověřte ji s účetní.";
+const DRINKS_VAT = "Nealko nápoje a káva podávané v kavárně, hospodě nebo restauraci mají do konce roku 2026 sazbu 21 %, od 1. 1. 2027 12 %. S sebou zůstává 21 % – na pokladně přepnete Na místě / S sebou a doklad použije správnou sazbu. Pokladna při zřízení použije sazbu platnou k tomu dni – ověřte ji s účetní.";
+
+// Prodej na místě / s sebou a spropitné (zdarma v tarifu Gastro) – společný bod pro kavárnu, cukrárnu a hospodu.
+const GASTRO_2027 = ["cup", "Na místě / S sebou a spropitné", "Jedním přepínačem prodáte na místě nebo s sebou – doklad použije správnou sazbu DPH, cena se nemění. Spropitné zapíšete mimo tržbu a EET a pokladna hlídá limit 7 % pro osvobození od daně (od 1. 1. 2027). Obojí je v ceně tarifu."];
 
 export const FEATURES = {
   stock: ["Sklad", "Příjem zboží, inventura, stav na dlaždici, co dochází a návrh objednávky."],
@@ -32,16 +35,28 @@ export const FEATURES = {
   display: ["Zákaznický displej", "Druhá obrazovka pro zákazníka s nákupem a QR platbou."],
   qr: ["QR platby", "Platba převodem přes QR kód na displeji a na účtence."],
   tables: ["Stoly a účty", "Účty na stůl pro hospodu a restauraci: doplňování, rozdělení, přesun, bony do kuchyně a na výčep."],
+  tips: ["Spropitné", "Spropitné mimo tržbu a EET: komu, kolik, hotově nebo kartou; přehled za měsíc s hlídáním limitu 7 % pro osvobození od daně."],
 };
-export const FEATURE_ORDER = ["stock", "expiry", "labels", "deposits", "scale", "promo", "display", "qr", "tables"];
+export const FEATURE_ORDER = ["stock", "expiry", "labels", "deposits", "scale", "promo", "display", "qr", "tables", "tips"];
 
 export const TARIFFS = {
   potraviny: { name: "Potraviny", features: FEATURE_ORDER },
   obchod: { name: "Obchod", features: ["stock", "expiry", "labels", "deposits", "promo", "display", "qr"] },
-  gastro: { name: "Gastro", features: ["stock", "deposits", "promo", "display", "qr", "tables"] },
-  nehty: { name: "Nehtové studio", features: ["stock", "promo", "display", "qr"] },
-  sluzby: { name: "Služby", features: ["stock", "promo", "display", "qr"] },
+  gastro: { name: "Gastro", features: ["stock", "deposits", "promo", "display", "qr", "tables", "tips"] },
+  nehty: { name: "Nehtové studio", features: ["stock", "promo", "display", "qr", "tips"] },
+  sluzby: { name: "Služby", features: ["stock", "promo", "display", "qr", "tips"] },
 };
+
+// Placené doplňky nad tarif – podle ADDONS v src/domain/license.ts (popisy zkrácené pro web).
+// Ceny v Kč měsíčně včetně DPH, ročně o 10 % levněji (12 měsíců × 0,9, dolů na koruny). Ve zkoušce jsou zdarma.
+const yearly = (month) => Math.floor(month * 12 * 0.9);
+export const ADDONS = [
+  { key: "attendance", icon: "clock", name: "Docházka a směny", desc: "Prodavači zapisují příchod a odchod PINem na pokladně. Vidíte odpracované hodiny za den i měsíc a stáhnete podklad pro mzdy.", priceMonth: 79, kinds: ["shop", "food", "service"] },
+  { key: "loyalty", icon: "star", name: "Věrnostní program", desc: "Zákaznická karta s čárovým kódem z pokladny nebo telefon: body za nákup, sleva za body, stálá sleva pro VIP a přehled útraty.", priceMonth: 69, kinds: ["shop", "food", "service"] },
+  { key: "reservations", icon: "calendar", name: "Rezervace a termíny", desc: "Kalendář termínů pro salony a služby (kdo, kdy, jak dlouho, jaká služba) i rezervace stolů. Hlídá překryvy, službu z rezervace prodáte jedním ťuknutím.", priceMonth: 99, kinds: ["service", "food"] },
+  { key: "recipes", icon: "bowl", name: "Receptury a normy", desc: "Suroviny kávy, jídel, koktejlů a zákusků: prodej odepíše suroviny ze skladu, storno je vrátí. Nákladová cena, marže a kolik porcí ještě uděláte.", priceMonth: 79, kinds: ["food"] },
+  { key: "control", icon: "eye", name: "Kontrola obsluhy", desc: "Storna, vratky, zrušené nákupy, odebrané položky, slevy, otevření zásuvky a rozdíly při uzávěrce po prodavačích – pokladna ukáže, kdo je výrazně nad průměrem.", priceMonth: 69, kinds: ["shop", "food", "service"] },
+].map((a) => ({ ...a, priceYear: yearly(a.priceMonth) }));
 
 // Dlaždice ukázky: [obrázek, název, cena nebo null (= skupina), jednotka]
 // Nákup ukázky: [název, množství, cena za jednotku, jednotka]
@@ -65,6 +80,10 @@ export const OBORY = [
       ["calendar", "Expirace a co dochází", "Datum spotřeby při příjmu, přehled zboží, které brzy projde, a návrh objednávky podle prodejů."],
       ["printer", "Cenovky na pokladní tiskárně", "Cenovky s cenou za kilogram nebo litr, akční cenou a čárovým kódem. Vyberete jen zboží, kterému se změnila cena."],
       ["lang", "Obsluha ve vietnamštině", "Každý prodavač má svůj jazyk – čeština, vietnamština nebo angličtina. Doklad pro zákazníka je vždy česky.", "gold"],
+    ],
+    addons: [
+      ["attendance", "příchody a odchody prodavačů PINem a hodiny za měsíc jako podklad pro mzdy."],
+      ["control", "storna, vratky, slevy a otevření zásuvky po prodavačích, když se střídá víc lidí."],
     ],
   },
   {
@@ -347,7 +366,7 @@ export const OBORY = [
     preset: "Kavárna, bistro, stánek",
     groups: ["kava", "zakusky", "jidlo", "nealko", "alkohol"],
     pages: ["kava", "zakusky", "jidlo", "nealko"],
-    features: ["promo", "display", "qr"],
+    features: ["promo", "display", "qr", "tips"],
     items: "Espresso, cappuccino, caffè latte, čaj, horká čokoláda, polévka dne, menu dne, plněná bageta, toast, zákusek, dort – řez, domácí limonáda, minerální voda a džus.",
     tiles: [["g-kava", "Espresso", 49], ["g-kava", "Cappuccino", 65], ["g-kava", "Caffè latte", 72], ["g-kava", "Čaj", 45], ["g-jidlo", "Polévka dne", 59], ["g-jidlo", "Menu dne", 149], ["g-jidlo", "Bageta plněná", 79], ["g-zakusky", "Zákusek", 59], ["g-nealko", "Domácí limonáda 0,4 l", 59]],
     cart: [["Cappuccino", 2, 65], ["Zákusek", 2, 59], ["Bageta plněná", 1, 79]],
@@ -356,7 +375,9 @@ export const OBORY = [
       ["monitor", "Zákaznický displej", "Zákazník vidí, co platí, a může zaplatit QR kódem z druhé obrazovky."],
       ["percent", "Akce", "Akce do data a cena od určitého počtu kusů, třeba levnější káva s sebou."],
       ["box", "Sklad, zálohy a stoly podle potřeby", "Když chcete hlídat zásoby, vykupovat láhve nebo nosit ke stolům, zapnete v tarifu Gastro sklad, zálohy na obaly nebo stoly a účty."],
+      GASTRO_2027,
     ],
+    addons: [["recipes", "kolik kávy, mléka a surovin na jídla spotřebujete, nákladová cena a marže každého nápoje."]],
     notes: [
       "Obsluhujete hosty u stolů? Podívejte se na nastavení <a href=\"pokladna-hospoda-restaurace.html\">Hospoda, bar, restaurace</a> se stoly a účty. Prodáváte hlavně zákusky a zmrzlinu? Pak <a href=\"pokladna-cukrarna-zmrzlina.html\">Cukrárna a zmrzlina</a>.",
       DRINKS_VAT,
@@ -370,7 +391,7 @@ export const OBORY = [
     preset: "Cukrárna a zmrzlina",
     groups: ["zakusky", "zmrzlina", "kava", "nealko", "alkohol"],
     pages: ["zakusky", "zmrzlina", "kava"],
-    features: ["promo", "display", "qr"],
+    features: ["promo", "display", "qr", "tips"],
     items: "Zmrzlina na 1, 2 a 3 kopečky, zmrzlinový pohár, točená zmrzlina, větrník, laskonka, dort – řez, věneček, dort na objednávku na kilogramy, espresso, cappuccino a domácí limonáda.",
     tiles: [["g-zmrzlina", "Zmrzlina 1 kopeček", 35], ["g-zmrzlina", "Zmrzlina 2 kopečky", 65], ["g-zmrzlina", "Zmrzlina 3 kopečky", 89], ["g-zmrzlina", "Zmrzlinový pohár", 129], ["g-zakusky", "Větrník", 59], ["g-zakusky", "Laskonka", 49], ["g-zakusky", "Dort – řez", 79], ["g-kava", "Espresso", 49], ["g-kava", "Cappuccino", 65]],
     cart: [["Zmrzlina 2 kopečky", 2, 65], ["Větrník", 1, 59], ["Cappuccino", 1, 65]],
@@ -379,7 +400,9 @@ export const OBORY = [
       ["scale", "Dorty na objednávku", "Dort na objednávku se prodává na kilogramy – pokladna se zeptá na hmotnost a spočítá cenu."],
       ["monitor", "Zákaznický displej a QR platba", "Zákazník vidí, co platí, a může zaplatit QR kódem z druhé obrazovky."],
       ["box", "Sklad a stoly podle potřeby", "Když chcete hlídat zásoby nebo obsluhovat u stolků, zapnete v tarifu Gastro sklad nebo stoly a účty."],
+      GASTRO_2027,
     ],
+    addons: [["recipes", "suroviny zákusků, dortů a zmrzlinových pohárů, nákladová cena, marže a kolik porcí ještě uděláte."]],
     notes: ["Zákusky a zmrzlina se zakládají s 12 % DPH, s sebou i na místě.", DRINKS_VAT],
   },
   {
@@ -390,7 +413,7 @@ export const OBORY = [
     preset: "Hospoda, bar, restaurace",
     groups: ["pivo", "nealko", "alkohol", "kava", "jidlo", "zalohy"],
     pages: ["pivo", "nealko", "alkohol", "jidlo"],
-    features: ["tables", "deposits", "promo", "display", "qr"],
+    features: ["tables", "tips", "deposits", "promo", "display", "qr"],
     items: "Nápojový lístek a jídla – pivo 10° a 12°, nealko, rum, Becherovka, víno, káva, polévka, guláš, smažený sýr, utopenec – a zálohy. K tomu 13 stolů: Stůl 1–10 v sále, Bar a dva stoly na zahrádce.",
     mockSearch: "Stůl 4 · účet",
     mockPay: "Zaplatit účet",
@@ -403,9 +426,15 @@ export const OBORY = [
       ["printer", "Bony do kuchyně a na výčep", "Po objednání vyjede bon na pokladní tiskárně v kuchyni nebo u výčepu, i s poznámkou „bez cibule“. Při odebrání položky vyjede storno bon."],
       ["eet", "Doklad a EET až při placení", "Účet na stole není doklad. Doklad a odeslání do EET 2.0 vzniknou až při zaplacení – hotově, kartou, QR nebo kombinovaně."],
       ["bottle", "Zálohy na láhve a přepravky", "Zálohy jsou zapnuté. Zálohu jde s lahvovým pivem propojit, aby se přidávala sama."],
+      GASTRO_2027,
+    ],
+    addons: [
+      ["recipes", "jídla a koktejly odepíšou suroviny ze skladu, uvidíte nákladovou cenu a marži."],
+      ["attendance", "směny obsluhy a kuchyně, odpracované hodiny jako podklad pro mzdy."],
+      ["control", "storna, odebrané položky a slevy po číšnících – kdo je výrazně nad průměrem."],
     ],
     notes: [
-      "Zatím chybí plánek stolů podle rozmístění v sále, rozdělení účtu rovným dílem a spropitné. Bony se tisknou přímým tiskem na pokladní tiskárnu.",
+      "Zatím chybí plánek stolů podle rozmístění v sále a rozdělení účtu rovným dílem. Bony se tisknou přímým tiskem na pokladní tiskárnu.",
       "Odebrání objednané položky chce důvod. Vlastní položku jde opravit do 3 minut, později ji schvaluje vedoucí PINem – všechno se zapisuje.",
       DRINKS_VAT + " Alkohol a pivo mají 21 %.",
     ],
@@ -422,6 +451,7 @@ export const OBORY = [
     items: "Střih pánský, dámský a dětský, mytí a foukaná, barvení a úprava vousů.",
     tiles: [["g-kadernictvi", "Střih pánský", 350], ["g-kadernictvi", "Střih dámský", 550], ["g-kadernictvi", "Střih dětský", 250], ["g-kadernictvi", "Mytí a foukaná", 300], ["g-kadernictvi", "Barvení", 900], ["g-kadernictvi", "Úprava vousů", 200], ["g-drogerie", "Drogerie", null]],
     cart: [["Střih dámský", 1, 550], ["Barvení", 1, 900]],
+    addons: [["reservations", "objednávky klientů po kadeřnicích, hlídání překryvů a střih z rezervace prodáte jedním ťuknutím."]],
   },
   {
     key: "nehty", file: "pokladna-nehtove-studio.html", kind: "service", tariff: "nehty", art: "g-nehty",
@@ -435,6 +465,7 @@ export const OBORY = [
     items: "Manikúra, gelové nehty nové i doplnění, gel lak, akrylové nehty, pedikúra, zdobení a odstranění gelu.",
     tiles: [["g-nehty", "Manikúra klasická", 350], ["g-nehty", "Gelové nehty – nové", 750], ["g-nehty", "Gelové nehty – doplnění", 590], ["g-nehty", "Gel lak", 450], ["g-nehty", "Akrylové nehty", 850], ["g-nehty", "Pedikúra", 550], ["g-nehty", "Zdobení (za nehet)", 20], ["g-nehty", "Odstranění gelu", 200], ["g-drogerie", "Drogerie", null]],
     cart: [["Gelové nehty – doplnění", 1, 590], ["Zdobení (za nehet)", 4, 20]],
+    addons: [["reservations", "termíny klientek po nehtařkách, hlídání překryvů a službu z rezervace prodáte jedním ťuknutím."]],
   },
   {
     key: "kosmetika", file: "pokladna-kosmetika.html", kind: "service", tariff: "sluzby", art: "g-kosmetika",
@@ -448,6 +479,7 @@ export const OBORY = [
     items: "Kosmetické ošetření, čištění pleti, líčení, pedikúra, úprava a barvení obočí, lash lifting a manikúra.",
     tiles: [["g-kosmetika", "Kosmetické ošetření", 890], ["g-kosmetika", "Čištění pleti", 690], ["g-kosmetika", "Líčení", 590], ["g-kosmetika", "Pedikúra", 550], ["g-kosmetika", "Úprava a barvení obočí", 250], ["g-kosmetika", "Lash lifting", 790], ["g-kosmetika", "Manikúra", 450], ["g-drogerie", "Drogerie", null]],
     cart: [["Kosmetické ošetření", 1, 890], ["Úprava a barvení obočí", 1, 250]],
+    addons: [["reservations", "kalendář ošetření s délkou a službou, hlídání překryvů, nepřišel / zrušeno."]],
     notes: ["Nabízíte hlavně masáže? Podívejte se na nastavení <a href=\"pokladna-masaze-wellness.html\">Masáže a wellness</a>."],
   },
   {
@@ -462,6 +494,7 @@ export const OBORY = [
     items: "Klasická masáž 30 a 60 minut, relaxační masáž, masáž lávovými kameny, reflexní masáž chodidel a dárkový poukaz na masáž 60 minut.",
     tiles: [["g-masaze", "Masáž klasická 30 min", 490], ["g-masaze", "Masáž klasická 60 min", 890], ["g-masaze", "Relaxační masáž 60 min", 990], ["g-masaze", "Masáž lávovými kameny 90 min", 1390], ["g-masaze", "Reflexní masáž chodidel 45 min", 690], ["g-masaze", "Dárkový poukaz – masáž 60 min", 890], ["g-drogerie", "Drogerie", null]],
     cart: [["Relaxační masáž 60 min", 1, 990], ["Dárkový poukaz – masáž 60 min", 1, 890]],
+    addons: [["reservations", "masáže podle délky a maséra v kalendáři, hlídání překryvů, nepřišel / zrušeno."]],
   },
   {
     key: "fitness", file: "pokladna-fitness-sport.html", kind: "service", tariff: "sluzby", art: "g-fitness",
@@ -475,6 +508,7 @@ export const OBORY = [
     items: "Jednorázový vstup, vstup pro studenty a seniory, permanentka na 10 vstupů, měsíční permanentka, osobní trénink, skupinová lekce, proteinová tyčinka a nápoj, voda a iontový nápoj.",
     tiles: [["g-fitness", "Jednorázový vstup", 150], ["g-fitness", "Vstup student / senior", 120], ["g-fitness", "Permanentka 10 vstupů", 1290], ["g-fitness", "Měsíční permanentka", 990], ["g-lekce", "Osobní trénink 60 min", 600], ["g-lekce", "Skupinová lekce", 180], ["g-vitaminy", "Proteinová tyčinka", 49], ["g-napoje", "Voda 0,5 l", 25], ["g-napoje", "Iontový nápoj 0,5 l", 39]],
     cart: [["Jednorázový vstup", 1, 150], ["Proteinová tyčinka", 1, 49], ["Voda 0,5 l", 1, 25]],
+    addons: [["reservations", "termíny osobních tréninků a lekcí po trenérech, hlídání překryvů."]],
     highlights: [
       ["report", "Vstupy 12 %, lekce 21 %", "Vstup do posilovny a na sportoviště se zakládá s 12 %, lekce a trénink s trenérem s 21 %, doplňky stravy s 12 % a nápoje s 21 %. Sazby jsou návrh – ověřte je s účetní."],
       ["touch", "Vstupy a permanentky na dlaždicích", "Vstup, permanentku nebo lekci namarkujete jedním dotykem, cenu změníte přímo z prodejní obrazovky."],
@@ -538,7 +572,8 @@ export const SERVICE_HIGHLIGHTS = [
   ["box", "Prodej kosmetiky a materiálu", "Vedle služeb prodáte i zboží. V tarifu můžete zapnout sklad a akce."],
   ["lang", "Obsluha ve vietnamštině", "Čeština, vietnamština a angličtina – každý má svůj jazyk. Doklad pro zákazníka je vždy česky.", "gold"],
 ];
-export const SERVICE_NOTES = ["SuperKasa je pokladna, ne rezervační systém – objednávky klientů do kalendáře neřeší."];
+// Služby bez nabídnutého doplňku Rezervace (autoservis, opravna, jiné služby).
+export const SERVICE_NOTES = ["Kalendář objednávek klientů není součástí tarifu – řeší ho placený doplněk <a href=\"cenik.html#doplnky\">Rezervace a termíny</a>."];
 
 export const KINDS = [
   ["shop", "Obchody"],

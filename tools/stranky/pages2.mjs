@@ -1,6 +1,6 @@
 import { card, icon } from "./parts.mjs";
 import { cta } from "./pages1.mjs";
-import { FEATURE_ORDER, FEATURES, OBORY, TARIFFS } from "./obory.mjs";
+import { ADDONS, FEATURE_ORDER, FEATURES, KINDS, OBORY, TARIFFS } from "./obory.mjs";
 
 const PLAN_TEXT = {
   potraviny: "Večerka, asijské potraviny, pekárna, zelenina, řeznictví, zdravá výživa – všechno včetně váhy a záloh.",
@@ -10,6 +10,20 @@ const PLAN_TEXT = {
   sluzby: "Kadeřnictví, kosmetika, masáže, fitness, autoservis, opravna a další služby.",
 };
 const base = ["Prodej na dotykové obrazovce", "EET 2.0 a účtenky", "Hotovost a uzávěrky", "2 pokladní zařízení"];
+// Co tarif umí navíc a není to vypínatelná funkce (prodej s sebou je nastavení skupin zboží).
+const PLAN_EXTRA = { gastro: ["Na místě / S sebou (sazba DPH s sebou)"] };
+const kc = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "&nbsp;");
+const KIND_NAMES = Object.fromEntries(KINDS);
+
+const addonCard = (a) => `
+      <article class="card plan">
+        ${icon(a.icon, a.key === "loyalty" || a.key === "recipes" ? "gold" : "")}
+        <h3>${a.name}</h3>
+        <p class="who">${a.desc}</p>
+        <div class="p">${a.priceMonth} Kč <small>/ měsíc</small></div>
+        <div class="py">nebo ${kc(a.priceYear)} Kč ročně · včetně DPH</div>
+        <p class="plan-obory">Pro obory: ${a.kinds.map((k) => KIND_NAMES[k]).join(", ")}</p>
+      </article>`;
 
 function plan(key) {
   const t = TARIFFS[key];
@@ -23,7 +37,7 @@ function plan(key) {
         <div class="p">199 Kč <small>/ měsíc</small></div>
         <div class="py">nebo 2 149 Kč ročně · včetně DPH</div>
         <ul class="checks">
-          ${[...base, ...t.features.map((f) => FEATURES[f][0])].map((x) => `<li>${x}</li>`).join("\n          ")}
+          ${[...base, ...t.features.map((f) => FEATURES[f][0]), ...(PLAN_EXTRA[key] ?? [])].map((x) => `<li>${x}</li>`).join("\n          ")}
         </ul>
         <p class="plan-obory">Obory: ${obory.map((o) => `<a href="${o.file}">${o.card}</a>`).join(", ")}</p>
       </article>`;
@@ -46,13 +60,14 @@ export const cenik = {
   file: "cenik.html",
   current: "cenik.html",
   title: "Ceník SuperKasa – 199 Kč měsíčně s DPH, 30 dní zdarma",
-  desc: "Všechny tarify SuperKasa (Potraviny, Obchod, Gastro, Nehtové studio, Služby) za 199 Kč měsíčně včetně DPH, ročně 2 149 Kč. 30 dní zkouška zdarma, pronájem i jednorázová koupě.",
+  desc: "Všechny tarify SuperKasa (Potraviny, Obchod, Gastro, Nehtové studio, Služby) za 199 Kč měsíčně včetně DPH, ročně 2 149 Kč. 30 dní zkouška zdarma, pronájem i jednorázová koupě. Placené doplňky od 69 Kč měsíčně.",
   jsonld: {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
       ["Je cena konečná?", "Ano, 199 Kč měsíčně a 2 149 Kč ročně jsou ceny včetně DPH."],
       ["Kolik zařízení můžu používat?", "V každém tarifu jsou 2 pokladní zařízení. Další zařízení jsou na dotaz."],
+      ["Co jsou placené doplňky?", "Doplňky jako Docházka a směny, Věrnostní program, Rezervace a termíny, Receptury a normy nebo Kontrola obsluhy si můžete přidat k tarifu za 69–99 Kč měsíčně včetně DPH, ročně o 10 % levněji. Ve 30denní zkoušce jsou zdarma a platí se jen ty, které zapnete."],
       ["Co se stane s daty, když přestanu platit?", "Data zůstávají na vašem počítači. Prodej i EET běží ještě 30 dní s upozorněním, potom se zastaví nový prodej. Doklady, uzávěrky, vratky a export dat fungují dál."],
     ].map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
   },
@@ -99,7 +114,26 @@ export const cenik = {
   </div>
 </section>
 
-<section class="section alt">
+<section class="section alt" id="doplnky">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Placené doplňky</h2>
+      <p>Tarif obsahuje všechno pro běžný prodej. Když potřebujete víc, přidáte si jen ten doplněk, který opravdu využijete – za stejnou cenu ve všech oborech.</p>
+    </div>
+    <div class="grid grid-3">
+      ${ADDONS.map(addonCard).join("")}
+      <article class="card plan" style="background:var(--cream)">
+        ${icon("clock")}
+        <h3>Ve zkoušce zdarma</h3>
+        <p class="who">Ve 30denní zkoušce si vyzkoušíte všechny doplňky zdarma. Bez závazku – platí se jen to, co zapnete, a doplněk můžete kdykoli zase vypnout.</p>
+        <p class="plan-obory">Doplňky zapnete ve Správě → Systém → Funkce pokladny.</p>
+      </article>
+    </div>
+    <p class="small mt-1">Ceny jsou měsíčně včetně DPH a platí k tarifu (199 Kč). Ročně je doplněk o 10 % levnější. Prodej Na místě / S sebou a evidence spropitného jsou v tarifech zdarma, nejsou to placené doplňky.</p>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap">
     <div class="section-head">
       <h2>Srovnání tarifů</h2>
@@ -109,7 +143,7 @@ export const cenik = {
   </div>
 </section>
 
-<section class="section">
+<section class="section alt">
   <div class="wrap">
     <div class="section-head"><h2>Pronájem, nebo koupě</h2></div>
     <div class="grid grid-2">
@@ -127,7 +161,7 @@ export const cenik = {
   </div>
 </section>
 
-<section class="section alt">
+<section class="section">
   <div class="wrap">
     <div class="grid grid-2">
       <article class="card">
@@ -145,7 +179,7 @@ export const cenik = {
   </div>
 </section>
 
-<section class="section">
+<section class="section alt">
   <div class="wrap faq">
     <div class="section-head"><h2>Časté otázky</h2></div>
     <details>
@@ -159,6 +193,10 @@ export const cenik = {
     <details>
       <summary>Kolik zařízení můžu používat?</summary>
       <div><p>V každém tarifu jsou 2 pokladní zařízení – například pokladna a tablet pro příjem zboží. Další zařízení jsou na dotaz.</p></div>
+    </details>
+    <details>
+      <summary>Co jsou placené doplňky a kolik stojí?</summary>
+      <div><p>Doplňky přidávají funkce nad tarif: Docházka a směny (79 Kč), Věrnostní program (69 Kč), Rezervace a termíny (99 Kč), Receptury a normy (79 Kč) a Kontrola obsluhy (69 Kč) – měsíčně včetně DPH, ročně o 10 % levněji. Ve 30denní zkoušce jsou všechny zdarma. Bez závazku: platí se jen ty, které zapnete, a odemkne je stejný licenční klíč jako tarif. <a href="#doplnky">Přehled doplňků</a></p></div>
     </details>
     <details>
       <summary>Jak licenci zaplatím a zapnu?</summary>

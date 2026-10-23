@@ -8,11 +8,11 @@ Písmo je systémové, nic se nenačítá z cizích serverů.
 
 | Soubor | Obsah |
 | --- | --- |
-| `index.html` | Úvod – velké karty oborů (výběr jako v aplikaci, filtr Obchody / Gastro / Služby), výhody, jak začít |
+| `index.html` | Úvod – velké karty oborů (výběr jako v aplikaci, filtr Obchody / Gastro / Služby), proč SuperKasa, připraveno na rok 2027, jak začít |
 | `obory.html` | Pro koho – stejný výběr oboru |
 | `pokladna-*.html` | 26 stránek oborů: jak bude pokladna nastavená (skupiny, dlaždice, ukázkové položky, funkce, tarif) s náhledem |
 | `funkce.html` | Funkce pokladny |
-| `cenik.html` | Tarify, 199 Kč měsíčně / 2 149 Kč ročně s DPH, zkouška, pronájem a koupě, časté otázky |
+| `cenik.html` | Tarify, 199 Kč měsíčně / 2 149 Kč ročně s DPH, placené doplňky, zkouška, pronájem a koupě, časté otázky |
 | `eet.html` | EET 2.0 – jak to pokladna dělá, co zařídí podnikatel, odkazy na Finanční správu |
 | `ke-stazeni.html` | Místo pro instalátor pro Windows (zatím „připravujeme“) a potřebné vybavení |
 | `kontakt.html` | Kontakt na výrobce (bez DIČ – to se nezveřejňuje) |
@@ -44,7 +44,7 @@ node tools/sestavit.mjs
 | Podklad | Co v něm je |
 | --- | --- |
 | `tools/stranky/parts.mjs` | hlavička, menu, patička, ikony |
-| `tools/stranky/obory.mjs` | data oborů: skupiny, dlaždice, ukázkové položky, funkce, tarify – podle repozitáře pokladny |
+| `tools/stranky/obory.mjs` | data oborů: skupiny, dlaždice, ukázkové položky, funkce, tarify a placené doplňky – podle repozitáře pokladny |
 | `tools/stranky/obory-stranky.mjs` | výběr oboru (karty) a šablona stránky oboru s náhledem pokladny |
 | `tools/stranky/pages1.mjs` | úvod a funkce |
 | `tools/stranky/pages2.mjs` | ceník, EET 2.0, ke stažení, kontakt |

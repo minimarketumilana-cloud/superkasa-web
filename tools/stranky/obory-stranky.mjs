@@ -1,6 +1,6 @@
 // Výběr oboru (velké karty jako v aplikaci) a stránka pro každý obor s náhledem nastavené pokladny.
 import { card, icon } from "./parts.mjs";
-import { FEATURE_ORDER, FEATURES, GROUPS, KINDS, OBORY, SERVICE_HIGHLIGHTS, SERVICE_NOTES, TARIFFS } from "./obory.mjs";
+import { ADDONS, FEATURE_ORDER, FEATURES, GROUPS, KINDS, OBORY, SERVICE_HIGHLIGHTS, SERVICE_NOTES, TARIFFS } from "./obory.mjs";
 
 /** Cena po česku: 1 450,00 (tisíce oddělené nezlomitelnou mezerou). */
 const kc = (n) => {
@@ -72,7 +72,8 @@ export function oborPage(o, footerObory) {
   const more = t.features.filter((f) => !o.features.includes(f));
   const service = o.kind === "service";
   const highlights = o.highlights ?? SERVICE_HIGHLIGHTS;
-  const notes = [...(o.notes ?? []), ...(service ? SERVICE_NOTES : [])];
+  const addons = (o.addons ?? []).map(([key, text]) => ({ ...ADDONS.find((a) => a.key === key), text }));
+  const notes = [...(o.notes ?? []), ...(service && !addons.some((a) => a.key === "reservations") ? SERVICE_NOTES : [])];
   const others = OBORY.filter((x) => x.key !== o.key);
   const groupChips = `<ul class="gchips">${o.groups.map((g) => `<li>${art("g-" + g, 26)}${GROUPS[g]}</li>`).join("")}</ul>`;
 
@@ -144,7 +145,12 @@ ${o.notPreset ? `
           : `<p>V tarifu ${t.name} máte zapnuté všechny volitelné funkce. Ty, které nepotřebujete, můžete vypnout ve Správě → Systém → Funkce pokladny.</p>`}
         <div class="actions" style="margin-top:16px"><a class="btn btn-ghost" href="cenik.html">Celý ceník</a><a class="btn btn-ghost" href="funkce.html">Všechny funkce</a></div>
       </article>
-    </div>
+    </div>${addons.length ? `
+    <div class="note mt-1">
+      <p><strong>${addons.length > 1 ? "Placené doplňky, které se hodí" : "Placený doplněk, který se hodí"}</strong></p>
+      ${checks(addons.map((a) => `<b>${a.name}</b> (${a.priceMonth} Kč měsíčně s DPH) – ${a.text}`))}
+      <p class="small">Doplňky se platí k tarifu zvlášť, ve 30denní zkoušce jsou zdarma. <a href="cenik.html#doplnky">Všechny doplňky v ceníku</a></p>
+    </div>` : ""}
   </div>
 </section>
 ${notes.length && !o.notPreset ? `
