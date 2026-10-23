@@ -10,7 +10,7 @@ Písmo je systémové, nic se nenačítá z cizích serverů.
 | --- | --- |
 | `index.html` | Úvod – velké karty oborů (výběr jako v aplikaci, filtr Obchody / Gastro / Služby), výhody, jak začít |
 | `obory.html` | Pro koho – stejný výběr oboru |
-| `pokladna-*.html` | 14 stránek oborů: jak bude pokladna nastavená (skupiny, dlaždice, ukázkové položky, funkce, tarif) s náhledem |
+| `pokladna-*.html` | 26 stránek oborů: jak bude pokladna nastavená (skupiny, dlaždice, ukázkové položky, funkce, tarif) s náhledem |
 | `funkce.html` | Funkce pokladny |
 | `cenik.html` | Tarify, 199 Kč měsíčně / 2 149 Kč ročně s DPH, zkouška, pronájem a koupě, časté otázky |
 | `eet.html` | EET 2.0 – jak to pokladna dělá, co zařídí podnikatel, odkazy na Finanční správu |
@@ -21,7 +21,8 @@ Písmo je systémové, nic se nenačítá z cizích serverů.
 | `404.html` | Chybová stránka (odkazy od kořene webu, funguje jen na serveru) |
 
 Obory odpovídají typům provozu v pokladně (`src/domain/presets.ts` v repozitáři pokladny), včetně typu
-**Hospoda, bar, restaurace** se stoly a účty na stůl (pokladna od commitu f4d5a8d).
+**Hospoda, bar, restaurace** se stoly a účty na stůl (pokladna od commitu f4d5a8d) a 26 typů provozu
+z commitu 06a9566 (nové obory jako Asijské potraviny, Květinářství, Cukrárna a zmrzlina, Fitness nebo Autoservis).
 
 Další soubory: `css/style.css`, `img/` (logo, náhled pro sdílení `og.png`, `img/obory/` = kreslené obrázky skupin
 z pokladny), `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `sitemap.xml`, `robots.txt`, `.htaccess` (Apache: 404,

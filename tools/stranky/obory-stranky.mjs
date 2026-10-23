@@ -198,7 +198,7 @@ export const oboryPage = (footerObory) => ({
   file: "obory.html",
   current: "obory.html",
   title: "Pro koho je SuperKasa – vyberte svůj obor",
-  desc: "Pokladna nastavená pro váš obor: večerka, trafika, pekárna, ovoce a zelenina, řeznictví, drogerie, kavárna, hospoda, kadeřnictví, nehtové studio, kosmetika, opravna a další služby.",
+  desc: `Pokladna nastavená pro váš obor – ${OBORY.length} typů provozu: večerka, asijské potraviny, trafika, pekárna, květinářství, papírnictví, oblečení, mobily, vinotéka, kavárna, cukrárna, hospoda, kadeřnictví, nehtové studio, kosmetika, masáže, fitness, autoservis a další.`,
   footerObory,
   body: `
 <section class="page-head">
@@ -211,7 +211,8 @@ export const oboryPage = (footerObory) => ({
   <div class="wrap">
     ${oborPicker({ headingLevel: 1 })}
     <div class="note mt-2">
-      <p><strong>Nenašli jste svůj obor?</strong> Vyberte <a href="pokladna-obchod.html">Jiný obchod</a> nebo <a href="pokladna-sluzby.html">Jiné služby</a> – skupiny a dlaždice si upravíte podle sebe. Nebo nám zavolejte na <a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a>.</p>
+      <p><strong>Nenašli jste svůj obor?</strong> Při zřízení pokladny popište vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky – bez internetu podle slov z popisu, s internetem pomůže AI. Všechno uvidíte a upravíte, než pokladnu založíte. Sazby DPH ověřte s účetní.</p>
+      <p>Nebo vyberte <a href="pokladna-obchod.html">Jiný obchod</a> či <a href="pokladna-sluzby.html">Jiné služby</a> a skupiny si upravte podle sebe. Poradíme i po telefonu: <a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a>.</p>
     </div>
   </div>
 </section>`,

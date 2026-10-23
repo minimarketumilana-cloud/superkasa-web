@@ -3,11 +3,11 @@ import { cta } from "./pages1.mjs";
 import { FEATURE_ORDER, FEATURES, OBORY, TARIFFS } from "./obory.mjs";
 
 const PLAN_TEXT = {
-  potraviny: "Večerka, minimarket, pekárna, ovoce a zelenina, řeznictví.",
-  obchod: "Trafika, drogerie, oblečení, dárky a další obchody.",
-  gastro: "Kavárna, bistro, stánek, hospoda, bar a restaurace.",
+  potraviny: "Večerka, asijské potraviny, pekárna, zelenina, řeznictví, zdravá výživa – všechno včetně váhy a záloh.",
+  obchod: "Trafika, drogerie, květiny, papírnictví, oblečení, mobily, vinotéka, chovatelské potřeby a další obchody.",
+  gastro: "Kavárna, bistro, stánek, cukrárna, hospoda, bar a restaurace.",
   nehty: "Manikúra, gelové nehty, pedikúra a prodej kosmetiky.",
-  sluzby: "Kadeřnictví, kosmetika, opravna a další služby.",
+  sluzby: "Kadeřnictví, kosmetika, masáže, fitness, autoservis, opravna a další služby.",
 };
 const base = ["Prodej na dotykové obrazovce", "EET 2.0 a účtenky", "Hotovost a uzávěrky", "2 pokladní zařízení"];
 
