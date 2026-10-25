@@ -62,14 +62,21 @@ export const cta = (c, title = c.T.common.ctaTitle, text = c.T.common.ctaText) =
   </div>
 </section>`;
 
+/** Vlajky jazyků (stejné jako v pokladně): čeština, vietnamština, angličtina. */
+const FLAG_SVG = {
+  cs: '<rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/>',
+  vi: '<rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/>',
+  en: '<rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/>',
+};
+const flagSvg = (l) => `<svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true">${FLAG_SVG[l]}</svg>`;
+
 /**
- * Přepínač jazyků: vede na stejnou stránku v jiném jazyce. V hlavičce na počítači zkratky (CZ / VI / EN s plným názvem
- * pro čtečky), v mobilním menu plné názvy jazyků. Každý odkaz má lang a hreflang svého jazyka.
+ * Přepínač jazyků: vlajky vždy vidět v hlavičce (na počítači i se zkratkou CZ / VI / EN, na mobilu jen vlajky).
+ * Vede na stejnou stránku v jiném jazyce; každý odkaz má lang, hreflang a plný název jazyka pro čtečky.
  */
-const langSwitch = (c, file, where) => `<nav class="langs langs-${where}" aria-label="${c.T.common.langAria}">${LANGS.map((l) => {
+const langSwitch = (c, file) => `<nav class="langs" aria-label="${c.T.common.langAria}">${LANGS.map((l) => {
   const { name, short } = LANG_INFO[l];
-  const label = where === "top" ? ` title="${name}" aria-label="${name}"` : "";
-  return `<a href="${langHref(c.lang, l, file)}" hreflang="${l}" lang="${l}"${label}${l === c.lang ? ' aria-current="true"' : ""}>${where === "top" ? short : name}</a>`;
+  return `<a href="${langHref(c.lang, l, file)}" hreflang="${l}" lang="${l}" title="${name}" aria-label="${name}"${l === c.lang ? ' aria-current="true"' : ""}>${flagSvg(l)}<span>${short}</span></a>`;
 }).join("")}</nav>`;
 
 /**
@@ -119,13 +126,12 @@ ${ld}</head>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="${esc(L.brandAria)}"><img src="${up}img/logo.png" alt="SuperKasa" width="200" height="40"></a>
-    ${langSwitch(c, file, "top")}
+    ${langSwitch(c, file)}
     <a class="login-top" href="prihlaseni.html" aria-label="${L.loginBtn}"${current === "prihlaseni.html" ? ' aria-current="page"' : ""}><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>${L.loginBtn}</span></a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span>${L.menu}</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">${L.menu}</span></button>
     <nav class="nav" id="nav" aria-label="${L.navAria}">
       ${nav}
       <a class="btn btn-primary" href="cenik.html">${L.priceBtn}</a>
-      ${langSwitch(c, file, "menu")}
     </nav>
   </div>
 </header>

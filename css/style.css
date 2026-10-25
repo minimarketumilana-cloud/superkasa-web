@@ -55,7 +55,7 @@ small, .small { font-size: .9rem; color: var(--muted); }
   background: var(--white);
   border-bottom: 1px solid var(--line);
 }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 72px; max-width: 1360px; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 72px; max-width: 1400px; }
 .brand { display: inline-flex; align-items: center; padding: 6px 0; flex-shrink: 0; }
 .brand img { height: 40px; width: auto; }
 .nav { display: flex; align-items: center; gap: 2px; }
@@ -79,7 +79,7 @@ small, .small { font-size: .9rem; color: var(--muted); }
 .menu-btn .bars span { top: 6px; }
 .menu-btn .bars::after { bottom: 0; }
 
-@media (max-width: 1360px) {
+@media (max-width: 1400px) {
   .js .menu-btn { display: inline-flex; }
   .js .nav {
     display: none; position: absolute; left: 0; right: 0; top: 100%;
@@ -94,17 +94,21 @@ small, .small { font-size: .9rem; color: var(--muted); }
   html:not(.js) .nav { width: 100%; overflow-x: auto; padding-bottom: 8px; }
 }
 
-/* Přepínač jazyků: na počítači zkratky vpravo v hlavičce, na mobilu plné názvy dole v menu. */
+/* Přepínač jazyků: vlajky vždy vidět vpravo v hlavičce (na počítači se zkratkou, na mobilu jen vlajky). */
 .nav { margin-left: auto; }
-.langs-top { order: 2; }
+.langs { order: 2; flex: none; }
 .langs { display: flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); }
 .langs a {
-  display: inline-flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; padding: 0 8px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 40px; min-height: 40px; padding: 0 8px;
   border-radius: 9px; font-weight: 700; font-size: .88rem; letter-spacing: .04em; color: var(--muted); text-decoration: none;
 }
 .langs a:hover { background: var(--plum-soft); color: var(--plum); }
 .langs a[aria-current] { background: var(--plum); color: #fff; }
-.langs-menu { display: none; }
+.langs .flag { display: block; border-radius: 3px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .12); }
+.langs a span { display: none; }
+@media (max-width: 760px) {
+  .langs a { min-width: 38px; padding: 0 5px; }
+}
 /* Přihlásit: vpravo v hlavičce na všech šířkách. */
 .login-top {
   order: 3; display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 14px; margin-left: 8px;
@@ -112,11 +116,18 @@ small, .small { font-size: .9rem; color: var(--muted); }
 }
 .login-top:hover, .login-top[aria-current] { background: var(--plum); color: #fff; }
 .menu-btn { order: 4; margin-left: 8px; }
+@media (max-width: 760px) {
+  .login-top span, .menu-txt { display: none; }
+  .login-top { padding: 0 11px; margin-left: 0; }
+  .menu-btn { margin-left: 0; padding: 0 12px; }
+}
 @media (max-width: 420px) {
-  .brand img { height: 32px; }
-  .login-top { padding: 0 11px; margin-left: 6px; }
-  .login-top span { display: none; }
-  .menu-btn { margin-left: 6px; padding: 0 12px; }
+  .site-header .wrap { gap: 6px; padding: 0 12px; }
+  .brand img { height: 26px; }
+  .langs { padding: 2px; }
+  .langs a { min-width: 34px; min-height: 40px; padding: 0 3px; }
+  .langs .flag { width: 24px; height: 16px; }
+  .login-top, .menu-btn { min-width: 44px; min-height: 44px; padding: 0 10px; }
 }
 /* Stránka přihlášení */
 .shop-login { display: grid; gap: 10px; margin: 6px 0 4px; }
@@ -128,13 +139,6 @@ small, .small { font-size: .9rem; color: var(--muted); }
 .cloud-soon { margin: 0 0 18px; padding: 14px 18px; border-radius: 14px; background: var(--plum-soft); color: var(--plum-dark); font-weight: 600; }
 .is-soon { opacity: .55; }
 .is-soon form, .is-soon .actions { pointer-events: none; }
-@media (max-width: 1360px) {
-  .langs-top { display: none; }
-  .nav .langs-menu { display: flex; flex: none; margin-top: 12px; }
-  .nav .langs-menu a { flex: 1; min-height: 48px; padding: 0 8px; font-size: 1rem; letter-spacing: 0; font-weight: 650; white-space: nowrap; }
-  .nav .langs-menu a[aria-current] { color: #fff; background: var(--plum); }
-  html:not(.js) .nav .langs-menu { margin: 0 0 0 8px; }
-}
 /* Vietnamština má diakritiku nad i pod písmeny – víc místa mezi řádky nadpisů. */
 :lang(vi) h1, :lang(vi) h2, :lang(vi) h3 { line-height: 1.32; }
 :lang(vi) .obor-name { line-height: 1.35; }
@@ -158,7 +162,7 @@ small, .small { font-size: .9rem; color: var(--muted); }
 .nav .btn { min-height: 48px; padding: 0 20px; color: #fff; }
 .nav .btn:hover { color: #fff; background: var(--plum-mid); }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-@media (max-width: 560px) { .actions .btn { width: 100%; } }
+@media (max-width: 760px) { .actions .btn { width: 100%; } }
 
 /* Úvodní pás */
 .hero {
@@ -374,13 +378,13 @@ td.n { color: var(--muted); }
 .site-footer li a { display: inline-flex; align-items: center; min-height: 40px; }
 .foot-bottom { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, .12); font-size: .88rem; color: #bfa6b4; }
 @media (max-width: 960px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 28px; } }
-@media (max-width: 560px) { .foot-grid { grid-template-columns: 1fr; gap: 24px; } }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr; gap: 24px; } }
 
 /* ===== Výběr oboru (velké karty jako v aplikaci) ===== */
 [hidden] { display: none !important; }
 .hero-pick { padding: 44px 0 52px; }
 .hero-pick .wrap { display: block; }
-@media (max-width: 560px) { .hero-pick { padding: 28px 0 40px; } }
+@media (max-width: 760px) { .hero-pick { padding: 28px 0 40px; } }
 .hero-intro { max-width: 46em; margin-bottom: 26px; }
 .hero-intro .lead { margin: 0; }
 .seg {
@@ -418,7 +422,7 @@ td.n { color: var(--muted); }
 }
 .obor:hover .obor-go { background: var(--plum); }
 .obor:hover .obor-go::after { border-color: #fff; }
-@media (max-width: 560px) {
+@media (max-width: 760px) {
   .obor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .obor { min-height: 150px; padding: 14px; border-radius: 18px; }
   .obor-art { width: 58px; height: 58px; border-radius: 16px; }
