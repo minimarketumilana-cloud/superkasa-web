@@ -299,12 +299,12 @@ export const stazeni = {
   file: "ke-stazeni.html",
   current: "ke-stazeni.html",
   title: "Ke stažení – instalátor SuperKasa pro Windows",
-  desc: "Instalátor pokladny SuperKasa pro Windows připravujeme. Jeden soubor, instalace bez práv správce, data zůstávají i po odinstalaci. Co budete potřebovat za vybavení.",
+  desc: "Stáhněte si instalátor pokladny SuperKasa pro Windows – jeden soubor, instalace bez práv správce, 30 dní zdarma na vyzkoušení, data zůstávají i po odinstalaci. Co budete potřebovat za vybavení.",
   body: `
 <section class="page-head">
   <div class="wrap">
     <h1>Ke stažení</h1>
-    <p class="lead">Instalátor SuperKasy pro Windows dokončujeme. Jakmile bude ke stažení, najdete ho na této stránce.</p>
+    <p class="lead">Instalátor SuperKasy pro Windows. Prvních 30 dní zdarma na vyzkoušení, bez karty a bez závazku.</p>
   </div>
 </section>
 
@@ -314,11 +314,12 @@ export const stazeni = {
       <article class="card">
         ${icon("download")}
         <h3>SuperKasa pro Windows</h3>
-        <p>Instalátor připravujeme. Do té doby vám SuperKasu na zkoušku rádi nainstalujeme.</p>
+        <p>Verze 0.1.0 · 24 MB · Windows 10 a 11 (64bit). První veřejná verze – kdyby cokoli nešlo, zavolejte, pomůžeme.</p>
         <div class="actions" style="margin-top:12px">
-          <span class="btn btn-ghost btn-disabled" aria-disabled="true">Připravujeme</span>
-          <a class="btn btn-primary" href="tel:+420608886882">Zavolat</a>
+          <a class="btn btn-primary" href="aktualizace/SuperKasa-Setup-0.1.0.exe" download>Stáhnout instalátor</a>
+          <a class="btn btn-ghost" href="tel:+420608886882">Zavolat</a>
         </div>
+        <p class="small muted" style="margin-top:12px">Windows může při spuštění ukázat „Systém Windows ochránil váš počítač“ – instalátor zatím nemá placený podpis vydavatele. Klepněte na „Další informace“ a „Přesto spustit“. Kontrolní součet SHA-256: <code style="word-break:break-all">8f08ec5c7d76ad31eb5b13f09c2d2cf8d93f5e7189f3664eda9c8b5db4126b09</code></p>
       </article>
       <article class="card">
         <h3>Co instalátor udělá</h3>
@@ -348,7 +349,7 @@ export const stazeni = {
     </div>
   </div>
 </section>
-${cta("Chcete začít dřív?", "Zavolejte nám – domluvíme se na zkušební instalaci ještě předtím, než bude instalátor volně ke stažení.")}`,
+${cta("Potřebujete pomoct s instalací?", "Zavolejte nám – nainstalujeme a nastavíme pokladnu s vámi, i ve vietnamštině.")}`,
 };
 
 export const kontakt = {

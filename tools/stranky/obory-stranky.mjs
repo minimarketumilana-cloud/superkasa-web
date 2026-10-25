@@ -89,7 +89,7 @@ export function oborPage(o, footerObory) {
         <a class="btn btn-primary" href="tel:+420608886882">Zavolat&nbsp;+420&nbsp;608&nbsp;886&nbsp;882</a>
         <a class="btn btn-ghost" href="cenik.html">Ceník</a>
       </div>
-      <p class="hero-note">30 dní zkouška zdarma. Instalátor pro Windows připravujeme.</p>
+      <p class="hero-note">30 dní zkouška zdarma. <a href="ke-stazeni.html">Stáhnout pro Windows</a></p>
     </div>
     ${mock(o)}
   </div>
