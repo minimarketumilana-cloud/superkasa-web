@@ -265,6 +265,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/kontakt.html"/>
   </url>
   <url>
+    <loc>https://superkasa.cz/prihlaseni.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/prihlaseni.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/prihlaseni.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/prihlaseni.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/prihlaseni.html"/>
+  </url>
+  <url>
     <loc>https://superkasa.cz/vi/</loc>
     <lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/"/>
@@ -529,6 +537,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/kontakt.html"/>
   </url>
   <url>
+    <loc>https://superkasa.cz/vi/prihlaseni.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/prihlaseni.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/prihlaseni.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/prihlaseni.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/prihlaseni.html"/>
+  </url>
+  <url>
     <loc>https://superkasa.cz/en/</loc>
     <lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/"/>
@@ -791,5 +807,13 @@
     <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/kontakt.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/kontakt.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/kontakt.html"/>
+  </url>
+  <url>
+    <loc>https://superkasa.cz/en/prihlaseni.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/prihlaseni.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/prihlaseni.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/prihlaseni.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/prihlaseni.html"/>
   </url>
 </urlset>

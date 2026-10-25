@@ -11,7 +11,7 @@ import { csOverlay, oboryData } from "./stranky/obory.mjs";
 import { oborPage, oboryPage } from "./stranky/obory-stranky.mjs";
 import { INLINE_JS, page } from "./stranky/parts.mjs";
 import { funkce, index } from "./stranky/pages1.mjs";
-import { cenik, eet, kontakt, stazeni } from "./stranky/pages2.mjs";
+import { cenik, eet, kontakt, prihlaseni, stazeni } from "./stranky/pages2.mjs";
 import { gdpr, legalStub, notFound, op } from "./stranky/pages3.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -43,7 +43,7 @@ for (const lang of LANGS) {
     .map((o) => [o.file, o.card]).concat([["obory.html", c.T.common.allObory]]);
   const legal = lang === "cs" ? [op, gdpr] : [legalStub(c, "op"), legalStub(c, "gdpr")];
   const pages = [index(c), oboryPage(c, footerObory), ...c.D.OBORY.map((o) => oborPage(c, o, footerObory)),
-    funkce(c), cenik(c), eet(c), stazeni(c), kontakt(c), ...legal, notFound(c)]
+    funkce(c), cenik(c), eet(c), stazeni(c), kontakt(c), prihlaseni(c), ...legal, notFound(c)]
     .map((p) => ({ footerObory, ...p }));
 
   mkdirSync(path.join(ROOT, dir), { recursive: true });

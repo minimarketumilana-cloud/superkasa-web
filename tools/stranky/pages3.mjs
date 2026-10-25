@@ -51,7 +51,7 @@ export const op = {
 
     <h2>4. Zkušební doba</h2>
     <ol>
-      <li>Nová instalace běží 30 dní zdarma ve zkušebním režimu. Doklady ve zkušebním režimu jsou označené jako zkušební a do ostrého systému EET 2.0 se neodesílají. Ostrý režim EET je dostupný jen s placenou licencí.</li>
+      <li>Nová instalace běží 10 dní zdarma ve zkušebním režimu. Doklady ve zkušebním režimu jsou označené jako zkušební a do ostrého systému EET 2.0 se neodesílají. Ostrý režim EET je dostupný jen s placenou licencí.</li>
       <li>Po skončení zkušební doby pokladna ještě 7 dní upozorňuje; poté bez licence nový prodej zastaví. Data a jejich export zůstávají uživateli k dispozici.</li>
       <li>Zkušební doba je bezplatná a nezavazuje uživatele k další objednávce.</li>
     </ol>

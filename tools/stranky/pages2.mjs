@@ -298,6 +298,57 @@ ${cta(c, t.cta[0], t.cta[1])}`,
   };
 };
 
+/**
+ * Přihlášení do pokladny v prohlížeči (SuperKasa Cloud): adresa obchodu → https://<obchod>.superkasa.cz/,
+ * založení nové pokladny na app.superkasa.cz. Když cloud ještě neběží, js/site.js ukáže stažení pro Windows.
+ */
+export const prihlaseni = (c) => {
+  const t = c.T.login;
+  return {
+    file: "prihlaseni.html",
+    current: "prihlaseni.html",
+    title: t.title,
+    desc: t.desc,
+    body: `
+<section class="page-head">
+  <div class="wrap">
+    <h1>${t.h1}</h1>
+    <p class="lead">${t.lead}</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:32px">
+  <div class="wrap">
+    <p class="cloud-soon" id="cloud-soon" hidden>${t.soon}</p>
+    <div class="grid grid-2">
+      <article class="card" data-cloud>
+        ${icon("touch")}
+        <h3>${t.h1}</h3>
+        <form class="shop-login" id="shop-login" action="https://app.superkasa.cz/" method="get">
+          <label for="shop">${t.shopLabel}</label>
+          <div class="shop-field"><span>https://</span><input id="shop" name="obchod" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="30" required placeholder="${t.shopPh}"><span>.superkasa.cz</span></div>
+          <button class="btn btn-primary" type="submit">${t.go}</button>
+        </form>
+        <p class="muted small">${t.hint}</p>
+      </article>
+      <article class="card" data-cloud>
+        ${icon("home", "gold")}
+        <h3>${t.newTitle}</h3>
+        <p>${t.newText}</p>
+        <div class="actions" style="margin-top:8px"><a class="btn btn-gold" href="https://app.superkasa.cz/">${t.newBtn}</a></div>
+      </article>
+      <article class="card">
+        ${icon("download")}
+        <h3>${t.pcTitle}</h3>
+        <p>${t.pcText}</p>
+        <div class="actions" style="margin-top:8px"><a class="btn btn-ghost" href="ke-stazeni.html">${t.pcBtn}</a></div>
+      </article>
+    </div>
+  </div>
+</section>`,
+  };
+};
+
 export const kontakt = (c) => {
   const t = c.T.kontakt;
   return {
