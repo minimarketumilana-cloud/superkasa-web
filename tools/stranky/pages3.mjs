@@ -169,22 +169,63 @@ export const gdpr = {
 </section>`,
 };
 
-export const notFound = {
-  file: "404.html",
-  current: "",
-  noindex: true,
-  canonicalPath: "",
-  title: "Stránka nenalezena – SuperKasa",
-  desc: "Tahle stránka na webu SuperKasa neexistuje.",
-  body: `
+/** Stránka 404 (odkazy převede sestavení na adresy od kořene webu, protože se zobrazuje na libovolné adrese). */
+export const notFound = (c) => {
+  const t = c.T.notFound;
+  return {
+    file: "404.html",
+    current: "",
+    noindex: true,
+    canonicalPath: "index.html",
+    title: t.title,
+    desc: t.desc,
+    body: `
 <section class="page-head" style="padding:72px 0">
   <div class="wrap center">
-    <h1>Stránku jsme nenašli</h1>
-    <p class="lead" style="margin:0 auto">Odkaz je možná starý nebo v něm je překlep.</p>
+    <h1>${t.h1}</h1>
+    <p class="lead" style="margin:0 auto">${t.lead}</p>
     <div class="actions" style="justify-content:center">
-      <a class="btn btn-primary" href="index.html">Na úvodní stránku</a>
-      <a class="btn btn-ghost" href="obory.html">Vybrat obor</a>
+      <a class="btn btn-primary" href="index.html">${t.home}</a>
+      <a class="btn btn-ghost" href="obory.html">${t.pick}</a>
     </div>
   </div>
 </section>`,
+  };
+};
+
+/**
+ * Obchodní podmínky a ochrana osobních údajů ve vietnamštině a angličtině: jen krátká stránka s odkazem na závazné
+ * české znění (právní texty jsou koncept a závazné je české znění), k tomu nezávazný přehled hlavních bodů.
+ */
+export const legalStub = (c, kind) => {
+  const t = c.T.legal;
+  const op = kind === "op";
+  const file = op ? "obchodni-podminky.html" : "ochrana-osobnich-udaju.html";
+  return {
+    file,
+    current: "",
+    noindex: true,
+    title: `${op ? t.opTitle : t.gdprTitle}${c.T.common.titleSuffix}`,
+    desc: op ? t.opDesc : t.gdprDesc,
+    body: `
+<section class="page-head">
+  <div class="wrap">
+    <h1>${op ? t.opH1 : t.gdprH1}</h1>
+  </div>
+</section>
+<section class="section" style="padding-top:24px">
+  <div class="wrap prose">
+    <div class="note warn">
+      <p><strong>${t.noticeTitle}</strong></p>
+      <p>${t.notice}</p>
+    </div>
+    <div class="actions"><a class="btn btn-primary" href="../${file}" hreflang="cs">${t.readCzech}</a></div>
+    <h2>${t.summaryTitle}</h2>
+    <ul class="checks">
+      ${(op ? t.opSummary : t.gdprSummary).map((x) => `<li>${x}</li>`).join("\n      ")}
+    </ul>
+    <p class="small mt-2">${t.help}</p>
+  </div>
+</section>`,
+  };
 };

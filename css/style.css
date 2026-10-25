@@ -55,17 +55,17 @@ small, .small { font-size: .9rem; color: var(--muted); }
   background: var(--white);
   border-bottom: 1px solid var(--line);
 }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
-.brand { display: inline-flex; align-items: center; padding: 6px 0; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 72px; max-width: 1240px; }
+.brand { display: inline-flex; align-items: center; padding: 6px 0; flex-shrink: 0; }
 .brand img { height: 40px; width: auto; }
-.nav { display: flex; align-items: center; gap: 4px; }
+.nav { display: flex; align-items: center; gap: 2px; }
 .nav a {
-  display: inline-flex; align-items: center; min-height: 48px; padding: 0 12px;
+  display: inline-flex; align-items: center; min-height: 48px; padding: 0 11px;
   border-radius: 12px; font-weight: 600; color: var(--ink); text-decoration: none; white-space: nowrap;
 }
 .nav a:hover { background: var(--plum-soft); color: var(--plum); }
 .nav a[aria-current="page"] { color: var(--plum); background: var(--plum-soft); }
-.nav .btn { margin-left: 8px; }
+.nav .btn { margin-left: 6px; }
 .menu-btn {
   display: none; min-height: 48px; min-width: 48px; padding: 0 16px; border-radius: 12px;
   border: 1px solid var(--line); background: var(--white); color: var(--plum-dark);
@@ -79,7 +79,7 @@ small, .small { font-size: .9rem; color: var(--muted); }
 .menu-btn .bars span { top: 6px; }
 .menu-btn .bars::after { bottom: 0; }
 
-@media (max-width: 1080px) {
+@media (max-width: 1240px) {
   .js .menu-btn { display: inline-flex; }
   .js .nav {
     display: none; position: absolute; left: 0; right: 0; top: 100%;
@@ -93,6 +93,29 @@ small, .small { font-size: .9rem; color: var(--muted); }
   html:not(.js) .site-header .wrap { flex-wrap: wrap; }
   html:not(.js) .nav { width: 100%; overflow-x: auto; padding-bottom: 8px; }
 }
+
+/* Přepínač jazyků: na počítači zkratky vpravo v hlavičce, na mobilu plné názvy dole v menu. */
+.nav { margin-left: auto; }
+.langs-top { order: 2; }
+.langs { display: flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); }
+.langs a {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; padding: 0 8px;
+  border-radius: 9px; font-weight: 700; font-size: .88rem; letter-spacing: .04em; color: var(--muted); text-decoration: none;
+}
+.langs a:hover { background: var(--plum-soft); color: var(--plum); }
+.langs a[aria-current] { background: var(--plum); color: #fff; }
+.langs-menu { display: none; }
+@media (max-width: 1240px) {
+  .langs-top { display: none; }
+  .nav .langs-menu { display: flex; flex: none; margin-top: 12px; }
+  .nav .langs-menu a { flex: 1; min-height: 48px; padding: 0 8px; font-size: 1rem; letter-spacing: 0; font-weight: 650; white-space: nowrap; }
+  .nav .langs-menu a[aria-current] { color: #fff; background: var(--plum); }
+  html:not(.js) .nav .langs-menu { margin: 0 0 0 8px; }
+}
+/* Vietnamština má diakritiku nad i pod písmeny – víc místa mezi řádky nadpisů. */
+:lang(vi) h1, :lang(vi) h2, :lang(vi) h3 { line-height: 1.32; }
+:lang(vi) .obor-name { line-height: 1.35; }
+.lang-note { margin: 14px 0 0; font-size: .95rem; color: var(--muted); }
 
 /* Tlačítka */
 .btn {

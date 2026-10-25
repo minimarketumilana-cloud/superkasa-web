@@ -580,3 +580,53 @@ export const KINDS = [
   ["food", "Gastro"],
   ["service", "Služby"],
 ];
+
+// ---- Jazykové verze ----
+// Překlady oborů jsou v tools/stranky/texty/<jazyk>-obory.mjs a mají přesně stavbu, kterou vrací csOverlay():
+// stejné klíče, stejné pořadí bodů (ikony, ceny, dlaždice a nákup ukázky zůstávají tady). Názvy položek na dlaždicích
+// a v nákupu ukázky se nepřekládají – v pokladně jsou česky, protože se tisknou na český doklad.
+
+/** České texty oborů ve stavbě překladu – vzor pro texty/<jazyk>-obory.mjs a pro kontrolu úplnosti překladu. */
+export function csOverlay() {
+  const texts = (arr) => arr.map(([, h, txt]) => [h, txt]);
+  return {
+    groups: { ...GROUPS },
+    features: Object.fromEntries(Object.entries(FEATURES).map(([k, v]) => [k, [...v]])),
+    tariffs: Object.fromEntries(Object.entries(TARIFFS).map(([k, v]) => [k, v.name])),
+    addons: Object.fromEntries(ADDONS.map((a) => [a.key, [a.name, a.desc]])),
+    kinds: Object.fromEntries(KINDS),
+    serviceHighlights: texts(SERVICE_HIGHLIGHTS),
+    serviceNotes: [...SERVICE_NOTES],
+    obory: Object.fromEntries(OBORY.map((o) => [o.key, {
+      card: o.card, cardDesc: o.cardDesc, title: o.title, desc: o.desc, preset: o.preset, items: o.items,
+      ...(o.mockSearch ? { mockSearch: o.mockSearch, mockPay: o.mockPay } : {}),
+      ...(o.highlights ? { highlights: texts(o.highlights) } : {}),
+      ...(o.addons ? { addons: o.addons.map(([, txt]) => txt) } : {}),
+      ...(o.notes ? { notes: [...o.notes] } : {}),
+    }])),
+  };
+}
+
+/** Data oborů v daném jazyce: `tr` = překlad (texty/<jazyk>-obory.mjs), null = čeština. */
+export function oboryData(tr) {
+  if (!tr) return { GROUPS, FEATURES, TARIFFS, ADDONS, KINDS, OBORY, SERVICE_HIGHLIGHTS, SERVICE_NOTES };
+  const merge = (arr, t) => arr.map(([ic, , , cls], i) => [ic, t[i][0], t[i][1], cls]);
+  return {
+    GROUPS: tr.groups,
+    FEATURES: tr.features,
+    TARIFFS: Object.fromEntries(Object.entries(TARIFFS).map(([k, v]) => [k, { ...v, name: tr.tariffs[k] }])),
+    ADDONS: ADDONS.map((a) => ({ ...a, name: tr.addons[a.key][0], desc: tr.addons[a.key][1] })),
+    KINDS: KINDS.map(([k]) => [k, tr.kinds[k]]),
+    OBORY: OBORY.map((o) => {
+      const t = tr.obory[o.key];
+      return {
+        ...o, ...t, translated: true,
+        highlights: o.highlights && merge(o.highlights, t.highlights),
+        addons: o.addons && o.addons.map(([k], i) => [k, t.addons[i]]),
+        notes: o.notes && t.notes,
+      };
+    }),
+    SERVICE_HIGHLIGHTS: merge(SERVICE_HIGHLIGHTS, tr.serviceHighlights),
+    SERVICE_NOTES: tr.serviceNotes,
+  };
+}

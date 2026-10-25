@@ -1,94 +1,84 @@
-import { card } from "./parts.mjs";
-import { ADDONS, KINDS } from "./obory.mjs";
+// Úvod a Funkce. Texty jsou ve slovníku c.T.index a c.T.funkce (tools/stranky/texty/<jazyk>.mjs).
+import { LANG_INFO, LANGS, langHref, pageUrl } from "./i18n.mjs";
+import { card, cta } from "./parts.mjs";
 import { oborPicker } from "./obory-stranky.mjs";
 
-const KIND_NAMES = Object.fromEntries(KINDS);
-const addonFeature = (a) =>
-  card(a.icon, a.name, `<p>${a.desc}</p><p class="small"><strong>${a.priceMonth} Kč měsíčně s DPH</strong> · pro obory ${a.kinds.map((k) => KIND_NAMES[k]).join(", ")} · <a href="cenik.html#doplnky">Ceník doplňků</a></p>`, a.key === "loyalty" || a.key === "recipes" ? "gold" : "");
+/** Karty se stejnými ikonami ve všech jazycích: `icons` = [ikona, třída] ve stejném pořadí jako texty [nadpis, text]. */
+const cards = (icons, texts) => icons.map(([ic, cls], i) => card(ic, texts[i][0], texts[i][1], cls)).join("\n      ");
 
-export const cta = (title = "Chcete SuperKasu vyzkoušet?", text = "Zavolejte nám. Poradíme s výběrem tarifu i vybavení a domluvíme se na zkušební instalaci.") => `
-<section class="section dark cta">
-  <div class="wrap">
-    <h2>${title}</h2>
-    <p>${text}</p>
-    <div class="actions">
-      <a class="btn btn-gold" href="tel:+420608886882">Zavolat&nbsp;+420&nbsp;608&nbsp;886&nbsp;882</a>
-      <a class="btn btn-light" href="cenik.html">Zobrazit ceník</a>
-    </div>
-  </div>
-</section>`;
-
-export const index = {
-  file: "index.html",
-  current: "index.html",
-  title: "SuperKasa – pokladna s EET 2.0 nastavená pro váš obor",
-  desc: "Dotyková pokladna pro večerky, trafiky, pekárny, drogerie, kavárny, kadeřnictví, nehtová studia a další obory. EET 2.0, sklad, cenovky, vietnamština pro obsluhu. 199 Kč měsíčně s DPH, 30 dní zdarma.",
-  jsonld: {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "SuperKasa",
-    url: "https://superkasa.cz/",
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Windows 10, Windows 11",
-    inLanguage: ["cs", "vi", "en"],
-    description: "Pokladní systém s EET 2.0 pro obchody, občerstvení a služby.",
-    offers: { "@type": "Offer", price: "199", priceCurrency: "CZK", description: "Měsíčně včetně DPH, prvních 30 dní zdarma" },
-  },
-  body: `
+export const index = (c) => {
+  const t = c.T.index;
+  const [g1, g2, g3] = t.mockGroups;
+  const langLinks = Object.fromEntries(LANGS.map((l) => [l, `<a href="${langHref(c.lang, l, "index.html")}" hreflang="${l}" lang="${l}">${LANG_INFO[l].name}</a>`]));
+  return {
+    file: "index.html",
+    current: "index.html",
+    title: t.title,
+    desc: t.desc,
+    jsonld: {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "SuperKasa",
+      url: pageUrl(c.lang, "index.html"),
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Windows 10, Windows 11",
+      inLanguage: ["cs", "vi", "en"],
+      description: t.ldDesc,
+      offers: { "@type": "Offer", price: "199", priceCurrency: "CZK", description: t.ldOffer },
+    },
+    body: `
 <section class="hero hero-pick">
   <div class="wrap">
     <div class="hero-intro">
-      <span class="eyebrow">Pokladna s EET 2.0</span>
-      <h1>Pokladna nastavená pro váš obor</h1>
-      <p class="lead">Vyberte, co provozujete. SuperKasa si připraví skupiny zboží, dlaždice a funkce přesně pro vás – a vy můžete začít prodávat.</p>
+      <span class="eyebrow">${t.eyebrow}</span>
+      <h1>${t.h1}</h1>
+      <p class="lead">${t.lead}</p>
     </div>
-    ${oborPicker()}
+    ${oborPicker(c)}
     <p class="hero-links">
-      <span><strong>199 Kč</strong> měsíčně s DPH</span>
-      <span><strong>30 dní</strong> zdarma</span>
-      <a href="cenik.html">Ceník</a>
-      <a href="funkce.html">Všechny funkce</a>
+      <span>${t.heroLinks[0]}</span>
+      <span>${t.heroLinks[1]}</span>
+      <a href="cenik.html">${t.heroLinks[2]}</a>
+      <a href="funkce.html">${t.heroLinks[3]}</a>
     </p>
+    <p class="lang-note">${t.langNote(langLinks)}</p>
   </div>
 </section>
 
 <section class="section alt">
   <div class="wrap split">
     <div>
-      <h2>Prodej na dotyk, i ve špičce</h2>
-      <p class="lead-sm">SuperKasa běží na počítači s Windows přímo ve vaší provozovně a ovládá se prstem na dotykové obrazovce. Obsluha si ji přepne do vietnamštiny nebo angličtiny.</p>
+      <h2>${t.splitTitle}</h2>
+      <p class="lead-sm">${t.splitLead}</p>
       <ul class="checks">
-        <li>Velké dlaždice se zbožím a obrázky, čtečka čárových kódů i fotoaparát mobilu</li>
-        <li>Platba hotově, kartou přes váš terminál, QR kódem nebo kombinovaně</li>
-        <li>Účtenka jde rovnou do pokladní tiskárny, bez tiskového okna</li>
-        <li>Prodáváte i při výpadku internetu – tržby do EET se odešlou později</li>
+        ${t.splitChecks.map((x) => `<li>${x}</li>`).join("\n        ")}
       </ul>
-      <div class="actions"><a class="btn btn-primary" href="funkce.html">Prohlédnout funkce</a></div>
+      <div class="actions"><a class="btn btn-primary" href="funkce.html">${t.splitBtn}</a></div>
     </div>
     <figure class="mock">
       <div class="mock-screen" aria-hidden="true">
         <div class="mock-tiles">
           <div class="mock-bar"><span></span><span></span><span></span><span></span></div>
           <div class="tile">Rohlík<b>2,90</b></div>
-          <div class="tile g">Pečivo<b>›</b></div>
+          <div class="tile g">${g1}<b>›</b></div>
           <div class="tile">Mléko 1 l<b>24,90</b></div>
           <div class="tile p">Pivo 0,5 l<b>22,90</b></div>
           <div class="tile">Banány / kg<b>34,90</b></div>
-          <div class="tile g">Ovoce<b>›</b></div>
+          <div class="tile g">${g2}<b>›</b></div>
           <div class="tile">Káva<b>89,90</b></div>
           <div class="tile">Taška<b>2,00</b></div>
-          <div class="tile g">Nápoje<b>›</b></div>
+          <div class="tile g">${g3}<b>›</b></div>
         </div>
         <div class="mock-cart">
           <div class="row"><span>Rohlík 4×</span><span>11,60</span></div>
           <div class="row"><span>Pivo 0,5 l 2×</span><span>45,80</span></div>
           <div class="row"><span>Záloha láhev 2×</span><span>6,00</span></div>
           <div class="row"><span>Banány 0,84 kg</span><span>29,32</span></div>
-          <div class="sum"><span>Celkem</span><span>92,72 Kč</span></div>
-          <div class="pay">Zaplatit</div>
+          <div class="sum"><span>${c.T.obor.mockTotal}</span><span>92,72 Kč</span></div>
+          <div class="pay">${c.T.obor.mockPay}</div>
         </div>
       </div>
-      <figcaption class="mock-cap">Ilustrační náhled prodejní obrazovky</figcaption>
+      <figcaption class="mock-cap">${t.mockCap}</figcaption>
     </figure>
   </div>
 </section>
@@ -96,19 +86,14 @@ export const index = {
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Proč SuperKasa</h2>
-      <p>Plná pokladna se skladem a cenovkami za jednu nízkou cenu – bez skrytých poplatků a bez drahého hardwaru.</p>
+      <h2>${t.whyTitle}</h2>
+      <p>${t.whyLead}</p>
     </div>
     <div class="grid grid-3">
-      ${card("wallet", "199 Kč měsíčně včetně DPH", "Konečná cena pro kterýkoli obor, ročně 2 149 Kč. <strong>Neomezeně položek</strong> – sklad, akce i zákaznický displej jsou v ceně každého tarifu. Prvních 30 dní zdarma. <a href=\"cenik.html\">Ceník</a>", "gold")}
-      ${card("cash", "Bez transakčních poplatků", "Z vašich tržeb si nic nebereme a terminál od nás mít nemusíte. Kartou se platí přes váš vlastní platební terminál od kterékoli banky, dál hotově nebo QR kódem.")}
-      ${card("network", "Váš počítač a tablety", "SuperKasa běží na běžném počítači s Windows, další okno pokladny nebo tablet připojíte přes síť obchodu. Dvě zařízení jsou v ceně tarifu bez příplatku – třeba pokladna a tablet pro příjem zboží.")}
-      ${card("clock", "Funguje i bez internetu", "Pokladna i data jsou přímo u vás v provozovně. Při výpadku internetu prodáváte dál a tržby do EET se odešlou, jakmile se připojení vrátí. Každý den se dělá záloha.")}
-      ${card("lang", "Obsluha i ve vietnamštině", "Čeština, <span lang=\"vi\">tiếng Việt</span> i angličtina – každý prodavač má svůj jazyk a přepne ho jedním tlačítkem. Doklad pro zákazníka je vždy česky.", "gold")}
-      ${card("box", "Sklad v ceně tarifu", "Příjem zboží skenováním, inventura a návrh objednávky v každém tarifu, pro obchody i expirace a cenovky na pokladní tiskárně. Docházku, věrnostní program nebo rezervace si přidáte, jen když je chcete. <a href=\"cenik.html#doplnky\">Doplňky</a>")}
+      ${cards([["wallet", "gold"], ["cash"], ["network"], ["clock"], ["lang", "gold"], ["box"]], t.whyCards)}
     </div>
     <div class="note mt-2">
-      <p><strong>Pro srovnání:</strong> tarify běžných pokladen, které pokrývají potřeby večerky (tisíce položek, sklad), stojí podle veřejných ceníků zhruba 600–1 200 Kč měsíčně včetně DPH. Doplňky jako docházka nebo sklad bývají jen v nejdražších tarifech. U SuperKasy je sklad v ceně tarifu a doplňky si zapnete jednotlivě. Stav k říjnu 2026, ceny se mohou měnit.</p>
+      <p>${t.compareNote}</p>
     </div>
   </div>
 </section>
@@ -116,67 +101,59 @@ export const index = {
 <section class="section alt">
   <div class="wrap">
     <div class="section-head">
-      <h2>Připraveno na rok 2027</h2>
-      <p>Od 1. 1. 2027 začíná evidence tržeb EET 2.0 a v gastru se mění pravidla pro spropitné a DPH. SuperKasa to zvládá v ceně tarifu.</p>
+      <h2>${t.readyTitle}</h2>
+      <p>${t.readyLead}</p>
     </div>
     <div class="grid grid-3">
-      ${card("eet", "EET 2.0", "Doklad se uloží hned a do EET se odešle na pozadí. Když vypadne internet, pokladna odesílání opakuje a prodej nezdržuje. <a href=\"eet.html\">Jak na EET 2.0</a>")}
-      ${card("coins", "Spropitné bez daně do 7 %", "Spropitné zapíšete mimo tržbu a EET – komu, kolik, hotově nebo kartou. Pokladna hlídá limit 7 % pro osvobození od daně a připraví měsíční podklad pro mzdy.", "gold")}
-      ${card("cup", "DPH 12 % na nealko na místě", "Nealko a káva podávané na místě mají od 2027 sazbu 12 %, s sebou 21 %. Na pokladně přepnete Na místě / S sebou a doklad použije správnou sazbu.")}
+      ${cards([["eet"], ["coins", "gold"], ["cup"]], t.readyCards)}
     </div>
-    <p class="small mt-1">Termíny a podmínky ověřte u Finanční správy nebo s účetní. <a href="funkce.html#gastro-2027">Jak to v pokladně funguje</a></p>
+    <p class="small mt-1">${t.readyNote}</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <h2>Jak začít</h2>
-      <p>Od instalace po ostrý provoz s EET 2.0.</p>
+      <h2>${t.stepsTitle}</h2>
+      <p>${t.stepsLead}</p>
     </div>
     <ol class="steps">
-      <li><strong>Nainstalujete SuperKasu na počítač s Windows</strong>Jeden instalační soubor, bez práv správce a bez dalších programů – <a href="ke-stazeni.html">stáhnout</a>.</li>
-      <li><strong>Vyberete svůj obor a založíte prodavače</strong>Pokladna připraví skupiny, sazby DPH, dlaždice a funkce. Nebo popíšete vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky – zdarma a bez internetu, česky, vietnamsky i anglicky. Všechno uvidíte a upravíte, sazby DPH ověřte s účetní. Prodavači se přihlašují svým PINem.</li>
-      <li><strong>30 dní zkoušíte zdarma</strong>Ve zkušebním režimu jsou doklady označené jako zkušební a do ostrého EET se neposílají.</li>
-      <li><strong>Přejdete do ostrého provozu</strong>S placenou licencí a vlastním pokladním certifikátem od Finanční správy přepnete pokladnu do ostrého režimu. <a href="eet.html">Jak na EET 2.0</a></li>
+      ${t.steps.map(([s, txt]) => `<li><strong>${s}</strong>${txt}</li>`).join("\n      ")}
     </ol>
   </div>
 </section>
-${cta()}`,
+${cta(c)}`,
+  };
 };
 
-export const funkce = {
-  file: "funkce.html",
-  current: "funkce.html",
-  title: "Funkce pokladny SuperKasa – prodej, EET 2.0, sklad, cenovky",
-  desc: "Co SuperKasa umí: dotykový prodej, EET 2.0, sklad s příjmem a inventurou, cenovky a účtenky přímo na pokladní tiskárně, QR platby, váha, zákaznický displej, uzávěrky, zálohy a vietnamština pro obsluhu.",
-  body: `
+export const funkce = (c) => {
+  const t = c.T.funkce;
+  const { ADDONS, KINDS } = c.D;
+  const kindNames = Object.fromEntries(KINDS);
+  const addonFeature = (a) =>
+    card(a.icon, a.name, `<p>${a.desc}</p><p class="small">${t.addonMeta(a.priceMonth, a.kinds.map((k) => kindNames[k]).join(", "))}</p>`, a.key === "loyalty" || a.key === "recipes" ? "gold" : "");
+  const toc = ["prodej", "stoly", "gastro-2027", "doklady", "sklad", "provoz", "doplnky"];
+  return {
+    file: "funkce.html",
+    current: "funkce.html",
+    title: t.title,
+    desc: t.desc,
+    body: `
 <section class="page-head">
   <div class="wrap">
-    <h1>Funkce</h1>
-    <p class="lead">Prodej, EET, účtenky, hotovost a uzávěrka fungují vždy. Další funkce – sklad, cenovky, zálohy na obaly, váhu, akce, zákaznický displej, QR platby, stoly a účty nebo spropitné – si zapnete podle toho, co váš provoz potřebuje. Co je zapnuté hned, záleží na <a href="obory.html">vašem oboru</a>. Navíc si můžete přidat <a href="#doplnky">placené doplňky</a>.</p>
-    <nav class="toc" aria-label="Oddíly stránky">
-      <a href="#prodej">Prodej a platby</a>
-      <a href="#stoly">Stoly a účty</a>
-      <a href="#gastro-2027">Gastro 2027</a>
-      <a href="#doklady">Doklady a EET</a>
-      <a href="#sklad">Sklad a zboží</a>
-      <a href="#provoz">Obsluha a provoz</a>
-      <a href="#doplnky">Placené doplňky</a>
+    <h1>${t.h1}</h1>
+    <p class="lead">${t.lead}</p>
+    <nav class="toc" aria-label="${t.tocAria}">
+      ${toc.map((id, i) => `<a href="#${id}">${t.toc[i]}</a>`).join("\n      ")}
     </nav>
   </div>
 </section>
 
 <section class="section feature-group" id="prodej">
   <div class="wrap">
-    <div class="section-head"><h2>Prodej a platby</h2></div>
+    <div class="section-head"><h2>${t.prodejTitle}</h2></div>
     <div class="grid grid-3">
-      ${card("touch", "Prodej na dotykové obrazovce", "Velké dlaždice se zbožím a obrázky, skupiny, PLU, číselník s násobením, slevy na položku i na celý nákup a odložení nákupu. Cenu a stav skladu zkontrolujete bez prodeje.")}
-      ${card("scan", "Čtečka i fotoaparát mobilu", "Čárové kódy čte běžná USB čtečka. Na mobilu nebo tabletu poslouží fotoaparát – na pokladně, při příjmu zboží i v kartě zboží.")}
-      ${card("scale", "Váha", "U zboží na kilogramy se pokladna zeptá na hmotnost. Přečte i čárové kódy ze štítků váhy – s hmotností nebo cenou.")}
-      ${card("percent", "Akce a množstevní ceny", "Akce do zvoleného data a cena od určitého počtu kusů, třeba levnější pivo od 6 kusů. Pokladna je použije sama.")}
-      ${card("bottle", "Zálohy na obaly", "Vratné láhve a přepravky. Zálohu jde s pivem propojit – pak se přidá sama a s odebráním piva zase odejde. Výkup zálohy jednou dlaždicí.")}
-      ${card("qr", "QR platby", "Velký QR kód pro platbu převodem na pokladně, na zákaznickém displeji i na účtence. Platit jde i kombinovaně – část kartou nebo QR, zbytek hotově. Kartou se platí přes váš samostatný platební terminál.")}
+      ${cards([["touch"], ["scan"], ["scale"], ["percent"], ["bottle"], ["qr"]], t.prodej)}
     </div>
   </div>
 </section>
@@ -184,13 +161,11 @@ export const funkce = {
 <section class="section alt feature-group" id="stoly">
   <div class="wrap">
     <div class="section-head">
-      <h2>Stoly a účty</h2>
-      <p>Pro hospody, bary a restaurace – v tarifu Gastro. <a href="pokladna-hospoda-restaurace.html">Jak bude hospoda nastavená</a></p>
+      <h2>${t.stolyTitle}</h2>
+      <p>${t.stolyLead}</p>
     </div>
     <div class="grid grid-3">
-      ${card("table", "Účty na stůl", "Obrazovka stolů po místnostech s útratou a časem od poslední objednávky. Víc účtů u jednoho stolu, účet na jméno u baru. Objednávat jde z pokladny i z tabletu u stolu.")}
-      ${card("split", "Rozdělit a přesunout", "Každý host zaplatí své položky. Položky nebo celý účet přesunete k jinému stolu či na nový účet. Doklad a EET vzniknou až při zaplacení.")}
-      ${card("printer", "Bony do kuchyně a na výčep", "Po objednání vyjede bon na pokladní tiskárně v kuchyni nebo u výčepu, i s poznámkou pro kuchyni. Při odebrání položky storno bon.")}
+      ${cards([["table"], ["split"], ["printer"]], t.stoly)}
     </div>
   </div>
 </section>
@@ -198,72 +173,54 @@ export const funkce = {
 <section class="section feature-group" id="gastro-2027">
   <div class="wrap">
     <div class="section-head">
-      <h2>Připraveno na gastro od roku 2027</h2>
-      <p>Od 1. 1. 2027 platí ve stravovacích službách nová pravidla pro DPH a spropitné. Obojí SuperKasa umí <strong>zdarma v ceně tarifu</strong> – žádný placený doplněk.</p>
+      <h2>${t.gastroTitle}</h2>
+      <p>${t.gastroLead}</p>
     </div>
     <div class="grid grid-2">
-      ${card("cup", "Na místě / S sebou", "Na pokladně přepnete, jestli host nakupuje na místě, nebo s sebou. Nealko a káva podávané na místě mají od 1. 1. 2027 sazbu 12 %, s sebou 21 % – doklad použije správnou sazbu a cena pro zákazníka se nemění. Na účtence je „Prodej: S sebou“. Sazbu s sebou má každá skupina zboží ve Správě.")}
-      ${card("coins", "Spropitné mimo tržbu a EET", "Po zaplacení ťuknete na Spropitné – komu, kolik, hotově nebo kartou. Spropitné není tržba, do EET nejde a v uzávěrce je zvlášť. Ve Správě uvidíte měsíční přehled po lidech a podíl na příjmech: pokladna hlídá limit 7 % pro osvobození od daně a podklad pro mzdy stáhnete jako CSV. V tarifech Gastro, Potraviny, Nehtové studio a Služby.", "gold")}
+      ${cards([["cup"], ["coins", "gold"]], t.gastro)}
     </div>
-    <p class="small mt-1">Sazby DPH a podmínky osvobození spropitného ověřte s účetní – osvobození do 7 % se podle zákona týká zaměstnanců ve stravovacích službách.</p>
+    <p class="small mt-1">${t.gastroNote}</p>
   </div>
 </section>
 
 <section class="section alt feature-group" id="doklady">
   <div class="wrap">
-    <div class="section-head"><h2>Doklady a EET</h2></div>
+    <div class="section-head"><h2>${t.dokladyTitle}</h2></div>
     <div class="grid grid-3">
-      ${card("eet", "EET 2.0", "Tržby se posílají do EET 2.0 na pozadí. Při výpadku internetu pokladna odesílání opakuje a lišta ukazuje, jestli je vše odeslané. <a href=\"eet.html\">Jak to funguje</a>")}
-      ${card("printer", "Přímý tisk účtenek", "Účtenka jde po zaplacení rovnou do pokladní tiskárny (Epson TM-T88 a kompatibilní, role 80 i 58 mm), bez tiskového okna. Pokladna otevře i peněžní zásuvku připojenou k tiskárně.")}
-      ${card("undo", "Storno a vratky", "Storno celého dokladu i vratka vybraných položek ze staršího nákupu, s PINem vedoucího a povinným důvodem. Nic se nemaže – vždy vznikne nový doklad.")}
-      ${card("report", "Uzávěrky", "Počáteční hotovost, vklady a výběry, průběžná a denní uzávěrka s počítáním bankovek a mincí a rozdílem proti pokladně. Prodavači mohou dělat slepou uzávěrku.")}
-      ${card("chart", "Přehledy pro majitele", "Tržby podle DPH, plateb, prodavačů a skupin, průměrný nákup, slevy, storna a nejprodávanější zboží. Grafy po hodinách i dnech.")}
-      ${card("cash", "Hotovost pod kontrolou", "Zaokrouhlení na koruny, návrh bankovek a výpočet vrácení. Upozornění na odvod hotovosti nad limit.")}
+      ${cards([["eet"], ["printer"], ["undo"], ["report"], ["chart"], ["cash"]], t.doklady)}
     </div>
   </div>
 </section>
 
 <section class="section feature-group" id="sklad">
   <div class="wrap">
-    <div class="section-head"><h2>Sklad a zboží</h2></div>
+    <div class="section-head"><h2>${t.skladTitle}</h2></div>
     <div class="grid grid-3">
-      ${card("box", "Sklad s příjmem a inventurou", "Příjem zboží skenováním s dodavatelem, číslem faktury a nákupní cenou. Inventura regálu mění jen naskenované zboží. Hlídání minimálního stavu a návrh objednávky podle prodejů.")}
-      ${card("calendar", "Expirace", "Datum spotřeby při příjmu i v kartě zboží, přehled zboží, které brzy projde, a štítek přímo na dlaždici. Neprodané nebo prošlé zboží odepíšete.")}
-      ${card("tag", "Cenovky na pokladní tiskárně", "Cenovky vytisknete na pokladní tiskárně (Epson TM-T88 a kompatibilní), na etiketové tiskárně nebo na A4. S cenou za kg, litr nebo 100 g, akční přeškrtnutou cenou a čárovým kódem. Snadno vyberete zboží, kterému se změnila cena.")}
-      ${card("db", "Sdílená databáze názvů podle EAN", "Pokladny SuperKasa si navzájem napovídají názvy zboží podle čárového kódu – i u cigaret a místních výrobků. Přispívání zapínáte sami a posílá se jen kód, název, balení, skupina a DPH – nikdy ceny, prodeje ani údaje o obchodě.")}
-      ${card("download", "Import zboží", "Zboží převezmete z CSV, i z exportu jiné pokladny. Opakovaný import nic nezdvojí, jen aktualizuje ceny. Fotky zboží se doplní podle EAN.")}
-      ${card("home", "Nastavená pro váš obor", "<p>Podle oboru se založí skupiny s DPH, dlaždice a ukázkové položky – pečivo, ovoce, zelenina, zálohy, káva nebo služby. <a href=\"obory.html\">Vyberte svůj obor</a></p><p>Nebo popíšete vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky – zdarma a bez internetu, česky, vietnamsky i anglicky. Návrh uvidíte a upravíte. Sazby DPH ověřte s účetní.</p>")}
+      ${cards([["box"], ["calendar"], ["tag"], ["db"], ["download"], ["home"]], t.sklad)}
     </div>
   </div>
 </section>
 
 <section class="section alt feature-group" id="provoz">
   <div class="wrap">
-    <div class="section-head"><h2>Obsluha a provoz</h2></div>
+    <div class="section-head"><h2>${t.provozTitle}</h2></div>
     <div class="grid grid-3">
-      ${card("lang", "Vietnamština pro obsluhu", "Čeština, vietnamština a angličtina. Každý prodavač má svůj jazyk a přepne ho jedním tlačítkem. Doklad pro zákazníka je vždy česky.", "gold")}
-      ${card("users", "Prodavači a oprávnění", "Přihlášení PINem, role prodavač, vedoucí a majitel. Záznam změn ukáže, kdo co upravil.")}
-      ${card("monitor", "Zákaznický displej", "Druhá obrazovka otočená k zákazníkovi: nákup s fotkami, QR kód k platbě, vrácená částka a mezi nákupy vaše akce.")}
-      ${card("network", "Provoz v síti obchodu", "Pokladna běží na jednom počítači v obchodě. Další okno pokladny, správu nebo zákaznický displej otevřete v prohlížeči na jiném zařízení v síti obchodu – i na starším počítači s Windows 7. Každé zařízení se spáruje kódem.")}
-      ${card("shield", "Zálohy", "Databáze, fotky zboží i certifikát EET se zálohují každý den. Druhou kopii můžete posílat na USB disk nebo do OneDrive. Přechod na nový počítač zvládnete jedním souborem.")}
-      ${card("download", "Export dat", "Doklady, uzávěrky a další data kdykoli vyexportujete. Export funguje i po skončení předplatného.")}
-      ${card("refresh", "Aktualizace", "Pokladna sama zjistí, že vyšla nová verze, a nainstalujete ji jedním tlačítkem. Rozpracovaný nákup se před restartem dokončí.")}
-      ${card("clock", "Prodej i bez internetu", "Pokladna běží přímo u vás, takže prodej nezávisí na připojení. Tržby do EET se odešlou, jakmile se internet vrátí.")}
-      ${card("printer", "Tiskárna kdekoli v obchodě", "Tiskárna může být u hlavního počítače, v síti, nebo u jiného počítače s tiskovým pomocníkem – i s Windows 7. Bez sdílení tiskáren ve Windows.")}
+      ${cards([["lang", "gold"], ["users"], ["monitor"], ["network"], ["shield"], ["download"], ["refresh"], ["clock"], ["printer"]], t.provoz)}
     </div>
   </div>
 </section>
 <section class="section feature-group" id="doplnky">
   <div class="wrap">
     <div class="section-head">
-      <h2>Placené doplňky</h2>
-      <p>Funkce nad tarif, které si přidáte jen tehdy, když je opravdu využijete. Stejná cena ve všech oborech, ve 30denní zkoušce zdarma. <a href="cenik.html#doplnky">Ceník doplňků</a></p>
+      <h2>${t.addonsTitle}</h2>
+      <p>${t.addonsLead}</p>
     </div>
     <div class="grid grid-3">
       ${ADDONS.map(addonFeature).join("\n      ")}
-      ${card("wallet", "Platíte jen to, co zapnete", "Doplněk se platí k tarifu (199 Kč) zvlášť, ročně o 10 % levněji. Bez závazku – odemkne ho stejný licenční klíč jako tarif a zapnete ho ve Správě → Systém → Funkce pokladny. <a href=\"cenik.html#doplnky\">Ceník</a>")}
+      ${card("wallet", t.payCard[0], t.payCard[1])}
     </div>
   </div>
 </section>
-${cta("Chybí vám nějaká funkce?", "Zavolejte nám a popište, co ve vašem provozu potřebujete. SuperKasu dál rozvíjíme podle potřeb obchodů.")}`,
+${cta(c, t.cta[0], t.cta[1])}`,
+  };
 };

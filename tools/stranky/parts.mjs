@@ -1,5 +1,6 @@
 // Společné části stránek: ikony, karty, hlavička a patička. Výsledkem jsou obyčejné statické HTML soubory.
-export const SITE = "https://superkasa.cz";
+import { LANG_INFO, LANGS, SITE, langHref, pageUrl } from "./i18n.mjs";
+export { SITE };
 export const INLINE_JS = 'document.documentElement.className+=" js"';
 
 const P = {
@@ -42,59 +43,88 @@ export const icon = (k, cls = "") =>
 
 export const card = (ic, title, text, cls = "") => `<article class="card">${icon(ic, cls)}<h3>${title}</h3>${text.startsWith("<") ? text : `<p>${text}</p>`}</article>`;
 
-export const NAV = [
-  ["index.html", "Úvod"],
-  ["obory.html", "Pro koho"],
-  ["funkce.html", "Funkce"],
-  ["cenik.html", "Ceník"],
-  ["eet.html", "EET 2.0"],
-  ["ke-stazeni.html", "Ke stažení"],
-  ["kontakt.html", "Kontakt"],
-];
+
+/** Soubory hlavního menu (popisky jsou ve slovníku common.nav ve stejném pořadí). */
+export const NAV_FILES = ["index.html", "obory.html", "funkce.html", "cenik.html", "eet.html", "ke-stazeni.html", "kontakt.html"];
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 
-/** Celá stránka. `footerObory` = odkazy na obory do patičky, `jsonld` = strukturovaná data (objekt). */
-export function page({ file, title, desc, current, body, noindex = false, canonicalPath, jsonld, footerObory = [] }) {
-  const url = SITE + "/" + (canonicalPath ?? (file === "index.html" ? "" : file));
-  const nav = NAV.map(([href, label]) => `<a href="${href}"${href === current ? ' aria-current="page"' : ""}>${label}</a>`).join("\n      ");
+/** Výzva na konci stránky. */
+export const cta = (c, title = c.T.common.ctaTitle, text = c.T.common.ctaText) => `
+<section class="section dark cta">
+  <div class="wrap">
+    <h2>${title}</h2>
+    <p>${text}</p>
+    <div class="actions">
+      <a class="btn btn-gold" href="tel:+420608886882">${c.T.common.callPhone}</a>
+      <a class="btn btn-light" href="cenik.html">${c.T.common.showPricing}</a>
+    </div>
+  </div>
+</section>`;
+
+/**
+ * Přepínač jazyků: vede na stejnou stránku v jiném jazyce. V hlavičce na počítači zkratky (CZ / VI / EN s plným názvem
+ * pro čtečky), v mobilním menu plné názvy jazyků. Každý odkaz má lang a hreflang svého jazyka.
+ */
+const langSwitch = (c, file, where) => `<nav class="langs langs-${where}" aria-label="${c.T.common.langAria}">${LANGS.map((l) => {
+  const { name, short } = LANG_INFO[l];
+  const label = where === "top" ? ` title="${name}" aria-label="${name}"` : "";
+  return `<a href="${langHref(c.lang, l, file)}" hreflang="${l}" lang="${l}"${label}${l === c.lang ? ' aria-current="true"' : ""}>${where === "top" ? short : name}</a>`;
+}).join("")}</nav>`;
+
+/**
+ * Celá stránka. `c` = jazyk ({ lang, T, up }), `footerObory` = odkazy na obory do patičky,
+ * `jsonld` = strukturovaná data (objekt), `canonicalPath` = jiný soubor pro canonical a hreflang (404 → úvod).
+ */
+export function page(c, { file, title, desc, current, body, noindex = false, canonicalPath, jsonld, footerObory = [] }) {
+  const { T, up, lang } = c;
+  const L = T.common;
+  const target = canonicalPath ?? file;
+  const url = pageUrl(lang, target);
+  const alternates = [...LANGS.map((l) => [l, pageUrl(l, target)]), ["x-default", pageUrl("cs", target)]]
+    .map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join("\n");
+  const nav = NAV_FILES.map((href, i) => `<a href="${href}"${href === current ? ' aria-current="page"' : ""}>${L.nav[i]}</a>`).join("\n      ");
   const ld = jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, "\u003c")}</script>\n` : "";
   return `<!DOCTYPE html>
-<html lang="cs">
+<html lang="${lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title>
 <meta name="description" content="${esc(desc)}">
 ${noindex ? '<meta name="robots" content="noindex">\n' : ""}<link rel="canonical" href="${url}">
+${alternates}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SuperKasa">
-<meta property="og:locale" content="cs_CZ">
+<meta property="og:locale" content="${LANG_INFO[lang].og}">
+${LANGS.filter((l) => l !== lang).map((l) => `<meta property="og:locale:alternate" content="${LANG_INFO[l].og}">`).join("\n")}
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${SITE}/img/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="SuperKasa – pokladna pro obchody, gastro a služby">
+<meta property="og:image:alt" content="${esc(L.ogImageAlt)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#5c1a46">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="${up}favicon.ico" sizes="any">
+<link rel="icon" href="${up}favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="${up}apple-touch-icon.png">
+<link rel="stylesheet" href="${up}css/style.css">
 <script>${INLINE_JS}</script>
-<script src="js/site.js" defer></script>
+<script src="${up}js/site.js" defer></script>
 ${ld}</head>
 <body>
-<a class="skip" href="#obsah">Přeskočit na obsah</a>
+<a class="skip" href="#obsah">${L.skip}</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span>Menu</button>
-    <nav class="nav" id="nav" aria-label="Hlavní menu">
+    <a class="brand" href="index.html" aria-label="${esc(L.brandAria)}"><img src="${up}img/logo.png" alt="SuperKasa" width="200" height="40"></a>
+    ${langSwitch(c, file, "top")}
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span>${L.menu}</button>
+    <nav class="nav" id="nav" aria-label="${L.navAria}">
       ${nav}
-      <a class="btn btn-primary" href="cenik.html">199 Kč / měsíc</a>
+      <a class="btn btn-primary" href="cenik.html">${L.priceBtn}</a>
+      ${langSwitch(c, file, "menu")}
     </nav>
   </div>
 </header>
@@ -105,33 +135,33 @@ ${body.trim()}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-brand"><img src="favicon.svg" alt="" width="40" height="40"><b>Super<span>Kasa</span></b></div>
-        <p>Pokladní systém pro obchody, občerstvení a služby s EET&nbsp;2.0, skladem a cenovkami. Pro obsluhu i ve vietnamštině.</p>
+        <div class="foot-brand"><img src="${up}favicon.svg" alt="" width="40" height="40"><b>Super<span>Kasa</span></b></div>
+        <p>${L.footAbout}</p>
         <p><a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
       </div>
       <div>
-        <h2>Stránky</h2>
+        <h2>${L.footPages}</h2>
         <ul>
-          ${NAV.map(([href, label]) => `<li><a href="${href}">${label}</a></li>`).join("\n          ")}
+          ${NAV_FILES.map((href, i) => `<li><a href="${href}">${L.nav[i]}</a></li>`).join("\n          ")}
         </ul>
       </div>
       <div>
-        <h2>Obory</h2>
+        <h2>${L.footObory}</h2>
         <ul>
           ${footerObory.map(([href, label]) => `<li><a href="${href}">${label}</a></li>`).join("\n          ")}
         </ul>
       </div>
       <div>
-        <h2>Dokumenty</h2>
+        <h2>${L.footDocs}</h2>
         <ul>
-          <li><a href="obchodni-podminky.html">Obchodní podmínky (koncept)</a></li>
-          <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů (koncept)</a></li>
-          <li><a href="https://eet.gov.cz/" rel="noopener">EET 2.0 – Finanční správa</a></li>
+          <li><a href="obchodni-podminky.html">${L.docOp}</a></li>
+          <li><a href="ochrana-osobnich-udaju.html">${L.docGdpr}</a></li>
+          <li><a href="https://eet.gov.cz/" rel="noopener">${L.docEet}</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Thanh Lam Nguyen, IČO 14161648, 1. května 117/141, 725 25 Ostrava. Tento web nepoužívá cookies ani sledovací nástroje.
+      ${L.footBottom}
     </div>
   </div>
 </footer>
