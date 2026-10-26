@@ -91,7 +91,7 @@ export function page(c, { file, title, desc, current, body, noindex = false, can
   const alternates = [...LANGS.map((l) => [l, pageUrl(l, target)]), ["x-default", pageUrl("cs", target)]]
     .map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join("\n");
   const nav = NAV_FILES.map((href, i) => `<a href="${href}"${href === current ? ' aria-current="page"' : ""}>${L.nav[i]}</a>`).join("\n      ");
-  const ld = jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, "\u003c")}</script>\n` : "";
+  const ld = jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, "\\u003c")}</script>\n` : "";
   return `<!DOCTYPE html>
 <html lang="${lang}">
 <head>
@@ -99,7 +99,7 @@ export function page(c, { file, title, desc, current, body, noindex = false, can
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title>
 <meta name="description" content="${esc(desc)}">
-${noindex ? '<meta name="robots" content="noindex">\n' : ""}<link rel="canonical" href="${url}">
+${noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${url}">`}
 ${alternates}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SuperKasa">

@@ -371,7 +371,7 @@ export default {
     pcTitle: "Máy tính tiền trên máy tính (Windows)",
     pcText: "Đã cài SuperKasa? Mở bằng biểu tượng SuperKasa trên màn hình – đăng nhập bằng mã PIN, không cần internet.",
     pcBtn: "Tải về cho Windows",
-    soon: "Máy tính tiền trên trình duyệt đang được khởi động. Trong lúc chờ, hãy tải bản cho Windows – cũng được dùng thử miễn phí 10 ngày.",
+    soon: "Máy tính tiền trên trình duyệt sắp ra mắt. Trong lúc chờ, hãy tải bản cho Windows – cũng được dùng thử miễn phí 10 ngày.",
   },
 
   kontakt: {

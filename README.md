@@ -19,7 +19,8 @@ osobních údajů se nepřekládají: ve `vi/` a `en/` je krátká stránka „Z
 | `funkce.html` | Funkce pokladny |
 | `cenik.html` | Tarify, 199 Kč měsíčně / 2 149 Kč ročně s DPH, placené doplňky, zkouška, pronájem a koupě, časté otázky |
 | `eet.html` | EET 2.0 – jak to pokladna dělá, co zařídí podnikatel, odkazy na Finanční správu |
-| `ke-stazeni.html` | Místo pro instalátor pro Windows (zatím „připravujeme“) a potřebné vybavení |
+| `ke-stazeni.html` | Instalátor pro Windows (`aktualizace/SuperKasa-Setup-0.1.0.exe`, velikost a SHA-256) a potřebné vybavení |
+| `prihlaseni.html` | Přihlášení do pokladny v prohlížeči (adresa obchodu → `https://<obchod>.superkasa.cz/`, nová pokladna na `app.superkasa.cz`); dokud cloud neběží, `js/site.js` ukáže odkaz na Windows |
 | `kontakt.html` | Kontakt na výrobce (bez DIČ – to se nezveřejňuje) |
 | `obchodni-podminky.html` | **Koncept** k právní kontrole (`noindex`, není v sitemap) |
 | `ochrana-osobnich-udaju.html` | **Koncept** k právní kontrole (`noindex`, není v sitemap) |
@@ -59,7 +60,7 @@ node tools/sestavit.mjs
 | `tools/stranky/pages2.mjs` | ceník, EET 2.0, ke stažení, kontakt |
 | `tools/stranky/pages3.mjs` | koncepty podmínek a ochrany osobních údajů, 404 |
 
-Skript sestaví všechny tři jazyky (108 stránek), zapíše i `sitemap.xml` (s dnešním datem) a `robots.txt` a zkontroluje, že hash vloženého skriptu sedí
+Skript sestaví všechny tři jazyky (111 stránek), zapíše i `sitemap.xml` (s dnešním datem) a `robots.txt` a zkontroluje, že hash vloženého skriptu sedí
 s Content-Security-Policy v `.htaccess`.
 
 - Když se v pokladně změní typ provozu, tarif nebo funkce, upravte `tools/stranky/obory.mjs` **a** stejné místo
@@ -69,37 +70,27 @@ s Content-Security-Policy v `.htaccess`.
   skupiny a texty obrazovky jsou přeložené podle pokladny (`public/js/i18n.js`, `src/domain/starter.ts`).
 - Po změně loga (`img/superkasa-logo.webp` nebo `favicon.svg`) znovu vyrobte obrázky: `node tools/make-images.mjs`
   (potřebuje Chrome nebo Edge). Obrázky oborů v `img/obory` jsou zkopírované z `public/img/art` v repozitáři pokladny.
-- Až bude instalátor veřejný, nahraďte v `tools/stranky/pages2.mjs` (stránka Ke stažení) tlačítko „Připravujeme“
-  odkazem na `https://superkasa.cz/aktualizace/SuperKasa-Setup-X.Y.Z.exe` a upravte texty „připravujeme“
-  (úvod, stránky oborů).
+- Při vydání nové verze pokladny upravte v `tools/stranky/pages2.mjs` (stránka Ke stažení) odkaz na
+  `aktualizace/SuperKasa-Setup-X.Y.Z.exe` a kontrolní součet SHA-256 a ve slovnících (`stazeni.appMeta`) číslo verze a velikost.
 
-## Nahrání na hosting
+## Zveřejnění (GitHub Pages)
 
-Před zveřejněním: nechat právně zkontrolovat obchodní podmínky a ochranu osobních údajů (do té doby jsou označené jako
-koncept), doplnit žlutě označená místa a ověřit texty o EET 2.0 (stránka uvádí stav k 21. 10. 2026).
+Web běží zdarma na **GitHub Pages** z repozitáře `minimarketumilana-cloud/superkasa-web` (větev `main`, kořen repozitáře),
+s vlastní doménou `superkasa.cz` (soubor `CNAME`, HTTPS vynucené v nastavení Pages). DNS je u WEDOS:
+`superkasa.cz` → záznamy A na adresy GitHub Pages, `www` → CNAME na `minimarketumilana-cloud.github.io`.
 
-**Jaký hosting:** pro samotný web stačí nejlevnější webhosting se statickými soubory (PHP ani databáze nejsou potřeba),
-ideálně s Apache, aby fungoval `.htaccess`. Sdílená databáze názvů zboží (`katalog.superkasa.cz`) ale potřebuje
-**VPS** s Node.js (viz `docs/sdilena-databaze.md` v repozitáři pokladny). Pokud bude VPS, může na něm běžet i tenhle web
-(Caddy zvládne obě domény) – pak se `.htaccess` nepoužije a hlavičky z něj je potřeba přenést do konfigurace Caddy.
-
-1. **Doména.** U registrátora nasměrujte DNS `superkasa.cz` a `www.superkasa.cz` na hosting (záznamy A/AAAA nebo
-   CNAME podle návodu hostingu). Změna DNS se projeví do několika hodin.
-2. **HTTPS.** V administraci hostingu zapněte certifikát (většinou Let's Encrypt zdarma). Pak v `.htaccess` odkomentujte
-   blok „Přesměrování na https“.
-3. **Nahrání souborů.** Přes FTP/SFTP (např. WinSCP nebo FileZilla) nebo správce souborů hostingu nahrajte **obsah** této
-   složky do kořene webu (často `www`, `public_html` nebo `htdocs`):
-   `*.html`, `vi/`, `en/`, `css/`, `js/`, `img/`, `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `sitemap.xml`, `robots.txt`, `.htaccess`.
-   Nenahrávejte `.git/`, `tools/` ani `README.md`.
-   `.htaccess` začíná tečkou – ve FileZille zapněte Server → Zobrazit skryté soubory.
-4. **Složka `aktualizace/` na serveru je pro pokladny.** Z ní si pokladny stahují `manifest.json` a instalátory
-   (výchozí adresa `https://superkasa.cz/aktualizace/manifest.json`). Při nahrávání webu ji nepřepisujte ani nemažte –
-   nepoužívejte „synchronizaci se smazáním“ celé složky webu. Postup vydání verze je v README repozitáře pokladny.
-5. **Kontrola.** Otevřete https://superkasa.cz, proklikejte menu a výběr oboru na telefonu i počítači, zkuste
-   neexistující adresu (má se ukázat stránka „Stránku jsme nenašli“) a náhled odkazu např. v Messengeru nebo WhatsAppu
-   (obrázek `og.png`).
-6. **Vyhledávače (volitelně).** V Google Search Console a Bing Webmaster Tools ověřte doménu a odešlete
+1. **Úprava:** změnit podklady v `tools/stranky/`, spustit `node tools/sestavit.mjs` (zkontroluje i stavbu překladů).
+2. **Zveřejnění:** commit a `git push` – GitHub Pages web přestaví do minuty.
+3. **Složka `aktualizace/` je pro pokladny** (manifest a instalátory, `https://superkasa.cz/aktualizace/manifest.json`).
+   Nemazat ani nepřepisovat ručně; postup vydání verze je v README repozitáře pokladny.
+4. **Kontrola:** otevřít https://superkasa.cz na telefonu i počítači, přepnout jazyky (vlajky v hlavičce), zkusit
+   neexistující adresu (stránka „Stránku jsme nenašli“) a náhled odkazu v Messengeru nebo WhatsAppu (`og.png`).
+5. **Vyhledávače (volitelně):** v Google Search Console a Bing Webmaster Tools ověřit doménu a odeslat
    `https://superkasa.cz/sitemap.xml`.
 
-Pokud hosting nepoužívá Apache (nginx, Caddy, statický hosting typu Netlify / Cloudflare Pages), `.htaccess` se ignoruje:
-stránku 404 a hlavičky (hlavně Content-Security-Policy z `.htaccess`) je pak potřeba nastavit v jeho konfiguraci.
+GitHub Pages neumí vlastní hlavičky: `.htaccess` (Content-Security-Policy, cache) se nepoužije. Je v repozitáři pro
+případný přechod na Apache; na serveru s Caddy by se hlavičky přenesly do jeho konfigurace. Stránku 404 GitHub Pages
+zobrazí kořenovou českou `404.html`.
+
+Před ostrým spuštěním prodeje: nechat právně zkontrolovat obchodní podmínky a ochranu osobních údajů (jsou označené jako
+koncept) – po spuštění SuperKasa Cloud musí ochrana osobních údajů popsat i zpracování dat obchodů na serveru.
