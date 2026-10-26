@@ -96,11 +96,11 @@ export default {
   addons: {
     attendance: [
       "Attendance and shifts",
-      "Cashiers clock in and out with a PIN on the POS. You see the hours worked per day and per month and can download a report for payroll.",
+      "Cashiers clock in and out with a PIN on the POS. A weekly shift schedule, planned vs. worked hours and a report for payroll.",
     ],
     loyalty: [
-      "Loyalty programme",
-      "A customer card with a barcode from the POS, or a phone number: points for purchases, a discount for points, a permanent discount for VIPs and a spending overview.",
+      "Loyalty and gift vouchers",
+      "A customer card or phone number: points for purchases, a discount for points, a permanent discount for VIPs. Gift vouchers with a barcode and balance – reported correctly to EET 2.0.",
     ],
     reservations: [
       "Reservations and appointments",

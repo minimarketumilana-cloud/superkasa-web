@@ -104,11 +104,11 @@ export default {
   addons: {
     attendance: [
       "Chấm công và ca làm",
-      "Nhân viên chấm công lúc đến và lúc về bằng mã PIN trên máy. Bạn xem số giờ làm theo ngày và theo tháng, và tải về số liệu để tính lương.",
+      "Nhân viên chấm công lúc đến và lúc về bằng mã PIN trên máy. Lịch ca làm theo tuần, so sánh kế hoạch với giờ làm thực tế và số liệu để tính lương.",
     ],
     loyalty: [
-      "Chương trình khách hàng thân thiết",
-      "Thẻ khách hàng có mã vạch in từ máy, hoặc số điện thoại: tích điểm khi mua hàng, đổi điểm lấy giảm giá, giảm giá cố định cho khách VIP và xem tổng chi tiêu.",
+      "Khách hàng thân thiết và phiếu quà tặng",
+      "Thẻ khách hàng hoặc số điện thoại: tích điểm, đổi điểm lấy giảm giá, giảm giá cố định cho khách VIP. Phiếu quà tặng có mã vạch và số dư – gửi EET 2.0 đúng quy định.",
     ],
     reservations: [
       "Đặt lịch và lịch hẹn",

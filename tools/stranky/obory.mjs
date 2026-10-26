@@ -51,8 +51,8 @@ export const TARIFFS = {
 // Ceny v Kč měsíčně včetně DPH, ročně o 10 % levněji (12 měsíců × 0,9, dolů na koruny). Ve zkoušce jsou zdarma.
 const yearly = (month) => Math.floor(month * 12 * 0.9);
 export const ADDONS = [
-  { key: "attendance", icon: "clock", name: "Docházka a směny", desc: "Prodavači zapisují příchod a odchod PINem na pokladně. Vidíte odpracované hodiny za den i měsíc a stáhnete podklad pro mzdy.", priceMonth: 79, kinds: ["shop", "food", "service"] },
-  { key: "loyalty", icon: "star", name: "Věrnostní program", desc: "Zákaznická karta s čárovým kódem z pokladny nebo telefon: body za nákup, sleva za body, stálá sleva pro VIP a přehled útraty.", priceMonth: 69, kinds: ["shop", "food", "service"] },
+  { key: "attendance", icon: "clock", name: "Docházka a směny", desc: "Prodavači zapisují příchod a odchod PINem na pokladně. Rozpis směn na týden, plán proti odpracovaným hodinám a podklad pro mzdy.", priceMonth: 79, kinds: ["shop", "food", "service"] },
+  { key: "loyalty", icon: "star", name: "Věrnost a dárkové poukazy", desc: "Zákaznická karta nebo telefon: body za nákup, sleva za body, stálá sleva pro VIP. Dárkové poukazy s čárovým kódem a zůstatkem – správně v EET 2.0.", priceMonth: 69, kinds: ["shop", "food", "service"] },
   { key: "reservations", icon: "calendar", name: "Rezervace a termíny", desc: "Kalendář termínů pro salony a služby (kdo, kdy, jak dlouho, jaká služba) i rezervace stolů. Hlídá překryvy, službu z rezervace prodáte jedním ťuknutím.", priceMonth: 99, kinds: ["service", "food"] },
   { key: "recipes", icon: "bowl", name: "Receptury a normy", desc: "Suroviny kávy, jídel, koktejlů a zákusků: prodej odepíše suroviny ze skladu, storno je vrátí. Nákladová cena, marže a kolik porcí ještě uděláte.", priceMonth: 79, kinds: ["food"] },
   { key: "control", icon: "eye", name: "Kontrola obsluhy", desc: "Storna, vratky, zrušené nákupy, odebrané položky, slevy, otevření zásuvky a rozdíly při uzávěrce po prodavačích – pokladna ukáže, kdo je výrazně nad průměrem.", priceMonth: 69, kinds: ["shop", "food", "service"] },
