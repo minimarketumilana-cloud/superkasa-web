@@ -1,16 +1,19 @@
 {
-  "version": "0.2.0",
-  "released": "2026-10-26",
-  "url": "https://superkasa.cz/aktualizace/SuperKasa-Setup-0.2.0.exe",
-  "sha256": "b81982229d9f6a171bfc5d60d273129c3e3f46d375d5094f3fe2e4bff1ad0cdc",
-  "size": 25342800,
+  "version": "0.2.1",
+  "released": "2026-10-27",
+  "url": "https://superkasa.cz/aktualizace/SuperKasa-Setup-0.2.1.exe",
+  "sha256": "552671038842446a6ab840f0051bbd93d846ac02449dbdb66135a24753fa4215",
+  "size": 25358928,
   "changelog": [
-    "Dárkové poukazy (doplněk Věrnost a dárkové poukazy): prodej poukazu s čárovým kódem a zůstatkem, placení celým poukazem i částí, storno vrací částku na poukaz. Do EET 2.0 jdou ve zvláštních polích podle zákona.",
-    "Majitel na mobilu: tajný odkaz s QR kódem (Správa → Systém) – tržba dnes a za 7 dní, otevřené pokladny s hotovostí v zásuvce, prodavači, nejprodávanější zboží, rozpis směn a stav EET. Telefon se nepáruje a nic nezmění.",
-    "Rozpis směn (doplněk Docházka): týden po lidech, plán proti odpracovaným hodinám, kopie minulého týdne, tisk.",
-    "Nezměnitelný deník dokladů: každý ostrý doklad nese otisk navázaný na předchozí; Správa → EET → Ověřit deník.",
-    "EET 2.0: upozornění na konec certifikátu přímo na pokladně (certifikát platí 1 rok).",
-    "Přehledy ukazují prodané dárkové poukazy a placení poukazem zvlášť."
+    "Bezpečnostní a opravná verze podle auditu – doporučeno všem.",
+    "EET 2.0: ostré EET nejde omylem přepnout na Playground; vypnutí chce potvrzení a doklady mezitím čekají a po zapnutí se samy dodatečně odešlou. Přísnější ověření potvrzení od Finanční správy (podpis, POK, k jaké zprávě patří).",
+    "Klíč certifikátu EET je uložený zašifrovaně a do záloh (USB, OneDrive) se dostane jen v nepoužitelné podobě.",
+    "Zálohy: kopie dat před každou aktualizací a před změnou databáze; po obnově ze zálohy se čísla dokladů nikdy neopakují a Správa ukáže, které doklady chybí; nepovedená kopie na USB / OneDrive je vidět a zkouší se znovu.",
+    "Export pro účetní a uzávěrka: dárkové poukazy zvlášť (placení poukazem, prodané poukazy, tržba bez nich).",
+    "Karta zboží: když ji mezitím uložilo jiné zařízení, změna se nepřepíše potichu – pokladna nabídne načíst aktuální stav.",
+    "Rychlejší: katalog se po změně stahuje jen se změnami a komprimovaně, import CSV je mnohonásobně rychlejší.",
+    "Aktualizace se nově ověřují vlastním podpisovým klíčem dodavatele."
   ],
-  "signature": "eg-RKapEPJbb0wWkVoyg0MSSVFdjcCLVZSxdhHKYu8OTTInJ7sG-CFU9AdEpJm-qV9pj-iKdRLVjrXwKGbrRBw"
+  "signature": "U__mZYEWyNgPK4TyUsQ8aZzIrDDDR8vpJGcl1RmiFTip7OtYEwHOnixFqEwUBlgRvew9t10jueWv4X4KFSTtCg",
+  "updateSignature": "uQTtCO3UkFN6fNp2g1XUvruN12SjfaOYXW3yhlHEHbp5fk3HWGrGd4qH9M55CJmJ73RdyB-B9vt2mKqWoq-bDA"
 }

@@ -336,7 +336,7 @@ export default {
     h1: "Ke stažení",
     lead: "Instalátor SuperKasy pro Windows. Prvních 10 dní zdarma na vyzkoušení, bez karty a bez závazku.",
     appTitle: "SuperKasa pro Windows",
-    appMeta: "Verze 0.2.0 · 24 MB · Windows 10 a 11 (64bit). Nově dárkové poukazy, rozpis směn, majitel na mobilu a nezměnitelný deník dokladů. Kdyby cokoli nešlo, zavolejte, pomůžeme.",
+    appMeta: "Verze 0.2.1 · 24 MB · Windows 10 a 11 (64bit). Bezpečnostní a opravná verze: zámek ostrého EET, šifrovaný certifikát EET, bezpečnější zálohy a obnova, dárkové poukazy v exportu pro účetní. Kdyby cokoli nešlo, zavolejte, pomůžeme.",
     download: "Stáhnout instalátor",
     smartscreen: "Windows může při spuštění ukázat „Systém Windows ochránil váš počítač“ – instalátor zatím nemá placený podpis vydavatele. Klepněte na „Další informace“ a „Přesto spustit“. Kontrolní součet SHA-256:",
     doesTitle: "Co instalátor udělá",

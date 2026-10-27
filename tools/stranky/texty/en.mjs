@@ -334,7 +334,7 @@ export default {
     h1: "Download",
     lead: "The SuperKasa installer for Windows. The first 10 days are free to try, with no card and no commitment.",
     appTitle: "SuperKasa for Windows",
-    appMeta: "Version 0.2.0 · 24 MB · Windows 10 and 11 (64-bit). New: gift vouchers, shift schedule, owner on mobile and a tamper-evident receipt journal. If anything doesn't work, give us a call and we'll help.",
+    appMeta: "Version 0.2.1 · 24 MB · Windows 10 and 11 (64-bit). Security and bug-fix release: live EET lock, encrypted EET certificate, safer backups and restore, gift vouchers in the accounting export. If anything doesn't work, give us a call and we'll help.",
     download: "Download installer",
     smartscreen: "When you run it, Windows may show “Windows protected your PC” (in Czech: “Systém Windows ochránil váš počítač”) – the installer does not yet have a paid publisher signature. Click “More info” (Další informace) and then “Run anyway” (Přesto spustit). SHA-256 checksum:",
     doesTitle: "What the installer does",
