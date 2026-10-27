@@ -1,17 +1,16 @@
 {
-  "version": "0.1.0",
-  "released": "2026-10-25",
-  "url": "https://superkasa.cz/aktualizace/SuperKasa-Setup-0.1.0.exe",
-  "sha256": "8f08ec5c7d76ad31eb5b13f09c2d2cf8d93f5e7189f3664eda9c8b5db4126b09",
-  "size": 25305569,
+  "version": "0.2.0",
+  "released": "2026-10-26",
+  "url": "https://superkasa.cz/aktualizace/SuperKasa-Setup-0.2.0.exe",
+  "sha256": "b81982229d9f6a171bfc5d60d273129c3e3f46d375d5094f3fe2e4bff1ad0cdc",
+  "size": 25342800,
   "changelog": [
-    "První veřejná verze pokladny: prodej, EET 2.0, sklad, cenovky, uzávěrky a tarify podle oboru.",
-    "Instalace jedním souborem (bez Node.js a npm) a automatické aktualizace ve Správě → Systém.",
-    "26 hotových oborů při zřízení (nově asijské potraviny, květinářství, papírnictví a knihy, oblečení, mobily, zdravá výživa, vinotéka, chovatelské potřeby, cukrárna a zmrzlina, masáže, fitness, autoservis) se skupinami, sazbami DPH, obrázky, kartami a ukázkovými položkami – názvy oborů i skupin česky, vietnamsky a anglicky.",
-    "Návrh skupin podle popisu: napiš, co prodáváš, a pokladna navrhne skupiny s DPH, obrázky a prvními položkami – zdarma a bez internetu, rozumí češtině, vietnamštině i angličtině. Návrh vždy uvidíš a upravíš, než pokladnu založíš.",
-    "Připraveno na rok 2027: prodej Na místě / S sebou (správná sazba DPH pro nealko a kávu) a evidence spropitného mimo tržbu a EET s hlídáním limitu 7 % pro osvobození od daně.",
-    "Placené doplňky (ve zkoušce zdarma): Docházka a směny, Věrnostní program, Rezervace a termíny, Receptury a normy, Kontrola obsluhy.",
-    "Opravené výchozí sazby DPH: kadeřnictví 21 %, nealko a káva podávané v gastru do konce roku 2026 21 % (od roku 2027 12 %)."
+    "Dárkové poukazy (doplněk Věrnost a dárkové poukazy): prodej poukazu s čárovým kódem a zůstatkem, placení celým poukazem i částí, storno vrací částku na poukaz. Do EET 2.0 jdou ve zvláštních polích podle zákona.",
+    "Majitel na mobilu: tajný odkaz s QR kódem (Správa → Systém) – tržba dnes a za 7 dní, otevřené pokladny s hotovostí v zásuvce, prodavači, nejprodávanější zboží, rozpis směn a stav EET. Telefon se nepáruje a nic nezmění.",
+    "Rozpis směn (doplněk Docházka): týden po lidech, plán proti odpracovaným hodinám, kopie minulého týdne, tisk.",
+    "Nezměnitelný deník dokladů: každý ostrý doklad nese otisk navázaný na předchozí; Správa → EET → Ověřit deník.",
+    "EET 2.0: upozornění na konec certifikátu přímo na pokladně (certifikát platí 1 rok).",
+    "Přehledy ukazují prodané dárkové poukazy a placení poukazem zvlášť."
   ],
-  "signature": "Fddszt8u_oIFV_Wteleve5rg29t3A_Xi0--y4qv-qF6REt0NGS9vXD50F4dmuMvAds-A0NrFa9maJWvgJ8oXCQ"
+  "signature": "eg-RKapEPJbb0wWkVoyg0MSSVFdjcCLVZSxdhHKYu8OTTInJ7sG-CFU9AdEpJm-qV9pj-iKdRLVjrXwKGbrRBw"
 }

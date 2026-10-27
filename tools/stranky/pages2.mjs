@@ -271,10 +271,10 @@ export const stazeni = (c) => {
         <h3>${t.appTitle}</h3>
         <p>${t.appMeta}</p>
         <div class="actions" style="margin-top:12px">
-          <a class="btn btn-primary" href="${c.up}aktualizace/SuperKasa-Setup-0.1.0.exe" download>${t.download}</a>
+          <a class="btn btn-primary" href="${c.up}aktualizace/SuperKasa-Setup-0.2.0.exe" download>${t.download}</a>
           <a class="btn btn-ghost" href="tel:+420608886882">${c.T.common.call}</a>
         </div>
-        <p class="small muted" style="margin-top:12px">${t.smartscreen} <code style="word-break:break-all">8f08ec5c7d76ad31eb5b13f09c2d2cf8d93f5e7189f3664eda9c8b5db4126b09</code></p>
+        <p class="small muted" style="margin-top:12px">${t.smartscreen} <code style="word-break:break-all">b81982229d9f6a171bfc5d60d273129c3e3f46d375d5094f3fe2e4bff1ad0cdc</code></p>
       </article>
       <article class="card">
         <h3>${t.doesTitle}</h3>

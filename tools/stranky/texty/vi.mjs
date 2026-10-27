@@ -332,7 +332,7 @@ export default {
     h1: "Tải về",
     lead: "Bộ cài SuperKasa cho Windows. 10 ngày đầu dùng thử miễn phí, không cần thẻ, không ràng buộc.",
     appTitle: "SuperKasa cho Windows",
-    appMeta: "Phiên bản 0.1.0 · 24 MB · Windows 10 và 11 (64-bit). Phiên bản công khai đầu tiên – nếu có gì không chạy, hãy gọi cho chúng tôi, chúng tôi sẽ giúp.",
+    appMeta: "Phiên bản 0.2.0 · 24 MB · Windows 10 và 11 (64-bit). Mới: phiếu quà tặng, lịch ca làm, chủ cửa hàng trên điện thoại và nhật ký hóa đơn không thể sửa. Nếu có gì không chạy, hãy gọi cho chúng tôi, chúng tôi sẽ giúp.",
     download: "Tải bộ cài",
     smartscreen: "Khi chạy, Windows có thể hiện thông báo “Systém Windows ochránil váš počítač” (Windows đã bảo vệ máy tính của bạn) – vì bộ cài hiện chưa có chữ ký nhà phát hành trả phí. Bấm “Další informace” (Thông tin thêm) rồi “Přesto spustit” (Vẫn chạy). Mã kiểm tra SHA-256:",
     doesTitle: "Bộ cài sẽ làm gì",
