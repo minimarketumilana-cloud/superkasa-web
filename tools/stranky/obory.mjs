@@ -101,7 +101,7 @@ export const OBORY = [
     highlights: [
       ["lang", "Obsluha ve vietnamštině", "Každý prodavač má svůj jazyk – vietnamština, čeština nebo angličtina, přepíná se jedním tlačítkem. Doklad pro zákazníka je vždy česky.", "gold"],
       ["scale", "Bylinky na svazky, zelenina na kg", "Svazky bylinek mají cenu za kus, pak choi, chilli nebo klíčky se váží. Pokladna přečte i čárové kódy ze štítků váhy."],
-      ["db", "Názvy zboží podle čárového kódu", "Neznámý kód pokladna dohledá ve sdílené databázi pokladen SuperKasa – i dovozové zboží, které volné databáze neznají."],
+      ["db", "Názvy zboží podle čárového kódu", "Neznámý kód pokladna zkusí dohledat na internetu. Sdílenou databázi pokladen SuperKasa, která pozná i dovozové zboží, připravujeme."],
       ["calendar", "Expirace čerstvého zboží", "Datum spotřeby u tofu, nudlí a mraženého při příjmu a přehled zboží, které brzy projde."],
       ["bottle", "Zálohy na láhve a přepravky", "Zálohy jsou zapnuté. Zálohu jde s pivem propojit, aby se přidávala sama, výkup lahví je na jedné dlaždici."],
       ["printer", "Cenovky na pokladní tiskárně", "Cenovky s cenou za kilogram nebo litr, akční cenou a čárovým kódem."],
@@ -116,13 +116,13 @@ export const OBORY = [
     groups: ["tabak", "ecig", "tisk", "napoje", "sladkosti", "alkohol", "tasky"],
     pages: ["tabak", "tisk"],
     features: ["stock", "labels", "promo", "display", "qr"],
-    items: "Tašky. Zboží naskenujete čtečkou – název navrhne sdílená databáze nebo internet, případně ho převezmete z CSV.",
+    items: "Tašky. Zboží naskenujete čtečkou – název pokladna zkusí dohledat na internetu (sdílenou databázi SuperKasa připravujeme), případně ho převezmete z CSV.",
     tiles: [["g-tabak", "Tabák", null], ["g-ecig", "E-cigarety", null], ["g-tisk", "Noviny a časopisy", null], ["g-napoje", "Nealko nápoje", null], ["g-sladkosti", "Sladkosti", null], ["g-alkohol", "Alkohol", null], ["taska", "Igelitová taška", 2], ["g-tasky", "Taška velká", 5]],
     cart: [["Cigarety (cena z nálepky)", 1, 165], ["Noviny", 1, 25], ["Igelitová taška", 1, 2]],
     illustrativeCart: true,
     highlights: [
       ["tag", "Pevná cena tabáku", "Cigarety se prodávají za cenu z tabákové nálepky a sleva na ně nejde dát."],
-      ["db", "Názvy podle čárového kódu", "Neznámý kód pokladna dohledá ve sdílené databázi pokladen SuperKasa – i cigarety, které volné databáze neznají."],
+      ["db", "Názvy podle čárového kódu", "Neznámý kód pokladna zkusí dohledat na internetu. Sdílenou databázi pokladen SuperKasa, která pozná i cigarety, připravujeme."],
       ["box", "Sklad a co dochází", "Příjem zboží skenováním, inventura regálu a návrh objednávky podle prodejů."],
       ["percent", "Akce a množstevní ceny", "Akce do zvoleného data a levnější kus od určitého počtu."],
     ],
@@ -199,7 +199,7 @@ export const OBORY = [
     cart: [["Šampon 400 ml", 1, 89.9], ["Prací gel 1,5 l", 1, 199], ["Igelitová taška", 1, 2]],
     illustrativeCart: true,
     highlights: [
-      ["db", "Názvy a fotky podle EAN", "Při naskenování neznámého kódu pokladna navrhne název a fotku – ze sdílené databáze SuperKasa nebo z internetu."],
+      ["db", "Názvy a fotky podle EAN", "Při naskenování neznámého kódu pokladna navrhne název a fotku – z internetu (sdílenou databázi SuperKasa připravujeme)."],
       ["tag", "Cena za 100 ml a 100 g", "Velikost balení se vyplní z názvu a na cenovce je jednotková cena, jak ji vyžaduje zákon o cenách."],
       ["box", "Sklad", "Příjem zboží skenováním s nákupní cenou, inventura regálu a návrh objednávky podle prodejů."],
       ["percent", "Akce a množstevní ceny", "Akce do data a levnější kus od určitého počtu, s přeškrtnutou cenou na cenovce."],
@@ -239,7 +239,7 @@ export const OBORY = [
     highlights: [
       ["report", "Knihy s 0 % DPH", "Knihy jsou od roku 2024 bez daně. Skupina Knihy má proto 0 %, papírnictví 21 % a noviny a časopisy 12 % – sazby si ověřte s účetní."],
       ["touch", "Kopírování na dlaždici", "Kopie a laminování namarkujete jedním dotykem, dvacet kopií zadáte číselníkem s násobením."],
-      ["db", "Názvy knih a zboží podle EAN", "Při naskenování neznámého kódu pokladna navrhne název – ze sdílené databáze SuperKasa nebo z internetu."],
+      ["db", "Názvy knih a zboží podle EAN", "Při naskenování neznámého kódu pokladna navrhne název – z internetu (sdílenou databázi SuperKasa připravujeme)."],
       ["box", "Sklad i na školní sezónu", "Příjem zboží skenováním, inventura regálu a návrh objednávky podle prodejů."],
     ],
   },
@@ -276,7 +276,7 @@ export const OBORY = [
     cart: [["Tvrzené sklo", 1, 299], ["Nalepení skla", 1, 100], ["Kabel USB-C", 1, 199]],
     highlights: [
       ["touch", "Zboží i servis na jednom dokladu", "Sklo prodáte a rovnou nalepíte – příslušenství i práce jsou na dlaždicích a zaplatí se najednou."],
-      ["db", "Názvy a fotky podle EAN", "Při naskenování neznámého kódu pokladna navrhne název a fotku – ze sdílené databáze SuperKasa nebo z internetu."],
+      ["db", "Názvy a fotky podle EAN", "Při naskenování neznámého kódu pokladna navrhne název a fotku – z internetu (sdílenou databázi SuperKasa připravujeme)."],
       ["box", "Sklad příslušenství", "Příjem zboží skenováním s nákupní cenou, inventura a hlídání minimálního stavu u krytů, skel a kabelů."],
       ["tag", "Cenovky", "Cenovky s cenou, akční cenou a čárovým kódem na pokladní tiskárně, etiketové tiskárně nebo na A4."],
     ],
@@ -314,7 +314,7 @@ export const OBORY = [
     cart: [["Víno stáčené bílé 1 l", 2, 129], ["PET láhev 1 l", 2, 10], ["Dárková krabice", 1, 79]],
     highlights: [
       ["bottle", "Stáčené víno a zálohy", "Stáčené víno po litrech a PET láhev máte na dlaždicích. Zálohy na skleněné láhve a přepravky jsou zapnuté."],
-      ["db", "Lahvová vína podle EAN", "Naskenujete láhev – název navrhne sdílená databáze SuperKasa nebo internet, případně ho převezmete z CSV."],
+      ["db", "Lahvová vína podle EAN", "Naskenujete láhev – název pokladna zkusí dohledat na internetu (sdílenou databázi SuperKasa připravujeme), případně ho převezmete z CSV."],
       ["percent", "Akce a množstevní ceny", "Levnější láhev od šesti kusů nebo akce do data – pokladna je použije sama."],
       ["box", "Sklad", "Příjem zboží s nákupní cenou, inventura a návrh objednávky podle prodejů."],
     ],
@@ -334,7 +334,7 @@ export const OBORY = [
     highlights: [
       ["scale", "Granule na váhu", "U krmiva na kilogramy se pokladna zeptá na hmotnost a sama spočítá cenu."],
       ["calendar", "Expirace krmiva", "Datum spotřeby při příjmu a přehled zboží, které brzy projde."],
-      ["db", "Názvy a fotky podle EAN", "Při naskenování neznámého kódu pokladna navrhne název a fotku – ze sdílené databáze SuperKasa nebo z internetu."],
+      ["db", "Názvy a fotky podle EAN", "Při naskenování neznámého kódu pokladna navrhne název a fotku – z internetu (sdílenou databázi SuperKasa připravujeme)."],
       ["box", "Sklad", "Příjem zboží skenováním, inventura regálu a návrh objednávky podle prodejů."],
     ],
   },
@@ -532,7 +532,7 @@ export const OBORY = [
     highlights: [
       ["touch", "Práce i díly na jednom dokladu", "Hodiny práce, přezutí i díly máte na dlaždicích. Počet hodin nebo kol zadáte číselníkem s násobením."],
       ["box", "Sklad dílů a oleje", "Sklad je zapnutý: příjem dílů s nákupní cenou, inventura a hlídání minimálního stavu."],
-      ["db", "Díly podle čárového kódu", "Neznámý kód oleje nebo dílu pokladna dohledá ve sdílené databázi SuperKasa nebo na internetu."],
+      ["db", "Díly podle čárového kódu", "Neznámý kód oleje nebo dílu pokladna zkusí dohledat na internetu (sdílenou databázi SuperKasa připravujeme)."],
       ["qr", "QR platba a karta", "Zákazník zaplatí hotově, QR kódem z displeje nebo účtenky, nebo kartou přes váš platební terminál."],
     ],
     notes: ["Zakázkové listy ani evidenci vozidel pokladna nevede – práci a díly namarkujete při placení."],

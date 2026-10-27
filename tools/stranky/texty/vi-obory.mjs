@@ -13,7 +13,7 @@ const TIENG_VIET = [
 ];
 const EAN_TEN_ANH = [
   "Tên và ảnh theo mã EAN",
-  "Khi quét một mã lạ, máy gợi ý tên và ảnh – từ cơ sở dữ liệu dùng chung của SuperKasa hoặc từ internet.",
+  "Khi quét một mã lạ, máy gợi ý tên và ảnh – từ internet (cơ sở dữ liệu dùng chung của SuperKasa sắp ra mắt).",
 ];
 const QR_THE = [
   "Thanh toán QR và thẻ",
@@ -200,7 +200,7 @@ export default {
         ],
         [
           "Tên hàng theo mã vạch",
-          "Gặp mã lạ, máy tìm trong cơ sở dữ liệu tên hàng dùng chung của các máy SuperKasa – cả hàng nhập khẩu mà các cơ sở dữ liệu miễn phí không có.",
+          "Gặp mã lạ, máy thử tìm tên trên internet. Cơ sở dữ liệu dùng chung của các máy SuperKasa, biết cả hàng nhập khẩu, sắp ra mắt.",
         ],
         [
           "Hạn dùng của hàng tươi",
@@ -222,7 +222,7 @@ export default {
       title: "Máy tính tiền cho quầy báo và thuốc lá",
       desc: "Thuốc lá, thuốc lá điện tử, báo và tạp chí, đồ uống và bánh kẹo – giá thuốc lá cố định, có kho và nhãn giá.",
       preset: "Quầy báo, thuốc lá",
-      items: "Túi. Hàng hóa bạn quét bằng máy đọc mã – tên hàng được gợi ý từ cơ sở dữ liệu dùng chung hoặc từ internet, hoặc bạn lấy từ file CSV.",
+      items: "Túi. Hàng hóa bạn quét bằng máy đọc mã – máy thử tìm tên hàng trên internet (cơ sở dữ liệu dùng chung của SuperKasa sắp ra mắt), hoặc bạn lấy từ file CSV.",
       highlights: [
         [
           "Giá thuốc lá cố định",
@@ -230,7 +230,7 @@ export default {
         ],
         [
           "Tên hàng theo mã vạch",
-          "Gặp mã lạ, máy tìm trong cơ sở dữ liệu dùng chung của các máy SuperKasa – cả những loại thuốc lá mà cơ sở dữ liệu miễn phí không có.",
+          "Gặp mã lạ, máy thử tìm tên trên internet. Cơ sở dữ liệu dùng chung của các máy SuperKasa, biết cả các loại thuốc lá, sắp ra mắt.",
         ],
         [
           "Kho và hàng sắp hết",
@@ -390,7 +390,7 @@ export default {
         ],
         [
           "Tên sách và hàng theo mã EAN",
-          "Khi quét một mã lạ, máy gợi ý tên – từ cơ sở dữ liệu dùng chung của SuperKasa hoặc từ internet.",
+          "Khi quét một mã lạ, máy gợi ý tên – từ internet (cơ sở dữ liệu dùng chung của SuperKasa sắp ra mắt).",
         ],
         [
           "Kho cho cả mùa tựu trường",
@@ -487,7 +487,7 @@ export default {
         ],
         [
           "Rượu chai theo mã EAN",
-          "Bạn quét chai – tên được gợi ý từ cơ sở dữ liệu dùng chung của SuperKasa hoặc từ internet, hoặc bạn lấy từ file CSV.",
+          "Bạn quét chai – máy thử tìm tên trên internet (cơ sở dữ liệu dùng chung của SuperKasa sắp ra mắt), hoặc bạn lấy từ file CSV.",
         ],
         [
           "Khuyến mãi và giá theo số lượng",
@@ -751,7 +751,7 @@ export default {
         ],
         [
           "Phụ tùng theo mã vạch",
-          "Gặp mã lạ của dầu hoặc phụ tùng, máy tìm trong cơ sở dữ liệu dùng chung của SuperKasa hoặc trên internet.",
+          "Gặp mã lạ của dầu hoặc phụ tùng, máy thử tìm trên internet (cơ sở dữ liệu dùng chung của SuperKasa sắp ra mắt).",
         ],
         QR_THE,
       ],

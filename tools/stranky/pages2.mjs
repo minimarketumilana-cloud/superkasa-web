@@ -2,7 +2,11 @@
 import { card, cta, icon } from "./parts.mjs";
 import { FEATURE_ORDER } from "./obory.mjs";
 
-const cards = (icons, texts) => icons.map((ic, i) => card(ic, texts[i][0], texts[i][1])).join("\n      ");
+/** Počet ikon musí sedět s počtem karet v textech – jinak by se karta potichu nevykreslila. */
+const cards = (icons, texts) => {
+  if (icons.length !== texts.length) throw new Error(`cards: ${icons.length} ikon, ale ${texts.length} karet (${texts.map((x) => x[0]).join(" | ")})`);
+  return icons.map((ic, i) => card(ic, texts[i][0], texts[i][1])).join("\n      ");
+};
 const PLAN_KEYS = ["potraviny", "obchod", "gastro", "nehty", "sluzby"];
 
 export const cenik = (c) => {
@@ -299,8 +303,9 @@ ${cta(c, t.cta[0], t.cta[1])}`,
 };
 
 /**
- * Přihlášení do pokladny v prohlížeči (SuperKasa Cloud): adresa obchodu → https://<obchod>.superkasa.cz/,
- * založení nové pokladny na app.superkasa.cz. Když cloud ještě neběží, js/site.js ukáže stažení pro Windows.
+ * Pokladna v prohlížeči (SuperKasa Cloud) – zatím jen informace „připravujeme“. Cloud ještě neběží (app.superkasa.cz
+ * neexistuje), proto tu není přihlášení ani založení pokladny a žádný odkaz nevede na neexistující adresu.
+ * Až cloud poběží, vrátí se sem přihlášení (adresa obchodu → https://<obchod>.superkasa.cz/).
  */
 export const prihlaseni = (c) => {
   const t = c.T.login;
@@ -319,29 +324,19 @@ export const prihlaseni = (c) => {
 
 <section class="section" style="padding-top:32px">
   <div class="wrap">
-    <p class="cloud-soon" id="cloud-soon" hidden>${t.soon}</p>
+    <p class="cloud-soon">${t.soon}</p>
     <div class="grid grid-2">
-      <article class="card" data-cloud>
-        ${icon("touch")}
-        <h3>${t.h1}</h3>
-        <form class="shop-login" id="shop-login" action="https://app.superkasa.cz/" method="get">
-          <label for="shop">${t.shopLabel}</label>
-          <div class="shop-field"><span>https://</span><input id="shop" name="obchod" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="30" required placeholder="${t.shopPh}"><span>.superkasa.cz</span></div>
-          <button class="btn btn-primary" type="submit">${t.go}</button>
-        </form>
-        <p class="muted small">${t.hint}</p>
-      </article>
-      <article class="card" data-cloud>
-        ${icon("home", "gold")}
-        <h3>${t.newTitle}</h3>
-        <p>${t.newText}</p>
-        <div class="actions" style="margin-top:8px"><a class="btn btn-gold" href="https://app.superkasa.cz/">${t.newBtn}</a></div>
-      </article>
       <article class="card">
         ${icon("download")}
-        <h3>${t.pcTitle}</h3>
+        <h2>${t.pcTitle}</h2>
         <p>${t.pcText}</p>
-        <div class="actions" style="margin-top:8px"><a class="btn btn-ghost" href="ke-stazeni.html">${t.pcBtn}</a></div>
+        <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="ke-stazeni.html">${t.pcBtn}</a></div>
+      </article>
+      <article class="card">
+        ${icon("clock", "gold")}
+        <h2>${t.soonTitle}</h2>
+        <p>${t.soonText}</p>
+        <p>${t.infoText}</p>
       </article>
     </div>
   </div>

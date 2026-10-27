@@ -29,7 +29,7 @@ export const op = {
     <h2>1. Úvodní ustanovení</h2>
     <ol>
       <li>Tyto obchodní podmínky upravují poskytnutí licence k pokladnímu programu SuperKasa. Poskytovatelem je ${PROVIDER}, ${ph("doplnit zápis v živnostenském rejstříku")}, telefon +420&nbsp;608&nbsp;886&nbsp;882, e-mail ${ph("doplnit")} (dále „poskytovatel“).</li>
-      <li>Program je určen podnikatelům pro jejich podnikání (dále „uživatel“). Smlouvy podle těchto podmínek nejsou spotřebitelské. ${ph("ověřit, zda se program nebude nabízet i spotřebitelům – pak doplnit poučení o odstoupení od smlouvy a další ochranu spotřebitele")}</li>
+      <li>SuperKasa je určená výhradně podnikatelům pro jejich podnikání (B2B, dále „uživatel“). Smlouvy podle těchto podmínek nejsou spotřebitelské. ${ph("ověřit, zda se program nebude nabízet i spotřebitelům – pak doplnit poučení o odstoupení od smlouvy a další ochranu spotřebitele")}</li>
       <li>Smlouva vzniká ${ph("doplnit – např. potvrzením objednávky poskytovatelem nebo zaplacením první platby")}. Podmínky jsou její součástí; odchylná ujednání ve smlouvě mají přednost.</li>
     </ol>
 
@@ -68,7 +68,7 @@ export const op = {
     <ol>
       <li>Pronájem platí do data uvedeného v licenčním klíči a automaticky se neprodlužuje. Pokračuje zaplacením dalšího období, po kterém uživatel dostane nový licenční klíč.</li>
       <li>Když licence skončí, pokladna ještě 30 dní umožňuje prodej i odesílání do EET a zobrazuje upozornění. Poté se zastaví nový prodej. Prohlížení dokladů, uzávěrky, vratky a export dat zůstávají dostupné.</li>
-      <li>Data jsou uložená na počítači uživatele. Poskytovatel je nemaže a nemá k nim přístup.</li>
+      <li>U pokladny nainstalované na počítači uživatele jsou data uložená na tomto počítači; poskytovatel je nemaže a nemá k nim přístup. Pokladnu v prohlížeči poskytovatel zatím nenabízí; podmínky pro ni budou doplněny před jejím spuštěním.</li>
       <li>Při jednorázové koupi je licence časově neomezená. Verze vydané po datu „aktualizace do“ uvedeném v licenci nejsou v ceně. ${ph("doplnit podmínky prodloužení aktualizací")}</li>
     </ol>
 
@@ -85,8 +85,8 @@ export const op = {
       <li>Uživatel je správcem osobních údajů, které do pokladny ukládá (například údaje prodavačů), a odpovídá za jejich zákonné zpracování.</li>
     </ol>
 
-    <h2>9. Sdílená databáze názvů zboží</h2>
-    <p>Pokladna se může zeptat sdílené databáze SuperKasa na název zboží podle čárového kódu. Pokud uživatel ve Správě zapne přispívání, pokladna odesílá čárový kód, název, velikost balení, skupinu a sazbu DPH. Ceny, prodeje ani údaje o obchodě a zákaznících se neodesílají. Uživatel uděluje poskytovateli bezúplatné a časově neomezené oprávnění odeslané názvy používat a sdílet s ostatními pokladnami. ${ph("ověřit formulaci licence k databázi")}</p>
+    <h2>9. Sdílená databáze názvů zboží (připravuje se)</h2>
+    <p>Server sdílené databáze zatím neběží; ustanovení platí od jejího spuštění. Pokladna se může zeptat sdílené databáze SuperKasa na název zboží podle čárového kódu. Pokud uživatel ve Správě zapne přispívání, pokladna odesílá čárový kód, název, velikost balení, skupinu a sazbu DPH. Ceny, prodeje ani údaje o obchodě a zákaznících se neodesílají. Uživatel uděluje poskytovateli bezúplatné a časově neomezené oprávnění odeslané názvy používat a sdílet s ostatními pokladnami. ${ph("ověřit formulaci licence k databázi")}</p>
 
     <h2>10. Vady a odpovědnost</h2>
     <ol>
@@ -146,15 +146,16 @@ export const gdpr = {
 
     <h2>4. Data v pokladně</h2>
     <ul>
-      <li>Doklady, zboží, prodavači, uzávěrky a další data pokladny jsou uložené na počítači uživatele v jeho provozovně. Správce k nim nemá přístup. Za osobní údaje, které uživatel do pokladny ukládá, odpovídá uživatel jako jejich správce.</li>
+      <li>Platí pro pokladnu nainstalovanou na počítači uživatele: doklady, zboží, prodavači, uzávěrky a další data pokladny jsou uložené na počítači uživatele v jeho provozovně. Správce k nim nemá přístup. Za osobní údaje, které uživatel do pokladny ukládá, odpovídá uživatel jako jejich správce.</li>
       <li>Tržby pokladna odesílá přímo do systému EET 2.0 Finanční správy, ne přes servery SuperKasa.</li>
       <li>Licenční klíč pokladna ověřuje bez internetu.</li>
+      <li>Pokladnu v prohlížeči (SuperKasa Cloud) zatím nenabízíme. Než ji spustíme, doplníme sem, jaké údaje v ní zpracováváme, v jaké roli a kde jsou uložené.</li>
     </ul>
 
     <h2>5. Kdy se pokladna připojuje k internetu</h2>
     <ul>
       <li><strong>Aktualizace:</strong> pokladna si ze serveru superkasa.cz stahuje popis nové verze a instalátor. Server přitom vidí IP adresu a verzi pokladny. ${ph("ověřit záznamy serveru a dobu jejich uchování")}</li>
-      <li><strong>Sdílená databáze názvů zboží (katalog.superkasa.cz):</strong> pokladna se ptá na název podle čárového kódu a požadavky podepisuje vlastním klíčem pokladny. Server ukládá veřejný klíč pokladny, u placených pokladen číslo licence a – jen když uživatel zapne přispívání – čárový kód, název, velikost balení, skupinu a sazbu DPH. Ceny, prodeje ani údaje o obchodě a zákaznících se neodesílají. IP adresa se ukládá jen v denním počítadle proti zneužití a po týdnu se maže. Dohledávání jde ve Správě vypnout.</li>
+      <li><strong>Sdílená databáze názvů zboží (katalog.superkasa.cz, připravuje se – server zatím neběží):</strong> po spuštění se pokladna bude ptát na název podle čárového kódu a požadavky podepisuje vlastním klíčem pokladny. Server ukládá veřejný klíč pokladny, u placených pokladen číslo licence a – jen když uživatel zapne přispívání – čárový kód, název, velikost balení, skupinu a sazbu DPH. Ceny, prodeje ani údaje o obchodě a zákaznících se neodesílají. IP adresa se ukládá jen v denním počítadle proti zneužití a po týdnu se maže. Dohledávání jde ve Správě vypnout.</li>
       <li><strong>Názvy a obrázky zboží z internetu:</strong> pokladna se může ptát služeb Open Food Facts a Wikimedia Commons na název nebo obrázek podle čárového kódu či názvu. Tyto služby vidí dotaz a IP adresu obchodu.</li>
     </ul>
 

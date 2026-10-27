@@ -18,7 +18,7 @@ AddType application/manifest+json .webmanifest
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
   # Hash patří k jedinému vloženému skriptu v hlavičce stránek (document.documentElement.className+=" js").
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-pfgOMgfVZwm2ODyms34QYW9h8EwicylhV77q5LHK8c0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://app.superkasa.cz; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://app.superkasa.cz"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-pfgOMgfVZwm2ODyms34QYW9h8EwicylhV77q5LHK8c0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
 </IfModule>
 
 <IfModule mod_expires.c>

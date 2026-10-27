@@ -4,7 +4,11 @@ import { card, cta } from "./parts.mjs";
 import { oborPicker } from "./obory-stranky.mjs";
 
 /** Karty se stejnými ikonami ve všech jazycích: `icons` = [ikona, třída] ve stejném pořadí jako texty [nadpis, text]. */
-const cards = (icons, texts) => icons.map(([ic, cls], i) => card(ic, texts[i][0], texts[i][1], cls)).join("\n      ");
+/** Počet ikon musí sedět s počtem karet v textech – jinak by se karta potichu nevykreslila. */
+const cards = (icons, texts) => {
+  if (icons.length !== texts.length) throw new Error(`cards: ${icons.length} ikon, ale ${texts.length} karet (${texts.map((x) => x[0]).join(" | ")})`);
+  return icons.map(([ic, cls], i) => card(ic, texts[i][0], texts[i][1], cls)).join("\n      ");
+};
 
 export const index = (c) => {
   const t = c.T.index;
@@ -187,7 +191,7 @@ export const funkce = (c) => {
   <div class="wrap">
     <div class="section-head"><h2>${t.dokladyTitle}</h2></div>
     <div class="grid grid-3">
-      ${cards([["eet"], ["printer"], ["undo"], ["report"], ["chart"], ["cash"]], t.doklady)}
+      ${cards([["eet"], ["printer"], ["undo"], ["report"], ["chart"], ["cash"], ["shield"], ["qr"]], t.doklady)}
     </div>
   </div>
 </section>
@@ -205,7 +209,7 @@ export const funkce = (c) => {
   <div class="wrap">
     <div class="section-head"><h2>${t.provozTitle}</h2></div>
     <div class="grid grid-3">
-      ${cards([["lang", "gold"], ["users"], ["monitor"], ["network"], ["shield"], ["download"], ["refresh"], ["clock"], ["printer"]], t.provoz)}
+      ${cards([["lang", "gold"], ["users"], ["monitor"], ["network"], ["shield"], ["download"], ["refresh"], ["clock"], ["touch", "gold"], ["printer"]], t.provoz)}
     </div>
   </div>
 </section>

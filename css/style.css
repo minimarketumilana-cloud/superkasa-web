@@ -129,16 +129,18 @@ small, .small { font-size: .9rem; color: var(--muted); }
   .langs .flag { width: 24px; height: 16px; }
   .login-top, .menu-btn { min-width: 44px; min-height: 44px; padding: 0 10px; }
 }
-/* Stránka přihlášení */
-.shop-login { display: grid; gap: 10px; margin: 6px 0 4px; }
-.shop-login label { font-weight: 650; }
-.shop-field { display: flex; align-items: center; border: 1px solid var(--line); border-radius: 12px; background: var(--white); overflow: hidden; }
-.shop-field span { padding: 0 10px; color: var(--muted); white-space: nowrap; font-size: .95rem; }
-.shop-field input { flex: 1; min-width: 0; min-height: 50px; border: 0; font: 600 1.05rem var(--font); color: var(--ink); background: transparent; outline: none; }
-.shop-field:focus-within { border-color: var(--plum); box-shadow: 0 0 0 3px var(--plum-soft); }
+/* Štítek „připravujeme“ u pokladny v prohlížeči (v hlavičce jen s textem, na mobilu se schová s ním). */
+.soon-tag {
+  font-style: normal; font-size: .72rem; font-weight: 700; letter-spacing: .02em; text-transform: lowercase;
+  padding: 2px 8px; border-radius: 999px; background: var(--gold-soft); color: #6b4a00;
+}
+.login-top:hover .soon-tag, .login-top[aria-current] .soon-tag { background: #fff; }
+@media (max-width: 760px) { .login-top .soon-tag { display: none; } }
+/* Nad 1400 px je menu rozbalené v řádku – u tlačítka zůstane ikona a štítek, celý název je v aria-label a title. */
+@media (min-width: 1401px) { .login-top > span { display: none; } }
+/* Stránka Pokladna v prohlížeči (připravujeme) */
+.card > h2 { font-size: 1.2rem; font-weight: 650; margin-bottom: .4em; }
 .cloud-soon { margin: 0 0 18px; padding: 14px 18px; border-radius: 14px; background: var(--plum-soft); color: var(--plum-dark); font-weight: 600; }
-.is-soon { opacity: .55; }
-.is-soon form, .is-soon .actions { pointer-events: none; }
 /* Vietnamština má diakritiku nad i pod písmeny – víc místa mezi řádky nadpisů. */
 :lang(vi) h1, :lang(vi) h2, :lang(vi) h3 { line-height: 1.32; }
 :lang(vi) .obor-name { line-height: 1.35; }
