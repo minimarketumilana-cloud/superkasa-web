@@ -148,6 +148,12 @@ small, .small { font-size: .9rem; color: var(--muted); }
 @media (max-width: 760px) { .login-top .soon-tag { display: none; } }
 /* Nad 1400 px je menu rozbalené v řádku – u „připravujeme“ zůstane ikona a štítek, celý název je v aria-label a title. */
 @media (min-width: 1401px) { .login-top.soon > span { display: none; } }
+/* Nad 1400 px je menu v řádku i s tlačítkem Vyzkoušet zdarma: cenu (Ceník je v menu) schovat, u Přihlásit jen ikona
+   (název je v aria-label a title) – jinak hlavička přeteče, hlavně ve vietnamštině. */
+@media (min-width: 1401px) {
+  .nav:has(.btn-gold) .nav-price { display: none; }
+  .site-header:has(.nav .btn-gold) .login-top > span { display: none; }
+}
 /* Stránka Pokladna v prohlížeči (připravujeme) */
 .card > h2 { font-size: 1.2rem; font-weight: 650; margin-bottom: .4em; }
 .login-form { display: grid; gap: 14px; align-content: start; }

@@ -1,5 +1,5 @@
 // Ceník, EET 2.0, Ke stažení a Kontakt. Texty jsou ve slovníku c.T.<stránka> (tools/stranky/texty/<jazyk>.mjs).
-import { LOGIN_LIVE, card, cta, icon } from "./parts.mjs";
+import { LOGIN_LIVE, REGISTER_URL, card, cta, icon } from "./parts.mjs";
 import { FEATURE_ORDER } from "./obory.mjs";
 
 /** Počet ikon musí sedět s počtem karet v textech – jinak by se karta potichu nevykreslila. */
@@ -158,6 +158,7 @@ export const cenik = (c) => {
         <h3>${t.trial[0]}</h3>
         <p>${t.trial[1]}</p>
         <p>${t.trial[2]}</p>
+        <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="ke-stazeni.html">${c.T.login.pcBtn}</a>${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${c.T.common.registerCta}</a>` : ""}</div>
       </article>
       <article class="card">
         ${icon("shield")}
@@ -276,6 +277,7 @@ export const stazeni = (c) => {
         <p>${t.appMeta}</p>
         <div class="actions" style="margin-top:12px">
           <a class="btn btn-primary" href="${c.up}aktualizace/SuperKasa-Setup-0.2.2.exe" download>${t.download}</a>
+          ${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${c.T.common.registerCta}</a>` : ""}
           <a class="btn btn-ghost" href="tel:+420608886882">${c.T.common.call}</a>
         </div>
         <p class="small muted" style="margin-top:12px">${t.smartscreen} <code style="word-break:break-all">e70259a0d3f46007e8e6ffe6a2140b7f29d8f30e3f9305aeb117fb2641d472b3</code></p>
@@ -375,6 +377,7 @@ const prihlaseniLive = (c) => {
         <button class="btn btn-primary" type="submit">${t.submit}</button>
         <div class="login-shops" hidden></div>
         <p class="small">${t.forgot}</p>
+        <a class="btn btn-gold login-register" href="${REGISTER_URL}">${t.register}</a>
       </form>
       <article class="card">
         ${icon("monitor")}

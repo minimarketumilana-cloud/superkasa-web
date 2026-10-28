@@ -13,6 +13,8 @@ export const INLINE_JS = 'document.documentElement.className+=" js"';
 // 2026-10-28: SuperKasa Cloud běží na app.superkasa.cz (VPS FORPSI) – přihlášení přes internet je živé. Stažitelná
 // verze pro Windows má účet majitele od 0.2.2 (28. 10. 2026).
 export const LOGIN_LIVE = true;
+/** Registrace nového obchodu v SuperKasa Cloud (jen když LOGIN_LIVE). */
+export const REGISTER_URL = "https://app.superkasa.cz/";
 
 // Bezpečnostní pravidla přímo ve stránce: GitHub Pages hlavičky z .htaccess neposílá. (frame-ancestors v <meta>
 // nefunguje, to umí jen hlavička serveru.) Hash patří k vloženému skriptu INLINE_JS; app.superkasa.cz = přihlášení.
@@ -159,7 +161,8 @@ ${ld}</head>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">${L.menu}</span></button>
     <nav class="nav" id="nav" aria-label="${L.navAria}">
       ${nav}
-      <a class="btn btn-primary" href="cenik.html">${L.priceBtn}</a>
+      <a class="btn btn-primary nav-price" href="cenik.html">${L.priceBtn}</a>
+      ${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${L.registerBtn}</a>` : ""}
     </nav>
   </div>
 </header>
