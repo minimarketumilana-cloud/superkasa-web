@@ -13,6 +13,9 @@ export default {
     loginBtn: "Přihlásit",
     loginSoon: "",
     loginAria: "Přihlásit se do pokladny",
+    loginBtnSoon: "V prohlížeči",
+    loginSoonTag: "připravujeme",
+    loginAriaSoon: "Pokladna v prohlížeči – připravujeme",
     skip: "Přeskočit na obsah",
     brandAria: "SuperKasa – úvodní stránka",
     menu: "Menu",
@@ -129,7 +132,6 @@ export default {
       ["Obsluha i ve vietnamštině", 'Čeština, <span lang="vi">tiếng Việt</span> i angličtina – každý prodavač má svůj jazyk a přepne ho jedním tlačítkem. Doklad pro zákazníka je vždy česky.'],
       ["Sklad v ceně tarifu", 'Příjem zboží skenováním, inventura a návrh objednávky v každém tarifu, pro obchody i expirace a cenovky na pokladní tiskárně. Docházku, věrnostní program nebo rezervace si přidáte, jen když je chcete. <a href="cenik.html#doplnky">Doplňky</a>'],
     ],
-    compareNote: "<strong>Pro srovnání:</strong> tarify běžných pokladen, které pokrývají potřeby večerky (tisíce položek, sklad), stojí podle veřejných ceníků zhruba 600–1 200 Kč měsíčně včetně DPH. Doplňky jako docházka nebo sklad bývají jen v nejdražších tarifech. U SuperKasy je sklad v ceně tarifu a doplňky si zapnete jednotlivě. Stav k říjnu 2026, ceny se mohou měnit.",
     readyTitle: "Připraveno na rok 2027",
     readyLead: "Od 1. 1. 2027 začíná evidence tržeb EET 2.0 a v gastru se mění pravidla pro spropitné a DPH. SuperKasa to zvládá v ceně tarifu.",
     readyCards: [
@@ -204,7 +206,7 @@ export default {
       ["Prodavači a oprávnění", "Přihlášení PINem, role prodavač, vedoucí a majitel. Záznam změn ukáže, kdo co upravil."],
       ["Zákaznický displej", "Druhá obrazovka otočená k zákazníkovi: nákup s fotkami, QR kód k platbě, vrácená částka a mezi nákupy vaše akce."],
       ["Provoz v síti obchodu", "Pokladna běží na jednom počítači v obchodě. Další okno pokladny, správu nebo zákaznický displej otevřete v prohlížeči na jiném zařízení v síti obchodu – i na starším počítači s Windows 7. Každé zařízení se spáruje kódem."],
-      ["Zálohy", "Databáze, fotky zboží i certifikát EET se zálohují každý den. Druhou kopii můžete posílat na USB disk nebo do OneDrive. Přechod na nový počítač zvládnete jedním souborem."],
+      ["Zálohy", "Databáze a fotky zboží se zálohují každý den, klíč certifikátu EET jen zašifrovaně. Druhou kopii můžete posílat na USB disk nebo do OneDrive. Přechod na nový počítač – i s certifikátem EET – zvládnete jedním souborem."],
       ["Export dat", "Doklady, uzávěrky a další data kdykoli vyexportujete. Export funguje i po skončení předplatného."],
       ["Aktualizace", "Pokladna sama zjistí, že vyšla nová verze, a nainstalujete ji jedním tlačítkem. Rozpracovaný nákup se před restartem dokončí."],
       ["Prodej i bez internetu", "Pokladna běží přímo u vás, takže prodej nezávisí na připojení. Tržby do EET se odešlou, jakmile se internet vrátí. Pokladnu v prohlížeči připravujeme."],
@@ -377,6 +379,20 @@ export default {
     pcText: "Na počítači s pokladnou ji otevřete ikonou SuperKasa na ploše. Na tabletu nebo mobilu ve stejné síti otevřete adresu pokladny (najdete ji ve Správě → Zařízení) a přihlaste se stejným e-mailem a heslem – bez párovacího kódu.",
     accText: "E-mail a heslo si majitel nastaví v pokladně: Správa → Systém → Účet majitele.",
     pcBtn: "Stáhnout pro Windows",
+    // Varianta „připravujeme“ (LOGIN_LIVE = false v parts.mjs).
+    soon: {
+      title: "Pokladna v prohlížeči (připravujeme) – SuperKasa",
+      desc: "Pokladnu SuperKasa v prohlížeči a přihlášení přes internet připravujeme. Už teď si můžete stáhnout pokladnu pro Windows – prvních 10 dní zdarma.",
+      h1: "Pokladna v prohlížeči – připravujeme",
+      lead: "Pokladnu SuperKasa, která poběží v prohlížeči bez instalace, a přihlášení e-mailem a heslem připravujeme. Zatím to nejde – přihlásit se přes internet ani pokladnu založit online.",
+      note: "Teď funguje pokladna pro Windows: stáhnete ji, nainstalujete a prvních 10 dní je zdarma.",
+      pcTitle: "Pokladna pro Windows",
+      pcText: "Funguje už teď. Na počítači s pokladnou ji otevřete ikonou SuperKasa na ploše. Tablet nebo další počítač v síti obchodu spárujete kódem ze Správy → Zařízení. Prodavači se přihlašují svým PINem – i bez internetu.",
+      pcBtn: "Stáhnout pro Windows",
+      soonTitle: "Pokladna v prohlížeči",
+      soonText: "Bude běžet na počítači, tabletu i mobilu bez instalace a majitel se přihlásí e-mailem a heslem. Až ji spustíme, napíšeme to tady na webu. Zatím nic neregistrujeme a nesbíráme žádné údaje.",
+      infoText: `Máte otázku? Zavolejte: <a href="tel:+420608886882">${PHONE}</a>.`,
+    },
   },
 
   kontakt: {

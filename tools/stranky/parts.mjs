@@ -4,6 +4,14 @@ import { LANG_INFO, LANGS, SITE, langHref, pageUrl } from "./i18n.mjs";
 export { SITE };
 export const INLINE_JS = 'document.documentElement.className+=" js"';
 
+/**
+ * Přihlášení na webu (e-mail a heslo majitele přes app.superkasa.cz). Zapnout (true) až tehdy, když:
+ * 1) pokladna s účtem majitele (commit 1a87cbf a novější) je vydaná a ke stažení – verze 0.2.1 ho NEMÁ,
+ * 2) SuperKasa Cloud na app.superkasa.cz opravdu běží (DNS + server).
+ * Do té doby hlavička i prihlaseni.html říkají „Pokladna v prohlížeči – připravujeme“.
+ */
+export const LOGIN_LIVE = false;
+
 // Bezpečnostní pravidla přímo ve stránce: GitHub Pages hlavičky z .htaccess neposílá. (frame-ancestors v <meta>
 // nefunguje, to umí jen hlavička serveru.) Hash patří k vloženému skriptu INLINE_JS; app.superkasa.cz = přihlášení.
 const INLINE_HASH = createHash("sha256").update(INLINE_JS).digest("base64");
@@ -143,7 +151,9 @@ ${ld}</head>
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="${esc(L.brandAria)}"><img src="${up}img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     ${langSwitch(c, file)}
-    <a class="login-top" href="prihlaseni.html" aria-label="${esc(L.loginAria)}" title="${esc(L.loginAria)}"${current === "prihlaseni.html" ? ' aria-current="page"' : ""}><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>${L.loginBtn}</span>${L.loginSoon ? `<em class="soon-tag">${L.loginSoon}</em>` : ""}</a>
+    ${LOGIN_LIVE
+      ? `<a class="login-top" href="prihlaseni.html" aria-label="${esc(L.loginAria)}" title="${esc(L.loginAria)}"${current === "prihlaseni.html" ? ' aria-current="page"' : ""}><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>${L.loginBtn}</span>${L.loginSoon ? `<em class="soon-tag">${L.loginSoon}</em>` : ""}</a>`
+      : `<a class="login-top soon" href="prihlaseni.html" aria-label="${esc(L.loginAriaSoon)}" title="${esc(L.loginAriaSoon)}"${current === "prihlaseni.html" ? ' aria-current="page"' : ""}><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg><span>${L.loginBtnSoon}</span><em class="soon-tag">${L.loginSoonTag}</em></a>`}
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">${L.menu}</span></button>
     <nav class="nav" id="nav" aria-label="${L.navAria}">
       ${nav}

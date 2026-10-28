@@ -96,9 +96,6 @@ export const index = (c) => {
     <div class="grid grid-3">
       ${cards([["wallet", "gold"], ["cash"], ["network"], ["clock"], ["lang", "gold"], ["box"]], t.whyCards)}
     </div>
-    <div class="note mt-2">
-      <p>${t.compareNote}</p>
-    </div>
   </div>
 </section>
 

@@ -1,5 +1,5 @@
 // Ceník, EET 2.0, Ke stažení a Kontakt. Texty jsou ve slovníku c.T.<stránka> (tools/stranky/texty/<jazyk>.mjs).
-import { card, cta, icon } from "./parts.mjs";
+import { LOGIN_LIVE, card, cta, icon } from "./parts.mjs";
 import { FEATURE_ORDER } from "./obory.mjs";
 
 /** Počet ikon musí sedět s počtem karet v textech – jinak by se karta potichu nevykreslila. */
@@ -307,7 +307,47 @@ ${cta(c, t.cta[0], t.cta[1])}`,
  * a pošle prohlížeč do jeho pokladny (zařízení se samo spáruje). Formulář obsluhuje js/site.js; dokud cloud neběží,
  * ukáže, že přihlášení přes internet zatím nejde, a vedle je návod pro pokladnu v obchodě (Windows).
  */
-export const prihlaseni = (c) => {
+export const prihlaseni = (c) => (LOGIN_LIVE ? prihlaseniLive(c) : prihlaseniSoon(c));
+
+/** Dokud přihlášení přes internet nejde (LOGIN_LIVE = false): jen informace „připravujeme“ a stažení pro Windows. */
+const prihlaseniSoon = (c) => {
+  const t = c.T.login.soon;
+  return {
+    file: "prihlaseni.html",
+    current: "prihlaseni.html",
+    title: t.title,
+    desc: t.desc,
+    body: `
+<section class="page-head">
+  <div class="wrap">
+    <h1>${t.h1}</h1>
+    <p class="lead">${t.lead}</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:32px">
+  <div class="wrap">
+    <p class="cloud-soon">${t.note}</p>
+    <div class="grid grid-2">
+      <article class="card">
+        ${icon("download")}
+        <h2>${t.pcTitle}</h2>
+        <p>${t.pcText}</p>
+        <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="ke-stazeni.html">${t.pcBtn}</a></div>
+      </article>
+      <article class="card">
+        ${icon("clock", "gold")}
+        <h2>${t.soonTitle}</h2>
+        <p>${t.soonText}</p>
+        <p>${t.infoText}</p>
+      </article>
+    </div>
+  </div>
+</section>`,
+  };
+};
+
+const prihlaseniLive = (c) => {
   const t = c.T.login;
   return {
     file: "prihlaseni.html",
