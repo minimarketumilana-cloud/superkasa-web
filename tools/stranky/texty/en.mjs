@@ -372,10 +372,10 @@ export default {
     choose: "This e-mail has several shops – choose one:",
     error: "Sign-in failed. Please try again.",
     offline: "Signing in over the internet is not running yet – we are launching the browser register (SuperKasa Cloud). Open the register in your shop as described under “Register in your shop”.",
-    forgot: `Forgot your password? With the Windows register you reset it on the computer running the register (“Forgot password” on the sign-in screen). Or call us: <a href="tel:+420608886882">${PHONE}</a>.`,
+    forgot: `Forgot your password or cannot sign in? Call us: <a href="tel:+420608886882">${PHONE}</a>.`,
     pcTitle: "Register in your shop (Windows)",
-    pcText: "On the computer running the register, open it with the SuperKasa icon on the desktop. On a tablet or phone on the same network, open the register's address (see Admin → Devices) and sign in with the same e-mail and password – no pairing code needed.",
-    accText: "The owner sets the e-mail and password in the register: Admin → System → Owner account.",
+    pcText: "Open the Windows register with the SuperKasa icon on the desktop. Pair a tablet or another computer on the shop network with a code from Admin → Devices. Staff sign in with their PIN – even offline.",
+    accText: "Browser register: the owner enters the e-mail and password when creating the shop on app.superkasa.cz, or later in Admin → System → Owner account.",
     pcBtn: "Download for Windows",
     soon: {
       title: "Browser register (coming soon) – SuperKasa",

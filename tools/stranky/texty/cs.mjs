@@ -374,10 +374,10 @@ export default {
     choose: "Tento e-mail má víc obchodů – vyberte, do kterého jít:",
     error: "Přihlášení se nepovedlo. Zkuste to prosím znovu.",
     offline: "Přihlášení přes internet zatím neběží – pokladnu v prohlížeči (SuperKasa Cloud) právě spouštíme. Pokladnu v obchodě otevřete podle návodu „Pokladna v obchodě“.",
-    forgot: `Zapomenuté heslo? U pokladny pro Windows ho obnovíte na počítači s pokladnou (v okně přihlášení „Zapomenuté heslo“). Jinak zavolejte: <a href="tel:+420608886882">${PHONE}</a>.`,
+    forgot: `Zapomenuté heslo nebo problém s přihlášením? Zavolejte nám: <a href="tel:+420608886882">${PHONE}</a>.`,
     pcTitle: "Pokladna v obchodě (Windows)",
-    pcText: "Na počítači s pokladnou ji otevřete ikonou SuperKasa na ploše. Na tabletu nebo mobilu ve stejné síti otevřete adresu pokladny (najdete ji ve Správě → Zařízení) a přihlaste se stejným e-mailem a heslem – bez párovacího kódu.",
-    accText: "E-mail a heslo si majitel nastaví v pokladně: Správa → Systém → Účet majitele.",
+    pcText: "Pokladnu pro Windows otevřete ikonou SuperKasa na ploše. Tablet nebo další počítač v síti obchodu spárujete kódem ze Správy → Zařízení. Prodavači se přihlašují svým PINem – i bez internetu.",
+    accText: "Pokladna v prohlížeči: e-mail a heslo majitele zadáte při založení obchodu na app.superkasa.cz, nebo později ve Správě → Systém → Účet majitele.",
     pcBtn: "Stáhnout pro Windows",
     // Varianta „připravujeme“ (LOGIN_LIVE = false v parts.mjs).
     soon: {

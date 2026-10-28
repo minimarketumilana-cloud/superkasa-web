@@ -10,7 +10,9 @@ export const INLINE_JS = 'document.documentElement.className+=" js"';
  * 2) SuperKasa Cloud na app.superkasa.cz opravdu běží (DNS + server).
  * Do té doby hlavička i prihlaseni.html říkají „Pokladna v prohlížeči – připravujeme“.
  */
-export const LOGIN_LIVE = false;
+// 2026-10-28: SuperKasa Cloud běží na app.superkasa.cz (VPS FORPSI) – přihlášení přes internet je živé. Stažitelná
+// verze pro Windows (0.2.1) účet majitele ještě nemá, proto texty o Windows mluví jen o PINu a párovacím kódu.
+export const LOGIN_LIVE = true;
 
 // Bezpečnostní pravidla přímo ve stránce: GitHub Pages hlavičky z .htaccess neposílá. (frame-ancestors v <meta>
 // nefunguje, to umí jen hlavička serveru.) Hash patří k vloženému skriptu INLINE_JS; app.superkasa.cz = přihlášení.

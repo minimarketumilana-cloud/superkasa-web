@@ -372,10 +372,10 @@ export default {
     choose: "E-mail này có nhiều cửa hàng – chọn cửa hàng muốn vào:",
     error: "Đăng nhập không thành công. Vui lòng thử lại.",
     offline: "Đăng nhập qua internet hiện chưa chạy – chúng tôi đang khởi động máy tính tiền trên trình duyệt (SuperKasa Cloud). Mở máy tính tiền ở cửa hàng theo hướng dẫn „Máy tính tiền ở cửa hàng“.",
-    forgot: `Quên mật khẩu? Với bản Windows, bạn đặt lại trên máy tính chạy máy tính tiền (trong màn hình đăng nhập „Quên mật khẩu“). Hoặc gọi: <a href="tel:+420608886882">${PHONE}</a>.`,
+    forgot: `Quên mật khẩu hoặc không đăng nhập được? Hãy gọi cho chúng tôi: <a href="tel:+420608886882">${PHONE}</a>.`,
     pcTitle: "Máy tính tiền ở cửa hàng (Windows)",
-    pcText: "Trên máy tính chạy máy tính tiền, mở bằng biểu tượng SuperKasa trên màn hình. Trên máy tính bảng hoặc điện thoại cùng mạng, mở địa chỉ máy tính tiền (xem trong Quản lý → Thiết bị) và đăng nhập bằng cùng e-mail và mật khẩu – không cần mã ghép nối.",
-    accText: "Chủ cửa hàng đặt e-mail và mật khẩu trong máy tính tiền: Quản lý → Hệ thống → Tài khoản chủ.",
+    pcText: "Máy tính tiền cho Windows mở bằng biểu tượng SuperKasa trên màn hình. Máy tính bảng hoặc máy tính khác trong mạng cửa hàng được ghép nối bằng mã trong Quản lý → Thiết bị. Nhân viên đăng nhập bằng mã PIN – không cần internet.",
+    accText: "Máy tính tiền trên trình duyệt: chủ nhập e-mail và mật khẩu khi tạo cửa hàng trên app.superkasa.cz, hoặc sau đó trong Quản lý → Hệ thống → Tài khoản chủ.",
     pcBtn: "Tải về cho Windows",
     soon: {
       title: "Máy tính tiền trên trình duyệt (sắp ra mắt) – SuperKasa",
