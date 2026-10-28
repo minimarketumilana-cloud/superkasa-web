@@ -13,6 +13,58 @@
     nav.addEventListener("click", function (e) { if (e.target.closest("a")) set(false); });
   }
 
+  // Přihlášení do pokladny: e-mail a heslo → SuperKasa Cloud najde obchod a pošle prohlížeč do jeho pokladny.
+  var form = document.getElementById("login-form");
+  if (form && window.fetch) {
+    var api = form.getAttribute("data-api");
+    var note = document.getElementById("login-note");
+    var err = form.querySelector(".login-err");
+    var shops = form.querySelector(".login-shops");
+    var btn = form.querySelector("button[type=submit]");
+    var label = btn.textContent;
+    var offline = function () { note.textContent = form.getAttribute("data-offline"); note.hidden = false; };
+    // Běží cloud? (bez odpovědi = server ještě není spuštěný)
+    fetch(api + "/api/cloud/health", { mode: "no-cors", cache: "no-store" }).catch(offline);
+    var send = function (slug) {
+      err.hidden = true;
+      btn.disabled = true;
+      btn.textContent = form.getAttribute("data-busy");
+      fetch(form.getAttribute("data-api") + "/api/cloud/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-app": "1" },
+        body: JSON.stringify({ email: form.email.value, password: form.password.value, slug: slug || undefined })
+      })
+        .then(function (r) {
+          return r.json().catch(function () { return {}; }).then(function (d) {
+            if (!r.ok) throw new Error(d.error || form.getAttribute("data-error"));
+            if (d.shops) {
+              while (shops.firstChild) shops.removeChild(shops.firstChild);
+              var p = document.createElement("p");
+              p.textContent = form.getAttribute("data-choose");
+              shops.appendChild(p);
+              d.shops.forEach(function (s) {
+                var b = document.createElement("button");
+                b.type = "button";
+                b.className = "btn btn-ghost";
+                b.textContent = s.name;
+                b.addEventListener("click", function () { send(s.slug); });
+                shops.appendChild(b);
+              });
+              shops.hidden = false;
+              return;
+            }
+            location.href = d.url;
+          });
+        }, function () {
+          offline();
+          throw new Error(form.getAttribute("data-offline"));
+        })
+        .catch(function (e) { err.textContent = e.message; err.hidden = false; })
+        .then(function () { btn.disabled = false; btn.textContent = label; });
+    };
+    form.addEventListener("submit", function (e) { e.preventDefault(); send(); });
+  }
+
   var seg = document.querySelector(".picker .seg");
   if (seg) {
     var kinds = document.querySelectorAll(".picker .obor-kind");

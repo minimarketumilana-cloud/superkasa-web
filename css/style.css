@@ -140,6 +140,16 @@ small, .small { font-size: .9rem; color: var(--muted); }
 @media (min-width: 1401px) { .login-top > span { display: none; } }
 /* Stránka Pokladna v prohlížeči (připravujeme) */
 .card > h2 { font-size: 1.2rem; font-weight: 650; margin-bottom: .4em; }
+.login-form { display: grid; gap: 14px; align-content: start; }
+.login-form label { display: grid; gap: 6px; font-weight: 600; }
+.login-form input { font: inherit; min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1px solid #d8d0c4; background: #fff; color: inherit; }
+.login-form input:focus { outline: 3px solid var(--plum-soft); border-color: var(--plum); }
+.login-form .cloud-soon { margin: 0; }
+.login-err { margin: 0; color: #b42318; font-weight: 600; }
+.login-shops { display: grid; gap: 8px; }
+.login-shops p { margin: 0; }
+.login-form .small { font-size: .9rem; margin: 0; }
+.login-form [hidden], .login-shops[hidden] { display: none; }
 .cloud-soon { margin: 0 0 18px; padding: 14px 18px; border-radius: 14px; background: var(--plum-soft); color: var(--plum-dark); font-weight: 600; }
 /* Vietnamština má diakritiku nad i pod písmeny – víc místa mezi řádky nadpisů. */
 :lang(vi) h1, :lang(vi) h2, :lang(vi) h3 { line-height: 1.32; }

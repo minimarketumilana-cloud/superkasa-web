@@ -303,9 +303,9 @@ ${cta(c, t.cta[0], t.cta[1])}`,
 };
 
 /**
- * Pokladna v prohlížeči (SuperKasa Cloud) – zatím jen informace „připravujeme“. Cloud ještě neběží (app.superkasa.cz
- * neexistuje), proto tu není přihlášení ani založení pokladny a žádný odkaz nevede na neexistující adresu.
- * Až cloud poběží, vrátí se sem přihlášení (adresa obchodu → https://<obchod>.superkasa.cz/).
+ * Přihlášení do pokladny: e-mail a heslo majitele se pošlou na app.superkasa.cz (SuperKasa Cloud), ten najde obchod
+ * a pošle prohlížeč do jeho pokladny (zařízení se samo spáruje). Formulář obsluhuje js/site.js; dokud cloud neběží,
+ * ukáže, že přihlášení přes internet zatím nejde, a vedle je návod pro pokladnu v obchodě (Windows).
  */
 export const prihlaseni = (c) => {
   const t = c.T.login;
@@ -324,19 +324,23 @@ export const prihlaseni = (c) => {
 
 <section class="section" style="padding-top:32px">
   <div class="wrap">
-    <p class="cloud-soon">${t.soon}</p>
     <div class="grid grid-2">
+      <form class="card login-form" id="login-form" action="https://app.superkasa.cz/#prihlaseni" method="get" novalidate data-api="https://app.superkasa.cz" data-busy="${t.busy}" data-choose="${t.choose}" data-error="${t.error}" data-offline="${t.offline}">
+        <h2>${t.h1}</h2>
+        <p class="cloud-soon" id="login-note" hidden></p>
+        <label>${t.email}<input type="email" name="email" autocomplete="username" maxlength="120" required></label>
+        <label>${t.password}<input type="password" name="password" autocomplete="current-password" maxlength="200" required></label>
+        <p class="login-err" role="alert" hidden></p>
+        <button class="btn btn-primary" type="submit">${t.submit}</button>
+        <div class="login-shops" hidden></div>
+        <p class="small">${t.forgot}</p>
+      </form>
       <article class="card">
-        ${icon("download")}
+        ${icon("monitor")}
         <h2>${t.pcTitle}</h2>
         <p>${t.pcText}</p>
-        <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="ke-stazeni.html">${t.pcBtn}</a></div>
-      </article>
-      <article class="card">
-        ${icon("clock", "gold")}
-        <h2>${t.soonTitle}</h2>
-        <p>${t.soonText}</p>
-        <p>${t.infoText}</p>
+        <p>${t.accText}</p>
+        <div class="actions" style="margin-top:8px"><a class="btn btn-ghost" href="ke-stazeni.html">${t.pcBtn}</a></div>
       </article>
     </div>
   </div>

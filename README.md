@@ -20,7 +20,7 @@ osobních údajů se nepřekládají: ve `vi/` a `en/` je krátká stránka „Z
 | `cenik.html` | Tarify, 199 Kč měsíčně / 2 149 Kč ročně s DPH, placené doplňky, zkouška, pronájem a koupě, časté otázky |
 | `eet.html` | EET 2.0 – jak to pokladna dělá, co zařídí podnikatel, odkazy na Finanční správu |
 | `ke-stazeni.html` | Instalátor pro Windows (`aktualizace/SuperKasa-Setup-0.2.1.exe`, velikost a SHA-256) a potřebné vybavení |
-| `prihlaseni.html` | Přihlášení do pokladny v prohlížeči (adresa obchodu → `https://<obchod>.superkasa.cz/`, nová pokladna na `app.superkasa.cz`); dokud cloud neběží, `js/site.js` ukáže odkaz na Windows |
+| `prihlaseni.html` | Přihlášení do pokladny e-mailem a heslem majitele: `js/site.js` pošle údaje na `https://app.superkasa.cz/api/cloud/login`, cloud najde obchod a pošle prohlížeč do jeho pokladny (`#prihlasit=` jednorázový kód, zařízení se samo spáruje). Dokud cloud neběží, stránka to oznámí; vedle je návod pro pokladnu v obchodě (Windows, tablet ve stejné síti) |
 | `kontakt.html` | Kontakt na výrobce (bez DIČ – to se nezveřejňuje) |
 | `obchodni-podminky.html` | **Koncept** k právní kontrole (`noindex`, není v sitemap) |
 | `ochrana-osobnich-udaju.html` | **Koncept** k právní kontrole (`noindex`, není v sitemap) |
