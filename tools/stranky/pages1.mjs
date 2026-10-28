@@ -38,7 +38,7 @@ export const index = (c) => {
       <h1>${t.h1}</h1>
       <p class="lead">${t.lead}</p>
     </div>
-    ${oborPicker(c)}
+    ${oborPicker(c, { headingLevel: 1 })}
     <p class="hero-links">
       <span>${t.heroLinks[0]}</span>
       <span>${t.heroLinks[1]}</span>

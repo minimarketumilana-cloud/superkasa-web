@@ -108,7 +108,7 @@ export default {
     ],
     loyalty: [
       "Khách hàng thân thiết và phiếu quà tặng",
-      "Thẻ khách hàng hoặc số điện thoại: tích điểm, đổi điểm lấy giảm giá, giảm giá cố định cho khách VIP. Phiếu quà tặng có mã vạch và số dư – gửi EET 2.0 đúng quy định.",
+      "Thẻ khách hàng hoặc số điện thoại: tích điểm, đổi điểm lấy giảm giá, giảm giá cố định cho khách VIP. Phiếu quà tặng có mã vạch và số dư; gửi EET 2.0 theo § 17 khoản 2 Luật số 180/2026 Sb. – hãy kiểm tra với kế toán.",
     ],
     reservations: [
       "Đặt lịch và lịch hẹn",

@@ -115,7 +115,7 @@ export default {
       "You keep selling when the internet is down – sales are sent to EET later",
     ],
     splitBtn: "Explore features",
-    mockGroups: ["Bakery", "Fruit & veg", "Soft drinks"],
+    mockGroups: ["Bakery", "Fruit &amp; veg", "Soft drinks"],
     mockCap: "Illustrative preview of the sales screen",
     whyTitle: "Why SuperKasa",
     whyLead: "A full POS with stock and price labels at one low price – no hidden fees and no expensive hardware.",

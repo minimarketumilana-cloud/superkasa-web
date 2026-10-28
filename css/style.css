@@ -36,7 +36,9 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--plum); text-underline-offset: 3px; }
 a:hover { color: var(--plum-mid); }
-:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+:focus-visible { outline: 3px solid var(--plum); outline-offset: 3px; border-radius: 6px; }
+/* Na tmavém pozadí (patička, tmavé oddíly) je švestková málo vidět – tam zlatá. */
+.site-footer :focus-visible, .section.dark :focus-visible, .price-box :focus-visible { outline-color: var(--gold); }
 h1, h2, h3 { line-height: 1.2; letter-spacing: -.015em; color: var(--plum-dark); margin: 0 0 .5em; }
 h1 { font-size: clamp(2rem, 1.3rem + 3.2vw, 3.3rem); font-weight: 750; }
 h2 { font-size: clamp(1.55rem, 1.2rem + 1.6vw, 2.25rem); font-weight: 700; }
@@ -129,6 +131,14 @@ small, .small { font-size: .9rem; color: var(--muted); }
   .langs .flag { width: 24px; height: 16px; }
   .login-top, .menu-btn { min-width: 44px; min-height: 44px; padding: 0 10px; }
 }
+/* Nejužší telefony (320–360 px): logo, vlajky a tlačítka o kousek menší, ať hlavička nepřetéká. */
+@media (max-width: 360px) {
+  .site-header .wrap { gap: 4px; padding: 0 10px; }
+  .brand img { height: 21px; }
+  .langs a { min-width: 30px; padding: 0 2px; }
+  .langs .flag { width: 21px; height: 14px; }
+  .login-top, .menu-btn { min-width: 40px; min-height: 42px; padding: 0 8px; }
+}
 /* Štítek „připravujeme“ u pokladny v prohlížeči (v hlavičce jen s textem, na mobilu se schová s ním). */
 .soon-tag {
   font-style: normal; font-size: .72rem; font-weight: 700; letter-spacing: .02em; text-transform: lowercase;
@@ -136,8 +146,6 @@ small, .small { font-size: .9rem; color: var(--muted); }
 }
 .login-top:hover .soon-tag, .login-top[aria-current] .soon-tag { background: #fff; }
 @media (max-width: 760px) { .login-top .soon-tag { display: none; } }
-/* Nad 1400 px je menu rozbalené v řádku – u tlačítka zůstane ikona a štítek, celý název je v aria-label a title. */
-@media (min-width: 1401px) { .login-top > span { display: none; } }
 /* Stránka Pokladna v prohlížeči (připravujeme) */
 .card > h2 { font-size: 1.2rem; font-weight: 650; margin-bottom: .4em; }
 .login-form { display: grid; gap: 14px; align-content: start; }

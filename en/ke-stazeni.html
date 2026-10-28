@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-pfgOMgfVZwm2ODyms34QYW9h8EwicylhV77q5LHK8c0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://app.superkasa.cz; base-uri 'self'; form-action 'self' https://app.superkasa.cz">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Download – SuperKasa installer for Windows</title>
 <meta name="description" content="Download the SuperKasa POS installer for Windows – one file, installs without administrator rights, 10 days free to try, your data stays even after uninstalling. What equipment you will need.">
@@ -37,7 +39,7 @@
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="SuperKasa – home page"><img src="../img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Website language"><a href="../ke-stazeni.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="../vi/ke-stazeni.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="../en/ke-stazeni.html" hreflang="en" lang="en" title="English" aria-label="English" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
-    <a class="login-top" href="prihlaseni.html" aria-label="Sign in to the register" title="Sign in to the register"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg><span>Sign in</span></a>
+    <a class="login-top" href="prihlaseni.html" aria-label="Sign in to the register" title="Sign in to the register"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Sign in</span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main menu">
       <a href="index.html">Home</a>
@@ -64,7 +66,7 @@
     <div class="grid grid-2">
       <article class="card">
         <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></div>
-        <h3>SuperKasa for Windows</h3>
+        <h2>SuperKasa for Windows</h2>
         <p>Version 0.2.1 · 24 MB · Windows 10 and 11 (64-bit). Security and bug-fix release: live EET lock, encrypted EET certificate, safer backups and restore, gift vouchers in the accounting export. If anything doesn't work, give us a call and we'll help.</p>
         <div class="actions" style="margin-top:12px">
           <a class="btn btn-primary" href="../aktualizace/SuperKasa-Setup-0.2.1.exe" download>Download installer</a>
@@ -73,7 +75,7 @@
         <p class="small muted" style="margin-top:12px">When you run it, Windows may show “Windows protected your PC” (in Czech: “Systém Windows ochránil váš počítač”) – the installer does not yet have a paid publisher signature. Click “More info” (Další informace) and then “Run anyway” (Přesto spustit). SHA-256 checksum: <code style="word-break:break-all">552671038842446a6ab840f0051bbd93d846ac02449dbdb66135a24753fa4215</code></p>
       </article>
       <article class="card">
-        <h3>What the installer does</h3>
+        <h2>What the installer does</h2>
         <ul class="checks">
           <li>One file; the installer is in Czech and needs no administrator rights</li>
           <li>You don't need to install anything else</li>

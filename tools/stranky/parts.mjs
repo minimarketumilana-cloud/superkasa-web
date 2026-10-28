@@ -1,7 +1,21 @@
 // Společné části stránek: ikony, karty, hlavička a patička. Výsledkem jsou obyčejné statické HTML soubory.
+import { createHash } from "node:crypto";
 import { LANG_INFO, LANGS, SITE, langHref, pageUrl } from "./i18n.mjs";
 export { SITE };
 export const INLINE_JS = 'document.documentElement.className+=" js"';
+
+// Bezpečnostní pravidla přímo ve stránce: GitHub Pages hlavičky z .htaccess neposílá. (frame-ancestors v <meta>
+// nefunguje, to umí jen hlavička serveru.) Hash patří k vloženému skriptu INLINE_JS; app.superkasa.cz = přihlášení.
+const INLINE_HASH = createHash("sha256").update(INLINE_JS).digest("base64");
+const CSP = [
+  "default-src 'self'",
+  `script-src 'self' 'sha256-${INLINE_HASH}'`,
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data:",
+  "connect-src 'self' https://app.superkasa.cz",
+  "base-uri 'self'",
+  "form-action 'self' https://app.superkasa.cz",
+].join("; ");
 
 const P = {
   touch: '<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/>',
@@ -96,6 +110,8 @@ export function page(c, { file, title, desc, current, body, noindex = false, can
 <html lang="${lang}">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="${CSP}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title>
 <meta name="description" content="${esc(desc)}">
@@ -127,7 +143,7 @@ ${ld}</head>
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="${esc(L.brandAria)}"><img src="${up}img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     ${langSwitch(c, file)}
-    <a class="login-top" href="prihlaseni.html" aria-label="${esc(L.loginAria)}" title="${esc(L.loginAria)}"${current === "prihlaseni.html" ? ' aria-current="page"' : ""}><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg><span>${L.loginBtn}</span>${L.loginSoon ? `<em class="soon-tag">${L.loginSoon}</em>` : ""}</a>
+    <a class="login-top" href="prihlaseni.html" aria-label="${esc(L.loginAria)}" title="${esc(L.loginAria)}"${current === "prihlaseni.html" ? ' aria-current="page"' : ""}><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>${L.loginBtn}</span>${L.loginSoon ? `<em class="soon-tag">${L.loginSoon}</em>` : ""}</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">${L.menu}</span></button>
     <nav class="nav" id="nav" aria-label="${L.navAria}">
       ${nav}

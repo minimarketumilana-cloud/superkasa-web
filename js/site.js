@@ -23,8 +23,9 @@
     var btn = form.querySelector("button[type=submit]");
     var label = btn.textContent;
     var offline = function () { note.textContent = form.getAttribute("data-offline"); note.hidden = false; };
-    // Běží cloud? (bez odpovědi = server ještě není spuštěný)
-    fetch(api + "/api/cloud/health", { mode: "no-cors", cache: "no-store" }).catch(offline);
+    // Běží cloud? Upozornění je v HTML vidět předem (i bez JavaScriptu); schová se, až server odpoví.
+    fetch(api + "/api/cloud/health", { mode: "no-cors", cache: "no-store" })
+      .then(function () { note.hidden = true; }, offline);
     var send = function (slug) {
       err.hidden = true;
       btn.disabled = true;

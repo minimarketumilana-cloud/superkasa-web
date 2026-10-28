@@ -27,7 +27,7 @@ export default {
     docGdpr: "Bảo vệ dữ liệu cá nhân (bản nháp)",
     docEet: "EET 2.0 – Finanční správa (Cục Thuế Séc)",
     footBottom: "© 2026 Thanh Lam Nguyen, IČO 14161648, 1. května 117/141, 725 25 Ostrava. Trang web này không dùng cookie hay công cụ theo dõi.",
-    call: "Gọi điện",
+    call: "Gọi&nbsp;điện",
     callPhone: `Gọi&nbsp;${PHONE}`,
     showPricing: "Xem bảng giá",
     ctaTitle: "Bạn muốn dùng thử SuperKasa?",

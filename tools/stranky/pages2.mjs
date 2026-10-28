@@ -84,7 +84,7 @@ export const cenik = (c) => {
         <p>${t.boxText}</p>
       </div>
       <div class="card">
-        <h3>${t.everyTitle}</h3>
+        <h2>${t.everyTitle}</h2>
         <ul class="checks">
           ${t.every.map((x) => `<li>${x}</li>`).join("\n          ")}
         </ul>
@@ -272,7 +272,7 @@ export const stazeni = (c) => {
     <div class="grid grid-2">
       <article class="card">
         ${icon("download")}
-        <h3>${t.appTitle}</h3>
+        <h2>${t.appTitle}</h2>
         <p>${t.appMeta}</p>
         <div class="actions" style="margin-top:12px">
           <a class="btn btn-primary" href="${c.up}aktualizace/SuperKasa-Setup-0.2.1.exe" download>${t.download}</a>
@@ -281,7 +281,7 @@ export const stazeni = (c) => {
         <p class="small muted" style="margin-top:12px">${t.smartscreen} <code style="word-break:break-all">552671038842446a6ab840f0051bbd93d846ac02449dbdb66135a24753fa4215</code></p>
       </article>
       <article class="card">
-        <h3>${t.doesTitle}</h3>
+        <h2>${t.doesTitle}</h2>
         <ul class="checks">
           ${t.does.map((x) => `<li>${x}</li>`).join("\n          ")}
         </ul>
@@ -325,9 +325,10 @@ export const prihlaseni = (c) => {
 <section class="section" style="padding-top:32px">
   <div class="wrap">
     <div class="grid grid-2">
-      <form class="card login-form" id="login-form" action="https://app.superkasa.cz/#prihlaseni" method="get" novalidate data-api="https://app.superkasa.cz" data-busy="${t.busy}" data-choose="${t.choose}" data-error="${t.error}" data-offline="${t.offline}">
+      <form class="card login-form" id="login-form" action="https://app.superkasa.cz/#prihlaseni" method="post" novalidate data-api="https://app.superkasa.cz" data-busy="${t.busy}" data-choose="${t.choose}" data-error="${t.error}" data-offline="${t.offline}">
         <h2>${t.h1}</h2>
-        <p class="cloud-soon" id="login-note" hidden></p>
+        <!-- Upozornění je vidět i bez JavaScriptu; skript ho schová, až cloud odpoví. Heslo nikdy v adrese (POST). -->
+        <p class="cloud-soon" id="login-note">${t.offline}</p>
         <label>${t.email}<input type="email" name="email" autocomplete="username" maxlength="120" required></label>
         <label>${t.password}<input type="password" name="password" autocomplete="current-password" maxlength="200" required></label>
         <p class="login-err" role="alert" hidden></p>
@@ -368,13 +369,13 @@ export const kontakt = (c) => {
     <div class="grid grid-2">
       <article class="card">
         ${icon("touch")}
-        <h3>${t.phone}</h3>
+        <h2>${t.phone}</h2>
         <p><a class="contact-big" href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
         <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="tel:+420608886882">${c.T.common.call}</a></div>
       </article>
       <article class="card">
         ${icon("home", "gold")}
-        <h3>${t.makerTitle}</h3>
+        <h2>${t.makerTitle}</h2>
         <dl class="dl">
           <dt>${t.labels[0]}</dt><dd>Thanh Lam Nguyen</dd>
           <dt>${t.labels[1]}</dt><dd>14161648</dd>
