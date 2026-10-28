@@ -68,7 +68,7 @@ export const op = {
     <ol>
       <li>Pronájem platí do data uvedeného v licenčním klíči a automaticky se neprodlužuje. Pokračuje zaplacením dalšího období, po kterém uživatel dostane nový licenční klíč.</li>
       <li>Když licence skončí, pokladna ještě 30 dní umožňuje prodej i odesílání do EET a zobrazuje upozornění. Poté se zastaví nový prodej. Prohlížení dokladů, uzávěrky, vratky a export dat zůstávají dostupné.</li>
-      <li>U pokladny nainstalované na počítači uživatele jsou data uložená na tomto počítači; poskytovatel je nemaže a nemá k nim přístup. Pokladnu v prohlížeči poskytovatel zatím nenabízí; podmínky pro ni budou doplněny před jejím spuštěním.</li>
+      <li>U pokladny nainstalované na počítači uživatele jsou data uložená na tomto počítači; poskytovatel je nemaže a nemá k nim přístup. U pokladny v prohlížeči (SuperKasa Cloud) jsou data uložená na serveru poskytovatele, denně se zálohují a kopie záloh se stahuje na počítač v obchodě. ${ph("doplnit podmínky pro SuperKasa Cloud a smlouvu o zpracování osobních údajů – po právní kontrole")}</li>
       <li>Při jednorázové koupi je licence časově neomezená. Verze vydané po datu „aktualizace do“ uvedeném v licenci nejsou v ceně. ${ph("doplnit podmínky prodloužení aktualizací")}</li>
     </ol>
 
@@ -147,9 +147,9 @@ export const gdpr = {
     <h2>4. Data v pokladně</h2>
     <ul>
       <li>Platí pro pokladnu nainstalovanou na počítači uživatele: doklady, zboží, prodavači, uzávěrky a další data pokladny jsou uložené na počítači uživatele v jeho provozovně. Správce k nim nemá přístup. Za osobní údaje, které uživatel do pokladny ukládá, odpovídá uživatel jako jejich správce.</li>
-      <li>Tržby pokladna odesílá přímo do systému EET 2.0 Finanční správy, ne přes servery SuperKasa.</li>
+      <li>Pokladna pro Windows odesílá tržby přímo do systému EET 2.0 Finanční správy, ne přes servery SuperKasa. U pokladny v prohlížeči je odesílá server SuperKasa.</li>
       <li>Licenční klíč pokladna ověřuje bez internetu.</li>
-      <li>Pokladnu v prohlížeči (SuperKasa Cloud) zatím nenabízíme. Než ji spustíme, doplníme sem, jaké údaje v ní zpracováváme, v jaké roli a kde jsou uložené.</li>
+      <li>Pokladna v prohlížeči (SuperKasa Cloud): doklady, zboží, prodavači a další data obchodu jsou uložená na serveru SuperKasa, denně se zálohují a kopie záloh se stahuje na počítač v obchodě. Majitel se přihlašuje e-mailem a heslem. ${ph("doplnit roli správce a zpracovatele, smlouvu o zpracování, umístění serveru a dobu uchování – po právní kontrole")}</li>
     </ul>
 
     <h2>5. Kdy se pokladna připojuje k internetu</h2>

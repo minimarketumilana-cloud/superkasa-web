@@ -206,7 +206,7 @@ export const funkce = (c) => {
   <div class="wrap">
     <div class="section-head"><h2>${t.provozTitle}</h2></div>
     <div class="grid grid-3">
-      ${cards([["lang", "gold"], ["users"], ["monitor"], ["network"], ["shield"], ["download"], ["refresh"], ["clock"], ["touch", "gold"], ["printer"]], t.provoz)}
+      ${cards([["lang", "gold"], ["users"], ["monitor"], ["network"], ["shield"], ["download"], ["refresh"], ["clock"], ["touch", "gold"], ["printer"], ["monitor", "gold"]], t.provoz)}
     </div>
   </div>
 </section>
