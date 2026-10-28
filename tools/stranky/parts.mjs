@@ -6,12 +6,12 @@ export const INLINE_JS = 'document.documentElement.className+=" js"';
 
 /**
  * Přihlášení na webu (e-mail a heslo majitele přes app.superkasa.cz). Zapnout (true) až tehdy, když:
- * 1) pokladna s účtem majitele (commit 1a87cbf a novější) je vydaná a ke stažení – verze 0.2.1 ho NEMÁ,
+ * 1) pokladna s účtem majitele je vydaná a ke stažení (od verze 0.2.2, 28. 10. 2026),
  * 2) SuperKasa Cloud na app.superkasa.cz opravdu běží (DNS + server).
  * Do té doby hlavička i prihlaseni.html říkají „Pokladna v prohlížeči – připravujeme“.
  */
 // 2026-10-28: SuperKasa Cloud běží na app.superkasa.cz (VPS FORPSI) – přihlášení přes internet je živé. Stažitelná
-// verze pro Windows (0.2.1) účet majitele ještě nemá, proto texty o Windows mluví jen o PINu a párovacím kódu.
+// verze pro Windows má účet majitele od 0.2.2 (28. 10. 2026).
 export const LOGIN_LIVE = true;
 
 // Bezpečnostní pravidla přímo ve stránce: GitHub Pages hlavičky z .htaccess neposílá. (frame-ancestors v <meta>

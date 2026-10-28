@@ -189,7 +189,7 @@ export default {
       ["Přehledy pro majitele", "Tržby podle DPH, plateb, prodavačů a skupin, průměrný nákup, slevy, storna a nejprodávanější zboží. Grafy po hodinách i dnech."],
       ["Hotovost pod kontrolou", "Zaokrouhlení na koruny, návrh bankovek a výpočet vrácení. Upozornění na odvod hotovosti nad limit."],
       ["Nezměnitelný deník dokladů", "Každý ostrý doklad nese otisk svých údajů navázaný na předchozí doklad. Jedním tlačítkem ověříte, že žádný doklad nikdo dodatečně nezměnil ani nesmazal."],
-      ["E-účtenka do mobilu", "Zákazník dostane účtenku jako odkaz do telefonu – bez papíru. Umí to pokladna v prohlížeči (SuperKasa Cloud); pokladna pro Windows ke stažení (0.2.1) ji zatím nemá."],
+      ["E-účtenka do mobilu", "Zákazník dostane účtenku jako odkaz do telefonu – bez papíru. Umí to pokladna v prohlížeči (SuperKasa Cloud)."],
     ],
     skladTitle: "Sklad a zboží",
     sklad: [
@@ -339,7 +339,7 @@ export default {
     h1: "Ke stažení",
     lead: "Instalátor SuperKasy pro Windows. Prvních 10 dní zdarma na vyzkoušení, bez karty a bez závazku.",
     appTitle: "SuperKasa pro Windows",
-    appMeta: "Verze 0.2.1 · 24 MB · Windows 10 a 11 (64bit). Bezpečnostní a opravná verze: zámek ostrého EET, šifrovaný certifikát EET, bezpečnější zálohy a obnova, dárkové poukazy v exportu pro účetní. Kdyby cokoli nešlo, zavolejte, pomůžeme.",
+    appMeta: "Verze 0.2.2 · vydáno 28. 10. 2026 · 24 MB · Windows 10 a 11 (64bit). Nově přihlášení účtem majitele: na tabletu nebo mobilu stačí e-mail a heslo, bez párovacího kódu. Dále slevy nad limit s PINem vedoucího, přísnější deník dokladů, volba plátce / neplátce DPH a rychlejší import. Kdyby cokoli nešlo, zavolejte, pomůžeme.",
     download: "Stáhnout instalátor",
     smartscreen: "Windows může při spuštění ukázat „Systém Windows ochránil váš počítač“ – instalátor zatím nemá placený podpis vydavatele. Klepněte na „Další informace“ a „Přesto spustit“. Kontrolní součet SHA-256:",
     doesTitle: "Co instalátor udělá",
@@ -375,10 +375,10 @@ export default {
     choose: "Tento e-mail má víc obchodů – vyberte, do kterého jít:",
     error: "Přihlášení se nepovedlo. Zkuste to prosím znovu.",
     offline: "Přihlášení přes internet zatím neběží – pokladnu v prohlížeči (SuperKasa Cloud) právě spouštíme. Pokladnu v obchodě otevřete podle návodu „Pokladna v obchodě“.",
-    forgot: `Zapomenuté heslo nebo problém s přihlášením? Zavolejte nám: <a href="tel:+420608886882">${PHONE}</a>.`,
+    forgot: `Zapomenuté heslo? U pokladny pro Windows ho obnovíte kódem z počítače s pokladnou (v okně přihlášení „Zapomenuté heslo“). Jinak zavolejte: <a href="tel:+420608886882">${PHONE}</a>.`,
     pcTitle: "Pokladna v obchodě (Windows)",
-    pcText: "Pokladnu pro Windows otevřete ikonou SuperKasa na ploše. Tablet nebo další počítač v síti obchodu spárujete kódem ze Správy → Zařízení. Prodavači se přihlašují svým PINem – i bez internetu.",
-    accText: "Pokladna v prohlížeči: e-mail a heslo majitele zadáte při založení obchodu na app.superkasa.cz, nebo později ve Správě → Systém → Účet majitele.",
+    pcText: "Pokladnu pro Windows otevřete ikonou SuperKasa na ploše. Na tabletu nebo mobilu v síti obchodu otevřete adresu pokladny (najdete ji ve Správě → Zařízení) a přihlaste se e-mailem a heslem majitele – bez párovacího kódu. Prodavači se přihlašují svým PINem – i bez internetu.",
+    accText: "E-mail a heslo majitele nastavíte ve Správě → Systém → Účet majitele (v pokladně pro Windows od verze 0.2.2). U pokladny v prohlížeči je zadáte už při založení obchodu na app.superkasa.cz.",
     pcBtn: "Stáhnout pro Windows",
     // Varianta „připravujeme“ (LOGIN_LIVE = false v parts.mjs).
     soon: {
