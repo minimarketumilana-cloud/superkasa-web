@@ -1,19 +1,22 @@
 {
-  "version": "0.2.1",
-  "released": "2026-10-27",
-  "url": "https://superkasa.cz/aktualizace/SuperKasa-Setup-0.2.1.exe",
-  "sha256": "552671038842446a6ab840f0051bbd93d846ac02449dbdb66135a24753fa4215",
-  "size": 25358928,
+  "version": "0.2.2",
+  "released": "2026-10-28",
+  "url": "https://superkasa.cz/aktualizace/SuperKasa-Setup-0.2.2.exe",
+  "sha256": "e70259a0d3f46007e8e6ffe6a2140b7f29d8f30e3f9305aeb117fb2641d472b3",
+  "size": 25394144,
   "changelog": [
-    "Bezpečnostní a opravná verze podle auditu – doporučeno všem.",
-    "EET 2.0: ostré EET nejde omylem přepnout na Playground; vypnutí chce potvrzení a doklady mezitím čekají a po zapnutí se samy dodatečně odešlou. Přísnější ověření potvrzení od Finanční správy (podpis, POK, k jaké zprávě patří).",
-    "Klíč certifikátu EET je uložený zašifrovaně a do záloh (USB, OneDrive) se dostane jen v nepoužitelné podobě.",
-    "Zálohy: kopie dat před každou aktualizací a před změnou databáze; po obnově ze zálohy se čísla dokladů nikdy neopakují a Správa ukáže, které doklady chybí; nepovedená kopie na USB / OneDrive je vidět a zkouší se znovu.",
-    "Export pro účetní a uzávěrka: dárkové poukazy zvlášť (placení poukazem, prodané poukazy, tržba bez nich).",
-    "Karta zboží: když ji mezitím uložilo jiné zařízení, změna se nepřepíše potichu – pokladna nabídne načíst aktuální stav.",
-    "Rychlejší: katalog se po změně stahuje jen se změnami a komprimovaně, import CSV je mnohonásobně rychlejší.",
-    "Aktualizace se nově ověřují vlastním podpisovým klíčem dodavatele."
+    "Přihlášení účtem majitele: na novém počítači, tabletu nebo mobilu stačí e-mail a heslo majitele – zařízení se samo spáruje a pustí rovnou do pokladny, bez párovacího kódu. Prodavači se dál přihlašují PINem. Účet nastavíte ve Správě → Systém → Účet majitele; zapomenuté heslo obnoví kód z počítače s pokladnou.",
+    "Slevy: sleva nad nastavený limit chce PIN vedoucího – i se zákazníkem a na účtu stolu. Vratky po kusech přesně (podíl slevy, hotovost, body), stejný řádek nejde vrátit dvakrát.",
+    "EET 2.0: varování a lhůty i pro chybové doklady, výměna certifikátu jen se stejným DIČ, prošlý certifikát nechá doklady čekat, přehled posledních odeslání ve Správě; účtenka po prodeji počká na kód POK.",
+    "Plátce DPH ano/ne ve Firmě: doklady podle volby, neplátce bez sazby DPH u řádků, rekapitulace DPH i na 58 mm.",
+    "Deník dokladů verze 2: ostré doklady nejde změnit ani smazat, otisk hlídá i DPH, poukazy, prodavače a směnu.",
+    "Katalog a import: EAN s úvodními nulami, PLU bez nul, desetinná čárka a jednotky v CSV, náhled změn před ostrým importem a kopie databáze před ním; hledání rychlé i ve velkém katalogu.",
+    "Sklad: storno a vratka vrací na sklad přesně odepsané, inventura sloučí řádky téhož zboží.",
+    "Bezpečnost: zámek po chybných PINech (i u docházky), bezpečnější hlavičky a cookies.",
+    "Přístupnost a překlady: čitelnější barvy, větší tlačítka, vietnamština a angličtina v plném znění.",
+    "Licence: upozornění 7 dní před koncem licence a 3 dny před koncem zkoušky.",
+    "Přenos na jiný počítač: stará pokladna po vytvoření souboru neprodává, ať se tržby nerozdělí."
   ],
-  "signature": "U__mZYEWyNgPK4TyUsQ8aZzIrDDDR8vpJGcl1RmiFTip7OtYEwHOnixFqEwUBlgRvew9t10jueWv4X4KFSTtCg",
-  "updateSignature": "uQTtCO3UkFN6fNp2g1XUvruN12SjfaOYXW3yhlHEHbp5fk3HWGrGd4qH9M55CJmJ73RdyB-B9vt2mKqWoq-bDA"
+  "signature": "qu0PVCBjQstT9Ut2CuL-mGC-jvhVtdGMVP8ECVVyr0-5PcyCVU6gin31oIXK-MGfEh6_Lsw5atSFgLK1431LAA",
+  "updateSignature": "6L1Pu1wFqzR_keCu5v_PVaNmDbVgH4cz_flGOvIpMCiqXvZsMeLIF4KWVfeqWJeau9k7kG8RjThqSjFiouKcCw"
 }
