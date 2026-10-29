@@ -81,7 +81,7 @@ small, .small { font-size: .9rem; color: var(--muted); }
 .menu-btn .bars span { top: 6px; }
 .menu-btn .bars::after { bottom: 0; }
 
-@media (max-width: 1400px) {
+@media (max-width: 1220px) {
   .js .menu-btn { display: inline-flex; }
   .js .nav {
     display: none; position: absolute; left: 0; right: 0; top: 100%;
@@ -146,11 +146,11 @@ small, .small { font-size: .9rem; color: var(--muted); }
 }
 .login-top:hover .soon-tag, .login-top[aria-current] .soon-tag { background: #fff; }
 @media (max-width: 760px) { .login-top .soon-tag { display: none; } }
-/* Nad 1400 px je menu rozbalené v řádku – u „připravujeme“ zůstane ikona a štítek, celý název je v aria-label a title. */
-@media (min-width: 1401px) { .login-top.soon > span { display: none; } }
-/* Nad 1400 px je menu v řádku i s tlačítkem Vyzkoušet zdarma: cenu (Ceník je v menu) schovat, u Přihlásit jen ikona
+/* Nad 1220 px je menu rozbalené v řádku – u „připravujeme“ zůstane ikona a štítek, celý název je v aria-label a title. */
+@media (min-width: 1221px) { .login-top.soon > span { display: none; } }
+/* Nad 1220 px je menu v řádku i s tlačítkem Vyzkoušet zdarma: cenu (Ceník je v menu) schovat, u Přihlásit jen ikona
    (název je v aria-label a title) – jinak hlavička přeteče, hlavně ve vietnamštině. */
-@media (min-width: 1401px) {
+@media (min-width: 1221px) {
   .nav:has(.btn-gold) .nav-price { display: none; }
   .site-header:has(.nav .btn-gold) .login-top > span { display: none; }
 }
@@ -546,4 +546,21 @@ dl.feat dd { margin: 2px 0 0; color: var(--muted); }
 @media print {
   .site-header, .site-footer, .actions, .menu-btn { display: none !important; }
   .section, .hero { padding: 16px 0; }
+}
+
+/* Úvod: text s tlačítky vlevo, hlavní důvody vpravo (na mobilu pod sebou). */
+.hero-top { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 40px; align-items: center; margin-bottom: 30px; }
+.hero-top .hero-intro { margin-bottom: 0; }
+.hero-cta { margin-top: 24px; }
+.btn-lg { min-height: 58px; padding: 0 30px; font-size: 1.1rem; }
+.hero-cta-note { margin: 12px 0 0; color: var(--muted); }
+.hero-facts { list-style: none; margin: 0; padding: 22px 24px; display: grid; gap: 14px; background: var(--white); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); }
+.hero-facts li { display: flex; gap: 12px; align-items: flex-start; font-weight: 600; color: var(--plum-dark); line-height: 1.35; }
+.hero-facts li::before { content: ""; flex: none; width: 22px; height: 22px; margin-top: 1px; border-radius: 50%; background: var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233a0f2c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12 4 4 8-8'/%3E%3C/svg%3E") center / 14px no-repeat; }
+@media (max-width: 900px) { .hero-top { grid-template-columns: 1fr; gap: 22px; } }
+.news .card .ico.gold, .news .card .ico { margin-bottom: 12px; }
+/* Užší notebooky (1221–1400 px): menu v řádku o kousek sevřenější, ať se vejde i vietnamština. */
+@media (min-width: 1221px) and (max-width: 1400px) {
+  .nav a { padding: 0 9px; }
+  .brand img { height: 36px; }
 }

@@ -32,7 +32,7 @@
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.className+=" js"</script>
 <script src="js/site.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SuperKasa","url":"https://superkasa.cz/","applicationCategory":"BusinessApplication","operatingSystem":"Windows 10, Windows 11","inLanguage":["cs","vi","en"],"description":"Pokladní systém s EET 2.0 pro obchody, občerstvení a služby.","offers":{"@type":"Offer","price":"199","priceCurrency":"CZK","description":"Měsíčně včetně DPH, prvních 10 dní zdarma"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SuperKasa","url":"https://superkasa.cz/","applicationCategory":"BusinessApplication","operatingSystem":"Windows 10, Windows 11, Web browser (Android, iOS)","inLanguage":["cs","vi","en"],"description":"Pokladní systém s EET 2.0 pro obchody, občerstvení a služby.","offers":{"@type":"Offer","price":"199","priceCurrency":"CZK","description":"Měsíčně včetně DPH, prvních 10 dní zdarma"}}</script>
 </head>
 <body>
 <a class="skip" href="#obsah">Přeskočit na obsah</a>
@@ -43,7 +43,6 @@
     <a class="login-top" href="prihlaseni.html" aria-label="Přihlásit se do pokladny" title="Přihlásit se do pokladny"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Přihlásit</span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
     <nav class="nav" id="nav" aria-label="Hlavní menu">
-      <a href="index.html" aria-current="page">Úvod</a>
       <a href="obory.html">Pro koho</a>
       <a href="funkce.html">Funkce</a>
       <a href="cenik.html">Ceník</a>
@@ -58,10 +57,24 @@
 <main id="obsah">
 <section class="hero hero-pick">
   <div class="wrap">
-    <div class="hero-intro">
-      <span class="eyebrow">Pokladna s EET 2.0</span>
-      <h1>Pokladna nastavená pro váš obor</h1>
-      <p class="lead">Vyberte, co provozujete. SuperKasa si připraví skupiny zboží, dlaždice a funkce přesně pro vás – a vy můžete začít prodávat.</p>
+    <div class="hero-top">
+      <div class="hero-intro">
+        <span class="eyebrow">Pokladna s EET 2.0</span>
+        <h1>Pokladna nastavená pro váš obor</h1>
+        <p class="lead">Vyberte, co provozujete. SuperKasa si připraví skupiny zboží, dlaždice a funkce přesně pro vás – a vy můžete začít prodávat.</p>
+        <div class="actions hero-cta">
+          <a class="btn btn-gold btn-lg" href="https://app.superkasa.cz/">Vyzkoušet 10 dní zdarma</a>
+          <a class="btn btn-ghost btn-lg" href="ke-stazeni.html">Stáhnout pro Windows</a>
+        </div>
+        <p class="small hero-cta-note">Bez karty a bez závazku. V prohlížeči na počítači, tabletu i mobilu, nebo jako program pro Windows.</p>
+      </div>
+      <ul class="hero-facts">
+        <li>Připraveno na EET 2.0 od 1. 1. 2027</li>
+        <li>199 Kč měsíčně s DPH, 10 dní zdarma</li>
+        <li>Až 10 zařízení: počítač, tablet, mobil</li>
+        <li>Obsluha česky, vietnamsky i anglicky</li>
+        <li>Účtenka z mobilu vyjede u hlavní kasy</li>
+      </ul>
     </div>
     
   <div class="picker">
@@ -257,11 +270,11 @@
   <div class="wrap split">
     <div>
       <h2>Prodej na dotyk, i ve špičce</h2>
-      <p class="lead-sm">SuperKasa běží na počítači s Windows přímo ve vaší provozovně a ovládá se prstem na dotykové obrazovce. Obsluha si ji přepne do vietnamštiny nebo angličtiny.</p>
+      <p class="lead-sm">SuperKasa běží na počítači s Windows ve vaší provozovně i v prohlížeči na tabletu a mobilu a ovládá se prstem na dotykové obrazovce. Obsluha si ji přepne do vietnamštiny nebo angličtiny.</p>
       <ul class="checks">
         <li>Velké dlaždice se zbožím a obrázky, čtečka čárových kódů i fotoaparát mobilu</li>
         <li>Platba hotově, kartou přes váš terminál, QR kódem nebo kombinovaně</li>
-        <li>Účtenka jde rovnou do pokladní tiskárny, bez tiskového okna</li>
+        <li>Účtenka jde rovnou do pokladní tiskárny – i z mobilu na tiskárnu u hlavní kasy</li>
         <li>Prodáváte i při výpadku internetu – tržby do EET se odešlou později</li>
       </ul>
       <div class="actions"><a class="btn btn-primary" href="funkce.html">Prohlédnout funkce</a></div>
@@ -303,7 +316,7 @@
     <div class="grid grid-3">
       <article class="card"><div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13v4"/><rect x="3" y="9" width="18" height="11" rx="2"/><circle cx="16" cy="14.5" r="1.3"/></svg></div><h3>199 Kč měsíčně včetně DPH</h3><p>Konečná cena pro kterýkoli obor, ročně 2 149 Kč. <strong>Neomezeně položek</strong> – sklad, akce i zákaznický displej jsou v ceně každého tarifu. Prvních 10 dní zdarma. <a href="cenik.html">Ceník</a></p></article>
       <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 10v4M18 10v4"/></svg></div><h3>Bez transakčních poplatků</h3><p>Z vašich tržeb si nic nebereme a terminál od nás mít nemusíte. Kartou se platí přes váš vlastní platební terminál od kterékoli banky, dál hotově nebo QR kódem.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-3h14v3"/></svg></div><h3>Váš počítač a tablety</h3><p>SuperKasa běží na běžném počítači s Windows, další okno pokladny nebo tablet připojíte přes síť obchodu. Dvě zařízení jsou v ceně tarifu bez příplatku – třeba pokladna a tablet pro příjem zboží.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-3h14v3"/></svg></div><h3>Počítač, tablet i mobil</h3><p>Hlavní pokladna na počítači s Windows nebo v prohlížeči, další pokladny na tabletu a mobilu. <strong>Až 10 zařízení</strong> v ceně tarifu – třeba pokladna, tablet na příjem zboží a mobil majitele.</p></article>
       <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Funguje i bez internetu</h3><p>Pokladna i data jsou přímo u vás v provozovně. Při výpadku internetu prodáváte dál a tržby do EET se odešlou, jakmile se připojení vrátí. Každý den se dělá záloha.</p></article>
       <article class="card"><div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h8M8 3v2M6 5c0 4 2 7 5 8M10 5c0 4-3 8-6 9"/><path d="m13 21 4-9 4 9M14.5 18h5"/></svg></div><h3>Obsluha i ve vietnamštině</h3><p>Čeština, <span lang="vi">tiếng Việt</span> i angličtina – každý prodavač má svůj jazyk a přepne ho jedním tlačítkem. Doklad pro zákazníka je vždy česky.</p></article>
       <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Sklad v ceně tarifu</h3><p>Příjem zboží skenováním, inventura a návrh objednávky v každém tarifu, pro obchody i expirace a cenovky na pokladní tiskárně. Docházku, věrnostní program nebo rezervace si přidáte, jen když je chcete. <a href="cenik.html#doplnky">Doplňky</a></p></article>
@@ -311,7 +324,24 @@
   </div>
 </section>
 
-<section class="section alt">
+<section class="section alt news">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Novinky v pokladně</h2>
+      <p>SuperKasa se vyvíjí každý týden. Tohle přibylo nejnověji – v ceně tarifu.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card"><div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><rect x="2" y="9" width="20" height="8" rx="2"/><path d="M6 14h12v8H6z"/></svg></div><h3>Tisk z mobilu u hlavní kasy</h3><p>Prodáváte na mobilu nebo tabletu a účtenka i cenovky vyjedou z tiskárny u hlavní kasy. Jde to přes internet – mobil nemusí být na stejné Wi-Fi.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-3h14v3"/></svg></div><h3>Tiskárna přidaná za minutu</h3><p>Průvodce sám najde tiskárnu u počítače, v síti nebo přes Bluetooth a USB u tabletu a mobilu, nastaví ji a hned vytiskne zkoušku.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h5"/></svg></div><h3>Faktura na počkání</h3><p>Firma chce fakturu? Napíšete IČO, název, sídlo a DIČ se načtou z ARES a faktura k účtence se vytiskne na A4.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-7"/></svg></div><h3>Podklady pro účetní</h3><p>Tržby po dnech podle sazeb DPH a způsobu platby, oceněný sklad, doklady a uzávěrky – jedním klepnutím do Excelu.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Sklad i pro 50 000 položek</h3><p>Řazení, filtry (dochází, neprodává se, nízká marže), hromadné změny cen i podle marže, pohyby zboží a inventura s mankem v korunách.</p></article>
+      <article class="card"><div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Pokladna v mobilu</h3><p>Na telefonu je nahoře hledání a čtečka, hned pod tím účtenka. Kategorie a zboží otevřete jedním klepnutím, když je potřebujete.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap">
     <div class="section-head">
       <h2>Připraveno na rok 2027</h2>
@@ -326,14 +356,14 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section alt">
   <div class="wrap">
     <div class="section-head">
       <h2>Jak začít</h2>
       <p>Od instalace po ostrý provoz s EET 2.0.</p>
     </div>
     <ol class="steps">
-      <li><strong>Nainstalujete SuperKasu na počítač s Windows</strong>Jeden instalační soubor, bez práv správce a bez dalších programů – <a href="ke-stazeni.html">stáhnout</a>. Nebo si pokladnu <a href="https://app.superkasa.cz/">založíte v prohlížeči</a> bez instalace.</li>
+      <li><strong>Založíte pokladnu v prohlížeči nebo na Windows</strong>Pokladnu <a href="https://app.superkasa.cz/">založíte v prohlížeči</a> bez instalace – na počítači, tabletu i mobilu. Nebo si <a href="ke-stazeni.html">stáhnete program pro Windows</a>: jeden instalační soubor, bez práv správce.</li>
       <li><strong>Vyberete svůj obor a založíte prodavače</strong>Pokladna připraví skupiny, sazby DPH, dlaždice a funkce. Nebo popíšete vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky – zdarma a bez internetu, česky, vietnamsky i anglicky. Všechno uvidíte a upravíte, sazby DPH ověřte s účetní. Prodavači se přihlašují svým PINem.</li>
       <li><strong>10 dní zkoušíte zdarma</strong>Ve zkušebním režimu jsou doklady označené jako zkušební a do ostrého EET se neposílají.</li>
       <li><strong>Přejdete do ostrého provozu</strong>S placenou licencí a vlastním pokladním certifikátem od Finanční správy přepnete pokladnu do ostrého režimu. <a href="eet.html">Jak na EET 2.0</a></li>
@@ -344,9 +374,10 @@
 <section class="section dark cta">
   <div class="wrap">
     <h2>Chcete SuperKasu vyzkoušet?</h2>
-    <p>Zavolejte nám. Poradíme s výběrem tarifu i vybavení a domluvíme se na zkušební instalaci.</p>
+    <p>Prvních 10 dní je zdarma, bez karty a bez závazku. Pokladnu založíte v prohlížeči za pár minut – a když budete chtít, poradíme s tarifem i vybavením po telefonu.</p>
     <div class="actions">
-      <a class="btn btn-gold" href="tel:+420608886882">Zavolat&nbsp;+420&nbsp;608&nbsp;886&nbsp;882</a>
+      <a class="btn btn-gold" href="https://app.superkasa.cz/">Vyzkoušet zdarma</a>
+      <a class="btn btn-light" href="tel:+420608886882">Zavolat&nbsp;+420&nbsp;608&nbsp;886&nbsp;882</a>
       <a class="btn btn-light" href="cenik.html">Zobrazit ceník</a>
     </div>
   </div>

@@ -82,7 +82,8 @@ export const cta = (c, title = c.T.common.ctaTitle, text = c.T.common.ctaText) =
     <h2>${title}</h2>
     <p>${text}</p>
     <div class="actions">
-      <a class="btn btn-gold" href="tel:+420608886882">${c.T.common.callPhone}</a>
+      ${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${c.T.common.registerBtn}</a>` : ""}
+      <a class="btn ${LOGIN_LIVE ? "btn-light" : "btn-gold"}" href="tel:+420608886882">${c.T.common.callPhone}</a>
       <a class="btn btn-light" href="cenik.html">${c.T.common.showPricing}</a>
     </div>
   </div>
@@ -116,7 +117,8 @@ export function page(c, { file, title, desc, current, body, noindex = false, can
   const url = pageUrl(lang, target);
   const alternates = [...LANGS.map((l) => [l, pageUrl(l, target)]), ["x-default", pageUrl("cs", target)]]
     .map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join("\n");
-  const nav = NAV_FILES.map((href, i) => `<a href="${href}"${href === current ? ' aria-current="page"' : ""}>${L.nav[i]}</a>`).join("\n      ");
+  // V hlavičce bez „Úvod“ (vede tam logo) – menu se pak vejde do řádku i na běžném notebooku; v patičce je celé.
+  const nav = NAV_FILES.map((href, i) => (href === "index.html" ? "" : `<a href="${href}"${href === current ? ' aria-current="page"' : ""}>${L.nav[i]}</a>`)).filter(Boolean).join("\n      ");
   const ld = jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, "\\u003c")}</script>\n` : "";
   return `<!DOCTYPE html>
 <html lang="${lang}">

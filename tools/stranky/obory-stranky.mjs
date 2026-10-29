@@ -1,7 +1,7 @@
 // Výběr oboru (velké karty jako v aplikaci) a stránka pro každý obor s náhledem nastavené pokladny.
 // Všechno je v jazyce `c` (c.T = texty stránek, c.D = data oborů v tom jazyce, c.up = cesta ke kořeni webu).
 import { pageUrl } from "./i18n.mjs";
-import { card, icon } from "./parts.mjs";
+import { LOGIN_LIVE, REGISTER_URL, card, icon } from "./parts.mjs";
 import { FEATURE_ORDER } from "./obory.mjs";
 
 /** Cena po česku: 1 450,00 (tisíce oddělené nezlomitelnou mezerou). Náhled pokladny ji ukazuje tak ve všech jazycích. */
@@ -92,7 +92,7 @@ export function oborPage(c, o, footerObory) {
       <h1>${o.title}</h1>
       <p class="lead">${o.desc}</p>
       <div class="actions">
-        <a class="btn btn-primary" href="tel:+420608886882">${L.callPhone}</a>
+        ${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${L.registerBtn}</a>` : `<a class="btn btn-primary" href="tel:+420608886882">${L.callPhone}</a>`}
         <a class="btn btn-ghost" href="cenik.html">${t.pricing}</a>
       </div>
       <p class="hero-note">${t.heroNote}</p>
@@ -172,7 +172,8 @@ ${notes.length ? `
     <h2>${t.ctaTitle}</h2>
     <p>${t.ctaText(o.features.includes("scale"))}</p>
     <div class="actions">
-      <a class="btn btn-gold" href="tel:+420608886882">${L.callPhone}</a>
+      ${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${L.registerBtn}</a>` : ""}
+      <a class="btn ${LOGIN_LIVE ? "btn-light" : "btn-gold"}" href="tel:+420608886882">${L.callPhone}</a>
       <a class="btn btn-light" href="obory.html">${t.backToPicker}</a>
     </div>
   </div>

@@ -1,6 +1,6 @@
 // Úvod a Funkce. Texty jsou ve slovníku c.T.index a c.T.funkce (tools/stranky/texty/<jazyk>.mjs).
 import { LANG_INFO, LANGS, langHref, pageUrl } from "./i18n.mjs";
-import { card, cta } from "./parts.mjs";
+import { LOGIN_LIVE, REGISTER_URL, card, cta } from "./parts.mjs";
 import { oborPicker } from "./obory-stranky.mjs";
 
 /** Karty se stejnými ikonami ve všech jazycích: `icons` = [ikona, třída] ve stejném pořadí jako texty [nadpis, text]. */
@@ -25,7 +25,7 @@ export const index = (c) => {
       name: "SuperKasa",
       url: pageUrl(c.lang, "index.html"),
       applicationCategory: "BusinessApplication",
-      operatingSystem: "Windows 10, Windows 11",
+      operatingSystem: "Windows 10, Windows 11, Web browser (Android, iOS)",
       inLanguage: ["cs", "vi", "en"],
       description: t.ldDesc,
       offers: { "@type": "Offer", price: "199", priceCurrency: "CZK", description: t.ldOffer },
@@ -33,10 +33,20 @@ export const index = (c) => {
     body: `
 <section class="hero hero-pick">
   <div class="wrap">
-    <div class="hero-intro">
-      <span class="eyebrow">${t.eyebrow}</span>
-      <h1>${t.h1}</h1>
-      <p class="lead">${t.lead}</p>
+    <div class="hero-top">
+      <div class="hero-intro">
+        <span class="eyebrow">${t.eyebrow}</span>
+        <h1>${t.h1}</h1>
+        <p class="lead">${t.lead}</p>
+        <div class="actions hero-cta">
+          ${LOGIN_LIVE ? `<a class="btn btn-gold btn-lg" href="${REGISTER_URL}">${t.heroCta[0]}</a>` : ""}
+          <a class="btn btn-ghost btn-lg" href="ke-stazeni.html">${t.heroCta[1]}</a>
+        </div>
+        <p class="small hero-cta-note">${t.heroCtaNote}</p>
+      </div>
+      <ul class="hero-facts">
+        ${t.heroFacts.map((x) => `<li>${x}</li>`).join("\n        ")}
+      </ul>
     </div>
     ${oborPicker(c, { headingLevel: 1 })}
     <p class="hero-links">
@@ -99,7 +109,19 @@ export const index = (c) => {
   </div>
 </section>
 
-<section class="section alt">
+<section class="section alt news">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>${t.newTitle}</h2>
+      <p>${t.newLead}</p>
+    </div>
+    <div class="grid grid-3">
+      ${cards([["printer", "gold"], ["network"], ["report"], ["chart"], ["box"], ["touch", "gold"]], t.newCards)}
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap">
     <div class="section-head">
       <h2>${t.readyTitle}</h2>
@@ -112,7 +134,7 @@ export const index = (c) => {
   </div>
 </section>
 
-<section class="section">
+<section class="section alt">
   <div class="wrap">
     <div class="section-head">
       <h2>${t.stepsTitle}</h2>

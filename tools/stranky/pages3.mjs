@@ -44,7 +44,7 @@ export const op = {
 
     <h2>3. Licence</h2>
     <ol>
-      <li>Poskytovatel uděluje uživateli nevýhradní a nepřevoditelnou licenci k užívání pokladny v rozsahu zvoleného tarifu, pro uživatele uvedeného v licenčním klíči a pro počet zařízení podle tarifu (v každém tarifu 2 zařízení, další podle dohody).</li>
+      <li>Poskytovatel uděluje uživateli nevýhradní a nepřevoditelnou licenci k užívání pokladny v rozsahu zvoleného tarifu, pro uživatele uvedeného v licenčním klíči a pro počet zařízení podle tarifu (v každém tarifu až 10 zařízení, další podle dohody).</li>
       <li>Uživatel nesmí pokladnu ani licenční klíč dále prodávat, pronajímat ani poskytovat třetím osobám a nesmí obcházet technické ochrany licence. Práva, která uživateli přiznává zákon (zejména autorský zákon), tím nejsou dotčena.</li>
       <li>Licence je poskytována ${ph("doplnit územní rozsah – např. pro území České republiky")}.</li>
     </ol>
