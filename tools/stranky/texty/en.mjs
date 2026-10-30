@@ -64,7 +64,7 @@ export default {
     alwaysOn: "Sales, EET 2.0, receipts, cash and closing always work.",
     usefulTitle: "What you'll find useful",
     tariffTitle: (name) => `${name} plan`,
-    tariffLead: "CZK 199 a month or CZK 2,149 a year, always incl. VAT. The first 10 days are free in training mode.",
+    tariffLead: "CZK 199 a month or CZK 2,149 a year, always incl. VAT. The first 10 days are free.",
     onTitle: "Switched on from the start",
     moreTitle: "You can switch on at any time",
     otherTitle: "Other features",
@@ -158,7 +158,7 @@ export default {
     steps: [
       ["Create your till in the browser or on Windows", '<a href="https://app.superkasa.cz/">Create your till in the browser</a> with nothing to install – on a computer, tablet or phone. Or <a href="ke-stazeni.html">download the Windows app</a>: one installation file, no administrator rights.'],
       ["Choose your type of business and add your cashiers", "The POS sets up groups, VAT rates, tiles and features. Or describe in your own words what you sell, and the POS will suggest groups with VAT rates, pictures and first items – free and offline, in Czech, Vietnamese or English. You'll see everything and can edit it; check the VAT rates with your accountant. Cashiers log in with their own PIN."],
-      ["Try it free for 10 days", "In training mode, receipts are marked as training receipts and are not sent to live EET."],
+      ["Try it free for 10 days", "A POS set up in 2026 issues valid receipts straight away. Training mode is optional, for training staff."],
       ["Go live", 'With a paid licence and your own POS certificate from the Financial Administration (Finanční správa), you switch the POS to live mode. <a href="eet.html">Getting started with EET 2.0</a>'],
     ],
   },
@@ -219,7 +219,7 @@ export default {
       ["Cashiers and permissions", "Log in with a PIN, with cashier, manager and owner roles. The change log shows who changed what."],
       ["Customer display", "A second screen facing the customer: the purchase with photos, the QR code for payment, the change due and, between purchases, your promotions."],
       ["Working over the shop network", "The POS runs on one computer in the shop. You open another POS window, Admin or the customer display in a browser on another device on the shop network – even on an older Windows 7 computer. On a new device the owner signs in with e-mail and password, then staff use their PIN."],
-      ["Backups", "The database and product photos are backed up every day, the EET certificate key only in encrypted form. You can send a second copy to a USB drive or to OneDrive. Moving to a new computer – EET certificate included – takes a single file. The browser register is backed up daily on the server and a copy of the backups is downloaded to a computer in the shop."],
+      ["Backups", "The database and product photos are backed up every day, the EET certificate key only in encrypted form. You can send a second copy to a USB drive or to OneDrive. Moving to a new computer – EET certificate included – takes a single file. The browser register is backed up daily on the server."],
       ["Data export", "Export receipts, closings and other data at any time. Export still works after your subscription ends."],
       ["Updates", "The POS detects by itself that a new version is out, and you install it with one button. A purchase in progress is finished before the restart."],
       ["Selling without internet", "The POS runs right on your premises, so selling doesn't depend on the connection. Sales are sent to EET as soon as the internet is back. The browser register keeps selling offline for cash and card – receipts are uploaded once it's back online and go to EET with their original time. QR payments, points and table bills need a connection."],
@@ -291,7 +291,7 @@ export default {
     rentTitle: "Rent or buy",
     rent: ["Rental", "You pay monthly (CZK 199) or yearly (CZK 2,149), always incl. VAT. The licence is valid until the paid-up date, it does not renew automatically, and you get updates for the whole rental period."],
     buy: ["One-off purchase", "You pay for the POS once and use it with no time limit. Updates are included until a date you choose when you buy. Price <strong>on request</strong>."],
-    trial: ["10-day free trial", "A new POS runs free for 10 days in training mode. You can sell, print and set up everything you need, but receipts are marked as training receipts and <strong>are not sent to live EET</strong>. Live EET only works with a paid licence.", "After the trial ends, the POS shows warnings for another 7 days; then, without a licence, it stops new sales. Your data stays."],
+    trial: ["10-day free trial", "A new POS runs free for 10 days. You can sell, print and set up everything you need. A POS set up in 2026 issues valid receipts straight away. Training mode is there for training staff. Live EET only works with a paid licence.", "After the trial ends, the POS shows warnings for another 7 days; then, without a licence, it stops new sales. Your data stays."],
     ends: ["When payment ends", "Sales and EET keep running for another <strong>30 days</strong> with a clear warning. Then new sales stop, but receipts, closings, refunds and data export keep working. Your data stays with you."],
     faqTitle: "Frequently asked questions",
     faq: [
@@ -325,7 +325,7 @@ export default {
     ],
     modesTitle: "Training and live mode",
     modes: [
-      "<strong>Training mode</strong> – for the first 10 days and until you switch over. Receipts are marked as training receipts and are never sent to live EET.",
+      "<strong>Training mode</strong> – optional, for training staff. Receipts are marked as training receipts and are never sent to live EET.",
       "<strong>Test environment</strong> – you can try the EET connection in the Financial Administration's test environment (Playground) with a test certificate.",
       "<strong>Live mode</strong> – only with a paid licence and your own POS certificate. Before switching, you go through a checklist (company details, certificate, verified connection).",
     ],
@@ -448,7 +448,7 @@ export default {
     ],
     gdprSummary: [
       "The website uses no cookies or tracking tools.",
-      "In the Windows version the data is on your computer and the maker has no access to it; it sends sales directly to the Financial Administration's EET system. With the browser register the shop's data is on the SuperKasa server, the server sends sales to EET and backs the data up daily (a copy is downloaded to a computer in the shop).",
+      "In the Windows version the data is on your computer and the maker has no access to it; it sends sales directly to the Financial Administration's EET system. With the browser register the shop's data is on the SuperKasa server, the server sends sales to EET and backs the data up daily.",
       "When a product name is looked up, the barcode is sent. If you switch on contributing, the name, pack size, group and VAT rate are sent too – never prices or sales.",
       "For access to, correction or deletion of your data, you can use the contact details given on the website.",
     ],

@@ -64,7 +64,7 @@ export default {
     alwaysOn: "Bán hàng, EET 2.0, hóa đơn, tiền mặt và chốt ca luôn hoạt động.",
     usefulTitle: "Những gì sẽ có ích cho bạn",
     tariffTitle: (name) => `Gói ${name}`,
-    tariffLead: "199 Kč/tháng hoặc 2 149 Kč/năm, luôn đã gồm thuế DPH. 10 ngày đầu miễn phí ở chế độ thử.",
+    tariffLead: "199 Kč/tháng hoặc 2 149 Kč/năm, luôn đã gồm thuế DPH. 10 ngày đầu miễn phí.",
     onTitle: "Bật sẵn ngay khi chạy",
     moreTitle: "Có thể bật bất cứ lúc nào",
     otherTitle: "Chức năng khác",
@@ -158,7 +158,7 @@ export default {
     steps: [
       ["Tạo máy tính tiền trên trình duyệt hoặc trên Windows", '<a href="https://app.superkasa.cz/">Tạo máy tính tiền trên trình duyệt</a>, không cần cài đặt – trên máy tính, máy tính bảng và điện thoại. Hoặc <a href="ke-stazeni.html">tải chương trình cho Windows</a>: một tệp cài đặt, không cần quyền quản trị.'],
       ["Chọn ngành hàng và tạo nhân viên", "Máy tính tiền chuẩn bị nhóm hàng, thuế suất DPH, ô hàng và chức năng. Hoặc bạn tự mô tả mình bán gì, máy sẽ gợi ý nhóm hàng kèm DPH, hình ảnh và những mặt hàng đầu tiên – miễn phí, không cần internet, bằng tiếng Séc, tiếng Việt hoặc tiếng Anh. Bạn xem và sửa được mọi thứ; hãy kiểm tra thuế suất DPH với kế toán. Nhân viên đăng nhập bằng mã PIN riêng."],
-      ["Dùng thử miễn phí 10 ngày", "Ở chế độ thử, hóa đơn được đánh dấu là hóa đơn thử và không gửi lên EET thật."],
+      ["Dùng thử miễn phí 10 ngày", "Máy tính tiền tạo trong năm 2026 xuất hóa đơn hợp lệ ngay. Chế độ thử là tùy chọn, dùng để đào tạo nhân viên."],
       ["Chuyển sang vận hành thật", 'Khi có giấy phép trả phí và chứng chỉ máy tính tiền riêng do Finanční správa cấp, bạn chuyển máy sang chế độ thật. <a href="eet.html">Hướng dẫn EET 2.0</a>'],
     ],
   },
@@ -219,7 +219,7 @@ export default {
       ["Nhân viên và quyền hạn", "Đăng nhập bằng mã PIN, vai trò nhân viên, quản lý và chủ cửa hàng. Nhật ký thay đổi cho biết ai đã sửa gì."],
       ["Màn hình khách hàng", "Màn hình thứ hai quay về phía khách: đơn hàng có ảnh, mã QR để thanh toán, tiền thối và chương trình khuyến mãi của bạn giữa các lượt mua."],
       ["Chạy trong mạng cửa hàng", "Máy tính tiền chạy trên một máy tính trong cửa hàng. Cửa sổ máy tính tiền thứ hai, phần Quản lý hoặc màn hình khách hàng thì mở bằng trình duyệt trên thiết bị khác trong mạng cửa hàng – kể cả máy tính cũ chạy Windows 7. Trên thiết bị mới, chủ đăng nhập bằng e-mail và mật khẩu, sau đó nhân viên dùng mã PIN."],
-      ["Sao lưu", "Cơ sở dữ liệu và ảnh hàng được sao lưu mỗi ngày, khóa chứng chỉ EET chỉ ở dạng mã hóa. Bản sao thứ hai có thể lưu vào ổ USB hoặc OneDrive. Chuyển sang máy tính mới – kể cả chứng chỉ EET – chỉ cần một tệp. Máy tính tiền trên trình duyệt được sao lưu hằng ngày trên máy chủ và bản sao được tải về một máy tính ở cửa hàng."],
+      ["Sao lưu", "Cơ sở dữ liệu và ảnh hàng được sao lưu mỗi ngày, khóa chứng chỉ EET chỉ ở dạng mã hóa. Bản sao thứ hai có thể lưu vào ổ USB hoặc OneDrive. Chuyển sang máy tính mới – kể cả chứng chỉ EET – chỉ cần một tệp. Máy tính tiền trên trình duyệt được sao lưu hằng ngày trên máy chủ."],
       ["Xuất dữ liệu", "Bạn xuất hóa đơn, chốt ca và các dữ liệu khác bất cứ lúc nào. Xuất dữ liệu vẫn dùng được sau khi hết thuê bao."],
       ["Cập nhật", "Máy tính tiền tự phát hiện có phiên bản mới, bạn cài bằng một nút bấm. Đơn hàng đang bán dở sẽ được hoàn tất trước khi khởi động lại."],
       ["Bán hàng cả khi không có internet", "Máy tính tiền chạy ngay tại cửa hàng của bạn nên việc bán hàng không phụ thuộc vào mạng. Doanh thu sẽ gửi lên EET ngay khi có internet lại. Máy tính tiền trên trình duyệt vẫn bán khi mất mạng bằng tiền mặt và thẻ – hóa đơn được tải lên khi có mạng lại và gửi EET với thời gian gốc. Thanh toán QR, điểm thưởng và hóa đơn bàn cần có mạng."],
@@ -291,7 +291,7 @@ export default {
     rentTitle: "Thuê hay mua",
     rent: ["Thuê", "Trả theo tháng (199 Kč) hoặc theo năm (2 149 Kč), luôn đã gồm thuế DPH. Giấy phép có hiệu lực đến ngày đã trả, không tự động gia hạn, và bạn được cập nhật trong suốt thời gian thuê."],
     buy: ["Mua một lần", "Trả tiền một lần và dùng máy tính tiền không giới hạn thời gian. Cập nhật đã gồm trong giá cho đến ngày bạn chọn khi mua. Giá <strong>liên hệ</strong>."],
-    trial: ["Dùng thử miễn phí 10 ngày", "Máy tính tiền mới chạy miễn phí 10 ngày ở chế độ thử. Bạn có thể bán hàng, in và cài đặt mọi thứ cần thiết, nhưng hóa đơn được đánh dấu là hóa đơn thử và <strong>không gửi lên EET thật</strong>. EET thật chỉ hoạt động khi có giấy phép trả phí.", "Hết thời gian dùng thử, máy tính tiền còn nhắc thêm 7 ngày, sau đó nếu không có giấy phép sẽ dừng bán hàng mới. Dữ liệu vẫn được giữ."],
+    trial: ["Dùng thử miễn phí 10 ngày", "Máy tính tiền mới chạy miễn phí 10 ngày. Bạn có thể bán hàng, in và cài đặt mọi thứ cần thiết. Máy tạo trong năm 2026 xuất hóa đơn hợp lệ ngay. Chế độ thử dùng để đào tạo nhân viên. EET thật chỉ hoạt động khi có giấy phép trả phí.", "Hết thời gian dùng thử, máy tính tiền còn nhắc thêm 7 ngày, sau đó nếu không có giấy phép sẽ dừng bán hàng mới. Dữ liệu vẫn được giữ."],
     ends: ["Khi hết hạn thanh toán", "Bán hàng và EET vẫn chạy thêm <strong>30 ngày</strong> kèm thông báo nhắc rõ ràng. Sau đó việc bán hàng mới dừng lại, nhưng hóa đơn, chốt ca, trả hàng và xuất dữ liệu vẫn hoạt động. Dữ liệu vẫn nằm ở chỗ bạn."],
     faqTitle: "Câu hỏi thường gặp",
     faq: [
@@ -325,7 +325,7 @@ export default {
     ],
     modesTitle: "Chế độ thử và chế độ thật",
     modes: [
-      "<strong>Chế độ thử</strong> – 10 ngày đầu và cho đến khi bạn chuyển chế độ. Hóa đơn được đánh dấu là hóa đơn thử và không bao giờ gửi lên EET thật.",
+      "<strong>Chế độ thử</strong> – tùy chọn, dùng để đào tạo nhân viên. Hóa đơn được đánh dấu là hóa đơn thử và không bao giờ gửi lên EET thật.",
       "<strong>Môi trường thử</strong> – bạn có thể thử kết nối EET trong môi trường thử của Finanční správa bằng chứng chỉ thử.",
       "<strong>Chế độ thật</strong> – chỉ khi có giấy phép trả phí và chứng chỉ máy tính tiền riêng. Trước khi chuyển, bạn đi qua danh sách kiểm tra (thông tin doanh nghiệp, chứng chỉ, kết nối đã kiểm tra).",
     ],
@@ -448,7 +448,7 @@ export default {
     ],
     gdprSummary: [
       "Trang web không dùng cookie hay công cụ theo dõi.",
-      "Với bản cho Windows, dữ liệu nằm trên máy tính của bạn và nhà sản xuất không truy cập được; doanh thu gửi thẳng lên EET của Finanční správa (Cục Thuế Séc). Với máy tính tiền trên trình duyệt, dữ liệu cửa hàng nằm trên máy chủ SuperKasa, máy chủ gửi doanh thu lên EET và sao lưu dữ liệu hằng ngày (bản sao được tải về một máy tính ở cửa hàng).",
+      "Với bản cho Windows, dữ liệu nằm trên máy tính của bạn và nhà sản xuất không truy cập được; doanh thu gửi thẳng lên EET của Finanční správa (Cục Thuế Séc). Với máy tính tiền trên trình duyệt, dữ liệu cửa hàng nằm trên máy chủ SuperKasa, máy chủ gửi doanh thu lên EET và sao lưu dữ liệu hằng ngày.",
       "Khi tra tên hàng, máy gửi mã vạch. Nếu bạn bật đóng góp thì gửi thêm tên, quy cách đóng gói, nhóm hàng và DPH – không bao giờ gửi giá hay doanh số.",
       "Để xem, sửa hoặc xóa dữ liệu, bạn có thể liên hệ theo thông tin trên trang web.",
     ],

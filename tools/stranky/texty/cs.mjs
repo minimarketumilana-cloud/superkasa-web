@@ -66,7 +66,7 @@ export default {
     alwaysOn: "Prodej, EET 2.0, účtenky, hotovost a uzávěrka fungují vždy.",
     usefulTitle: "Co se vám bude hodit",
     tariffTitle: (name) => `Tarif ${name}`,
-    tariffLead: "199 Kč měsíčně nebo 2 149 Kč ročně, vždy včetně DPH. Prvních 10 dní zdarma ve zkušebním režimu.",
+    tariffLead: "199 Kč měsíčně nebo 2 149 Kč ročně, vždy včetně DPH. Prvních 10 dní zdarma.",
     onTitle: "Zapnuto hned po spuštění",
     moreTitle: "Můžete kdykoli zapnout",
     otherTitle: "Další funkce",
@@ -160,7 +160,7 @@ export default {
     steps: [
       ["Založíte pokladnu v prohlížeči nebo na Windows", 'Pokladnu <a href="https://app.superkasa.cz/">založíte v prohlížeči</a> bez instalace – na počítači, tabletu i mobilu. Nebo si <a href="ke-stazeni.html">stáhnete program pro Windows</a>: jeden instalační soubor, bez práv správce.'],
       ["Vyberete svůj obor a založíte prodavače", "Pokladna připraví skupiny, sazby DPH, dlaždice a funkce. Nebo popíšete vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky – zdarma a bez internetu, česky, vietnamsky i anglicky. Všechno uvidíte a upravíte, sazby DPH ověřte s účetní. Prodavači se přihlašují svým PINem."],
-      ["10 dní zkoušíte zdarma", "Ve zkušebním režimu jsou doklady označené jako zkušební a do ostrého EET se neposílají."],
+      ["10 dní zkoušíte zdarma", "Pokladna založená v roce 2026 vydává rovnou platné doklady. Zkušební režim je volitelný, pro zaškolení prodavačů."],
       ["Přejdete do ostrého provozu", 'S placenou licencí a vlastním pokladním certifikátem od Finanční správy přepnete pokladnu do ostrého režimu. <a href="eet.html">Jak na EET 2.0</a>'],
     ],
   },
@@ -221,7 +221,7 @@ export default {
       ["Prodavači a oprávnění", "Přihlášení PINem, role prodavač, vedoucí a majitel. Záznam změn ukáže, kdo co upravil."],
       ["Zákaznický displej", "Druhá obrazovka otočená k zákazníkovi: nákup s fotkami, QR kód k platbě, vrácená částka a mezi nákupy vaše akce."],
       ["Provoz v síti obchodu", "Pokladna běží na jednom počítači v obchodě. Další okno pokladny, správu nebo zákaznický displej otevřete v prohlížeči na jiném zařízení v síti obchodu – i na starším počítači s Windows 7. Na novém zařízení se majitel přihlásí e-mailem a heslem, prodavači pak PINem."],
-      ["Zálohy", "Databáze a fotky zboží se zálohují každý den, klíč certifikátu EET jen zašifrovaně. Druhou kopii můžete posílat na USB disk nebo do OneDrive. Přechod na nový počítač – i s certifikátem EET – zvládnete jedním souborem. Pokladna v prohlížeči se zálohuje denně na serveru a kopie záloh se stahuje na počítač v obchodě."],
+      ["Zálohy", "Databáze a fotky zboží se zálohují každý den, klíč certifikátu EET jen zašifrovaně. Druhou kopii můžete posílat na USB disk nebo do OneDrive. Přechod na nový počítač – i s certifikátem EET – zvládnete jedním souborem. Pokladna v prohlížeči se zálohuje denně na serveru."],
       ["Export dat", "Doklady, uzávěrky a další data kdykoli vyexportujete. Export funguje i po skončení předplatného."],
       ["Aktualizace", "Pokladna sama zjistí, že vyšla nová verze, a nainstalujete ji jedním tlačítkem. Rozpracovaný nákup se před restartem dokončí."],
       ["Prodej i bez internetu", "Pokladna běží přímo u vás, takže prodej nezávisí na připojení. Tržby do EET se odešlou, jakmile se internet vrátí. Pokladna v prohlížeči prodává bez internetu dál hotově i kartou – účtenky se po připojení nahrají a do EET jdou s původním časem. QR platba, body a účty ze stolu potřebují připojení."],
@@ -293,7 +293,7 @@ export default {
     rentTitle: "Pronájem, nebo koupě",
     rent: ["Pronájem", "Platíte měsíčně (199 Kč) nebo ročně (2 149 Kč), vždy včetně DPH. Licence platí do zaplaceného data, automaticky se neprodlužuje a aktualizace máte po celou dobu pronájmu."],
     buy: ["Jednorázová koupě", "Pokladnu zaplatíte jednou a používáte ji bez časového omezení. Aktualizace jsou v ceně do data, které si zvolíte při koupi. Cena <strong>na dotaz</strong>."],
-    trial: ["10 dní zkouška zdarma", "Nová pokladna běží 10 dní zdarma ve zkušebním režimu. Můžete prodávat, tisknout a nastavit si všechno potřebné, doklady jsou ale označené jako zkušební a <strong>do ostrého EET se neposílají</strong>. Ostré EET funguje jen s placenou licencí.", "Po skončení zkoušky pokladna ještě 7 dní upozorňuje, potom bez licence nový prodej zastaví. Data zůstávají."],
+    trial: ["10 dní zkouška zdarma", "Nová pokladna běží 10 dní zdarma. Můžete prodávat, tisknout a nastavit si všechno potřebné. Pokladna založená v roce 2026 vydává rovnou platné doklady. Pro zaškolení prodavačů je k dispozici zkušební režim. Ostré EET funguje jen s placenou licencí.", "Po skončení zkoušky pokladna ještě 7 dní upozorňuje, potom bez licence nový prodej zastaví. Data zůstávají."],
     ends: ["Když platba skončí", "Prodej i EET běží ještě <strong>30 dní</strong> s výrazným upozorněním. Potom se zastaví nový prodej, ale doklady, uzávěrky, vratky a export dat fungují dál. Vaše data zůstávají u vás."],
     faqTitle: "Časté otázky",
     faq: [
@@ -327,7 +327,7 @@ export default {
     ],
     modesTitle: "Zkušební a ostrý režim",
     modes: [
-      "<strong>Zkušební režim</strong> – prvních 10 dní a do přepnutí. Doklady jsou označené jako zkušební a do ostrého EET se nikdy neposílají.",
+      "<strong>Zkušební režim</strong> – volitelný, pro zaškolení prodavačů. Doklady jsou označené jako zkušební a do ostrého EET se nikdy neposílají.",
       "<strong>Testovací prostředí</strong> – spojení s EET si můžete vyzkoušet v testovacím prostředí Finanční správy s testovacím certifikátem.",
       "<strong>Ostrý režim</strong> – jen s placenou licencí a vlastním pokladním certifikátem. Před přepnutím projdete kontrolní seznam (údaje firmy, certifikát, ověřené spojení).",
     ],
@@ -452,7 +452,7 @@ export default {
     ],
     gdprSummary: [
       "Web nepoužívá cookies ani sledovací nástroje.",
-      "V pokladně pro Windows jsou data na vašem počítači a výrobce k nim nemá přístup; tržby posílá přímo do EET Finanční správy. U pokladny v prohlížeči jsou data obchodu na serveru SuperKasa, server posílá tržby do EET a data denně zálohuje (kopie se stahuje na počítač v obchodě).",
+      "V pokladně pro Windows jsou data na vašem počítači a výrobce k nim nemá přístup; tržby posílá přímo do EET Finanční správy. U pokladny v prohlížeči jsou data obchodu na serveru SuperKasa, server posílá tržby do EET a data denně zálohuje.",
       "Při dohledání názvu zboží se posílá čárový kód. Když zapnete přispívání, i název, balení, skupina a DPH – nikdy ceny ani prodeje.",
       "Na přístup, opravu nebo výmaz údajů se můžete obrátit na kontakt uvedený na webu.",
     ],

@@ -51,7 +51,7 @@ export const op = {
 
     <h2>4. Zkušební doba</h2>
     <ol>
-      <li>Nová instalace běží 10 dní zdarma ve zkušebním režimu. Doklady ve zkušebním režimu jsou označené jako zkušební a do ostrého systému EET 2.0 se neodesílají. Ostrý režim EET je dostupný jen s placenou licencí.</li>
+      <li>Nová instalace běží 10 dní zdarma. Pokladna založená v roce 2026 vydává rovnou platné doklady. Zkušební režim je volitelný; doklady v něm jsou označené jako zkušební a do ostrého systému EET 2.0 se neodesílají. Ostrý režim EET je dostupný jen s placenou licencí.</li>
       <li>Po skončení zkušební doby pokladna ještě 7 dní upozorňuje; poté bez licence nový prodej zastaví. Data a jejich export zůstávají uživateli k dispozici.</li>
       <li>Zkušební doba je bezplatná a nezavazuje uživatele k další objednávce.</li>
     </ol>
@@ -68,7 +68,7 @@ export const op = {
     <ol>
       <li>Pronájem platí do data uvedeného v licenčním klíči a automaticky se neprodlužuje. Pokračuje zaplacením dalšího období, po kterém uživatel dostane nový licenční klíč.</li>
       <li>Když licence skončí, pokladna ještě 30 dní umožňuje prodej i odesílání do EET a zobrazuje upozornění. Poté se zastaví nový prodej. Prohlížení dokladů, uzávěrky, vratky a export dat zůstávají dostupné.</li>
-      <li>U pokladny nainstalované na počítači uživatele jsou data uložená na tomto počítači; poskytovatel je nemaže a nemá k nim přístup. U pokladny v prohlížeči (SuperKasa Cloud) jsou data uložená na serveru poskytovatele, denně se zálohují a kopie záloh se stahuje na počítač v obchodě. ${ph("doplnit podmínky pro SuperKasa Cloud a smlouvu o zpracování osobních údajů – po právní kontrole")}</li>
+      <li>U pokladny nainstalované na počítači uživatele jsou data uložená na tomto počítači; poskytovatel je nemaže a nemá k nim přístup. U pokladny v prohlížeči (SuperKasa Cloud) jsou data uložená na serveru poskytovatele a denně se tam zálohují. ${ph("doplnit podmínky pro SuperKasa Cloud a smlouvu o zpracování osobních údajů – po právní kontrole")}</li>
       <li>Při jednorázové koupi je licence časově neomezená. Verze vydané po datu „aktualizace do“ uvedeném v licenci nejsou v ceně. ${ph("doplnit podmínky prodloužení aktualizací")}</li>
     </ol>
 
@@ -149,7 +149,7 @@ export const gdpr = {
       <li>Platí pro pokladnu nainstalovanou na počítači uživatele: doklady, zboží, prodavači, uzávěrky a další data pokladny jsou uložené na počítači uživatele v jeho provozovně. Správce k nim nemá přístup. Za osobní údaje, které uživatel do pokladny ukládá, odpovídá uživatel jako jejich správce.</li>
       <li>Pokladna pro Windows odesílá tržby přímo do systému EET 2.0 Finanční správy, ne přes servery SuperKasa. U pokladny v prohlížeči je odesílá server SuperKasa.</li>
       <li>Licenční klíč pokladna ověřuje bez internetu.</li>
-      <li>Pokladna v prohlížeči (SuperKasa Cloud): doklady, zboží, prodavači a další data obchodu jsou uložená na serveru SuperKasa, denně se zálohují a kopie záloh se stahuje na počítač v obchodě. Majitel se přihlašuje e-mailem a heslem. ${ph("doplnit roli správce a zpracovatele, smlouvu o zpracování, umístění serveru a dobu uchování – po právní kontrole")}</li>
+      <li>Pokladna v prohlížeči (SuperKasa Cloud): doklady, zboží, prodavači a další data obchodu jsou uložená na serveru SuperKasa a denně se tam zálohují. Majitel se přihlašuje e-mailem a heslem. ${ph("doplnit roli správce a zpracovatele, smlouvu o zpracování, umístění serveru a dobu uchování – po právní kontrole")}</li>
     </ul>
 
     <h2>5. Kdy se pokladna připojuje k internetu</h2>
@@ -160,7 +160,7 @@ export const gdpr = {
     </ul>
 
     <h2>6. Příjemci a předání do zahraničí</h2>
-    <p>Údaje mohou zpracovávat dodavatelé správce: poskytovatel hostingu a serveru ${ph("doplnit")}, účetní ${ph("doplnit")}. Údaje nepředáváme mimo Evropskou unii ${ph("ověřit podle zvoleného hostingu")}.</p>
+    <p>Údaje mohou zpracovávat dodavatelé správce: poskytovatel hostingu a serveru ${ph("doplnit")}, účetní ${ph("doplnit")}. Tento web běží na službě GitHub Pages (GitHub, Inc., USA), technické údaje návštěvníků (například IP adresa) se proto mohou dostat mimo Evropskou unii ${ph("ověřit právní základ předání")}.</p>
 
     <h2>7. Vaše práva</h2>
     <p>Máte právo na přístup k osobním údajům, jejich opravu, výmaz, omezení zpracování, přenositelnost a právo vznést námitku proti zpracování na základě oprávněného zájmu. Žádost pošlete na kontakt výše. Stížnost můžete podat u Úřadu pro ochranu osobních údajů (<a href="https://uoou.gov.cz/" rel="noopener">uoou.gov.cz</a>).</p>
