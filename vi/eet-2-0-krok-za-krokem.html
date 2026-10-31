@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-pfgOMgfVZwm2ODyms34QYW9h8EwicylhV77q5LHK8c0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://app.superkasa.cz; base-uri 'self'; form-action 'self' https://app.superkasa.cz">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EET 2.0 từng bước: DIS+ và chứng chỉ | SuperKasa</title>
+<meta name="description" content="Các bước làm EET 2.0: đăng nhập DIS+, tạo đơn vị ghi nhận, chứng chỉ .p12 và mật khẩu, tải lên máy tính tiền, thử bằng chế độ kiểm tra (ověřovací mód).">
+<link rel="canonical" href="https://superkasa.cz/vi/eet-2-0-krok-za-krokem.html">
+<link rel="alternate" hreflang="cs" href="https://superkasa.cz/eet-2-0-krok-za-krokem.html">
+<link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/eet-2-0-krok-za-krokem.html">
+<link rel="alternate" hreflang="en" href="https://superkasa.cz/en/eet-2-0-krok-za-krokem.html">
+<link rel="alternate" hreflang="x-default" href="https://superkasa.cz/eet-2-0-krok-za-krokem.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SuperKasa">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:locale:alternate" content="cs_CZ">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:title" content="EET 2.0 từng bước: DIS+ và chứng chỉ | SuperKasa">
+<meta property="og:description" content="Các bước làm EET 2.0: đăng nhập DIS+, tạo đơn vị ghi nhận, chứng chỉ .p12 và mật khẩu, tải lên máy tính tiền, thử bằng chế độ kiểm tra (ověřovací mód).">
+<meta property="og:url" content="https://superkasa.cz/vi/eet-2-0-krok-za-krokem.html">
+<meta property="og:image" content="https://superkasa.cz/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SuperKasa – máy tính tiền cho cửa hàng, quán ăn và dịch vụ">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5c1a46">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../css/style.css">
+<script>document.documentElement.className+=" js"</script>
+<script src="../js/site.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"EET 2.0 từng bước: DIS+, đơn vị ghi nhận và chứng chỉ máy tính tiền","description":"Các bước làm EET 2.0: đăng nhập DIS+, tạo đơn vị ghi nhận, chứng chỉ .p12 và mật khẩu, tải lên máy tính tiền, thử bằng chế độ kiểm tra (ověřovací mód).","inLanguage":"vi","url":"https://superkasa.cz/vi/eet-2-0-krok-za-krokem.html","mainEntityOfPage":"https://superkasa.cz/vi/eet-2-0-krok-za-krokem.html","datePublished":"2026-10-31","dateModified":"2026-10-31","image":"https://superkasa.cz/img/og.png","author":{"@type":"Organization","name":"SuperKasa","url":"https://superkasa.cz"},"publisher":{"@type":"Organization","name":"SuperKasa","url":"https://superkasa.cz","logo":{"@type":"ImageObject","url":"https://superkasa.cz/img/logo.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SuperKasa","item":"https://superkasa.cz/vi/"},{"@type":"ListItem","position":2,"name":"Hướng dẫn","item":"https://superkasa.cz/vi/navody.html"},{"@type":"ListItem","position":3,"name":"EET 2.0 từng bước: DIS+, đơn vị ghi nhận và chứng chỉ máy tính tiền","item":"https://superkasa.cz/vi/eet-2-0-krok-za-krokem.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Chứng chỉ máy tính tiền giá bao nhiêu?","acceptedAnswer":{"@type":"Answer","text":"Không mất tiền. Bạn tự tạo chứng chỉ miễn phí qua DIS+ trên cổng MOJE daně."}},{"@type":"Question","name":"Hai máy tính tiền cần mấy chứng chỉ?","acceptedAnswer":{"@type":"Answer","text":"Một là đủ. Một chứng chỉ dùng được cho một hoặc nhiều thiết bị tính tiền. Nếu muốn tách riêng các máy, bạn cũng có thể tạo nhiều chứng chỉ."}},{"@type":"Question","name":"Tôi mất mật khẩu chứng chỉ. Phải làm gì?","acceptedAnswer":{"@type":"Answer","text":"Sau khi đã xác nhận tải, bạn không lấy lại được mật khẩu hay tệp. Hãy tạo chứng chỉ mới và tải lên máy tính tiền. Nếu chứng chỉ cũ có nguy cơ bị lạm dụng, hãy vô hiệu hóa nó trong ứng dụng Správa pokladních certifikátů EET (quản lý chứng chỉ máy tính tiền EET)."}},{"@type":"Question","name":"Chứng chỉ máy tính tiền có hiệu lực bao lâu?","acceptedAnswer":{"@type":"Answer","text":"Theo chính sách chứng chỉ (certifikační politika) là 366 ngày. Bạn sẽ nhận e-mail báo sắp hết hạn, nếu đã điền e-mail khi tạo chứng chỉ."}},{"@type":"Question","name":"Tôi có phải tạo đơn vị ghi nhận cho cửa hàng online không?","acceptedAnswer":{"@type":"Answer","text":"Có, nếu bạn có doanh thu phải ghi nhận ở một đơn vị khác, ví dụ ở cửa hàng. Nếu chỉ bán qua cửa hàng online thanh toán qua mạng và không có doanh thu phải ghi nhận nào, nghĩa vụ khai báo không áp dụng cho bạn."}},{"@type":"Question","name":"Người nước ngoài có bắt buộc phải có danh tính ngân hàng (bankovní identita) không?","acceptedAnswer":{"@type":"Answer","text":"Không. Bạn có thể xin thông tin truy cập từ Finanční správa. Trong vòng 30 ngày kể từ ngày nộp đơn, bạn phải đến trực tiếp chi nhánh của finanční úřad (cơ quan thuế) và mang theo giấy tờ tùy thân."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#obsah">Chuyển đến nội dung</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="SuperKasa – trang chủ"><img src="../img/logo.png" alt="SuperKasa" width="200" height="40"></a>
+    <nav class="langs" aria-label="Ngôn ngữ trang web"><a href="../eet-2-0-krok-za-krokem.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="../vi/eet-2-0-krok-za-krokem.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="../en/eet-2-0-krok-za-krokem.html" hreflang="en" lang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
+    <a class="login-top" href="prihlaseni.html" aria-label="Đăng nhập vào máy tính tiền" title="Đăng nhập vào máy tính tiền"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Đăng nhập</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
+    <nav class="nav" id="nav" aria-label="Menu chính">
+      <a href="obory.html">Dành cho ai</a>
+      <a href="funkce.html">Chức năng</a>
+      <a href="cenik.html">Bảng giá</a>
+      <a href="eet.html">EET 2.0</a>
+      <a href="navody.html" aria-current="page">Hướng dẫn</a>
+      <a href="ke-stazeni.html">Tải về</a>
+      <a href="kontakt.html">Liên hệ</a>
+      <a class="btn btn-primary nav-price" href="cenik.html">199 Kč / tháng</a>
+      <a class="btn btn-gold" href="https://app.superkasa.cz/">Dùng thử miễn phí</a>
+    </nav>
+  </div>
+</header>
+<main id="obsah">
+<section class="article-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Đường dẫn trang"><a href="navody.html">Hướng dẫn</a><span aria-hidden="true">/</span><span>Từng bước</span></nav>
+    <h1>EET 2.0 từng bước: DIS+, đơn vị ghi nhận và chứng chỉ máy tính tiền</h1>
+    <p class="lead">Để ghi nhận doanh thu, bạn cần quyền truy cập DIS+, một đơn vị ghi nhận (evidenční jednotka) đã tạo và chứng chỉ máy tính tiền (pokladní certifikát). Từ ngày 1 tháng 11 năm 2026, bạn làm online trên cổng MOJE daně và chứng chỉ miễn phí.</p>
+    <p class="article-meta">Cập nhật ngày 31 tháng 10, 2026 · 9 phút đọc</p>
+  </div>
+</section>
+<section class="section article-wrap">
+  <div class="wrap article-grid">
+    <aside class="guide-toc" aria-label="Trong hướng dẫn này">
+      <b>Trong hướng dẫn này</b>
+      <ol>
+        <li><a href="#prehled-kroku">Sáu bước theo đúng thứ tự này</a></li>
+        <li><a href="#prihlaseni-dis">Bước 1: đăng nhập DIS+ trên mojedane.gov.cz</a></li>
+        <li><a href="#aktivace-eet">Bước 2: kích hoạt EET trong DIS+</a></li>
+        <li><a href="#evidencni-jednotka">Bước 3: đơn vị ghi nhận và các loại đơn vị</a></li>
+        <li><a href="#pokladni-certifikat">Bước 4: chứng chỉ máy tính tiền, mật khẩu và tệp .p12</a></li>
+        <li><a href="#nahrani-do-pokladny">Bước 5: tải chứng chỉ lên máy tính tiền</a></li>
+        <li><a href="#zkouska-nanecisto">Bước 6: thử bằng chế độ kiểm tra (ověřovací mód)</a></li>
+        <li><a href="#do-1-ledna">Cần làm gì trước ngày 1 tháng 1 năm 2027</a></li>
+        <li><a href="#kontrolni-seznam">Danh sách kiểm tra</a></li>
+        <li><a href="#otazky">Câu hỏi thường gặp</a></li>
+        <li><a href="#zdroje">Nguồn</a></li>
+      </ol>
+    </aside>
+    <article class="prose">
+      <section id="prehled-kroku">
+<h2>Sáu bước theo đúng thứ tự này</h2>
+<p>Trước tiên bạn tạo đơn vị ghi nhận (evidenční jednotka), sau đó mới tạo chứng chỉ máy tính tiền (pokladní certifikát). Không đổi được thứ tự này. Luật quy định như vậy, và DIS+ (hộp thư thuế điện tử) chỉ hiện phần chứng chỉ sau khi bạn đã tạo đơn vị đầu tiên.</p>
+<ol class="steps">
+  <li>Đăng nhập vào DIS+ trên cổng MOJE daně.</li>
+  <li>Kích hoạt EET trong DIS+.</li>
+  <li>Tạo đơn vị ghi nhận.</li>
+  <li>Tạo chứng chỉ máy tính tiền, lưu tệp .p12 và mật khẩu.</li>
+  <li>Tải chứng chỉ lên máy tính tiền.</li>
+  <li>Thử kết nối mà chưa ghi nhận thật.</li>
+</ol>
+<aside class="note"><p>Ai dùng ứng dụng nhà nước MOJE eet thì không phải làm bước 4 và 5. Theo Finanční správa (Cục Thuế Séc), sau khi ghép nối với DIS+, ứng dụng tự lo chứng chỉ. So sánh có trong bài <a href="moje-eet-nebo-pokladna.html">MOJE eet hay hệ thống máy tính tiền</a>.</p></aside>
+</section>
+<section id="prihlaseni-dis">
+<h2>Bước 1: đăng nhập DIS+ trên mojedane.gov.cz</h2>
+<p>DIS+ là viết tắt của daňová informační schránka plus, tức hộp thư thuế điện tử. Đây là cơ quan thuế trực tuyến của Finanční správa. Hãy mở <a href="https://mojedane.gov.cz" rel="noopener">mojedane.gov.cz</a> và bấm vào ô Online finanční úřad (cơ quan thuế trực tuyến). Có ba cách đăng nhập:</p>
+<ul>
+  <li>bằng danh tính công dân (identita občana), ví dụ danh tính ngân hàng (bankovní identita) hoặc thẻ căn cước điện tử (eObčanka),</li>
+  <li>bằng thông tin đăng nhập hộp thư dữ liệu (datová schránka),</li>
+  <li>bằng thông tin truy cập do Finanční správa cấp.</li>
+</ul>
+<p>Nếu chưa kích hoạt DIS+, sau khi đăng nhập hãy bấm nút Aktivovat (kích hoạt). Hộp thư sẽ mở chậm nhất trong 48 giờ. Nếu finanční úřad (cơ quan thuế) chưa có hồ sơ của bạn, quá trình này có thể mất đến 5 ngày làm việc.</p>
+<h3>Không có danh tính công dân và không có hộp thư dữ liệu</h3>
+<p>Cách này chủ yếu dành cho người nước ngoài. Trước tiên bạn xin thông tin truy cập:</p>
+<ol class="steps">
+  <li>Trên cổng, bấm vào Online finanční úřad rồi vào Jak získat přístup do DIS+ (cách lấy quyền truy cập DIS+).</li>
+  <li>Ở mục Přístupové údaje přidělené Finanční správou ČR (thông tin truy cập do Finanční správa cấp), mở Více informací (thông tin thêm) và điền đơn. Bạn cần e-mail, số điện thoại di động và mật khẩu do bạn tự chọn.</li>
+  <li>Điền thông tin đúng chính xác theo giấy tờ tùy thân. Đơn đã gửi thì không sửa được lỗi, bạn phải nộp đơn mới.</li>
+  <li>Lưu lại tên người dùng (název uživatele) và mã đơn (identifikátor žádosti).</li>
+  <li>Trong vòng 30 ngày, hãy đến trực tiếp bất kỳ chi nhánh nào của finanční úřad (územní pracoviště). Mang theo giấy tờ tùy thân.</li>
+</ol>
+<p>Người đến cơ quan phải là chính người đã nộp đơn. Người được ủy quyền (zmocněnec) có giấy ủy quyền đã chứng thực (úředně ověřená plná moc) có thể đi thay. Với luật sư hoặc tư vấn thuế (daňový poradce) thì không cần chứng thực.</p>
+</section>
+<section id="aktivace-eet">
+<h2>Bước 2: kích hoạt EET trong DIS+</h2>
+<p>Ở phần trên của trang DIS+, bấm nút AKTIVOVAT EET (kích hoạt EET) và xác nhận trong cửa sổ mới. Sau đó hiện ra cửa sổ nêu các bước cơ bản. Đóng cửa sổ này bằng nút ROZUMÍM (tôi hiểu).</p>
+<p>Như vậy là bạn đã đăng ký ghi nhận doanh thu. Thẻ EVIDENCE TRŽEB (ghi nhận doanh thu) nằm cạnh biểu tượng kính lúp. Lúc đầu trong thẻ này bạn chỉ thấy hai ô Údaje o poplatníkovi a správa EET (thông tin người nộp thuế và quản lý EET) và Správa evidenčních jednotek (quản lý đơn vị ghi nhận). Cách làm chính xác có trong hướng dẫn <a href="https://podpora.mojedane.gov.cz/cs/seznam-okruhu/elektronicka-evidence-trzeb-2-0/jak-aktivuji-elektronickou-evidenci-trze-4762" rel="noopener">Jak aktivuji elektronickou evidenci tržeb</a> (cách kích hoạt ghi nhận doanh thu điện tử).</p>
+</section>
+<section id="evidencni-jednotka">
+<h2>Bước 3: đơn vị ghi nhận và các loại đơn vị</h2>
+<p>Đơn vị ghi nhận (evidenční jednotka) là nơi hoặc cách bạn bán hàng. Với tiệm tạp hóa, đó là cửa hàng. Với thợ làm việc tại nhà khách, đó là chính người thợ. Trong DIS+ bạn chọn một trong sáu loại:</p>
+<div class="tbl"><table>
+  <thead><tr><th>Loại</th><th>Ví dụ</th><th>Bạn điền gì</th></tr></thead>
+  <tbody>
+    <tr><td>Pevná provozovna (cơ sở cố định)</td><td>Tiệm tạp hóa, tiệm cắt tóc, quán ăn nhanh</td><td>Địa chỉ cơ sở</td></tr>
+    <tr><td>Mobilní provozovna (cơ sở lưu động)</td><td>Sạp không có móng cố định, xe bán đồ ăn (food truck)</td><td>Mô tả vị trí</td></tr>
+    <tr><td>Automat (máy tự động)</td><td>Máy bán hàng tự động hoặc thiết bị tự phục vụ</td><td>Địa chỉ hoặc mô tả vị trí</td></tr>
+    <tr><td>Internetová stránka nebo aplikace (trang web hoặc ứng dụng)</td><td>Cửa hàng online</td><td>Địa chỉ URL</td></tr>
+    <tr><td>Dopravní prostředek (phương tiện vận tải)</td><td>Taxi, tàu du ngoạn</td><td>Loại xe và biển số hoặc thông tin nhận dạng khác</td></tr>
+    <tr><td>Poplatník (người nộp thuế)</td><td>Thợ hoặc người xoa bóp làm tại nhà khách</td><td>Địa chỉ trụ sở</td></tr>
+  </tbody>
+</table></div>
+<h3>Cách tạo</h3>
+<ol class="steps">
+  <li>Trên thẻ EVIDENCE TRŽEB, mở Správa evidenčních jednotek (quản lý đơn vị ghi nhận) và bấm NOVÁ EVIDENČNÍ JEDNOTKA (đơn vị ghi nhận mới).</li>
+  <li>Chọn loại đơn vị.</li>
+  <li>Điền ngành hoạt động chính. Bắt đầu gõ, hệ thống sẽ tự gợi ý.</li>
+  <li>Bạn có thể thêm tên, ví dụ “Praha - prodejna” (Praha - cửa hàng). Tên không bắt buộc, nhưng sẽ có ích khi xem tổng hợp doanh thu.</li>
+  <li>Đánh dấu xem tại đơn vị này có phát sinh doanh thu phải ghi nhận không. Với câu hỏi về việc nhận doanh thu thay cho người nộp thuế khác, đa số người kinh doanh trả lời Ne (không).</li>
+  <li>Điền địa chỉ hoặc thông tin xác định khác của đơn vị rồi bấm DOKONČIT A PŘIDAT (hoàn tất và thêm).</li>
+</ol>
+<p>Sau khi lưu, hệ thống cấp cho đơn vị một số. Máy tính tiền của bạn cần số này, vì số được gửi kèm mỗi khoản doanh thu. Chi tiết có trong hướng dẫn <a href="https://podpora.mojedane.gov.cz/cs/seznam-okruhu/elektronicka-evidence-trzeb-2-0/jak-zalozim-evidencni-jednotku-4764" rel="noopener">Jak založím evidenční jednotku</a> (cách tạo đơn vị ghi nhận).</p>
+<h3>Hãy khai báo tất cả các đơn vị, kể cả cửa hàng online</h3>
+<p>Khi có ít nhất một đơn vị có doanh thu phải ghi nhận, bạn phải khai báo tất cả các đơn vị mà bạn có doanh thu qua đó. Ví dụ: tiệm tạp hóa có cửa hàng và một cửa hàng online thanh toán qua mạng. Chủ tiệm tạo hai đơn vị. Với cửa hàng, chủ tiệm ghi là có nhận doanh thu phải ghi nhận. Với cửa hàng online, chủ tiệm ghi là chỉ nhận các khoản không phải ghi nhận.</p>
+<p>Nếu bạn không có doanh thu phải ghi nhận nào, nghĩa vụ khai báo không áp dụng cho bạn. Khi có nhiều đơn vị, bạn có thể nhập từ tệp CSV.</p>
+<h3>Thay đổi đơn vị</h3>
+<p>Thông tin thay đổi thì khai báo trong DIS+ trước khoản doanh thu ghi nhận đầu tiên sau khi thay đổi, chậm nhất trong 15 ngày. Theo Finanční správa, thời hạn 15 ngày này cũng áp dụng khi tạm ngừng hoạt động hoặc hủy đơn vị.</p>
+</section>
+<section id="pokladni-certifikat">
+<h2>Bước 4: chứng chỉ máy tính tiền, mật khẩu và tệp .p12</h2>
+<p>Chứng chỉ máy tính tiền (pokladní certifikát) là chữ ký điện tử của máy tính tiền. Nhờ đó hệ thống biết bản tin do bạn gửi và không ai sửa trên đường đi. Chứng chỉ miễn phí, và luật yêu cầu bạn phải có trước khoản doanh thu ghi nhận đầu tiên.</p>
+<ol class="steps">
+  <li>Trên thẻ EVIDENCE TRŽEB, bấm vào ô POKLADNÍ CERTIFIKÁTY (chứng chỉ máy tính tiền).</li>
+  <li>Bấm VYTVOŘIT NOVÝ CERTIFIKÁT (tạo chứng chỉ mới).</li>
+  <li>Điền e-mail. Thông báo sắp hết hạn sẽ gửi vào đây. Không thể bổ sung e-mail sau.</li>
+  <li>Bạn có thể đặt tên cho chứng chỉ, ví dụ “Pokladna prodejna” (máy tính tiền cửa hàng). Tối đa 64 ký tự.</li>
+  <li>Bấm VYTVOŘIT CERTIFIKÁT (tạo chứng chỉ). Thường xong trong 30 giây.</li>
+  <li>Bấm ZOBRAZIT HESLO A STÁHNOUT CERTIFIKÁT (hiện mật khẩu và tải chứng chỉ). Một tệp có đuôi .p12 sẽ tải về máy tính.</li>
+  <li>Lưu lại mật khẩu trong ô màu xanh lá. Không có mật khẩu, bạn không dùng được chứng chỉ trên máy tính tiền.</li>
+  <li>Tích xác nhận rằng bạn đã lưu an toàn cả mật khẩu và chứng chỉ, rồi bấm DOKONČIT (hoàn tất).</li>
+</ol>
+<aside class="note warn"><p><strong>Bạn chỉ lấy được tệp và mật khẩu cho đến khi xác nhận đã tải.</strong> Sau khi xác nhận, hệ thống xóa chúng và bạn không tải lại được. Nếu không xác nhận, chúng ở lại trong ứng dụng tối đa 30 ngày kể từ ngày cấp chứng chỉ. Trước khi bấm DOKONČIT, hãy kiểm tra chắc chắn bạn đã lưu cả tệp và mật khẩu.</p></aside>
+<p>Nếu không có máy tính bên cạnh, hãy chọn VYŘÍDÍM POZDĚJI (làm sau) và quay lại tải vào lúc khác. Khi hệ thống quá tải, bạn sẽ nhận e-mail báo chứng chỉ đã sẵn sàng. Tên các nút lấy từ hướng dẫn của Finanční správa, trong ứng dụng có thể hơi khác.</p>
+<h3>Thời hạn và bảo vệ chứng chỉ</h3>
+<ul>
+  <li><strong>Thời hạn.</strong> Chứng chỉ có hiệu lực 366 ngày. Với gia hạn tự động, cơ quan cấp chứng chỉ khuyên làm trước khi hết hạn 2 đến 3 tuần. Chứng chỉ đã hết hạn thì không gia hạn được nữa, bạn phải tạo chứng chỉ mới.</li>
+  <li><strong>Gia hạn.</strong> Một số máy tính tiền tự làm được. Nếu không, bạn tự tạo chứng chỉ mới và tải lên.</li>
+  <li><strong>Số lượng.</strong> Một chứng chỉ dùng được cho một hoặc nhiều thiết bị tính tiền. Bạn cũng có thể tạo nhiều chứng chỉ.</li>
+  <li><strong>An toàn.</strong> Hãy bảo vệ tệp và mật khẩu, không gửi đi theo cách không an toàn. Đây là nghĩa vụ theo luật. Nếu bị lạm dụng hoặc có nguy cơ bị lạm dụng, bạn phải báo cho cơ quan thuế (správce daně) không chậm trễ.</li>
+  <li><strong>Mất máy.</strong> Khi mất máy tính tiền hoặc nghi ngờ bị lạm dụng, hãy vô hiệu hóa chứng chỉ. Bước này không hoàn tác được. Sau đó bạn tạo chứng chỉ mới.</li>
+</ul>
+</section>
+<section id="nahrani-do-pokladny">
+<h2>Bước 5: tải chứng chỉ lên máy tính tiền</h2>
+<p>Cách làm tùy từng máy tính tiền, nên hãy theo hướng dẫn của nhà cung cấp. Với đa số phần mềm, bạn cần các thông tin sau:</p>
+<ul>
+  <li>tệp .p12,</li>
+  <li>mật khẩu của tệp,</li>
+  <li>số đơn vị ghi nhận từ DIS+.</li>
+</ul>
+<p>Hãy kiểm tra máy tính tiền ghi đúng đơn vị. Nếu có hai cửa hàng, doanh thu của mỗi nơi phải đi theo số của nơi đó. Trong phần tổng hợp của DIS+, bạn sẽ thấy doanh thu có được gán đúng không.</p>
+<p>Hãy kiểm tra cả thời gian chờ phản hồi tối đa (mezní doba odezvy). Thời gian này phải ít nhất 2 giây.</p>
+</section>
+<section id="zkouska-nanecisto">
+<h2>Bước 6: thử bằng chế độ kiểm tra (ověřovací mód)</h2>
+<p>Chế độ kiểm tra (ověřovací mód) là cách gửi thử. Máy tính tiền gửi bản tin vào hệ thống, và hệ thống chỉ kiểm tra là xử lý được. Bản tin không được chấp nhận là doanh thu đã ghi nhận.</p>
+<p>Lần thử này giúp bạn kiểm tra cài đặt và kết nối. Nó không thay cho nghĩa vụ ghi nhận. Vì vậy trước khi vận hành thật, hãy chuyển máy tính tiền sang chế độ bình thường.</p>
+<p>Trong SuperKasa, lần thử này là nút <strong>Kiểm tra kết nối</strong> trong Quản lý → EET 2.0. Đến hết năm 2026, bạn còn có thể bật chế độ Chạy thử, trong đó các đơn bán thật được gửi vào chế độ kiểm tra. Từ ngày 1 tháng 1 năm 2027 không bật được chế độ này nữa. Với máy tính tiền khác, hãy hỏi nhà cung cấp cách chạy thử.</p>
+<aside class="note"><p>Trong <a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET_pristupove_provozni_informace_produk-2.pdf" rel="noopener">thông tin vận hành</a>, Finanční správa nêu dự kiến mở môi trường thật cho công chúng trước ngày 1 tháng 1 năm 2027. Nếu lần thử ngay sau khi cấp chứng chỉ không thành công dù cài đặt đúng, hãy thử lại sau và nếu cần thì liên hệ nhà cung cấp.</p></aside>
+</section>
+<section id="do-1-ledna">
+<h2>Cần làm gì trước ngày 1 tháng 1 năm 2027</h2>
+<ol class="timeline">
+  <li><b>Ngay bây giờ</b> Kiểm tra xem việc ghi nhận có áp dụng cho bạn không. Quyết định chọn máy tính tiền, ứng dụng MOJE eet hay chế độ EET OFF. Hỏi nhà cung cấp máy tính tiền xem máy có chạy được EET 2.0 không.</li>
+  <li><b>Tháng 11 năm 2026</b> Lo quyền truy cập DIS+, kích hoạt EET, tạo các đơn vị ghi nhận và tạo chứng chỉ. Nhất là công ty mới và người nước ngoài không nên chờ, vì việc lấy quyền truy cập có thể lâu hơn.</li>
+  <li><b>Ngày 1 tháng 12 năm 2026</b> Theo lịch trình, MOJE eet bắt đầu chạy.</li>
+  <li><b>Tháng 12 năm 2026</b> Tải chứng chỉ lên, chạy thử và chỉ cho nhân viên phải làm gì khi mất internet.</li>
+  <li><b>Ngày 1 tháng 1 năm 2027</b> Bắt đầu ghi nhận từ khoản doanh thu đầu tiên. Kiểm tra xem máy tính tiền có nhận được mã POK không. Sau những khoản doanh thu đầu tiên, trong DIS+ sẽ mở ra các ô SOUČTY (tổng cộng) và TRŽBY (doanh thu).</li>
+</ol>
+<p>Theo lịch trình, chế độ thí điểm tháng 1 là ghi nhận tiêu chuẩn. Vì vậy đừng để việc chuẩn bị sang tháng 1.</p>
+</section>
+<section id="kontrolni-seznam">
+<h2>Danh sách kiểm tra</h2>
+<ul>
+  <li>Tôi có quyền truy cập DIS+.</li>
+  <li>Tôi đã kích hoạt EET trong DIS+.</li>
+  <li>Tôi đã khai báo tất cả các đơn vị ghi nhận mà tôi có doanh thu qua đó, kể cả cửa hàng online.</li>
+  <li>Tôi đã tạo chứng chỉ máy tính tiền và đã điền e-mail.</li>
+  <li>Tệp .p12 và mật khẩu được lưu an toàn ở ngoài máy tính tiền.</li>
+  <li>Chứng chỉ và số đơn vị ghi nhận đã có trong máy tính tiền.</li>
+  <li>Lần chạy thử không có lỗi.</li>
+  <li>Máy tính tiền đã chuyển sang chế độ thật cho khoản doanh thu đầu tiên năm 2027.</li>
+  <li>Nhân viên biết rằng khi mất internet vẫn bán tiếp, và doanh thu phải được gửi trong vòng 48 giờ.</li>
+  <li>Tôi đã ghi ngày hết hạn chứng chỉ vào lịch.</li>
+</ul>
+</section>
+      <section id="otazky" class="faq"><h2>Câu hỏi thường gặp</h2>
+        <details><summary>Chứng chỉ máy tính tiền giá bao nhiêu?</summary><div><p>Không mất tiền. Bạn tự tạo chứng chỉ miễn phí qua DIS+ trên cổng MOJE daně.</p></div></details>
+        <details><summary>Hai máy tính tiền cần mấy chứng chỉ?</summary><div><p>Một là đủ. Một chứng chỉ dùng được cho một hoặc nhiều thiết bị tính tiền. Nếu muốn tách riêng các máy, bạn cũng có thể tạo nhiều chứng chỉ.</p></div></details>
+        <details><summary>Tôi mất mật khẩu chứng chỉ. Phải làm gì?</summary><div><p>Sau khi đã xác nhận tải, bạn không lấy lại được mật khẩu hay tệp. Hãy tạo chứng chỉ mới và tải lên máy tính tiền. Nếu chứng chỉ cũ có nguy cơ bị lạm dụng, hãy vô hiệu hóa nó trong ứng dụng Správa pokladních certifikátů EET (quản lý chứng chỉ máy tính tiền EET).</p></div></details>
+        <details><summary>Chứng chỉ máy tính tiền có hiệu lực bao lâu?</summary><div><p>Theo chính sách chứng chỉ (certifikační politika) là 366 ngày. Bạn sẽ nhận e-mail báo sắp hết hạn, nếu đã điền e-mail khi tạo chứng chỉ.</p></div></details>
+        <details><summary>Tôi có phải tạo đơn vị ghi nhận cho cửa hàng online không?</summary><div><p>Có, nếu bạn có doanh thu phải ghi nhận ở một đơn vị khác, ví dụ ở cửa hàng. Nếu chỉ bán qua cửa hàng online thanh toán qua mạng và không có doanh thu phải ghi nhận nào, nghĩa vụ khai báo không áp dụng cho bạn.</p></div></details>
+        <details><summary>Người nước ngoài có bắt buộc phải có danh tính ngân hàng (bankovní identita) không?</summary><div><p>Không. Bạn có thể xin thông tin truy cập từ Finanční správa. Trong vòng 30 ngày kể từ ngày nộp đơn, bạn phải đến trực tiếp chi nhánh của finanční úřad (cơ quan thuế) và mang theo giấy tờ tùy thân.</p></div></details>
+      </section>
+      <section id="zdroje"><h2>Nguồn</h2>
+        <ul class="sources"><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/Uplne_zneni_Zakon_o_EET.pdf" rel="noopener">Luật Zákon č. 180/2026 Sb., § 14, 15, 19 và 20 (eet.gov.cz)</a></li><li><a href="https://eet.gov.cz/cs/zacinam-s-eet/jak-zacit-evidovat" rel="noopener">Bắt đầu ghi nhận thế nào (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-media/Evidencni_jednotka_EET_2.0.pdf" rel="noopener">Tờ thông tin về đơn vị ghi nhận trong EET 2.0 (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/CAEET_postupy_zadost_certifikat_v2.pdf" rel="noopener">Quy trình lấy chứng chỉ máy tính tiền (CA EET)</a></li><li><a href="https://podpora.mojedane.gov.cz/cs/seznam-okruhu/elektronicka-evidence-trzeb-2-0/pokladni-certifikaty/jak-vygeneruji-pokladni-certifikat_-2-4771" rel="noopener">Cách tạo chứng chỉ máy tính tiền (MOJE daně)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/CAEET_certifikacni_politika_v1.pdf" rel="noopener">Tóm tắt công khai của chính sách chứng chỉ: hiệu lực 366 ngày (CA EET)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET_popis_rozhrani_v1.2.pdf" rel="noopener">Mô tả giao diện dữ liệu: chế độ kiểm tra, chương 2.2 (Finanční správa)</a></li></ul>
+        <p class="disclaimer">Hướng dẫn này là thông tin chung, không phải tư vấn pháp lý hay tư vấn thuế. Với trường hợp cụ thể của bạn, hãy hỏi tư vấn thuế (daňový poradce) hoặc finanční úřad (cơ quan thuế).</p>
+      </section>
+      <nav class="related" aria-label="Có thể bạn quan tâm"><h2>Có thể bạn quan tâm</h2><div class="guide-grid">
+        <a class="guide-card" href="eet-2-0-pruvodce.html"><small>Hướng dẫn cơ bản</small><b>EET 2.0: là gì, áp dụng cho ai và bạn phải làm gì</b></a>
+        <a class="guide-card" href="moje-eet-nebo-pokladna.html"><small>Chọn giải pháp</small><b>MOJE eet hay hệ thống máy tính tiền: ứng dụng nhà nước làm được gì và không làm được gì</b></a>
+        <a class="guide-card" href="navod-superkasa.html"><small>Hướng dẫn từ đầu</small><b>Hướng dẫn dùng máy tính tiền SuperKasa: từ đăng ký đến chốt ca</b></a>
+      </div></nav>
+    </article>
+  </div>
+</section>
+
+<section class="section dark cta">
+  <div class="wrap">
+    <h2>Bạn muốn dùng thử SuperKasa?</h2>
+    <p>10 ngày đầu miễn phí, không cần thẻ, không ràng buộc. Tạo máy tính tiền trên trình duyệt chỉ trong vài phút – nếu cần, chúng tôi tư vấn gói và thiết bị qua điện thoại.</p>
+    <div class="actions">
+      <a class="btn btn-gold" href="https://app.superkasa.cz/">Dùng thử miễn phí</a>
+      <a class="btn btn-light" href="tel:+420608886882">Gọi&nbsp;+420&nbsp;608&nbsp;886&nbsp;882</a>
+      <a class="btn btn-light" href="cenik.html">Xem bảng giá</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="../favicon.svg" alt="" width="40" height="40"><b>Super<span>Kasa</span></b></div>
+        <p>Phần mềm máy tính tiền cho cửa hàng, quán ăn và dịch vụ, có EET&nbsp;2.0, quản lý kho và in nhãn giá. Nhân viên có thể dùng bằng tiếng Việt.</p>
+        <p><a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
+      </div>
+      <div>
+        <h2>Trang</h2>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="obory.html">Dành cho ai</a></li>
+          <li><a href="funkce.html">Chức năng</a></li>
+          <li><a href="cenik.html">Bảng giá</a></li>
+          <li><a href="eet.html">EET 2.0</a></li>
+          <li><a href="navody.html">Hướng dẫn</a></li>
+          <li><a href="ke-stazeni.html">Tải về</a></li>
+          <li><a href="kontakt.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Ngành hàng</h2>
+        <ul>
+          <li><a href="pokladna-vecerka.html">Tạp hóa, siêu thị mini</a></li>
+          <li><a href="pokladna-trafika.html">Quầy báo, thuốc lá</a></li>
+          <li><a href="pokladna-pekarna.html">Tiệm bánh mì</a></li>
+          <li><a href="pokladna-drogerie.html">Hóa mỹ phẩm, đồ gia dụng</a></li>
+          <li><a href="pokladna-kavarna-bistro.html">Quán cà phê, bistro, quầy</a></li>
+          <li><a href="pokladna-hospoda-restaurace.html">Quán bia, bar, nhà hàng</a></li>
+          <li><a href="pokladna-kadernictvi.html">Tiệm cắt tóc</a></li>
+          <li><a href="pokladna-nehtove-studio.html">Tiệm làm móng</a></li>
+          <li><a href="obory.html">Tất cả ngành hàng</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Tài liệu</h2>
+        <ul>
+          <li><a href="obchodni-podminky.html">Điều khoản kinh doanh (bản nháp)</a></li>
+          <li><a href="ochrana-osobnich-udaju.html">Bảo vệ dữ liệu cá nhân (bản nháp)</a></li>
+          <li><a href="https://eet.gov.cz/" rel="noopener">EET 2.0 – Finanční správa (Cục Thuế Séc)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Thanh Lam Nguyen, IČO 14161648, 1. května 117/141, 725 25 Ostrava. Trang web này không dùng cookie hay công cụ theo dõi.
+    </div>
+  </div>
+</footer>
+</body>
+</html>

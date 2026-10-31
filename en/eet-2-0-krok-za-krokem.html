@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-pfgOMgfVZwm2ODyms34QYW9h8EwicylhV77q5LHK8c0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://app.superkasa.cz; base-uri 'self'; form-action 'self' https://app.superkasa.cz">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EET 2.0 step by step: DIS+ and certificate | SuperKasa</title>
+<meta name="description" content="How to set up EET 2.0: logging in to DIS+, creating a recording unit, the .p12 POS certificate and password, uploading it and testing in verification mode.">
+<link rel="canonical" href="https://superkasa.cz/en/eet-2-0-krok-za-krokem.html">
+<link rel="alternate" hreflang="cs" href="https://superkasa.cz/eet-2-0-krok-za-krokem.html">
+<link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/eet-2-0-krok-za-krokem.html">
+<link rel="alternate" hreflang="en" href="https://superkasa.cz/en/eet-2-0-krok-za-krokem.html">
+<link rel="alternate" hreflang="x-default" href="https://superkasa.cz/eet-2-0-krok-za-krokem.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SuperKasa">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="cs_CZ">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:title" content="EET 2.0 step by step: DIS+ and certificate | SuperKasa">
+<meta property="og:description" content="How to set up EET 2.0: logging in to DIS+, creating a recording unit, the .p12 POS certificate and password, uploading it and testing in verification mode.">
+<meta property="og:url" content="https://superkasa.cz/en/eet-2-0-krok-za-krokem.html">
+<meta property="og:image" content="https://superkasa.cz/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SuperKasa – POS system for shops, food service and services">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5c1a46">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../css/style.css">
+<script>document.documentElement.className+=" js"</script>
+<script src="../js/site.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"EET 2.0 step by step: DIS+, recording unit and POS certificate","description":"How to set up EET 2.0: logging in to DIS+, creating a recording unit, the .p12 POS certificate and password, uploading it and testing in verification mode.","inLanguage":"en","url":"https://superkasa.cz/en/eet-2-0-krok-za-krokem.html","mainEntityOfPage":"https://superkasa.cz/en/eet-2-0-krok-za-krokem.html","datePublished":"2026-10-31","dateModified":"2026-10-31","image":"https://superkasa.cz/img/og.png","author":{"@type":"Organization","name":"SuperKasa","url":"https://superkasa.cz"},"publisher":{"@type":"Organization","name":"SuperKasa","url":"https://superkasa.cz","logo":{"@type":"ImageObject","url":"https://superkasa.cz/img/logo.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SuperKasa","item":"https://superkasa.cz/en/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://superkasa.cz/en/navody.html"},{"@type":"ListItem","position":3,"name":"EET 2.0 step by step: DIS+, recording unit and POS certificate","item":"https://superkasa.cz/en/eet-2-0-krok-za-krokem.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a POS certificate cost?","acceptedAnswer":{"@type":"Answer","text":"Nothing. You create the certificate free of charge through DIS+ on the MOJE daně portal."}},{"@type":"Question","name":"How many certificates do I need for two POS devices?","acceptedAnswer":{"@type":"Answer","text":"One is enough. A certificate can be used for one or more POS devices. If you want to keep the devices separate, you can also create several certificates."}},{"@type":"Question","name":"I lost the certificate password. What should I do?","acceptedAnswer":{"@type":"Answer","text":"After you confirm the download, you cannot get the password or the file again. Create a new certificate and upload it to the POS. If there is a risk of misuse of the old one, revoke it in the Správa pokladních certifikátů EET (EET POS certificate management) application."}},{"@type":"Question","name":"How long is a POS certificate valid?","acceptedAnswer":{"@type":"Answer","text":"According to the certificate policy, 366 days. An e-mail warns you about the end of validity, if you filled in your address when creating the certificate."}},{"@type":"Question","name":"Must I create a recording unit for an e-shop?","acceptedAnswer":{"@type":"Answer","text":"Yes, if you have registered sales in another unit, for example in a shop. If you sell only through an e-shop with online payments and have no registered sales, the reporting duty does not apply to you."}},{"@type":"Question","name":"Must a foreigner have a bank identity?","acceptedAnswer":{"@type":"Answer","text":"No. They can apply for access details from Finanční správa. Within 30 days of the application they must visit a local branch (územní pracoviště) of a tax office in person with an identity document."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#obsah">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="SuperKasa – home page"><img src="../img/logo.png" alt="SuperKasa" width="200" height="40"></a>
+    <nav class="langs" aria-label="Website language"><a href="../eet-2-0-krok-za-krokem.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="../vi/eet-2-0-krok-za-krokem.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="../en/eet-2-0-krok-za-krokem.html" hreflang="en" lang="en" title="English" aria-label="English" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
+    <a class="login-top" href="prihlaseni.html" aria-label="Sign in to the register" title="Sign in to the register"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Sign in</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
+    <nav class="nav" id="nav" aria-label="Main menu">
+      <a href="obory.html">Who it's for</a>
+      <a href="funkce.html">Features</a>
+      <a href="cenik.html">Pricing</a>
+      <a href="eet.html">EET 2.0</a>
+      <a href="navody.html" aria-current="page">Guides</a>
+      <a href="ke-stazeni.html">Download</a>
+      <a href="kontakt.html">Contact</a>
+      <a class="btn btn-primary nav-price" href="cenik.html">CZK 199 / month</a>
+      <a class="btn btn-gold" href="https://app.superkasa.cz/">Try it free</a>
+    </nav>
+  </div>
+</header>
+<main id="obsah">
+<section class="article-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb navigation"><a href="navody.html">Guides</a><span aria-hidden="true">/</span><span>Step by step</span></nav>
+    <h1>EET 2.0 step by step: DIS+, recording unit and POS certificate</h1>
+    <p class="lead">To register sales you need access to DIS+, a recording unit and a POS certificate. From 1 November 2026 you can arrange this online on the MOJE daně portal, and the certificate is free.</p>
+    <p class="article-meta">Updated 31 October 2026 · 9 min read</p>
+  </div>
+</section>
+<section class="section article-wrap">
+  <div class="wrap article-grid">
+    <aside class="guide-toc" aria-label="In this guide">
+      <b>In this guide</b>
+      <ol>
+        <li><a href="#prehled-kroku">Six steps in this order</a></li>
+        <li><a href="#prihlaseni-dis">Step 1: logging in to DIS+ on mojedane.gov.cz</a></li>
+        <li><a href="#aktivace-eet">Step 2: activating EET in DIS+</a></li>
+        <li><a href="#evidencni-jednotka">Step 3: the recording unit and its types</a></li>
+        <li><a href="#pokladni-certifikat">Step 4: the POS certificate, password and .p12 file</a></li>
+        <li><a href="#nahrani-do-pokladny">Step 5: uploading the certificate to the POS</a></li>
+        <li><a href="#zkouska-nanecisto">Step 6: a dry run in verification mode</a></li>
+        <li><a href="#do-1-ledna">What to do by 1 January 2027</a></li>
+        <li><a href="#kontrolni-seznam">Checklist</a></li>
+        <li><a href="#otazky">Frequently asked questions</a></li>
+        <li><a href="#zdroje">Sources</a></li>
+      </ol>
+    </aside>
+    <article class="prose">
+      <section id="prehled-kroku">
+<h2>Six steps in this order</h2>
+<p>First you create a recording unit (evidenční jednotka), then you generate a POS certificate (pokladní certifikát). You cannot change this order. It is set by law, and DIS+ shows you certificates only after the first unit has been created.</p>
+<ol class="steps">
+  <li>You log in to DIS+ on the MOJE daně (My Taxes) portal.</li>
+  <li>You activate EET in DIS+.</li>
+  <li>You create a recording unit.</li>
+  <li>You generate a POS certificate and save the .p12 file with its password.</li>
+  <li>You upload the certificate to the POS.</li>
+  <li>You test the connection with a dry run.</li>
+</ol>
+<aside class="note"><p>If you will use the state app MOJE eet, you do not have to do steps 4 and 5. According to Finanční správa (the Financial Administration, the Czech tax authority), the app arranges the certificate by itself after it is paired with DIS+. There is a comparison in the article <a href="moje-eet-nebo-pokladna.html">MOJE eet or a POS system</a>.</p></aside>
+</section>
+<section id="prihlaseni-dis">
+<h2>Step 1: logging in to DIS+ on mojedane.gov.cz</h2>
+<p>DIS+ is the daňová informační schránka plus (tax information box plus). It is the online office of Finanční správa. Open <a href="https://mojedane.gov.cz" rel="noopener">mojedane.gov.cz</a> and click the Online finanční úřad (Online tax office) tile. You can log in in three ways:</p>
+<ul>
+  <li>with a citizen identity (identita občana), for example a bank identity (bankovní identita) or eObčanka (the Czech electronic ID card),</li>
+  <li>with your login details for a data box (datová schránka),</li>
+  <li>with access details issued to you by Finanční správa.</li>
+</ul>
+<p>If you have not activated DIS+ yet, click the Aktivovat (Activate) button after logging in. The box will be available within 48 hours at the latest. If the tax office (finanční úřad) does not have you on its records at all yet, the process can take up to 5 working days.</p>
+<h3>Without a citizen identity and without a data box</h3>
+<p>This procedure is used mainly by foreigners. First you apply for access details:</p>
+<ol class="steps">
+  <li>On the portal, click Online finanční úřad (Online tax office) and then Jak získat přístup do DIS+ (How to get access to DIS+).</li>
+  <li>Under the option Přístupové údaje přidělené Finanční správou ČR (Access details issued by Finanční správa), open Více informací (More information) and fill in the application. You need an e-mail address, a mobile phone and a password that you choose.</li>
+  <li>Enter your details exactly as they are in your identity document. Errors in a submitted application cannot be corrected. You must submit a new one.</li>
+  <li>Save the username and the application identifier.</li>
+  <li>Within 30 days, visit any local branch (územní pracoviště) of a tax office in person. Bring your identity document.</li>
+</ol>
+<p>The same person who submitted the application must come to the office. They can be represented by an authorised representative (zmocněnec) with an officially certified power of attorney (úředně ověřená plná moc). For a lawyer or tax adviser, official certification is not required.</p>
+</section>
+<section id="aktivace-eet">
+<h2>Step 2: activating EET in DIS+</h2>
+<p>At the top of the DIS+ page, click the AKTIVOVAT EET (Activate EET) button and confirm your choice in the new window. A window with the basic steps then appears. Close it with the ROZUMÍM (I understand) button.</p>
+<p>You are now signed up for sales registration. You will find the EVIDENCE TRŽEB (Sales registration) tab next to the magnifying glass icon. At the start you will see only the tiles Údaje o poplatníkovi a správa EET (Taxpayer details and EET management) and Správa evidenčních jednotek (Recording unit management). The exact procedure is in the guide <a href="https://podpora.mojedane.gov.cz/cs/seznam-okruhu/elektronicka-evidence-trzeb-2-0/jak-aktivuji-elektronickou-evidenci-trze-4762" rel="noopener">Jak aktivuji elektronickou evidenci tržeb</a> (How do I activate electronic sales registration).</p>
+</section>
+<section id="evidencni-jednotka">
+<h2>Step 3: the recording unit and its types</h2>
+<p>A recording unit (evidenční jednotka) is the place or way in which you sell. For a convenience store it is the shop. For a tradesperson who works at customers' homes, it is the person themselves. In DIS+ you choose from six types:</p>
+<div class="tbl"><table>
+  <thead><tr><th>Type</th><th>Example</th><th>What you fill in</th></tr></thead>
+  <tbody>
+    <tr><td>Pevná provozovna (fixed premises)</td><td>Convenience store, hair salon, bistro</td><td>Address of the premises</td></tr>
+    <tr><td>Mobilní provozovna (mobile premises)</td><td>Stall without a fixed base, food truck</td><td>Description of the location</td></tr>
+    <tr><td>Automat (vending machine)</td><td>Vending machine or self-service device</td><td>Address or description of the location</td></tr>
+    <tr><td>Internetová stránka nebo aplikace (website or app)</td><td>E-shop</td><td>URL address</td></tr>
+    <tr><td>Dopravní prostředek (vehicle)</td><td>Taxi, sightseeing boat</td><td>Type and registration plate or other identification</td></tr>
+    <tr><td>Poplatník (taxpayer)</td><td>Tradesperson or masseur at the customer's place</td><td>Registered address (sídlo)</td></tr>
+  </tbody>
+</table></div>
+<h3>How to create a unit</h3>
+<ol class="steps">
+  <li>On the EVIDENCE TRŽEB (Sales registration) tab, open Správa evidenčních jednotek (Recording unit management) and click NOVÁ EVIDENČNÍ JEDNOTKA (New recording unit).</li>
+  <li>Select the type of unit.</li>
+  <li>Fill in the main type of activity. Start typing and suggestions will help you.</li>
+  <li>You can add a name, for example “Praha - prodejna” (Prague shop). It is not mandatory, but it will be useful in the sales overview.</li>
+  <li>Mark whether registered sales take place in the unit. Most business owners answer Ne (No) to the question about accepting sales on behalf of another taxpayer.</li>
+  <li>Fill in the address or other identification of the unit and click DOKONČIT A PŘIDAT (Finish and add).</li>
+</ol>
+<p>After saving, the system assigns a number to the unit. Your POS needs this number, because it is sent with every sale. Details are in the guide <a href="https://podpora.mojedane.gov.cz/cs/seznam-okruhu/elektronicka-evidence-trzeb-2-0/jak-zalozim-evidencni-jednotku-4764" rel="noopener">Jak založím evidenční jednotku</a> (How do I create a recording unit).</p>
+<h3>Report all units, including an e-shop</h3>
+<p>If you have at least one unit with registered sales, you must report all units through which you have sales. Example: a convenience store has a shop and an e-shop with online payment. It creates two units. For the shop it states that it accepts registered sales. For the e-shop it states that it accepts only payments that are not registered.</p>
+<p>If you have no registered sales, the reporting duty does not apply to you. If you have many units, you can import them from a CSV file.</p>
+<h3>Changes to a unit</h3>
+<p>Report a change of details in DIS+ before the first registered sale after the change, at the latest within 15 days. According to Finanční správa, the same 15-day deadline also applies to interrupting the activity or closing a unit.</p>
+</section>
+<section id="pokladni-certifikat">
+<h2>Step 4: the POS certificate, password and .p12 file</h2>
+<p>A POS certificate (pokladní certifikát) is the electronic signature of your POS. It tells the system that you are sending the message and that nobody has changed it on the way. It is free, and the law requires you to get it before your first registered sale.</p>
+<ol class="steps">
+  <li>On the EVIDENCE TRŽEB (Sales registration) tab, click the POKLADNÍ CERTIFIKÁTY (POS certificates) tile.</li>
+  <li>Click VYTVOŘIT NOVÝ CERTIFIKÁT (Create new certificate).</li>
+  <li>Fill in your e-mail address. A warning about the end of validity will come to it. It cannot be added later.</li>
+  <li>You can add a certificate label, for example “Pokladna prodejna” (Shop POS). It has at most 64 characters.</li>
+  <li>Click VYTVOŘIT CERTIFIKÁT (Create certificate). It is usually ready within 30 seconds.</li>
+  <li>Click ZOBRAZIT HESLO A STÁHNOUT CERTIFIKÁT (Show password and download certificate). A file with the .p12 extension downloads to your computer.</li>
+  <li>Save the password from the green field. Without it, you cannot use the certificate in the POS.</li>
+  <li>Tick the confirmation that you have safely saved both the password and the certificate, and click DOKONČIT (Finish).</li>
+</ol>
+<aside class="note warn"><p><strong>You can get the file and password only until you confirm the download.</strong> After confirmation the system deletes them and you cannot download them again. If you do not confirm the download, they stay in the application for at most 30 days from the issue of the certificate. Before you click DOKONČIT (Finish), check that you really have both the file and the password saved.</p></aside>
+<p>If you do not have your computer with you, choose VYŘÍDÍM POZDĚJI (I will do it later) and come back to the download another time. If the system is overloaded, you will get an e-mail saying the certificate is ready. We take the button names from Finanční správa guides, and they may differ slightly in the application.</p>
+<h3>Validity and protection of the certificate</h3>
+<ul>
+  <li><strong>Validity.</strong> The certificate is valid for 366 days. For automatic renewal, the certification authority recommends a date 2 to 3 weeks before the end of validity. A certificate that has expired cannot be renewed. You must create a new one.</li>
+  <li><strong>Renewal.</strong> Some POS systems can do this by themselves. Otherwise, you create a new certificate by hand and upload it.</li>
+  <li><strong>Number.</strong> One certificate can be used for one or more POS devices. You can also create several certificates.</li>
+  <li><strong>Security.</strong> Protect the file and the password, and do not send them unsecured. This is your legal duty. You must report misuse, or a threat of misuse, to the tax authority (správce daně) without undue delay.</li>
+  <li><strong>Loss.</strong> If you lose a POS or suspect misuse, revoke the certificate. This step cannot be undone. Then create a new one.</li>
+</ul>
+</section>
+<section id="nahrani-do-pokladny">
+<h2>Step 5: uploading the certificate to the POS</h2>
+<p>The procedure depends on the POS, so follow your supplier's guide. For most solutions you need this information:</p>
+<ul>
+  <li>the .p12 file,</li>
+  <li>the password for the file,</li>
+  <li>the recording unit number from DIS+.</li>
+</ul>
+<p>Check that the POS states the correct unit. If you have two premises, the sales of each must go under its own number. In the overview in DIS+ you will then see whether sales are assigned correctly.</p>
+<p>Also check the maximum response time (mezní doba odezvy). It must be at least 2 seconds.</p>
+</section>
+<section id="zkouska-nanecisto">
+<h2>Step 6: a dry run in verification mode</h2>
+<p>Verification mode (ověřovací mód) is a test way of sending. The POS sends a message to the system and the system only checks that it can process it. The message is not accepted as a registered sale.</p>
+<p>The test checks your settings and connection. It does not fulfil the duty to register. So before live operation, switch the POS to normal mode.</p>
+<p>In SuperKasa, this test is the <strong>Verify connection</strong> button in Admin → EET 2.0. Until the end of 2026 you can also switch on Dry run mode, in which real sales go to verification mode. From 1 January 2027 this mode cannot be switched on. For other POS systems, ask your supplier how to start the test.</p>
+<aside class="note"><p>In its <a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET_pristupove_provozni_informace_produk-2.pdf" rel="noopener">operating information</a>, Finanční správa states that the live environment is expected to start for the public by 1 January 2027. If the test does not work straight after the certificate is issued and your settings are correct, try again later and contact your supplier if needed.</p></aside>
+</section>
+<section id="do-1-ledna">
+<h2>What to do by 1 January 2027</h2>
+<ol class="timeline">
+  <li><b>Now</b> Check whether registration applies to you. Decide between a POS, the MOJE eet app and the EET OFF regime. Ask your POS supplier whether it will support EET 2.0.</li>
+  <li><b>November 2026</b> Arrange access to DIS+, activate EET, create units and generate a certificate. New companies and foreigners especially should not wait, because access can take longer.</li>
+  <li><b>1 December 2026</b> According to the schedule, MOJE eet starts running.</li>
+  <li><b>December 2026</b> Upload the certificate, do a dry run and show your staff what to do in an internet outage.</li>
+  <li><b>1 January 2027</b> Start registering from the first sale. Check that the POS is receiving the POK (the confirmation code). After the first sales, the SOUČTY (Totals) and TRŽBY (Sales) tiles become available in DIS+.</li>
+</ol>
+<p>According to the schedule, the January pilot mode (pilotní režim) is standard registration. So do not leave your preparation until January.</p>
+</section>
+<section id="kontrolni-seznam">
+<h2>Checklist</h2>
+<ul>
+  <li>I have access to DIS+.</li>
+  <li>I have activated EET in DIS+.</li>
+  <li>I have reported all recording units through which I have sales, including an e-shop.</li>
+  <li>I have generated a POS certificate with my e-mail address filled in.</li>
+  <li>The .p12 file and password are safely stored outside the POS.</li>
+  <li>The certificate and recording unit number are in the POS.</li>
+  <li>The dry run went without errors.</li>
+  <li>The POS is switched to live mode for the first sale of 2027.</li>
+  <li>Staff know that during an internet outage they keep selling and that sales must be sent within 48 hours.</li>
+  <li>I have the certificate's expiry date in my calendar.</li>
+</ul>
+</section>
+      <section id="otazky" class="faq"><h2>Frequently asked questions</h2>
+        <details><summary>How much does a POS certificate cost?</summary><div><p>Nothing. You create the certificate free of charge through DIS+ on the MOJE daně portal.</p></div></details>
+        <details><summary>How many certificates do I need for two POS devices?</summary><div><p>One is enough. A certificate can be used for one or more POS devices. If you want to keep the devices separate, you can also create several certificates.</p></div></details>
+        <details><summary>I lost the certificate password. What should I do?</summary><div><p>After you confirm the download, you cannot get the password or the file again. Create a new certificate and upload it to the POS. If there is a risk of misuse of the old one, revoke it in the Správa pokladních certifikátů EET (EET POS certificate management) application.</p></div></details>
+        <details><summary>How long is a POS certificate valid?</summary><div><p>According to the certificate policy, 366 days. An e-mail warns you about the end of validity, if you filled in your address when creating the certificate.</p></div></details>
+        <details><summary>Must I create a recording unit for an e-shop?</summary><div><p>Yes, if you have registered sales in another unit, for example in a shop. If you sell only through an e-shop with online payments and have no registered sales, the reporting duty does not apply to you.</p></div></details>
+        <details><summary>Must a foreigner have a bank identity?</summary><div><p>No. They can apply for access details from Finanční správa. Within 30 days of the application they must visit a local branch (územní pracoviště) of a tax office in person with an identity document.</p></div></details>
+      </section>
+      <section id="zdroje"><h2>Sources</h2>
+        <ul class="sources"><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/Uplne_zneni_Zakon_o_EET.pdf" rel="noopener">Zákon č. 180/2026 Sb. (Act on Sales Registration), § 14, 15, 19 and 20 (eet.gov.cz)</a></li><li><a href="https://eet.gov.cz/cs/zacinam-s-eet/jak-zacit-evidovat" rel="noopener">How to start registering (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-media/Evidencni_jednotka_EET_2.0.pdf" rel="noopener">Leaflet: The recording unit in EET 2.0 (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/CAEET_postupy_zadost_certifikat_v2.pdf" rel="noopener">Procedures for obtaining a POS certificate (CA EET)</a></li><li><a href="https://podpora.mojedane.gov.cz/cs/seznam-okruhu/elektronicka-evidence-trzeb-2-0/pokladni-certifikaty/jak-vygeneruji-pokladni-certifikat_-2-4771" rel="noopener">How do I generate a POS certificate? (MOJE daně)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/CAEET_certifikacni_politika_v1.pdf" rel="noopener">Public summary of the certificate policy: 366-day validity (CA EET)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET_popis_rozhrani_v1.2.pdf" rel="noopener">Data interface description: verification mode, chapter 2.2 (Finanční správa)</a></li></ul>
+        <p class="disclaimer">This guide is general information, not legal or tax advice. For your own situation, ask a tax adviser or the tax office (finanční úřad).</p>
+      </section>
+      <nav class="related" aria-label="You may also be interested in"><h2>You may also be interested in</h2><div class="guide-grid">
+        <a class="guide-card" href="eet-2-0-pruvodce.html"><small>Basic guide</small><b>EET 2.0: what it is, who it applies to and what you must do</b></a>
+        <a class="guide-card" href="moje-eet-nebo-pokladna.html"><small>Choosing a solution</small><b>MOJE eet or a POS system: what the state app can and cannot do</b></a>
+        <a class="guide-card" href="navod-superkasa.html"><small>Guide from the start</small><b>SuperKasa POS guide: from sign-up to closing</b></a>
+      </div></nav>
+    </article>
+  </div>
+</section>
+
+<section class="section dark cta">
+  <div class="wrap">
+    <h2>Would you like to try SuperKasa?</h2>
+    <p>The first 10 days are free, with no card and no commitment. Create your till in the browser in a few minutes – and if you like, we'll advise on the plan and equipment by phone.</p>
+    <div class="actions">
+      <a class="btn btn-gold" href="https://app.superkasa.cz/">Try it free</a>
+      <a class="btn btn-light" href="tel:+420608886882">Call&nbsp;+420&nbsp;608&nbsp;886&nbsp;882</a>
+      <a class="btn btn-light" href="cenik.html">See pricing</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="../favicon.svg" alt="" width="40" height="40"><b>Super<span>Kasa</span></b></div>
+        <p>POS system for shops, snack bars and services, with EET&nbsp;2.0, stock and price labels. Staff can use it in Vietnamese or English.</p>
+        <p><a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="obory.html">Who it's for</a></li>
+          <li><a href="funkce.html">Features</a></li>
+          <li><a href="cenik.html">Pricing</a></li>
+          <li><a href="eet.html">EET 2.0</a></li>
+          <li><a href="navody.html">Guides</a></li>
+          <li><a href="ke-stazeni.html">Download</a></li>
+          <li><a href="kontakt.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Business types</h2>
+        <ul>
+          <li><a href="pokladna-vecerka.html">Convenience store, minimarket</a></li>
+          <li><a href="pokladna-trafika.html">Newsagent</a></li>
+          <li><a href="pokladna-pekarna.html">Bakery</a></li>
+          <li><a href="pokladna-drogerie.html">Drugstore</a></li>
+          <li><a href="pokladna-kavarna-bistro.html">Café, bistro, stand</a></li>
+          <li><a href="pokladna-hospoda-restaurace.html">Pub, bar, restaurant</a></li>
+          <li><a href="pokladna-kadernictvi.html">Hairdresser and barber</a></li>
+          <li><a href="pokladna-nehtove-studio.html">Nail studio</a></li>
+          <li><a href="obory.html">All business types</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Documents</h2>
+        <ul>
+          <li><a href="obchodni-podminky.html">Terms and Conditions (draft)</a></li>
+          <li><a href="ochrana-osobnich-udaju.html">Privacy Policy (draft)</a></li>
+          <li><a href="https://eet.gov.cz/" rel="noopener">EET 2.0 – Financial Administration</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Thanh Lam Nguyen, IČO 14161648, 1. května 117/141, 725 25 Ostrava. This website uses no cookies or tracking tools.
+    </div>
+  </div>
+</footer>
+</body>
+</html>

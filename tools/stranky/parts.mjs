@@ -71,7 +71,7 @@ export const card = (ic, title, text, cls = "") => `<article class="card">${icon
 
 
 /** Soubory hlavního menu (popisky jsou ve slovníku common.nav ve stejném pořadí). */
-export const NAV_FILES = ["index.html", "obory.html", "funkce.html", "cenik.html", "eet.html", "ke-stazeni.html", "kontakt.html"];
+export const NAV_FILES = ["index.html", "obory.html", "funkce.html", "cenik.html", "eet.html", "navody.html", "ke-stazeni.html", "kontakt.html"];
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 

@@ -13,6 +13,10 @@ import { INLINE_JS, page } from "./stranky/parts.mjs";
 import { funkce, index } from "./stranky/pages1.mjs";
 import { cenik, eet, kontakt, prihlaseni, stazeni } from "./stranky/pages2.mjs";
 import { gdpr, legalStub, notFound, op } from "./stranky/pages3.mjs";
+import { clanekPage, navodyPage } from "./stranky/clanky.mjs";
+import clankyCs from "./stranky/clanky/cs.mjs";
+import clankyVi from "./stranky/clanky/vi.mjs";
+import clankyEn from "./stranky/clanky/en.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DAY = new Date().toLocaleDateString("sv-SE"); // RRRR-MM-DD v místním čase
@@ -32,6 +36,16 @@ if (shapeErrors) {
   process.exit(1);
 }
 
+// Články: stejné ve všech jazycích, stejné oddíly a stejný počet otázek – jinak by se odkazy mezi nimi rozešly.
+const CLANKY = { cs: clankyCs, vi: clankyVi, en: clankyEn };
+for (const lang of LANGS.filter((l) => l !== "cs")) {
+  const key = (x) => x.items.map((a) => `${a.slug}:${a.sections.map((s) => s.id).join(",")}:${a.faq.length}:${a.related.join(",")}`).join("|");
+  if (key(CLANKY[lang]) !== key(clankyCs)) {
+    console.error(`✗ Články ${lang} nesedí s češtinou.`);
+    process.exit(1);
+  }
+}
+
 const FOOTER_OBORY = ["vecerka", "trafika", "pekarna", "drogerie", "gastro", "hospoda", "kadernictvi", "nehty"];
 const indexable = []; // soubory, které jdou do sitemap (stejné ve všech jazycích)
 let count = 0;
@@ -43,7 +57,8 @@ for (const lang of LANGS) {
     .map((o) => [o.file, o.card]).concat([["obory.html", c.T.common.allObory]]);
   const legal = lang === "cs" ? [op, gdpr] : [legalStub(c, "op"), legalStub(c, "gdpr")];
   const pages = [index(c), oboryPage(c, footerObory), ...c.D.OBORY.map((o) => oborPage(c, o, footerObory)),
-    funkce(c), cenik(c), eet(c), stazeni(c), kontakt(c), prihlaseni(c), ...legal, notFound(c)]
+    funkce(c), cenik(c), eet(c), stazeni(c), kontakt(c), prihlaseni(c), navodyPage(c, CLANKY[lang]),
+    ...CLANKY[lang].items.map((a) => clanekPage(c, CLANKY[lang], a)), ...legal, notFound(c)]
     .map((p) => ({ footerObory, ...p }));
 
   mkdirSync(path.join(ROOT, dir), { recursive: true });

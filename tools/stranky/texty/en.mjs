@@ -6,7 +6,7 @@ const num = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 export default {
   common: {
-    nav: ["Home", "Who it's for", "Features", "Pricing", "EET 2.0", "Download", "Contact"],
+    nav: ["Home", "Who it's for", "Features", "Pricing", "EET 2.0", "Guides", "Download", "Contact"],
     priceBtn: "CZK 199 / month",
     loginBtn: "Sign in",
     loginSoon: "",

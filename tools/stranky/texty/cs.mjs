@@ -8,7 +8,7 @@ const kc = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "&nbsp;");
 
 export default {
   common: {
-    nav: ["Úvod", "Pro koho", "Funkce", "Ceník", "EET 2.0", "Ke stažení", "Kontakt"],
+    nav: ["Úvod", "Pro koho", "Funkce", "Ceník", "EET 2.0", "Návody", "Ke stažení", "Kontakt"],
     priceBtn: "199 Kč / měsíc",
     loginBtn: "Přihlásit",
     loginSoon: "",

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-pfgOMgfVZwm2ODyms34QYW9h8EwicylhV77q5LHK8c0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://app.superkasa.cz; base-uri 'self'; form-action 'self' https://app.superkasa.cz">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EET 2.0 krok za krokem: DIS+ a certifikát | SuperKasa</title>
+<meta name="description" content="Postup pro EET 2.0: přihlášení do DIS+, založení evidenční jednotky, pokladní certifikát .p12 a heslo, nahrání do pokladny a zkouška ověřovacím módem.">
+<link rel="canonical" href="https://superkasa.cz/eet-2-0-krok-za-krokem.html">
+<link rel="alternate" hreflang="cs" href="https://superkasa.cz/eet-2-0-krok-za-krokem.html">
+<link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/eet-2-0-krok-za-krokem.html">
+<link rel="alternate" hreflang="en" href="https://superkasa.cz/en/eet-2-0-krok-za-krokem.html">
+<link rel="alternate" hreflang="x-default" href="https://superkasa.cz/eet-2-0-krok-za-krokem.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SuperKasa">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:title" content="EET 2.0 krok za krokem: DIS+ a certifikát | SuperKasa">
+<meta property="og:description" content="Postup pro EET 2.0: přihlášení do DIS+, založení evidenční jednotky, pokladní certifikát .p12 a heslo, nahrání do pokladny a zkouška ověřovacím módem.">
+<meta property="og:url" content="https://superkasa.cz/eet-2-0-krok-za-krokem.html">
+<meta property="og:image" content="https://superkasa.cz/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SuperKasa – pokladna pro obchody, gastro a služby">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5c1a46">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.className+=" js"</script>
+<script src="js/site.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"EET 2.0 krok za krokem: DIS+, evidenční jednotka a pokladní certifikát","description":"Postup pro EET 2.0: přihlášení do DIS+, založení evidenční jednotky, pokladní certifikát .p12 a heslo, nahrání do pokladny a zkouška ověřovacím módem.","inLanguage":"cs","url":"https://superkasa.cz/eet-2-0-krok-za-krokem.html","mainEntityOfPage":"https://superkasa.cz/eet-2-0-krok-za-krokem.html","datePublished":"2026-10-31","dateModified":"2026-10-31","image":"https://superkasa.cz/img/og.png","author":{"@type":"Organization","name":"SuperKasa","url":"https://superkasa.cz"},"publisher":{"@type":"Organization","name":"SuperKasa","url":"https://superkasa.cz","logo":{"@type":"ImageObject","url":"https://superkasa.cz/img/logo.png"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SuperKasa","item":"https://superkasa.cz/"},{"@type":"ListItem","position":2,"name":"Návody","item":"https://superkasa.cz/navody.html"},{"@type":"ListItem","position":3,"name":"EET 2.0 krok za krokem: DIS+, evidenční jednotka a pokladní certifikát","item":"https://superkasa.cz/eet-2-0-krok-za-krokem.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kolik stojí pokladní certifikát?","acceptedAnswer":{"@type":"Answer","text":"Nic. Certifikát si vytvoříte zdarma přes DIS+ na portálu MOJE daně."}},{"@type":"Question","name":"Kolik certifikátů potřebuji pro dvě pokladny?","acceptedAnswer":{"@type":"Answer","text":"Stačí jeden. Certifikát lze použít pro jedno i více pokladních zařízení. Pokud chcete mít pokladny oddělené, můžete si vytvořit i více certifikátů."}},{"@type":"Question","name":"Ztratil jsem heslo k certifikátu. Co mám dělat?","acceptedAnswer":{"@type":"Answer","text":"Po potvrzení stažení heslo ani soubor znovu nezískáte. Vytvořte si nový certifikát a nahrajte ho do pokladny. Pokud hrozí zneužití starého, zneplatněte ho v aplikaci Správa pokladních certifikátů EET."}},{"@type":"Question","name":"Jak dlouho platí pokladní certifikát?","acceptedAnswer":{"@type":"Answer","text":"Podle certifikační politiky 366 dní. Na konec platnosti vás upozorní e-mail, pokud jste ho při vytvoření vyplnili."}},{"@type":"Question","name":"Musím založit evidenční jednotku pro e-shop?","acceptedAnswer":{"@type":"Answer","text":"Ano, pokud máte evidované tržby v jiné jednotce, například v prodejně. Když prodáváte jen přes e-shop s platbami online a žádné evidované tržby nemáte, oznamovací povinnost se vás netýká."}},{"@type":"Question","name":"Musí mít cizinec bankovní identitu?","acceptedAnswer":{"@type":"Answer","text":"Ne. Může požádat o přístupové údaje od Finanční správy. Do 30 dnů od žádosti musí osobně navštívit územní pracoviště finančního úřadu s dokladem totožnosti."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
+    <nav class="langs" aria-label="Jazyk webu"><a href="eet-2-0-krok-za-krokem.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="vi/eet-2-0-krok-za-krokem.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="en/eet-2-0-krok-za-krokem.html" hreflang="en" lang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
+    <a class="login-top" href="prihlaseni.html" aria-label="Přihlásit se do pokladny" title="Přihlásit se do pokladny"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Přihlásit</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
+    <nav class="nav" id="nav" aria-label="Hlavní menu">
+      <a href="obory.html">Pro koho</a>
+      <a href="funkce.html">Funkce</a>
+      <a href="cenik.html">Ceník</a>
+      <a href="eet.html">EET 2.0</a>
+      <a href="navody.html" aria-current="page">Návody</a>
+      <a href="ke-stazeni.html">Ke stažení</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a class="btn btn-primary nav-price" href="cenik.html">199 Kč / měsíc</a>
+      <a class="btn btn-gold" href="https://app.superkasa.cz/">Vyzkoušet zdarma</a>
+    </nav>
+  </div>
+</header>
+<main id="obsah">
+<section class="article-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="navody.html">Návody</a><span aria-hidden="true">/</span><span>Krok za krokem</span></nav>
+    <h1>EET 2.0 krok za krokem: DIS+, evidenční jednotka a pokladní certifikát</h1>
+    <p class="lead">K evidenci tržeb potřebujete přístup do DIS+, založenou evidenční jednotku a pokladní certifikát. Od 1. 11. 2026 to vyřídíte online na portálu MOJE daně a certifikát je zdarma.</p>
+    <p class="article-meta">Aktualizováno 31. října 2026 · 9 min čtení</p>
+  </div>
+</section>
+<section class="section article-wrap">
+  <div class="wrap article-grid">
+    <aside class="guide-toc" aria-label="V tomto návodu">
+      <b>V tomto návodu</b>
+      <ol>
+        <li><a href="#prehled-kroku">Šest kroků v tomto pořadí</a></li>
+        <li><a href="#prihlaseni-dis">Krok 1: přihlášení do DIS+ na mojedane.gov.cz</a></li>
+        <li><a href="#aktivace-eet">Krok 2: aktivace EET v DIS+</a></li>
+        <li><a href="#evidencni-jednotka">Krok 3: evidenční jednotka a její typy</a></li>
+        <li><a href="#pokladni-certifikat">Krok 4: pokladní certifikát, heslo a soubor .p12</a></li>
+        <li><a href="#nahrani-do-pokladny">Krok 5: nahrání certifikátu do pokladny</a></li>
+        <li><a href="#zkouska-nanecisto">Krok 6: zkouška nanečisto ověřovacím módem</a></li>
+        <li><a href="#do-1-ledna">Co udělat do 1. 1. 2027</a></li>
+        <li><a href="#kontrolni-seznam">Kontrolní seznam</a></li>
+        <li><a href="#otazky">Časté otázky</a></li>
+        <li><a href="#zdroje">Zdroje</a></li>
+      </ol>
+    </aside>
+    <article class="prose">
+      <section id="prehled-kroku">
+<h2>Šest kroků v tomto pořadí</h2>
+<p>Nejdřív založíte evidenční jednotku, potom vytvoříte certifikát. Pořadí změnit nejde. Stanoví ho zákon a DIS+ vám certifikáty ukáže až po založení první jednotky.</p>
+<ol class="steps">
+  <li>Přihlásíte se do DIS+ na portálu MOJE daně.</li>
+  <li>V DIS+ aktivujete EET.</li>
+  <li>Založíte evidenční jednotku.</li>
+  <li>Vytvoříte pokladní certifikát a uložíte soubor .p12 s heslem.</li>
+  <li>Certifikát nahrajete do pokladny.</li>
+  <li>Spojení vyzkoušíte nanečisto.</li>
+</ol>
+<aside class="note"><p>Kdo bude používat státní aplikaci MOJE eet, kroky 4 a 5 dělat nemusí. Podle Finanční správy si aplikace po spárování s DIS+ zajistí certifikát sama. Porovnání najdete v článku <a href="moje-eet-nebo-pokladna.html">MOJE eet, nebo pokladní systém</a>.</p></aside>
+</section>
+<section id="prihlaseni-dis">
+<h2>Krok 1: přihlášení do DIS+ na mojedane.gov.cz</h2>
+<p>DIS+ je daňová informační schránka plus. Je to online úřad Finanční správy. Otevřete <a href="https://mojedane.gov.cz" rel="noopener">mojedane.gov.cz</a> a klikněte na dlaždici Online finanční úřad. Přihlásit se můžete třemi způsoby:</p>
+<ul>
+  <li>identitou občana, například bankovní identitou nebo eObčankou,</li>
+  <li>přihlašovacími údaji do datové schránky,</li>
+  <li>přístupovými údaji, které vám přidělila Finanční správa.</li>
+</ul>
+<p>Pokud DIS+ ještě nemáte aktivovanou, klikněte po přihlášení na tlačítko Aktivovat. Schránka bude zpřístupněná nejpozději do 48 hodin. Když vás finanční úřad zatím vůbec neeviduje, může proces trvat až 5 pracovních dní.</p>
+<h3>Bez identity občana a bez datové schránky</h3>
+<p>Tento postup využijí hlavně cizinci. Nejdřív požádáte o přístupové údaje:</p>
+<ol class="steps">
+  <li>Na portálu klikněte na Online finanční úřad a potom na Jak získat přístup do DIS+.</li>
+  <li>U možnosti Přístupové údaje přidělené Finanční správou ČR otevřete Více informací a vyplňte žádost. Potřebujete e-mail, mobilní telefon a heslo, které si zvolíte.</li>
+  <li>Údaje vyplňte přesně podle dokladu totožnosti. Chyby v odeslané žádosti nejde opravit, musíte podat novou.</li>
+  <li>Uložte si název uživatele a identifikátor žádosti.</li>
+  <li>Do 30 dnů osobně navštivte kterékoli územní pracoviště finančního úřadu. Vezměte doklad totožnosti.</li>
+</ol>
+<p>Na úřad musí přijít stejná osoba, která žádost podala. Může ji zastoupit zmocněnec s úředně ověřenou plnou mocí. U advokáta nebo daňového poradce se úřední ověření nevyžaduje.</p>
+</section>
+<section id="aktivace-eet">
+<h2>Krok 2: aktivace EET v DIS+</h2>
+<p>V horní části stránky DIS+ klikněte na tlačítko AKTIVOVAT EET a v novém okně volbu potvrďte. Potom se zobrazí okno se základními kroky. Zavřete ho tlačítkem ROZUMÍM.</p>
+<p>Tím jste přihlášení k evidenci tržeb. Záložku EVIDENCE TRŽEB najdete vedle ikony lupy. Na začátku v ní uvidíte jen dlaždice Údaje o poplatníkovi a správa EET a Správa evidenčních jednotek. Přesný postup je v návodu <a href="https://podpora.mojedane.gov.cz/cs/seznam-okruhu/elektronicka-evidence-trzeb-2-0/jak-aktivuji-elektronickou-evidenci-trze-4762" rel="noopener">Jak aktivuji elektronickou evidenci tržeb</a>.</p>
+</section>
+<section id="evidencni-jednotka">
+<h2>Krok 3: evidenční jednotka a její typy</h2>
+<p>Evidenční jednotka je místo nebo způsob, jakým prodáváte. Pro večerku je to prodejna. Pro řemeslníka, který pracuje u zákazníků, je to on sám. V DIS+ vybíráte z šesti druhů:</p>
+<div class="tbl"><table>
+  <thead><tr><th>Druh</th><th>Příklad</th><th>Co vyplníte</th></tr></thead>
+  <tbody>
+    <tr><td>Pevná provozovna</td><td>Večerka, kadeřnictví, bistro</td><td>Adresu provozovny</td></tr>
+    <tr><td>Mobilní provozovna</td><td>Stánek bez pevného základu, food truck</td><td>Popis umístění</td></tr>
+    <tr><td>Automat</td><td>Prodejní automat nebo samoobslužné zařízení</td><td>Adresu nebo popis umístění</td></tr>
+    <tr><td>Internetová stránka nebo aplikace</td><td>E-shop</td><td>URL adresu</td></tr>
+    <tr><td>Dopravní prostředek</td><td>Taxi, vyhlídková loď</td><td>Typ a registrační značku nebo jinou identifikaci</td></tr>
+    <tr><td>Poplatník</td><td>Řemeslník nebo masér u zákazníka</td><td>Adresu sídla</td></tr>
+  </tbody>
+</table></div>
+<h3>Postup založení</h3>
+<ol class="steps">
+  <li>Na záložce EVIDENCE TRŽEB otevřete Správa evidenčních jednotek a klikněte na NOVÁ EVIDENČNÍ JEDNOTKA.</li>
+  <li>Vyberte druh jednotky.</li>
+  <li>Vyplňte převažující druh činnosti. Začněte psát a pomůže vám našeptávač.</li>
+  <li>Můžete doplnit název, například „Praha - prodejna“. Není povinný, ale v přehledu tržeb se vám bude hodit.</li>
+  <li>Označte, jestli se v jednotce uskutečňují evidované tržby. Na otázku o přijímání tržeb na účet jiného poplatníka většina podnikatelů odpoví Ne.</li>
+  <li>Vyplňte adresu nebo jiné určení jednotky a klikněte na DOKONČIT A PŘIDAT.</li>
+</ol>
+<p>Po uložení systém přidělí jednotce číslo. Toto číslo potřebuje vaše pokladna, protože se posílá s každou tržbou. Podrobnosti jsou v návodu <a href="https://podpora.mojedane.gov.cz/cs/seznam-okruhu/elektronicka-evidence-trzeb-2-0/jak-zalozim-evidencni-jednotku-4764" rel="noopener">Jak založím evidenční jednotku</a>.</p>
+<h3>Oznamte všechny jednotky, i e-shop</h3>
+<p>Když máte aspoň jednu jednotku s evidovanými tržbami, musíte oznámit všechny jednotky, přes které máte tržby. Příklad: večerka má prodejnu a e-shop s platbou online. Založí dvě jednotky. U prodejny uvede, že přijímá evidované tržby. U e-shopu uvede, že přijímá jen platby, které se neevidují.</p>
+<p>Když žádné evidované tržby nemáte, oznamovací povinnost se vás netýká. Při větším počtu jednotek můžete použít import ze souboru CSV.</p>
+<h3>Změny jednotky</h3>
+<p>Změnu údajů oznamte v DIS+ před první evidovanou tržbou po změně, nejpozději do 15 dnů. Stejná lhůta 15 dnů platí podle Finanční správy i pro přerušení činnosti nebo zrušení jednotky.</p>
+</section>
+<section id="pokladni-certifikat">
+<h2>Krok 4: pokladní certifikát, heslo a soubor .p12</h2>
+<p>Pokladní certifikát je elektronický podpis pokladny. Podle něj systém pozná, že zprávu posíláte vy a že ji cestou nikdo nezměnil. Je zdarma a zákon vyžaduje, abyste ho získali před první evidovanou tržbou.</p>
+<ol class="steps">
+  <li>Na záložce EVIDENCE TRŽEB klikněte na dlaždici POKLADNÍ CERTIFIKÁTY.</li>
+  <li>Klikněte na VYTVOŘIT NOVÝ CERTIFIKÁT.</li>
+  <li>Vyplňte e-mail. Přijde na něj upozornění na konec platnosti. Dodatečně ho doplnit nejde.</li>
+  <li>Můžete doplnit označení certifikátu, například „Pokladna prodejna“. Má nejvýše 64 znaků.</li>
+  <li>Klikněte na VYTVOŘIT CERTIFIKÁT. Obvykle je hotový do 30 sekund.</li>
+  <li>Klikněte na ZOBRAZIT HESLO A STÁHNOUT CERTIFIKÁT. Do počítače se stáhne soubor s koncovkou .p12.</li>
+  <li>Uložte si heslo ze zeleného pole. Bez něj certifikát v pokladně nepoužijete.</li>
+  <li>Zaškrtněte potvrzení, že máte heslo i certifikát bezpečně uložené, a klikněte na DOKONČIT.</li>
+</ol>
+<aside class="note warn"><p><strong>Soubor a heslo získáte jen do potvrzení stažení.</strong> Po potvrzení je systém smaže a znovu je nestáhnete. Pokud stažení nepotvrdíte, zůstanou v aplikaci nejdéle 30 dnů od vydání certifikátu. Než kliknete na DOKONČIT, zkontrolujte, že máte soubor i heslo opravdu uložené.</p></aside>
+<p>Pokud počítač nemáte u sebe, zvolte VYŘÍDÍM POZDĚJI a vraťte se ke stažení jindy. Při přetížení systému vám přijde e-mail, že je certifikát připravený. Názvy tlačítek přebíráme z návodů Finanční správy, v aplikaci se mohou drobně lišit.</p>
+<h3>Platnost a ochrana certifikátu</h3>
+<ul>
+  <li><strong>Platnost.</strong> Certifikát platí 366 dní. Pro automatickou obnovu doporučuje certifikační autorita termín 2 až 3 týdny před koncem platnosti. Certifikát po konci platnosti už obnovit nejde, musíte vytvořit nový.</li>
+  <li><strong>Obnova.</strong> Některé pokladny ji umí samy. Jinak vytvoříte nový certifikát ručně a nahrajete ho.</li>
+  <li><strong>Počet.</strong> Jeden certifikát lze použít pro jedno i více pokladních zařízení. Vytvořit si můžete i více certifikátů.</li>
+  <li><strong>Bezpečnost.</strong> Soubor a heslo chraňte a neposílejte je nezabezpečeně. Máte to jako zákonnou povinnost. Zneužití nebo jeho hrozbu musíte bez zbytečného odkladu oznámit správci daně.</li>
+  <li><strong>Ztráta.</strong> Při ztrátě pokladny nebo podezření na zneužití certifikát zneplatněte. Tento krok je nevratný. Potom si vytvoříte nový.</li>
+</ul>
+</section>
+<section id="nahrani-do-pokladny">
+<h2>Krok 5: nahrání certifikátu do pokladny</h2>
+<p>Postup záleží na pokladně, proto se řiďte návodem dodavatele. U většiny řešení potřebujete tyto údaje:</p>
+<ul>
+  <li>soubor .p12,</li>
+  <li>heslo k souboru,</li>
+  <li>číslo evidenční jednotky z DIS+.</li>
+</ul>
+<p>Zkontrolujte, že pokladna uvádí správnou jednotku. Máte-li dvě provozovny, tržba každé z nich musí jít pod její číslo. V přehledu v DIS+ pak uvidíte, jestli se tržby přiřazují správně.</p>
+<p>Zkontrolujte také mezní dobu odezvy. Musí být nejméně 2 sekundy.</p>
+</section>
+<section id="zkouska-nanecisto">
+<h2>Krok 6: zkouška nanečisto ověřovacím módem</h2>
+<p>Ověřovací mód je zkušební způsob odeslání. Pokladna pošle zprávu do systému a ten jen ověří, že ji umí zpracovat. Zpráva se nepřijme jako evidovaná tržba.</p>
+<p>Zkouškou ověříte nastavení a spojení. Povinnost evidovat tím nesplníte. Před ostrým provozem proto přepněte pokladnu do běžného režimu.</p>
+<p>V SuperKase je tato zkouška tlačítko <strong>Ověřit spojení</strong> ve Správě → EET 2.0. Do konce roku 2026 můžete navíc zapnout režim Nanečisto, ve kterém jdou do ověřovacího módu skutečné prodeje. Od 1. 1. 2027 tento režim zapnout nejde. U jiných pokladen se zeptejte dodavatele, jak zkoušku spustit.</p>
+<aside class="note"><p>Finanční správa v <a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET_pristupove_provozni_informace_produk-2.pdf" rel="noopener">provozních informacích</a> uvádí předpokládané spuštění ostrého prostředí pro veřejnost do 1. 1. 2027. Pokud zkouška hned po vydání certifikátu nevyjde a nastavení máte správně, zkuste ji později znovu a případně se ozvěte dodavateli.</p></aside>
+</section>
+<section id="do-1-ledna">
+<h2>Co udělat do 1. 1. 2027</h2>
+<ol class="timeline">
+  <li><b>Hned</b> Ověřte si, jestli se vás evidence týká. Rozhodněte se mezi pokladnou, aplikací MOJE eet a režimem EET OFF. Zeptejte se dodavatele pokladny, jestli bude umět EET 2.0.</li>
+  <li><b>Listopad 2026</b> Zařiďte přístup do DIS+, aktivujte EET, založte jednotky a vytvořte certifikát. Hlavně nové firmy a cizinci by neměli čekat, přístup může trvat déle.</li>
+  <li><b>1. 12. 2026</b> Podle harmonogramu začne běžet MOJE eet.</li>
+  <li><b>Prosinec 2026</b> Nahrajte certifikát, udělejte zkoušku nanečisto a ukažte obsluze, co dělat při výpadku internetu.</li>
+  <li><b>1. 1. 2027</b> Začněte evidovat od první tržby. Zkontrolujte, že pokladna dostává POK. Po prvních tržbách se v DIS+ zpřístupní dlaždice SOUČTY a TRŽBY.</li>
+</ol>
+<p>Lednový pilotní režim je podle harmonogramu standardní evidence. Přípravu proto nenechávejte na leden.</p>
+</section>
+<section id="kontrolni-seznam">
+<h2>Kontrolní seznam</h2>
+<ul>
+  <li>Mám přístup do DIS+.</li>
+  <li>V DIS+ mám aktivované EET.</li>
+  <li>Oznámil jsem všechny evidenční jednotky, přes které mám tržby, i e-shop.</li>
+  <li>Mám vytvořený pokladní certifikát s vyplněným e-mailem.</li>
+  <li>Soubor .p12 a heslo mám bezpečně uložené mimo pokladnu.</li>
+  <li>Certifikát a číslo evidenční jednotky jsou v pokladně.</li>
+  <li>Zkouška nanečisto proběhla bez chyby.</li>
+  <li>Pokladna je přepnutá do ostrého režimu pro první tržbu v roce 2027.</li>
+  <li>Obsluha ví, že při výpadku internetu prodává dál a tržby se musí odeslat do 48 hodin.</li>
+  <li>V kalendáři mám datum konce platnosti certifikátu.</li>
+</ul>
+</section>
+      <section id="otazky" class="faq"><h2>Časté otázky</h2>
+        <details><summary>Kolik stojí pokladní certifikát?</summary><div><p>Nic. Certifikát si vytvoříte zdarma přes DIS+ na portálu MOJE daně.</p></div></details>
+        <details><summary>Kolik certifikátů potřebuji pro dvě pokladny?</summary><div><p>Stačí jeden. Certifikát lze použít pro jedno i více pokladních zařízení. Pokud chcete mít pokladny oddělené, můžete si vytvořit i více certifikátů.</p></div></details>
+        <details><summary>Ztratil jsem heslo k certifikátu. Co mám dělat?</summary><div><p>Po potvrzení stažení heslo ani soubor znovu nezískáte. Vytvořte si nový certifikát a nahrajte ho do pokladny. Pokud hrozí zneužití starého, zneplatněte ho v aplikaci Správa pokladních certifikátů EET.</p></div></details>
+        <details><summary>Jak dlouho platí pokladní certifikát?</summary><div><p>Podle certifikační politiky 366 dní. Na konec platnosti vás upozorní e-mail, pokud jste ho při vytvoření vyplnili.</p></div></details>
+        <details><summary>Musím založit evidenční jednotku pro e-shop?</summary><div><p>Ano, pokud máte evidované tržby v jiné jednotce, například v prodejně. Když prodáváte jen přes e-shop s platbami online a žádné evidované tržby nemáte, oznamovací povinnost se vás netýká.</p></div></details>
+        <details><summary>Musí mít cizinec bankovní identitu?</summary><div><p>Ne. Může požádat o přístupové údaje od Finanční správy. Do 30 dnů od žádosti musí osobně navštívit územní pracoviště finančního úřadu s dokladem totožnosti.</p></div></details>
+      </section>
+      <section id="zdroje"><h2>Zdroje</h2>
+        <ul class="sources"><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/Uplne_zneni_Zakon_o_EET.pdf" rel="noopener">Zákon č. 180/2026 Sb., § 14, 15, 19 a 20 (eet.gov.cz)</a></li><li><a href="https://eet.gov.cz/cs/zacinam-s-eet/jak-zacit-evidovat" rel="noopener">Jak začít evidovat (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-media/Evidencni_jednotka_EET_2.0.pdf" rel="noopener">Leták Evidenční jednotka v EET 2.0 (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/CAEET_postupy_zadost_certifikat_v2.pdf" rel="noopener">Postupy získání pokladního certifikátu (CA EET)</a></li><li><a href="https://podpora.mojedane.gov.cz/cs/seznam-okruhu/elektronicka-evidence-trzeb-2-0/pokladni-certifikaty/jak-vygeneruji-pokladni-certifikat_-2-4771" rel="noopener">Jak vygeneruji pokladní certifikát? (MOJE daně)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/CAEET_certifikacni_politika_v1.pdf" rel="noopener">Veřejný souhrn certifikační politiky: platnost 366 dní (CA EET)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET_popis_rozhrani_v1.2.pdf" rel="noopener">Popis datového rozhraní: ověřovací mód, kapitola 2.2 (Finanční správa)</a></li></ul>
+        <p class="disclaimer">Návod je obecná informace, ne právní ani daňová rada. U své konkrétní situace se poraďte s daňovým poradcem nebo finančním úřadem.</p>
+      </section>
+      <nav class="related" aria-label="Mohlo by vás zajímat"><h2>Mohlo by vás zajímat</h2><div class="guide-grid">
+        <a class="guide-card" href="eet-2-0-pruvodce.html"><small>Základní průvodce</small><b>EET 2.0: co to je, koho se týká a co musíte udělat</b></a>
+        <a class="guide-card" href="moje-eet-nebo-pokladna.html"><small>Výběr řešení</small><b>MOJE eet, nebo pokladní systém: co státní aplikace umí a co ne</b></a>
+        <a class="guide-card" href="navod-superkasa.html"><small>Návod od začátku</small><b>Návod k pokladně SuperKasa: od registrace po uzávěrku</b></a>
+      </div></nav>
+    </article>
+  </div>
+</section>
+
+<section class="section dark cta">
+  <div class="wrap">
+    <h2>Chcete SuperKasu vyzkoušet?</h2>
+    <p>Prvních 10 dní je zdarma, bez karty a bez závazku. Pokladnu založíte v prohlížeči za pár minut – a když budete chtít, poradíme s tarifem i vybavením po telefonu.</p>
+    <div class="actions">
+      <a class="btn btn-gold" href="https://app.superkasa.cz/">Vyzkoušet zdarma</a>
+      <a class="btn btn-light" href="tel:+420608886882">Zavolat&nbsp;+420&nbsp;608&nbsp;886&nbsp;882</a>
+      <a class="btn btn-light" href="cenik.html">Zobrazit ceník</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="favicon.svg" alt="" width="40" height="40"><b>Super<span>Kasa</span></b></div>
+        <p>Pokladní systém pro obchody, občerstvení a služby s EET&nbsp;2.0, skladem a cenovkami. Pro obsluhu i ve vietnamštině.</p>
+        <p><a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
+      </div>
+      <div>
+        <h2>Stránky</h2>
+        <ul>
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="obory.html">Pro koho</a></li>
+          <li><a href="funkce.html">Funkce</a></li>
+          <li><a href="cenik.html">Ceník</a></li>
+          <li><a href="eet.html">EET 2.0</a></li>
+          <li><a href="navody.html">Návody</a></li>
+          <li><a href="ke-stazeni.html">Ke stažení</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Obory</h2>
+        <ul>
+          <li><a href="pokladna-vecerka.html">Večerka a minimarket</a></li>
+          <li><a href="pokladna-trafika.html">Trafika</a></li>
+          <li><a href="pokladna-pekarna.html">Pekárna</a></li>
+          <li><a href="pokladna-drogerie.html">Drogerie</a></li>
+          <li><a href="pokladna-kavarna-bistro.html">Kavárna, bistro, stánek</a></li>
+          <li><a href="pokladna-hospoda-restaurace.html">Hospoda, bar, restaurace</a></li>
+          <li><a href="pokladna-kadernictvi.html">Kadeřnictví a holičství</a></li>
+          <li><a href="pokladna-nehtove-studio.html">Nehtové studio</a></li>
+          <li><a href="obory.html">Všechny obory</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Dokumenty</h2>
+        <ul>
+          <li><a href="obchodni-podminky.html">Obchodní podmínky (koncept)</a></li>
+          <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů (koncept)</a></li>
+          <li><a href="https://eet.gov.cz/" rel="noopener">EET 2.0 – Finanční správa</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Thanh Lam Nguyen, IČO 14161648, 1. května 117/141, 725 25 Ostrava. Tento web nepoužívá cookies ani sledovací nástroje.
+    </div>
+  </div>
+</footer>
+</body>
+</html>

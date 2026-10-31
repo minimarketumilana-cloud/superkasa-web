@@ -6,7 +6,7 @@ const kc = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "&nbsp;");
 
 export default {
   common: {
-    nav: ["Trang chủ", "Dành cho ai", "Chức năng", "Bảng giá", "EET 2.0", "Tải về", "Liên hệ"],
+    nav: ["Trang chủ", "Dành cho ai", "Chức năng", "Bảng giá", "EET 2.0", "Hướng dẫn", "Tải về", "Liên hệ"],
     priceBtn: "199 Kč / tháng",
     loginBtn: "Đăng nhập",
     loginSoon: "",
