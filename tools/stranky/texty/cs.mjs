@@ -151,7 +151,7 @@ export default {
     readyLead: "Od 1. 1. 2027 začíná evidence tržeb EET 2.0 a v gastru se mění pravidla pro spropitné a DPH. SuperKasa to zvládá v ceně tarifu.",
     readyCards: [
       ["EET 2.0", 'Doklad se uloží hned a do EET se odešle na pozadí. Když vypadne internet, pokladna odesílání opakuje a prodej nezdržuje. <a href="eet.html">Jak na EET 2.0</a>'],
-      ["Spropitné bez daně do 7 %", "Spropitné zapíšete mimo tržbu a EET – komu, kolik, hotově nebo kartou. Pokladna hlídá limit 7 % pro osvobození od daně a připraví měsíční podklad pro mzdy."],
+      ["Spropitné bez daně do 7 %", "Spropitné pro zaměstnance zapíšete mimo tržbu a EET – komu, kolik, hotově nebo kartou. Které si nechává podnik, zaeviduje pokladna jako tržbu. Pokladna hlídá limit 7 % pro osvobození od daně a připraví měsíční podklad pro mzdy."],
       ["DPH 12 % na nealko na místě", "Nealko a káva podávané na místě mají od 2027 sazbu 12 %, s sebou 21 %. Na pokladně přepnete Na místě / S sebou a doklad použije správnou sazbu."],
     ],
     readyNote: 'Termíny a podmínky ověřte u Finanční správy nebo s účetní. <a href="funkce.html#gastro-2027">Jak to v pokladně funguje</a>',
@@ -192,7 +192,7 @@ export default {
     gastroLead: "Od 1. 1. 2027 platí ve stravovacích službách nová pravidla pro DPH a spropitné. Obojí SuperKasa umí <strong>zdarma v ceně tarifu</strong> – žádný placený doplněk.",
     gastro: [
       ["Na místě / S sebou", "Na pokladně přepnete, jestli host nakupuje na místě, nebo s sebou. Nealko a káva podávané na místě mají od 1. 1. 2027 sazbu 12 %, s sebou 21 % – doklad použije správnou sazbu a cena pro zákazníka se nemění. Na účtence je „Prodej: S sebou“. Sazbu s sebou má každá skupina zboží ve Správě."],
-      ["Spropitné mimo tržbu a EET", "Po zaplacení ťuknete na Spropitné – komu, kolik, hotově nebo kartou. Spropitné není tržba, do EET nejde a v uzávěrce je zvlášť. Ve Správě uvidíte měsíční přehled po lidech a podíl na příjmech: pokladna hlídá limit 7 % pro osvobození od daně a podklad pro mzdy stáhnete jako CSV. V tarifech Gastro, Potraviny, Nehtové studio a Služby."],
+      ["Spropitné podle toho, komu patří", "Po zaplacení ťuknete na Spropitné – komu, kolik, hotově nebo kartou. Spropitné pro zaměstnance není tržba, do EET nejde a v uzávěrce je zvlášť. Které si nechává podnik, jde do tržeb a EET. Ve Správě uvidíte měsíční přehled po lidech a podíl na příjmech: pokladna hlídá limit 7 % pro osvobození od daně a podklad pro mzdy stáhnete jako CSV. V tarifech Gastro, Potraviny, Nehtové studio a Služby."],
     ],
     gastroNote: "Sazby DPH a podmínky osvobození spropitného ověřte s účetní – osvobození do 7 % se podle zákona týká zaměstnanců ve stravovacích službách.",
     dokladyTitle: "Doklady a EET",

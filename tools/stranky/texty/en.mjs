@@ -149,7 +149,7 @@ export default {
     readyLead: "From 1 January 2027, EET 2.0 (electronic sales registration) begins, and in food service the rules for tips and VAT (DPH) change. SuperKasa handles this within the plan price.",
     readyCards: [
       ["EET 2.0", `The receipt is saved immediately and sent to EET in the background. If the internet goes down, the POS keeps retrying and doesn't hold up sales. <a href="eet.html">Getting started with EET 2.0</a>`],
-      ["Tax-free tips up to 7%", "You record tips outside sales and EET – who gets them, how much, cash or card. The POS watches the 7% limit for tax exemption and prepares a monthly summary for payroll."],
+      ["Tax-free tips up to 7%", "You record employee tips outside sales and EET – who gets them, how much, cash or card. The POS records tips the business keeps as sales. The POS watches the 7% limit for tax exemption and prepares a monthly summary for payroll."],
       ["12% VAT on soft drinks served on site", "From 2027, soft drinks and coffee served on site are taxed at 12%, take-away at 21%. On the POS you switch between Eat in / Take away and the receipt uses the correct rate."],
     ],
     readyNote: 'Check dates and conditions with the Financial Administration (Finanční správa) or your accountant. <a href="funkce.html#gastro-2027">How it works in the POS</a>',
@@ -190,7 +190,7 @@ export default {
     gastroLead: "From 1 January 2027, new VAT (DPH) and tipping rules apply in food service. SuperKasa handles both <strong>free within the plan price</strong> – no paid add-on.",
     gastro: [
       ["Eat in / Take away", "On the POS you switch whether the guest is eating in or taking away. From 1 January 2027, soft drinks and coffee served on site are taxed at 12%, take-away at 21% – the receipt uses the correct rate and the price for the customer stays the same. The receipt says “Prodej: S sebou” (Sale: take away). Each product group has its take-away rate in Admin."],
-      ["Tips outside sales and EET", "After payment, tap Tip – who gets it, how much, cash or card. A tip is not a sale, does not go to EET and is shown separately in the closing. In Admin you see a monthly overview by person and the share of income: the POS watches the 7% limit for tax exemption, and you can download the payroll summary as a CSV. In the Food service (Gastro), Grocery, Nail studio and Services plans."],
+      ["Tips by who keeps them", "After payment, tap Tip – who gets it, how much, cash or card. A tip for employees is not a sale, does not go to EET and is shown separately in the closing. A tip the business keeps goes to sales and EET. In Admin you see a monthly overview by person and the share of income: the POS watches the 7% limit for tax exemption, and you can download the payroll summary as a CSV. In the Food service (Gastro), Grocery, Nail studio and Services plans."],
     ],
     gastroNote: "Check VAT rates and the conditions for tax-free tips with your accountant – by law, the exemption up to 7% applies to employees in food service.",
     dokladyTitle: "Receipts and EET",
