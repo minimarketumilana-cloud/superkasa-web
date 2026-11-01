@@ -190,7 +190,7 @@ export default {
     gastroLead: "From 1 January 2027, new VAT (DPH) and tipping rules apply in food service. SuperKasa handles both <strong>free within the plan price</strong> – no paid add-on.",
     gastro: [
       ["Eat in / Take away", "On the POS you switch whether the guest is eating in or taking away. From 1 January 2027, soft drinks and coffee served on site are taxed at 12%, take-away at 21% – the receipt uses the correct rate and the price for the customer stays the same. The receipt says “Prodej: S sebou” (Sale: take away). Each product group has its take-away rate in Admin."],
-      ["Tips by who keeps them", "After payment, tap Tip – who gets it, how much, cash or card. A tip for employees is not a sale, does not go to EET and is shown separately in the closing. A tip the business keeps goes to sales and EET. In Admin you see a monthly overview by person and the share of income: the POS watches the 7% limit for tax exemption, and you can download the payroll summary as a CSV. In the Food service (Gastro), Grocery, Nail studio and Services plans."],
+      ["Tips by who keeps them", "After payment, tap Tip – who gets it, how much, cash or card. A tip for employees is not a sale, does not go to EET and is shown separately in the closing. A tip the business keeps goes to sales and EET. In Admin you see a monthly overview by person and the share of income: the POS watches the 7% limit for tax exemption, and you can download the payroll summary as a CSV. In the Shop, Food service (Gastro) and Services plans."],
     ],
     gastroNote: "Check VAT rates and the conditions for tax-free tips with your accountant – by law, the exemption up to 7% applies to employees in food service.",
     dokladyTitle: "Receipts and EET",

@@ -190,7 +190,7 @@ export default {
     gastroLead: "Từ 1/1/2027, dịch vụ ăn uống áp dụng quy định mới về thuế DPH (thuế giá trị gia tăng) và tiền boa. SuperKasa làm được cả hai <strong>miễn phí, đã có trong giá gói</strong> – không phải tiện ích trả thêm.",
     gastro: [
       ["Ăn tại chỗ / Mang đi", "Trên máy tính tiền bạn chọn khách ăn tại chỗ hay mang đi. Từ 1/1/2027, đồ uống không cồn và cà phê phục vụ tại chỗ chịu thuế suất 12 %, mang đi 21 % – hóa đơn dùng đúng thuế suất và giá cho khách không đổi. Trên hóa đơn (bằng tiếng Séc) ghi “Prodej: S sebou” (bán mang đi). Mỗi nhóm hàng có thuế suất mang đi riêng trong phần Quản lý."],
-      ["Tiền boa theo người nhận", "Sau khi thanh toán, bạn chạm vào Tiền boa – cho ai, bao nhiêu, tiền mặt hay thẻ. Tiền boa của nhân viên không phải doanh thu, không gửi lên EET và được tách riêng khi chốt ca. Trong phần Quản lý bạn xem tổng hợp hằng tháng theo từng người và tỷ lệ so với thu nhập: máy tính tiền theo dõi mức 7 % để được miễn thuế, còn số liệu tính lương thì tải về dạng CSV. Có trong các gói Ăn uống, Thực phẩm, Tiệm nail và Dịch vụ."],
+      ["Tiền boa theo người nhận", "Sau khi thanh toán, bạn chạm vào Tiền boa – cho ai, bao nhiêu, tiền mặt hay thẻ. Tiền boa của nhân viên không phải doanh thu, không gửi lên EET và được tách riêng khi chốt ca. Trong phần Quản lý bạn xem tổng hợp hằng tháng theo từng người và tỷ lệ so với thu nhập: máy tính tiền theo dõi mức 7 % để được miễn thuế, còn số liệu tính lương thì tải về dạng CSV. Có trong các gói Cửa hàng, Ăn uống và Dịch vụ."],
     ],
     gastroNote: "Hãy kiểm tra thuế suất DPH và điều kiện miễn thuế tiền boa với kế toán – theo luật, miễn thuế đến 7 % áp dụng cho người lao động làm thuê trong dịch vụ ăn uống.",
     dokladyTitle: "Hóa đơn và EET",

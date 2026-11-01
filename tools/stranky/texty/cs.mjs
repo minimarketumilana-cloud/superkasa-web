@@ -192,7 +192,7 @@ export default {
     gastroLead: "Od 1. 1. 2027 platí ve stravovacích službách nová pravidla pro DPH a spropitné. Obojí SuperKasa umí <strong>zdarma v ceně tarifu</strong> – žádný placený doplněk.",
     gastro: [
       ["Na místě / S sebou", "Na pokladně přepnete, jestli host nakupuje na místě, nebo s sebou. Nealko a káva podávané na místě mají od 1. 1. 2027 sazbu 12 %, s sebou 21 % – doklad použije správnou sazbu a cena pro zákazníka se nemění. Na účtence je „Prodej: S sebou“. Sazbu s sebou má každá skupina zboží ve Správě."],
-      ["Spropitné podle toho, komu patří", "Po zaplacení ťuknete na Spropitné – komu, kolik, hotově nebo kartou. Spropitné pro zaměstnance není tržba, do EET nejde a v uzávěrce je zvlášť. Které si nechává podnik, jde do tržeb a EET. Ve Správě uvidíte měsíční přehled po lidech a podíl na příjmech: pokladna hlídá limit 7 % pro osvobození od daně a podklad pro mzdy stáhnete jako CSV. V tarifech Gastro, Potraviny, Nehtové studio a Služby."],
+      ["Spropitné podle toho, komu patří", "Po zaplacení ťuknete na Spropitné – komu, kolik, hotově nebo kartou. Spropitné pro zaměstnance není tržba, do EET nejde a v uzávěrce je zvlášť. Které si nechává podnik, jde do tržeb a EET. Ve Správě uvidíte měsíční přehled po lidech a podíl na příjmech: pokladna hlídá limit 7 % pro osvobození od daně a podklad pro mzdy stáhnete jako CSV. V tarifech Obchod, Gastro a Služby."],
     ],
     gastroNote: "Sazby DPH a podmínky osvobození spropitného ověřte s účetní – osvobození do 7 % se podle zákona týká zaměstnanců ve stravovacích službách.",
     dokladyTitle: "Doklady a EET",
