@@ -236,13 +236,11 @@ export default {
 
   cenik: {
     title: "SuperKasa pricing – CZK 199 a month incl. VAT, 10 days free",
-    desc: "All SuperKasa plans (Grocery, Shop, Food service, Nail studio, Services) for CZK 199 a month incl. VAT, or CZK 2,149 a year. 10-day free trial, rental or one-off purchase. Paid add-ons from CZK 69 a month.",
+    desc: "SuperKasa Shop, Food service and Services plans for CZK 199 a month incl. VAT, or CZK 2,149 a year. 10-day free trial, rental or a one-off purchase for CZK 5,990. Paid add-ons from CZK 69 a month.",
     planText: {
-      potraviny: "Convenience store, Asian food store, bakery, fruit and vegetables, butcher's shop, health food – everything including scales and deposits.",
-      obchod: "Newsagent and tobacco, drugstore, florist, stationery, clothing, phones, wine shop, pet shop and other shops.",
+      obchod: "Groceries, newsagent, drugstore, clothing and every other shop – including scales and deposits.",
       gastro: "Café, bistro, stand, patisserie, pub, bar and restaurant.",
-      nehty: "Manicure, gel nails, pedicure and selling cosmetics.",
-      sluzby: "Hairdresser, beauty salon, massage, gym, car service, repair shop and other services.",
+      sluzby: "Hairdresser, nails, beauty salon, massage, gym, car service and other services.",
     },
     planBase: ["Selling on a touchscreen", "EET 2.0 and receipts", "Cash and closings", "Up to 10 POS devices"],
     planExtraGastro: "Eat in / Take away (take-away VAT rate)",
@@ -269,7 +267,7 @@ export default {
     boxAmount: "CZK 199 <span>a month incl. VAT</span>",
     boxYear: "or <strong>CZK 2,149 a year</strong> – 10% cheaper",
     boxTag: "10-day free trial",
-    boxText: "Applies to all plans: Grocery, Shop, Food service (Gastro), Nail studio and Services.",
+    boxText: "Applies to all plans: Shop, Food service (Gastro) and Services.",
     everyTitle: "In every plan",
     every: [
       "Selling on a touchscreen",
@@ -289,8 +287,8 @@ export default {
     compareTitle: "Plan comparison",
     compareLead: "All plans cost the same – CZK 199 a month or CZK 2,149 a year incl. VAT.",
     rentTitle: "Rent or buy",
-    rent: ["Rental", "You pay monthly (CZK 199) or yearly (CZK 2,149), always incl. VAT. The licence is valid until the paid-up date, it does not renew automatically, and you get updates for the whole rental period."],
-    buy: ["One-off purchase", "You pay for the POS once and use it with no time limit. Updates are included until a date you choose when you buy. Price <strong>on request</strong>."],
+    rent: ["Rental", "You pay monthly (CZK 199) or yearly (CZK 2,149), always incl. VAT. The licence is valid until the paid-up date, it does not renew automatically, and updates and support are always included."],
+    buy: ["One-off purchase", "Pay <strong>CZK 5,990 incl. VAT</strong> once and use the Windows version with no time limit. Updates and support are included for 2 years, then you can renew them for CZK 1,490 a year. Without renewal the POS keeps working, just without new versions. SuperKasa Cloud is rental only."],
     trial: ["10-day free trial", "A new POS runs free for 10 days. You can sell, print and set up everything you need. A POS set up in 2026 issues valid receipts straight away. Training mode is there for training staff. Live EET only works with a paid licence.", "After the trial ends, the POS shows warnings for another 7 days; then, without a licence, it stops new sales. Your data stays."],
     ends: ["When payment ends", "Sales and EET keep running for another <strong>30 days</strong> with a clear warning. Then new sales stop, but receipts, closings, refunds and data export keep working. Your data stays with you."],
     faqTitle: "Frequently asked questions",

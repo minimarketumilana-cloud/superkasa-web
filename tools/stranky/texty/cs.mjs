@@ -238,13 +238,11 @@ export default {
 
   cenik: {
     title: "Ceník SuperKasa – 199 Kč měsíčně s DPH, 10 dní zdarma",
-    desc: "Všechny tarify SuperKasa (Potraviny, Obchod, Gastro, Nehtové studio, Služby) za 199 Kč měsíčně včetně DPH, ročně 2 149 Kč. 10 dní zkouška zdarma, pronájem i jednorázová koupě. Placené doplňky od 69 Kč měsíčně.",
+    desc: "Tarify SuperKasa Obchod, Gastro a Služby za 199 Kč měsíčně včetně DPH, ročně 2 149 Kč. 10 dní zkouška zdarma, pronájem, nebo jednorázová koupě za 5 990 Kč. Placené doplňky od 69 Kč měsíčně.",
     planText: {
-      potraviny: "Večerka, asijské potraviny, pekárna, zelenina, řeznictví, zdravá výživa – všechno včetně váhy a záloh.",
-      obchod: "Trafika, drogerie, květiny, papírnictví, oblečení, mobily, vinotéka, chovatelské potřeby a další obchody.",
+      obchod: "Potraviny, večerka, trafika, drogerie, oblečení a všechny další obchody – včetně váhy a záloh.",
       gastro: "Kavárna, bistro, stánek, cukrárna, hospoda, bar a restaurace.",
-      nehty: "Manikúra, gelové nehty, pedikúra a prodej kosmetiky.",
-      sluzby: "Kadeřnictví, kosmetika, masáže, fitness, autoservis, opravna a další služby.",
+      sluzby: "Kadeřnictví, nehty, kosmetika, masáže, fitness, autoservis a další služby.",
     },
     planBase: ["Prodej na dotykové obrazovce", "EET 2.0 a účtenky", "Hotovost a uzávěrky", "Až 10 pokladních zařízení"],
     planExtraGastro: "Na místě / S sebou (sazba DPH s sebou)",
@@ -271,7 +269,7 @@ export default {
     boxAmount: "199 Kč <span>měsíčně včetně DPH</span>",
     boxYear: "nebo <strong>2 149 Kč ročně</strong> – o 10 % levněji",
     boxTag: "10 dní zkouška zdarma",
-    boxText: "Platí pro všechny tarify: Potraviny, Obchod, Gastro, Nehtové studio a Služby.",
+    boxText: "Platí pro všechny tarify: Obchod, Gastro a Služby.",
     everyTitle: "V každém tarifu",
     every: [
       "Prodej na dotykové obrazovce",
@@ -291,8 +289,8 @@ export default {
     compareTitle: "Srovnání tarifů",
     compareLead: "Všechny tarify stojí stejně – 199 Kč měsíčně nebo 2 149 Kč ročně včetně DPH.",
     rentTitle: "Pronájem, nebo koupě",
-    rent: ["Pronájem", "Platíte měsíčně (199 Kč) nebo ročně (2 149 Kč), vždy včetně DPH. Licence platí do zaplaceného data, automaticky se neprodlužuje a aktualizace máte po celou dobu pronájmu."],
-    buy: ["Jednorázová koupě", "Pokladnu zaplatíte jednou a používáte ji bez časového omezení. Aktualizace jsou v ceně do data, které si zvolíte při koupi. Cena <strong>na dotaz</strong>."],
+    rent: ["Pronájem", "Platíte měsíčně (199 Kč) nebo ročně (2 149 Kč), vždy včetně DPH. Licence platí do zaplaceného data, automaticky se neprodlužuje a aktualizace a podporu máte vždy v ceně."],
+    buy: ["Jednorázová koupě", "<strong>5 990 Kč včetně DPH</strong> jednou a pokladnu ve verzi pro Windows používáte bez časového omezení. Aktualizace a podpora jsou v ceně 2 roky, pak je prodloužíte za 1 490 Kč ročně. Bez prodloužení pokladna funguje dál, jen bez nových verzí. SuperKasa Cloud je jen v pronájmu."],
     trial: ["10 dní zkouška zdarma", "Nová pokladna běží 10 dní zdarma. Můžete prodávat, tisknout a nastavit si všechno potřebné. Pokladna založená v roce 2026 vydává rovnou platné doklady. Pro zaškolení prodavačů je k dispozici zkušební režim. Ostré EET funguje jen s placenou licencí.", "Po skončení zkoušky pokladna ještě 7 dní upozorňuje, potom bez licence nový prodej zastaví. Data zůstávají."],
     ends: ["Když platba skončí", "Prodej i EET běží ještě <strong>30 dní</strong> s výrazným upozorněním. Potom se zastaví nový prodej, ale doklady, uzávěrky, vratky a export dat fungují dál. Vaše data zůstávají u vás."],
     faqTitle: "Časté otázky",

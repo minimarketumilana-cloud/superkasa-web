@@ -40,10 +40,8 @@ export const FEATURES = {
 export const FEATURE_ORDER = ["stock", "expiry", "labels", "deposits", "scale", "promo", "display", "qr", "tables", "tips"];
 
 export const TARIFFS = {
-  potraviny: { name: "Potraviny", features: FEATURE_ORDER },
-  obchod: { name: "Obchod", features: ["stock", "expiry", "labels", "deposits", "promo", "display", "qr"] },
+  obchod: { name: "Obchod", features: FEATURE_ORDER },
   gastro: { name: "Gastro", features: ["stock", "deposits", "promo", "display", "qr", "tables", "tips"] },
-  nehty: { name: "Nehtové studio", features: ["stock", "promo", "display", "qr", "tips"] },
   sluzby: { name: "Služby", features: ["stock", "promo", "display", "qr", "tips"] },
 };
 
@@ -62,7 +60,7 @@ export const ADDONS = [
 // Nákup ukázky: [název, množství, cena za jednotku, jednotka]
 export const OBORY = [
   {
-    key: "vecerka", file: "pokladna-vecerka.html", kind: "shop", tariff: "potraviny", art: "g-potraviny",
+    key: "vecerka", file: "pokladna-vecerka.html", kind: "shop", tariff: "obchod", art: "g-potraviny",
     card: "Večerka a minimarket", cardDesc: "Potraviny, nápoje, tabák, pečivo",
     title: "Pokladna pro večerky, minimarkety a potraviny",
     desc: "Potraviny, nápoje, tabák, alkohol, pečivo, ovoce a zelenina – se zálohami, váhou, skladem a cenovkami.",
@@ -87,7 +85,7 @@ export const OBORY = [
     ],
   },
   {
-    key: "asie", file: "pokladna-asijske-potraviny.html", kind: "shop", tariff: "potraviny", art: "g-asie",
+    key: "asie", file: "pokladna-asijske-potraviny.html", kind: "shop", tariff: "obchod", art: "g-asie",
     card: "Asijské potraviny", cardDesc: "Rýže, nudle, bylinky, mražené",
     title: "Pokladna pro asijské potraviny",
     desc: "Rýže, nudle, omáčky, koření, čerstvé bylinky, mražené zboží, nápoje a alkohol – s váhou, zálohami, skladem, cenovkami a vietnamštinou pro obsluhu.",
@@ -128,7 +126,7 @@ export const OBORY = [
     ],
   },
   {
-    key: "pekarna", file: "pokladna-pekarna.html", kind: "shop", tariff: "potraviny", art: "g-pecivo",
+    key: "pekarna", file: "pokladna-pekarna.html", kind: "shop", tariff: "obchod", art: "g-pecivo",
     card: "Pekárna", cardDesc: "Chléb, pečivo, koláče",
     title: "Pokladna pro pekárny",
     desc: "Chléb, pečivo, koláče a zákusky s sebou a nápoje – s rychlými dlaždicemi, expirací, odpisem neprodaného pečiva a cenovkami.",
@@ -148,7 +146,7 @@ export const OBORY = [
     notes: ["Prodáváte hlavně zákusky, dorty a zmrzlinu? Podívejte se na nastavení <a href=\"pokladna-cukrarna-zmrzlina.html\">Cukrárna a zmrzlina</a>."],
   },
   {
-    key: "zelenina", file: "pokladna-ovoce-zelenina.html", kind: "shop", tariff: "potraviny", art: "g-ovoce",
+    key: "zelenina", file: "pokladna-ovoce-zelenina.html", kind: "shop", tariff: "obchod", art: "g-ovoce",
     card: "Ovoce a zelenina", cardDesc: "Zboží na kilogramy, váha",
     title: "Pokladna pro prodejny ovoce a zeleniny",
     desc: "Vážené zboží na kilogramy, čárové kódy ze štítků váhy, obrázky ovoce a zeleniny a cenovky s cenou za kg.",
@@ -167,7 +165,7 @@ export const OBORY = [
     ],
   },
   {
-    key: "reznictvi", file: "pokladna-reznictvi.html", kind: "shop", tariff: "potraviny", art: "g-maso",
+    key: "reznictvi", file: "pokladna-reznictvi.html", kind: "shop", tariff: "obchod", art: "g-maso",
     card: "Řeznictví a uzeniny", cardDesc: "Maso na kg, váha, expirace",
     title: "Pokladna pro řeznictví a uzeniny",
     desc: "Maso a uzeniny na kilogramy, vážené kódy ze štítků váhy, expirace a cenovky s cenou za kg.",
@@ -282,7 +280,7 @@ export const OBORY = [
     ],
   },
   {
-    key: "zdrava", file: "pokladna-zdrava-vyziva.html", kind: "shop", tariff: "potraviny", art: "g-zdrava",
+    key: "zdrava", file: "pokladna-zdrava-vyziva.html", kind: "shop", tariff: "obchod", art: "g-zdrava",
     card: "Zdravá výživa a doplňky", cardDesc: "Bio, sypané zboží, vitaminy",
     title: "Pokladna pro zdravou výživu a doplňky stravy",
     desc: "Bio a bezlepkové potraviny, sypané zboží na váhu, doplňky stravy a přírodní kosmetika – s váhou, expirací, skladem a cenovkami s cenou za kg.",
@@ -454,7 +452,7 @@ export const OBORY = [
     addons: [["reservations", "objednávky klientů po kadeřnicích, hlídání překryvů a střih z rezervace prodáte jedním ťuknutím."]],
   },
   {
-    key: "nehty", file: "pokladna-nehtove-studio.html", kind: "service", tariff: "nehty", art: "g-nehty",
+    key: "nehty", file: "pokladna-nehtove-studio.html", kind: "service", tariff: "sluzby", art: "g-nehty",
     card: "Nehtové studio", cardDesc: "Manikúra, gelové nehty",
     title: "Pokladna pro nehtová studia",
     desc: "Manikúra, gelové a akrylové nehty, pedikúra a prodej laků – ceník na dlaždicích, QR platby, EET 2.0 a vietnamština pro obsluhu.",

@@ -7,7 +7,7 @@ const cards = (icons, texts) => {
   if (icons.length !== texts.length) throw new Error(`cards: ${icons.length} ikon, ale ${texts.length} karet (${texts.map((x) => x[0]).join(" | ")})`);
   return icons.map((ic, i) => card(ic, texts[i][0], texts[i][1])).join("\n      ");
 };
-const PLAN_KEYS = ["potraviny", "obchod", "gastro", "nehty", "sluzby"];
+const PLAN_KEYS = ["obchod", "gastro", "sluzby"];
 
 export const cenik = (c) => {
   const t = c.T.cenik;

@@ -95,10 +95,8 @@ export default {
     ],
   },
   tariffs: {
-    potraviny: "Thực phẩm",
     obchod: "Cửa hàng",
     gastro: "Ăn uống (Gastro)",
-    nehty: "Tiệm nail",
     sluzby: "Dịch vụ",
   },
   addons: {

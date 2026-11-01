@@ -38,7 +38,7 @@ export const op = {
       <li><strong>Pokladna</strong> – program SuperKasa nainstalovaný na počítači uživatele včetně aktualizací.</li>
       <li><strong>Licenční klíč</strong> – elektronicky podepsaný klíč, který uživatel vloží do pokladny a který určuje tarif, dobu platnosti, počet zařízení a uživatele (IČO).</li>
       <li><strong>Zařízení</strong> – počítač, tablet nebo jiné zařízení spárované s pokladnou (další okno pokladny, zákaznický displej a podobně).</li>
-      <li><strong>Tarif</strong> – Potraviny, Obchod, Gastro, Nehtové studio nebo Služby; tarify se liší rozsahem funkcí.</li>
+      <li><strong>Tarif</strong> – Obchod, Gastro nebo Služby; tarify se liší rozsahem funkcí.</li>
       <li><strong>Zkušební režim</strong> – režim, ve kterém jsou doklady označené jako zkušební a neodesílají se do ostrého systému evidence tržeb.</li>
     </ul>
 
@@ -59,7 +59,7 @@ export const op = {
     <h2>5. Cena a platby</h2>
     <ol>
       <li>Pronájem: 199 Kč měsíčně nebo 2 149 Kč ročně, ceny jsou včetně DPH. Cena je stejná pro všechny tarify.</li>
-      <li>Jednorázová koupě: cena podle individuální nabídky; aktualizace jsou v ceně do data uvedeného v licenci.</li>
+      <li>Jednorázová koupě: 5 990 Kč včetně DPH, jen pro pokladnu nainstalovanou ve Windows. Aktualizace a podpora jsou v ceně 2 roky od koupě. Prodloužení aktualizací a podpory stojí 1 490 Kč včetně DPH za rok.</li>
       <li>Platí se předem za celé období. Způsob platby a splatnost: ${ph("doplnit – faktura, bankovní převod, splatnost")}. Daňový doklad poskytovatel vystaví ${ph("doplnit")}.</li>
       <li>Cenu pro další období může poskytovatel změnit; nová cena platí jen pro období zaplacená po jejím oznámení. ${ph("doplnit lhůtu pro oznámení změny ceny")}</li>
     </ol>
@@ -69,7 +69,7 @@ export const op = {
       <li>Pronájem platí do data uvedeného v licenčním klíči a automaticky se neprodlužuje. Pokračuje zaplacením dalšího období, po kterém uživatel dostane nový licenční klíč.</li>
       <li>Když licence skončí, pokladna ještě 30 dní umožňuje prodej i odesílání do EET a zobrazuje upozornění. Poté se zastaví nový prodej. Prohlížení dokladů, uzávěrky, vratky a export dat zůstávají dostupné.</li>
       <li>U pokladny nainstalované na počítači uživatele jsou data uložená na tomto počítači; poskytovatel je nemaže a nemá k nim přístup. U pokladny v prohlížeči (SuperKasa Cloud) jsou data uložená na serveru poskytovatele a denně se tam zálohují. ${ph("doplnit podmínky pro SuperKasa Cloud a smlouvu o zpracování osobních údajů – po právní kontrole")}</li>
-      <li>Při jednorázové koupi je licence časově neomezená. Verze vydané po datu „aktualizace do“ uvedeném v licenci nejsou v ceně. ${ph("doplnit podmínky prodloužení aktualizací")}</li>
+      <li>Při jednorázové koupi je licence časově neomezená. Verze vydané po datu „aktualizace do“ uvedeném v licenci nejsou v ceně a nainstalovat je lze až po prodloužení. Bez prodloužení pokladna funguje dál, ale změny právních předpisů si uživatel hlídá sám. Opravy nutné kvůli změně zákona nebo bezpečnosti může poskytovatel dodat i po skončení aktualizací, nemá k tomu ale povinnost. Jednorázová koupě se nevztahuje na SuperKasa Cloud.</li>
     </ol>
 
     <h2>7. Aktualizace a podpora</h2>

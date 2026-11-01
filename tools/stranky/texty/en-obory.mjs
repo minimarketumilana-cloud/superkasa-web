@@ -87,10 +87,8 @@ export default {
     tips: ["Tips", "Tips outside sales and EET: who, how much, cash or card; a monthly overview that watches the 7 % limit for tax exemption."],
   },
   tariffs: {
-    potraviny: "Grocery",
     obchod: "Shop",
     gastro: "Food service (Gastro)",
-    nehty: "Nail studio",
     sluzby: "Services",
   },
   addons: {
