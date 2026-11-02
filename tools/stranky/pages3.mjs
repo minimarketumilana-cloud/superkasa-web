@@ -59,7 +59,6 @@ export const op = {
     <h2>5. Cena a platby</h2>
     <ol>
       <li>Pronájem: 199 Kč měsíčně nebo 2 149 Kč ročně, ceny jsou včetně DPH. Cena je stejná pro všechny tarify.</li>
-      <li>Platba předem na 3 roky: 5 990 Kč včetně DPH za tarif, placené doplňky za trojnásobek roční ceny. Pronájem tím platí 36 měsíců a aktualizace, zálohy a podpora jsou v ceně po celou dobu. Pak pokračuje běžným pronájmem.</li>
       <li>Platí se předem za celé období. Způsob platby a splatnost: ${ph("doplnit – faktura, bankovní převod, splatnost")}. Daňový doklad poskytovatel vystaví ${ph("doplnit")}.</li>
       <li>Cenu pro další období může poskytovatel změnit; nová cena platí jen pro období zaplacená po jejím oznámení. ${ph("doplnit lhůtu pro oznámení změny ceny")}</li>
     </ol>
