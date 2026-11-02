@@ -174,7 +174,7 @@ export default [
         id: "licence-jazyk",
         h2: "Licence, placení a jazyk",
         html: `
-<p>Licence stojí <strong>199 Kč měsíčně nebo 2 149 Kč ročně, včetně DPH</strong>. Prvních 10 dní je zdarma. Kdo zaplatí během zkoušky, tomu zbylé dny zůstanou a placené období začne až po nich.</p>
+<p>Licence stojí <strong>189 Kč měsíčně nebo 2 041 Kč ročně, včetně DPH</strong>. Prvních 10 dní je zdarma. Kdo zaplatí během zkoušky, tomu zbylé dny zůstanou a placené období začne až po nich.</p>
 <ol class="steps">
 <li>Klepněte na <strong>Zaplatit</strong> v liště nahoře, nebo otevřete <strong>Správa → Systém → Licence a tarif</strong>.</li>
 <li>Vyberte doplňky, pokud je chcete, a klepněte na <strong>Vystavit QR platbu</strong>.</li>
@@ -231,7 +231,7 @@ export default [
         html: `
 <p>Cena v reklamě bývá jen část nákladů. Spočítejte si celý rok.</p>
 <h3>Cena s DPH, nebo bez DPH</h3>
-<p>Ceníky pro podnikatele bývají bez DPH. Když nejste plátce DPH, daň si neodečtete a platíte cenu s DPH. Příklad: 199 Kč bez DPH je při sazbě 21 % celkem 240,79 Kč. Ptejte se vždy na konečnou cenu.</p>
+<p>Ceníky pro podnikatele bývají bez DPH. Když nejste plátce DPH, daň si neodečtete a platíte cenu s DPH. Příklad: 189 Kč bez DPH je při sazbě 21 % celkem 228,69 Kč. Ptejte se vždy na konečnou cenu.</p>
 <h3>Další zařízení</h3>
 <p>Zjistěte, kolik zařízení je v ceně. Druhá kasa, tablet na příjem zboží a mobil pro brigádníka se můžou platit každý zvlášť.</p>
 <h3>Hardware</h3>
@@ -239,7 +239,7 @@ export default [
 <h3>Doplňky a poplatky</h3>
 <p>Docházka, věrnostní program nebo rezervace bývají za příplatek. Zeptejte se také na poplatek z tržeb a z plateb kartou, na smluvní závazek a na cenu za ukončení.</p>
 <h3>Příklad výpočtu</h3>
-<p>U SuperKasy je cena 199 Kč měsíčně nebo 2 149 Kč ročně, vždy včetně DPH. Kavárna, která chce navíc Receptury a normy za 79 Kč, platí 278 Kč měsíčně. Hardware si pořizuje sama.</p>
+<p>U SuperKasy je cena 189 Kč měsíčně nebo 2 041 Kč ročně, vždy včetně DPH. Kavárna, která chce navíc Receptury a normy za 79 Kč, platí 268 Kč měsíčně. Hardware si pořizuje sama.</p>
 <div class="tbl"><table>
 <thead><tr><th>Doplněk</th><th>Kč měsíčně s DPH</th></tr></thead>
 <tbody>
@@ -342,7 +342,7 @@ export default [
 <div class="tbl"><table>
 <thead><tr><th>Otázka</th><th>Odpověď</th></tr></thead>
 <tbody>
-<tr><td>Cena</td><td>199 Kč měsíčně nebo 2 149 Kč ročně s DPH</td></tr>
+<tr><td>Cena</td><td>189 Kč měsíčně nebo 2 041 Kč ročně s DPH</td></tr>
 <tr><td>Zkouška</td><td>10 dní zdarma, bez karty</td></tr>
 <tr><td>Zařízení v ceně</td><td>Až 10</td></tr>
 <tr><td>Poplatek z tržeb</td><td>Žádný</td></tr>

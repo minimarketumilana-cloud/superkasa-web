@@ -28,7 +28,7 @@ export const index = (c) => {
       operatingSystem: "Windows 10, Windows 11, Web browser (Android, iOS)",
       inLanguage: ["cs", "vi", "en"],
       description: t.ldDesc,
-      offers: { "@type": "Offer", price: "199", priceCurrency: "CZK", description: t.ldOffer },
+      offers: { "@type": "Offer", price: "189", priceCurrency: "CZK", description: t.ldOffer },
     },
     body: `
 <section class="hero hero-pick">

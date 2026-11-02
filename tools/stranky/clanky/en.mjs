@@ -166,7 +166,7 @@ export default {
 <p>The tax credit (sleva na dani) is in zákon o daních z příjmů (the Income Tax Act). It can be used by business owners who are natural persons and file a tax return. A limited liability company (s.r.o.) does not have it. You claim it once, for the first year in which you are required to register a sale. For most business owners this will be 2027.</p>
 <p>A self-employed person (OSVČ) whose tax equals the flat-rate tax cannot claim it, because they do not file a return. This is our reading of the law. Finanční správa does not state it explicitly. Check it with the tax office (finanční úřad) or your accountant.</p>
 <p>The credit does not depend on the number of POS devices or on whether you registered sales in the original EET. It also does not matter whether you are a VAT payer.</p>
-<p>The amount of the credit is calculated like this: 15% of the partial tax base from self-employment (dílčí základ daně ze samostatné činnosti) minus the basic taxpayer credit (základní sleva na poplatníka), which is <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">CZK 30,840</a>. The credit is at most CZK 5,000.</p>
+<p>The amount of the credit is calculated like this: 15% of the partial tax base from self-employment (dílčí základ daně ze samostatné činnosti) minus the basic taxpayer credit (základní sleva na poplatníka), which is <a href="https://e-sbirka.gov.cz/sb/1892/586/2027-01-01" rel="noopener">CZK 30,840</a>. The credit is at most CZK 5,000.</p>
 <div class="tbl"><table>
   <thead><tr><th>Partial tax base</th><th>15%</th><th>After deducting CZK 30,840</th><th>Credit</th></tr></thead>
   <tbody>
@@ -433,7 +433,7 @@ export default {
 <p>You must meet all these conditions:</p>
 <ul>
   <li><strong>You are a natural person.</strong> The regime is not for a limited liability company (s.r.o.) or other legal entities.</li>
-  <li><strong>You are in band 1 of the flat-rate regime.</strong> Under <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">§ 2a of zákon o daních z příjmů</a> (the Income Tax Act), the flat-rate regime is, among other things, only for VAT non-payers (neplátci DPH).</li>
+  <li><strong>You are in band 1 of the flat-rate regime.</strong> Under <a href="https://e-sbirka.gov.cz/sb/1892/586/2027-01-01" rel="noopener">§ 2a of zákon o daních z příjmů</a> (the Income Tax Act), the flat-rate regime is, among other things, only for VAT non-payers (neplátci DPH).</li>
   <li><strong>Your income from self-employment for the previous year did not exceed CZK 1,000,000.</strong> For 2027, the year that counts is 2026. It does not matter which self-employed activity the income comes from.</li>
   <li><strong>You file the notice on time.</strong> Without it, the regime does not start.</li>
 </ul>
@@ -861,11 +861,11 @@ export default {
     ],
     sources: [
       ["Zákon č. 235/2004 Sb., o DPH (VAT Act), § 26 to 35a, 42, 45 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/2004-235"],
-      ["Zákon č. 634/1992 Sb., o ochraně spotřebitele (Consumer Protection Act), § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1992-634"],
+      ["Zákon č. 634/1892 Sb., o ochraně spotřebitele (Consumer Protection Act), § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1892-634"],
       ["Zákon č. 180/2026 Sb., o evidenci tržeb (Act on Sales Registration), § 8 and the amendment of the annex to the VAT Act (eet.gov.cz)", ZAKON],
       ["Sales registration in practice and the POK (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/evidence-trzeb-v-praxi"],
       ["Errors and how to solve them: voiding and correcting a sale (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/chyby-a-jejich-reseni"],
-      ["Zákon č. 563/1991 Sb., o účetnictví (Accounting Act), § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1991-563"],
+      ["Zákon č. 563/1891 Sb., o účetnictví (Accounting Act), § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1891-563"],
     ],
     related: ["eet-2-0-pruvodce", "tiskarna-ctecka-zasuvka", "eet-off-pausalni-dan"],
   },
@@ -1042,7 +1042,7 @@ export default {
         id: "licence-jazyk",
         h2: "Licence, payment and language",
         html: `
-<p>The licence costs <strong>CZK 199 a month or CZK 2,149 a year, including VAT</strong>. The first 10 days are free. If you pay during the trial, you keep the remaining days and the paid period starts only after them.</p>
+<p>The licence costs <strong>CZK 189 a month or CZK 2,041 a year, including VAT</strong>. The first 10 days are free. If you pay during the trial, you keep the remaining days and the paid period starts only after them.</p>
 <ol class="steps">
 <li>Tap <strong>Pay</strong> in the top bar, or open <strong>Admin → System → Licence and plan</strong>.</li>
 <li>Select add-ons if you want them, and tap <strong>Create QR payment</strong>.</li>
@@ -1099,7 +1099,7 @@ export default {
         html: `
 <p>The price in an advert is often only part of the cost. Work it out for a whole year.</p>
 <h3>Price with or without VAT</h3>
-<p>Price lists for businesses are often without VAT. If you are not a VAT payer (plátce DPH), you cannot deduct the tax and you pay the price with VAT. Example: CZK 199 without VAT comes to CZK 240.79 in total at a 21% rate. Always ask for the final price.</p>
+<p>Price lists for businesses are often without VAT. If you are not a VAT payer (plátce DPH), you cannot deduct the tax and you pay the price with VAT. Example: CZK 189 without VAT comes to CZK 228.69 in total at a 21% rate. Always ask for the final price.</p>
 <h3>Extra devices</h3>
 <p>Find out how many devices are included in the price. A second till, a tablet for receiving goods and a phone for a temporary worker may each be paid for separately.</p>
 <h3>Hardware</h3>
@@ -1107,7 +1107,7 @@ export default {
 <h3>Add-ons and fees</h3>
 <p>Attendance, a loyalty programme or reservations often cost extra. Also ask about fees on sales and card payments, about any contract commitment and about the cost of ending it.</p>
 <h3>Example calculation</h3>
-<p>With SuperKasa the price is CZK 199 a month or CZK 2,149 a year, always including VAT. A café that also wants Recipes and portion costing for CZK 79 pays CZK 278 a month. It buys its hardware itself.</p>
+<p>With SuperKasa the price is CZK 189 a month or CZK 2,041 a year, always including VAT. A café that also wants Recipes and portion costing for CZK 79 pays CZK 268 a month. It buys its hardware itself.</p>
 <div class="tbl"><table>
 <thead><tr><th>Add-on</th><th>CZK a month incl. VAT</th></tr></thead>
 <tbody>
@@ -1210,7 +1210,7 @@ export default {
 <div class="tbl"><table>
 <thead><tr><th>Question</th><th>Answer</th></tr></thead>
 <tbody>
-<tr><td>Price</td><td>CZK 199 a month or CZK 2,149 a year incl. VAT</td></tr>
+<tr><td>Price</td><td>CZK 189 a month or CZK 2,041 a year incl. VAT</td></tr>
 <tr><td>Trial</td><td>10 days free, no card</td></tr>
 <tr><td>Devices included</td><td>Up to 10</td></tr>
 <tr><td>Fee on sales</td><td>None</td></tr>

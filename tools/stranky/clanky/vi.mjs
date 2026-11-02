@@ -167,7 +167,7 @@ export default {
 <p>Khoản giảm này được quy định trong zákon o daních z příjmů (luật thuế thu nhập). Người được hưởng là người kinh doanh cá nhân (fyzická osoba) có nộp tờ khai thuế (daňové přiznání). Công ty s.r.o. không có khoản giảm này. Bạn chỉ dùng được một lần, cho năm đầu tiên bạn bắt buộc ghi nhận doanh thu. Với đa số người kinh doanh, đó sẽ là năm 2027.</p>
 <p>OSVČ có số thuế bằng thuế khoán (paušální daň) thì không được hưởng, vì người đó không nộp tờ khai. Đây là cách hiểu luật của chúng tôi, Finanční správa không nêu rõ điều này. Hãy kiểm tra lại với finanční úřad (cơ quan thuế) hoặc kế toán.</p>
 <p>Khoản giảm không phụ thuộc vào số máy tính tiền, cũng không phụ thuộc vào việc bạn đã từng ghi nhận trong EET cũ hay chưa. Bạn có phải là người nộp thuế DPH hay không cũng không ảnh hưởng.</p>
-<p>Cách tính khoản giảm như sau: 15 % cơ sở tính thuế thành phần từ hoạt động kinh doanh độc lập (dílčí základ daně ze samostatné činnosti) trừ đi khoản giảm cơ bản cho người nộp thuế (základní sleva na poplatníka), là <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">30 840 Kč</a>. Khoản giảm tối đa là 5 000 Kč.</p>
+<p>Cách tính khoản giảm như sau: 15 % cơ sở tính thuế thành phần từ hoạt động kinh doanh độc lập (dílčí základ daně ze samostatné činnosti) trừ đi khoản giảm cơ bản cho người nộp thuế (základní sleva na poplatníka), là <a href="https://e-sbirka.gov.cz/sb/1892/586/2027-01-01" rel="noopener">30 840 Kč</a>. Khoản giảm tối đa là 5 000 Kč.</p>
 <div class="tbl"><table>
   <thead><tr><th>Cơ sở tính thuế thành phần</th><th>15 %</th><th>Sau khi trừ 30 840 Kč</th><th>Khoản giảm</th></tr></thead>
   <tbody>
@@ -434,7 +434,7 @@ export default {
 <p>Bạn phải đáp ứng tất cả các điều kiện sau:</p>
 <ul>
   <li><strong>Bạn là cá nhân (fyzická osoba).</strong> Chế độ này không dành cho công ty trách nhiệm hữu hạn (s.r.o.) và các pháp nhân khác.</li>
-  <li><strong>Bạn ở bậc 1 (1. pásmo) của chế độ thuế khoán.</strong> Theo <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">§ 2a của zákon o daních z příjmů</a> (luật thuế thu nhập), chế độ thuế khoán chỉ dành cho người không nộp thuế DPH (neplátce DPH), ngoài các điều kiện khác.</li>
+  <li><strong>Bạn ở bậc 1 (1. pásmo) của chế độ thuế khoán.</strong> Theo <a href="https://e-sbirka.gov.cz/sb/1892/586/2027-01-01" rel="noopener">§ 2a của zákon o daních z příjmů</a> (luật thuế thu nhập), chế độ thuế khoán chỉ dành cho người không nộp thuế DPH (neplátce DPH), ngoài các điều kiện khác.</li>
   <li><strong>Thu nhập từ hoạt động kinh doanh độc lập (samostatná činnost) của năm trước không vượt quá 1 000 000 Kč.</strong> Với năm 2027 thì xét năm 2026. Thu nhập đến từ hoạt động độc lập nào cũng tính như nhau.</li>
   <li><strong>Bạn nộp thông báo đúng hạn.</strong> Không có thông báo thì chế độ không bắt đầu.</li>
 </ul>
@@ -862,11 +862,11 @@ export default {
     ],
     sources: [
       ["Luật Zákon č. 235/2004 Sb. về DPH, § 26 đến 35a, 42, 45 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/2004-235"],
-      ["Luật Zákon č. 634/1992 Sb. về bảo vệ người tiêu dùng, § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1992-634"],
+      ["Luật Zákon č. 634/1892 Sb. về bảo vệ người tiêu dùng, § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1892-634"],
       ["Luật Zákon č. 180/2026 Sb. về ghi nhận doanh thu, § 8 và sửa đổi phụ lục của zákon o DPH (eet.gov.cz)", ZAKON],
       ["Ghi nhận doanh thu trong thực tế và mã POK (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/evidence-trzeb-v-praxi"],
       ["Lỗi và cách xử lý: hủy và sửa doanh thu (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/chyby-a-jejich-reseni"],
-      ["Luật Zákon č. 563/1991 Sb. về kế toán, § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1991-563"],
+      ["Luật Zákon č. 563/1891 Sb. về kế toán, § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1891-563"],
     ],
     related: ["eet-2-0-pruvodce", "tiskarna-ctecka-zasuvka", "eet-off-pausalni-dan"],
   },
@@ -1042,7 +1042,7 @@ export default {
         id: "licence-jazyk",
         h2: "Giấy phép, thanh toán và ngôn ngữ",
         html: `
-<p>Giấy phép có giá <strong>199 Kč/tháng hoặc 2 149 Kč/năm, đã gồm thuế DPH</strong>. 10 ngày đầu miễn phí. Ai trả tiền trong thời gian dùng thử thì vẫn giữ những ngày còn lại, và thời gian trả phí chỉ bắt đầu sau đó.</p>
+<p>Giấy phép có giá <strong>189 Kč/tháng hoặc 2 041 Kč/năm, đã gồm thuế DPH</strong>. 10 ngày đầu miễn phí. Ai trả tiền trong thời gian dùng thử thì vẫn giữ những ngày còn lại, và thời gian trả phí chỉ bắt đầu sau đó.</p>
 <ol class="steps">
 <li>Chạm vào <strong>Thanh toán</strong> ở thanh phía trên, hoặc mở <strong>Quản lý → Hệ thống → Giấy phép và gói</strong>.</li>
 <li>Chọn tiện ích trả thêm nếu bạn muốn, rồi chạm vào <strong>Tạo mã QR thanh toán</strong>.</li>
@@ -1098,7 +1098,7 @@ export default {
         html: `
 <p>Giá quảng cáo thường chỉ là một phần chi phí. Hãy tính cả năm.</p>
 <h3>Giá có DPH hay chưa có DPH</h3>
-<p>Bảng giá cho người kinh doanh thường ghi giá chưa có DPH (thuế giá trị gia tăng). Nếu bạn không phải người nộp thuế DPH (plátce DPH), bạn không được khấu trừ thuế và phải trả giá có DPH. Ví dụ: 199 Kč chưa DPH, với thuế suất 21 %, là tổng cộng 240,79 Kč. Hãy luôn hỏi giá cuối cùng.</p>
+<p>Bảng giá cho người kinh doanh thường ghi giá chưa có DPH (thuế giá trị gia tăng). Nếu bạn không phải người nộp thuế DPH (plátce DPH), bạn không được khấu trừ thuế và phải trả giá có DPH. Ví dụ: 189 Kč chưa DPH, với thuế suất 21 %, là tổng cộng 228,69 Kč. Hãy luôn hỏi giá cuối cùng.</p>
 <h3>Thiết bị thêm</h3>
 <p>Hãy hỏi giá đã gồm bao nhiêu thiết bị. Quầy thứ hai, máy tính bảng để nhập hàng và điện thoại cho nhân viên làm thời vụ có thể mỗi cái phải trả riêng.</p>
 <h3>Phần cứng</h3>
@@ -1106,7 +1106,7 @@ export default {
 <h3>Tiện ích và phí</h3>
 <p>Chấm công, chương trình khách hàng thân thiết hay đặt lịch thường phải trả thêm. Hãy hỏi cả phí trên doanh thu và trên thanh toán thẻ, ràng buộc hợp đồng và chi phí khi chấm dứt.</p>
 <h3>Ví dụ tính</h3>
-<p>Với SuperKasa, giá là 199 Kč/tháng hoặc 2 149 Kč/năm, luôn đã gồm thuế DPH. Quán cà phê muốn thêm Công thức và định mức giá 79 Kč sẽ trả 278 Kč/tháng. Phần cứng quán tự mua.</p>
+<p>Với SuperKasa, giá là 189 Kč/tháng hoặc 2 041 Kč/năm, luôn đã gồm thuế DPH. Quán cà phê muốn thêm Công thức và định mức giá 79 Kč sẽ trả 268 Kč/tháng. Phần cứng quán tự mua.</p>
 <div class="tbl"><table>
 <thead><tr><th>Tiện ích trả thêm</th><th>Kč/tháng, đã gồm DPH</th></tr></thead>
 <tbody>
@@ -1209,7 +1209,7 @@ export default {
 <div class="tbl"><table>
 <thead><tr><th>Câu hỏi</th><th>Trả lời</th></tr></thead>
 <tbody>
-<tr><td>Giá</td><td>199 Kč/tháng hoặc 2 149 Kč/năm, đã gồm thuế DPH</td></tr>
+<tr><td>Giá</td><td>189 Kč/tháng hoặc 2 041 Kč/năm, đã gồm thuế DPH</td></tr>
 <tr><td>Dùng thử</td><td>10 ngày miễn phí, không cần thẻ</td></tr>
 <tr><td>Thiết bị trong giá</td><td>Tối đa 10</td></tr>
 <tr><td>Phí trên doanh thu</td><td>Không có</td></tr>

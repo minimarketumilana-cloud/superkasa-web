@@ -50,7 +50,7 @@ render(`
     <div style="font-size:62px;font-weight:700;line-height:1.1;letter-spacing:-1px">Pokladna pro obchody,<br>gastro a služby</div>
     <div style="margin-top:26px;font-size:32px;color:#e2b48a;font-weight:600">EET 2.0 · dotyková obrazovka · sklad a cenovky</div>
   </div>
-  <div style="font-size:28px;color:#f3dfca">superkasa.cz · 199 Kč měsíčně s DPH · 30 dní zdarma</div>
+  <div style="font-size:28px;color:#f3dfca">superkasa.cz · 189 Kč měsíčně s DPH · 10 dní zdarma</div>
 </div>`, 1200, 630, "img/og.png");
 
 rmSync(tmp, { recursive: true, force: true });
