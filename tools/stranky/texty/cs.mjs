@@ -238,7 +238,7 @@ export default {
 
   cenik: {
     title: "Ceník SuperKasa – 199 Kč měsíčně s DPH, 10 dní zdarma",
-    desc: "Tarify SuperKasa Obchod, Gastro a Služby za 199 Kč měsíčně včetně DPH, ročně 2 149 Kč. 10 dní zkouška zdarma, pronájem, nebo jednorázová koupě za 5 990 Kč. Placené doplňky od 69 Kč měsíčně.",
+    desc: "Tarify SuperKasa Obchod, Gastro a Služby za 199 Kč měsíčně včetně DPH, ročně 2 149 Kč, nebo 5 990 Kč na 3 roky předem. 10 dní zkouška zdarma. Pokladna běží v prohlížeči. Placené doplňky od 69 Kč měsíčně.",
     planText: {
       obchod: "Potraviny, večerka, trafika, drogerie, oblečení a všechny další obchody – včetně váhy a záloh.",
       gastro: "Kavárna, bistro, stánek, cukrárna, hospoda, bar a restaurace.",
@@ -290,7 +290,7 @@ export default {
     compareLead: "Všechny tarify stojí stejně – 199 Kč měsíčně nebo 2 149 Kč ročně včetně DPH.",
     rentTitle: "Pronájem, nebo koupě",
     rent: ["Pronájem", "Platíte měsíčně (199 Kč) nebo ročně (2 149 Kč), vždy včetně DPH. Licence platí do zaplaceného data, automaticky se neprodlužuje a aktualizace a podporu máte vždy v ceně."],
-    buy: ["Jednorázová koupě", "<strong>5 990 Kč včetně DPH</strong> jednou a pokladnu ve verzi pro Windows používáte bez časového omezení. Aktualizace a podpora jsou v ceně 2 roky, pak je prodloužíte za 1 490 Kč ročně. Bez prodloužení pokladna funguje dál, jen bez nových verzí. SuperKasa Cloud je jen v pronájmu."],
+    buy: ["Zaplatit jednou na 3 roky", "<strong>5 990 Kč včetně DPH</strong> jednou předem a 3 roky máte klid, vychází to asi na 166 Kč měsíčně. Aktualizace, zálohy a podpora jsou po celou dobu v ceně. Pak pokračujete ročním pronájmem. Pokladna běží v prohlížeči, nic se neinstaluje."],
     trial: ["10 dní zkouška zdarma", "Nová pokladna běží 10 dní zdarma. Můžete prodávat, tisknout a nastavit si všechno potřebné. Pokladna založená v roce 2026 vydává rovnou platné doklady. Pro zaškolení prodavačů je k dispozici zkušební režim. Ostré EET funguje jen s placenou licencí.", "Po skončení zkoušky pokladna ještě 7 dní upozorňuje, potom bez licence nový prodej zastaví. Data zůstávají."],
     ends: ["Když platba skončí", "Prodej i EET běží ještě <strong>30 dní</strong> s výrazným upozorněním. Potom se zastaví nový prodej, ale doklady, uzávěrky, vratky a export dat fungují dál. Vaše data zůstávají u vás."],
     faqTitle: "Časté otázky",

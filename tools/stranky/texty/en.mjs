@@ -236,7 +236,7 @@ export default {
 
   cenik: {
     title: "SuperKasa pricing – CZK 199 a month incl. VAT, 10 days free",
-    desc: "SuperKasa Shop, Food service and Services plans for CZK 199 a month incl. VAT, or CZK 2,149 a year. 10-day free trial, rental or a one-off purchase for CZK 5,990. Paid add-ons from CZK 69 a month.",
+    desc: "SuperKasa Shop, Food service and Services plans for CZK 199 a month incl. VAT, CZK 2,149 a year, or CZK 5,990 for 3 years upfront. 10-day free trial. The till runs in the browser. Paid add-ons from CZK 69 a month.",
     planText: {
       obchod: "Groceries, newsagent, drugstore, clothing and every other shop – including scales and deposits.",
       gastro: "Café, bistro, stand, patisserie, pub, bar and restaurant.",
@@ -288,7 +288,7 @@ export default {
     compareLead: "All plans cost the same – CZK 199 a month or CZK 2,149 a year incl. VAT.",
     rentTitle: "Rent or buy",
     rent: ["Rental", "You pay monthly (CZK 199) or yearly (CZK 2,149), always incl. VAT. The licence is valid until the paid-up date, it does not renew automatically, and updates and support are always included."],
-    buy: ["One-off purchase", "Pay <strong>CZK 5,990 incl. VAT</strong> once and use the Windows version with no time limit. Updates and support are included for 2 years, then you can renew them for CZK 1,490 a year. Without renewal the POS keeps working, just without new versions. SuperKasa Cloud is rental only."],
+    buy: ["Pay once for 3 years", "Pay <strong>CZK 5,990 incl. VAT</strong> once upfront and you are covered for 3 years, about CZK 166 a month. Updates, backups and support are included the whole time. Then you continue with yearly rental. The till runs in the browser, nothing to install."],
     trial: ["10-day free trial", "A new POS runs free for 10 days. You can sell, print and set up everything you need. A POS set up in 2026 issues valid receipts straight away. Training mode is there for training staff. Live EET only works with a paid licence.", "After the trial ends, the POS shows warnings for another 7 days; then, without a licence, it stops new sales. Your data stays."],
     ends: ["When payment ends", "Sales and EET keep running for another <strong>30 days</strong> with a clear warning. Then new sales stop, but receipts, closings, refunds and data export keep working. Your data stays with you."],
     faqTitle: "Frequently asked questions",

@@ -236,7 +236,7 @@ export default {
 
   cenik: {
     title: "Bảng giá SuperKasa – 199 Kč/tháng đã gồm thuế DPH, 10 ngày miễn phí",
-    desc: "Các gói SuperKasa Cửa hàng, Ăn uống và Dịch vụ giá 199 Kč/tháng đã gồm thuế DPH, cả năm 2 149 Kč. Dùng thử miễn phí 10 ngày, thuê hoặc mua một lần với giá 5 990 Kč. Tiện ích trả thêm từ 69 Kč/tháng.",
+    desc: "Các gói SuperKasa Cửa hàng, Ăn uống và Dịch vụ giá 199 Kč/tháng đã gồm thuế DPH, cả năm 2 149 Kč, hoặc 5 990 Kč trả trước 3 năm. Dùng thử miễn phí 10 ngày. Máy tính tiền chạy trên trình duyệt. Tiện ích trả thêm từ 69 Kč/tháng.",
     planText: {
       obchod: "Tạp hóa, quầy báo thuốc lá, hóa mỹ phẩm, quần áo và mọi cửa hàng khác – có đủ cả cân và tiền cược vỏ chai.",
       gastro: "Quán cà phê, bistro, quầy ăn, tiệm bánh ngọt, quán bia, bar và nhà hàng.",
@@ -288,7 +288,7 @@ export default {
     compareLead: "Tất cả các gói cùng giá – 199 Kč/tháng hoặc 2 149 Kč/năm, đã gồm thuế DPH.",
     rentTitle: "Thuê hay mua",
     rent: ["Thuê", "Trả theo tháng (199 Kč) hoặc theo năm (2 149 Kč), luôn đã gồm thuế DPH. Giấy phép có hiệu lực đến ngày đã trả, không tự động gia hạn, và bạn được cập nhật trong suốt thời gian thuê."],
-    buy: ["Mua một lần", "Trả một lần <strong>5 990 Kč đã gồm thuế DPH</strong> và dùng bản Windows không giới hạn thời gian. Cập nhật và hỗ trợ đã gồm trong 2 năm, sau đó gia hạn 1 490 Kč mỗi năm. Không gia hạn thì máy vẫn chạy, chỉ không có phiên bản mới. SuperKasa Cloud chỉ cho thuê."],
+    buy: ["Trả một lần cho 3 năm", "Trả trước một lần <strong>5 990 Kč đã gồm thuế DPH</strong> và yên tâm 3 năm, khoảng 166 Kč mỗi tháng. Cập nhật, sao lưu và hỗ trợ đã gồm trong suốt thời gian. Sau đó tiếp tục thuê theo năm. Máy tính tiền chạy trên trình duyệt, không cần cài đặt."],
     trial: ["Dùng thử miễn phí 10 ngày", "Máy tính tiền mới chạy miễn phí 10 ngày. Bạn có thể bán hàng, in và cài đặt mọi thứ cần thiết. Máy tạo trong năm 2026 xuất hóa đơn hợp lệ ngay. Chế độ thử dùng để đào tạo nhân viên. EET thật chỉ hoạt động khi có giấy phép trả phí.", "Hết thời gian dùng thử, máy tính tiền còn nhắc thêm 7 ngày, sau đó nếu không có giấy phép sẽ dừng bán hàng mới. Dữ liệu vẫn được giữ."],
     ends: ["Khi hết hạn thanh toán", "Bán hàng và EET vẫn chạy thêm <strong>30 ngày</strong> kèm thông báo nhắc rõ ràng. Sau đó việc bán hàng mới dừng lại, nhưng hóa đơn, chốt ca, trả hàng và xuất dữ liệu vẫn hoạt động. Dữ liệu vẫn nằm ở chỗ bạn."],
     faqTitle: "Câu hỏi thường gặp",
