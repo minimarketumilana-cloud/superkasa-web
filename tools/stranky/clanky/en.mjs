@@ -910,7 +910,7 @@ export default {
 <li>Tap <strong>Create for free</strong>. If you want to pay straight away, tap <strong>Buy now</strong>. After setup the POS sends you straight to payment, and you keep the 10 free days on top.</li>
 </ol>
 <p>Lost the link to finish? Fill in the sign-up again with the same address, e-mail and company ID (IČO).</p>
-<p><strong>Windows app:</strong> download it on the <a href="ke-stazeni.html">Download</a> page. Windows may show “Unknown publisher” (Neznámý vydavatel). Click “More info” (Další informace) and “Run anyway” (Přesto spustit). The installer offers a code for the first start. You do not need it on this computer.</p>`,
+<p><strong>Nothing to download:</strong> the till runs in the browser. It prints receipts through the print window on the printer you have installed in Windows.</p>`,
       },
       {
         id: "zrizeni",

@@ -910,7 +910,7 @@ export default {
 <li>Chạm vào <strong>Tạo miễn phí</strong>. Nếu muốn trả tiền ngay, chạm vào <strong>Mua ngay</strong>. Sau khi tạo xong, máy tính tiền đưa bạn thẳng đến bước thanh toán và bạn vẫn được giữ thêm 10 ngày miễn phí.</li>
 </ol>
 <p>Mất đường dẫn để hoàn tất đăng ký? Hãy điền lại đăng ký với cùng địa chỉ, e-mail và IČO.</p>
-<p><strong>Chương trình cho Windows:</strong> tải ở trang <a href="ke-stazeni.html">Tải về</a>. Windows có thể hiện “Neznámý vydavatel” (nhà phát hành không xác định). Bấm “Další informace” (Thông tin thêm) rồi “Přesto spustit” (Vẫn chạy). Bộ cài sẽ đưa ra một mã để chạy lần đầu, trên máy tính này bạn không cần mã đó.</p>`,
+<p><strong>Không cần tải gì:</strong> máy tính tiền chạy trên trình duyệt. Hóa đơn được in qua cửa sổ in ra máy in đã cài trong Windows.</p>`,
       },
       {
         id: "zrizeni",

@@ -272,15 +272,13 @@ export const stazeni = (c) => {
   <div class="wrap">
     <div class="grid grid-2">
       <article class="card">
-        ${icon("download")}
+        ${icon("monitor")}
         <h2>${t.appTitle}</h2>
         <p>${t.appMeta}</p>
         <div class="actions" style="margin-top:12px">
-          <a class="btn btn-primary" href="${c.up}aktualizace/SuperKasa-Setup-0.2.2.exe" download>${t.download}</a>
-          ${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${c.T.common.registerCta}</a>` : ""}
+          <a class="btn btn-primary" href="${REGISTER_URL}">${t.download}</a>
           <a class="btn btn-ghost" href="tel:+420608886882">${c.T.common.call}</a>
         </div>
-        <p class="small muted" style="margin-top:12px">${t.smartscreen} <code style="word-break:break-all">e70259a0d3f46007e8e6ffe6a2140b7f29d8f30e3f9305aeb117fb2641d472b3</code></p>
       </article>
       <article class="card">
         <h2>${t.doesTitle}</h2>

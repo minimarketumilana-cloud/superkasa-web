@@ -42,7 +42,7 @@ export default [
 <li>Klepněte na <strong>Založit pokladnu zdarma</strong>. Chcete-li platit hned, klepněte na <strong>Koupit rovnou</strong>. Po zřízení vás pokladna pošle rovnou k placení a 10 dní zdarma vám zůstane navíc.</li>
 </ol>
 <p>Ztratili jste odkaz na dokončení? Vyplňte registraci znovu se stejnou adresou, e-mailem a IČO.</p>
-<p><strong>Program pro Windows:</strong> stáhněte ho na stránce <a href="ke-stazeni.html">Ke stažení</a>. Windows může ukázat „Neznámý vydavatel“. Klepněte na Další informace a Přesto spustit. Instalátor nabídne kód pro první spuštění, na tomto počítači ho nepotřebujete.</p>`,
+<p><strong>Nic se nestahuje:</strong> pokladna běží v prohlížeči. Účtenky tiskne přes okno tisku na tiskárnu, kterou máte nainstalovanou ve Windows.</p>`,
       },
       {
         id: "zrizeni",
