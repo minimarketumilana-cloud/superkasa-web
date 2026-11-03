@@ -182,7 +182,7 @@ export default [
 <li>Klepněte na <strong>Už jsem zaplatil – zkontrolovat</strong>.</li>
 </ol>
 <aside class="note warn"><p>Platby za licenci zatím párujeme ručně, proto se licence neprodlouží hned po zaplacení. Když QR platbu v pokladně nevidíte, zavolejte nám. Licenční klíč vložíte do pole <strong>Licenční klíč</strong> a klepnete na <strong>Aktivovat</strong>.</p></aside>
-<p>Po skončení zkoušky prodáváte ještě 7 dní s upozorněním, po skončení předplatného 30 dní. Pak se nový prodej zastaví. Data, doklady, uzávěrky, vratky a export fungují dál.</p>
+<p>Po skončení zkoušky prodáváte ještě 3 dny s upozorněním, po skončení zaplaceného období také 3 dny (rezerva na připsání platby). Pak se prodej zamkne a zůstane jen Správa s daty. Data, doklady, uzávěrky, vratky a export fungují dál.</p>
 <p><strong>Jazyk.</strong> Vlajka nahoře přepne češtinu, vietnamštinu nebo angličtinu. Každý prodavač má svůj jazyk. Doklad pro zákazníka je vždy česky.</p>`,
       },
     ],
