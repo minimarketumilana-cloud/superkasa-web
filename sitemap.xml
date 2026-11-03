@@ -361,6 +361,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/pokladna-pro-vietnamske-obchody.html"/>
   </url>
   <url>
+    <loc>https://superkasa.cz/obchodni-podminky.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/obchodni-podminky.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/obchodni-podminky.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/obchodni-podminky.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/obchodni-podminky.html"/>
+  </url>
+  <url>
+    <loc>https://superkasa.cz/ochrana-osobnich-udaju.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/ochrana-osobnich-udaju.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/ochrana-osobnich-udaju.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/ochrana-osobnich-udaju.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/ochrana-osobnich-udaju.html"/>
+  </url>
+  <url>
     <loc>https://superkasa.cz/vi/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/"/>
@@ -721,6 +737,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/pokladna-pro-vietnamske-obchody.html"/>
   </url>
   <url>
+    <loc>https://superkasa.cz/vi/obchodni-podminky.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/obchodni-podminky.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/obchodni-podminky.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/obchodni-podminky.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/obchodni-podminky.html"/>
+  </url>
+  <url>
+    <loc>https://superkasa.cz/vi/ochrana-osobnich-udaju.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/ochrana-osobnich-udaju.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/ochrana-osobnich-udaju.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/ochrana-osobnich-udaju.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/ochrana-osobnich-udaju.html"/>
+  </url>
+  <url>
     <loc>https://superkasa.cz/en/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/"/>
@@ -1079,5 +1111,21 @@
     <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/pokladna-pro-vietnamske-obchody.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/pokladna-pro-vietnamske-obchody.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/pokladna-pro-vietnamske-obchody.html"/>
+  </url>
+  <url>
+    <loc>https://superkasa.cz/en/obchodni-podminky.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/obchodni-podminky.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/obchodni-podminky.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/obchodni-podminky.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/obchodni-podminky.html"/>
+  </url>
+  <url>
+    <loc>https://superkasa.cz/en/ochrana-osobnich-udaju.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/ochrana-osobnich-udaju.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/ochrana-osobnich-udaju.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/ochrana-osobnich-udaju.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/ochrana-osobnich-udaju.html"/>
   </url>
 </urlset>
