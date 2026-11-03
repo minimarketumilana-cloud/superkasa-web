@@ -72,7 +72,7 @@ export const op = {
     <h2>7. Provoz, zálohy a podpora</h2>
     <ol>
       <li>Pokladna běží na serveru v České republice. Poskytovatel usiluje o nepřetržitý provoz; plánované odstávky provádí přednostně v noci a předem na ně upozorní. Krátké výpadky internetu u uživatele pokladna překlene prodejem bez připojení; doklady se odešlou po obnovení spojení.</li>
-      <li>Data všech obchodů se zálohují každý den.</li>
+      <li>Data všech obchodů se zálohují každý den; kopie záloh se uchovává i mimo server (14 dní) u poskytovatele v České republice.</li>
       <li>Podporu poskytovatel poskytuje v pracovní dny od 9 do 17 hodin na telefonu ${PHONE} a e-mailu ${EMAIL}. Závady, které znemožňují prodej, řeší přednostně.</li>
     </ol>
 
