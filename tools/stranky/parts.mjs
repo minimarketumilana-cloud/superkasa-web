@@ -12,6 +12,20 @@ export const LOGIN_LIVE = true;
 /** Registrace nového obchodu v SuperKasa Cloud (jen když LOGIN_LIVE). */
 export const REGISTER_URL = "https://app.superkasa.cz/";
 
+/**
+ * Kontaktní e-mail provozovatele – jediné místo, kde se doplňuje. Dokud je prázdný, web e-mail nikde neuvádí
+ * (kontakt je telefon a adresa); po doplnění se sám objeví v patičce, na Kontaktu, v podmínkách i v ochraně údajů.
+ */
+export const CONTACT_EMAIL = "";
+/** Identifikace provozovatele podle § 435 občanského zákoníku (DIČ se na web nedává – obsahuje rodné číslo). */
+export const PROVIDER = {
+  name: "Thanh Lam Nguyen",
+  ico: "14161648",
+  street: "1. května 117/141",
+  city: "725 25 Ostrava",
+  register: "fyzická osoba podnikající podle živnostenského zákona, zapsaná v živnostenském rejstříku",
+};
+
 // Bezpečnostní pravidla přímo ve stránce: GitHub Pages hlavičky z .htaccess neposílá. (frame-ancestors v <meta>
 // nefunguje, to umí jen hlavička serveru.) Hash patří k vloženému skriptu INLINE_JS; app.superkasa.cz = přihlášení.
 const INLINE_HASH = createHash("sha256").update(INLINE_JS).digest("base64");
@@ -204,7 +218,8 @@ ${body.trim()}
       <div>
         <div class="foot-brand"><img src="${up}favicon.svg" alt="" width="40" height="40"><b>Super<span>Kasa</span></b></div>
         <p>${L.footAbout}</p>
-        <p><a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
+        <p><a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>${CONTACT_EMAIL ? `
+        <p><a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a></p>` : ""}
       </div>
       <div>
         <h2>${L.footPages}</h2>

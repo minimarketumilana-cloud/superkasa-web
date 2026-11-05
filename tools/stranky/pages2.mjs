@@ -1,5 +1,5 @@
 // Ceník, EET 2.0, Jak začít, Přihlášení a Kontakt. Texty jsou ve slovníku c.T.<stránka> (tools/stranky/texty/<jazyk>.mjs).
-import { LOGIN_LIVE, REGISTER_URL, card, cta, icon } from "./parts.mjs";
+import { CONTACT_EMAIL, LOGIN_LIVE, PROVIDER, REGISTER_URL, card, cta, icon } from "./parts.mjs";
 import { FEATURE_ORDER } from "./obory.mjs";
 
 /** Počet ikon musí sedět s počtem karet v textech – jinak by se karta potichu nevykreslila. */
@@ -372,17 +372,22 @@ export const kontakt = (c) => {
       <article class="card">
         ${icon("touch")}
         <h2>${t.phone}</h2>
-        <p><a class="contact-big" href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
+        <p><a class="contact-big" href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>${CONTACT_EMAIL ? `
+        <p><a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a></p>` : ""}
         <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="tel:+420608886882">${c.T.common.call}</a></div>
       </article>
       <article class="card">
         ${icon("home", "gold")}
         <h2>${t.makerTitle}</h2>
+        <!-- Identifikace podle § 435 občanského zákoníku; e-mail jen když je doplněný (CONTACT_EMAIL v parts.mjs). -->
         <dl class="dl">
-          <dt>${t.labels[0]}</dt><dd>Thanh Lam Nguyen</dd>
-          <dt>${t.labels[1]}</dt><dd>14161648</dd>
-          <dt>${t.labels[2]}</dt><dd>1. května 117/141<br>725 25 Ostrava</dd>
-          <dt>${t.labels[3]}</dt><dd>superkasa.cz</dd>
+          <dt>${t.labels[0]}</dt><dd>${PROVIDER.name}</dd>
+          <dt>${t.labels[1]}</dt><dd>${PROVIDER.ico}</dd>
+          <dt>${t.labels[2]}</dt><dd>${PROVIDER.street}<br>${PROVIDER.city}</dd>
+          <dt>${t.labels[3]}</dt><dd>${t.register}</dd>
+          <dt>${t.labels[4]}</dt><dd>${t.vat}</dd>${CONTACT_EMAIL ? `
+          <dt>${t.labels[5]}</dt><dd><a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a></dd>` : ""}
+          <dt>${t.labels[6]}</dt><dd>superkasa.cz</dd>
         </dl>
       </article>
     </div>

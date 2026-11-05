@@ -31,7 +31,7 @@ export default {
     docOp: "Terms and Conditions",
     docGdpr: "Privacy Policy",
     docEet: "EET 2.0 – Financial Administration",
-    footBottom: "© 2026 Thanh Lam Nguyen, IČO 14161648, 1. května 117/141, 725 25 Ostrava. This website uses no cookies or tracking tools.",
+    footBottom: "© 2026 Thanh Lam Nguyen, IČO 14161648, place of business 1. května 117/141, 725 25 Ostrava, a sole trader under the Czech Trade Licensing Act, registered in the Trade Register (živnostenský rejstřík). This website uses no cookies or tracking tools.",
     call: "Call",
     callPhone: `Call&nbsp;${PHONE}`,
     showPricing: "See pricing",
@@ -410,7 +410,9 @@ export default {
     lead: "We're happy to help you choose a plan and POS equipment and to set everything up by phone – in Czech or Vietnamese.",
     phone: "Phone",
     makerTitle: "Maker and operator",
-    labels: ["Name", "IČO (company ID)", "Address", "Web"],
+    labels: ["Name", "IČO (company ID)", "Place of business", "Registration", "VAT", "E-mail", "Web"],
+    register: "Sole trader under the Czech Trade Licensing Act, registered in the Trade Register (živnostenský rejstřík)",
+    vat: "VAT payer",
   },
 
   notFound: {
@@ -424,25 +426,25 @@ export default {
 
   // Obchodní podmínky a ochrana osobních údajů se nepřekládají: krátká stránka s odkazem na závazné české znění.
   legal: {
-    opTitle: "Terms and Conditions (draft)",
-    opDesc: "SuperKasa Terms and Conditions – the binding version is in Czech.",
+    opTitle: "Terms and Conditions",
+    opDesc: "Terms for renting the SuperKasa browser POS: price, payment, termination, data and the data processing agreement. The binding version is in Czech.",
     opH1: "Terms and Conditions",
-    gdprTitle: "Privacy Policy (draft)",
-    gdprDesc: "SuperKasa Privacy Policy – the binding version is in Czech.",
+    gdprTitle: "Privacy Policy",
+    gdprDesc: "How SuperKasa handles personal data on superkasa.cz and in the browser POS: purposes, recipients, retention and your rights. The binding version is in Czech.",
     gdprH1: "Privacy Policy",
     noticeTitle: "The binding version is in Czech",
-    notice: "This document is still a draft under legal review and applies only in its Czech version. We do not offer a translation, so that no differences arise between languages.",
+    notice: "The Terms and Conditions and the Privacy Policy apply in their Czech version. We do not offer a translation so that no differences arise between languages; below is a non-binding summary only.",
     readCzech: "Read the Czech version",
     summaryTitle: "Main points (for guidance only, not binding)",
     opSummary: [
-      "The POS is for businesses; the licence is valid for the company (IČO, company ID number) stated in the licence key.",
+      "The POS is for businesses (with an IČO, company ID number); the rental starts when you register at app.superkasa.cz.",
       "10-day free trial, then CZK 189 a month or CZK 2,041 a year incl. VAT. The rental does not renew automatically.",
-      "Your data is on your computer. After the licence ends, receipts, closings and data export keep working.",
+      "The POS runs in the browser and the data is on the SuperKasa server in the Czech Republic. After the rental ends, receipts, closings and data export remain available for another 12 months.",
       "The business owner is responsible for sales registration (EET), the POS certificate and correct VAT rates.",
     ],
     gdprSummary: [
       "The website uses no cookies or tracking tools.",
-      "In the Windows version the data is on your computer and the maker has no access to it; it sends sales directly to the Financial Administration's EET system. With the browser register the shop's data is on the SuperKasa server, the server sends sales to EET and backs the data up daily.",
+      "The shop's data is on the SuperKasa server in the Czech Republic, it is backed up daily and the server sends sales to EET. SuperKasa processes the data of the shop's customers and staff as a processor under the agreement in the Terms and Conditions.",
       "When a product name is looked up, the barcode is sent. If you switch on contributing, the name, pack size, group and VAT rate are sent too – never prices or sales.",
       "For access to, correction or deletion of your data, you can use the contact details given on the website.",
     ],

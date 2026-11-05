@@ -33,7 +33,7 @@ export default {
     docOp: "Obchodní podmínky",
     docGdpr: "Ochrana osobních údajů",
     docEet: "EET 2.0 – Finanční správa",
-    footBottom: "© 2026 Thanh Lam Nguyen, IČO 14161648, 1. května 117/141, 725 25 Ostrava. Tento web nepoužívá cookies ani sledovací nástroje.",
+    footBottom: "© 2026 Thanh Lam Nguyen, IČO 14161648, místo podnikání 1. května 117/141, 725 25 Ostrava, fyzická osoba podnikající podle živnostenského zákona, zapsaná v živnostenském rejstříku. Tento web nepoužívá cookies ani sledovací nástroje.",
     call: "Zavolat",
     callPhone: `Zavolat&nbsp;${PHONE}`,
     showPricing: "Zobrazit ceník",
@@ -413,7 +413,9 @@ export default {
     lead: "Rádi poradíme s výběrem tarifu, vybavením pokladny i s nastavením po telefonu – česky i vietnamsky.",
     phone: "Telefon",
     makerTitle: "Výrobce a provozovatel",
-    labels: ["Jméno", "IČO", "Adresa", "Web"],
+    labels: ["Jméno", "IČO", "Místo podnikání", "Zápis", "DPH", "E-mail", "Web"],
+    register: "Fyzická osoba podnikající podle živnostenského zákona, zapsaná v živnostenském rejstříku",
+    vat: "Plátce DPH",
   },
 
   notFound: {
@@ -426,27 +428,28 @@ export default {
   },
 
   // Obchodní podmínky a ochrana osobních údajů se nepřekládají: v jiných jazycích je krátká stránka s odkazem
-  // na závazné české znění. V češtině se tyto texty nepoužívají (české stránky jsou v pages3.mjs).
+  // na závazné české znění. V češtině se tyto texty nepoužívají (české stránky jsou v pages3.mjs) – jsou vzorem
+  // pro překlady a shrnutí musí odpovídat podmínkám.
   legal: {
-    opTitle: "Obchodní podmínky (koncept)",
-    opDesc: "Obchodní podmínky SuperKasa – závazné je české znění.",
+    opTitle: "Obchodní podmínky",
+    opDesc: "Obchodní podmínky pronájmu pokladny SuperKasa v prohlížeči: cena, platba, ukončení, data a smlouva o zpracování osobních údajů. Závazné je české znění.",
     opH1: "Obchodní podmínky",
-    gdprTitle: "Ochrana osobních údajů (koncept)",
-    gdprDesc: "Ochrana osobních údajů SuperKasa – závazné je české znění.",
+    gdprTitle: "Ochrana osobních údajů",
+    gdprDesc: "Jak SuperKasa zachází s osobními údaji na webu superkasa.cz a v pokladně v prohlížeči: účely, příjemci, doba uložení a vaše práva. Závazné je české znění.",
     gdprH1: "Ochrana osobních údajů",
     noticeTitle: "Závazné znění je české",
-    notice: "Tento dokument je zatím koncept k právní kontrole a platí jen v českém znění. Překlad nenabízíme, aby nevznikly rozdíly mezi jazyky.",
+    notice: "Obchodní podmínky a zásady ochrany osobních údajů platí v českém znění. Překlad nenabízíme, aby nevznikly rozdíly mezi jazyky; níže je jen orientační shrnutí.",
     readCzech: "Číst české znění",
     summaryTitle: "Hlavní body (jen pro orientaci, nezávazně)",
     opSummary: [
-      "Pokladna je pro podnikatele, licence platí pro firmu (IČO) uvedenou v licenčním klíči.",
+      "Pokladna je pro podnikatele (s IČO), pronájem vzniká registrací na app.superkasa.cz.",
       "10 dní zkouška zdarma, potom 189 Kč měsíčně nebo 2 041 Kč ročně včetně DPH. Pronájem se automaticky neprodlužuje.",
-      "Data jsou na vašem počítači. Po skončení licence fungují doklady, uzávěrky a export dat dál.",
+      "Pokladna běží v prohlížeči, data jsou na serveru SuperKasa v České republice. Po skončení pronájmu jsou doklady, uzávěrky a export dat dostupné ještě 12 měsíců.",
       "Za evidenci tržeb (EET), pokladní certifikát a správné sazby DPH odpovídá podnikatel.",
     ],
     gdprSummary: [
       "Web nepoužívá cookies ani sledovací nástroje.",
-      "V pokladně pro Windows jsou data na vašem počítači a výrobce k nim nemá přístup; tržby posílá přímo do EET Finanční správy. U pokladny v prohlížeči jsou data obchodu na serveru SuperKasa, server posílá tržby do EET a data denně zálohuje.",
+      "Data obchodu jsou na serveru SuperKasa v České republice, denně se zálohují a server odesílá tržby do EET. Údaje zákazníků a prodavačů obchodu zpracovává SuperKasa jako zpracovatel podle smlouvy v obchodních podmínkách.",
       "Při dohledání názvu zboží se posílá čárový kód. Když zapnete přispívání, i název, balení, skupina a DPH – nikdy ceny ani prodeje.",
       "Na přístup, opravu nebo výmaz údajů se můžete obrátit na kontakt uvedený na webu.",
     ],

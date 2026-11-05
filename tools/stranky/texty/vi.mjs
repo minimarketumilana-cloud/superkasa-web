@@ -31,7 +31,7 @@ export default {
     docOp: "Điều khoản kinh doanh",
     docGdpr: "Bảo vệ dữ liệu cá nhân",
     docEet: "EET 2.0 – Finanční správa (Cục Thuế Séc)",
-    footBottom: "© 2026 Thanh Lam Nguyen, IČO 14161648, 1. května 117/141, 725 25 Ostrava. Trang web này không dùng cookie hay công cụ theo dõi.",
+    footBottom: "© 2026 Thanh Lam Nguyen, IČO 14161648, địa điểm kinh doanh 1. května 117/141, 725 25 Ostrava, cá nhân kinh doanh theo Luật kinh doanh Séc (živnostenský zákon), đã đăng ký trong Sổ đăng ký kinh doanh (živnostenský rejstřík). Trang web này không dùng cookie hay công cụ theo dõi.",
     call: "Gọi&nbsp;điện",
     callPhone: `Gọi&nbsp;${PHONE}`,
     showPricing: "Xem bảng giá",
@@ -410,7 +410,9 @@ export default {
     lead: "Chúng tôi sẵn lòng tư vấn chọn gói, thiết bị cho máy tính tiền và cùng bạn thiết lập qua điện thoại – bằng tiếng Việt hoặc tiếng Séc.",
     phone: "Điện thoại",
     makerTitle: "Nhà sản xuất và nhà cung cấp",
-    labels: ["Họ tên", "IČO", "Địa chỉ", "Web"],
+    labels: ["Họ tên", "IČO", "Địa điểm kinh doanh", "Đăng ký", "Thuế DPH", "E-mail", "Web"],
+    register: "Cá nhân kinh doanh theo Luật kinh doanh Séc (živnostenský zákon), đã đăng ký trong Sổ đăng ký kinh doanh (živnostenský rejstřík)",
+    vat: "Người nộp thuế DPH",
   },
 
   notFound: {
@@ -424,25 +426,25 @@ export default {
 
   // Điều khoản và bảo vệ dữ liệu không dịch: trang tiếng Việt chỉ ngắn gọn, dẫn tới bản tiếng Séc có giá trị pháp lý.
   legal: {
-    opTitle: "Điều khoản kinh doanh (bản nháp)",
-    opDesc: "Điều khoản kinh doanh của SuperKasa – bản có giá trị pháp lý là bản tiếng Séc.",
+    opTitle: "Điều khoản kinh doanh",
+    opDesc: "Điều khoản thuê máy tính tiền SuperKasa trên trình duyệt: giá, thanh toán, chấm dứt, dữ liệu và hợp đồng xử lý dữ liệu cá nhân. Bản có giá trị pháp lý là bản tiếng Séc.",
     opH1: "Điều khoản kinh doanh",
-    gdprTitle: "Bảo vệ dữ liệu cá nhân (bản nháp)",
-    gdprDesc: "Bảo vệ dữ liệu cá nhân tại SuperKasa – bản có giá trị pháp lý là bản tiếng Séc.",
+    gdprTitle: "Bảo vệ dữ liệu cá nhân",
+    gdprDesc: "SuperKasa xử lý dữ liệu cá nhân thế nào: mục đích, bên nhận, thời hạn lưu và quyền của bạn. Bản có giá trị pháp lý là bản tiếng Séc.",
     gdprH1: "Bảo vệ dữ liệu cá nhân",
     noticeTitle: "Bản có giá trị pháp lý là bản tiếng Séc",
-    notice: "Tài liệu này hiện là bản nháp đang chờ kiểm tra pháp lý và chỉ có giá trị bằng tiếng Séc. Chúng tôi không cung cấp bản dịch để tránh khác biệt giữa các ngôn ngữ.",
+    notice: "Điều khoản kinh doanh và chính sách bảo vệ dữ liệu cá nhân có giá trị theo bản tiếng Séc. Chúng tôi không cung cấp bản dịch để tránh khác biệt giữa các ngôn ngữ; bên dưới chỉ là phần tóm tắt để tham khảo.",
     readCzech: "Đọc bản tiếng Séc",
     summaryTitle: "Các điểm chính (chỉ để tham khảo, không ràng buộc)",
     opSummary: [
-      "Máy tính tiền dành cho người kinh doanh; giấy phép áp dụng cho doanh nghiệp (IČO – mã số doanh nghiệp) ghi trong mã giấy phép.",
+      "Máy tính tiền dành cho người kinh doanh (có IČO – mã số doanh nghiệp); hợp đồng thuê bắt đầu khi bạn đăng ký trên app.superkasa.cz.",
       "Dùng thử miễn phí 10 ngày, sau đó 189 Kč/tháng hoặc 2 041 Kč/năm, đã gồm thuế DPH. Thuê không tự động gia hạn.",
-      "Dữ liệu nằm trên máy tính của bạn. Sau khi hết giấy phép, hóa đơn, chốt ca và xuất dữ liệu vẫn hoạt động.",
+      "Máy tính tiền chạy trên trình duyệt, dữ liệu nằm trên máy chủ SuperKasa tại Cộng hòa Séc. Sau khi hết hạn thuê, hóa đơn, chốt ca và xuất dữ liệu vẫn dùng được thêm 12 tháng.",
       "Người kinh doanh chịu trách nhiệm về việc ghi nhận doanh thu (EET), chứng chỉ máy tính tiền và thuế suất DPH đúng.",
     ],
     gdprSummary: [
       "Trang web không dùng cookie hay công cụ theo dõi.",
-      "Với bản cho Windows, dữ liệu nằm trên máy tính của bạn và nhà sản xuất không truy cập được; doanh thu gửi thẳng lên EET của Finanční správa (Cục Thuế Séc). Với máy tính tiền trên trình duyệt, dữ liệu cửa hàng nằm trên máy chủ SuperKasa, máy chủ gửi doanh thu lên EET và sao lưu dữ liệu hằng ngày.",
+      "Dữ liệu cửa hàng nằm trên máy chủ SuperKasa tại Cộng hòa Séc, được sao lưu hằng ngày và máy chủ gửi doanh thu lên EET. SuperKasa xử lý dữ liệu của khách hàng và nhân viên cửa hàng với tư cách bên xử lý theo hợp đồng trong điều khoản kinh doanh.",
       "Khi tra tên hàng, máy gửi mã vạch. Nếu bạn bật đóng góp thì gửi thêm tên, quy cách đóng gói, nhóm hàng và DPH – không bao giờ gửi giá hay doanh số.",
       "Để xem, sửa hoặc xóa dữ liệu, bạn có thể liên hệ theo thông tin trên trang web.",
     ],
