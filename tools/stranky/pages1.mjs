@@ -25,7 +25,7 @@ export const index = (c) => {
       name: "SuperKasa",
       url: pageUrl(c.lang, "index.html"),
       applicationCategory: "BusinessApplication",
-      operatingSystem: "Windows 10, Windows 11, Web browser (Android, iOS)",
+      operatingSystem: "Web browser (Windows, Android, iOS, macOS)",
       inLanguage: ["cs", "vi", "en"],
       description: t.ldDesc,
       offers: { "@type": "Offer", price: "189", priceCurrency: "CZK", description: t.ldOffer },
@@ -40,7 +40,7 @@ export const index = (c) => {
         <p class="lead">${t.lead}</p>
         <div class="actions hero-cta">
           ${LOGIN_LIVE ? `<a class="btn btn-gold btn-lg" href="${REGISTER_URL}">${t.heroCta[0]}</a>` : ""}
-          <a class="btn btn-ghost btn-lg" href="ke-stazeni.html">${t.heroCta[1]}</a>
+          <a class="btn btn-ghost btn-lg" href="jak-zacit.html">${t.heroCta[1]}</a>
         </div>
         <p class="small hero-cta-note">${t.heroCtaNote}</p>
       </div>
@@ -116,7 +116,7 @@ export const index = (c) => {
       <p>${t.newLead}</p>
     </div>
     <div class="grid grid-3">
-      ${cards([["printer", "gold"], ["network"], ["report"], ["chart"], ["box"], ["touch", "gold"]], t.newCards)}
+      ${cards([["bell", "gold"], ["db"], ["bag"], ["printer"], ["network"], ["chart"], ["touch", "gold"]], t.newCards)}
     </div>
   </div>
 </section>
@@ -176,7 +176,7 @@ export const funkce = (c) => {
   <div class="wrap">
     <div class="section-head"><h2>${t.prodejTitle}</h2></div>
     <div class="grid grid-3">
-      ${cards([["touch"], ["scan"], ["scale"], ["percent"], ["bottle"], ["qr"]], t.prodej)}
+      ${cards([["touch"], ["scan"], ["scale"], ["percent"], ["bottle"], ["qr"], ["keyboard", "gold"]], t.prodej)}
     </div>
   </div>
 </section>
@@ -210,7 +210,7 @@ export const funkce = (c) => {
   <div class="wrap">
     <div class="section-head"><h2>${t.dokladyTitle}</h2></div>
     <div class="grid grid-3">
-      ${cards([["eet"], ["printer"], ["undo"], ["report"], ["chart"], ["cash"], ["shield"], ["qr"]], t.doklady)}
+      ${cards([["eet"], ["printer"], ["toggle"], ["undo"], ["report"], ["percent", "gold"], ["chart"], ["cash"], ["shield"], ["qr"]], t.doklady)}
     </div>
   </div>
 </section>
@@ -219,7 +219,7 @@ export const funkce = (c) => {
   <div class="wrap">
     <div class="section-head"><h2>${t.skladTitle}</h2></div>
     <div class="grid grid-3">
-      ${cards([["box"], ["calendar"], ["tag"], ["db"], ["download"], ["home"]], t.sklad)}
+      ${cards([["box"], ["calendar"], ["tag"], ["db", "gold"], ["download"], ["bag", "gold"], ["home"]], t.sklad)}
     </div>
   </div>
 </section>
@@ -228,7 +228,7 @@ export const funkce = (c) => {
   <div class="wrap">
     <div class="section-head"><h2>${t.provozTitle}</h2></div>
     <div class="grid grid-3">
-      ${cards([["lang", "gold"], ["users"], ["monitor"], ["network"], ["shield"], ["download"], ["refresh"], ["clock"], ["touch", "gold"], ["printer"], ["monitor", "gold"]], t.provoz)}
+      ${cards([["lang", "gold"], ["chat", "gold"], ["users"], ["monitor"], ["network"], ["shield"], ["download"], ["refresh"], ["clock"], ["touch", "gold"], ["bell", "gold"], ["printer"], ["monitor", "gold"]], t.provoz)}
     </div>
   </div>
 </section>

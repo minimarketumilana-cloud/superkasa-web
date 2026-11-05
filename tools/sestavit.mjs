@@ -9,7 +9,7 @@ import { fileURLToPath } from "node:url";
 import { LANG_INFO, LANGS, OBORY_TEXTS, SITE, TEXTS, compareShape, pageUrl } from "./stranky/i18n.mjs";
 import { csOverlay, oboryData } from "./stranky/obory.mjs";
 import { oborPage, oboryPage } from "./stranky/obory-stranky.mjs";
-import { INLINE_JS, page } from "./stranky/parts.mjs";
+import { INLINE_JS, page, redirectPage } from "./stranky/parts.mjs";
 import { funkce, index } from "./stranky/pages1.mjs";
 import { cenik, eet, kontakt, prihlaseni, stazeni } from "./stranky/pages2.mjs";
 import { gdpr, legalStub, notFound, op } from "./stranky/pages3.mjs";
@@ -47,7 +47,12 @@ for (const lang of LANGS.filter((l) => l !== "cs")) {
 }
 
 const FOOTER_OBORY = ["vecerka", "trafika", "pekarna", "drogerie", "gastro", "hospoda", "kadernictvi", "nehty"];
-const indexable = []; // soubory, které jdou do sitemap (stejné ve všech jazycích)
+// Soubory, které jdou do sitemap, po jazycích (překlady právních stránek jsou noindex, do sitemap nepatří).
+const indexable = Object.fromEntries(LANGS.map((l) => [l, []]));
+// Právní stránky mají závazné jen české znění: hreflang uvádí jen češtinu.
+const LEGAL_FILES = ["obchodni-podminky.html", "ochrana-osobnich-udaju.html"];
+// Staré adresy, které jen přesměrují na novou (meta refresh, noindex, canonical; do sitemap ne).
+const REDIRECTS = [["ke-stazeni.html", "jak-zacit.html"]];
 let count = 0;
 
 for (const lang of LANGS) {
@@ -59,7 +64,7 @@ for (const lang of LANGS) {
   const pages = [index(c), oboryPage(c, footerObory), ...c.D.OBORY.map((o) => oborPage(c, o, footerObory)),
     funkce(c), cenik(c), eet(c), stazeni(c), kontakt(c), prihlaseni(c), navodyPage(c, CLANKY[lang]),
     ...CLANKY[lang].items.map((a) => clanekPage(c, CLANKY[lang], a)), ...legal, notFound(c)]
-    .map((p) => ({ footerObory, ...p }));
+    .map((p) => ({ footerObory, ...p, ...(LEGAL_FILES.includes(p.file) ? { altLangs: ["cs"] } : {}) }));
 
   mkdirSync(path.join(ROOT, dir), { recursive: true });
   for (const p of pages) {
@@ -73,15 +78,18 @@ for (const lang of LANGS) {
     }
     writeFileSync(path.join(ROOT, dir, p.file), html);
     count++;
-    if (lang === "cs" && !p.noindex) indexable.push(p.file);
+    if (!p.noindex && p.file !== "404.html") indexable[lang].push(p.file);
+  }
+  for (const [from, to] of REDIRECTS) {
+    writeFileSync(path.join(ROOT, dir, from), redirectPage(c, to, c.T.stazeni.movedTitle, c.T.stazeni.movedText));
   }
 }
-console.log(`✓ ${count} stránek (${LANGS.join(", ")})`);
+console.log(`✓ ${count} stránek (${LANGS.join(", ")}), přesměrování: ${REDIRECTS.map(([f, t]) => `${f} → ${t}`).join(", ")}`);
 
-// Sitemap: každá adresa ve všech jazycích, s odkazy na jazykové verze (hreflang).
-const alternates = (file) => [...LANGS.map((l) => [l, pageUrl(l, file)]), ["x-default", pageUrl("cs", file)]]
+// Sitemap: každá indexovatelná adresa ve všech jazycích, s odkazy na jazykové verze (hreflang).
+const alternates = (file) => [...LANGS.filter((l) => indexable[l].includes(file)).map((l) => [l, pageUrl(l, file)]), ["x-default", pageUrl("cs", file)]]
   .map(([l, href]) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${href}"/>`).join("\n");
-const urls = LANGS.flatMap((lang) => indexable.map((file) =>
+const urls = LANGS.flatMap((lang) => indexable[lang].map((file) =>
   `  <url>\n    <loc>${pageUrl(lang, file)}</loc>\n    <lastmod>${DAY}</lastmod>\n${alternates(file)}\n  </url>`));
 writeFileSync(path.join(ROOT, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">

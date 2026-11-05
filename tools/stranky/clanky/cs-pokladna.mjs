@@ -1,4 +1,5 @@
-// Návody k pokladně SuperKasa (skupina „pokladna“). Texty jsou ověřené proti kódu pokladny verze 0.2.2.
+// Návody k pokladně SuperKasa (skupina „pokladna“). Texty popisují pokladnu v prohlížeči (SuperKasa Cloud) – jinou
+// verzi zákazníkům nenabízíme, nic se nestahuje ani neinstaluje.
 // Názvy tlačítek a menu odpovídají češtině v pokladně (public/js/i18n.js).
 
 export default [
@@ -17,15 +18,15 @@ export default [
     sections: [
       {
         id: "dve-cesty",
-        h2: "Dvě cesty, jak začít",
+        h2: "Jak začít",
         html: `
-<p>SuperKasu máte buď v prohlížeči, nebo jako program pro Windows. Prvních 10 dní je zdarma a nepotřebujete platební kartu.</p>
+<p>SuperKasa běží v prohlížeči na počítači, tabletu i mobilu. Nic se nestahuje ani neinstaluje. Prvních 10 dní je zdarma a nepotřebujete platební kartu.</p>
 <div class="tbl"><table>
-<thead><tr><th></th><th>V prohlížeči</th><th>Program pro Windows</th></tr></thead>
+<thead><tr><th></th><th>SuperKasa v prohlížeči</th></tr></thead>
 <tbody>
-<tr><td>Instalace</td><td>Žádná</td><td>Jeden instalační soubor</td></tr>
-<tr><td>Kde jsou data</td><td>Na serveru SuperKasa</td><td>Na vašem počítači</td></tr>
-<tr><td>Zařízení</td><td>Počítač, tablet, mobil</td><td>Počítač s Windows 10 nebo 11, další zařízení přes síť obchodu</td></tr>
+<tr><td>Instalace</td><td>Žádná</td></tr>
+<tr><td>Kde jsou data</td><td>Na serveru SuperKasa, každý den zálohovaná</td></tr>
+<tr><td>Zařízení</td><td>Počítač, tablet, mobil – až 10 v tarifu, všechna prodávají do jedné směny</td></tr>
 </tbody>
 </table></div>`,
       },
@@ -51,7 +52,7 @@ export default [
 <ol class="steps">
 <li>Na obrazovce <strong>Jaký máš provoz?</strong> vyberte obor, třeba Večerka nebo Kadeřnictví.</li>
 <li>Nenašli jste svůj obor? Napište do pole <strong>Popiš vlastními slovy, co prodáváš</strong> a klepněte na <strong>Navrhnout skupiny</strong>. Návrh si můžete upravit.</li>
-<li>Vyplňte pole <strong>Tvoje jméno</strong> a dvakrát <strong>PIN</strong> (4 až 8 číslic). Ve verzi pro Windows vyplníte i pole <strong>Název firmy</strong>.</li>
+<li>Vyplňte pole <strong>Tvoje jméno</strong> a dvakrát <strong>PIN</strong> (4 až 8 číslic).</li>
 <li>Vyplňte <strong>E-mail</strong> a <strong>Heslo</strong> (aspoň 8 znaků). Budete je potřebovat na každém novém zařízení.</li>
 <li>Klepněte na <strong>Zřídit pokladnu</strong>.</li>
 </ol>
@@ -140,7 +141,8 @@ export default [
 </ol>
 <p>Pak se ukáže <strong>Otevřít pokladnu</strong>. Do pole <strong>Hotovost v zásuvce na začátku</strong> napište, kolik v zásuvce zůstalo.</p>
 <aside class="note warn"><p>Pokud okno zavřete, pokladna se při dalším přihlášení otevře sama s částkou z minulé uzávěrky, i když jste tržbu odnesli. Zapněte proto ve <strong>Správě → Systém → Kontrola hotovosti</strong> volbu <strong>Při otevření pokladny zadávat hotovost v zásuvce</strong>. Peníze během dne zapisujte přes <strong>Menu → Vklad / výběr</strong>.</p></aside>
-<p>Stav bez uzavření ukáže <strong>Průběžná uzávěrka</strong> v Menu.</p>`,
+<p>Stav bez uzavření ukáže <strong>Průběžná uzávěrka</strong> v Menu.</p>
+<p>Uzávěrka je jedna za celý obchod: všechna zařízení prodávají do jedné společné směny. Po 20 hodinách pokladna na uzávěrku upozorní a když ji nikdo neudělá, ve 23:59 ji udělá sama.</p>`,
       },
       {
         id: "prodavaci",
@@ -166,8 +168,7 @@ export default [
         h2: "Zařízení a zálohy",
         html: `
 <p>V tarifu je až 10 zařízení. Nové zařízení se přihlásí e-mailem a heslem majitele, postup je v návodu <a href="prodej-z-telefonu.html">Pokladna v telefonu a tabletu</a>.</p>
-<p><strong>Windows.</strong> Pokladna se zálohuje každý den sama. Ve <strong>Správě → Systém → Zálohy</strong> nastavte <strong>Druhá kopie záloh (složka)</strong>, nejlépe na USB disk nebo OneDrive. Tlačítko <strong>Zálohovat teď</strong> udělá zálohu hned.</p>
-<p><strong>Prohlížeč.</strong> Data zálohuje server. Pole pro druhou kopii tady nemá význam.</p>
+<p>Data obchodu zálohuje server každý den a kopie se ukládá i mimo něj. Nic nastavovat nemusíte.</p>
 <p>Vlastní kopii si stáhnete kdykoli ve <strong>Správě → Systém → Export dat</strong>. Export funguje i po skončení licence.</p>`,
       },
       {
@@ -191,7 +192,7 @@ export default [
       ["Zapomněl jsem heslo. Co teď?", "Otevřete adresu svého obchodu na zařízení, které není přihlášené, a klepněte na Zapomenuté heslo. Zadáte e-mail, PIN majitele a nové heslo."],
       ["Jsou doklady ve zkušební době platné?", "Pokladna založená do konce roku 2026 vydává rovnou platné doklady. Pokladna založená od 1. 1. 2027 začíná ve zkušebním režimu, ve kterém doklady neplatí. Do ostrého provozu přejde až s certifikátem z DIS+, číslem evidenční jednotky, ověřeným spojením a placenou licencí. Kdo evidovat nemusí, zvolí ve Správě → EET 2.0 Tržby evidovat nemusím a certifikát nepotřebuje. Zkušební režim jde zapnout jen před prvním ostrým dokladem."],
       ["Může prodavač vrátit peníze bez vedoucího?", "Ne. Storno i vratku musí prodavač potvrdit PINem vedoucího nebo majitele. Vedoucí a majitel PIN znovu nezadávají."],
-      ["Musím dělat uzávěrku každý den?", "Pokladna ji nevynutí, ale po 20 hodinách upozorní. Bez uzávěrky se tržby více dnů slévají dohromady."],
+      ["Musím dělat uzávěrku každý den?", "Po 20 hodinách pokladna upozorní a ve 23:59 udělá uzávěrku sama, takže se tržby více dnů neslijí. Hotovost v zásuvce ale spočítáte jen vy, proto je lepší udělat uzávěrku na konci dne ručně."],
     ],
     sources: [],
     related: ["tiskarna-ctecka-zasuvka", "prodej-z-telefonu", "eet-2-0-krok-za-krokem"],
@@ -231,7 +232,7 @@ export default [
         html: `
 <p>Cena v reklamě bývá jen část nákladů. Spočítejte si celý rok.</p>
 <h3>Cena s DPH, nebo bez DPH</h3>
-<p>Ceníky pro podnikatele bývají bez DPH. Když nejste plátce DPH, daň si neodečtete a platíte cenu s DPH. Příklad: 189 Kč bez DPH je při sazbě 21 % celkem 228,69 Kč. Ptejte se vždy na konečnou cenu.</p>
+<p>Ceníky pro podnikatele bývají bez DPH. Když nejste plátce DPH, daň si neodečtete a platíte cenu s DPH. Příklad: 250 Kč bez DPH je při sazbě 21 % celkem 302,50 Kč. Ptejte se vždy na konečnou cenu.</p>
 <h3>Další zařízení</h3>
 <p>Zjistěte, kolik zařízení je v ceně. Druhá kasa, tablet na příjem zboží a mobil pro brigádníka se můžou platit každý zvlášť.</p>
 <h3>Hardware</h3>
@@ -418,9 +419,7 @@ export default [
 <div class="tbl"><table>
 <thead><tr><th>Máte</th><th>Volba v průvodci</th></tr></thead>
 <tbody>
-<tr><td>Program pro Windows, tiskárna na USB</td><td>Tiskárna u tohoto počítače</td></tr>
-<tr><td>Program pro Windows, tiskárna v síti</td><td>Síťová tiskárna (Wi-Fi / kabel)</td></tr>
-<tr><td>Počítač s Windows, pokladna v prohlížeči</td><td>Tisk bez okna (tiskárna u tohoto počítače)</td></tr>
+<tr><td>Počítač s Windows a pokladní tiskárna</td><td>Tisk bez okna (tiskárna u tohoto počítače)</td></tr>
 <tr><td>Android a Bluetooth tiskárna</td><td>Bluetooth tiskárna</td></tr>
 <tr><td>Android a tiskárna na kabelu (OTG)</td><td>USB tiskárna k telefonu / tabletu</td></tr>
 <tr><td>Starší tiskárna se sériovým kabelem</td><td>Tiskárna na COM portu</td></tr>
@@ -433,19 +432,20 @@ export default [
 <ol class="steps">
 <li>Zapojte tiskárnu USB kabelem a zapněte ji.</li>
 <li>Počkejte, až ji Windows nainstalují. Epson TM potřebuje ovladač z webu Epsonu (EPSON Advanced Printer Driver). Jiné značky mají ovladač na CD nebo na webu prodejce.</li>
-<li>V průvodci zvolte <strong>Tiskárna u tohoto počítače</strong>.</li>
-<li>Pokladna tiskárnu najde. Když ne, klepněte na <strong>Hledat znovu</strong>.</li>
+<li>Ve Windows nastavte pokladní tiskárnu jako výchozí.</li>
+<li>V průvodci pokladny zvolte <strong>Tisk bez okna (tiskárna u tohoto počítače)</strong>, nebo tisk přes okno prohlížeče.</li>
 <li>Klepněte na <strong>Použít a vytisknout zkoušku</strong>.</li>
 <li>Vyjel zkušební lístek? Klepněte na <strong>Ano, tiskne</strong>.</li>
 </ol>
-<h3>Tisk bez okna u pokladny v prohlížeči</h3>
+<h3>Tisk bez okna</h3>
+<p>Nic se nestahuje. Pokladnu jen otevíráte zástupcem Chromu, který tiskne rovnou na výchozí tiskárnu bez tiskového okna.</p>
 <ol class="steps">
-<li>Zvolte <strong>Tisk bez okna (tiskárna u tohoto počítače)</strong>.</li>
-<li>Klepněte na <strong>Zkopírovat příkaz</strong>.</li>
-<li>Stiskněte klávesy Windows + R, vložte příkaz (Ctrl + V) a stiskněte Enter.</li>
-<li>Počkejte, až pokladna tiskárnu najde, a klepněte na <strong>Použít a vytisknout zkoušku</strong>.</li>
+<li>Ve Windows nastavte pokladní tiskárnu jako výchozí.</li>
+<li>Pravým tlačítkem klepněte na zástupce Google Chrome a zvolte <strong>Vlastnosti</strong>.</li>
+<li>Do pole <strong>Cíl</strong> vložte <code>"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --kiosk-printing --user-data-dir="C:\\SuperKasaChrome"</code> a za to adresu svého obchodu.</li>
+<li>Pokladnu otevírejte jen tímto zástupcem. Poprvé se v něm přihlaste.</li>
 </ol>
-<p>Do počítače se přidá malý tiskový program, který se spouští sám po zapnutí počítače. Tuto volbu vidí jen majitel.</p>
+<p>SuperKasa pak běží ve vlastním okně Chromu, i když běžný Chrome běží dál. Přesný příkaz i s adresou vašeho obchodu najdete v průvodci tiskárnou u volby <strong>Tisk bez okna (tiskárna u tohoto počítače)</strong>. Tuto volbu vidí jen majitel.</p>
 <h3>Bluetooth</h3>
 <ol class="steps">
 <li>Zapněte tiskárnu a v telefonu zapněte Bluetooth. Když se Android zeptá, zapněte i polohu.</li>
@@ -454,7 +454,7 @@ export default [
 </ol>
 <aside class="note warn"><p>Po obnovení stránky se Bluetooth tiskárna sama nepřipojí. Pokladna ukáže okno <strong>Tisk se nepovedl</strong>. Klepněte na <strong>Připojit tiskárnu</strong>. Na iPhonu a iPadu Bluetooth tisk z prohlížeče nefunguje.</p></aside>
 <h3>Síťová tiskárna</h3>
-<p>Tiskárna musí být v síti obchodu a přijímat data na portu 9100. Pokladna ji zkusí najít sama. Když ji nenajde, vyplňte pole <strong>IP adresa tiskárny</strong>, třeba 192.168.1.50. Tuto volbu má jen majitel v programu pro Windows, na počítači s pokladnou.</p>`,
+<p>Prohlížeč neumí posílat data přímo na síťovou tiskárnu. Přidejte ji proto do Windows (Nastavení → Tiskárny a skenery) a tiskněte na ni jako na každou jinou tiskárnu ve Windows – bez okna, nebo přes okno tisku.</p>`,
       },
       {
         id: "zasuvka",
@@ -501,7 +501,7 @@ export default [
         id: "cenovky",
         h2: "Tisk cenovek",
         html: `
-<p>Cenovky jsou v tarifech Potraviny a Obchod. Kadeřnice nebo kavárna je v pokladně nemají. Tiskne je majitel nebo vedoucí.</p>
+<p>Cenovky jsou v tarifu Obchod. Kadeřnice nebo kavárna je v pokladně nemají. Tiskne je majitel nebo vedoucí.</p>
 <ol class="steps">
 <li>Otevřete <strong>Správa → Tisk cenovek</strong>.</li>
 <li>Vyberte zboží. Změněné ceny najdete filtrem <strong>Změna ceny od</strong>.</li>
@@ -525,7 +525,7 @@ export default [
 <tr><td>Pokladní tiskárnu jsem nenašel</td><td>Nainstalujte ovladač a klepněte na <strong>Hledat znovu</strong>.</td></tr>
 <tr><td>Tiskárna je v seznamu pod textem „Nehodí se na účtenky“</td><td>Je to kancelářská, štítková nebo PDF tiskárna. Vraťte se zpět a zvolte <strong>Bez pokladní tiskárny</strong>.</td></tr>
 <tr><td>Bluetooth po obnovení stránky</td><td>Klepněte na <strong>Připojit tiskárnu</strong>, nebo <strong>Vytisknout oknem tisku</strong>.</td></tr>
-<tr><td>USB tiskárnu teď používá systém</td><td>Na Windows ji přidejte jako <strong>Tiskárna u tohoto počítače</strong>.</td></tr>
+<tr><td>USB tiskárnu teď používá systém</td><td>Na Windows tiskněte přes systém: zvolte <strong>Tisk bez okna (tiskárna u tohoto počítače)</strong> nebo tisk přes okno prohlížeče.</td></tr>
 <tr><td>Prodej bez internetu přes hlavní kasu</td><td>Účtenka se tiskne oknem prohlížeče. Hlavní kasa bez internetu nepřijme tisk z telefonu.</td></tr>
 </tbody>
 </table></div>
@@ -571,24 +571,7 @@ export default [
 <tr><td>Večerka</td><td>Tablet na příjem zboží a inventuru ve skladu</td></tr>
 </tbody>
 </table></div>
-<p>Pokladna funguje dvěma způsoby. Zjistěte, který máte, postup se trochu liší.</p>
-<div class="tbl"><table>
-<thead><tr><th></th><th>Pokladna v prohlížeči</th><th>Program pro Windows</th></tr></thead>
-<tbody>
-<tr><td>Spojení</td><td>Internet</td><td>Wi-Fi nebo kabel v síti obchodu</td></tr>
-<tr><td>Adresa</td><td>vas-obchod.superkasa.cz</td><td>Adresa ze Správy → Zařízení</td></tr>
-<tr><td>Hlavní počítač</td><td>Nemusí běžet</td><td>Musí běžet, jsou na něm data</td></tr>
-<tr><td>Prodej mimo obchod</td><td>Ano</td><td>Ne</td></tr>
-</tbody>
-</table></div>
-<h3>Příprava u programu pro Windows</h3>
-<ol class="steps">
-<li>Na hlavním počítači otevřete <strong>Správa → Zařízení</strong>.</li>
-<li>Zaškrtněte <strong>Povolit připojení zařízení ze sítě obchodu</strong> a klepněte na <strong>Uložit</strong>.</li>
-<li>Klepněte na <strong>Restartovat pokladnu</strong>.</li>
-<li>Když Windows ukáže okno brány firewall, klepněte na „Povolit přístup“.</li>
-<li>Opište si údaj <strong>Adresa pro další zařízení</strong>.</li>
-</ol>`,
+<p>Telefon nebo tablet se k pokladně připojuje přes internet na adrese vašeho obchodu, třeba vas-obchod.superkasa.cz. Hlavní počítač nemusí běžet a prodávat můžete i mimo obchod.</p>`,
       },
       {
         id: "prihlaseni",
@@ -626,8 +609,8 @@ export default [
 <li>Staré zařízení odeberete ve <strong>Správě → Zařízení</strong> tlačítkem <strong>Odebrat</strong>.</li>
 <li>Potřebujete víc než 10? <a href="kontakt.html">Zavolejte nám</a>.</li>
 </ul>
-<p>Přehled tržeb pro majitele zařízení v tarifu nezabírá. Odkaz vytvoříte ve <strong>Správě → Systém → Majitel na mobilu</strong>. Je jen pro čtení. V programu pro Windows funguje jen v síti obchodu.</p>
-<aside class="note"><p>Každé zařízení má vlastní pokladnu a vlastní uzávěrku. Když prodavač na telefonu přijímá hotovost, musí na konci dne udělat uzávěrku i tam.</p></aside>`,
+<p>Přehled tržeb pro majitele zařízení v tarifu nezabírá. Odkaz vytvoříte ve <strong>Správě → Systém → Majitel na mobilu</strong>. Je jen pro čtení a funguje odkudkoli.</p>
+<aside class="note"><p>Všechna zařízení prodávají do jedné společné směny obchodu. Uzávěrka je jedna za celý obchod, hotovost přijatá na telefonu se v ní sečte s hlavní kasou.</p></aside>`,
       },
       {
         id: "prodej",
@@ -641,7 +624,7 @@ export default [
 <li>Namiřte na čárový kód. Přečte se sám.</li>
 </ol>
 <p>Kamera čte kódy EAN-13, EAN-8 a UPC. Zkoušku najdete v <strong>Menu → Čtečka čárových kódů</strong>.</p>
-<p>Živá kamera funguje jen na zabezpečené adrese, tedy v pokladně v prohlížeči. Program pro Windows běží v síti obchodu bez zabezpečené adresy. Tam klepněte na <strong>Vyfotit</strong> a kód vyfoťte zblízka, ostře a celý, i s bílým okrajem.</p>
+<p>Když kamera kód nepřečte, klepněte na <strong>Vyfotit</strong> a kód vyfoťte zblízka, ostře a celý, i s bílým okrajem.</p>
 <p>Bluetooth čtečku spárujte v nastavení telefonu. Pak se chová jako klávesnice.</p>
 <h3>Příjem zboží na tabletu</h3>
 <p>Majitel nebo vedoucí otevře <strong>Správa → Sklad → Příjem zboží</strong>. Každý další sken přidá kus. Fotoaparát funguje i tady. Na konci klepněte na <strong>Naskladnit</strong>. Stejně funguje <strong>Inventura regálu</strong>.</p>`,
@@ -656,7 +639,7 @@ export default [
 <li>Zvolte <strong>Tisknout na tiskárně hlavní kasy</strong> a vyberte zařízení.</li>
 <li>Klepněte na <strong>Použít a vytisknout zkoušku</strong>.</li>
 </ol>
-<p>V pokladně v prohlížeči jde tisk přes internet a telefon nemusí být na stejné Wi-Fi. U programu pro Windows musí být telefon v síti obchodu. Jinak se k pokladně vůbec nepřipojí.</p>
+<p>Tisk jde přes internet, telefon nemusí být na stejné Wi-Fi jako hlavní kasa.</p>
 <p>Průvodce se otevře i sám při prvním tisku. Když ho zavřete, účtenky se automaticky netisknou. Vytisknete je přes <strong>Poslední</strong> a <strong>Tisk kopie</strong>.</p>
 <aside class="note warn"><p>Bluetooth tiskárna k telefonu funguje jen na Androidu. Na iPhonu a iPadu prohlížeč Bluetooth tiskárnu nepřipojí, použijte tiskárnu u hlavní kasy. Po obnovení stránky je potřeba znovu klepnout na <strong>Připojit tiskárnu</strong>.</p></aside>`,
       },
@@ -676,7 +659,7 @@ export default [
         id: "vypadek",
         h2: "Výpadek internetu",
         html: `
-<p><strong>Pokladna v prohlížeči.</strong> Prodej běží dál a nad nákupem se ukáže <strong>Bez internetu – prodává se dál, účtenky se nahrají samy</strong>.</p>
+<p>Prodej běží dál a nad nákupem se ukáže <strong>Bez internetu – prodává se dál, účtenky se nahrají samy</strong>.</p>
 <ul>
 <li>Platit jde jen hotově a kartou. QR platba, věrnostní body a účet ze stolu nejdou.</li>
 <li>Zařízení má předem rezervovaná čísla dokladů. Bez nich prodej nejde uložit.</li>
@@ -686,14 +669,13 @@ export default [
 <li>Přihlášení PINem a otevření pokladny potřebují spojení. Nechte zařízení přihlášené.</li>
 <li>Tisk na hlavní kase bez internetu nefunguje, účtenka jde oknem prohlížeče. Bluetooth tiskárna u telefonu tiskne dál.</li>
 </ul>
-<aside class="note warn"><p>Dokud účtenky čekají, nemažte data prohlížeče. Jsou jen v tom zařízení. Po 24 hodinách pokladna varuje, protože tržbu je nutné do EET odeslat do 48 hodin. Internet připojte co nejdřív.</p></aside>
-<p><strong>Program pro Windows.</strong> Hlavní počítač prodává i bez internetu a tržby do EET pošle později. Tablet v síti obchodu ale potřebuje běžící hlavní počítač a funkční Wi-Fi. Vlastní offline režim nemá.</p>`,
+<aside class="note warn"><p>Dokud účtenky čekají, nemažte data prohlížeče. Jsou jen v tom zařízení. Po 24 hodinách pokladna varuje, protože tržbu je nutné do EET odeslat do 48 hodin. Internet připojte co nejdřív.</p></aside>`,
       },
     ],
     faq: [
       ["Může prodavač použít vlastní telefon?", "Ano, ale první přihlášení musí udělat majitel svým e-mailem a heslem. Pak se odhlásí a prodavač zadá PIN."],
       ["Spotřebuje každý telefon jedno zařízení?", "Ano. V tarifu je až 10 zařízení. Přehled Majitel na mobilu se do limitu nepočítá."],
-      ["Musí být telefon na stejné Wi-Fi jako hlavní kasa?", "V pokladně v prohlížeči ne, tisk jde přes internet. U programu pro Windows musí být telefon v síti obchodu."],
+      ["Musí být telefon na stejné Wi-Fi jako hlavní kasa?", "Ne. Tisk na hlavní kase jde přes internet, telefon může být klidně na mobilních datech."],
       ["Funguje pokladna na iPhonu?", "Ano, v prohlížeči. Nefunguje jen přímé připojení Bluetooth tiskárny. Tisknout můžete na tiskárně u hlavní kasy."],
       ["Jde na telefonu tisknout cenovky?", "Ano, když jste vedoucí nebo majitel a telefon má nastavenou tiskárnu. Správa je na malé obrazovce ale méně pohodlná než na počítači."],
     ],
@@ -744,7 +726,7 @@ export default [
 </ol>
 <p>Po přihlášení PINem se pokladna přepne do jazyka prodavače. Každý si jazyk změní i sám vlajkou v horní liště, volba se mu uloží. Česká prodavačka a vietnamský majitel tak můžou používat stejnou pokladnu, každý ve svém jazyce.</p>
 <p><strong>Tahák na zeď.</strong> Ve <strong>Správě → Prodavači</strong> je tlačítko <strong>Tahák pro prodavače (CZ / VI)</strong>. Vytiskne na A4 přehled nejčastějších postupů česky a vietnamsky.</p>
-<aside class="note warn"><p>Některé méně časté chybové hlášky ze serveru se můžou ukázat česky. Tlačítka a menu přeložená jsou.</p></aside>`,
+<aside class="note"><p>Tlačítka, menu i hlášky serveru jsou přeložené do vietnamštiny. Když přesto narazíte na český text, zavolejte nám – doplníme ho.</p></aside>`,
       },
       {
         id: "kategorie",
@@ -828,7 +810,7 @@ export default [
 <li>V roce 2026 můžete zvolit režim <strong>Nanečisto</strong>. Ostré EET zapněte k 1. 1. 2027, nejpozději k první tržbě v roce 2027.</li>
 </ol>
 <p>Ostré EET vyžaduje placenou licenci. Podrobný postup je v návodu <a href="eet-2-0-krok-za-krokem.html">EET 2.0 krok za krokem</a>. Web SuperKasa je i <a href="vi/index.html">ve vietnamštině</a>.</p>
-<p>Pomůžeme vám po telefonu, i ve vietnamštině: <a href="tel:+420608886882">+420 608 886 882</a>. Instalaci a nastavení projdeme s vámi.</p>`,
+<p>Pomůžeme vám po telefonu, i ve vietnamštině: <a href="tel:+420608886882">+420 608 886 882</a>. Nastavení pokladny projdeme s vámi.</p>`,
       },
     ],
     faq: [
@@ -836,7 +818,7 @@ export default [
       ["Může mít každý prodavač jiný jazyk?", "Ano. Jazyk je uložený u každého prodavače. Po přihlášení PINem se pokladna přepne sama."],
       ["Přeloží pokladna názvy zboží do vietnamštiny?", "Ne. Překládají se skupiny, názvy zboží zůstávají tak, jak je napíšete. Kvůli účtence je pište česky."],
       ["Je Správa také vietnamsky?", "Ano. Vlajka je i ve Správě a volba se uloží k vašemu účtu."],
-      ["Pomůžete mi s nastavením ve vietnamštině?", "Ano. Zavolejte na +420 608 886 882. Nainstalujeme a nastavíme pokladnu s vámi."],
+      ["Pomůžete mi s nastavením ve vietnamštině?", "Ano. Zavolejte na +420 608 886 882. Pokladnu s vámi nastavíme."],
     ],
     sources: [["Finanční správa: Kdo musí evidovat tržby", "https://eet.gov.cz/cs/koho-se-eet-tyka/kdo-musi-evidovat-trzby"]],
     related: ["navod-superkasa", "tiskarna-ctecka-zasuvka", "eet-2-0-krok-za-krokem"],

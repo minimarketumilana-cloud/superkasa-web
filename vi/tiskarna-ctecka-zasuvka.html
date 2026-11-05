@@ -48,7 +48,7 @@
       <a href="cenik.html">Bảng giá</a>
       <a href="eet.html">EET 2.0</a>
       <a href="navody.html" aria-current="page">Hướng dẫn</a>
-      <a href="ke-stazeni.html">Bắt đầu</a>
+      <a href="jak-zacit.html">Bắt đầu</a>
       <a href="kontakt.html">Liên hệ</a>
       <a class="btn btn-primary nav-price" href="cenik.html">189 Kč / tháng</a>
       <a class="btn btn-gold" href="https://app.superkasa.cz/">Dùng thử miễn phí</a>
@@ -115,9 +115,7 @@
 <div class="tbl"><table>
 <thead><tr><th>Bạn có</th><th>Lựa chọn trong trình hướng dẫn</th></tr></thead>
 <tbody>
-<tr><td>Chương trình cho Windows, máy in USB</td><td>Máy in nối với máy tính này</td></tr>
-<tr><td>Chương trình cho Windows, máy in trong mạng</td><td>Máy in mạng (Wi-Fi / cáp)</td></tr>
-<tr><td>Máy tính Windows, máy tính tiền trên trình duyệt</td><td>In không cần hộp thoại (máy in nối máy tính này)</td></tr>
+<tr><td>Máy tính Windows và máy in hóa đơn</td><td>In không cần hộp thoại (máy in nối máy tính này)</td></tr>
 <tr><td>Android và máy in Bluetooth</td><td>Máy in Bluetooth</td></tr>
 <tr><td>Android và máy in dùng cáp (OTG)</td><td>Máy in USB cho điện thoại / máy tính bảng</td></tr>
 <tr><td>Máy in cũ dùng cáp nối tiếp</td><td>Máy in qua cổng COM</td></tr>
@@ -130,19 +128,20 @@
 <ol class="steps">
 <li>Cắm máy in bằng cáp USB và bật máy.</li>
 <li>Chờ Windows cài máy in. Epson TM cần driver từ trang của Epson (EPSON Advanced Printer Driver). Các hãng khác có driver trên đĩa CD hoặc trên trang của người bán.</li>
-<li>Trong trình hướng dẫn, chọn <strong>Máy in nối với máy tính này</strong>.</li>
-<li>Máy tính tiền sẽ tìm thấy máy in. Nếu không, chạm vào <strong>Tìm lại</strong>.</li>
+<li>Trong Windows, đặt máy in hóa đơn làm máy in mặc định.</li>
+<li>Trong trình hướng dẫn của máy tính tiền, chọn <strong>In không cần hộp thoại (máy in nối máy tính này)</strong>, hoặc in qua hộp thoại của trình duyệt.</li>
 <li>Chạm vào <strong>Dùng và in thử</strong>.</li>
 <li>Tờ in thử đã ra? Chạm vào <strong>Có, in được</strong>.</li>
 </ol>
-<h3>In không cần hộp thoại với máy tính tiền trên trình duyệt</h3>
+<h3>In không cần hộp thoại</h3>
+<p>Không cần tải gì. Bạn chỉ mở máy tính tiền bằng một biểu tượng Chrome in thẳng ra máy in mặc định, không hiện hộp thoại in.</p>
 <ol class="steps">
-<li>Chọn <strong>In không cần hộp thoại (máy in nối máy tính này)</strong>.</li>
-<li>Chạm vào <strong>Sao chép lệnh</strong>.</li>
-<li>Nhấn phím Windows + R, dán lệnh (Ctrl + V) và nhấn Enter.</li>
-<li>Chờ máy tính tiền tìm thấy máy in, rồi chạm vào <strong>Dùng và in thử</strong>.</li>
+<li>Trong Windows, đặt máy in hóa đơn làm máy in mặc định.</li>
+<li>Nhấp phải vào biểu tượng Google Chrome và chọn <strong>Thuộc tính</strong>.</li>
+<li>Trong ô <strong>Đích</strong>, nhập <code>"C:\Program Files\Google\Chrome\Application\chrome.exe" --kiosk-printing --user-data-dir="C:\SuperKasaChrome"</code> rồi thêm địa chỉ cửa hàng của bạn.</li>
+<li>Luôn mở máy tính tiền bằng biểu tượng này. Lần đầu hãy đăng nhập trong đó.</li>
 </ol>
-<p>Một chương trình in nhỏ được thêm vào máy tính và tự chạy khi bật máy. Chỉ chủ cửa hàng mới thấy tùy chọn này.</p>
+<p>SuperKasa sẽ chạy trong cửa sổ Chrome riêng, kể cả khi Chrome bình thường vẫn đang mở. Lệnh chính xác kèm địa chỉ cửa hàng có trong trình hướng dẫn máy in, ở mục <strong>In không cần hộp thoại (máy in nối máy tính này)</strong>. Chỉ chủ cửa hàng mới thấy tùy chọn này.</p>
 <h3>Bluetooth</h3>
 <ol class="steps">
 <li>Bật máy in và bật Bluetooth trên điện thoại. Khi Android hỏi, hãy bật cả vị trí.</li>
@@ -151,7 +150,7 @@
 </ol>
 <aside class="note warn"><p>Sau khi tải lại trang, máy in Bluetooth không tự kết nối lại. Máy tính tiền hiện cửa sổ <strong>In không thành công</strong>. Chạm vào <strong>Kết nối máy in</strong>. Trên iPhone và iPad, in Bluetooth từ trình duyệt không hoạt động.</p></aside>
 <h3>Máy in mạng</h3>
-<p>Máy in phải ở trong mạng cửa hàng và nhận dữ liệu qua cổng 9100. Máy tính tiền sẽ thử tự tìm. Nếu không tìm thấy, hãy điền ô <strong>Địa chỉ IP máy in</strong>, ví dụ 192.168.1.50. Tùy chọn này chỉ có với chủ cửa hàng trong chương trình cho Windows, trên máy tính có máy tính tiền.</p>
+<p>Trình duyệt không gửi dữ liệu thẳng tới máy in mạng được. Hãy thêm máy in vào Windows (Cài đặt → Máy in và máy quét) rồi in như mọi máy in khác trong Windows – không cần hộp thoại hoặc qua hộp thoại in.</p>
 </section>
 <section id="zasuvka">
 <h2>Ngăn kéo đựng tiền</h2>
@@ -190,7 +189,7 @@
 </section>
 <section id="cenovky">
 <h2>In nhãn giá</h2>
-<p>Nhãn giá có trong các gói Thực phẩm và Cửa hàng. Tiệm cắt tóc hoặc quán cà phê thì không có chức năng này trong máy. Chủ cửa hàng hoặc quản lý in nhãn.</p>
+<p>Nhãn giá có trong gói Cửa hàng. Tiệm cắt tóc hoặc quán cà phê thì không có chức năng này trong máy. Chủ cửa hàng hoặc quản lý in nhãn.</p>
 <ol class="steps">
 <li>Mở <strong>Quản lý → In nhãn giá</strong>.</li>
 <li>Chọn hàng. Hàng đã đổi giá thì tìm bằng bộ lọc <strong>Đổi giá từ</strong>.</li>
@@ -212,7 +211,7 @@
 <tr><td>Không tìm thấy máy in hóa đơn</td><td>Cài driver và chạm vào <strong>Tìm lại</strong>.</td></tr>
 <tr><td>Máy in nằm trong danh sách dưới dòng “Không dùng in hóa đơn”</td><td>Đó là máy in văn phòng, máy in tem nhãn hoặc máy in PDF. Hãy quay lại và chọn <strong>Không có máy in hóa đơn</strong>.</td></tr>
 <tr><td>Bluetooth sau khi tải lại trang</td><td>Chạm vào <strong>Kết nối máy in</strong>, hoặc <strong>In qua hộp thoại</strong>.</td></tr>
-<tr><td>Máy in USB đang được hệ thống sử dụng</td><td>Trên Windows, hãy thêm máy in là <strong>Máy in nối với máy tính này</strong>.</td></tr>
+<tr><td>Máy in USB đang được hệ thống sử dụng</td><td>Trên Windows, hãy in qua hệ thống: chọn <strong>In không cần hộp thoại (máy in nối máy tính này)</strong> hoặc in qua hộp thoại của trình duyệt.</td></tr>
 <tr><td>Bán khi không có internet, in qua quầy chính</td><td>Hóa đơn in qua hộp thoại của trình duyệt. Khi không có internet, quầy chính không nhận lệnh in từ điện thoại.</td></tr>
 </tbody>
 </table></div>
@@ -265,7 +264,7 @@
           <li><a href="cenik.html">Bảng giá</a></li>
           <li><a href="eet.html">EET 2.0</a></li>
           <li><a href="navody.html">Hướng dẫn</a></li>
-          <li><a href="ke-stazeni.html">Bắt đầu</a></li>
+          <li><a href="jak-zacit.html">Bắt đầu</a></li>
           <li><a href="kontakt.html">Liên hệ</a></li>
         </ul>
       </div>
@@ -286,8 +285,8 @@
       <div>
         <h2>Tài liệu</h2>
         <ul>
-          <li><a href="obchodni-podminky.html">Điều khoản kinh doanh (bản nháp)</a></li>
-          <li><a href="ochrana-osobnich-udaju.html">Bảo vệ dữ liệu cá nhân (bản nháp)</a></li>
+          <li><a href="obchodni-podminky.html">Điều khoản kinh doanh</a></li>
+          <li><a href="ochrana-osobnich-udaju.html">Bảo vệ dữ liệu cá nhân</a></li>
           <li><a href="https://eet.gov.cz/" rel="noopener">EET 2.0 – Finanční správa (Cục Thuế Séc)</a></li>
         </ul>
       </div>

@@ -5,13 +5,9 @@ export { SITE };
 export const INLINE_JS = 'document.documentElement.className+=" js"';
 
 /**
- * Přihlášení na webu (e-mail a heslo majitele přes app.superkasa.cz). Zapnout (true) až tehdy, když:
- * 1) pokladna s účtem majitele je vydaná a ke stažení (od verze 0.2.2, 28. 10. 2026),
- * 2) SuperKasa Cloud na app.superkasa.cz opravdu běží (DNS + server).
- * Do té doby hlavička i prihlaseni.html říkají „Pokladna v prohlížeči – připravujeme“.
+ * Přihlášení a registrace na webu přes SuperKasa Cloud (app.superkasa.cz). SuperKasa běží jen v prohlížeči.
+ * false = výpadková varianta: hlavička ukáže „připravujeme“ místo tlačítka Vyzkoušet zdarma.
  */
-// 2026-10-28: SuperKasa Cloud běží na app.superkasa.cz (VPS FORPSI) – přihlášení přes internet je živé. Stažitelná
-// verze pro Windows má účet majitele od 0.2.2 (28. 10. 2026).
 export const LOGIN_LIVE = true;
 /** Registrace nového obchodu v SuperKasa Cloud (jen když LOGIN_LIVE). */
 export const REGISTER_URL = "https://app.superkasa.cz/";
@@ -63,6 +59,11 @@ const P = {
   star: '<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
   eye: '<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
   bowl: '<path d="M3 11h18a9 9 0 0 1-18 0z"/><path d="M8 7.5c0-1.5 1-2 1-3.5M12 7.5c0-1.5 1-2 1-3.5M16 7.5c0-1.5 1-2 1-3.5"/>',
+  bell: '<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>',
+  bag: '<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/>',
+  chat: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/>',
+  keyboard: '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M6 9h.01M10 9h.01M14 9h.01M18 9h.01M6 13h.01M18 13h.01M10 13h4M7 16h10"/>',
+  toggle: '<rect x="2" y="6" width="20" height="12" rx="6"/><circle cx="16" cy="12" r="3"/>',
 };
 export const icon = (k, cls = "") =>
   `<div class="ico${cls ? " " + cls : ""}" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${P[k]}</svg></div>`;
@@ -71,9 +72,34 @@ export const card = (ic, title, text, cls = "") => `<article class="card">${icon
 
 
 /** Soubory hlavního menu (popisky jsou ve slovníku common.nav ve stejném pořadí). */
-export const NAV_FILES = ["index.html", "obory.html", "funkce.html", "cenik.html", "eet.html", "navody.html", "ke-stazeni.html", "kontakt.html"];
+export const NAV_FILES = ["index.html", "obory.html", "funkce.html", "cenik.html", "eet.html", "navody.html", "jak-zacit.html", "kontakt.html"];
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+
+/**
+ * Stará adresa, která jen přesměruje na novou (GitHub Pages neumí přesměrování 301):
+ * meta refresh, noindex a canonical na novou adresu. Do sitemap se nedává.
+ */
+export const redirectPage = (c, to, title, text) => {
+  const url = pageUrl(c.lang, to);
+  return `<!DOCTYPE html>
+<html lang="${c.lang}">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="${CSP}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=${to}">
+<title>${title}</title>
+<link rel="canonical" href="${url}">
+<link rel="stylesheet" href="${c.up}css/style.css">
+</head>
+<body>
+<main id="obsah" class="section"><div class="wrap"><p>${text} <a href="${to}">${url}</a>.</p></div></main>
+</body>
+</html>
+`;
+};
 
 /** Výzva na konci stránky. */
 export const cta = (c, title = c.T.common.ctaTitle, text = c.T.common.ctaText) => `
@@ -108,14 +134,15 @@ const langSwitch = (c, file) => `<nav class="langs" aria-label="${c.T.common.lan
 
 /**
  * Celá stránka. `c` = jazyk ({ lang, T, up }), `footerObory` = odkazy na obory do patičky,
- * `jsonld` = strukturovaná data (objekt), `canonicalPath` = jiný soubor pro canonical a hreflang (404 → úvod).
+ * `jsonld` = strukturovaná data (objekt), `canonicalPath` = jiný soubor pro canonical a hreflang (404 → úvod),
+ * `altLangs` = jazyky, které stránka uvádí v hreflang (právní stránky jen čeština – překlady jsou noindex).
  */
-export function page(c, { file, title, desc, current, body, noindex = false, canonicalPath, jsonld, footerObory = [] }) {
+export function page(c, { file, title, desc, current, body, noindex = false, canonicalPath, jsonld, footerObory = [], altLangs = LANGS }) {
   const { T, up, lang } = c;
   const L = T.common;
   const target = canonicalPath ?? file;
   const url = pageUrl(lang, target);
-  const alternates = [...LANGS.map((l) => [l, pageUrl(l, target)]), ["x-default", pageUrl("cs", target)]]
+  const alternates = [...altLangs.map((l) => [l, pageUrl(l, target)]), ["x-default", pageUrl("cs", target)]]
     .map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join("\n");
   // V hlavičce bez „Úvod“ (vede tam logo) – menu se pak vejde do řádku i na běžném notebooku; v patičce je celé.
   const nav = NAV_FILES.map((href, i) => (href === "index.html" ? "" : `<a href="${href}"${href === current ? ' aria-current="page"' : ""}>${L.nav[i]}</a>`)).filter(Boolean).join("\n      ");

@@ -167,7 +167,7 @@ export default {
 <p>Khoản giảm này được quy định trong zákon o daních z příjmů (luật thuế thu nhập). Người được hưởng là người kinh doanh cá nhân (fyzická osoba) có nộp tờ khai thuế (daňové přiznání). Công ty s.r.o. không có khoản giảm này. Bạn chỉ dùng được một lần, cho năm đầu tiên bạn bắt buộc ghi nhận doanh thu. Với đa số người kinh doanh, đó sẽ là năm 2027.</p>
 <p>OSVČ có số thuế bằng thuế khoán (paušální daň) thì không được hưởng, vì người đó không nộp tờ khai. Đây là cách hiểu luật của chúng tôi, Finanční správa không nêu rõ điều này. Hãy kiểm tra lại với finanční úřad (cơ quan thuế) hoặc kế toán.</p>
 <p>Khoản giảm không phụ thuộc vào số máy tính tiền, cũng không phụ thuộc vào việc bạn đã từng ghi nhận trong EET cũ hay chưa. Bạn có phải là người nộp thuế DPH hay không cũng không ảnh hưởng.</p>
-<p>Cách tính khoản giảm như sau: 15 % cơ sở tính thuế thành phần từ hoạt động kinh doanh độc lập (dílčí základ daně ze samostatné činnosti) trừ đi khoản giảm cơ bản cho người nộp thuế (základní sleva na poplatníka), là <a href="https://e-sbirka.gov.cz/sb/1892/586/2027-01-01" rel="noopener">30 840 Kč</a>. Khoản giảm tối đa là 5 000 Kč.</p>
+<p>Cách tính khoản giảm như sau: 15 % cơ sở tính thuế thành phần từ hoạt động kinh doanh độc lập (dílčí základ daně ze samostatné činnosti) trừ đi khoản giảm cơ bản cho người nộp thuế (základní sleva na poplatníka), là <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">30 840 Kč</a>. Khoản giảm tối đa là 5 000 Kč.</p>
 <div class="tbl"><table>
   <thead><tr><th>Cơ sở tính thuế thành phần</th><th>15 %</th><th>Sau khi trừ 30 840 Kč</th><th>Khoản giảm</th></tr></thead>
   <tbody>
@@ -434,7 +434,7 @@ export default {
 <p>Bạn phải đáp ứng tất cả các điều kiện sau:</p>
 <ul>
   <li><strong>Bạn là cá nhân (fyzická osoba).</strong> Chế độ này không dành cho công ty trách nhiệm hữu hạn (s.r.o.) và các pháp nhân khác.</li>
-  <li><strong>Bạn ở bậc 1 (1. pásmo) của chế độ thuế khoán.</strong> Theo <a href="https://e-sbirka.gov.cz/sb/1892/586/2027-01-01" rel="noopener">§ 2a của zákon o daních z příjmů</a> (luật thuế thu nhập), chế độ thuế khoán chỉ dành cho người không nộp thuế DPH (neplátce DPH), ngoài các điều kiện khác.</li>
+  <li><strong>Bạn ở bậc 1 (1. pásmo) của chế độ thuế khoán.</strong> Theo <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">§ 2a của zákon o daních z příjmů</a> (luật thuế thu nhập), chế độ thuế khoán chỉ dành cho người không nộp thuế DPH (neplátce DPH), ngoài các điều kiện khác.</li>
   <li><strong>Thu nhập từ hoạt động kinh doanh độc lập (samostatná činnost) của năm trước không vượt quá 1 000 000 Kč.</strong> Với năm 2027 thì xét năm 2026. Thu nhập đến từ hoạt động độc lập nào cũng tính như nhau.</li>
   <li><strong>Bạn nộp thông báo đúng hạn.</strong> Không có thông báo thì chế độ không bắt đầu.</li>
 </ul>
@@ -862,11 +862,11 @@ export default {
     ],
     sources: [
       ["Luật Zákon č. 235/2004 Sb. về DPH, § 26 đến 35a, 42, 45 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/2004-235"],
-      ["Luật Zákon č. 634/1892 Sb. về bảo vệ người tiêu dùng, § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1892-634"],
+      ["Luật Zákon č. 634/1892 Sb. về bảo vệ người tiêu dùng, § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1992-634"],
       ["Luật Zákon č. 180/2026 Sb. về ghi nhận doanh thu, § 8 và sửa đổi phụ lục của zákon o DPH (eet.gov.cz)", ZAKON],
       ["Ghi nhận doanh thu trong thực tế và mã POK (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/evidence-trzeb-v-praxi"],
       ["Lỗi và cách xử lý: hủy và sửa doanh thu (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/chyby-a-jejich-reseni"],
-      ["Luật Zákon č. 563/1891 Sb. về kế toán, § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1891-563"],
+      ["Luật Zákon č. 563/1891 Sb. về kế toán, § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1991-563"],
     ],
     related: ["eet-2-0-pruvodce", "tiskarna-ctecka-zasuvka", "eet-off-pausalni-dan"],
   },
@@ -885,15 +885,15 @@ export default {
     sections: [
       {
         id: "dve-cesty",
-        h2: "Hai cách để bắt đầu",
+        h2: "Bắt đầu thế nào",
         html: `
-<p>Bạn dùng SuperKasa trên trình duyệt hoặc bằng chương trình cho Windows. 10 ngày đầu miễn phí và không cần thẻ thanh toán.</p>
+<p>SuperKasa chạy trên trình duyệt ở máy tính, máy tính bảng và điện thoại. Không cần tải hay cài gì. 10 ngày đầu miễn phí và không cần thẻ thanh toán.</p>
 <div class="tbl"><table>
-<thead><tr><th></th><th>Trên trình duyệt</th><th>Chương trình cho Windows</th></tr></thead>
+<thead><tr><th></th><th>SuperKasa trên trình duyệt</th></tr></thead>
 <tbody>
-<tr><td>Cài đặt</td><td>Không cần</td><td>Một tệp cài đặt</td></tr>
-<tr><td>Dữ liệu ở đâu</td><td>Trên máy chủ SuperKasa</td><td>Trên máy tính của bạn</td></tr>
-<tr><td>Thiết bị</td><td>Máy tính, máy tính bảng, điện thoại</td><td>Máy tính Windows 10 hoặc 11, thiết bị khác qua mạng cửa hàng</td></tr>
+<tr><td>Cài đặt</td><td>Không cần</td></tr>
+<tr><td>Dữ liệu ở đâu</td><td>Trên máy chủ SuperKasa, sao lưu mỗi ngày</td></tr>
+<tr><td>Thiết bị</td><td>Máy tính, máy tính bảng, điện thoại – tối đa 10 trong gói, tất cả bán chung một ca</td></tr>
 </tbody>
 </table></div>`,
       },
@@ -919,7 +919,7 @@ export default {
 <ol class="steps">
 <li>Ở màn hình <strong>Bạn kinh doanh gì?</strong> hãy chọn ngành hàng, ví dụ Tạp hóa hoặc Tiệm cắt tóc.</li>
 <li>Không thấy ngành hàng của bạn? Hãy viết vào ô <strong>Mô tả bằng lời của bạn: bạn bán gì?</strong> rồi chạm vào <strong>Gợi ý nhóm hàng</strong>. Bạn có thể sửa gợi ý.</li>
-<li>Điền ô <strong>Tên của bạn</strong> và nhập <strong>PIN</strong> hai lần (4 đến 8 số). Với bản Windows, bạn điền cả ô <strong>Tên công ty</strong>.</li>
+<li>Điền ô <strong>Tên của bạn</strong> và nhập <strong>PIN</strong> hai lần (4 đến 8 số).</li>
 <li>Điền <strong>E-mail</strong> và <strong>Mật khẩu</strong> (ít nhất 8 ký tự). Bạn sẽ cần chúng trên mỗi thiết bị mới.</li>
 <li>Chạm vào <strong>Tạo máy tính tiền</strong>.</li>
 </ol>
@@ -1008,7 +1008,8 @@ export default {
 </ol>
 <p>Sau đó hiện ra <strong>Mở ca</strong>. Trong ô <strong>Tiền mặt đầu ca trong ngăn kéo</strong>, hãy ghi số tiền còn lại trong ngăn kéo.</p>
 <aside class="note warn"><p>Nếu bạn đóng cửa sổ này, lần đăng nhập sau máy sẽ tự mở với số tiền từ lần chốt ca trước, kể cả khi bạn đã mang doanh thu đi. Vì vậy hãy bật tùy chọn <strong>Nhập tiền mặt trong ngăn kéo khi mở máy</strong> trong <strong>Quản lý → Hệ thống → Kiểm soát tiền mặt</strong>. Tiền trong ngày thì ghi qua <strong>Menu → Nộp / rút tiền</strong>.</p></aside>
-<p>Muốn xem tình hình mà không chốt ca, dùng <strong>Báo cáo tạm</strong> trong Menu.</p>`,
+<p>Muốn xem tình hình mà không chốt ca, dùng <strong>Báo cáo tạm</strong> trong Menu.</p>
+<p>Cả cửa hàng chỉ có một lần chốt ca: mọi thiết bị bán chung một ca. Sau 20 giờ máy tính tiền nhắc chốt ca, và nếu không ai chốt, lúc 23:59 máy tự chốt.</p>`,
       },
       {
         id: "prodavaci",
@@ -1034,8 +1035,7 @@ export default {
         h2: "Thiết bị và sao lưu",
         html: `
 <p>Trong gói có tối đa 10 thiết bị. Thiết bị mới đăng nhập bằng e-mail và mật khẩu của chủ cửa hàng, cách làm có trong hướng dẫn <a href="prodej-z-telefonu.html">Máy tính tiền trên điện thoại và máy tính bảng</a>.</p>
-<p><strong>Windows.</strong> Máy tính tiền tự sao lưu mỗi ngày. Trong <strong>Quản lý → Hệ thống → Sao lưu</strong>, hãy đặt <strong>Bản sao thứ hai (thư mục)</strong>, tốt nhất vào ổ USB hoặc OneDrive. Nút <strong>Sao lưu ngay</strong> sao lưu ngay lập tức.</p>
-<p><strong>Trình duyệt.</strong> Dữ liệu do máy chủ sao lưu. Ô bản sao thứ hai ở đây không có tác dụng.</p>
+<p>Máy chủ sao lưu dữ liệu cửa hàng mỗi ngày, và có thêm một bản sao bên ngoài máy chủ. Bạn không cần cài đặt gì.</p>
 <p>Bạn tải bản sao riêng về bất cứ lúc nào trong <strong>Quản lý → Hệ thống → Xuất dữ liệu</strong>. Xuất dữ liệu vẫn dùng được sau khi giấy phép hết hạn.</p>`,
       },
       {
@@ -1059,7 +1059,7 @@ export default {
       ["Tôi quên mật khẩu. Phải làm sao?", "Mở địa chỉ cửa hàng của bạn trên thiết bị chưa đăng nhập và chạm vào Quên mật khẩu. Bạn nhập e-mail, mã PIN của chủ và mật khẩu mới."],
       ["Hóa đơn trong thời gian dùng thử có hợp lệ không?", "Máy tính tiền tạo đến hết năm 2026 xuất hóa đơn hợp lệ ngay. Máy tạo từ ngày 1 tháng 1 năm 2027 bắt đầu ở chế độ thử, trong đó hóa đơn không có giá trị. Máy chỉ chuyển sang vận hành thật khi có chứng chỉ từ DIS+, số đơn vị ghi nhận (evidenční jednotka), kết nối đã kiểm tra và giấy phép trả phí. Ai không phải ghi nhận doanh thu thì chọn Tôi không phải ghi nhận doanh thu trong Quản lý → EET 2.0 và không cần chứng chỉ. Chế độ thử chỉ bật được trước hóa đơn thật đầu tiên."],
       ["Nhân viên có trả tiền lại cho khách mà không có quản lý được không?", "Không. Với hủy hóa đơn và trả hàng, nhân viên phải xác nhận bằng mã PIN của quản lý hoặc chủ. Quản lý và chủ không phải nhập lại mã PIN."],
-      ["Tôi có phải chốt ca mỗi ngày không?", "Máy không bắt buộc, nhưng sau 20 giờ sẽ nhắc. Không chốt ca thì doanh thu của nhiều ngày sẽ gộp lại với nhau."],
+      ["Tôi có phải chốt ca mỗi ngày không?", "Sau 20 giờ máy nhắc, và lúc 23:59 máy tự chốt ca, nên doanh thu của nhiều ngày không bị gộp lại. Nhưng tiền mặt trong ngăn kéo thì chỉ bạn đếm được, vì vậy tốt hơn là cuối ngày tự chốt ca."],
     ],
     sources: [],
     related: ["tiskarna-ctecka-zasuvka", "prodej-z-telefonu", "eet-2-0-krok-za-krokem"],
@@ -1098,7 +1098,7 @@ export default {
         html: `
 <p>Giá quảng cáo thường chỉ là một phần chi phí. Hãy tính cả năm.</p>
 <h3>Giá có DPH hay chưa có DPH</h3>
-<p>Bảng giá cho người kinh doanh thường ghi giá chưa có DPH (thuế giá trị gia tăng). Nếu bạn không phải người nộp thuế DPH (plátce DPH), bạn không được khấu trừ thuế và phải trả giá có DPH. Ví dụ: 189 Kč chưa DPH, với thuế suất 21 %, là tổng cộng 228,69 Kč. Hãy luôn hỏi giá cuối cùng.</p>
+<p>Bảng giá cho người kinh doanh thường ghi giá chưa có DPH (thuế giá trị gia tăng). Nếu bạn không phải người nộp thuế DPH (plátce DPH), bạn không được khấu trừ thuế và phải trả giá có DPH. Ví dụ: 250 Kč chưa DPH, với thuế suất 21 %, là tổng cộng 302,50 Kč. Hãy luôn hỏi giá cuối cùng.</p>
 <h3>Thiết bị thêm</h3>
 <p>Hãy hỏi giá đã gồm bao nhiêu thiết bị. Quầy thứ hai, máy tính bảng để nhập hàng và điện thoại cho nhân viên làm thời vụ có thể mỗi cái phải trả riêng.</p>
 <h3>Phần cứng</h3>
@@ -1284,9 +1284,7 @@ export default {
 <div class="tbl"><table>
 <thead><tr><th>Bạn có</th><th>Lựa chọn trong trình hướng dẫn</th></tr></thead>
 <tbody>
-<tr><td>Chương trình cho Windows, máy in USB</td><td>Máy in nối với máy tính này</td></tr>
-<tr><td>Chương trình cho Windows, máy in trong mạng</td><td>Máy in mạng (Wi-Fi / cáp)</td></tr>
-<tr><td>Máy tính Windows, máy tính tiền trên trình duyệt</td><td>In không cần hộp thoại (máy in nối máy tính này)</td></tr>
+<tr><td>Máy tính Windows và máy in hóa đơn</td><td>In không cần hộp thoại (máy in nối máy tính này)</td></tr>
 <tr><td>Android và máy in Bluetooth</td><td>Máy in Bluetooth</td></tr>
 <tr><td>Android và máy in dùng cáp (OTG)</td><td>Máy in USB cho điện thoại / máy tính bảng</td></tr>
 <tr><td>Máy in cũ dùng cáp nối tiếp</td><td>Máy in qua cổng COM</td></tr>
@@ -1299,19 +1297,20 @@ export default {
 <ol class="steps">
 <li>Cắm máy in bằng cáp USB và bật máy.</li>
 <li>Chờ Windows cài máy in. Epson TM cần driver từ trang của Epson (EPSON Advanced Printer Driver). Các hãng khác có driver trên đĩa CD hoặc trên trang của người bán.</li>
-<li>Trong trình hướng dẫn, chọn <strong>Máy in nối với máy tính này</strong>.</li>
-<li>Máy tính tiền sẽ tìm thấy máy in. Nếu không, chạm vào <strong>Tìm lại</strong>.</li>
+<li>Trong Windows, đặt máy in hóa đơn làm máy in mặc định.</li>
+<li>Trong trình hướng dẫn của máy tính tiền, chọn <strong>In không cần hộp thoại (máy in nối máy tính này)</strong>, hoặc in qua hộp thoại của trình duyệt.</li>
 <li>Chạm vào <strong>Dùng và in thử</strong>.</li>
 <li>Tờ in thử đã ra? Chạm vào <strong>Có, in được</strong>.</li>
 </ol>
-<h3>In không cần hộp thoại với máy tính tiền trên trình duyệt</h3>
+<h3>In không cần hộp thoại</h3>
+<p>Không cần tải gì. Bạn chỉ mở máy tính tiền bằng một biểu tượng Chrome in thẳng ra máy in mặc định, không hiện hộp thoại in.</p>
 <ol class="steps">
-<li>Chọn <strong>In không cần hộp thoại (máy in nối máy tính này)</strong>.</li>
-<li>Chạm vào <strong>Sao chép lệnh</strong>.</li>
-<li>Nhấn phím Windows + R, dán lệnh (Ctrl + V) và nhấn Enter.</li>
-<li>Chờ máy tính tiền tìm thấy máy in, rồi chạm vào <strong>Dùng và in thử</strong>.</li>
+<li>Trong Windows, đặt máy in hóa đơn làm máy in mặc định.</li>
+<li>Nhấp phải vào biểu tượng Google Chrome và chọn <strong>Thuộc tính</strong>.</li>
+<li>Trong ô <strong>Đích</strong>, nhập <code>"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --kiosk-printing --user-data-dir="C:\\SuperKasaChrome"</code> rồi thêm địa chỉ cửa hàng của bạn.</li>
+<li>Luôn mở máy tính tiền bằng biểu tượng này. Lần đầu hãy đăng nhập trong đó.</li>
 </ol>
-<p>Một chương trình in nhỏ được thêm vào máy tính và tự chạy khi bật máy. Chỉ chủ cửa hàng mới thấy tùy chọn này.</p>
+<p>SuperKasa sẽ chạy trong cửa sổ Chrome riêng, kể cả khi Chrome bình thường vẫn đang mở. Lệnh chính xác kèm địa chỉ cửa hàng có trong trình hướng dẫn máy in, ở mục <strong>In không cần hộp thoại (máy in nối máy tính này)</strong>. Chỉ chủ cửa hàng mới thấy tùy chọn này.</p>
 <h3>Bluetooth</h3>
 <ol class="steps">
 <li>Bật máy in và bật Bluetooth trên điện thoại. Khi Android hỏi, hãy bật cả vị trí.</li>
@@ -1320,7 +1319,7 @@ export default {
 </ol>
 <aside class="note warn"><p>Sau khi tải lại trang, máy in Bluetooth không tự kết nối lại. Máy tính tiền hiện cửa sổ <strong>In không thành công</strong>. Chạm vào <strong>Kết nối máy in</strong>. Trên iPhone và iPad, in Bluetooth từ trình duyệt không hoạt động.</p></aside>
 <h3>Máy in mạng</h3>
-<p>Máy in phải ở trong mạng cửa hàng và nhận dữ liệu qua cổng 9100. Máy tính tiền sẽ thử tự tìm. Nếu không tìm thấy, hãy điền ô <strong>Địa chỉ IP máy in</strong>, ví dụ 192.168.1.50. Tùy chọn này chỉ có với chủ cửa hàng trong chương trình cho Windows, trên máy tính có máy tính tiền.</p>`,
+<p>Trình duyệt không gửi dữ liệu thẳng tới máy in mạng được. Hãy thêm máy in vào Windows (Cài đặt → Máy in và máy quét) rồi in như mọi máy in khác trong Windows – không cần hộp thoại hoặc qua hộp thoại in.</p>`,
       },
       {
         id: "zasuvka",
@@ -1367,7 +1366,7 @@ export default {
         id: "cenovky",
         h2: "In nhãn giá",
         html: `
-<p>Nhãn giá có trong các gói Thực phẩm và Cửa hàng. Tiệm cắt tóc hoặc quán cà phê thì không có chức năng này trong máy. Chủ cửa hàng hoặc quản lý in nhãn.</p>
+<p>Nhãn giá có trong gói Cửa hàng. Tiệm cắt tóc hoặc quán cà phê thì không có chức năng này trong máy. Chủ cửa hàng hoặc quản lý in nhãn.</p>
 <ol class="steps">
 <li>Mở <strong>Quản lý → In nhãn giá</strong>.</li>
 <li>Chọn hàng. Hàng đã đổi giá thì tìm bằng bộ lọc <strong>Đổi giá từ</strong>.</li>
@@ -1391,7 +1390,7 @@ export default {
 <tr><td>Không tìm thấy máy in hóa đơn</td><td>Cài driver và chạm vào <strong>Tìm lại</strong>.</td></tr>
 <tr><td>Máy in nằm trong danh sách dưới dòng “Không dùng in hóa đơn”</td><td>Đó là máy in văn phòng, máy in tem nhãn hoặc máy in PDF. Hãy quay lại và chọn <strong>Không có máy in hóa đơn</strong>.</td></tr>
 <tr><td>Bluetooth sau khi tải lại trang</td><td>Chạm vào <strong>Kết nối máy in</strong>, hoặc <strong>In qua hộp thoại</strong>.</td></tr>
-<tr><td>Máy in USB đang được hệ thống sử dụng</td><td>Trên Windows, hãy thêm máy in là <strong>Máy in nối với máy tính này</strong>.</td></tr>
+<tr><td>Máy in USB đang được hệ thống sử dụng</td><td>Trên Windows, hãy in qua hệ thống: chọn <strong>In không cần hộp thoại (máy in nối máy tính này)</strong> hoặc in qua hộp thoại của trình duyệt.</td></tr>
 <tr><td>Bán khi không có internet, in qua quầy chính</td><td>Hóa đơn in qua hộp thoại của trình duyệt. Khi không có internet, quầy chính không nhận lệnh in từ điện thoại.</td></tr>
 </tbody>
 </table></div>
@@ -1436,24 +1435,7 @@ export default {
 <tr><td>Tiệm tạp hóa</td><td>Máy tính bảng để nhập hàng và kiểm kê trong kho</td></tr>
 </tbody>
 </table></div>
-<p>Máy tính tiền hoạt động theo hai cách. Hãy xác định bạn dùng cách nào, vì các bước hơi khác nhau.</p>
-<div class="tbl"><table>
-<thead><tr><th></th><th>Máy tính tiền trên trình duyệt</th><th>Chương trình cho Windows</th></tr></thead>
-<tbody>
-<tr><td>Kết nối</td><td>Internet</td><td>Wi-Fi hoặc cáp trong mạng cửa hàng</td></tr>
-<tr><td>Địa chỉ</td><td>vas-obchod.superkasa.cz</td><td>Địa chỉ trong Quản lý → Thiết bị</td></tr>
-<tr><td>Máy tính chính</td><td>Không cần chạy</td><td>Phải chạy, dữ liệu nằm trên đó</td></tr>
-<tr><td>Bán ngoài cửa hàng</td><td>Được</td><td>Không</td></tr>
-</tbody>
-</table></div>
-<h3>Chuẩn bị với chương trình cho Windows</h3>
-<ol class="steps">
-<li>Trên máy tính chính, mở <strong>Quản lý → Thiết bị</strong>.</li>
-<li>Tích <strong>Cho phép thiết bị trong mạng kết nối</strong> và chạm vào <strong>Lưu</strong>.</li>
-<li>Chạm vào <strong>Khởi động lại</strong>.</li>
-<li>Khi Windows hiện cửa sổ tường lửa (firewall), hãy bấm “Povolit přístup” (Cho phép truy cập).</li>
-<li>Ghi lại thông tin <strong>Địa chỉ cho thiết bị khác</strong>.</li>
-</ol>`,
+<p>Điện thoại hoặc máy tính bảng kết nối với máy tính tiền qua internet, tại địa chỉ cửa hàng của bạn, ví dụ vas-obchod.superkasa.cz. Máy tính chính không cần chạy và bạn bán được cả bên ngoài cửa hàng.</p>`,
       },
       {
         id: "prihlaseni",
@@ -1491,8 +1473,8 @@ export default {
 <li>Bạn gỡ thiết bị cũ trong <strong>Quản lý → Thiết bị</strong> bằng nút <strong>Gỡ bỏ</strong>.</li>
 <li>Cần hơn 10 thiết bị? <a href="kontakt.html">Hãy gọi cho chúng tôi</a>.</li>
 </ul>
-<p>Báo cáo doanh thu cho chủ cửa hàng không chiếm thiết bị trong gói. Bạn tạo đường dẫn trong <strong>Quản lý → Hệ thống → Chủ cửa hàng trên điện thoại</strong>. Đường dẫn này chỉ để xem. Với chương trình cho Windows, nó chỉ hoạt động trong mạng cửa hàng.</p>
-<aside class="note"><p>Mỗi thiết bị có ca và chốt ca riêng. Nếu nhân viên nhận tiền mặt trên điện thoại, cuối ngày phải chốt ca cả trên điện thoại đó.</p></aside>`,
+<p>Báo cáo doanh thu cho chủ cửa hàng không chiếm thiết bị trong gói. Bạn tạo đường dẫn trong <strong>Quản lý → Hệ thống → Chủ cửa hàng trên điện thoại</strong>. Đường dẫn này chỉ để xem và dùng được ở bất cứ đâu.</p>
+<aside class="note"><p>Mọi thiết bị bán chung một ca của cửa hàng. Cả cửa hàng chỉ có một lần chốt ca, và tiền mặt nhận trên điện thoại được cộng chung với quầy chính.</p></aside>`,
       },
       {
         id: "prodej",
@@ -1506,7 +1488,7 @@ export default {
 <li>Hướng vào mã vạch. Mã sẽ tự được đọc.</li>
 </ol>
 <p>Camera đọc mã EAN-13, EAN-8 và UPC. Bạn thử trong <strong>Menu → Máy quét mã vạch</strong>.</p>
-<p>Camera trực tiếp chỉ hoạt động trên địa chỉ bảo mật, tức là ở máy tính tiền trên trình duyệt. Chương trình cho Windows chạy trong mạng cửa hàng, không có địa chỉ bảo mật. Khi đó hãy chạm vào <strong>Chụp ảnh</strong> và chụp mã từ gần, rõ nét và trọn vẹn, cả phần viền trắng.</p>
+<p>Nếu camera không đọc được mã, hãy chạm vào <strong>Chụp ảnh</strong> và chụp mã từ gần, rõ nét và trọn vẹn, cả phần viền trắng.</p>
 <p>Máy quét Bluetooth thì ghép nối trong cài đặt của điện thoại. Sau đó nó hoạt động như bàn phím.</p>
 <h3>Nhập hàng trên máy tính bảng</h3>
 <p>Chủ cửa hàng hoặc quản lý mở <strong>Quản lý → Kho hàng → Nhập hàng</strong>. Mỗi lần quét thêm một cái. Camera cũng dùng được ở đây. Cuối cùng chạm vào <strong>Nhập kho</strong>. <strong>Kiểm kê kệ</strong> cũng hoạt động như vậy.</p>`,
@@ -1521,7 +1503,7 @@ export default {
 <li>Chọn <strong>In bằng máy in ở quầy chính</strong> và chọn thiết bị.</li>
 <li>Chạm vào <strong>Dùng và in thử</strong>.</li>
 </ol>
-<p>Với máy tính tiền trên trình duyệt, lệnh in đi qua internet và điện thoại không cần cùng Wi-Fi. Với chương trình cho Windows, điện thoại phải ở trong mạng cửa hàng. Nếu không, nó hoàn toàn không kết nối được với máy tính tiền.</p>
+<p>Lệnh in đi qua internet, nên điện thoại không cần cùng Wi-Fi với quầy chính.</p>
 <p>Trình hướng dẫn cũng tự mở khi in lần đầu. Nếu bạn đóng nó, hóa đơn sẽ không tự in. Bạn in bằng <strong>HĐ cuối</strong> và <strong>In bản sao</strong>.</p>
 <aside class="note warn"><p>Máy in Bluetooth nối với điện thoại chỉ hoạt động trên Android. Trên iPhone và iPad, trình duyệt không kết nối được máy in Bluetooth, hãy dùng máy in ở quầy chính. Sau khi tải lại trang, cần chạm lại vào <strong>Kết nối máy in</strong>.</p></aside>`,
       },
@@ -1541,7 +1523,7 @@ export default {
         id: "vypadek",
         h2: "Mất internet",
         html: `
-<p><strong>Máy tính tiền trên trình duyệt.</strong> Việc bán hàng vẫn chạy tiếp và phía trên đơn hàng hiện <strong>Mất mạng – vẫn bán bình thường, hóa đơn sẽ tự gửi lên</strong>.</p>
+<p>Việc bán hàng vẫn chạy tiếp và phía trên đơn hàng hiện <strong>Mất mạng – vẫn bán bình thường, hóa đơn sẽ tự gửi lên</strong>.</p>
 <ul>
 <li>Chỉ trả được bằng tiền mặt và thẻ. Thanh toán QR, điểm thưởng và hóa đơn theo bàn không dùng được.</li>
 <li>Thiết bị có sẵn các số hóa đơn được giữ trước. Không có số này thì không lưu được đơn bán.</li>
@@ -1551,14 +1533,13 @@ export default {
 <li>Đăng nhập bằng mã PIN và mở ca cần có kết nối. Hãy để thiết bị luôn đăng nhập.</li>
 <li>In ở quầy chính không hoạt động khi không có internet, hóa đơn in qua hộp thoại của trình duyệt. Máy in Bluetooth nối với điện thoại vẫn in tiếp.</li>
 </ul>
-<aside class="note warn"><p>Khi hóa đơn còn đang chờ, đừng xóa dữ liệu trình duyệt. Hóa đơn chỉ nằm trên thiết bị đó. Sau 24 giờ máy tính tiền sẽ cảnh báo, vì doanh thu phải được gửi lên EET trong vòng 48 giờ. Hãy kết nối internet càng sớm càng tốt.</p></aside>
-<p><strong>Chương trình cho Windows.</strong> Máy tính chính vẫn bán được khi không có internet và gửi doanh thu lên EET sau. Nhưng máy tính bảng trong mạng cửa hàng cần máy tính chính đang chạy và Wi-Fi hoạt động. Nó không có chế độ ngoại tuyến riêng.</p>`,
+<aside class="note warn"><p>Khi hóa đơn còn đang chờ, đừng xóa dữ liệu trình duyệt. Hóa đơn chỉ nằm trên thiết bị đó. Sau 24 giờ máy tính tiền sẽ cảnh báo, vì doanh thu phải được gửi lên EET trong vòng 48 giờ. Hãy kết nối internet càng sớm càng tốt.</p></aside>`,
       },
     ],
     faq: [
       ["Nhân viên có dùng được điện thoại riêng không?", "Được, nhưng lần đăng nhập đầu phải do chủ cửa hàng làm bằng e-mail và mật khẩu của mình. Sau đó chủ đăng xuất và nhân viên nhập mã PIN."],
       ["Mỗi điện thoại có tính là một thiết bị không?", "Có. Trong gói có tối đa 10 thiết bị. Báo cáo Chủ cửa hàng trên điện thoại không tính vào hạn mức."],
-      ["Điện thoại có phải cùng Wi-Fi với quầy chính không?", "Với máy tính tiền trên trình duyệt thì không, lệnh in đi qua internet. Với chương trình cho Windows, điện thoại phải ở trong mạng cửa hàng."],
+      ["Điện thoại có phải cùng Wi-Fi với quầy chính không?", "Không. Lệnh in ra quầy chính đi qua internet, nên điện thoại dùng dữ liệu di động cũng được."],
       ["Máy tính tiền có chạy trên iPhone không?", "Có, trên trình duyệt. Chỉ có việc kết nối trực tiếp máy in Bluetooth là không được. Bạn có thể in ở máy in của quầy chính."],
       ["Có in nhãn giá trên điện thoại được không?", "Được, nếu bạn là quản lý hoặc chủ cửa hàng và điện thoại đã cài máy in. Nhưng phần Quản lý trên màn hình nhỏ kém tiện hơn trên máy tính."],
     ],
@@ -1608,7 +1589,7 @@ export default {
 </ol>
 <p>Khi nhân viên đăng nhập bằng mã PIN, máy tự chuyển sang ngôn ngữ của người đó. Mỗi người cũng tự đổi được bằng lá cờ trên thanh phía trên, và máy sẽ nhớ lựa chọn này. Nhờ vậy nhân viên người Séc và chủ cửa hàng người Việt dùng chung một máy, mỗi người một ngôn ngữ.</p>
 <p><strong>Bảng hướng dẫn dán tường.</strong> Trong <strong>Quản lý → Nhân viên</strong> có nút <strong>Hướng dẫn nhanh cho nhân viên (CZ / VI)</strong>. Nút này in ra tờ A4 tóm tắt những thao tác hay dùng nhất, bằng cả tiếng Séc và tiếng Việt.</p>
-<aside class="note warn"><p>Một số thông báo lỗi ít gặp từ máy chủ có thể hiện bằng tiếng Séc. Nút bấm và menu thì đã được dịch.</p></aside>`,
+<aside class="note"><p>Nút bấm, menu và thông báo từ máy chủ đều đã được dịch sang tiếng Việt. Nếu vẫn gặp chữ tiếng Séc, hãy gọi cho chúng tôi để bổ sung bản dịch.</p></aside>`,
       },
       {
         id: "kategorie",
@@ -1692,7 +1673,7 @@ export default {
 <li>Trong năm 2026, bạn có thể chọn chế độ <strong>Chạy thử</strong>. Hãy bật EET thật vào ngày 1 tháng 1 năm 2027, chậm nhất là lúc có khoản doanh thu đầu tiên của năm 2027.</li>
 </ol>
 <p>EET thật cần có giấy phép trả phí. Cách làm chi tiết có trong hướng dẫn <a href="eet-2-0-krok-za-krokem.html">EET 2.0 từng bước</a>. Trang web SuperKasa cũng có <a href="index.html">bằng tiếng Việt</a>.</p>
-<p>Chúng tôi hỗ trợ qua điện thoại, cả bằng tiếng Việt: <a href="tel:+420608886882">+420 608 886 882</a>. Chúng tôi sẽ cùng bạn cài đặt và thiết lập máy.</p>`,
+<p>Chúng tôi hỗ trợ qua điện thoại, cả bằng tiếng Việt: <a href="tel:+420608886882">+420 608 886 882</a>. Chúng tôi sẽ cùng bạn thiết lập máy.</p>`,
       },
     ],
     faq: [
@@ -1700,7 +1681,7 @@ export default {
       ["Mỗi nhân viên có dùng ngôn ngữ khác nhau được không?", "Được. Ngôn ngữ được lưu riêng cho từng nhân viên. Sau khi đăng nhập bằng mã PIN, máy tự chuyển."],
       ["Máy có dịch tên hàng sang tiếng Việt không?", "Không. Máy chỉ dịch tên nhóm hàng, còn tên hàng giữ nguyên như bạn nhập. Vì hóa đơn, hãy ghi tên hàng bằng tiếng Séc."],
       ["Phần Quản lý có tiếng Việt không?", "Có. Trong phần Quản lý cũng có lá cờ, và lựa chọn được lưu vào tài khoản của bạn."],
-      ["Các bạn có giúp tôi cài đặt bằng tiếng Việt không?", "Có. Hãy gọi số +420 608 886 882. Chúng tôi sẽ cùng bạn cài đặt và thiết lập máy tính tiền."],
+      ["Các bạn có giúp tôi cài đặt bằng tiếng Việt không?", "Có. Hãy gọi số +420 608 886 882. Chúng tôi sẽ cùng bạn thiết lập máy tính tiền."],
     ],
     sources: [["Finanční správa: Ai phải ghi nhận doanh thu", "https://eet.gov.cz/cs/koho-se-eet-tyka/kdo-musi-evidovat-trzby"]],
     related: ["navod-superkasa", "tiskarna-ctecka-zasuvka", "eet-2-0-krok-za-krokem"],

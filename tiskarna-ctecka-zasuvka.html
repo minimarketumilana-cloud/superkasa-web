@@ -48,7 +48,7 @@
       <a href="cenik.html">Ceník</a>
       <a href="eet.html">EET 2.0</a>
       <a href="navody.html" aria-current="page">Návody</a>
-      <a href="ke-stazeni.html">Jak začít</a>
+      <a href="jak-zacit.html">Jak začít</a>
       <a href="kontakt.html">Kontakt</a>
       <a class="btn btn-primary nav-price" href="cenik.html">189 Kč / měsíc</a>
       <a class="btn btn-gold" href="https://app.superkasa.cz/">Vyzkoušet zdarma</a>
@@ -115,9 +115,7 @@
 <div class="tbl"><table>
 <thead><tr><th>Máte</th><th>Volba v průvodci</th></tr></thead>
 <tbody>
-<tr><td>Program pro Windows, tiskárna na USB</td><td>Tiskárna u tohoto počítače</td></tr>
-<tr><td>Program pro Windows, tiskárna v síti</td><td>Síťová tiskárna (Wi-Fi / kabel)</td></tr>
-<tr><td>Počítač s Windows, pokladna v prohlížeči</td><td>Tisk bez okna (tiskárna u tohoto počítače)</td></tr>
+<tr><td>Počítač s Windows a pokladní tiskárna</td><td>Tisk bez okna (tiskárna u tohoto počítače)</td></tr>
 <tr><td>Android a Bluetooth tiskárna</td><td>Bluetooth tiskárna</td></tr>
 <tr><td>Android a tiskárna na kabelu (OTG)</td><td>USB tiskárna k telefonu / tabletu</td></tr>
 <tr><td>Starší tiskárna se sériovým kabelem</td><td>Tiskárna na COM portu</td></tr>
@@ -130,19 +128,20 @@
 <ol class="steps">
 <li>Zapojte tiskárnu USB kabelem a zapněte ji.</li>
 <li>Počkejte, až ji Windows nainstalují. Epson TM potřebuje ovladač z webu Epsonu (EPSON Advanced Printer Driver). Jiné značky mají ovladač na CD nebo na webu prodejce.</li>
-<li>V průvodci zvolte <strong>Tiskárna u tohoto počítače</strong>.</li>
-<li>Pokladna tiskárnu najde. Když ne, klepněte na <strong>Hledat znovu</strong>.</li>
+<li>Ve Windows nastavte pokladní tiskárnu jako výchozí.</li>
+<li>V průvodci pokladny zvolte <strong>Tisk bez okna (tiskárna u tohoto počítače)</strong>, nebo tisk přes okno prohlížeče.</li>
 <li>Klepněte na <strong>Použít a vytisknout zkoušku</strong>.</li>
 <li>Vyjel zkušební lístek? Klepněte na <strong>Ano, tiskne</strong>.</li>
 </ol>
-<h3>Tisk bez okna u pokladny v prohlížeči</h3>
+<h3>Tisk bez okna</h3>
+<p>Nic se nestahuje. Pokladnu jen otevíráte zástupcem Chromu, který tiskne rovnou na výchozí tiskárnu bez tiskového okna.</p>
 <ol class="steps">
-<li>Zvolte <strong>Tisk bez okna (tiskárna u tohoto počítače)</strong>.</li>
-<li>Klepněte na <strong>Zkopírovat příkaz</strong>.</li>
-<li>Stiskněte klávesy Windows + R, vložte příkaz (Ctrl + V) a stiskněte Enter.</li>
-<li>Počkejte, až pokladna tiskárnu najde, a klepněte na <strong>Použít a vytisknout zkoušku</strong>.</li>
+<li>Ve Windows nastavte pokladní tiskárnu jako výchozí.</li>
+<li>Pravým tlačítkem klepněte na zástupce Google Chrome a zvolte <strong>Vlastnosti</strong>.</li>
+<li>Do pole <strong>Cíl</strong> vložte <code>"C:\Program Files\Google\Chrome\Application\chrome.exe" --kiosk-printing --user-data-dir="C:\SuperKasaChrome"</code> a za to adresu svého obchodu.</li>
+<li>Pokladnu otevírejte jen tímto zástupcem. Poprvé se v něm přihlaste.</li>
 </ol>
-<p>Do počítače se přidá malý tiskový program, který se spouští sám po zapnutí počítače. Tuto volbu vidí jen majitel.</p>
+<p>SuperKasa pak běží ve vlastním okně Chromu, i když běžný Chrome běží dál. Přesný příkaz i s adresou vašeho obchodu najdete v průvodci tiskárnou u volby <strong>Tisk bez okna (tiskárna u tohoto počítače)</strong>. Tuto volbu vidí jen majitel.</p>
 <h3>Bluetooth</h3>
 <ol class="steps">
 <li>Zapněte tiskárnu a v telefonu zapněte Bluetooth. Když se Android zeptá, zapněte i polohu.</li>
@@ -151,7 +150,7 @@
 </ol>
 <aside class="note warn"><p>Po obnovení stránky se Bluetooth tiskárna sama nepřipojí. Pokladna ukáže okno <strong>Tisk se nepovedl</strong>. Klepněte na <strong>Připojit tiskárnu</strong>. Na iPhonu a iPadu Bluetooth tisk z prohlížeče nefunguje.</p></aside>
 <h3>Síťová tiskárna</h3>
-<p>Tiskárna musí být v síti obchodu a přijímat data na portu 9100. Pokladna ji zkusí najít sama. Když ji nenajde, vyplňte pole <strong>IP adresa tiskárny</strong>, třeba 192.168.1.50. Tuto volbu má jen majitel v programu pro Windows, na počítači s pokladnou.</p>
+<p>Prohlížeč neumí posílat data přímo na síťovou tiskárnu. Přidejte ji proto do Windows (Nastavení → Tiskárny a skenery) a tiskněte na ni jako na každou jinou tiskárnu ve Windows – bez okna, nebo přes okno tisku.</p>
 </section>
 <section id="zasuvka">
 <h2>Pokladní zásuvka</h2>
@@ -190,7 +189,7 @@
 </section>
 <section id="cenovky">
 <h2>Tisk cenovek</h2>
-<p>Cenovky jsou v tarifech Potraviny a Obchod. Kadeřnice nebo kavárna je v pokladně nemají. Tiskne je majitel nebo vedoucí.</p>
+<p>Cenovky jsou v tarifu Obchod. Kadeřnice nebo kavárna je v pokladně nemají. Tiskne je majitel nebo vedoucí.</p>
 <ol class="steps">
 <li>Otevřete <strong>Správa → Tisk cenovek</strong>.</li>
 <li>Vyberte zboží. Změněné ceny najdete filtrem <strong>Změna ceny od</strong>.</li>
@@ -212,7 +211,7 @@
 <tr><td>Pokladní tiskárnu jsem nenašel</td><td>Nainstalujte ovladač a klepněte na <strong>Hledat znovu</strong>.</td></tr>
 <tr><td>Tiskárna je v seznamu pod textem „Nehodí se na účtenky“</td><td>Je to kancelářská, štítková nebo PDF tiskárna. Vraťte se zpět a zvolte <strong>Bez pokladní tiskárny</strong>.</td></tr>
 <tr><td>Bluetooth po obnovení stránky</td><td>Klepněte na <strong>Připojit tiskárnu</strong>, nebo <strong>Vytisknout oknem tisku</strong>.</td></tr>
-<tr><td>USB tiskárnu teď používá systém</td><td>Na Windows ji přidejte jako <strong>Tiskárna u tohoto počítače</strong>.</td></tr>
+<tr><td>USB tiskárnu teď používá systém</td><td>Na Windows tiskněte přes systém: zvolte <strong>Tisk bez okna (tiskárna u tohoto počítače)</strong> nebo tisk přes okno prohlížeče.</td></tr>
 <tr><td>Prodej bez internetu přes hlavní kasu</td><td>Účtenka se tiskne oknem prohlížeče. Hlavní kasa bez internetu nepřijme tisk z telefonu.</td></tr>
 </tbody>
 </table></div>
@@ -265,7 +264,7 @@
           <li><a href="cenik.html">Ceník</a></li>
           <li><a href="eet.html">EET 2.0</a></li>
           <li><a href="navody.html">Návody</a></li>
-          <li><a href="ke-stazeni.html">Jak začít</a></li>
+          <li><a href="jak-zacit.html">Jak začít</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </div>
@@ -286,8 +285,8 @@
       <div>
         <h2>Dokumenty</h2>
         <ul>
-          <li><a href="obchodni-podminky.html">Obchodní podmínky (koncept)</a></li>
-          <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů (koncept)</a></li>
+          <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
+          <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
           <li><a href="https://eet.gov.cz/" rel="noopener">EET 2.0 – Finanční správa</a></li>
         </ul>
       </div>

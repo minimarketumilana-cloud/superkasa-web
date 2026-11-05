@@ -12,7 +12,7 @@ const DRINKS_VAT =
 const STAFF_VI = "Vietnamese for your staff";
 const NAMES_PHOTOS_EAN = [
   "Names and photos by EAN",
-  "When you scan an unknown barcode, the POS suggests a name and photo – from the internet (the shared SuperKasa database is coming soon).",
+  "When you scan an unknown barcode, the POS suggests a name and photo from the shared SuperKasa database or the internet.",
 ];
 const QR_CARD_CUSTOMER = [
   "QR payment and card",
@@ -196,7 +196,7 @@ export default {
         ],
         [
           "Product names from the barcode",
-          "The POS tries to look up an unknown barcode on the internet. A shared database of SuperKasa tills that also knows imported goods is coming soon.",
+          "The POS looks up an unknown barcode in the shared SuperKasa database – with a photo, often even for imported goods. Otherwise it tries the internet.",
         ],
         [
           "Expiry of fresh goods",
@@ -218,7 +218,7 @@ export default {
       title: "POS for newsagents and tobacconists",
       desc: "Cigarettes, e-cigarettes, newspapers and magazines, drinks and sweets – with fixed tobacco prices, stock and price labels.",
       preset: "Newsagent and tobacco",
-      items: "Bags. You scan the goods with a barcode scanner – the POS tries to look the name up on the internet (the shared SuperKasa database is coming soon), or you import it from a CSV.",
+      items: "Bags. You scan the goods with a barcode scanner – the POS looks the name up in the shared SuperKasa database or on the internet, or you import it from a CSV.",
       highlights: [
         [
           "Fixed tobacco prices",
@@ -226,7 +226,7 @@ export default {
         ],
         [
           "Names from the barcode",
-          "The POS tries to look up an unknown barcode on the internet. A shared database of SuperKasa tills that also knows cigarettes is coming soon.",
+          "The POS looks up an unknown barcode in the shared SuperKasa database, which also knows cigarettes. Otherwise it tries the internet.",
         ],
         [
           "Stock and what's running low",
@@ -386,7 +386,7 @@ export default {
         ],
         [
           "Book and product names by EAN",
-          "When you scan an unknown barcode, the POS suggests a name – from the internet (the shared SuperKasa database is coming soon).",
+          "When you scan an unknown barcode, the POS suggests a name from the shared SuperKasa database or the internet.",
         ],
         [
           "Stock, even for back-to-school season",
@@ -483,7 +483,7 @@ export default {
         ],
         [
           "Bottled wines by EAN",
-          "Scan a bottle – the POS tries to look the name up on the internet (the shared SuperKasa database is coming soon), or you import it from a CSV.",
+          "Scan a bottle – the POS looks the name up in the shared SuperKasa database or on the internet, or you import it from a CSV.",
         ],
         [
           "Promotions and quantity prices",
@@ -753,7 +753,7 @@ export default {
         ],
         [
           "Parts by barcode",
-          "The POS looks up an unknown oil or part barcode on the internet (the shared SuperKasa database is coming soon).",
+          "The POS tries to look up an unknown oil or part barcode in the shared SuperKasa database and on the internet.",
         ],
         QR_CARD_CUSTOMER,
       ],

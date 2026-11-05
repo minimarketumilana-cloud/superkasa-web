@@ -13,7 +13,7 @@ const TIENG_VIET = [
 ];
 const EAN_TEN_ANH = [
   "Tên và ảnh theo mã EAN",
-  "Khi quét một mã lạ, máy gợi ý tên và ảnh – từ internet (cơ sở dữ liệu dùng chung của SuperKasa sắp ra mắt).",
+  "Khi quét một mã lạ, máy gợi ý tên và ảnh từ cơ sở dữ liệu dùng chung của SuperKasa hoặc từ internet.",
 ];
 const QR_THE = [
   "Thanh toán QR và thẻ",
@@ -148,7 +148,7 @@ export default {
     vecerka: {
       card: "Tạp hóa, siêu thị mini",
       cardDesc: "Thực phẩm, đồ uống, thuốc lá, bánh mì",
-      title: "Máy tính tiền cho tiệm tạp hóa, siêu thị mini và cửa hàng thực phẩm",
+      title: "Máy tính tiền cho tạp hóa, siêu thị mini và thực phẩm",
       desc: "Thực phẩm, đồ uống, thuốc lá, rượu bia, bánh mì, rau quả – có tiền cược vỏ chai, cân, kho và nhãn giá.",
       preset: "Tạp hóa, siêu thị mini",
       items: "Tiền cược chai và két (PLU 0, 3, 8, 9), túi, bánh mì và rau quả có hình ảnh – tổng cộng 36 mặt hàng.",
@@ -198,7 +198,7 @@ export default {
         ],
         [
           "Tên hàng theo mã vạch",
-          "Gặp mã lạ, máy thử tìm tên trên internet. Cơ sở dữ liệu dùng chung của các máy SuperKasa, biết cả hàng nhập khẩu, sắp ra mắt.",
+          "Gặp mã lạ, máy tìm trong cơ sở dữ liệu dùng chung của SuperKasa – có cả ảnh, thường biết cả hàng nhập khẩu. Nếu không có, máy thử tìm trên internet.",
         ],
         [
           "Hạn dùng của hàng tươi",
@@ -220,7 +220,7 @@ export default {
       title: "Máy tính tiền cho quầy báo và thuốc lá",
       desc: "Thuốc lá, thuốc lá điện tử, báo và tạp chí, đồ uống và bánh kẹo – giá thuốc lá cố định, có kho và nhãn giá.",
       preset: "Quầy báo, thuốc lá",
-      items: "Túi. Hàng hóa bạn quét bằng máy đọc mã – máy thử tìm tên hàng trên internet (cơ sở dữ liệu dùng chung của SuperKasa sắp ra mắt), hoặc bạn lấy từ file CSV.",
+      items: "Túi. Hàng hóa bạn quét bằng máy đọc mã – máy tìm tên hàng trong cơ sở dữ liệu dùng chung của SuperKasa hoặc trên internet, hoặc bạn lấy từ file CSV.",
       highlights: [
         [
           "Giá thuốc lá cố định",
@@ -228,7 +228,7 @@ export default {
         ],
         [
           "Tên hàng theo mã vạch",
-          "Gặp mã lạ, máy thử tìm tên trên internet. Cơ sở dữ liệu dùng chung của các máy SuperKasa, biết cả các loại thuốc lá, sắp ra mắt.",
+          "Gặp mã lạ, máy tìm trong cơ sở dữ liệu dùng chung của SuperKasa, biết cả các loại thuốc lá. Nếu không có, máy thử tìm trên internet.",
         ],
         [
           "Kho và hàng sắp hết",
@@ -388,7 +388,7 @@ export default {
         ],
         [
           "Tên sách và hàng theo mã EAN",
-          "Khi quét một mã lạ, máy gợi ý tên – từ internet (cơ sở dữ liệu dùng chung của SuperKasa sắp ra mắt).",
+          "Khi quét một mã lạ, máy gợi ý tên từ cơ sở dữ liệu dùng chung của SuperKasa hoặc từ internet.",
         ],
         [
           "Kho cho cả mùa tựu trường",
@@ -448,7 +448,7 @@ export default {
     zdrava: {
       card: "Thực phẩm lành mạnh",
       cardDesc: "Hữu cơ, hàng xá, vitamin",
-      title: "Máy tính tiền cho cửa hàng thực phẩm lành mạnh và thực phẩm chức năng",
+      title: "Máy tính tiền cho cửa hàng thực phẩm lành mạnh",
       desc: "Thực phẩm hữu cơ và không gluten, hàng xá bán theo cân, thực phẩm chức năng và mỹ phẩm thiên nhiên – có cân, hạn dùng, kho và nhãn giá có giá theo kg.",
       preset: "Thực phẩm lành mạnh",
       items: "Hàng xá theo kg – yến mạch cán, hạt chia, chà là, hạt điều, quinoa và gạo lứt – và túi.",
@@ -485,7 +485,7 @@ export default {
         ],
         [
           "Rượu chai theo mã EAN",
-          "Bạn quét chai – máy thử tìm tên trên internet (cơ sở dữ liệu dùng chung của SuperKasa sắp ra mắt), hoặc bạn lấy từ file CSV.",
+          "Bạn quét chai – máy tìm tên trong cơ sở dữ liệu dùng chung của SuperKasa hoặc trên internet, hoặc bạn lấy từ file CSV.",
         ],
         [
           "Khuyến mãi và giá theo số lượng",
@@ -523,7 +523,7 @@ export default {
     obchod: {
       card: "Cửa hàng khác",
       cardDesc: "Quà tặng, đồ chơi, đồ sở thích, thể thao…",
-      title: "Máy tính tiền cho cửa hàng quà tặng, đồ chơi, đồ sở thích và các cửa hàng khác",
+      title: "Máy tính tiền cho quà tặng, đồ chơi và cửa hàng khác",
       desc: "Cho cửa hàng quà tặng, đồ chơi, đồ sở thích, thể thao, kim khí và các cửa hàng khác – bạn tự thêm nhóm hàng, để máy gợi ý theo mô tả hàng hóa, hoặc lấy hàng từ file CSV.",
       preset: "Cửa hàng khác",
       items: "Túi. Nhóm hàng và hàng hóa bạn tự thêm, hoặc lấy từ file CSV (cả file xuất từ máy tính tiền khác).",
@@ -749,7 +749,7 @@ export default {
         ],
         [
           "Phụ tùng theo mã vạch",
-          "Gặp mã lạ của dầu hoặc phụ tùng, máy thử tìm trên internet (cơ sở dữ liệu dùng chung của SuperKasa sắp ra mắt).",
+          "Gặp mã lạ của dầu hoặc phụ tùng, máy thử tìm trong cơ sở dữ liệu dùng chung của SuperKasa và trên internet.",
         ],
         QR_THE,
       ],

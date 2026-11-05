@@ -166,7 +166,7 @@ export default {
 <p>The tax credit (sleva na dani) is in zákon o daních z příjmů (the Income Tax Act). It can be used by business owners who are natural persons and file a tax return. A limited liability company (s.r.o.) does not have it. You claim it once, for the first year in which you are required to register a sale. For most business owners this will be 2027.</p>
 <p>A self-employed person (OSVČ) whose tax equals the flat-rate tax cannot claim it, because they do not file a return. This is our reading of the law. Finanční správa does not state it explicitly. Check it with the tax office (finanční úřad) or your accountant.</p>
 <p>The credit does not depend on the number of POS devices or on whether you registered sales in the original EET. It also does not matter whether you are a VAT payer.</p>
-<p>The amount of the credit is calculated like this: 15% of the partial tax base from self-employment (dílčí základ daně ze samostatné činnosti) minus the basic taxpayer credit (základní sleva na poplatníka), which is <a href="https://e-sbirka.gov.cz/sb/1892/586/2027-01-01" rel="noopener">CZK 30,840</a>. The credit is at most CZK 5,000.</p>
+<p>The amount of the credit is calculated like this: 15% of the partial tax base from self-employment (dílčí základ daně ze samostatné činnosti) minus the basic taxpayer credit (základní sleva na poplatníka), which is <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">CZK 30,840</a>. The credit is at most CZK 5,000.</p>
 <div class="tbl"><table>
   <thead><tr><th>Partial tax base</th><th>15%</th><th>After deducting CZK 30,840</th><th>Credit</th></tr></thead>
   <tbody>
@@ -433,7 +433,7 @@ export default {
 <p>You must meet all these conditions:</p>
 <ul>
   <li><strong>You are a natural person.</strong> The regime is not for a limited liability company (s.r.o.) or other legal entities.</li>
-  <li><strong>You are in band 1 of the flat-rate regime.</strong> Under <a href="https://e-sbirka.gov.cz/sb/1892/586/2027-01-01" rel="noopener">§ 2a of zákon o daních z příjmů</a> (the Income Tax Act), the flat-rate regime is, among other things, only for VAT non-payers (neplátci DPH).</li>
+  <li><strong>You are in band 1 of the flat-rate regime.</strong> Under <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">§ 2a of zákon o daních z příjmů</a> (the Income Tax Act), the flat-rate regime is, among other things, only for VAT non-payers (neplátci DPH).</li>
   <li><strong>Your income from self-employment for the previous year did not exceed CZK 1,000,000.</strong> For 2027, the year that counts is 2026. It does not matter which self-employed activity the income comes from.</li>
   <li><strong>You file the notice on time.</strong> Without it, the regime does not start.</li>
 </ul>
@@ -861,11 +861,11 @@ export default {
     ],
     sources: [
       ["Zákon č. 235/2004 Sb., o DPH (VAT Act), § 26 to 35a, 42, 45 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/2004-235"],
-      ["Zákon č. 634/1892 Sb., o ochraně spotřebitele (Consumer Protection Act), § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1892-634"],
+      ["Zákon č. 634/1892 Sb., o ochraně spotřebitele (Consumer Protection Act), § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1992-634"],
       ["Zákon č. 180/2026 Sb., o evidenci tržeb (Act on Sales Registration), § 8 and the amendment of the annex to the VAT Act (eet.gov.cz)", ZAKON],
       ["Sales registration in practice and the POK (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/evidence-trzeb-v-praxi"],
       ["Errors and how to solve them: voiding and correcting a sale (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/chyby-a-jejich-reseni"],
-      ["Zákon č. 563/1891 Sb., o účetnictví (Accounting Act), § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1891-563"],
+      ["Zákon č. 563/1891 Sb., o účetnictví (Accounting Act), § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1991-563"],
     ],
     related: ["eet-2-0-pruvodce", "tiskarna-ctecka-zasuvka", "eet-off-pausalni-dan"],
   },
@@ -885,15 +885,15 @@ export default {
     sections: [
       {
         id: "dve-cesty",
-        h2: "Two ways to start",
+        h2: "How to start",
         html: `
-<p>You can use SuperKasa either in a browser or as a Windows app. The first 10 days are free and you do not need a payment card.</p>
+<p>SuperKasa runs in the browser on a computer, tablet or phone. Nothing to download or install. The first 10 days are free and you do not need a payment card.</p>
 <div class="tbl"><table>
-<thead><tr><th></th><th>In a browser</th><th>Windows app</th></tr></thead>
+<thead><tr><th></th><th>SuperKasa in the browser</th></tr></thead>
 <tbody>
-<tr><td>Installation</td><td>None</td><td>One installation file</td></tr>
-<tr><td>Where the data is</td><td>On the SuperKasa server</td><td>On your computer</td></tr>
-<tr><td>Devices</td><td>Computer, tablet, phone</td><td>Computer with Windows 10 or 11, other devices over the shop network</td></tr>
+<tr><td>Installation</td><td>None</td></tr>
+<tr><td>Where the data is</td><td>On the SuperKasa server, backed up every day</td></tr>
+<tr><td>Devices</td><td>Computer, tablet, phone – up to 10 in the plan, all selling into one shift</td></tr>
 </tbody>
 </table></div>`,
       },
@@ -919,7 +919,7 @@ export default {
 <ol class="steps">
 <li>On the <strong>What kind of business?</strong> screen, choose your type of business, for example Convenience store, minimarket or Hairdresser and barber.</li>
 <li>Did not find your type of business? Type in the field <strong>Describe in your own words what you sell</strong> and tap <strong>Suggest groups</strong>. You can edit the suggestion.</li>
-<li>Fill in <strong>Your name</strong> and enter your <strong>PIN</strong> twice (4 to 8 digits). In the Windows version you also fill in the <strong>Business name</strong> field.</li>
+<li>Fill in <strong>Your name</strong> and enter your <strong>PIN</strong> twice (4 to 8 digits).</li>
 <li>Fill in your <strong>E-mail</strong> and <strong>Password</strong> (at least 8 characters). You will need them on every new device.</li>
 <li>Tap <strong>Create POS</strong>.</li>
 </ol>
@@ -1008,7 +1008,8 @@ export default {
 </ol>
 <p>Then <strong>Open register</strong> appears. In the <strong>Cash in drawer at start</strong> field, type how much stayed in the drawer.</p>
 <aside class="note warn"><p>If you close the window, the POS opens by itself at the next login with the amount from the last closing, even if you took the takings away. So in <strong>Admin → System → Cash control</strong>, switch on the option <strong>Ask for the cash in the drawer when opening</strong>. During the day, record money through <strong>Menu → Cash in / out</strong>.</p></aside>
-<p>To see the state without closing, use <strong>Interim report</strong> in the Menu.</p>`,
+<p>To see the state without closing, use <strong>Interim report</strong> in the Menu.</p>
+<p>There is one closing for the whole shop: all devices sell into one shared shift. After 20 hours the POS reminds you to close, and if nobody does, it closes by itself at 23:59.</p>`,
       },
       {
         id: "prodavaci",
@@ -1034,8 +1035,7 @@ export default {
         h2: "Devices and backups",
         html: `
 <p>The plan includes up to 10 devices. A new device signs in with the owner's e-mail and password. The procedure is in the guide <a href="prodej-z-telefonu.html">The POS on a phone or tablet</a>.</p>
-<p><strong>Windows.</strong> The POS backs itself up every day. In <strong>Admin → System → Backups</strong>, set <strong>Second backup copy (folder)</strong>, ideally to a USB drive or OneDrive. The <strong>Back up now</strong> button makes a backup immediately.</p>
-<p><strong>Browser.</strong> The server backs up the data. The field for a second copy has no meaning here.</p>
+<p>The server backs up the shop's data every day, and a copy is also kept off the server. There is nothing to set up.</p>
 <p>You can download your own copy at any time in <strong>Admin → System → Data export</strong>. Export also works after the licence ends.</p>`,
       },
       {
@@ -1059,7 +1059,7 @@ export default {
       ["I forgot my password. What now?", "Open your shop's address on a device that is not signed in and tap Forgot password. You enter your e-mail, the owner's PIN and a new password."],
       ["Are receipts valid during the trial period?", "A POS created by the end of 2026 issues valid receipts straight away. A POS created from 1 January 2027 starts in training mode, in which receipts are not valid. It goes into live mode only with a certificate from DIS+, a recording unit number (číslo evidenční jednotky), a verified connection and a paid licence. If you do not have to register sales, choose “I do not have to record sales” in Admin → EET 2.0 and you do not need a certificate. Training mode can be switched on only before the first live receipt."],
       ["Can a cashier refund money without a manager?", "No. A cashier must confirm a void or a refund with a manager's or owner's PIN. Managers and owners do not enter a PIN again."],
-      ["Must I do a closing every day?", "The POS does not force it, but it warns you after 20 hours. Without a closing, sales from several days run together."],
+      ["Must I do a closing every day?", "After 20 hours the POS reminds you, and at 23:59 it closes by itself, so sales from several days do not run together. Only you can count the cash in the drawer, though, so it is better to close by hand at the end of the day."],
     ],
     sources: [],
     related: ["tiskarna-ctecka-zasuvka", "prodej-z-telefonu", "eet-2-0-krok-za-krokem"],
@@ -1099,7 +1099,7 @@ export default {
         html: `
 <p>The price in an advert is often only part of the cost. Work it out for a whole year.</p>
 <h3>Price with or without VAT</h3>
-<p>Price lists for businesses are often without VAT. If you are not a VAT payer (plátce DPH), you cannot deduct the tax and you pay the price with VAT. Example: CZK 189 without VAT comes to CZK 228.69 in total at a 21% rate. Always ask for the final price.</p>
+<p>Price lists for businesses are often without VAT. If you are not a VAT payer (plátce DPH), you cannot deduct the tax and you pay the price with VAT. Example: CZK 250 without VAT comes to CZK 302.50 in total at a 21% rate. Always ask for the final price.</p>
 <h3>Extra devices</h3>
 <p>Find out how many devices are included in the price. A second till, a tablet for receiving goods and a phone for a temporary worker may each be paid for separately.</p>
 <h3>Hardware</h3>
@@ -1286,9 +1286,7 @@ export default {
 <div class="tbl"><table>
 <thead><tr><th>You have</th><th>Option in the wizard</th></tr></thead>
 <tbody>
-<tr><td>Windows app, USB printer</td><td>Printer on this computer</td></tr>
-<tr><td>Windows app, network printer</td><td>Network printer (Wi-Fi / cable)</td></tr>
-<tr><td>Windows computer, POS in a browser</td><td>Print without a dialog (printer on this computer)</td></tr>
+<tr><td>Windows computer and a receipt printer</td><td>Print without a dialog (printer on this computer)</td></tr>
 <tr><td>Android and a Bluetooth printer</td><td>Bluetooth printer</td></tr>
 <tr><td>Android and a printer on a cable (OTG)</td><td>USB printer for phone / tablet</td></tr>
 <tr><td>Older printer with a serial cable</td><td>Printer on a COM port</td></tr>
@@ -1301,19 +1299,20 @@ export default {
 <ol class="steps">
 <li>Connect the printer with a USB cable and switch it on.</li>
 <li>Wait until Windows installs it. An Epson TM needs a driver from the Epson website (EPSON Advanced Printer Driver). Other brands have a driver on a CD or on the seller's website.</li>
-<li>In the wizard, choose <strong>Printer on this computer</strong>.</li>
-<li>The POS finds the printer. If it does not, tap <strong>Search again</strong>.</li>
+<li>In Windows, set the receipt printer as the default printer.</li>
+<li>In the POS wizard, choose <strong>Print without a dialog (printer on this computer)</strong>, or printing through the browser window.</li>
 <li>Tap <strong>Use it and print a test</strong>.</li>
 <li>Did the test slip come out? Tap <strong>Yes, it prints</strong>.</li>
 </ol>
-<h3>Printing without a dialog with the POS in a browser</h3>
+<h3>Printing without a dialog</h3>
+<p>Nothing is downloaded. You just open the POS with a Chrome shortcut that prints straight to the default printer without the print window.</p>
 <ol class="steps">
-<li>Choose <strong>Print without a dialog (printer on this computer)</strong>.</li>
-<li>Tap <strong>Copy the command</strong>.</li>
-<li>Press the Windows + R keys, paste the command (Ctrl + V) and press Enter.</li>
-<li>Wait until the POS finds the printer and tap <strong>Use it and print a test</strong>.</li>
+<li>In Windows, set the receipt printer as the default printer.</li>
+<li>Right-click the Google Chrome shortcut and choose <strong>Properties</strong>.</li>
+<li>In the <strong>Target</strong> field, enter <code>"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --kiosk-printing --user-data-dir="C:\\SuperKasaChrome"</code> followed by your shop's address.</li>
+<li>Always open the POS with this shortcut. Sign in once the first time.</li>
 </ol>
-<p>A small print program is added to the computer, and it starts by itself when the computer is switched on. Only the owner sees this option.</p>
+<p>SuperKasa then runs in its own Chrome window, even while your normal Chrome keeps running. You will find the exact command with your shop's address in the printer wizard under <strong>Print without a dialog (printer on this computer)</strong>. Only the owner sees this option.</p>
 <h3>Bluetooth</h3>
 <ol class="steps">
 <li>Switch on the printer and switch on Bluetooth on the phone. If Android asks, switch on location too.</li>
@@ -1322,7 +1321,7 @@ export default {
 </ol>
 <aside class="note warn"><p>After a page refresh, a Bluetooth printer does not reconnect by itself. The POS shows a <strong>Printing failed</strong> window. Tap <strong>Connect printer</strong>. On iPhone and iPad, Bluetooth printing from a browser does not work.</p></aside>
 <h3>Network printer</h3>
-<p>The printer must be on the shop network and accept data on port 9100. The POS tries to find it by itself. If it does not find it, fill in the <strong>Printer IP address</strong> field, for example 192.168.1.50. Only the owner has this option, in the Windows app, on the computer running the POS.</p>`,
+<p>A browser cannot send data straight to a network printer. Add the printer to Windows (Settings → Printers &amp; scanners) and print to it like any other Windows printer – without a dialog or through the print window.</p>`,
       },
       {
         id: "zasuvka",
@@ -1369,7 +1368,7 @@ export default {
         id: "cenovky",
         h2: "Printing price labels",
         html: `
-<p>Price labels are in the Grocery and Shop plans. A hairdresser or café does not have them in the POS. The owner or a manager prints them.</p>
+<p>Price labels are in the Shop plan. A hairdresser or café does not have them in the POS. The owner or a manager prints them.</p>
 <ol class="steps">
 <li>Open <strong>Admin → Print price labels</strong>.</li>
 <li>Select the goods. You can find changed prices with the <strong>Price changed since</strong> filter.</li>
@@ -1393,7 +1392,7 @@ export default {
 <tr><td>No receipt printer found</td><td>Install the driver and tap <strong>Search again</strong>.</td></tr>
 <tr><td>The printer is in the list under the text “Not for receipts”</td><td>It is an office, label or PDF printer. Go back and choose <strong>No receipt printer</strong>.</td></tr>
 <tr><td>Bluetooth after a page refresh</td><td>Tap <strong>Connect printer</strong>, or <strong>Print via the dialog</strong>.</td></tr>
-<tr><td>The system (driver) is using the USB printer</td><td>On Windows, add it as <strong>Printer on this computer</strong>.</td></tr>
+<tr><td>The system (driver) is using the USB printer</td><td>On Windows, print through the system: choose <strong>Print without a dialog (printer on this computer)</strong> or printing through the browser window.</td></tr>
 <tr><td>Selling without internet through the main till</td><td>The receipt prints through the browser window. Without internet, the main till does not accept printing from a phone.</td></tr>
 </tbody>
 </table></div>
@@ -1439,24 +1438,7 @@ export default {
 <tr><td>Convenience store</td><td>Tablet for receiving goods and stock counts in the storeroom</td></tr>
 </tbody>
 </table></div>
-<p>The POS works in two ways. Find out which one you have, because the procedure differs a little.</p>
-<div class="tbl"><table>
-<thead><tr><th></th><th>Browser register</th><th>Windows app</th></tr></thead>
-<tbody>
-<tr><td>Connection</td><td>Internet</td><td>Wi-Fi or cable on the shop network</td></tr>
-<tr><td>Address</td><td>your-shop.superkasa.cz</td><td>Address from Admin → Devices</td></tr>
-<tr><td>Main computer</td><td>Does not have to be running</td><td>Must be running, the data is on it</td></tr>
-<tr><td>Selling outside the shop</td><td>Yes</td><td>No</td></tr>
-</tbody>
-</table></div>
-<h3>Preparation for the Windows app</h3>
-<ol class="steps">
-<li>On the main computer, open <strong>Admin → Devices</strong>.</li>
-<li>Tick <strong>Allow devices on the shop network</strong> and tap <strong>Save</strong>.</li>
-<li>Tap <strong>Restart register</strong>.</li>
-<li>When Windows shows the firewall window, click “Allow access” (Povolit přístup).</li>
-<li>Copy down the <strong>Address for other devices</strong>.</li>
-</ol>`,
+<p>A phone or tablet connects to the POS over the internet at your shop's address, for example your-shop.superkasa.cz. The main computer does not have to be running, and you can sell outside the shop too.</p>`,
       },
       {
         id: "prihlaseni",
@@ -1494,8 +1476,8 @@ export default {
 <li>You remove an old device in <strong>Admin → Devices</strong> with the <strong>Revoke</strong> button.</li>
 <li>Need more than 10? <a href="kontakt.html">Call us</a>.</li>
 </ul>
-<p>The sales overview for the owner does not take up a device in the plan. You create the link in <strong>Admin → System → Owner on mobile</strong>. It is read-only. In the Windows app it works only on the shop network.</p>
-<aside class="note"><p>Each device has its own register and its own closing. If a cashier takes cash on a phone, they must do a closing there too at the end of the day.</p></aside>`,
+<p>The sales overview for the owner does not take up a device in the plan. You create the link in <strong>Admin → System → Owner on mobile</strong>. It is read-only and works from anywhere.</p>
+<aside class="note"><p>All devices sell into one shared shift of the shop. There is one closing for the whole shop, and cash taken on a phone is added up together with the main till.</p></aside>`,
       },
       {
         id: "prodej",
@@ -1509,7 +1491,7 @@ export default {
 <li>Point it at a barcode. It reads by itself.</li>
 </ol>
 <p>The camera reads EAN-13, EAN-8 and UPC codes. You will find a test in <strong>Menu → Barcode scanner</strong>.</p>
-<p>The live camera works only on a secure address, which means in the browser register. The Windows app runs on the shop network without a secure address. There, tap <strong>Take photo</strong> and photograph the code up close, sharp and whole, including the white edge.</p>
+<p>If the camera does not read the code, tap <strong>Take photo</strong> and photograph the code up close, sharp and whole, including the white edge.</p>
 <p>Pair a Bluetooth scanner in the phone's settings. It then acts as a keyboard.</p>
 <h3>Receiving goods on a tablet</h3>
 <p>The owner or a manager opens <strong>Admin → Stock → Receive goods</strong>. Each further scan adds one piece. The camera works here too. At the end, tap <strong>Add to stock</strong>. <strong>Shelf count</strong> works the same way.</p>`,
@@ -1524,7 +1506,7 @@ export default {
 <li>Choose <strong>Print on the main till's printer</strong> and select the device.</li>
 <li>Tap <strong>Use it and print a test</strong>.</li>
 </ol>
-<p>With the browser register, printing goes over the internet and the phone does not have to be on the same Wi-Fi. With the Windows app, the phone must be on the shop network. Otherwise it does not connect to the POS at all.</p>
+<p>Printing goes over the internet, so the phone does not have to be on the same Wi-Fi as the main till.</p>
 <p>The wizard also opens by itself at the first print. If you close it, receipts do not print automatically. You print them through <strong>Last</strong> and <strong>Print copy</strong>.</p>
 <aside class="note warn"><p>A Bluetooth printer connected to a phone works only on Android. On iPhone and iPad the browser does not connect a Bluetooth printer, so use the printer at the main till. After a page refresh you need to tap <strong>Connect printer</strong> again.</p></aside>`,
       },
@@ -1544,7 +1526,7 @@ export default {
         id: "vypadek",
         h2: "Internet outage",
         html: `
-<p><strong>Browser register.</strong> Selling continues and above the sale the message <strong>Offline – keep selling, receipts upload automatically</strong> appears.</p>
+<p>Selling continues and above the sale the message <strong>Offline – keep selling, receipts upload automatically</strong> appears.</p>
 <ul>
 <li>You can take only cash and card payments. QR payments, loyalty points and table bills do not work.</li>
 <li>The device has receipt numbers reserved in advance. Without them, a sale cannot be saved.</li>
@@ -1554,14 +1536,13 @@ export default {
 <li>PIN login and opening the register need a connection. Leave the device logged in.</li>
 <li>Printing at the main till does not work without internet, so the receipt goes through the browser window. A Bluetooth printer connected to the phone keeps printing.</li>
 </ul>
-<aside class="note warn"><p>While receipts are waiting, do not delete the browser data. They exist only on that device. After 24 hours the POS warns you, because a sale must be sent to EET within 48 hours. Connect to the internet as soon as possible.</p></aside>
-<p><strong>Windows app.</strong> The main computer sells even without internet and sends sales to EET later. However, a tablet on the shop network needs a running main computer and working Wi-Fi. It has no offline mode of its own.</p>`,
+<aside class="note warn"><p>While receipts are waiting, do not delete the browser data. They exist only on that device. After 24 hours the POS warns you, because a sale must be sent to EET within 48 hours. Connect to the internet as soon as possible.</p></aside>`,
       },
     ],
     faq: [
       ["Can a cashier use their own phone?", "Yes, but the first sign-in must be done by the owner with their e-mail and password. The owner then logs out and the cashier enters a PIN."],
       ["Does each phone use up one device?", "Yes. The plan includes up to 10 devices. The Owner on mobile overview does not count towards the limit."],
-      ["Must the phone be on the same Wi-Fi as the main till?", "With the browser register, no. Printing goes over the internet. With the Windows app, the phone must be on the shop network."],
+      ["Must the phone be on the same Wi-Fi as the main till?", "No. Printing at the main till goes over the internet, so the phone can even be on mobile data."],
       ["Does the POS work on an iPhone?", "Yes, in the browser. Only the direct connection of a Bluetooth printer does not work. You can print on the printer at the main till."],
       ["Can I print price labels on a phone?", "Yes, if you are a manager or owner and the phone has a printer set up. However, Admin is less convenient on a small screen than on a computer."],
     ],
@@ -1612,7 +1593,7 @@ export default {
 </ol>
 <p>After PIN login, the POS switches to the cashier's language. Each person can also change the language with the flag in the top bar, and the choice is saved for them. A Czech cashier and a Vietnamese owner can thus use the same POS, each in their own language.</p>
 <p><strong>Cheat sheet for the wall.</strong> In <strong>Admin → Staff</strong> there is a <strong>Cheat sheet for cashiers (CZ / VI)</strong> button. It prints an overview of the most common procedures on A4, in Czech and Vietnamese.</p>
-<aside class="note warn"><p>Some less common error messages from the server may appear in Czech. Buttons and menus are translated.</p></aside>`,
+<aside class="note"><p>Buttons, menus and server messages are translated into Vietnamese. If you still come across Czech text, give us a call and we will add the translation.</p></aside>`,
       },
       {
         id: "kategorie",
@@ -1696,7 +1677,7 @@ export default {
 <li>In 2026 you can choose <strong>Dry run</strong> mode. Switch on live EET on 1 January 2027, at the latest for the first sale in 2027.</li>
 </ol>
 <p>Live EET requires a paid licence. The detailed procedure is in the guide <a href="eet-2-0-krok-za-krokem.html">EET 2.0 step by step</a>. The SuperKasa website is also available <a href="../vi/index.html">in Vietnamese</a>.</p>
-<p>We can help you by phone, in Vietnamese too: <a href="tel:+420608886882">+420 608 886 882</a>. We will go through installation and setup with you.</p>`,
+<p>We can help you by phone, in Vietnamese too: <a href="tel:+420608886882">+420 608 886 882</a>. We will go through the setup with you.</p>`,
       },
     ],
     faq: [
@@ -1704,7 +1685,7 @@ export default {
       ["Can each cashier have a different language?", "Yes. The language is saved for each cashier. After PIN login, the POS switches by itself."],
       ["Will the POS translate item names into Vietnamese?", "No. Groups are translated, but item names stay as you write them. Because of the receipt, write them in Czech."],
       ["Is Admin in Vietnamese too?", "Yes. The flag is also in Admin and the choice is saved to your account."],
-      ["Will you help me with setup in Vietnamese?", "Yes. Call +420 608 886 882. We will install and set up the POS with you."],
+      ["Will you help me with setup in Vietnamese?", "Yes. Call +420 608 886 882. We will set up the POS with you."],
     ],
     sources: [["Finanční správa: Who must register sales", "https://eet.gov.cz/cs/koho-se-eet-tyka/kdo-musi-evidovat-trzby"]],
     related: ["navod-superkasa", "tiskarna-ctecka-zasuvka", "eet-2-0-krok-za-krokem"],

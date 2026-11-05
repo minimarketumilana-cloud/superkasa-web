@@ -1,4 +1,4 @@
-// Ceník, EET 2.0, Ke stažení a Kontakt. Texty jsou ve slovníku c.T.<stránka> (tools/stranky/texty/<jazyk>.mjs).
+// Ceník, EET 2.0, Jak začít, Přihlášení a Kontakt. Texty jsou ve slovníku c.T.<stránka> (tools/stranky/texty/<jazyk>.mjs).
 import { LOGIN_LIVE, REGISTER_URL, card, cta, icon } from "./parts.mjs";
 import { FEATURE_ORDER } from "./obory.mjs";
 
@@ -158,7 +158,7 @@ export const cenik = (c) => {
         <h3>${t.trial[0]}</h3>
         <p>${t.trial[1]}</p>
         <p>${t.trial[2]}</p>
-        <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="ke-stazeni.html">${c.T.login.pcBtn}</a>${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${c.T.common.registerCta}</a>` : ""}</div>
+        <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="jak-zacit.html">${c.T.login.pcBtn}</a>${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${c.T.common.registerCta}</a>` : ""}</div>
       </article>
       <article class="card">
         ${icon("shield")}
@@ -253,11 +253,12 @@ ${cta(c, t.cta[0], t.cta[1])}`,
   };
 };
 
+/** Jak začít (dřív „Ke stažení“ na adrese ke-stazeni.html – ta teď jen přesměrovává sem, viz sestavit.mjs). */
 export const stazeni = (c) => {
   const t = c.T.stazeni;
   return {
-    file: "ke-stazeni.html",
-    current: "ke-stazeni.html",
+    file: "jak-zacit.html",
+    current: "jak-zacit.html",
     title: t.title,
     desc: t.desc,
     body: `
@@ -304,50 +305,10 @@ ${cta(c, t.cta[0], t.cta[1])}`,
 
 /**
  * Přihlášení do pokladny: e-mail a heslo majitele se pošlou na app.superkasa.cz (SuperKasa Cloud), ten najde obchod
- * a pošle prohlížeč do jeho pokladny (zařízení se samo spáruje). Formulář obsluhuje js/site.js; dokud cloud neběží,
- * ukáže, že přihlášení přes internet zatím nejde, a vedle je návod pro pokladnu v obchodě (Windows).
+ * a pošle prohlížeč do jeho pokladny (zařízení se samo spáruje). Formulář obsluhuje js/site.js; když server
+ * neodpovídá, ukáže upozornění (login.offline). Vedle je karta o dalších zařízeních a prodavačích.
  */
-export const prihlaseni = (c) => (LOGIN_LIVE ? prihlaseniLive(c) : prihlaseniSoon(c));
-
-/** Dokud přihlášení přes internet nejde (LOGIN_LIVE = false): jen informace „připravujeme“ a stažení pro Windows. */
-const prihlaseniSoon = (c) => {
-  const t = c.T.login.soon;
-  return {
-    file: "prihlaseni.html",
-    current: "prihlaseni.html",
-    title: t.title,
-    desc: t.desc,
-    body: `
-<section class="page-head">
-  <div class="wrap">
-    <h1>${t.h1}</h1>
-    <p class="lead">${t.lead}</p>
-  </div>
-</section>
-
-<section class="section" style="padding-top:32px">
-  <div class="wrap">
-    <p class="cloud-soon">${t.note}</p>
-    <div class="grid grid-2">
-      <article class="card">
-        ${icon("download")}
-        <h2>${t.pcTitle}</h2>
-        <p>${t.pcText}</p>
-        <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="ke-stazeni.html">${t.pcBtn}</a></div>
-      </article>
-      <article class="card">
-        ${icon("clock", "gold")}
-        <h2>${t.soonTitle}</h2>
-        <p>${t.soonText}</p>
-        <p>${t.infoText}</p>
-      </article>
-    </div>
-  </div>
-</section>`,
-  };
-};
-
-const prihlaseniLive = (c) => {
+export const prihlaseni = (c) => {
   const t = c.T.login;
   return {
     file: "prihlaseni.html",
@@ -382,7 +343,7 @@ const prihlaseniLive = (c) => {
         <h2>${t.pcTitle}</h2>
         <p>${t.pcText}</p>
         <p>${t.accText}</p>
-        <div class="actions" style="margin-top:8px"><a class="btn btn-ghost" href="ke-stazeni.html">${t.pcBtn}</a></div>
+        <div class="actions" style="margin-top:8px"><a class="btn btn-ghost" href="jak-zacit.html">${t.pcBtn}</a></div>
       </article>
     </div>
   </div>

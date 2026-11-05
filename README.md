@@ -17,13 +17,15 @@ osobních údajů se nepřekládají: ve `vi/` a `en/` je krátká stránka „Z
 | `obory.html` | Pro koho – stejný výběr oboru |
 | `pokladna-*.html` | 26 stránek oborů: jak bude pokladna nastavená (skupiny, dlaždice, ukázkové položky, funkce, tarif) s náhledem |
 | `funkce.html` | Funkce pokladny |
-| `cenik.html` | Tarify, 199 Kč měsíčně / 2 149 Kč ročně s DPH, placené doplňky, zkouška, pronájem a koupě, časté otázky |
-| `eet.html` | EET 2.0 – jak to pokladna dělá, co zařídí podnikatel, odkazy na Finanční správu |
-| `ke-stazeni.html` | Instalátor pro Windows (`aktualizace/SuperKasa-Setup-0.2.1.exe`, velikost a SHA-256) a potřebné vybavení |
-| `prihlaseni.html` | Přihlášení do pokladny e-mailem a heslem majitele: `js/site.js` pošle údaje na `https://app.superkasa.cz/api/cloud/login`, cloud najde obchod a pošle prohlížeč do jeho pokladny (`#prihlasit=` jednorázový kód, zařízení se samo spáruje). Dokud cloud neběží, stránka to oznámí; vedle je návod pro pokladnu v obchodě (Windows, tablet ve stejné síti) |
+| `cenik.html` | Tarify Obchod, Gastro a Služby: jen pronájem, 189 Kč měsíčně nebo 2 041 Kč ročně s DPH, placené doplňky, 10 dní zkouška, 3 dny tolerance, časté otázky |
+| `eet.html` | EET 2.0 – jak to pokladna dělá, termíny (DIS+ od 1. 11. 2026, evidence od 1. 1. 2027), co zařídí podnikatel |
+| `jak-zacit.html` | Jak začít: pokladna v prohlížeči bez instalace (registrace na app.superkasa.cz) a potřebné vybavení |
+| `ke-stazeni.html` | Jen přesměrování na `jak-zacit.html` (stará adresa; meta refresh, `noindex`, není v sitemap). Nic se nestahuje |
+| `prihlaseni.html` | Přihlášení do pokladny e-mailem a heslem majitele: `js/site.js` pošle údaje na `https://app.superkasa.cz/api/cloud/login`, cloud najde obchod a pošle prohlížeč do jeho pokladny (`#prihlasit=` jednorázový kód, zařízení se samo spáruje). Když server neodpovídá, stránka to oznámí |
+| `navody.html`, články | Návody k EET 2.0, dokladům a pokladně (zdroje v `tools/stranky/clanky/`) |
 | `kontakt.html` | Kontakt na výrobce (bez DIČ – to se nezveřejňuje) |
-| `obchodni-podminky.html` | **Koncept** k právní kontrole (`noindex`, není v sitemap) |
-| `ochrana-osobnich-udaju.html` | **Koncept** k právní kontrole (`noindex`, není v sitemap) |
+| `obchodni-podminky.html` | Obchodní podmínky pronájmu (v sitemap jen česky; `vi/` a `en/` mají krátkou `noindex` stránku s odkazem na české znění) |
+| `ochrana-osobnich-udaju.html` | Ochrana osobních údajů (stejně jako podmínky) |
 | `404.html` | Chybová stránka (odkazy od kořene webu, funguje jen na serveru). GitHub Pages i Apache zobrazí kořenovou českou; `vi/404.html` a `en/404.html` jsou cíle přepínače jazyků |
 | `vi/*.html`, `en/*.html` | Tytéž stránky ve vietnamštině a angličtině |
 
@@ -57,11 +59,13 @@ node tools/sestavit.mjs
 | `tools/stranky/obory.mjs` | data oborů a jejich české texty: skupiny, dlaždice, ukázkové položky, funkce, tarify a placené doplňky – podle repozitáře pokladny |
 | `tools/stranky/obory-stranky.mjs` | výběr oboru (karty) a šablona stránky oboru s náhledem pokladny |
 | `tools/stranky/pages1.mjs` | úvod a funkce |
-| `tools/stranky/pages2.mjs` | ceník, EET 2.0, ke stažení, kontakt |
-| `tools/stranky/pages3.mjs` | koncepty podmínek a ochrany osobních údajů, 404 |
+| `tools/stranky/pages2.mjs` | ceník, EET 2.0, jak začít, přihlášení, kontakt |
+| `tools/stranky/pages3.mjs` | obchodní podmínky, ochrana osobních údajů, 404 |
+| `tools/stranky/clanky.mjs`, `clanky/*.mjs` | šablona a texty návodů (čeština v `cs-eet.mjs` a `cs-pokladna.mjs`, překlady ve `vi.mjs` a `en.mjs`) |
 
-Skript sestaví všechny tři jazyky (111 stránek), zapíše i `sitemap.xml` (s dnešním datem) a `robots.txt` a zkontroluje, že hash vloženého skriptu sedí
-s Content-Security-Policy v `.htaccess`.
+Skript sestaví všechny tři jazyky (144 stránek a 3 přesměrování), zapíše i `sitemap.xml` (s dnešním datem, jen indexovatelné
+stránky) a `robots.txt` a zkontroluje, že hash vloženého skriptu sedí s Content-Security-Policy v `.htaccess`.
+Staré adresy, které mají jen přesměrovat, jsou v `REDIRECTS` v `tools/sestavit.mjs`.
 
 - Když se v pokladně změní typ provozu, tarif nebo funkce, upravte `tools/stranky/obory.mjs` **a** stejné místo
   v `texty/vi-obory.mjs` a `texty/en-obory.mjs`. Změněný český text stránky upravte i ve `vi.mjs` a `en.mjs`.
@@ -70,8 +74,9 @@ s Content-Security-Policy v `.htaccess`.
   skupiny a texty obrazovky jsou přeložené podle pokladny (`public/js/i18n.js`, `src/domain/starter.ts`).
 - Po změně loga (`img/superkasa-logo.webp` nebo `favicon.svg`) znovu vyrobte obrázky: `node tools/make-images.mjs`
   (potřebuje Chrome nebo Edge). Obrázky oborů v `img/obory` jsou zkopírované z `public/img/art` v repozitáři pokladny.
-- Při vydání nové verze pokladny upravte v `tools/stranky/pages2.mjs` (stránka Ke stažení) odkaz na
-  `aktualizace/SuperKasa-Setup-X.Y.Z.exe` a kontrolní součet SHA-256 a ve slovnících (`stazeni.appMeta`) číslo verze a velikost.
+- SuperKasa běží jen v prohlížeči (SuperKasa Cloud). Web nesmí nabízet nic ke stažení ani instalaci – žádný instalátor,
+  tiskový pomocník ani skript. Nové funkce pokladny doplňte na `funkce.html` (`funkce.*` ve slovnících) a případně do
+  „Novinek v pokladně“ na úvodu (`index.newCards`).
 
 ## Zveřejnění (GitHub Pages)
 
@@ -81,8 +86,8 @@ s vlastní doménou `superkasa.cz` (soubor `CNAME`, HTTPS vynucené v nastavení
 
 1. **Úprava:** změnit podklady v `tools/stranky/`, spustit `node tools/sestavit.mjs` (zkontroluje i stavbu překladů).
 2. **Zveřejnění:** commit a `git push` – GitHub Pages web přestaví do minuty.
-3. **Složka `aktualizace/` je pro pokladny** (manifest a instalátory, `https://superkasa.cz/aktualizace/manifest.json`).
-   Nemazat ani nepřepisovat ručně; postup vydání verze je v README repozitáře pokladny.
+3. **Složka `aktualizace/` je jen pro dříve nainstalované pokladny pro Windows** (`manifest.json`, robots ji blokuje).
+   Zákazníkům se nic ke stažení nenabízí. Manifest nemazat ani neměnit bez rozhodnutí majitele, ať se nerozbijí běžící instalace.
 4. **Kontrola:** otevřít https://superkasa.cz na telefonu i počítači, přepnout jazyky (vlajky v hlavičce), zkusit
    neexistující adresu (stránka „Stránku jsme nenašli“) a náhled odkazu v Messengeru nebo WhatsAppu (`og.png`).
 5. **Vyhledávače (volitelně):** v Google Search Console a Bing Webmaster Tools ověřit doménu a odeslat
@@ -92,5 +97,5 @@ GitHub Pages neumí vlastní hlavičky: `.htaccess` (Content-Security-Policy, ca
 případný přechod na Apache; na serveru s Caddy by se hlavičky přenesly do jeho konfigurace. Stránku 404 GitHub Pages
 zobrazí kořenovou českou `404.html`.
 
-Před ostrým spuštěním prodeje: nechat právně zkontrolovat obchodní podmínky a ochranu osobních údajů (jsou označené jako
-koncept) – po spuštění SuperKasa Cloud musí ochrana osobních údajů popsat i zpracování dat obchodů na serveru.
+Obchodní podmínky a ochrana osobních údajů jsou v konečném znění pro pronájem v prohlížeči (`pages3.mjs`); chybí v nich
+jen kontaktní e-mail (`CONTACT_EMAIL`).
