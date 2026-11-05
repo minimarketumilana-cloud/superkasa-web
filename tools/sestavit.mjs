@@ -14,6 +14,7 @@ import { funkce, index } from "./stranky/pages1.mjs";
 import { cenik, eet, kontakt, prihlaseni, stazeni } from "./stranky/pages2.mjs";
 import { gdpr, legalStub, notFound, op } from "./stranky/pages3.mjs";
 import { clanekPage, navodyPage } from "./stranky/clanky.mjs";
+import { navodyObrazkyPage } from "./stranky/navody-obrazky.mjs";
 import clankyCs from "./stranky/clanky/cs.mjs";
 import clankyVi from "./stranky/clanky/vi.mjs";
 import clankyEn from "./stranky/clanky/en.mjs";
@@ -62,7 +63,7 @@ for (const lang of LANGS) {
     .map((o) => [o.file, o.card]).concat([["obory.html", c.T.common.allObory]]);
   const legal = lang === "cs" ? [op, gdpr] : [legalStub(c, "op"), legalStub(c, "gdpr")];
   const pages = [index(c), oboryPage(c, footerObory), ...c.D.OBORY.map((o) => oborPage(c, o, footerObory)),
-    funkce(c), cenik(c), eet(c), stazeni(c), kontakt(c), prihlaseni(c), navodyPage(c, CLANKY[lang]),
+    funkce(c), cenik(c), eet(c), stazeni(c), kontakt(c), prihlaseni(c), navodyPage(c, CLANKY[lang]), navodyObrazkyPage(c),
     ...CLANKY[lang].items.map((a) => clanekPage(c, CLANKY[lang], a)), ...legal, notFound(c)]
     .map((p) => ({ footerObory, ...p, ...(LEGAL_FILES.includes(p.file) ? { altLangs: ["cs"] } : {}) }));
 

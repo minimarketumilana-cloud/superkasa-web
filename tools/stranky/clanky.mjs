@@ -9,6 +9,13 @@ const dateText = (lang, iso) => new Date(`${iso}T12:00:00`).toLocaleDateString({
 const fileOf = (a) => `${a.slug}.html`;
 
 /** Rozcestník: témata a v nich články. */
+/** Odkaz na návody se snímky obrazovky (nahoře na rozcestníku návodů). */
+const HOWTO_PROMO = {
+  cs: ["Se snímky obrazovky", "Návody krok za krokem", "Prodej, platba, nové zboží, cenovky, uzávěrka, tržba s DPH, storno a mobil majitele – vše na obrázcích se zakroužkovanými tlačítky."],
+  vi: ["Có ảnh màn hình", "Hướng dẫn từng bước", "Bán hàng, thanh toán, hàng mới, nhãn giá, chốt ca, doanh thu theo VAT, hủy hóa đơn và điện thoại của chủ – tất cả trên ảnh có khoanh nút."],
+  en: ["With screenshots", "Step-by-step guides", "Selling, payment, new items, price labels, closing, sales with VAT, voids and the owner's phone – all on pictures with the buttons circled."],
+};
+
 export function navodyPage(c, { ui, items }) {
   const groups = ui.groups.map(([key, name]) => [name, items.filter((a) => a.group === key)]).filter(([, list]) => list.length);
   return {
@@ -30,6 +37,14 @@ export function navodyPage(c, { ui, items }) {
   <div class="wrap">
     <h1>${ui.h1}</h1>
     <p class="lead">${ui.lead}</p>
+  </div>
+</section>
+<section class="section howto-promo-wrap">
+  <div class="wrap">
+    <a class="howto-promo" href="navod-krok-za-krokem.html">
+      <img src="${c.up}img/navody/prodej-3-platba.webp" width="1920" height="1200" loading="lazy" decoding="async" alt="">
+      <span><small>${HOWTO_PROMO[c.lang][0]}</small><b>${HOWTO_PROMO[c.lang][1]}</b><span>${HOWTO_PROMO[c.lang][2]}</span></span>
+    </a>
   </div>
 </section>
 ${groups

@@ -281,6 +281,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/navody.html"/>
   </url>
   <url>
+    <loc>https://superkasa.cz/navod-krok-za-krokem.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/navod-krok-za-krokem.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/navod-krok-za-krokem.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/navod-krok-za-krokem.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/navod-krok-za-krokem.html"/>
+  </url>
+  <url>
     <loc>https://superkasa.cz/eet-2-0-pruvodce.html</loc>
     <lastmod>2026-11-05</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/eet-2-0-pruvodce.html"/>
@@ -653,6 +661,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/navody.html"/>
   </url>
   <url>
+    <loc>https://superkasa.cz/vi/navod-krok-za-krokem.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/navod-krok-za-krokem.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/navod-krok-za-krokem.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/navod-krok-za-krokem.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/navod-krok-za-krokem.html"/>
+  </url>
+  <url>
     <loc>https://superkasa.cz/vi/eet-2-0-pruvodce.html</loc>
     <lastmod>2026-11-05</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/eet-2-0-pruvodce.html"/>
@@ -1011,6 +1027,14 @@
     <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/navody.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/navody.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/navody.html"/>
+  </url>
+  <url>
+    <loc>https://superkasa.cz/en/navod-krok-za-krokem.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/navod-krok-za-krokem.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/navod-krok-za-krokem.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/navod-krok-za-krokem.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/navod-krok-za-krokem.html"/>
   </url>
   <url>
     <loc>https://superkasa.cz/en/eet-2-0-pruvodce.html</loc>
