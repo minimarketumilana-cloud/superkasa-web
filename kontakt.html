@@ -20,11 +20,13 @@
 <meta property="og:title" content="Kontakt – SuperKasa">
 <meta property="og:description" content="Kontakt na výrobce pokladny SuperKasa: Thanh Lam Nguyen, IČO 14161648, 1. května 117/141, 725 25 Ostrava, tel. +420 608 886 882.">
 <meta property="og:url" content="https://superkasa.cz/kontakt.html">
-<meta property="og:image" content="https://superkasa.cz/img/og.png">
+<meta property="og:image" content="https://superkasa.cz/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SuperKasa – pokladna pro obchody, gastro a služby">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://superkasa.cz/img/og.jpg">
 <meta name="theme-color" content="#5c1a46">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -32,12 +34,13 @@
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.className+=" js"</script>
 <script src="js/site.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","url":"https://superkasa.cz/kontakt.html","mainEntity":{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","url":"https://superkasa.cz/","logo":{"@type":"ImageObject","url":"https://superkasa.cz/apple-touch-icon.png"},"image":"https://superkasa.cz/img/logo.png","telephone":"+420608886882","address":{"@type":"PostalAddress","streetAddress":"1. května 117/141","postalCode":"725 25","addressLocality":"Ostrava","addressCountry":"CZ"},"identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"14161648"}}}</script>
 </head>
 <body>
 <a class="skip" href="#obsah">Přeskočit na obsah</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
+    <a class="brand" href="./" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Jazyk webu"><a href="kontakt.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="vi/kontakt.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="en/kontakt.html" hreflang="en" lang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
     <a class="login-top" href="prihlaseni.html" aria-label="Přihlásit se do pokladny" title="Přihlásit se do pokladny"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Přihlásit</span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
@@ -49,7 +52,8 @@
       <a href="navody.html">Návody</a>
       <a href="jak-zacit.html">Jak začít</a>
       <a href="kontakt.html" aria-current="page">Kontakt</a>
-      <a class="btn btn-primary nav-price" href="cenik.html">189 Kč / měsíc</a>
+      <a class="nav-login" href="prihlaseni.html">Přihlásit</a>
+      <a class="btn btn-primary nav-price" href="cenik.html">189 Kč/měsíc</a>
       <a class="btn btn-gold" href="https://app.superkasa.cz/">Vyzkoušet zdarma</a>
     </nav>
   </div>
@@ -58,7 +62,7 @@
 <section class="page-head">
   <div class="wrap">
     <h1>Kontakt</h1>
-    <p class="lead">Rádi poradíme s výběrem tarifu, vybavením pokladny i s nastavením po telefonu – česky i vietnamsky.</p>
+    <p class="lead">Rádi poradíme s&nbsp;výběrem tarifu, vybavením pokladny i&nbsp;s&nbsp;nastavením po telefonu – česky i&nbsp;vietnamsky.</p>
   </div>
 </section>
 
@@ -70,16 +74,22 @@
         <h2>Telefon</h2>
         <p><a class="contact-big" href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
         <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="tel:+420608886882">Zavolat</a></div>
+        <ul class="checks" style="margin-top:22px">
+          <li>Výběr tarifu a&nbsp;vybavení (tiskárna, čtečka, váha)</li>
+          <li>Nastavení EET 2.0 a&nbsp;tisku bez okna</li>
+          <li>Převod zboží a&nbsp;první prodej</li>
+        </ul>
+        <p class="mt-1"><a href="navod-krok-za-krokem.html">Návody krok za krokem</a> · <a href="jak-zacit.html">Jak začít</a></p>
       </article>
       <article class="card">
         <div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 9-8 9 8"/><path d="M5 10v11h14V10M10 21v-6h4v6"/></svg></div>
-        <h2>Výrobce a provozovatel</h2>
+        <h2>Výrobce a&nbsp;provozovatel</h2>
         <!-- Identifikace podle § 435 občanského zákoníku; e-mail jen když je doplněný (CONTACT_EMAIL v parts.mjs). -->
         <dl class="dl">
           <dt>Jméno</dt><dd>Thanh Lam Nguyen</dd>
           <dt>IČO</dt><dd>14161648</dd>
           <dt>Místo podnikání</dt><dd>1. května 117/141<br>725 25 Ostrava</dd>
-          <dt>Zápis</dt><dd>Fyzická osoba podnikající podle živnostenského zákona, zapsaná v živnostenském rejstříku</dd>
+          <dt>Zápis</dt><dd>Fyzická osoba podnikající podle živnostenského zákona, zapsaná v&nbsp;živnostenském rejstříku</dd>
           <dt>DPH</dt><dd>Plátce DPH</dd>
           <dt>Web</dt><dd>superkasa.cz</dd>
         </dl>
@@ -93,13 +103,13 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand"><img src="favicon.svg" alt="" width="40" height="40"><b>Super<span>Kasa</span></b></div>
-        <p>Pokladní systém pro obchody, občerstvení a služby s EET&nbsp;2.0, skladem a cenovkami. Pro obsluhu i ve vietnamštině.</p>
+        <p>Pokladní systém pro obchody, občerstvení a&nbsp;služby s&nbsp;EET&nbsp;2.0, skladem a&nbsp;cenovkami. Pro obsluhu i&nbsp;ve vietnamštině.</p>
         <p><a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
       </div>
       <div>
         <h2>Stránky</h2>
         <ul>
-          <li><a href="index.html">Úvod</a></li>
+          <li><a href="./">Úvod</a></li>
           <li><a href="obory.html">Pro koho</a></li>
           <li><a href="funkce.html">Funkce</a></li>
           <li><a href="cenik.html">Ceník</a></li>
@@ -112,13 +122,13 @@
       <div>
         <h2>Obory</h2>
         <ul>
-          <li><a href="pokladna-vecerka.html">Večerka a minimarket</a></li>
+          <li><a href="pokladna-vecerka.html">Večerka a&nbsp;minimarket</a></li>
           <li><a href="pokladna-trafika.html">Trafika</a></li>
           <li><a href="pokladna-pekarna.html">Pekárna</a></li>
           <li><a href="pokladna-drogerie.html">Drogerie</a></li>
           <li><a href="pokladna-kavarna-bistro.html">Kavárna, bistro, stánek</a></li>
           <li><a href="pokladna-hospoda-restaurace.html">Hospoda, bar, restaurace</a></li>
-          <li><a href="pokladna-kadernictvi.html">Kadeřnictví a holičství</a></li>
+          <li><a href="pokladna-kadernictvi.html">Kadeřnictví a&nbsp;holičství</a></li>
           <li><a href="pokladna-nehtove-studio.html">Nehtové studio</a></li>
           <li><a href="obory.html">Všechny obory</a></li>
         </ul>
@@ -133,7 +143,7 @@
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Thanh Lam Nguyen, IČO 14161648, místo podnikání 1. května 117/141, 725 25 Ostrava, fyzická osoba podnikající podle živnostenského zákona, zapsaná v živnostenském rejstříku. Tento web nepoužívá cookies ani sledovací nástroje.
+      © 2026 Thanh Lam Nguyen, IČO 14161648, místo podnikání 1. května 117/141, 725 25 Ostrava, fyzická osoba podnikající podle živnostenského zákona, zapsaná v&nbsp;živnostenském rejstříku. Tento web nepoužívá cookies ani sledovací nástroje.
     </div>
   </div>
 </footer>

@@ -1,6 +1,12 @@
 // Menu na mobilu a filtr oborů. Všechno se ovládá dotykem nebo klávesnicí, nic jen najetím myší.
 // Bez JavaScriptu je menu vidět celé a obory jsou rozdělené nadpisy.
 (function () {
+  // Stránka se nesmí zobrazit v cizím rámu (GitHub Pages neumí hlavičku X-Frame-Options ani frame-ancestors).
+  if (window.self !== window.top) {
+    document.documentElement.style.visibility = "hidden";
+    try { window.top.location = window.location.href; } catch (e) {}
+    return;
+  }
   var btn = document.querySelector(".menu-btn");
   var nav = document.getElementById("nav");
   if (btn && nav) {
@@ -11,6 +17,8 @@
     btn.addEventListener("click", function () { set(!nav.classList.contains("open")); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
     nav.addEventListener("click", function (e) { if (e.target.closest("a")) set(false); });
+    // Klepnutí mimo menu ho zavře (pointerdown: Safari na iPhonu neposílá click z neinteraktivní plochy).
+    document.addEventListener("pointerdown", function (e) { if (nav.classList.contains("open") && !nav.contains(e.target) && !btn.contains(e.target)) set(false); });
   }
 
   // Přihlášení do pokladny: e-mail a heslo → SuperKasa Cloud najde obchod a pošle prohlížeč do jeho pokladny.

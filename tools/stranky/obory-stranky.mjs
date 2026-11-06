@@ -43,8 +43,8 @@ function mock(c, o) {
   // Skupiny (dlaždice bez ceny) jsou v jazyce stránky, názvy položek zůstávají česky jako v pokladně.
   const groupName = (a, name) => (o.translated ? GROUPS[a.slice(2)] ?? t.mockYourGroup : name);
   const tiles = o.tiles.map(([a, name, price, unit]) => price === null
-    ? `<div class="pt grp">${art(c, a, 34)}<span>${groupName(a, name)}</span><b>›</b></div>`
-    : `<div class="pt">${art(c, a, 34)}<span>${name}</span><b>${kc(price)}${unit === "kg" ? "/kg" : ""}</b></div>`).join("");
+    ? `<div class="pt grp"><span>${groupName(a, name)}</span><b>›</b></div>`
+    : `<div class="pt"><span>${name}</span><b>${kc(price)}${unit === "kg" ? "/kg" : ""}</b></div>`).join("");
   const lines = o.cart.map(([name, q, p, unit]) => ({ name, q, unit, sum: Math.round(q * p * 100) / 100 }));
   const total = lines.reduce((s, l) => s + l.sum, 0);
   const tabs = (o.pages.length ? o.pages.map((g) => GROUPS[g]) : [t.mockFavorites]).map((x, i) => `<span${i === 0 ? ' class="on"' : ""}>${x}</span>`).join("");
@@ -81,7 +81,7 @@ export function oborPage(c, o, footerObory) {
   const addons = (o.addons ?? []).map(([key, text]) => ({ ...ADDONS.find((a) => a.key === key), text }));
   const notes = [...(o.notes ?? []), ...(service && !addons.some((a) => a.key === "reservations") ? SERVICE_NOTES : [])];
   const others = OBORY.filter((x) => x.key !== o.key);
-  const groupChips = `<ul class="gchips">${o.groups.map((g) => `<li>${art(c, "g-" + g, 26)}${GROUPS[g]}</li>`).join("")}</ul>`;
+  const groupChips = `<ul class="gchips">${o.groups.map((g) => `<li>${GROUPS[g]}</li>`).join("")}</ul>`;
 
   const body = `
 <section class="page-head obor-head">
@@ -182,8 +182,9 @@ ${notes.length ? `
   return {
     file: o.file,
     current: "obory.html",
-    title: `${o.title}${L.titleSuffix}`,
-    desc: o.desc,
+    // Titulek s EET 2.0 a značkou, jen když se vejde do 60 znaků (jinak Google konec usekne); popisek doplněný o cenu.
+    title: [`${o.metaTitle ?? o.title}${L.oborTitleEet}${L.titleSuffix}`, `${o.metaTitle ?? o.title}${L.titleSuffix}`].find((x) => x.length <= 60) ?? (o.metaTitle ?? o.title),
+    desc: ((full) => (full.length <= 160 ? full : o.desc))(`${o.desc} ${L.oborDescTail(/EET 2\.0/.test(o.desc))}`),
     body,
     footerObory,
     jsonld: {

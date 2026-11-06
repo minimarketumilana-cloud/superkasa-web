@@ -13,7 +13,7 @@ export default {
     desc: "Clear guides for small shops and businesses: EET 2.0 step by step, receipts, the receipt printer, the barcode scanner and your first day with the POS.",
     h1: "Guides",
     lead: "EET 2.0, receipts, the printer and your first day with the POS. Written for owners of small shops, with links to official sources.",
-    groups: [["eet", "EET 2.0"], ["doklady", "Receipts and obligations"], ["pokladna", "The POS in practice"]],
+    groups: [["eet", "EET 2.0 and receipts"], ["pokladna", "The POS in practice"]],
     minutes: "{n} min read",
     updated: "Updated",
     toc: "In this guide",
@@ -166,7 +166,7 @@ export default {
 <p>The tax credit (sleva na dani) is in zákon o daních z příjmů (the Income Tax Act). It can be used by business owners who are natural persons and file a tax return. A limited liability company (s.r.o.) does not have it. You claim it once, for the first year in which you are required to register a sale. For most business owners this will be 2027.</p>
 <p>A self-employed person (OSVČ) whose tax equals the flat-rate tax cannot claim it, because they do not file a return. This is our reading of the law. Finanční správa does not state it explicitly. Check it with the tax office (finanční úřad) or your accountant.</p>
 <p>The credit does not depend on the number of POS devices or on whether you registered sales in the original EET. It also does not matter whether you are a VAT payer.</p>
-<p>The amount of the credit is calculated like this: 15% of the partial tax base from self-employment (dílčí základ daně ze samostatné činnosti) minus the basic taxpayer credit (základní sleva na poplatníka), which is <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">CZK 30,840</a>. The credit is at most CZK 5,000.</p>
+<p>The amount of the credit is calculated like this: 15% of the partial tax base from self-employment (dílčí základ daně ze samostatné činnosti) minus the basic taxpayer credit (základní sleva na poplatníka), which is <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01#par_35ba" rel="noopener">CZK 30,840</a>. The credit is at most CZK 5,000.</p>
 <div class="tbl"><table>
   <thead><tr><th>Partial tax base</th><th>15%</th><th>After deducting CZK 30,840</th><th>Credit</th></tr></thead>
   <tbody>
@@ -287,7 +287,7 @@ export default {
   <li>On the EVIDENCE TRŽEB (Sales registration) tab, open Správa evidenčních jednotek (Recording unit management) and click NOVÁ EVIDENČNÍ JEDNOTKA (New recording unit).</li>
   <li>Select the type of unit.</li>
   <li>Fill in the main type of activity. Start typing and suggestions will help you.</li>
-  <li>You can add a name, for example “Praha - prodejna” (Prague shop). It is not mandatory, but it will be useful in the sales overview.</li>
+  <li>You can add a name, for example “Praha – prodejna” (Prague shop). It is not mandatory, but it will be useful in the sales overview.</li>
   <li>Mark whether registered sales take place in the unit. Most business owners answer Ne (No) to the question about accepting sales on behalf of another taxpayer.</li>
   <li>Fill in the address or other identification of the unit and click DOKONČIT A PŘIDAT (Finish and add).</li>
 </ol>
@@ -433,7 +433,7 @@ export default {
 <p>You must meet all these conditions:</p>
 <ul>
   <li><strong>You are a natural person.</strong> The regime is not for a limited liability company (s.r.o.) or other legal entities.</li>
-  <li><strong>You are in band 1 of the flat-rate regime.</strong> Under <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">§ 2a of zákon o daních z příjmů</a> (the Income Tax Act), the flat-rate regime is, among other things, only for VAT non-payers (neplátci DPH).</li>
+  <li><strong>You are in band 1 of the flat-rate regime.</strong> Under <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01#par_2a" rel="noopener">§ 2a of zákon o daních z příjmů</a> (the Income Tax Act), the flat-rate regime is, among other things, only for VAT non-payers (neplátci DPH).</li>
   <li><strong>Your income from self-employment for the previous year did not exceed CZK 1,000,000.</strong> For 2027, the year that counts is 2026. It does not matter which self-employed activity the income comes from.</li>
   <li><strong>You file the notice on time.</strong> Without it, the regime does not start.</li>
 </ul>
@@ -686,7 +686,7 @@ export default {
       ["How many premises can I have in MOJE eet?", "Finanční správa states at most 2 recording units. A recording unit is a premises, but also, for example, an e-shop or a mobile stall."],
     ],
     sources: [
-      ["Practical information: When the MOJE eet web app is enough for me (Finanční správa)", PRAKTICKE],
+      ["Practical information: When the MOJE eet web app is enough for me (Finanční správa)", PRAKTICKE + "#kdy-mi-postaci-webova-aplikace-moje-eet-821"],
       ["EET in 5 steps (Finanční správa)", "https://eet.gov.cz/assets/cs/cmsmedia/pro-media/EET_v_5_krocich.pdf"],
       ["EET 2.0 schedule (Finanční správa)", HARMONOGRAM],
       ["Presentation from the developer seminar, 23 June 2026 (Finanční správa)", "https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET2_Prezentace_Seminar_pro_vyvojare_23-.pdf"],
@@ -698,7 +698,7 @@ export default {
 
   {
     slug: "co-musi-byt-na-uctence",
-    group: "doklady",
+    group: "eet",
     kicker: "Receipts and documents",
     title: "What must be on a receipt: simplified tax receipt and non-payer's receipt",
     metaTitle: "What must be on a receipt: required details | SuperKasa",
@@ -841,7 +841,7 @@ export default {
   <tbody>
     <tr><td>Tax documents of a VAT payer, including issued receipts</td><td>10 years from the end of the tax period (zdaňovací období) in which the supply took place</td><td>§ 35 of zákon o DPH (VAT Act)</td></tr>
     <tr><td>Accounting documents, if you keep accounts</td><td>5 years from the end of the accounting period</td><td>§ 31 of zákon o účetnictví (Accounting Act)</td></tr>
-    <tr><td>Records of a non-payer without accounts</td><td>Decide the period with your accountant. The deadline for assessing tax is 3 years and may change.</td><td><a href="https://www.zakonyprolidi.cz/cs/2009-280" rel="noopener">§ 148 of daňový řád</a> (Tax Procedure Code)</td></tr>
+    <tr><td>Records of a non-payer without accounts</td><td>Decide the period with your accountant. The deadline for assessing tax is 3 years and may change.</td><td><a href="https://www.zakonyprolidi.cz/cs/2009-280#p148" rel="noopener">§ 148 of daňový řád</a> (Tax Procedure Code)</td></tr>
     <tr><td>POK</td><td>The law does not impose storage</td><td>eet.gov.cz</td></tr>
   </tbody>
 </table></div>
@@ -861,11 +861,11 @@ export default {
     ],
     sources: [
       ["Zákon č. 235/2004 Sb., o DPH (VAT Act), § 26 to 35a, 42, 45 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/2004-235"],
-      ["Zákon č. 634/1892 Sb., o ochraně spotřebitele (Consumer Protection Act), § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1992-634"],
+      ["Zákon č. 634/1992 Sb., o ochraně spotřebitele (Consumer Protection Act), § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1992-634#p16"],
       ["Zákon č. 180/2026 Sb., o evidenci tržeb (Act on Sales Registration), § 8 and the amendment of the annex to the VAT Act (eet.gov.cz)", ZAKON],
       ["Sales registration in practice and the POK (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/evidence-trzeb-v-praxi"],
-      ["Errors and how to solve them: voiding and correcting a sale (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/chyby-a-jejich-reseni"],
-      ["Zákon č. 563/1891 Sb., o účetnictví (Accounting Act), § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1991-563"],
+      ["Errors and how to solve them: voiding and correcting a sale (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/chyby-a-jejich-reseni#storno-nebo-oprava-trzby-636"],
+      ["Zákon č. 563/1991 Sb., o účetnictví (Accounting Act), § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1991-563#p31"],
     ],
     related: ["eet-2-0-pruvodce", "tiskarna-ctecka-zasuvka", "eet-off-pausalni-dan"],
   },
@@ -880,22 +880,18 @@ export default {
     desc: "How to use the SuperKasa POS step by step: sign-up, items, your first sale, payments, refunds, closing, cashiers, backups and paying for the licence.",
     lead: "You create an account on app.superkasa.cz, add items by scanning or from a file and can try your first sale today. The guide continues with payments, refunds, closing, cashiers and paying for the licence.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 7,
     sections: [
       {
-        id: "dve-cesty",
+        id: "jak-zacit",
         h2: "How to start",
         html: `
 <p>SuperKasa runs in the browser on a computer, tablet or phone. Nothing to download or install. The first 10 days are free and you do not need a payment card.</p>
-<div class="tbl"><table>
-<thead><tr><th></th><th>SuperKasa in the browser</th></tr></thead>
-<tbody>
-<tr><td>Installation</td><td>None</td></tr>
-<tr><td>Where the data is</td><td>On the SuperKasa server, backed up every day</td></tr>
-<tr><td>Devices</td><td>Computer, tablet, phone – up to 10 in the plan, all selling into one shift</td></tr>
-</tbody>
-</table></div>`,
+<ul>
+<li><strong>Data:</strong> on the SuperKasa server in the Czech Republic, backed up every day.</li>
+<li><strong>Devices:</strong> up to 10 in the plan (computer, tablet, phone), all selling into one shared shift.</li>
+</ul>`,
       },
       {
         id: "registrace",
@@ -910,7 +906,7 @@ export default {
 <li>Tap <strong>Create for free</strong>. If you want to pay straight away, tap <strong>Buy now</strong>. After setup the POS sends you straight to payment, and you keep the 10 free days on top.</li>
 </ol>
 <p>Lost the link to finish? Fill in the sign-up again with the same address, e-mail and company ID (IČO).</p>
-<p><strong>Nothing to download:</strong> the till runs in the browser. It prints receipts through the print window on the printer you have installed in Windows.</p>`,
+<p><strong>Nothing to download:</strong> the till runs in the browser. On a Windows computer it prints to the receipt printer without a dialog (through a Chrome shortcut) or through the print window. Android phones and tablets print to a Bluetooth or USB printer, an iPhone prints on the main till's printer. See the guide <a href="tiskarna-ctecka-zasuvka.html">Receipt printer, barcode scanner and cash drawer</a>.</p>`,
       },
       {
         id: "zrizeni",
@@ -1036,7 +1032,7 @@ export default {
         html: `
 <p>The plan includes up to 10 devices. A new device signs in with the owner's e-mail and password. The procedure is in the guide <a href="prodej-z-telefonu.html">The POS on a phone or tablet</a>.</p>
 <p>The server backs up the shop's data every day, and a copy is also kept off the server. There is nothing to set up.</p>
-<p>You can download your own copy at any time in <strong>Admin → System → Data export</strong>. Export also works after the licence ends.</p>`,
+<p>You can download your own copy at any time in <strong>Admin → System → Data export</strong>. Export still works for 12 months after the rental ends.</p>`,
       },
       {
         id: "licence-jazyk",
@@ -1046,7 +1042,7 @@ export default {
 <ol class="steps">
 <li>Tap <strong>Pay</strong> in the top bar, or open <strong>Admin → System → Licence and plan</strong>.</li>
 <li>Select add-ons if you want them, and tap <strong>Create QR payment</strong>.</li>
-<li>Choose <strong>Month</strong> or <strong>Year (−10 %)</strong> and pay the QR code in your bank.</li>
+<li>Choose <strong>Month</strong> or <strong>Year (−10 %)</strong> and pay with the QR code in your banking app.</li>
 <li>Tap <strong>I've paid – check now</strong>.</li>
 </ol>
 <aside class="note warn"><p>For now we match licence payments by hand, so the licence is not extended straight after payment. If you do not see the QR payment in the POS, call us. You enter the licence key in the <strong>Licence key</strong> field and tap <strong>Activate</strong>.</p></aside>
@@ -1075,7 +1071,7 @@ export default {
     desc: "What to look at when choosing a POS for a small shop: real price with VAT, extra devices, EET 2.0, stock, internet outages, language and a list of questions.",
     lead: "A convenience store needs a barcode scanner and stock, a hairdresser mainly tiles with services. Work out the price for a whole year for your business and ask the seller the 14 questions from the list at the end of this article.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 6,
     sections: [
       {
@@ -1218,7 +1214,7 @@ export default {
 <tr><td>Hardware</td><td>Your own. The receipt printer must support ESC/POS, the scanner acts as a USB keyboard.</td></tr>
 <tr><td>QR payment</td><td>Only with the IBAN filled in. The cashier confirms that the payment has arrived.</td></tr>
 <tr><td>Staff language</td><td>Czech, Vietnamese, English. The receipt is always in Czech.</td></tr>
-<tr><td>Data export</td><td>CSV, also after the licence ends</td></tr>
+<tr><td>Data export</td><td>CSV, for 12 months after the rental ends</td></tr>
 </tbody>
 </table></div>
 <p>You will find a full comparison of plans on the <a href="cenik.html">pricing page</a>.</p>`,
@@ -1244,7 +1240,7 @@ export default {
     desc: "Which receipt printer and barcode scanner work with SuperKasa: 58 and 80 mm, USB, Bluetooth, network, drawer, price labels and what to do if nothing prints.",
     lead: "Direct receipt printing needs a printer with ESC/POS commands, the scanner should work as a USB keyboard and the cash drawer plugs into the printer. This guide describes how to connect them and what to do when a receipt does not print.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 7,
     sections: [
       {
@@ -1286,7 +1282,7 @@ export default {
 <div class="tbl"><table>
 <thead><tr><th>You have</th><th>Option in the wizard</th></tr></thead>
 <tbody>
-<tr><td>Windows computer and a receipt printer</td><td>Print without a dialog (printer on this computer)</td></tr>
+<tr><td>Windows computer and a receipt printer</td><td>Print via the browser dialog (without a dialog through a Chrome shortcut, see below)</td></tr>
 <tr><td>Android and a Bluetooth printer</td><td>Bluetooth printer</td></tr>
 <tr><td>Android and a printer on a cable (OTG)</td><td>USB printer for phone / tablet</td></tr>
 <tr><td>Older printer with a serial cable</td><td>Printer on a COM port</td></tr>
@@ -1300,9 +1296,8 @@ export default {
 <li>Connect the printer with a USB cable and switch it on.</li>
 <li>Wait until Windows installs it. An Epson TM needs a driver from the Epson website (EPSON Advanced Printer Driver). Other brands have a driver on a CD or on the seller's website.</li>
 <li>In Windows, set the receipt printer as the default printer.</li>
-<li>In the POS wizard, choose <strong>Print without a dialog (printer on this computer)</strong>, or printing through the browser window.</li>
-<li>Tap <strong>Use it and print a test</strong>.</li>
-<li>Did the test slip come out? Tap <strong>Yes, it prints</strong>.</li>
+<li>In the POS wizard, choose <strong>Print via the browser dialog</strong> and tap <strong>Save</strong>. The print window opens right away with a test slip.</li>
+<li>In the print window, choose the receipt printer and set Margins to <strong>None</strong>. The browser remembers the choice.</li>
 </ol>
 <h3>Printing without a dialog</h3>
 <p>Nothing is downloaded. You just open the POS with a Chrome shortcut that prints straight to the default printer without the print window.</p>
@@ -1312,7 +1307,7 @@ export default {
 <li>In the <strong>Target</strong> field, enter <code>"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --kiosk-printing --user-data-dir="C:\\SuperKasaChrome"</code> followed by your shop's address.</li>
 <li>Always open the POS with this shortcut. Sign in once the first time.</li>
 </ol>
-<p>SuperKasa then runs in its own Chrome window, even while your normal Chrome keeps running. You will find the exact command with your shop's address in the printer wizard under <strong>Print without a dialog (printer on this computer)</strong>. Only the owner sees this option.</p>
+<p>SuperKasa then opens in its own Chrome window, separate from your normal Chrome. You will also find the steps in the POS under <strong>Admin → Peripherals → Printing without the confirmation window</strong>. Only the owner sees Admin → Peripherals.</p>
 <h3>Bluetooth</h3>
 <ol class="steps">
 <li>Switch on the printer and switch on Bluetooth on the phone. If Android asks, switch on location too.</li>
@@ -1389,10 +1384,9 @@ export default {
 <tr><td>A blank slip came out</td><td>Turn the roll round. The print side of the thermal paper must face the head.</td></tr>
 <tr><td>Nothing came out</td><td>Check that the printer is switched on, has paper and its lid is closed. Switch it off and on, then tap <strong>Try again</strong>.</td></tr>
 <tr><td>The receipt is cut off</td><td>Set the correct width in the <strong>Receipt paper</strong> field.</td></tr>
-<tr><td>No receipt printer found</td><td>Install the driver and tap <strong>Search again</strong>.</td></tr>
-<tr><td>The printer is in the list under the text “Not for receipts”</td><td>It is an office, label or PDF printer. Go back and choose <strong>No receipt printer</strong>.</td></tr>
+<tr><td>The receipt printer is missing in the print window</td><td>Install the driver in Windows and open the print window again.</td></tr>
 <tr><td>Bluetooth after a page refresh</td><td>Tap <strong>Connect printer</strong>, or <strong>Print via the dialog</strong>.</td></tr>
-<tr><td>The system (driver) is using the USB printer</td><td>On Windows, print through the system: choose <strong>Print without a dialog (printer on this computer)</strong> or printing through the browser window.</td></tr>
+<tr><td>The system (driver) is using the USB printer</td><td>On a Windows computer, print through the system: in the wizard choose <strong>Print via the browser dialog</strong>, or print without a dialog through a Chrome shortcut.</td></tr>
 <tr><td>Selling without internet through the main till</td><td>The receipt prints through the browser window. Without internet, the main till does not accept printing from a phone.</td></tr>
 </tbody>
 </table></div>
@@ -1421,7 +1415,7 @@ export default {
     desc: "How to sell with the POS on a phone or tablet: signing in, cashier PINs, number of devices, camera as scanner, printing at the main till and internet outages.",
     lead: "A phone or tablet signs in to the POS the first time with the owner's e-mail and password, and after that a cashier needs only a PIN. Receipts can come out of the printer at the main till, and the browser register can sell even without internet.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 6,
     sections: [
       {
@@ -1451,7 +1445,7 @@ export default {
 <li>Tap <strong>Sign in</strong>.</li>
 </ol>
 <p>The device pairs by itself and the owner is signed in straight away. Add the address to your phone's home screen so that the cashier can find it.</p>
-<aside class="note"><p>You will find the e-mail and password in <strong>Admin → System → Owner account</strong>. If you forget the password, tap <strong>Forgot password</strong> on the sign-in screen. You enter your e-mail, the owner's PIN and a new password.</p></aside>`,
+<aside class="note"><p>You can see the account e-mail and change the password in <strong>Admin → System → Owner account</strong>. If you forget the password, tap <strong>Forgot password</strong> on the sign-in screen. You enter your e-mail, the owner's PIN and a new password.</p></aside>`,
       },
       {
         id: "pin",
@@ -1541,7 +1535,7 @@ export default {
     ],
     faq: [
       ["Can a cashier use their own phone?", "Yes, but the first sign-in must be done by the owner with their e-mail and password. The owner then logs out and the cashier enters a PIN."],
-      ["Does each phone use up one device?", "Yes. The plan includes up to 10 devices. The Owner on mobile overview does not count towards the limit."],
+      ["Does each phone count towards the device limit?", "Yes. The plan includes up to 10 devices. The Owner on mobile overview does not count towards the limit."],
       ["Must the phone be on the same Wi-Fi as the main till?", "No. Printing at the main till goes over the internet, so the phone can even be on mobile data."],
       ["Does the POS work on an iPhone?", "Yes, in the browser. Only the direct connection of a Bluetooth printer does not work. You can print on the printer at the main till."],
       ["Can I print price labels on a phone?", "Yes, if you are a manager or owner and the phone has a printer set up. However, Admin is less convenient on a small screen than on a computer."],
@@ -1560,7 +1554,7 @@ export default {
     desc: "SuperKasa in Vietnamese for convenience stores: cashiers use their language, receipts stay in Czech. Groups, price labels, item names and EET 2.0 help.",
     lead: "A cashier can have the POS in Vietnamese and the customer still gets a receipt in Czech. This guide shows how to set this up in a convenience store or Asian food store.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 6,
     sections: [
       {
@@ -1622,7 +1616,7 @@ export default {
 <li>Instead of “Bún gạo”, write “Rýžové nudle 200 g” (rice noodles 200 g).</li>
 <li>Put the pack size in the name. The POS uses it to calculate the unit price.</li>
 </ul>
-<p>So that a cashier can recognise goods even without Czech, add a photo. In the item card, tap <strong>Upload photo</strong> or <strong>Search the internet</strong>. The <strong>Fill in photos by EAN</strong> button in <strong>Admin → Stock → Items</strong> tries to find photos for all goods with a barcode. A tile with a picture is then quicker to find than text.</p>
+<p>So that a cashier can recognise goods even without Czech, add a photo. In the item card, tap <strong>Upload photo</strong> or <strong>Search the internet</strong>. The POS looks up photos for goods with a barcode automatically in the background. The <strong>Photos by EAN</strong> button in <strong>Admin → Stock → Items</strong> shows how far it has got (the lookup can be switched off in <strong>Admin → System</strong>). A tile with a picture is then quicker to find than text.</p>
 <p>If you scan an unknown code, the POS tries to find a Czech name in the SuperKasa shared database and in Open Food Facts. You just check the name and fill in the price. If this does not work, check the option <strong>Look up names by barcode online</strong> in <strong>Admin → System → Receipt printing</strong>.</p>
 <p>Labels on the receipt, such as CELKEM (total) or Hotově (cash), are fixed in Czech. You can edit your own text in <strong>Admin → Business</strong> in the <strong>Receipt footer</strong> field. Write it in Czech. What must be on a receipt is described in the guide <a href="co-musi-byt-na-uctence.html">What must be on a receipt</a>.</p>`,
       },

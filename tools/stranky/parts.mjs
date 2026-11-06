@@ -22,12 +22,40 @@ export const PROVIDER = {
   name: "Thanh Lam Nguyen",
   ico: "14161648",
   street: "1. května 117/141",
+  postalCode: "725 25",
+  locality: "Ostrava",
   city: "725 25 Ostrava",
   register: "fyzická osoba podnikající podle živnostenského zákona, zapsaná v živnostenském rejstříku",
 };
 
+/** Text bez HTML značek a entit (do strukturovaných dat a popisků). */
+export const plain = (h) => String(h).replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
+
+/** Organizace SuperKasa pro strukturovaná data (jedna entita pro celý web). E-mail přibude, až bude CONTACT_EMAIL. */
+export const ORG_ID = `${SITE}/#organization`;
+export const ORG = {
+  "@type": "Organization",
+  "@id": ORG_ID,
+  name: "SuperKasa",
+  url: `${SITE}/`,
+  logo: { "@type": "ImageObject", url: `${SITE}/apple-touch-icon.png` },
+  image: `${SITE}/img/logo.png`,
+  telephone: "+420608886882",
+  ...(CONTACT_EMAIL ? { email: CONTACT_EMAIL } : {}),
+  address: { "@type": "PostalAddress", streetAddress: PROVIDER.street, postalCode: PROVIDER.postalCode, addressLocality: PROVIDER.locality, addressCountry: "CZ" },
+  identifier: { "@type": "PropertyValue", propertyID: "IČO", value: PROVIDER.ico },
+};
+const priceSpec = (price, dur) => ({ "@type": "UnitPriceSpecification", price, priceCurrency: "CZK", valueAddedTaxIncluded: true, billingDuration: dur });
+/** Nabídky pronájmu: měsíčně a ročně, včetně DPH. `t` = c.T.index (popisek nabídky). */
+export const OFFERS = (url, t) => [
+  { "@type": "Offer", url, price: "189", priceCurrency: "CZK", availability: "https://schema.org/InStock", description: t.ldOffer, priceSpecification: priceSpec(189, "P1M") },
+  { "@type": "Offer", url, price: "2041", priceCurrency: "CZK", availability: "https://schema.org/InStock", priceSpecification: priceSpec(2041, "P1Y") },
+];
+/** Náhledový obrázek pro sdílení v jazyce stránky (JPEG pod 150 kB kvůli WhatsAppu). */
+export const ogImage = (lang) => `${SITE}/img/og${lang === "cs" ? "" : "-" + lang}.jpg`;
+
 // Bezpečnostní pravidla přímo ve stránce: GitHub Pages hlavičky z .htaccess neposílá. (frame-ancestors v <meta>
-// nefunguje, to umí jen hlavička serveru.) Hash patří k vloženému skriptu INLINE_JS; app.superkasa.cz = přihlášení.
+// nefunguje, to umí jen hlavička serveru – ochranu proti vložení do cizího rámu proto dělá js/site.js.) Hash patří k vloženému skriptu INLINE_JS; app.superkasa.cz = přihlášení.
 const INLINE_HASH = createHash("sha256").update(INLINE_JS).digest("base64");
 const CSP = [
   "default-src 'self'",
@@ -92,7 +120,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").repl
 
 /**
  * Stará adresa, která jen přesměruje na novou (GitHub Pages neumí přesměrování 301):
- * meta refresh, noindex a canonical na novou adresu. Do sitemap se nedává.
+ * okamžitý meta refresh a canonical na novou adresu (Google to bere jako trvalé přesměrování). Do sitemap se nedává.
  */
 export const redirectPage = (c, to, title, text) => {
   const url = pageUrl(c.lang, to);
@@ -101,9 +129,8 @@ export const redirectPage = (c, to, title, text) => {
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="${CSP}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta name="description" content="${text}">
 <meta http-equiv="refresh" content="0; url=${to}">
 <title>${title}</title>
 <link rel="canonical" href="${url}">
@@ -116,8 +143,8 @@ export const redirectPage = (c, to, title, text) => {
 `;
 };
 
-/** Výzva na konci stránky. */
-export const cta = (c, title = c.T.common.ctaTitle, text = c.T.common.ctaText) => `
+/** Výzva na konci stránky (`pricing: false` = bez odkazu na ceník, třeba na samotném ceníku). */
+export const cta = (c, title = c.T.common.ctaTitle, text = c.T.common.ctaText, { pricing = true } = {}) => `
 <section class="section dark cta">
   <div class="wrap">
     <h2>${title}</h2>
@@ -125,7 +152,7 @@ export const cta = (c, title = c.T.common.ctaTitle, text = c.T.common.ctaText) =
     <div class="actions">
       ${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${c.T.common.registerBtn}</a>` : ""}
       <a class="btn ${LOGIN_LIVE ? "btn-light" : "btn-gold"}" href="tel:+420608886882">${c.T.common.callPhone}</a>
-      <a class="btn btn-light" href="cenik.html">${c.T.common.showPricing}</a>
+      ${pricing ? `<a class="btn btn-light" href="cenik.html">${c.T.common.showPricing}</a>` : ""}
     </div>
   </div>
 </section>`;
@@ -150,9 +177,10 @@ const langSwitch = (c, file) => `<nav class="langs" aria-label="${c.T.common.lan
 /**
  * Celá stránka. `c` = jazyk ({ lang, T, up }), `footerObory` = odkazy na obory do patičky,
  * `jsonld` = strukturovaná data (objekt), `canonicalPath` = jiný soubor pro canonical a hreflang (404 → úvod),
- * `altLangs` = jazyky, které stránka uvádí v hreflang (právní stránky jen čeština – překlady jsou noindex).
+ * `altLangs` = jazyky, které stránka uvádí v hreflang (právní stránky jen čeština – překlady jsou noindex),
+ * `og` = { type, published, modified } pro články (og:type article a data).
  */
-export function page(c, { file, title, desc, current, body, noindex = false, canonicalPath, jsonld, footerObory = [], altLangs = LANGS }) {
+export function page(c, { file, title, desc, current, body, noindex = false, canonicalPath, jsonld, footerObory = [], altLangs = LANGS, og = {} }) {
   const { T, up, lang } = c;
   const L = T.common;
   const target = canonicalPath ?? file;
@@ -173,18 +201,20 @@ export function page(c, { file, title, desc, current, body, noindex = false, can
 <meta name="description" content="${esc(desc)}">
 ${noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${url}">`}
 ${alternates}
-<meta property="og:type" content="website">
+<meta property="og:type" content="${og.type ?? "website"}">${og.published ? `\n<meta property="article:published_time" content="${og.published}">` : ""}${og.modified ? `\n<meta property="article:modified_time" content="${og.modified}">` : ""}
 <meta property="og:site_name" content="SuperKasa">
 <meta property="og:locale" content="${LANG_INFO[lang].og}">
 ${LANGS.filter((l) => l !== lang).map((l) => `<meta property="og:locale:alternate" content="${LANG_INFO[l].og}">`).join("\n")}
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${SITE}/img/og.png">
+<meta property="og:image" content="${ogImage(lang)}">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="${esc(L.ogImageAlt)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${ogImage(lang)}">
 <meta name="theme-color" content="#5c1a46">
 <link rel="icon" href="${up}favicon.ico" sizes="any">
 <link rel="icon" href="${up}favicon.svg" type="image/svg+xml">
@@ -205,6 +235,7 @@ ${ld}</head>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">${L.menu}</span></button>
     <nav class="nav" id="nav" aria-label="${L.navAria}">
       ${nav}
+      ${LOGIN_LIVE ? `<a class="nav-login" href="prihlaseni.html">${L.loginBtn}</a>` : ""}
       <a class="btn btn-primary nav-price" href="cenik.html">${L.priceBtn}</a>
       ${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${L.registerBtn}</a>` : ""}
     </nav>

@@ -8,7 +8,7 @@ export default {
     desc: "Srozumitelné návody pro malé obchody a provozovny: EET 2.0 krok za krokem, účtenky, pokladní tiskárna, čtečka a první den s pokladnou.",
     h1: "Návody",
     lead: "EET 2.0, doklady, tiskárna i první den s pokladnou. Psané pro majitele malých obchodů, s odkazy na oficiální zdroje.",
-    groups: [["eet", "EET 2.0"], ["doklady", "Doklady a povinnosti"], ["pokladna", "Pokladna v praxi"]],
+    groups: [["eet", "EET 2.0 a doklady"], ["pokladna", "Pokladna v praxi"]],
     minutes: "{n} min čtení",
     updated: "Aktualizováno",
     toc: "V tomto návodu",

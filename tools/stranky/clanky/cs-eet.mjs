@@ -26,7 +26,7 @@ export default [
 <p>EET 2.0 je elektronická evidence tržeb. Když zákazník zaplatí, vaše pokladna nebo aplikace pošle přes internet Finanční správě několik údajů o platbě. Povinnost evidovat začíná 1. 1. 2027 a stanoví ji zákon č. 180/2026 Sb.</p>
 <p>Oproti původnímu EET se posílá méně údajů, tisk účtenky už není povinný a malí podnikatelé mohou použít bezplatnou státní aplikaci. Evidují se jen kontaktní platby.</p>
 <ol class="timeline">
-  <li><b>1. 11. 2026</b> V DIS+ na portálu MOJE daně jde aktivovat EET, založit evidenční jednotky a vytvořit pokladní certifikát.</li>
+  <li><b>1. 11. 2026</b> V DIS+ na portálu MOJE daně můžete aktivovat EET, založit evidenční jednotky a vytvořit pokladní certifikát.</li>
   <li><b>1. 12. 2026</b> Podle harmonogramu začne běžet bezplatná webová aplikace MOJE eet.</li>
   <li><b>1. 1. 2027</b> Začíná povinnost evidovat a běžný provoz systému.</li>
   <li><b>Leden 2027</b> Evidence běží v pilotním režimu, který ověřuje provoz v praxi. Podle harmonogramu už jde o standardní evidenci.</li>
@@ -149,7 +149,7 @@ export default [
 <p>Sleva je v zákoně o daních z příjmů. Využít ji mohou podnikatelé, kteří jsou fyzické osoby a podávají daňové přiznání. S.r.o. ji nemá. Uplatníte ji jednou, za první rok, ve kterém povinně zaevidujete tržbu. Pro většinu podnikatelů to bude rok 2027.</p>
 <p>OSVČ, jejíž daň se rovná paušální dani, ji neuplatní, protože přiznání nepodává. Je to náš výklad zákona, Finanční správa to výslovně neuvádí. Ověřte si to u finančního úřadu nebo u účetní.</p>
 <p>Sleva nezávisí na počtu pokladen ani na tom, že jste evidovali v původním EET. Nezáleží ani na tom, jestli jste plátce DPH.</p>
-<p>Výše slevy se počítá takto: 15 % dílčího základu daně ze samostatné činnosti minus základní sleva na poplatníka, která je <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">30 840 Kč</a>. Sleva je nejvýše 5 000 Kč.</p>
+<p>Výše slevy se počítá takto: 15 % dílčího základu daně ze samostatné činnosti minus základní sleva na poplatníka, která je <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01#par_35ba" rel="noopener">30 840 Kč</a>. Sleva je nejvýše 5 000 Kč.</p>
 <div class="tbl"><table>
   <thead><tr><th>Dílčí základ daně</th><th>15 %</th><th>Po odečtení 30 840 Kč</th><th>Sleva</th></tr></thead>
   <tbody>
@@ -209,7 +209,7 @@ export default [
         id: "prehled-kroku",
         h2: "Šest kroků v tomto pořadí",
         html: `
-<p>Nejdřív založíte evidenční jednotku, potom vytvoříte certifikát. Pořadí změnit nejde. Stanoví ho zákon a DIS+ vám certifikáty ukáže až po založení první jednotky.</p>
+<p>Nejdřív založíte evidenční jednotku, potom vytvoříte certifikát. Pořadí změnit nelze. Stanoví ho zákon a DIS+ vám certifikáty ukáže až po založení první jednotky.</p>
 <ol class="steps">
   <li>Přihlásíte se do DIS+ na portálu MOJE daně.</li>
   <li>V DIS+ aktivujete EET.</li>
@@ -236,7 +236,7 @@ export default [
 <ol class="steps">
   <li>Na portálu klikněte na Online finanční úřad a potom na Jak získat přístup do DIS+.</li>
   <li>U možnosti Přístupové údaje přidělené Finanční správou ČR otevřete Více informací a vyplňte žádost. Potřebujete e-mail, mobilní telefon a heslo, které si zvolíte.</li>
-  <li>Údaje vyplňte přesně podle dokladu totožnosti. Chyby v odeslané žádosti nejde opravit, musíte podat novou.</li>
+  <li>Údaje vyplňte přesně podle dokladu totožnosti. Chyby v odeslané žádosti nelze opravit, musíte podat novou.</li>
   <li>Uložte si název uživatele a identifikátor žádosti.</li>
   <li>Do 30 dnů osobně navštivte kterékoli územní pracoviště finančního úřadu. Vezměte doklad totožnosti.</li>
 </ol>
@@ -253,7 +253,7 @@ export default [
         id: "evidencni-jednotka",
         h2: "Krok 3: evidenční jednotka a její typy",
         html: `
-<p>Evidenční jednotka je místo nebo způsob, jakým prodáváte. Pro večerku je to prodejna. Pro řemeslníka, který pracuje u zákazníků, je to on sám. V DIS+ vybíráte z šesti druhů:</p>
+<p>Evidenční jednotka je místo nebo způsob, jakým prodáváte. Pro večerku je to prodejna. Pro řemeslníka, který pracuje u zákazníků, je to on sám. V DIS+ vybíráte ze šesti druhů:</p>
 <div class="tbl"><table>
   <thead><tr><th>Druh</th><th>Příklad</th><th>Co vyplníte</th></tr></thead>
   <tbody>
@@ -270,7 +270,7 @@ export default [
   <li>Na záložce EVIDENCE TRŽEB otevřete Správa evidenčních jednotek a klikněte na NOVÁ EVIDENČNÍ JEDNOTKA.</li>
   <li>Vyberte druh jednotky.</li>
   <li>Vyplňte převažující druh činnosti. Začněte psát a pomůže vám našeptávač.</li>
-  <li>Můžete doplnit název, například „Praha - prodejna“. Není povinný, ale v přehledu tržeb se vám bude hodit.</li>
+  <li>Můžete doplnit název, například „Praha – prodejna“. Není povinný, ale v přehledu tržeb se vám bude hodit.</li>
   <li>Označte, jestli se v jednotce uskutečňují evidované tržby. Na otázku o přijímání tržeb na účet jiného poplatníka většina podnikatelů odpoví Ne.</li>
   <li>Vyplňte adresu nebo jiné určení jednotky a klikněte na DOKONČIT A PŘIDAT.</li>
 </ol>
@@ -289,7 +289,7 @@ export default [
 <ol class="steps">
   <li>Na záložce EVIDENCE TRŽEB klikněte na dlaždici POKLADNÍ CERTIFIKÁTY.</li>
   <li>Klikněte na VYTVOŘIT NOVÝ CERTIFIKÁT.</li>
-  <li>Vyplňte e-mail. Přijde na něj upozornění na konec platnosti. Dodatečně ho doplnit nejde.</li>
+  <li>Vyplňte e-mail. Přijde na něj upozornění na konec platnosti. Dodatečně ho doplnit nelze.</li>
   <li>Můžete doplnit označení certifikátu, například „Pokladna prodejna“. Má nejvýše 64 znaků.</li>
   <li>Klikněte na VYTVOŘIT CERTIFIKÁT. Obvykle je hotový do 30 sekund.</li>
   <li>Klikněte na ZOBRAZIT HESLO A STÁHNOUT CERTIFIKÁT. Do počítače se stáhne soubor s koncovkou .p12.</li>
@@ -300,10 +300,10 @@ export default [
 <p>Pokud počítač nemáte u sebe, zvolte VYŘÍDÍM POZDĚJI a vraťte se ke stažení jindy. Při přetížení systému vám přijde e-mail, že je certifikát připravený. Názvy tlačítek přebíráme z návodů Finanční správy, v aplikaci se mohou drobně lišit.</p>
 <h3>Platnost a ochrana certifikátu</h3>
 <ul>
-  <li><strong>Platnost.</strong> Certifikát platí 366 dní. Pro automatickou obnovu doporučuje certifikační autorita termín 2 až 3 týdny před koncem platnosti. Certifikát po konci platnosti už obnovit nejde, musíte vytvořit nový.</li>
+  <li><strong>Platnost.</strong> Certifikát platí 366 dní. Pro automatickou obnovu doporučuje certifikační autorita termín 2 až 3 týdny před koncem platnosti. Certifikát po konci platnosti už obnovit nelze, musíte vytvořit nový.</li>
   <li><strong>Obnova.</strong> Některé pokladny ji umí samy. Jinak vytvoříte nový certifikát ručně a nahrajete ho.</li>
   <li><strong>Počet.</strong> Jeden certifikát lze použít pro jedno i více pokladních zařízení. Vytvořit si můžete i více certifikátů.</li>
-  <li><strong>Bezpečnost.</strong> Soubor a heslo chraňte a neposílejte je nezabezpečeně. Máte to jako zákonnou povinnost. Zneužití nebo jeho hrozbu musíte bez zbytečného odkladu oznámit správci daně.</li>
+  <li><strong>Bezpečnost.</strong> Soubor a heslo chraňte a neposílejte je nezabezpečeně. Je to vaše zákonná povinnost. Zneužití nebo jeho hrozbu musíte bez zbytečného odkladu oznámit správci daně.</li>
   <li><strong>Ztráta.</strong> Při ztrátě pokladny nebo podezření na zneužití certifikát zneplatněte. Tento krok je nevratný. Potom si vytvoříte nový.</li>
 </ul>`,
       },
@@ -326,7 +326,7 @@ export default [
         html: `
 <p>Ověřovací mód je zkušební způsob odeslání. Pokladna pošle zprávu do systému a ten jen ověří, že ji umí zpracovat. Zpráva se nepřijme jako evidovaná tržba.</p>
 <p>Zkouškou ověříte nastavení a spojení. Povinnost evidovat tím nesplníte. Před ostrým provozem proto přepněte pokladnu do běžného režimu.</p>
-<p>V SuperKase je tato zkouška tlačítko <strong>Ověřit spojení</strong> ve Správě → EET 2.0. Do konce roku 2026 můžete navíc zapnout režim Nanečisto, ve kterém jdou do ověřovacího módu skutečné prodeje. Od 1. 1. 2027 tento režim zapnout nejde. U jiných pokladen se zeptejte dodavatele, jak zkoušku spustit.</p>
+<p>V SuperKase je tato zkouška tlačítko <strong>Ověřit spojení</strong> ve Správě → EET 2.0. Do konce roku 2026 můžete navíc zapnout režim Nanečisto, ve kterém jdou do ověřovacího módu skutečné prodeje. Od 1. 1. 2027 tento režim zapnout nelze. U jiných pokladen se zeptejte dodavatele, jak zkoušku spustit.</p>
 <aside class="note"><p>Finanční správa v <a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET_pristupove_provozni_informace_produk-2.pdf" rel="noopener">provozních informacích</a> uvádí předpokládané spuštění ostrého prostředí pro veřejnost do 1. 1. 2027. Pokud zkouška hned po vydání certifikátu nevyjde a nastavení máte správně, zkuste ji později znovu a případně se ozvěte dodavateli.</p></aside>`,
       },
       {
@@ -416,8 +416,8 @@ export default [
 <p>Musíte splnit všechny tyto podmínky:</p>
 <ul>
   <li><strong>Jste fyzická osoba.</strong> Pro s.r.o. a jiné právnické osoby režim není.</li>
-  <li><strong>Jste v 1. pásmu paušálního režimu.</strong> Paušální režim je podle <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">§ 2a zákona o daních z příjmů</a> mimo jiné jen pro neplátce DPH.</li>
-  <li><strong>Vaše příjmy ze samostatné činnosti za předchozí rok nepřesáhly 1 000 000 Kč.</strong> Pro rok 2027 se dívá na rok 2026. Nezáleží na tom, z jaké samostatné činnosti příjmy jsou.</li>
+  <li><strong>Jste v 1. pásmu paušálního režimu.</strong> Paušální režim je podle <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01#par_2a" rel="noopener">§ 2a zákona o daních z příjmů</a> mimo jiné jen pro neplátce DPH.</li>
+  <li><strong>Vaše příjmy ze samostatné činnosti za předchozí rok nepřesáhly 1 000 000 Kč.</strong> Pro rok 2027 rozhodují příjmy za rok 2026. Nezáleží na tom, z jaké samostatné činnosti příjmy jsou.</li>
   <li><strong>Včas podáte oznámení.</strong> Bez něj se režim nespustí.</li>
 </ul>
 <aside class="note warn"><p><strong>Pozor na rozdíl limitů.</strong> V 1. pásmu paušálu můžete být podle druhu činnosti i s příjmy do 1,5 nebo 2 milionů Kč. Pro EET OFF ale platí limit 1 milion Kč pro všechny.</p></aside>
@@ -447,7 +447,7 @@ export default [
     <tr><td>Překročení 1 milionu Kč, když zůstáváte v 1. pásmu</td><td>Oznámení do 15 dnů ode dne, kdy to nastalo</td></tr>
   </tbody>
 </table></div>
-<aside class="note warn"><p><strong>Pozdní oznámení je neúčinné.</strong> Zpoždění nejde napravit a na daný rok se už přihlásit nemůžete. Podejte ho raději v prosinci nebo na začátku ledna.</p></aside>
+<aside class="note warn"><p><strong>Pozdní oznámení je neúčinné.</strong> Zpoždění nelze napravit a na daný rok se už přihlásit nemůžete. Podejte ho raději v prosinci nebo na začátku ledna.</p></aside>
 <p>Přihlášení platí vždy od začátku roku, i když oznámení podáte v lednu. Výjimkou je zahájení činnosti v průběhu roku, kdy se můžete přihlásit i během něj. Přihlášení trvá i v dalších letech, dokud se včas neodhlásíte nebo režim neskončí z jiného důvodu.</p>
 <p>Příklad: kadeřnice podá oznámení 15. 12. 2026 a uvede rok 2027. Od 1. 1. 2027 neeviduje a v lednu poprvé platí zálohu s přirážkou. Stejná kadeřnice by oznámením 12. 1. 2027 nic nezískala, protože by bylo po lhůtě. Musela by evidovat celý rok 2027.</p>`,
       },
@@ -475,7 +475,7 @@ export default [
         id: "odhlaseni-a-konec",
         h2: "Jak se odhlásit a kdy režim končí",
         html: `
-<p>EET OFF nejde během roku změnit. Když ho chcete ukončit, podáte Oznámení o odhlášení z přirážky a uvedete rok, po jehož uplynutí končíte. Lhůta je do desátého dne následujícího roku. Pozdní oznámení je neúčinné.</p>
+<p>EET OFF nelze během roku změnit. Když ho chcete ukončit, podáte Oznámení o odhlášení z přirážky a uvedete rok, po jehož uplynutí končíte. Lhůta je do desátého dne následujícího roku. Pozdní oznámení je neúčinné.</p>
 <p>Příklad: chcete v roce 2028 začít evidovat. Do 10. 1. 2028 podáte oznámení, že přirážku končíte uplynutím roku 2027. Tržby od 1. 1. 2028 už evidujete.</p>
 <p>Režim končí také ve dvou dalších případech:</p>
 <ul>
@@ -495,7 +495,7 @@ export default [
   <li><strong>EET OFF neruší doklady.</strong> Na žádost spotřebitele musíte vydat doklad o koupi podle zákona o ochraně spotřebitele. Více je v článku <a href="co-musi-byt-na-uctence.html">Co musí být na účtence</a>.</li>
   <li><strong>Neoznamujete evidenční jednotky.</strong> Bez evidovaných tržeb se vás oznamovací povinnost v DIS+ netýká a certifikát nepotřebujete.</li>
   <li><strong>Sledujte příjmy během roku.</strong> Překročení 1 milionu Kč znamená evidenci od dalšího roku a může vyžadovat oznámení do 15 dnů. Do limitu se nepočítají příjmy od daně osvobozené, příjmy, které nejsou předmětem daně, a příjmy zdaněné srážkou.</li>
-  <li><strong>Nastavte pokladnu.</strong> Když pokladnu používáte i v EET OFF, nastavte ji tak, aby tržby neodesílala. V SuperKase je pro to volba Tržby evidovat nemusím ve Správě → EET 2.0. Pokladna s ní přejde do ostrého provozu i bez certifikátu a čísla evidenční jednotky, během zkoušky zdarma i bez placené licence. Volba nejde použít, když už ostré EET jednou běželo.</li>
+  <li><strong>Nastavte pokladnu.</strong> Když pokladnu používáte i v EET OFF, nastavte ji tak, aby tržby neodesílala. V SuperKase je pro to volba <strong>Tržby evidovat nemusím</strong> ve Správě → EET 2.0. Pokladna s ní přejde do ostrého provozu i bez certifikátu a čísla evidenční jednotky, během zkoušky zdarma i bez placeného pronájmu. Volbu nelze použít, když už ostré EET jednou běželo.</li>
 </ul>
 <p>Správnost volby EET OFF je vaše odpovědnost. Pokud si nejste jistí příjmy nebo pásmem, zeptejte se účetní nebo infolinky Finanční správy na čísle 953 109 109.</p>`,
       },
@@ -526,7 +526,7 @@ export default [
     title: "MOJE eet, nebo pokladní systém: co státní aplikace umí a co ne",
     metaTitle: "MOJE eet, nebo pokladna: srovnání | SuperKasa",
     desc: "MOJE eet je státní aplikace zdarma pro nejvýše 2 evidenční jednotky, spuštění 1. 12. 2026. Co podle zveřejněných informací umí a kdy je lepší pokladna.",
-    lead: "MOJE eet je bezplatná webová aplikace Finanční správy pro evidenci tržeb a její spuštění je plánované na 1. 12. 2026. Stačit může tam, kde chcete jen evidovat málo plateb, pokladní systém dává smysl, když potřebujete také sklad, tisk a přehled o provozu.",
+    lead: "MOJE eet je bezplatná webová aplikace Finanční správy pro evidenci tržeb a její spuštění je plánované na 1. 12. 2026. Stačit může tam, kde evidujete jen málo plateb. Pokladní systém dává smysl, když potřebujete i sklad, tisk a přehled o provozu.",
     published: "2026-10-31",
     updated: "2026-10-31",
     minutes: 7,
@@ -577,7 +577,7 @@ export default [
         id: "co-neni-dolozene",
         h2: "Co o MOJE eet zatím není doložené",
         html: `
-<p>Následující funkce jsme v materiálech Finanční správy nenašli. Neznamená to, že aplikace nikdy umět nebudou. Znamená to, že dnes na ně nespoléhejte.</p>
+<p>Následující funkce jsme v materiálech Finanční správy nenašli. Neznamená to, že je aplikace nikdy umět nebude. Znamená to, že dnes na ně nespoléhejte.</p>
 <div class="tbl"><table>
   <thead><tr><th>Funkce</th><th>MOJE eet podle zveřejněných informací</th><th>U pokladního systému</th></tr></thead>
   <tbody>
@@ -669,7 +669,7 @@ export default [
       ["Kolik provozoven můžu mít v MOJE eet?", "Finanční správa uvádí nejvýše 2 evidenční jednotky. Evidenční jednotkou je provozovna, ale také například e-shop nebo mobilní stánek."],
     ],
     sources: [
-      ["Praktické informace: Kdy mi postačí webová aplikace MOJE eet (Finanční správa)", PRAKTICKE],
+      ["Praktické informace: Kdy mi postačí webová aplikace MOJE eet (Finanční správa)", PRAKTICKE + "#kdy-mi-postaci-webova-aplikace-moje-eet-821"],
       ["EET v 5 krocích (Finanční správa)", "https://eet.gov.cz/assets/cs/cmsmedia/pro-media/EET_v_5_krocich.pdf"],
       ["Harmonogram EET 2.0 (Finanční správa)", HARMONOGRAM],
       ["Prezentace ze semináře pro vývojáře, 23. 6. 2026 (Finanční správa)", "https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET2_Prezentace_Seminar_pro_vyvojare_23-.pdf"],
@@ -681,7 +681,7 @@ export default [
 
   {
     slug: "co-musi-byt-na-uctence",
-    group: "doklady",
+    group: "eet",
     kicker: "Účtenky a doklady",
     title: "Co musí být na účtence: zjednodušený daňový doklad a doklad neplátce",
     metaTitle: "Co musí být na účtence: náležitosti dokladu | SuperKasa",
@@ -736,7 +736,7 @@ export default [
 </table></div>
 <p>Mnoho pokladen tiskne i základ daně a výši daně. Není to chyba, zákon jen říká, že na zjednodušeném dokladu být nemusí.</p>
 <aside class="note"><p>Spotřebitel může chtít doklad podle zákona o ochraně spotřebitele. Ten vyžaduje i identifikační číslo osoby. Přidejte proto na účtenku IČO, pokud ho máte.</p></aside>
-<h3>Kdy zjednodušený doklad vystavit nejde</h3>
+<h3>Kdy zjednodušený doklad vystavit nelze</h3>
 <ul>
   <li>Prodáváte tabákové výrobky za jinou než pevnou cenu pro konečného spotřebitele.</li>
   <li>Daň přiznává zákazník, tedy ne vy.</li>
@@ -824,13 +824,13 @@ export default [
   <tbody>
     <tr><td>Daňové doklady plátce DPH, i vystavené účtenky</td><td>10 let od konce zdaňovacího období, ve kterém se plnění uskutečnilo</td><td>§ 35 zákona o DPH</td></tr>
     <tr><td>Účetní doklady, když vedete účetnictví</td><td>5 let od konce účetního období</td><td>§ 31 zákona o účetnictví</td></tr>
-    <tr><td>Podklady neplátce bez účetnictví</td><td>Dobu určete s účetní. Lhůta pro stanovení daně je 3 roky a může se měnit.</td><td><a href="https://www.zakonyprolidi.cz/cs/2009-280" rel="noopener">§ 148 daňového řádu</a></td></tr>
+    <tr><td>Podklady neplátce bez účetnictví</td><td>Dobu určete s účetní. Lhůta pro stanovení daně je 3 roky a může se měnit.</td><td><a href="https://www.zakonyprolidi.cz/cs/2009-280#p148" rel="noopener">§ 148 daňového řádu</a></td></tr>
     <tr><td>POK</td><td>Zákon uchovávání neukládá</td><td>eet.gov.cz</td></tr>
   </tbody>
 </table></div>
 <p>Příklad: plátce, který podává DPH měsíčně, prodal zboží 15. 3. 2027. Zdaňovací období končí 31. 3. 2027, doklad tedy uchovává do 31. 3. 2037.</p>
 <p>Plátce musí po celou dobu zajistit věrohodnost původu, neporušenost obsahu a čitelnost dokladu. Doklady smíte uchovávat elektronicky. Mají být v Česku, nebo uložené tak, abyste k nim měli nepřetržitý dálkový přístup. Daňové doklady vystavené v cizím jazyce musíte správci daně na žádost nechat přeložit do češtiny.</p>
-<p>Tepelný papír účtenek časem bledne. Spolehlivější je mít doklady uložené v pokladně nebo v počítači a ve vlastní záloze.</p>
+<p>Termopapír účtenek časem bledne. Spolehlivější je mít doklady uložené v pokladně nebo v počítači a ve vlastní záloze.</p>
 <p>SuperKasa má EET 2.0 v každém tarifu a spojení jsme vyzkoušeli v testovacím prostředí Finanční správy. Ceny najdete v <a href="cenik.html">ceníku</a>.</p>`,
       },
     ],
@@ -844,11 +844,11 @@ export default [
     ],
     sources: [
       ["Zákon č. 235/2004 Sb., o DPH, § 26 až 35a, 42, 45 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/2004-235"],
-      ["Zákon č. 634/1992 Sb., o ochraně spotřebitele, § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1992-634"],
+      ["Zákon č. 634/1992 Sb., o ochraně spotřebitele, § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1992-634#p16"],
       ["Zákon č. 180/2026 Sb., o evidenci tržeb, § 8 a změna přílohy zákona o DPH (eet.gov.cz)", ZAKON],
       ["Evidence tržeb v praxi a POK (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/evidence-trzeb-v-praxi"],
-      ["Chyby a jejich řešení: storno a oprava tržby (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/chyby-a-jejich-reseni"],
-      ["Zákon č. 563/1991 Sb., o účetnictví, § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1991-563"],
+      ["Chyby a jejich řešení: storno a oprava tržby (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/chyby-a-jejich-reseni#storno-nebo-oprava-trzby-636"],
+      ["Zákon č. 563/1991 Sb., o účetnictví, § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1991-563#p31"],
     ],
     related: ["eet-2-0-pruvodce", "tiskarna-ctecka-zasuvka", "eet-off-pausalni-dan"],
   },

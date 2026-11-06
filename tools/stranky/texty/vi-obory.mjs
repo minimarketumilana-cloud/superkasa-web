@@ -220,7 +220,7 @@ export default {
       title: "Máy tính tiền cho quầy báo và thuốc lá",
       desc: "Thuốc lá, thuốc lá điện tử, báo và tạp chí, đồ uống và bánh kẹo – giá thuốc lá cố định, có kho và nhãn giá.",
       preset: "Quầy báo, thuốc lá",
-      items: "Túi. Hàng hóa bạn quét bằng máy đọc mã – máy tìm tên hàng trong cơ sở dữ liệu dùng chung của SuperKasa hoặc trên internet, hoặc bạn lấy từ file CSV.",
+      items: "Chỉ có sẵn túi (túi nilon và túi lớn). Hàng hóa bạn quét bằng máy đọc mã – máy tìm tên hàng trong cơ sở dữ liệu dùng chung của SuperKasa hoặc trên internet, hoặc bạn lấy từ file CSV.",
       highlights: [
         [
           "Giá thuốc lá cố định",
@@ -291,7 +291,7 @@ export default {
         ],
         [
           "Hình ảnh trên ô hàng",
-          "Rau quả có hình vẽ minh họa, nên nhân viên tìm được ngay cả khi không đọc chữ.",
+          "Rau quả có ảnh thật trên ô hàng, nên nhân viên tìm được ngay cả khi không đọc chữ.",
         ],
       ],
     },
@@ -327,7 +327,7 @@ export default {
       title: "Máy tính tiền cho cửa hàng hóa mỹ phẩm và đồ gia dụng",
       desc: "Hóa mỹ phẩm, mỹ phẩm, đồ gia dụng và thức ăn thú cưng – tự tìm tên và ảnh hàng theo mã EAN, có kho và nhãn giá.",
       preset: "Hóa mỹ phẩm, đồ gia dụng",
-      items: "Túi. Hàng hóa bạn quét bằng máy đọc mã – máy gợi ý tên và ảnh theo mã vạch, hoặc bạn lấy từ file CSV.",
+      items: "Chỉ có sẵn túi (túi nilon và túi lớn). Hàng hóa bạn quét bằng máy đọc mã – máy gợi ý tên và ảnh theo mã vạch, hoặc bạn lấy từ file CSV.",
       highlights: [
         EAN_TEN_ANH,
         [
@@ -524,9 +524,9 @@ export default {
       card: "Cửa hàng khác",
       cardDesc: "Quà tặng, đồ chơi, đồ sở thích, thể thao…",
       title: "Máy tính tiền cho quà tặng, đồ chơi và cửa hàng khác",
-      desc: "Cho cửa hàng quà tặng, đồ chơi, đồ sở thích, thể thao, kim khí và các cửa hàng khác – bạn tự thêm nhóm hàng, để máy gợi ý theo mô tả hàng hóa, hoặc lấy hàng từ file CSV.",
+      desc: "Máy tính tiền cho cửa hàng quà tặng, đồ chơi, đồ sở thích và kim khí: tự thêm nhóm hàng, để máy gợi ý hoặc lấy từ file CSV.",
       preset: "Cửa hàng khác",
-      items: "Túi. Nhóm hàng và hàng hóa bạn tự thêm, hoặc lấy từ file CSV (cả file xuất từ máy tính tiền khác).",
+      items: "Chỉ có sẵn túi (túi nilon và túi lớn). Nhóm hàng và hàng hóa bạn tự thêm, hoặc lấy từ file CSV (cả file xuất từ máy tính tiền khác).",
       highlights: [
         [
           "Nhóm hàng theo mô tả của bạn",
@@ -561,7 +561,7 @@ export default {
         ["Màn hình khách hàng", KHACH_THAY],
         [
           "Khuyến mãi",
-          "Khuyến mãi đến một ngày nhất định và giá theo số lượng, ví dụ cà phê mang đi rẻ hơn.",
+          "Khuyến mãi đến một ngày nhất định và giá theo số lượng, ví dụ hai ly cà phê với giá ưu đãi.",
         ],
         [
           "Kho, tiền cược và bàn khi cần",
@@ -624,7 +624,7 @@ export default {
         ],
         [
           "Máy tính tiền và máy tính bảng cho phục vụ",
-          "Hóa đơn được lưu trên máy tính chính, không phải trong trình duyệt. Bạn thêm món từ máy tính bảng ngay tại bàn và máy ở quầy bia thấy ngay.",
+          "Hóa đơn của bàn được lưu trên máy chủ SuperKasa, không nằm trên riêng một thiết bị. Bạn thêm món từ máy tính bảng ngay tại bàn và máy ở quầy bia thấy ngay.",
         ],
         [
           "Tách và chuyển",

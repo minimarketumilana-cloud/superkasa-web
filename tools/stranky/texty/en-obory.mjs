@@ -3,11 +3,11 @@
 
 const EAT_IN_TIPS = [
   "Eat in / Take away and tips",
-  "One switch sells eat in or take away – the receipt uses the correct VAT rate and the price stays the same. Tips are recorded outside sales and EET, and the POS watches the 7 % limit for tax exemption (from 1 Jan 2027). Both are included in the plan price.",
+  "One switch sells eat in or take away – the receipt uses the correct VAT rate and the price stays the same. Tips are recorded outside sales and EET, and the POS watches the 7% limit for tax exemption (from 1 Jan 2027). Both are included in the plan price.",
 ];
 
 const DRINKS_VAT =
-  "Soft drinks and coffee served in a café, pub or restaurant have a 21 % rate until the end of 2026 and 12 % from 1 Jan 2027. Take-away stays at 21 % – switch Eat in / Take away on the POS and the receipt uses the correct rate. During setup the POS uses the rate valid on that day – check it with your accountant.";
+  "Soft drinks and coffee served in a café, pub or restaurant have a 21% rate until the end of 2026 and 12% from 1 Jan 2027. Take-away stays at 21% – switch Eat in / Take away on the POS and the receipt uses the correct rate. During setup the POS uses the rate valid on that day – check it with your accountant.";
 
 const STAFF_VI = "Vietnamese for your staff";
 const NAMES_PHOTOS_EAN = [
@@ -84,7 +84,7 @@ export default {
     display: ["Customer display", "A second screen for the customer showing the purchase and the QR payment."],
     qr: ["QR payments", "Bank transfer payment via a QR code on the display and on the receipt."],
     tables: ["Tables and bills", "Table bills for pubs and restaurants: adding items, splitting, moving, kitchen and bar tickets."],
-    tips: ["Tips", "Tips outside sales and EET: who, how much, cash or card; a monthly overview that watches the 7 % limit for tax exemption."],
+    tips: ["Tips", "Tips outside sales and EET: who, how much, cash or card; a monthly overview that watches the 7% limit for tax exemption."],
   },
   tariffs: {
     obchod: "Shop",
@@ -218,7 +218,7 @@ export default {
       title: "POS for newsagents and tobacconists",
       desc: "Cigarettes, e-cigarettes, newspapers and magazines, drinks and sweets – with fixed tobacco prices, stock and price labels.",
       preset: "Newsagent and tobacco",
-      items: "Bags. You scan the goods with a barcode scanner – the POS looks the name up in the shared SuperKasa database or on the internet, or you import it from a CSV.",
+      items: "Only bags are set up (a plastic bag and a large bag). You scan the goods with a barcode scanner – the POS looks the name up in the shared SuperKasa database or on the internet, or you import it from a CSV.",
       highlights: [
         [
           "Fixed tobacco prices",
@@ -289,7 +289,7 @@ export default {
         ],
         [
           "Pictures on the tiles",
-          "Fruit and vegetables have drawn pictures, so staff can find them without reading.",
+          "Fruit and vegetables have real photos on their tiles, so staff can find them without reading.",
         ],
       ],
     },
@@ -325,7 +325,7 @@ export default {
       title: "POS for drugstores and household goods shops",
       desc: "Toiletries, cosmetics, household goods and pet food – with name and photo lookup by EAN, stock and price labels.",
       preset: "Drugstore and household",
-      items: "Bags. You scan the goods with a barcode scanner – the POS suggests the name and photo from the barcode, or you import them from a CSV.",
+      items: "Only bags are set up (a plastic bag and a large bag). You scan the goods with a barcode scanner – the POS suggests the name and photo from the barcode, or you import them from a CSV.",
       highlights: [
         NAMES_PHOTOS_EAN,
         [
@@ -351,8 +351,8 @@ export default {
       items: "Roses, tulips, gerberas and chrysanthemums by the stem, small and large bouquets, arranging and wrapping, orchids, succulents, potted herbs, greeting cards, gift bags and candles.",
       highlights: [
         [
-          "Flowers 21 %, plants 12 %",
-          "Since 2024 cut flowers have a 21 % rate, while potted plants and seedlings have stayed at 12 %. That is why the POS sets them up as two groups – check the rates with your accountant.",
+          "Flowers 21%, plants 12%",
+          "Since 2024 cut flowers have a 21% rate, while potted plants and seedlings have stayed at 12%. That is why the POS sets them up as two groups – check the rates with your accountant.",
         ],
         [
           "Bouquets in a few taps",
@@ -372,13 +372,13 @@ export default {
       card: "Stationery and books",
       cardDesc: "Notebooks, books, copying",
       title: "POS for stationers and bookshops",
-      desc: "Notebooks, writing and office supplies, books at 0 % VAT, newspapers, greeting cards, toys and copying – with stock, names from the barcode and price labels.",
+      desc: "Notebooks, writing and office supplies, books at 0% VAT, newspapers, greeting cards, toys and copying – with stock, names from the barcode and price labels.",
       preset: "Stationery and books",
       items: "A4 and A5 notebooks, ballpoint pens, pencils, black-and-white and colour A4 copies, laminating, greeting cards, wrapping paper and bags.",
       highlights: [
         [
-          "Books at 0 % VAT",
-          "Since 2024 books have been tax-free. That is why the Books group has 0 %, stationery 21 % and newspapers and magazines 12 % – check the rates with your accountant.",
+          "Books at 0% VAT",
+          "Since 2024 books have been tax-free. That is why the Books group has 0%, stationery 21% and newspapers and magazines 12% – check the rates with your accountant.",
         ],
         [
           "Copying on a tile",
@@ -465,7 +465,7 @@ export default {
         ],
         [
           "VAT rates by group",
-          "Health food and supplements are set up at 12 %, toiletries and natural cosmetics at 21 %. The rates are a suggestion – check them with your accountant.",
+          "Health food and supplements are set up at 12%, toiletries and natural cosmetics at 21%. The rates are a suggestion – check them with your accountant.",
         ],
       ],
     },
@@ -522,9 +522,9 @@ export default {
       card: "Other shop",
       cardDesc: "Gifts, toys, hobby, sport…",
       title: "POS for gift, toy, hobby and other shops",
-      desc: "For gifts, toys, hobby, sport, hardware and other shops – add groups yourself, have them suggested from a description of your range, or import products from a CSV.",
+      desc: "A POS for gift, toy, hobby and hardware shops: add product groups yourself, have them suggested, or import them from a CSV.",
       preset: "Other shop",
-      items: "Bags. You add groups and products yourself, or import them from a CSV (even from another POS's export).",
+      items: "Only bags are set up (a plastic bag and a large bag). You add groups and products yourself, or import them from a CSV (even from another POS's export).",
       highlights: [
         [
           "Groups from your description",
@@ -562,7 +562,7 @@ export default {
         ],
         [
           "Promotions",
-          "Promotions until a set date and prices from a certain quantity, such as cheaper takeaway coffee.",
+          "Promotions until a set date and prices from a certain quantity, such as two coffees at a special price.",
         ],
         [
           "Stock, deposits and tables when you need them",
@@ -608,7 +608,7 @@ export default {
         "ingredients for cakes, gâteaux and ice cream sundaes, cost price, margin and how many more portions you can make.",
       ],
       notes: [
-        "Cakes and ice cream are set up at 12 % VAT, for both take-away and eat-in.",
+        "Cakes and ice cream are set up at 12% VAT, for both take-away and eat-in.",
         DRINKS_VAT,
       ],
     },
@@ -628,7 +628,7 @@ export default {
         ],
         [
           "POS and waiter's tablet",
-          "Bills are stored on the main computer, not in the browser. Add an order from a tablet at the table and the POS at the bar sees it straight away.",
+          "Table bills are saved on the SuperKasa server, not on one device. Add an order from a tablet at the table and the POS at the bar sees it straight away.",
         ],
         [
           "Split and move",
@@ -656,7 +656,7 @@ export default {
       notes: [
         "Not available yet: a table plan matching your room layout and splitting a bill into equal parts. Tickets are printed by direct printing on a receipt printer.",
         "Removing an ordered item requires a reason. Staff can correct their own item within 3 minutes; after that a manager approves it with a PIN – everything is logged.",
-        `${DRINKS_VAT} Alcohol and beer are 21 %.`,
+        `${DRINKS_VAT} Alcohol and beer are 21%.`,
       ],
     },
     kadernictvi: {
@@ -715,8 +715,8 @@ export default {
       items: "Single entry, student and senior entry, 10-visit pass, monthly pass, personal training, group class, protein bar and protein drink, water and isotonic drink.",
       highlights: [
         [
-          "Entry 12 %, classes 21 %",
-          "Entry to the gym and sports facilities is set up at 12 %, classes and training with a trainer at 21 %, supplements at 12 % and drinks at 21 %. The rates are a suggestion – check them with your accountant.",
+          "Entry 12%, classes 21%",
+          "Entry to the gym and sports facilities is set up at 12%, classes and training with a trainer at 21%, supplements at 12% and drinks at 21%. The rates are a suggestion – check them with your accountant.",
         ],
         [
           "Entry and passes on tiles",

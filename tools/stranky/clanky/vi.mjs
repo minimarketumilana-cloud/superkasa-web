@@ -14,7 +14,7 @@ export default {
     desc: "Hướng dẫn dễ hiểu cho cửa hàng nhỏ: EET 2.0 từng bước, hóa đơn, máy in hóa đơn, máy quét mã vạch và ngày đầu tiên dùng máy tính tiền.",
     h1: "Hướng dẫn",
     lead: "EET 2.0, hóa đơn, máy in và ngày đầu tiên dùng máy tính tiền. Viết cho chủ cửa hàng nhỏ, có đường dẫn đến nguồn chính thức.",
-    groups: [["eet", "EET 2.0"], ["doklady", "Hóa đơn và nghĩa vụ"], ["pokladna", "Máy tính tiền trong thực tế"]],
+    groups: [["eet", "EET 2.0 và hóa đơn"], ["pokladna", "Máy tính tiền trong thực tế"]],
     minutes: "{n} phút đọc",
     updated: "Cập nhật ngày",
     toc: "Trong hướng dẫn này",
@@ -167,7 +167,7 @@ export default {
 <p>Khoản giảm này được quy định trong zákon o daních z příjmů (luật thuế thu nhập). Người được hưởng là người kinh doanh cá nhân (fyzická osoba) có nộp tờ khai thuế (daňové přiznání). Công ty s.r.o. không có khoản giảm này. Bạn chỉ dùng được một lần, cho năm đầu tiên bạn bắt buộc ghi nhận doanh thu. Với đa số người kinh doanh, đó sẽ là năm 2027.</p>
 <p>OSVČ có số thuế bằng thuế khoán (paušální daň) thì không được hưởng, vì người đó không nộp tờ khai. Đây là cách hiểu luật của chúng tôi, Finanční správa không nêu rõ điều này. Hãy kiểm tra lại với finanční úřad (cơ quan thuế) hoặc kế toán.</p>
 <p>Khoản giảm không phụ thuộc vào số máy tính tiền, cũng không phụ thuộc vào việc bạn đã từng ghi nhận trong EET cũ hay chưa. Bạn có phải là người nộp thuế DPH hay không cũng không ảnh hưởng.</p>
-<p>Cách tính khoản giảm như sau: 15 % cơ sở tính thuế thành phần từ hoạt động kinh doanh độc lập (dílčí základ daně ze samostatné činnosti) trừ đi khoản giảm cơ bản cho người nộp thuế (základní sleva na poplatníka), là <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">30 840 Kč</a>. Khoản giảm tối đa là 5 000 Kč.</p>
+<p>Cách tính khoản giảm như sau: 15 % cơ sở tính thuế thành phần từ hoạt động kinh doanh độc lập (dílčí základ daně ze samostatné činnosti) trừ đi khoản giảm cơ bản cho người nộp thuế (základní sleva na poplatníka), là <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01#par_35ba" rel="noopener">30 840 Kč</a>. Khoản giảm tối đa là 5 000 Kč.</p>
 <div class="tbl"><table>
   <thead><tr><th>Cơ sở tính thuế thành phần</th><th>15 %</th><th>Sau khi trừ 30 840 Kč</th><th>Khoản giảm</th></tr></thead>
   <tbody>
@@ -288,7 +288,7 @@ export default {
   <li>Trên thẻ EVIDENCE TRŽEB, mở Správa evidenčních jednotek (quản lý đơn vị ghi nhận) và bấm NOVÁ EVIDENČNÍ JEDNOTKA (đơn vị ghi nhận mới).</li>
   <li>Chọn loại đơn vị.</li>
   <li>Điền ngành hoạt động chính. Bắt đầu gõ, hệ thống sẽ tự gợi ý.</li>
-  <li>Bạn có thể thêm tên, ví dụ “Praha - prodejna” (Praha - cửa hàng). Tên không bắt buộc, nhưng sẽ có ích khi xem tổng hợp doanh thu.</li>
+  <li>Bạn có thể thêm tên, ví dụ “Praha – prodejna” (Praha – cửa hàng). Tên không bắt buộc, nhưng sẽ có ích khi xem tổng hợp doanh thu.</li>
   <li>Đánh dấu xem tại đơn vị này có phát sinh doanh thu phải ghi nhận không. Với câu hỏi về việc nhận doanh thu thay cho người nộp thuế khác, đa số người kinh doanh trả lời Ne (không).</li>
   <li>Điền địa chỉ hoặc thông tin xác định khác của đơn vị rồi bấm DOKONČIT A PŘIDAT (hoàn tất và thêm).</li>
 </ol>
@@ -434,7 +434,7 @@ export default {
 <p>Bạn phải đáp ứng tất cả các điều kiện sau:</p>
 <ul>
   <li><strong>Bạn là cá nhân (fyzická osoba).</strong> Chế độ này không dành cho công ty trách nhiệm hữu hạn (s.r.o.) và các pháp nhân khác.</li>
-  <li><strong>Bạn ở bậc 1 (1. pásmo) của chế độ thuế khoán.</strong> Theo <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01" rel="noopener">§ 2a của zákon o daních z příjmů</a> (luật thuế thu nhập), chế độ thuế khoán chỉ dành cho người không nộp thuế DPH (neplátce DPH), ngoài các điều kiện khác.</li>
+  <li><strong>Bạn ở bậc 1 (1. pásmo) của chế độ thuế khoán.</strong> Theo <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01#par_2a" rel="noopener">§ 2a của zákon o daních z příjmů</a> (luật thuế thu nhập), chế độ thuế khoán chỉ dành cho người không nộp thuế DPH (neplátce DPH), ngoài các điều kiện khác.</li>
   <li><strong>Thu nhập từ hoạt động kinh doanh độc lập (samostatná činnost) của năm trước không vượt quá 1 000 000 Kč.</strong> Với năm 2027 thì xét năm 2026. Thu nhập đến từ hoạt động độc lập nào cũng tính như nhau.</li>
   <li><strong>Bạn nộp thông báo đúng hạn.</strong> Không có thông báo thì chế độ không bắt đầu.</li>
 </ul>
@@ -543,7 +543,7 @@ export default {
     kicker: "Chọn giải pháp",
     title: "MOJE eet hay hệ thống máy tính tiền: ứng dụng nhà nước làm được gì và không làm được gì",
     metaTitle: "MOJE eet hay máy tính tiền: so sánh | SuperKasa",
-    desc: "MOJE eet là ứng dụng nhà nước miễn phí cho tối đa 2 đơn vị ghi nhận, từ 1 tháng 12 năm 2026. Theo thông tin đã công bố làm được gì, khi nào nên dùng máy tính tiền.",
+    desc: "MOJE eet là ứng dụng nhà nước miễn phí cho tối đa 2 đơn vị ghi nhận, từ 1/12/2026. Làm được gì và khi nào nên dùng máy tính tiền.",
     lead: "MOJE eet là ứng dụng web miễn phí của Finanční správa (Cục Thuế Séc) để ghi nhận doanh thu, dự kiến chạy từ ngày 1 tháng 12 năm 2026. Ứng dụng có thể đủ nếu bạn chỉ cần ghi nhận ít khoản thanh toán, còn hệ thống máy tính tiền hợp lý khi bạn cần cả kho, in ấn và theo dõi hoạt động cửa hàng.",
     published: "2026-10-31",
     updated: "2026-10-31",
@@ -687,7 +687,7 @@ export default {
       ["MOJE eet dùng được cho bao nhiêu cửa hàng?", "Finanční správa nêu tối đa 2 đơn vị ghi nhận. Đơn vị ghi nhận là cửa hàng, nhưng cũng có thể là cửa hàng online hay sạp lưu động."],
     ],
     sources: [
-      ["Thông tin thực tế: khi nào ứng dụng web MOJE eet là đủ (Finanční správa)", PRAKTICKE],
+      ["Thông tin thực tế: khi nào ứng dụng web MOJE eet là đủ (Finanční správa)", PRAKTICKE + "#kdy-mi-postaci-webova-aplikace-moje-eet-821"],
       ["EET trong 5 bước (Finanční správa)", "https://eet.gov.cz/assets/cs/cmsmedia/pro-media/EET_v_5_krocich.pdf"],
       ["Lịch trình EET 2.0 (Finanční správa)", HARMONOGRAM],
       ["Bài thuyết trình hội thảo cho lập trình viên, ngày 23 tháng 6 năm 2026 (Finanční správa)", "https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET2_Prezentace_Seminar_pro_vyvojare_23-.pdf"],
@@ -699,7 +699,7 @@ export default {
 
   {
     slug: "co-musi-byt-na-uctence",
-    group: "doklady",
+    group: "eet",
     kicker: "Hóa đơn và chứng từ",
     title: "Trên hóa đơn phải ghi những gì: hóa đơn thuế rút gọn và chứng từ của người không nộp thuế DPH",
     metaTitle: "Trên hóa đơn phải ghi những gì | SuperKasa",
@@ -842,7 +842,7 @@ export default {
   <tbody>
     <tr><td>Hóa đơn thuế của người nộp thuế DPH, kể cả hóa đơn (účtenky) đã xuất</td><td>10 năm kể từ cuối kỳ tính thuế (zdaňovací období) có giao dịch</td><td>§ 35 của zákon o DPH</td></tr>
     <tr><td>Chứng từ kế toán, khi bạn làm sổ kế toán (účetnictví)</td><td>5 năm kể từ cuối kỳ kế toán</td><td>§ 31 của zákon o účetnictví (luật kế toán)</td></tr>
-    <tr><td>Giấy tờ của người không nộp thuế DPH không làm sổ kế toán</td><td>Hãy xác định thời gian với kế toán. Thời hạn ấn định thuế là 3 năm và có thể thay đổi.</td><td><a href="https://www.zakonyprolidi.cz/cs/2009-280" rel="noopener">§ 148 của daňový řád (luật quản lý thuế)</a></td></tr>
+    <tr><td>Giấy tờ của người không nộp thuế DPH không làm sổ kế toán</td><td>Hãy xác định thời gian với kế toán. Thời hạn ấn định thuế là 3 năm và có thể thay đổi.</td><td><a href="https://www.zakonyprolidi.cz/cs/2009-280#p148" rel="noopener">§ 148 của daňový řád (luật quản lý thuế)</a></td></tr>
     <tr><td>Mã POK</td><td>Luật không bắt buộc lưu giữ</td><td>eet.gov.cz</td></tr>
   </tbody>
 </table></div>
@@ -862,11 +862,11 @@ export default {
     ],
     sources: [
       ["Luật Zákon č. 235/2004 Sb. về DPH, § 26 đến 35a, 42, 45 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/2004-235"],
-      ["Luật Zákon č. 634/1892 Sb. về bảo vệ người tiêu dùng, § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1992-634"],
+      ["Luật số 634/1992 Sb. về bảo vệ người tiêu dùng, § 16 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1992-634#p16"],
       ["Luật Zákon č. 180/2026 Sb. về ghi nhận doanh thu, § 8 và sửa đổi phụ lục của zákon o DPH (eet.gov.cz)", ZAKON],
       ["Ghi nhận doanh thu trong thực tế và mã POK (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/evidence-trzeb-v-praxi"],
-      ["Lỗi và cách xử lý: hủy và sửa doanh thu (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/chyby-a-jejich-reseni"],
-      ["Luật Zákon č. 563/1891 Sb. về kế toán, § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1991-563"],
+      ["Lỗi và cách xử lý: hủy và sửa doanh thu (Finanční správa)", "https://eet.gov.cz/cs/zacinam-s-eet/chyby-a-jejich-reseni#storno-nebo-oprava-trzby-636"],
+      ["Luật số 563/1991 Sb. về kế toán, § 31 (Zákony pro lidi)", "https://www.zakonyprolidi.cz/cs/1991-563#p31"],
     ],
     related: ["eet-2-0-pruvodce", "tiskarna-ctecka-zasuvka", "eet-off-pausalni-dan"],
   },
@@ -877,25 +877,21 @@ export default {
     kicker: "Hướng dẫn từ đầu",
     title: "Hướng dẫn dùng máy tính tiền SuperKasa: từ đăng ký đến chốt ca",
     metaTitle: "Hướng dẫn máy tính tiền từ đăng ký đến chốt ca | SuperKasa",
-    desc: "Cách dùng SuperKasa từng bước: đăng ký, hàng hóa, lần bán đầu tiên, thanh toán, trả hàng, chốt ca, nhân viên, sao lưu và trả tiền giấy phép.",
+    desc: "Cách dùng SuperKasa từng bước: đăng ký, hàng hóa, lần bán đầu tiên, thanh toán, trả hàng, chốt ca, nhân viên, sao lưu và trả tiền thuê.",
     lead: "Bạn tạo tài khoản trên app.superkasa.cz, thêm hàng bằng cách quét mã hoặc từ tệp, và thử đơn hàng đầu tiên ngay trong hôm nay. Hướng dẫn tiếp tục với thanh toán, trả hàng, chốt ca, nhân viên và trả tiền giấy phép.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 7,
     sections: [
       {
-        id: "dve-cesty",
+        id: "jak-zacit",
         h2: "Bắt đầu thế nào",
         html: `
 <p>SuperKasa chạy trên trình duyệt ở máy tính, máy tính bảng và điện thoại. Không cần tải hay cài gì. 10 ngày đầu miễn phí và không cần thẻ thanh toán.</p>
-<div class="tbl"><table>
-<thead><tr><th></th><th>SuperKasa trên trình duyệt</th></tr></thead>
-<tbody>
-<tr><td>Cài đặt</td><td>Không cần</td></tr>
-<tr><td>Dữ liệu ở đâu</td><td>Trên máy chủ SuperKasa, sao lưu mỗi ngày</td></tr>
-<tr><td>Thiết bị</td><td>Máy tính, máy tính bảng, điện thoại – tối đa 10 trong gói, tất cả bán chung một ca</td></tr>
-</tbody>
-</table></div>`,
+<ul>
+<li><strong>Dữ liệu:</strong> trên máy chủ SuperKasa tại Cộng hòa Séc, sao lưu mỗi ngày.</li>
+<li><strong>Thiết bị:</strong> tối đa 10 trong gói (máy tính, máy tính bảng, điện thoại), tất cả bán chung một ca.</li>
+</ul>`,
       },
       {
         id: "registrace",
@@ -910,7 +906,7 @@ export default {
 <li>Chạm vào <strong>Tạo miễn phí</strong>. Nếu muốn trả tiền ngay, chạm vào <strong>Mua ngay</strong>. Sau khi tạo xong, máy tính tiền đưa bạn thẳng đến bước thanh toán và bạn vẫn được giữ thêm 10 ngày miễn phí.</li>
 </ol>
 <p>Mất đường dẫn để hoàn tất đăng ký? Hãy điền lại đăng ký với cùng địa chỉ, e-mail và IČO.</p>
-<p><strong>Không cần tải gì:</strong> máy tính tiền chạy trên trình duyệt. Hóa đơn được in qua cửa sổ in ra máy in đã cài trong Windows.</p>`,
+<p><strong>Không cần tải gì:</strong> máy tính tiền chạy trên trình duyệt. Trên máy tính Windows, hóa đơn in ra máy in hóa đơn không cần hộp thoại (qua lối tắt Chrome) hoặc qua cửa sổ in. Điện thoại và máy tính bảng Android in ra máy in Bluetooth hoặc USB, iPhone in ở máy in của quầy chính. Xem hướng dẫn <a href="tiskarna-ctecka-zasuvka.html">Máy in hóa đơn, máy quét mã và ngăn kéo đựng tiền</a>.</p>`,
       },
       {
         id: "zrizeni",
@@ -1036,7 +1032,7 @@ export default {
         html: `
 <p>Trong gói có tối đa 10 thiết bị. Thiết bị mới đăng nhập bằng e-mail và mật khẩu của chủ cửa hàng, cách làm có trong hướng dẫn <a href="prodej-z-telefonu.html">Máy tính tiền trên điện thoại và máy tính bảng</a>.</p>
 <p>Máy chủ sao lưu dữ liệu cửa hàng mỗi ngày, và có thêm một bản sao bên ngoài máy chủ. Bạn không cần cài đặt gì.</p>
-<p>Bạn tải bản sao riêng về bất cứ lúc nào trong <strong>Quản lý → Hệ thống → Xuất dữ liệu</strong>. Xuất dữ liệu vẫn dùng được sau khi giấy phép hết hạn.</p>`,
+<p>Bạn tải bản sao riêng về bất cứ lúc nào trong <strong>Quản lý → Hệ thống → Xuất dữ liệu</strong>. Xuất dữ liệu vẫn dùng được thêm 12 tháng sau khi hết thuê.</p>`,
       },
       {
         id: "licence-jazyk",
@@ -1046,7 +1042,7 @@ export default {
 <ol class="steps">
 <li>Chạm vào <strong>Thanh toán</strong> ở thanh phía trên, hoặc mở <strong>Quản lý → Hệ thống → Giấy phép và gói</strong>.</li>
 <li>Chọn tiện ích trả thêm nếu bạn muốn, rồi chạm vào <strong>Tạo mã QR thanh toán</strong>.</li>
-<li>Chọn <strong>Tháng</strong> hoặc <strong>Năm (−10 %)</strong> và trả mã QR trong ứng dụng ngân hàng.</li>
+<li>Chọn <strong>Tháng</strong> hoặc <strong>Năm (−10 %)</strong> và quét mã QR trong ứng dụng ngân hàng để thanh toán.</li>
 <li>Chạm vào <strong>Tôi đã trả – kiểm tra</strong>.</li>
 </ol>
 <aside class="note warn"><p>Hiện chúng tôi đối chiếu tiền giấy phép bằng tay, nên giấy phép không gia hạn ngay sau khi bạn trả. Nếu bạn không thấy thanh toán QR trong máy tính tiền, hãy gọi cho chúng tôi. Mã giấy phép thì bạn dán vào ô <strong>Mã giấy phép</strong> và chạm vào <strong>Kích hoạt</strong>.</p></aside>
@@ -1074,7 +1070,7 @@ export default {
     desc: "Cần xem gì khi chọn máy tính tiền cho cửa hàng nhỏ: giá thật có DPH, thiết bị thêm, EET 2.0, kho, mất internet, ngôn ngữ và danh sách câu hỏi.",
     lead: "Tiệm tạp hóa cần máy quét mã và kho, thợ làm tóc chủ yếu cần ô dịch vụ. Hãy tính giá cả năm theo cách bạn kinh doanh và hỏi người bán 14 câu trong danh sách ở cuối bài.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 6,
     sections: [
       {
@@ -1217,7 +1213,7 @@ export default {
 <tr><td>Phần cứng</td><td>Của riêng bạn. Máy in hóa đơn phải hiểu ESC/POS, máy quét mã hoạt động như bàn phím USB.</td></tr>
 <tr><td>Thanh toán QR</td><td>Chỉ dùng được khi đã điền IBAN. Việc tiền đã đến do nhân viên xác nhận.</td></tr>
 <tr><td>Ngôn ngữ cho nhân viên</td><td>Tiếng Séc, tiếng Việt, tiếng Anh. Hóa đơn luôn bằng tiếng Séc.</td></tr>
-<tr><td>Xuất dữ liệu</td><td>CSV, kể cả sau khi giấy phép hết hạn</td></tr>
+<tr><td>Xuất dữ liệu</td><td>CSV, thêm 12 tháng sau khi hết thuê</td></tr>
 </tbody>
 </table></div>
 <p>So sánh đầy đủ các gói có trong <a href="cenik.html">bảng giá</a>.</p>`,
@@ -1242,7 +1238,7 @@ export default {
     desc: "Máy in hóa đơn và máy quét mã nào dùng được với SuperKasa: khổ 58 và 80 mm, USB, Bluetooth, mạng, ngăn kéo, nhãn giá và khi không in được.",
     lead: "In hóa đơn trực tiếp cần máy in hiểu lệnh ESC/POS, máy quét mã nên hoạt động như bàn phím USB, còn ngăn kéo đựng tiền cắm vào máy in. Hướng dẫn này mô tả cách kết nối và cách xử lý khi hóa đơn không in ra.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 7,
     sections: [
       {
@@ -1284,7 +1280,7 @@ export default {
 <div class="tbl"><table>
 <thead><tr><th>Bạn có</th><th>Lựa chọn trong trình hướng dẫn</th></tr></thead>
 <tbody>
-<tr><td>Máy tính Windows và máy in hóa đơn</td><td>In không cần hộp thoại (máy in nối máy tính này)</td></tr>
+<tr><td>Máy tính Windows và máy in hóa đơn</td><td>In qua hộp thoại trình duyệt (không cần hộp thoại khi mở bằng lối tắt Chrome, xem bên dưới)</td></tr>
 <tr><td>Android và máy in Bluetooth</td><td>Máy in Bluetooth</td></tr>
 <tr><td>Android và máy in dùng cáp (OTG)</td><td>Máy in USB cho điện thoại / máy tính bảng</td></tr>
 <tr><td>Máy in cũ dùng cáp nối tiếp</td><td>Máy in qua cổng COM</td></tr>
@@ -1298,9 +1294,8 @@ export default {
 <li>Cắm máy in bằng cáp USB và bật máy.</li>
 <li>Chờ Windows cài máy in. Epson TM cần driver từ trang của Epson (EPSON Advanced Printer Driver). Các hãng khác có driver trên đĩa CD hoặc trên trang của người bán.</li>
 <li>Trong Windows, đặt máy in hóa đơn làm máy in mặc định.</li>
-<li>Trong trình hướng dẫn của máy tính tiền, chọn <strong>In không cần hộp thoại (máy in nối máy tính này)</strong>, hoặc in qua hộp thoại của trình duyệt.</li>
-<li>Chạm vào <strong>Dùng và in thử</strong>.</li>
-<li>Tờ in thử đã ra? Chạm vào <strong>Có, in được</strong>.</li>
+<li>Trong trình hướng dẫn của máy tính tiền, chọn <strong>In qua hộp thoại trình duyệt</strong> và chạm <strong>Lưu</strong>. Cửa sổ in mở ra ngay với tờ in thử.</li>
+<li>Trong cửa sổ in, chọn máy in hóa đơn và đặt Lề là <strong>Không có</strong>. Trình duyệt sẽ nhớ lựa chọn này.</li>
 </ol>
 <h3>In không cần hộp thoại</h3>
 <p>Không cần tải gì. Bạn chỉ mở máy tính tiền bằng một biểu tượng Chrome in thẳng ra máy in mặc định, không hiện hộp thoại in.</p>
@@ -1310,7 +1305,7 @@ export default {
 <li>Trong ô <strong>Đích</strong>, nhập <code>"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --kiosk-printing --user-data-dir="C:\\SuperKasaChrome"</code> rồi thêm địa chỉ cửa hàng của bạn.</li>
 <li>Luôn mở máy tính tiền bằng biểu tượng này. Lần đầu hãy đăng nhập trong đó.</li>
 </ol>
-<p>SuperKasa sẽ chạy trong cửa sổ Chrome riêng, kể cả khi Chrome bình thường vẫn đang mở. Lệnh chính xác kèm địa chỉ cửa hàng có trong trình hướng dẫn máy in, ở mục <strong>In không cần hộp thoại (máy in nối máy tính này)</strong>. Chỉ chủ cửa hàng mới thấy tùy chọn này.</p>
+<p>SuperKasa sẽ mở trong cửa sổ Chrome riêng, tách khỏi Chrome bình thường. Các bước này cũng có trong máy tính tiền ở <strong>Quản lý → Thiết bị ngoại vi → In không cần cửa sổ xác nhận</strong>. Chỉ chủ cửa hàng mới thấy mục Thiết bị ngoại vi.</p>
 <h3>Bluetooth</h3>
 <ol class="steps">
 <li>Bật máy in và bật Bluetooth trên điện thoại. Khi Android hỏi, hãy bật cả vị trí.</li>
@@ -1387,10 +1382,9 @@ export default {
 <tr><td>Tờ giấy ra trắng</td><td>Lật cuộn giấy lại. Mặt in của giấy nhiệt phải hướng vào đầu in.</td></tr>
 <tr><td>Không ra gì cả</td><td>Kiểm tra máy in đã bật, còn giấy và nắp đã đóng. Tắt máy, bật lại rồi chạm vào <strong>Thử lại</strong>.</td></tr>
 <tr><td>Hóa đơn bị cắt mất chữ</td><td>Cài đúng chiều rộng ở ô <strong>Giấy in hóa đơn</strong>.</td></tr>
-<tr><td>Không tìm thấy máy in hóa đơn</td><td>Cài driver và chạm vào <strong>Tìm lại</strong>.</td></tr>
-<tr><td>Máy in nằm trong danh sách dưới dòng “Không dùng in hóa đơn”</td><td>Đó là máy in văn phòng, máy in tem nhãn hoặc máy in PDF. Hãy quay lại và chọn <strong>Không có máy in hóa đơn</strong>.</td></tr>
+<tr><td>Máy in hóa đơn không có trong cửa sổ in</td><td>Cài driver trong Windows và mở lại cửa sổ in.</td></tr>
 <tr><td>Bluetooth sau khi tải lại trang</td><td>Chạm vào <strong>Kết nối máy in</strong>, hoặc <strong>In qua hộp thoại</strong>.</td></tr>
-<tr><td>Máy in USB đang được hệ thống sử dụng</td><td>Trên Windows, hãy in qua hệ thống: chọn <strong>In không cần hộp thoại (máy in nối máy tính này)</strong> hoặc in qua hộp thoại của trình duyệt.</td></tr>
+<tr><td>Máy in USB đang được hệ thống sử dụng</td><td>Trên máy tính Windows, hãy in qua hệ thống: trong trình hướng dẫn chọn <strong>In qua hộp thoại trình duyệt</strong>, hoặc in không cần hộp thoại qua lối tắt Chrome.</td></tr>
 <tr><td>Bán khi không có internet, in qua quầy chính</td><td>Hóa đơn in qua hộp thoại của trình duyệt. Khi không có internet, quầy chính không nhận lệnh in từ điện thoại.</td></tr>
 </tbody>
 </table></div>
@@ -1418,7 +1412,7 @@ export default {
     desc: "Bán hàng trên điện thoại, máy tính bảng: đăng nhập, mã PIN nhân viên, số thiết bị, camera làm máy quét, in ở quầy chính và khi mất internet.",
     lead: "Lần đầu, điện thoại hoặc máy tính bảng đăng nhập vào máy tính tiền bằng e-mail và mật khẩu của chủ cửa hàng, sau đó nhân viên chỉ cần mã PIN. Hóa đơn có thể in ra ở máy in của quầy chính, và máy tính tiền trên trình duyệt vẫn bán được khi không có internet.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 6,
     sections: [
       {
@@ -1448,7 +1442,7 @@ export default {
 <li>Chạm vào <strong>Đăng nhập</strong>.</li>
 </ol>
 <p>Thiết bị tự ghép nối và chủ cửa hàng được đăng nhập luôn. Hãy thêm địa chỉ này ra màn hình chính của điện thoại để nhân viên dễ tìm.</p>
-<aside class="note"><p>E-mail và mật khẩu có trong <strong>Quản lý → Hệ thống → Tài khoản chủ</strong>. Nếu quên mật khẩu, ở màn hình đăng nhập hãy chạm vào <strong>Quên mật khẩu</strong>. Bạn nhập e-mail, mã PIN của chủ và mật khẩu mới.</p></aside>`,
+<aside class="note"><p>Xem e-mail tài khoản và đổi mật khẩu trong <strong>Quản lý → Hệ thống → Tài khoản chủ</strong>. Nếu quên mật khẩu, ở màn hình đăng nhập hãy chạm vào <strong>Quên mật khẩu</strong>. Bạn nhập e-mail, mã PIN của chủ và mật khẩu mới.</p></aside>`,
       },
       {
         id: "pin",
@@ -1556,7 +1550,7 @@ export default {
     desc: "Máy tính tiền bằng tiếng Việt cho tiệm tạp hóa: nhân viên dùng tiếng mẹ đẻ, hóa đơn vẫn bằng tiếng Séc. Nhóm hàng, nhãn giá, tên hàng và hỗ trợ EET 2.0.",
     lead: "Nhân viên có thể dùng máy tính tiền bằng tiếng Việt, còn khách vẫn nhận hóa đơn bằng tiếng Séc. Bài này chỉ bạn cách cài đặt cho tiệm tạp hóa hoặc cửa hàng thực phẩm châu Á.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 6,
     sections: [
       {
@@ -1618,7 +1612,7 @@ export default {
 <li>Thay vì “Bún gạo”, hãy ghi “Rýžové nudle 200 g”.</li>
 <li>Ghi cả quy cách vào tên. Máy dựa vào đó để tính đơn giá.</li>
 </ul>
-<p>Để nhân viên nhận ra hàng dù không biết tiếng Séc, hãy thêm ảnh cho hàng. Trong thẻ hàng, chạm vào <strong>Tải ảnh lên</strong> hoặc <strong>Tìm trên internet</strong>. Nút <strong>Bổ sung ảnh theo EAN</strong> trong <strong>Quản lý → Kho hàng → Hàng hóa</strong> sẽ thử tìm ảnh cho tất cả hàng có mã vạch. Khi đó nhìn ô hàng có hình sẽ tìm nhanh hơn đọc chữ.</p>
+<p>Để nhân viên nhận ra hàng dù không biết tiếng Séc, hãy thêm ảnh cho hàng. Trong thẻ hàng, chạm vào <strong>Tải ảnh lên</strong> hoặc <strong>Tìm trên internet</strong>. Ảnh cho hàng có mã vạch được máy tự tìm. Nút <strong>Ảnh theo EAN</strong> trong <strong>Quản lý → Kho hàng → Hàng hóa</strong> cho biết đã tìm đến đâu (có thể tắt trong <strong>Quản lý → Hệ thống</strong>). Khi đó nhìn ô hàng có hình sẽ tìm nhanh hơn đọc chữ.</p>
 <p>Khi bạn quét một mã chưa có trong máy, máy sẽ thử tìm tên tiếng Séc trong cơ sở dữ liệu dùng chung của SuperKasa và trong Open Food Facts. Bạn chỉ cần kiểm tra tên và điền giá. Nếu không được, hãy kiểm tra tùy chọn <strong>Tìm tên theo mã vạch trên internet</strong> trong <strong>Quản lý → Hệ thống → In hóa đơn</strong>.</p>
 <p>Các dòng chữ cố định trên hóa đơn, ví dụ CELKEM (tổng) hoặc Hotově (tiền mặt), luôn bằng tiếng Séc. Dòng chữ riêng thì bạn sửa trong <strong>Quản lý → Công ty</strong>, ở ô <strong>Dòng cuối hóa đơn</strong>. Hãy viết bằng tiếng Séc. Trên hóa đơn phải có những gì, bạn xem trong hướng dẫn <a href="co-musi-byt-na-uctence.html">Trên hóa đơn phải ghi những gì</a>.</p>`,
       },
@@ -1672,7 +1666,7 @@ export default {
 <li>Trong <strong>Quản lý → EET 2.0</strong>, tải tệp và mật khẩu lên rồi chạm vào <strong>Kiểm tra kết nối</strong>.</li>
 <li>Trong năm 2026, bạn có thể chọn chế độ <strong>Chạy thử</strong>. Hãy bật EET thật vào ngày 1 tháng 1 năm 2027, chậm nhất là lúc có khoản doanh thu đầu tiên của năm 2027.</li>
 </ol>
-<p>EET thật cần có giấy phép trả phí. Cách làm chi tiết có trong hướng dẫn <a href="eet-2-0-krok-za-krokem.html">EET 2.0 từng bước</a>. Trang web SuperKasa cũng có <a href="index.html">bằng tiếng Việt</a>.</p>
+<p>EET thật cần trả tiền thuê. Cách làm chi tiết có trong hướng dẫn <a href="eet-2-0-krok-za-krokem.html">EET 2.0 từng bước</a>.</p>
 <p>Chúng tôi hỗ trợ qua điện thoại, cả bằng tiếng Việt: <a href="tel:+420608886882">+420 608 886 882</a>. Chúng tôi sẽ cùng bạn thiết lập máy.</p>`,
       },
     ],

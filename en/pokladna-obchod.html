@@ -6,7 +6,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>POS for gift, toy, hobby and other shops – SuperKasa</title>
-<meta name="description" content="For gifts, toys, hobby, sport, hardware and other shops – add groups yourself, have them suggested from a description of your range, or import products from a CSV.">
+<meta name="description" content="A POS for gift, toy, hobby and hardware shops: add product groups yourself, have them suggested, or import them from a CSV.">
 <link rel="canonical" href="https://superkasa.cz/en/pokladna-obchod.html">
 <link rel="alternate" hreflang="cs" href="https://superkasa.cz/pokladna-obchod.html">
 <link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/pokladna-obchod.html">
@@ -18,13 +18,15 @@
 <meta property="og:locale:alternate" content="cs_CZ">
 <meta property="og:locale:alternate" content="vi_VN">
 <meta property="og:title" content="POS for gift, toy, hobby and other shops – SuperKasa">
-<meta property="og:description" content="For gifts, toys, hobby, sport, hardware and other shops – add groups yourself, have them suggested from a description of your range, or import products from a CSV.">
+<meta property="og:description" content="A POS for gift, toy, hobby and hardware shops: add product groups yourself, have them suggested, or import them from a CSV.">
 <meta property="og:url" content="https://superkasa.cz/en/pokladna-obchod.html">
-<meta property="og:image" content="https://superkasa.cz/img/og.png">
+<meta property="og:image" content="https://superkasa.cz/img/og-en.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SuperKasa – POS system for shops, food service and services">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://superkasa.cz/img/og-en.jpg">
 <meta name="theme-color" content="#5c1a46">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -38,9 +40,9 @@
 <a class="skip" href="#obsah">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="SuperKasa – home page"><img src="../img/logo.png" alt="SuperKasa" width="200" height="40"></a>
+    <a class="brand" href="./" aria-label="SuperKasa – home page"><img src="../img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Website language"><a href="../pokladna-obchod.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="../vi/pokladna-obchod.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="../en/pokladna-obchod.html" hreflang="en" lang="en" title="English" aria-label="English" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
-    <a class="login-top" href="prihlaseni.html" aria-label="Sign in to the register" title="Sign in to the register"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Sign in</span></a>
+    <a class="login-top" href="prihlaseni.html" aria-label="Sign in to your till" title="Sign in to your till"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Sign in</span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main menu">
       <a href="obory.html" aria-current="page">Who it's for</a>
@@ -50,6 +52,7 @@
       <a href="navody.html">Guides</a>
       <a href="jak-zacit.html">Get started</a>
       <a href="kontakt.html">Contact</a>
+      <a class="nav-login" href="prihlaseni.html">Sign in</a>
       <a class="btn btn-primary nav-price" href="cenik.html">CZK 189 / month</a>
       <a class="btn btn-gold" href="https://app.superkasa.cz/">Try it free</a>
     </nav>
@@ -59,10 +62,10 @@
 <section class="page-head obor-head">
   <div class="wrap obor-hero">
     <div>
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">›</span><a href="obory.html">Who it's for</a><span aria-hidden="true">›</span><span aria-current="page">Other shop</span></nav>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="./">Home</a><span aria-hidden="true">›</span><a href="obory.html">Who it's for</a><span aria-hidden="true">›</span><span aria-current="page">Other shop</span></nav>
       <div class="obor-badge"><span class="obor-art sm"><img src="../img/obory/g-domaci.svg" alt="" width="40" height="40"></span><span><strong>Shop</strong> plan · CZK 189 a month incl. VAT</span></div>
       <h1>POS for gift, toy, hobby and other shops</h1>
-      <p class="lead">For gifts, toys, hobby, sport, hardware and other shops – add groups yourself, have them suggested from a description of your range, or import products from a CSV.</p>
+      <p class="lead">A POS for gift, toy, hobby and hardware shops: add product groups yourself, have them suggested, or import them from a CSV.</p>
       <div class="actions">
         <a class="btn btn-gold" href="https://app.superkasa.cz/">Try it free</a>
         <a class="btn btn-ghost" href="cenik.html">Pricing</a>
@@ -74,7 +77,7 @@
       <div class="pos-screen" aria-hidden="true">
         <div class="pos-main">
           <div class="pos-search">Search item or scan code…</div>
-          <div class="pos-tiles"><div class="pt grp"><img src="../img/obory/g-domaci.svg" alt="" width="34" height="34"><span>Household</span><b>›</b></div><div class="pt grp"><img src="../img/obory/g-darky.svg" alt="" width="34" height="34"><span>Gifts &amp; decor</span><b>›</b></div><div class="pt grp"><img src="../img/obory/g-hracky.svg" alt="" width="34" height="34"><span>Toys</span><b>›</b></div><div class="pt grp"><img src="../img/obory/g-ostatni.svg" alt="" width="34" height="34"><span>Your group</span><b>›</b></div><div class="pt"><img src="../img/obory/taska.svg" alt="" width="34" height="34"><span>Igelitová taška</span><b>2,00</b></div><div class="pt"><img src="../img/obory/g-tasky.svg" alt="" width="34" height="34"><span>Taška velká</span><b>5,00</b></div></div>
+          <div class="pos-tiles"><div class="pt grp"><span>Household</span><b>›</b></div><div class="pt grp"><span>Gifts &amp; decor</span><b>›</b></div><div class="pt grp"><span>Toys</span><b>›</b></div><div class="pt grp"><span>Your group</span><b>›</b></div><div class="pt"><span>Igelitová taška</span><b>2,00</b></div><div class="pt"><span>Taška velká</span><b>5,00</b></div></div>
           <div class="pos-tabs"><span class="on">Favourites</span></div>
         </div>
         <div class="pos-cart">
@@ -97,8 +100,8 @@
       <p>When you first start the POS, you choose the business type “Other shop” and it sets up the following for you. You can change all of it later in Admin.</p>
     </div>
     <div class="grid grid-3">
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Product groups</h3><ul class="gchips"><li><img src="../img/obory/g-domaci.svg" alt="" width="26" height="26">Household</li><li><img src="../img/obory/g-darky.svg" alt="" width="26" height="26">Gifts &amp; decor</li><li><img src="../img/obory/g-hracky.svg" alt="" width="26" height="26">Toys</li><li><img src="../img/obory/g-tasky.svg" alt="" width="26" height="26">Bags</li></ul><p class="small mt-1">Plus the groups Uncategorised 12 % and 21 %. The VAT (DPH) rates in the groups are only a suggestion – check them with your accountant.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Tiles and sample items</h3><p>You add the tabs at the bottom of the sales screen to suit the goods you sell.</p><p>Bags. You add groups and products yourself, or import them from a CSV (even from another POS's export).</p><p class="small">Prices are approximate – you can change them right from the sales screen.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Product groups</h3><ul class="gchips"><li>Household</li><li>Gifts &amp; decor</li><li>Toys</li><li>Bags</li></ul><p class="small mt-1">Plus the groups Uncategorised 12 % and 21 %. The VAT (DPH) rates in the groups are only a suggestion – check them with your accountant.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Tiles and sample items</h3><p>You add the tabs at the bottom of the sales screen to suit the goods you sell.</p><p>Only bags are set up (a plastic bag and a large bag). You add groups and products yourself, or import them from a CSV (even from another POS's export).</p><p class="small">Prices are approximate – you can change them right from the sales screen.</p></article>
       <article class="card"><div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Features switched on</h3><ul class="checks"><li>Stock</li><li>Price labels</li><li>Promotions and quantity prices</li><li>Customer display</li><li>QR payments</li></ul><p class="small mt-1">Sales, EET 2.0, receipts, cash and closing always work.</p></article>
     </div>
   </div>
@@ -128,8 +131,8 @@
         <dl class="feat"><dt>Stock</dt><dd>Receiving goods, stock counts, stock level on the tile, what's running low and order suggestions.</dd><dt>Price labels</dt><dd>Print price labels on the receipt printer, a label printer or A4.</dd><dt>Promotions and quantity prices</dt><dd>Promotions until a set date, a lower unit price from a certain quantity.</dd><dt>Customer display</dt><dd>A second screen for the customer showing the purchase and the QR payment.</dd><dt>QR payments</dt><dd>Bank transfer payment via a QR code on the display and on the receipt.</dd></dl>
       </article>
       <article class="card">
-        <h3>You can switch on at any time</h3>
-        <dl class="feat"><dt>Expiry</dt><dd>Best-before date on the item card and when receiving goods, alerts for expired goods.</dd><dt>Deposits</dt><dd>Returnable bottles and crates; the deposit can be added to beer automatically.</dd><dt>Scales and weighed-item barcodes</dt><dd>Barcodes from scale labels – with weight or price.</dd><dt>Tables and bills</dt><dd>Table bills for pubs and restaurants: adding items, splitting, moving, kitchen and bar tickets.</dd><dt>Tips</dt><dd>Tips outside sales and EET: who, how much, cash or card; a monthly overview that watches the 7 % limit for tax exemption.</dd></dl><p class="small mt-1">Switch them on in Admin → System → Register features. They are included in the plan price.</p>
+        <h3>You can switch these on any time</h3>
+        <dl class="feat"><dt>Expiry</dt><dd>Best-before date on the item card and when receiving goods, alerts for expired goods.</dd><dt>Deposits</dt><dd>Returnable bottles and crates; the deposit can be added to beer automatically.</dd><dt>Scales and weighed-item barcodes</dt><dd>Barcodes from scale labels – with weight or price.</dd><dt>Tables and bills</dt><dd>Table bills for pubs and restaurants: adding items, splitting, moving, kitchen and bar tickets.</dd><dt>Tips</dt><dd>Tips outside sales and EET: who, how much, cash or card; a monthly overview that watches the 7% limit for tax exemption.</dd></dl><p class="small mt-1">Switch them on in Admin → System → Register features. They are included in the plan price.</p>
         <div class="actions" style="margin-top:16px"><a class="btn btn-ghost" href="cenik.html">Full pricing</a><a class="btn btn-ghost" href="funkce.html">All features</a></div>
       </article>
     </div>
@@ -192,7 +195,7 @@
       <div>
         <h2>Pages</h2>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="./">Home</a></li>
           <li><a href="obory.html">Who it's for</a></li>
           <li><a href="funkce.html">Features</a></li>
           <li><a href="cenik.html">Pricing</a></li>

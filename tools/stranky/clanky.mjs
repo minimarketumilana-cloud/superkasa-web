@@ -2,9 +2,7 @@
 // šablona je jedna. Do těla článku jde čisté HTML; prvky pro články: <aside class="note">, <aside class="note warn">,
 // <ol class="steps">, <ol class="timeline">, <div class="tbl"><table>…</table></div>.
 import { pageUrl, SITE } from "./i18n.mjs";
-import { cta } from "./parts.mjs";
-
-const plain = (html) => html.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+import { ORG_ID, cta, ogImage, plain } from "./parts.mjs";
 const dateText = (lang, iso) => new Date(`${iso}T12:00:00`).toLocaleDateString({ cs: "cs-CZ", vi: "vi-VN", en: "en-GB" }[lang], { day: "numeric", month: "long", year: "numeric" });
 const fileOf = (a) => `${a.slug}.html`;
 
@@ -12,8 +10,8 @@ const fileOf = (a) => `${a.slug}.html`;
 /** Odkaz na návody se snímky obrazovky (nahoře na rozcestníku návodů). */
 const HOWTO_PROMO = {
   cs: ["Se snímky obrazovky", "Návody krok za krokem", "Prodej, platba, nové zboží, cenovky, uzávěrka, tržba s DPH, storno a mobil majitele – vše na obrázcích se zakroužkovanými tlačítky."],
-  vi: ["Có ảnh màn hình", "Hướng dẫn từng bước", "Bán hàng, thanh toán, hàng mới, nhãn giá, chốt ca, doanh thu theo VAT, hủy hóa đơn và điện thoại của chủ – tất cả trên ảnh có khoanh nút."],
-  en: ["With screenshots", "Step-by-step guides", "Selling, payment, new items, price labels, closing, sales with VAT, voids and the owner's phone – all on pictures with the buttons circled."],
+  vi: ["Có ảnh màn hình", "Hướng dẫn từng bước", "Bán hàng, thanh toán, hàng mới, nhãn giá, chốt ca, doanh thu kèm thuế DPH, hủy hóa đơn và điện thoại của chủ – tất cả trên ảnh chụp màn hình, các nút cần bấm được khoanh tròn."],
+  en: ["With screenshots", "Step-by-step guides", "Selling, payment, new items, price labels, closing, sales with VAT, voids and the owner's phone – all on screenshots with the buttons circled."],
 };
 
 export function navodyPage(c, { ui, items }) {
@@ -80,6 +78,7 @@ export function clanekPage(c, { ui, items }, a) {
     current: "navody.html",
     title: a.metaTitle,
     desc: a.desc,
+    og: { type: "article", published: a.published, modified: a.updated },
     jsonld: {
       "@context": "https://schema.org",
       "@graph": [
@@ -92,14 +91,14 @@ export function clanekPage(c, { ui, items }, a) {
           mainEntityOfPage: url,
           datePublished: a.published,
           dateModified: a.updated,
-          image: `${SITE}/img/og.png`,
-          author: { "@type": "Organization", name: "SuperKasa", url: SITE },
-          publisher: { "@type": "Organization", name: "SuperKasa", url: SITE, logo: { "@type": "ImageObject", url: `${SITE}/img/logo.png` } },
+          image: ogImage(c.lang),
+          author: { "@type": "Organization", "@id": ORG_ID, name: "SuperKasa", url: SITE },
+          publisher: { "@type": "Organization", "@id": ORG_ID, name: "SuperKasa", url: SITE, logo: { "@type": "ImageObject", url: `${SITE}/apple-touch-icon.png` } },
         },
         {
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "SuperKasa", item: pageUrl(c.lang, "index.html") },
+            { "@type": "ListItem", position: 1, name: c.T.common.nav[0], item: pageUrl(c.lang, "index.html") },
             { "@type": "ListItem", position: 2, name: ui.h1, item: pageUrl(c.lang, "navody.html") },
             { "@type": "ListItem", position: 3, name: a.title, item: url },
           ],
@@ -112,7 +111,7 @@ export function clanekPage(c, { ui, items }, a) {
     body: `
 <section class="article-head">
   <div class="wrap">
-    <nav class="crumbs" aria-label="${ui.crumbs}"><a href="navody.html">${ui.h1}</a><span aria-hidden="true">/</span><span>${a.kicker}</span></nav>
+    <nav class="crumbs" aria-label="${c.T.common.crumbsAria}"><a href="index.html">${c.T.common.nav[0]}</a><span aria-hidden="true">›</span><a href="navody.html">${ui.h1}</a><span aria-hidden="true">›</span><span aria-current="page">${a.kicker}</span></nav>
     <h1>${a.title}</h1>
     <p class="lead">${a.lead}</p>
     <p class="article-meta">${ui.updated} ${dateText(c.lang, a.updated)} · ${ui.minutes.replace("{n}", a.minutes)}</p>

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-pfgOMgfVZwm2ODyms34QYW9h8EwicylhV77q5LHK8c0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://app.superkasa.cz; base-uri 'self'; form-action 'self' https://app.superkasa.cz">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pokladna pro chovatelské potřeby – SuperKasa</title>
+<title>Pokladna pro chovatelské potřeby s EET 2.0 – SuperKasa</title>
 <meta name="description" content="Krmivo i na váhu, pamlsky, stelivo, obojky, hračky a potřeby pro zvířata – se skladem, expirací a cenovkami.">
 <link rel="canonical" href="https://superkasa.cz/pokladna-chovatelske-potreby.html">
 <link rel="alternate" hreflang="cs" href="https://superkasa.cz/pokladna-chovatelske-potreby.html">
@@ -17,14 +17,16 @@
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:locale:alternate" content="vi_VN">
 <meta property="og:locale:alternate" content="en_GB">
-<meta property="og:title" content="Pokladna pro chovatelské potřeby – SuperKasa">
+<meta property="og:title" content="Pokladna pro chovatelské potřeby s EET 2.0 – SuperKasa">
 <meta property="og:description" content="Krmivo i na váhu, pamlsky, stelivo, obojky, hračky a potřeby pro zvířata – se skladem, expirací a cenovkami.">
 <meta property="og:url" content="https://superkasa.cz/pokladna-chovatelske-potreby.html">
-<meta property="og:image" content="https://superkasa.cz/img/og.png">
+<meta property="og:image" content="https://superkasa.cz/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SuperKasa – pokladna pro obchody, gastro a služby">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://superkasa.cz/img/og.jpg">
 <meta name="theme-color" content="#5c1a46">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -38,7 +40,7 @@
 <a class="skip" href="#obsah">Přeskočit na obsah</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
+    <a class="brand" href="./" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Jazyk webu"><a href="pokladna-chovatelske-potreby.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="vi/pokladna-chovatelske-potreby.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="en/pokladna-chovatelske-potreby.html" hreflang="en" lang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
     <a class="login-top" href="prihlaseni.html" aria-label="Přihlásit se do pokladny" title="Přihlásit se do pokladny"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Přihlásit</span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
@@ -50,7 +52,8 @@
       <a href="navody.html">Návody</a>
       <a href="jak-zacit.html">Jak začít</a>
       <a href="kontakt.html">Kontakt</a>
-      <a class="btn btn-primary nav-price" href="cenik.html">189 Kč / měsíc</a>
+      <a class="nav-login" href="prihlaseni.html">Přihlásit</a>
+      <a class="btn btn-primary nav-price" href="cenik.html">189 Kč/měsíc</a>
       <a class="btn btn-gold" href="https://app.superkasa.cz/">Vyzkoušet zdarma</a>
     </nav>
   </div>
@@ -59,33 +62,33 @@
 <section class="page-head obor-head">
   <div class="wrap obor-hero">
     <div>
-      <nav class="crumbs" aria-label="Drobečková navigace"><a href="index.html">Úvod</a><span aria-hidden="true">›</span><a href="obory.html">Pro koho</a><span aria-hidden="true">›</span><span aria-current="page">Chovatelské potřeby</span></nav>
-      <div class="obor-badge"><span class="obor-art sm"><img src="img/obory/g-chovatel.svg" alt="" width="40" height="40"></span><span>Tarif <strong>Obchod</strong> · 189 Kč měsíčně s DPH</span></div>
+      <nav class="crumbs" aria-label="Drobečková navigace"><a href="./">Úvod</a><span aria-hidden="true">›</span><a href="obory.html">Pro koho</a><span aria-hidden="true">›</span><span aria-current="page">Chovatelské potřeby</span></nav>
+      <div class="obor-badge"><span class="obor-art sm"><img src="img/obory/g-chovatel.svg" alt="" width="40" height="40"></span><span>Tarif <strong>Obchod</strong> · 189&nbsp;Kč měsíčně s&nbsp;DPH</span></div>
       <h1>Pokladna pro chovatelské potřeby</h1>
-      <p class="lead">Krmivo i na váhu, pamlsky, stelivo, obojky, hračky a potřeby pro zvířata – se skladem, expirací a cenovkami.</p>
+      <p class="lead">Krmivo i&nbsp;na váhu, pamlsky, stelivo, obojky, hračky a&nbsp;potřeby pro zvířata – se skladem, expirací a&nbsp;cenovkami.</p>
       <div class="actions">
         <a class="btn btn-gold" href="https://app.superkasa.cz/">Vyzkoušet zdarma</a>
         <a class="btn btn-ghost" href="cenik.html">Ceník</a>
       </div>
-      <p class="hero-note">10 dní zkouška zdarma. Pokladnu <a href="https://app.superkasa.cz/">založíte v prohlížeči</a>, nic se nestahuje ani neinstaluje.</p>
+      <p class="hero-note">10&nbsp;dní zkouška zdarma. Pokladnu <a href="https://app.superkasa.cz/">založíte v&nbsp;prohlížeči</a>, nic se nestahuje ani neinstaluje.</p>
     </div>
     
     <figure class="pos">
       <div class="pos-screen" aria-hidden="true">
         <div class="pos-main">
           <div class="pos-search">Hledat nebo naskenovat…</div>
-          <div class="pos-tiles"><div class="pt"><img src="img/obory/g-krmivo.svg" alt="" width="34" height="34"><span>Granule pro psy na váhu</span><b>89,00/kg</b></div><div class="pt"><img src="img/obory/g-krmivo.svg" alt="" width="34" height="34"><span>Granule pro kočky na váhu</span><b>119,00/kg</b></div><div class="pt"><img src="img/obory/g-krmivo.svg" alt="" width="34" height="34"><span>Pamlsky na váhu</span><b>299,00/kg</b></div><div class="pt"><img src="img/obory/g-krmivo.svg" alt="" width="34" height="34"><span>Seno</span><b>49,00</b></div><div class="pt"><img src="img/obory/g-chovatel.svg" alt="" width="34" height="34"><span>Obojek</span><b>199,00</b></div><div class="pt"><img src="img/obory/g-chovatel.svg" alt="" width="34" height="34"><span>Vodítko</span><b>249,00</b></div><div class="pt"><img src="img/obory/g-chovatel.svg" alt="" width="34" height="34"><span>Miska</span><b>99,00</b></div><div class="pt"><img src="img/obory/taska.svg" alt="" width="34" height="34"><span>Igelitová taška</span><b>2,00</b></div></div>
+          <div class="pos-tiles"><div class="pt"><span>Granule pro psy na váhu</span><b>89,00/kg</b></div><div class="pt"><span>Granule pro kočky na váhu</span><b>119,00/kg</b></div><div class="pt"><span>Pamlsky na váhu</span><b>299,00/kg</b></div><div class="pt"><span>Seno</span><b>49,00</b></div><div class="pt"><span>Obojek</span><b>199,00</b></div><div class="pt"><span>Vodítko</span><b>249,00</b></div><div class="pt"><span>Miska</span><b>99,00</b></div><div class="pt"><span>Igelitová taška</span><b>2,00</b></div></div>
           <div class="pos-tabs"><span class="on">Krmivo pro zvířata</span><span>Chovatelské potřeby</span></div>
         </div>
         <div class="pos-cart">
-          <div class="row"><span>Granule pro psy na váhu <i>2,4 kg</i></span><span>213,60</span></div>
-          <div class="row"><span>Pamlsky na váhu <i>0,2 kg</i></span><span>59,80</span></div>
+          <div class="row"><span>Granule pro psy na váhu <i>2,4&nbsp;kg</i></span><span>213,60</span></div>
+          <div class="row"><span>Pamlsky na váhu <i>0,2&nbsp;kg</i></span><span>59,80</span></div>
           <div class="row"><span>Obojek</span><span>199,00</span></div>
-          <div class="sum"><span>Celkem</span><span>472,40 Kč</span></div>
+          <div class="sum"><span>Celkem</span><span>472,40&nbsp;Kč</span></div>
           <div class="pay">Zaplatit</div>
         </div>
       </div>
-      <figcaption>Ilustrační náhled s ukázkovými položkami a orientačními cenami z nastavení „Chovatelské potřeby“.</figcaption>
+      <figcaption>Ilustrační náhled s&nbsp;ukázkovými položkami a&nbsp;orientačními cenami z&nbsp;nastavení „Chovatelské potřeby“.</figcaption>
     </figure>
   </div>
 </section>
@@ -94,12 +97,12 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Co bude připravené hned po spuštění</h2>
-      <p>Při prvním spuštění vyberete typ provozu „Chovatelské potřeby“ a pokladna si sama připraví tohle. Všechno jde později změnit ve Správě.</p>
+      <p>Při prvním spuštění vyberete typ provozu „Chovatelské potřeby“ a&nbsp;pokladna si sama připraví tohle. Všechno můžete později změnit ve Správě.</p>
     </div>
     <div class="grid grid-3">
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Skupiny zboží</h3><ul class="gchips"><li><img src="img/obory/g-krmivo.svg" alt="" width="26" height="26">Krmivo pro zvířata</li><li><img src="img/obory/g-chovatel.svg" alt="" width="26" height="26">Chovatelské potřeby</li><li><img src="img/obory/g-tasky.svg" alt="" width="26" height="26">Tašky</li></ul><p class="small mt-1">K tomu skupiny Nezařazeno 12 % a 21 %. Sazby DPH ve skupinách jsou návrh – zkontrolujte je s účetní.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Dlaždice a ukázkové položky</h3><p>Karty dole na prodejní obrazovce: <strong>Krmivo pro zvířata, Chovatelské potřeby</strong>.</p><p>Granule pro psy a kočky na váhu, pamlsky na váhu, seno, obojek, vodítko, miska a tašky.</p><p class="small">Ceny jsou orientační – upravíte je přímo z prodejní obrazovky.</p></article>
-      <article class="card"><div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Zapnuté funkce</h3><ul class="checks"><li>Sklad</li><li>Expirace</li><li>Cenovky</li><li>Akce a množstevní ceny</li><li>Zákaznický displej</li><li>QR platby</li></ul><p class="small mt-1">Prodej, EET 2.0, účtenky, hotovost a uzávěrka fungují vždy.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Skupiny zboží</h3><ul class="gchips"><li>Krmivo pro zvířata</li><li>Chovatelské potřeby</li><li>Tašky</li></ul><p class="small mt-1">K&nbsp;tomu skupiny Nezařazeno 12&nbsp;% a&nbsp;21&nbsp;%. Sazby DPH ve skupinách jsou návrh – zkontrolujte je s&nbsp;účetní.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Dlaždice a&nbsp;ukázkové položky</h3><p>Karty dole na prodejní obrazovce: <strong>Krmivo pro zvířata, Chovatelské potřeby</strong>.</p><p>Granule pro psy a&nbsp;kočky na váhu, pamlsky na váhu, seno, obojek, vodítko, miska a&nbsp;tašky.</p><p class="small">Ceny jsou orientační – upravíte je přímo z&nbsp;prodejní obrazovky.</p></article>
+      <article class="card"><div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Zapnuté funkce</h3><ul class="checks"><li>Sklad</li><li>Expirace</li><li>Cenovky</li><li>Akce a&nbsp;množstevní ceny</li><li>Zákaznický displej</li><li>QR platby</li></ul><p class="small mt-1">Prodej, EET 2.0, účtenky, hotovost a&nbsp;uzávěrka fungují vždy.</p></article>
     </div>
   </div>
 </section>
@@ -108,10 +111,10 @@
   <div class="wrap">
     <div class="section-head"><h2>Co se vám bude hodit</h2></div>
     <div class="grid grid-2">
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M6 21h12M5 7h14M5 7l-3 7a3.5 3.5 0 0 0 6 0zM19 7l-3 7a3.5 3.5 0 0 0 6 0z"/></svg></div><h3>Granule na váhu</h3><p>U krmiva na kilogramy se pokladna zeptá na hmotnost a sama spočítá cenu.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><h3>Expirace krmiva</h3><p>Datum spotřeby při příjmu a přehled zboží, které brzy projde.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><h3>Názvy a fotky podle EAN</h3><p>Při naskenování neznámého kódu pokladna navrhne název a fotku ze sdílené databáze SuperKasa nebo z internetu.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Sklad</h3><p>Příjem zboží skenováním, inventura regálu a návrh objednávky podle prodejů.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M6 21h12M5 7h14M5 7l-3 7a3.5 3.5 0 0 0 6 0zM19 7l-3 7a3.5 3.5 0 0 0 6 0z"/></svg></div><h3>Granule na váhu</h3><p>U&nbsp;krmiva na kilogramy se pokladna zeptá na hmotnost a&nbsp;sama spočítá cenu.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><h3>Expirace krmiva</h3><p>Datum spotřeby při příjmu a&nbsp;přehled zboží, které brzy projde.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><h3>Názvy a&nbsp;fotky podle EAN</h3><p>Při naskenování neznámého kódu pokladna navrhne název a&nbsp;fotku ze sdílené databáze SuperKasa nebo z&nbsp;internetu.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Sklad</h3><p>Příjem zboží skenováním, inventura regálu a&nbsp;návrh objednávky podle prodejů.</p></article>
     </div>
   </div>
 </section>
@@ -120,16 +123,16 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Tarif Obchod</h2>
-      <p>189 Kč měsíčně nebo 2 041 Kč ročně, vždy včetně DPH. Prvních 10 dní zdarma.</p>
+      <p>189&nbsp;Kč měsíčně nebo 2&nbsp;041&nbsp;Kč ročně, vždy včetně DPH. Prvních 10&nbsp;dní zdarma.</p>
     </div>
     <div class="grid grid-2">
       <article class="card">
         <h3>Zapnuto hned po spuštění</h3>
-        <dl class="feat"><dt>Sklad</dt><dd>Příjem zboží, inventura, stav na dlaždici, co dochází a návrh objednávky.</dd><dt>Expirace</dt><dd>Datum spotřeby v kartě a při příjmu, upozornění na prošlé zboží.</dd><dt>Cenovky</dt><dd>Tisk cenovek na pokladní tiskárně, etiketové tiskárně nebo na A4.</dd><dt>Akce a množstevní ceny</dt><dd>Akce do data, levnější kus od určitého počtu.</dd><dt>Zákaznický displej</dt><dd>Druhá obrazovka pro zákazníka s nákupem a QR platbou.</dd><dt>QR platby</dt><dd>Platba převodem přes QR kód na displeji a na účtence.</dd></dl>
+        <dl class="feat"><dt>Sklad</dt><dd>Příjem zboží, inventura, stav na dlaždici, co dochází a&nbsp;návrh objednávky.</dd><dt>Expirace</dt><dd>Datum spotřeby v&nbsp;kartě a&nbsp;při příjmu, upozornění na prošlé zboží.</dd><dt>Cenovky</dt><dd>Tisk cenovek na pokladní tiskárně, etiketové tiskárně nebo na A4.</dd><dt>Akce a&nbsp;množstevní ceny</dt><dd>Akce do data, levnější kus od určitého počtu.</dd><dt>Zákaznický displej</dt><dd>Druhá obrazovka pro zákazníka s&nbsp;nákupem a&nbsp;QR platbou.</dd><dt>QR platby</dt><dd>Platba převodem přes QR kód na displeji a&nbsp;na účtence.</dd></dl>
       </article>
       <article class="card">
         <h3>Můžete kdykoli zapnout</h3>
-        <dl class="feat"><dt>Zálohy na obaly</dt><dd>Vratné láhve a přepravky, záloha se může k pivu přidávat sama.</dd><dt>Váha a vážené kódy</dt><dd>Čárové kódy ze štítků váhy – s hmotností nebo cenou.</dd><dt>Stoly a účty</dt><dd>Účty na stůl pro hospodu a restauraci: doplňování, rozdělení, přesun, bony do kuchyně a na výčep.</dd><dt>Spropitné</dt><dd>Spropitné mimo tržbu a EET: komu, kolik, hotově nebo kartou; přehled za měsíc s hlídáním limitu 7 % pro osvobození od daně.</dd></dl><p class="small mt-1">Zapnete je ve Správě → Systém → Funkce pokladny. Jsou v ceně tarifu.</p>
+        <dl class="feat"><dt>Zálohy na obaly</dt><dd>Vratné láhve a&nbsp;přepravky, záloha se může k&nbsp;pivu přidávat sama.</dd><dt>Váha a&nbsp;vážené kódy</dt><dd>Čárové kódy ze štítků váhy – s&nbsp;hmotností nebo cenou.</dd><dt>Stoly a&nbsp;účty</dt><dd>Účty na stůl pro hospodu a&nbsp;restauraci: doplňování, rozdělení, přesun, bony do kuchyně a&nbsp;na výčep.</dd><dt>Spropitné</dt><dd>Spropitné mimo tržbu a&nbsp;EET: komu, kolik, hotově nebo kartou; přehled za měsíc s&nbsp;hlídáním limitu 7&nbsp;% pro osvobození od daně.</dd></dl><p class="small mt-1">Zapnete je ve Správě → Systém → Funkce pokladny. Jsou v&nbsp;ceně tarifu.</p>
         <div class="actions" style="margin-top:16px"><a class="btn btn-ghost" href="cenik.html">Celý ceník</a><a class="btn btn-ghost" href="funkce.html">Všechny funkce</a></div>
       </article>
     </div>
@@ -140,30 +143,30 @@
   <div class="wrap">
     <div class="section-head"><h2>Další obory</h2></div>
     <ul class="others">
-      <li><a href="pokladna-vecerka.html"><img src="img/obory/g-potraviny.svg" alt="" width="28" height="28">Večerka a minimarket</a></li>
+      <li><a href="pokladna-vecerka.html"><img src="img/obory/g-potraviny.svg" alt="" width="28" height="28">Večerka a&nbsp;minimarket</a></li>
       <li><a href="pokladna-asijske-potraviny.html"><img src="img/obory/g-asie.svg" alt="" width="28" height="28">Asijské potraviny</a></li>
       <li><a href="pokladna-trafika.html"><img src="img/obory/g-tabak.svg" alt="" width="28" height="28">Trafika</a></li>
       <li><a href="pokladna-pekarna.html"><img src="img/obory/g-pecivo.svg" alt="" width="28" height="28">Pekárna</a></li>
-      <li><a href="pokladna-ovoce-zelenina.html"><img src="img/obory/g-ovoce.svg" alt="" width="28" height="28">Ovoce a zelenina</a></li>
-      <li><a href="pokladna-reznictvi.html"><img src="img/obory/g-maso.svg" alt="" width="28" height="28">Řeznictví a uzeniny</a></li>
+      <li><a href="pokladna-ovoce-zelenina.html"><img src="img/obory/g-ovoce.svg" alt="" width="28" height="28">Ovoce a&nbsp;zelenina</a></li>
+      <li><a href="pokladna-reznictvi.html"><img src="img/obory/g-maso.svg" alt="" width="28" height="28">Řeznictví a&nbsp;uzeniny</a></li>
       <li><a href="pokladna-drogerie.html"><img src="img/obory/g-drogerie.svg" alt="" width="28" height="28">Drogerie</a></li>
       <li><a href="pokladna-kvetinarstvi.html"><img src="img/obory/g-kvetiny.svg" alt="" width="28" height="28">Květinářství</a></li>
-      <li><a href="pokladna-papirnictvi.html"><img src="img/obory/g-papirnictvi.svg" alt="" width="28" height="28">Papírnictví a knihy</a></li>
-      <li><a href="pokladna-obleceni-obuv.html"><img src="img/obory/g-obleceni.svg" alt="" width="28" height="28">Oblečení a obuv</a></li>
-      <li><a href="pokladna-mobily-elektro.html"><img src="img/obory/g-mobily.svg" alt="" width="28" height="28">Mobily a elektro</a></li>
-      <li><a href="pokladna-zdrava-vyziva.html"><img src="img/obory/g-zdrava.svg" alt="" width="28" height="28">Zdravá výživa a doplňky</a></li>
-      <li><a href="pokladna-vinoteka.html"><img src="img/obory/g-vino.svg" alt="" width="28" height="28">Vinotéka a nápoje</a></li>
+      <li><a href="pokladna-papirnictvi.html"><img src="img/obory/g-papirnictvi.svg" alt="" width="28" height="28">Papírnictví a&nbsp;knihy</a></li>
+      <li><a href="pokladna-obleceni-obuv.html"><img src="img/obory/g-obleceni.svg" alt="" width="28" height="28">Oblečení a&nbsp;obuv</a></li>
+      <li><a href="pokladna-mobily-elektro.html"><img src="img/obory/g-mobily.svg" alt="" width="28" height="28">Mobily a&nbsp;elektro</a></li>
+      <li><a href="pokladna-zdrava-vyziva.html"><img src="img/obory/g-zdrava.svg" alt="" width="28" height="28">Zdravá výživa a&nbsp;doplňky</a></li>
+      <li><a href="pokladna-vinoteka.html"><img src="img/obory/g-vino.svg" alt="" width="28" height="28">Vinotéka a&nbsp;nápoje</a></li>
       <li><a href="pokladna-obchod.html"><img src="img/obory/g-domaci.svg" alt="" width="28" height="28">Jiný obchod</a></li>
       <li><a href="pokladna-kavarna-bistro.html"><img src="img/obory/g-kava.svg" alt="" width="28" height="28">Kavárna, bistro, stánek</a></li>
-      <li><a href="pokladna-cukrarna-zmrzlina.html"><img src="img/obory/g-zmrzlina.svg" alt="" width="28" height="28">Cukrárna a zmrzlina</a></li>
+      <li><a href="pokladna-cukrarna-zmrzlina.html"><img src="img/obory/g-zmrzlina.svg" alt="" width="28" height="28">Cukrárna a&nbsp;zmrzlina</a></li>
       <li><a href="pokladna-hospoda-restaurace.html"><img src="img/obory/g-pivo.svg" alt="" width="28" height="28">Hospoda, bar, restaurace</a></li>
-      <li><a href="pokladna-kadernictvi.html"><img src="img/obory/g-kadernictvi.svg" alt="" width="28" height="28">Kadeřnictví a holičství</a></li>
+      <li><a href="pokladna-kadernictvi.html"><img src="img/obory/g-kadernictvi.svg" alt="" width="28" height="28">Kadeřnictví a&nbsp;holičství</a></li>
       <li><a href="pokladna-nehtove-studio.html"><img src="img/obory/g-nehty.svg" alt="" width="28" height="28">Nehtové studio</a></li>
-      <li><a href="pokladna-kosmetika.html"><img src="img/obory/g-kosmetika.svg" alt="" width="28" height="28">Kosmetika a pedikúra</a></li>
-      <li><a href="pokladna-masaze-wellness.html"><img src="img/obory/g-masaze.svg" alt="" width="28" height="28">Masáže a wellness</a></li>
-      <li><a href="pokladna-fitness-sport.html"><img src="img/obory/g-fitness.svg" alt="" width="28" height="28">Fitness a sport</a></li>
-      <li><a href="pokladna-autoservis-pneuservis.html"><img src="img/obory/g-autoservis.svg" alt="" width="28" height="28">Autoservis a pneuservis</a></li>
-      <li><a href="pokladna-opravna.html"><img src="img/obory/g-opravy.svg" alt="" width="28" height="28">Opravna a servis</a></li>
+      <li><a href="pokladna-kosmetika.html"><img src="img/obory/g-kosmetika.svg" alt="" width="28" height="28">Kosmetika a&nbsp;pedikúra</a></li>
+      <li><a href="pokladna-masaze-wellness.html"><img src="img/obory/g-masaze.svg" alt="" width="28" height="28">Masáže a&nbsp;wellness</a></li>
+      <li><a href="pokladna-fitness-sport.html"><img src="img/obory/g-fitness.svg" alt="" width="28" height="28">Fitness a&nbsp;sport</a></li>
+      <li><a href="pokladna-autoservis-pneuservis.html"><img src="img/obory/g-autoservis.svg" alt="" width="28" height="28">Autoservis a&nbsp;pneuservis</a></li>
+      <li><a href="pokladna-opravna.html"><img src="img/obory/g-opravy.svg" alt="" width="28" height="28">Opravna a&nbsp;servis</a></li>
       <li><a href="pokladna-sluzby.html"><img src="img/obory/g-sluzby.svg" alt="" width="28" height="28">Jiné služby</a></li>
     </ul>
   </div>
@@ -172,7 +175,7 @@
 <section class="section dark cta">
   <div class="wrap">
     <h2>Vyzkoušejte SuperKasu ve svém provozu</h2>
-    <p>Prvních 10 dní zdarma, bez karty a bez závazku. Pokladnu založíte v prohlížeči hned – a když chcete, poradíme po telefonu s nastavením i vybavením: počítač, tiskárna, čtečka.</p>
+    <p>Prvních 10&nbsp;dní zdarma, bez karty a&nbsp;bez závazku. Pokladnu založíte v&nbsp;prohlížeči hned – a&nbsp;když chcete, poradíme po telefonu s&nbsp;nastavením i&nbsp;vybavením: počítač, tiskárna, čtečka.</p>
     <div class="actions">
       <a class="btn btn-gold" href="https://app.superkasa.cz/">Vyzkoušet zdarma</a>
       <a class="btn btn-light" href="tel:+420608886882">Zavolat&nbsp;+420&nbsp;608&nbsp;886&nbsp;882</a>
@@ -186,13 +189,13 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand"><img src="favicon.svg" alt="" width="40" height="40"><b>Super<span>Kasa</span></b></div>
-        <p>Pokladní systém pro obchody, občerstvení a služby s EET&nbsp;2.0, skladem a cenovkami. Pro obsluhu i ve vietnamštině.</p>
+        <p>Pokladní systém pro obchody, občerstvení a&nbsp;služby s&nbsp;EET&nbsp;2.0, skladem a&nbsp;cenovkami. Pro obsluhu i&nbsp;ve vietnamštině.</p>
         <p><a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
       </div>
       <div>
         <h2>Stránky</h2>
         <ul>
-          <li><a href="index.html">Úvod</a></li>
+          <li><a href="./">Úvod</a></li>
           <li><a href="obory.html">Pro koho</a></li>
           <li><a href="funkce.html">Funkce</a></li>
           <li><a href="cenik.html">Ceník</a></li>
@@ -205,13 +208,13 @@
       <div>
         <h2>Obory</h2>
         <ul>
-          <li><a href="pokladna-vecerka.html">Večerka a minimarket</a></li>
+          <li><a href="pokladna-vecerka.html">Večerka a&nbsp;minimarket</a></li>
           <li><a href="pokladna-trafika.html">Trafika</a></li>
           <li><a href="pokladna-pekarna.html">Pekárna</a></li>
           <li><a href="pokladna-drogerie.html">Drogerie</a></li>
           <li><a href="pokladna-kavarna-bistro.html">Kavárna, bistro, stánek</a></li>
           <li><a href="pokladna-hospoda-restaurace.html">Hospoda, bar, restaurace</a></li>
-          <li><a href="pokladna-kadernictvi.html">Kadeřnictví a holičství</a></li>
+          <li><a href="pokladna-kadernictvi.html">Kadeřnictví a&nbsp;holičství</a></li>
           <li><a href="pokladna-nehtove-studio.html">Nehtové studio</a></li>
           <li><a href="obory.html">Všechny obory</a></li>
         </ul>
@@ -226,7 +229,7 @@
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Thanh Lam Nguyen, IČO 14161648, místo podnikání 1. května 117/141, 725 25 Ostrava, fyzická osoba podnikající podle živnostenského zákona, zapsaná v živnostenském rejstříku. Tento web nepoužívá cookies ani sledovací nástroje.
+      © 2026 Thanh Lam Nguyen, IČO 14161648, místo podnikání 1. května 117/141, 725 25 Ostrava, fyzická osoba podnikající podle živnostenského zákona, zapsaná v&nbsp;živnostenském rejstříku. Tento web nepoužívá cookies ani sledovací nástroje.
     </div>
   </div>
 </footer>

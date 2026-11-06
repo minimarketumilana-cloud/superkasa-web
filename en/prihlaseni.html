@@ -5,8 +5,8 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-pfgOMgfVZwm2ODyms34QYW9h8EwicylhV77q5LHK8c0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://app.superkasa.cz; base-uri 'self'; form-action 'self' https://app.superkasa.cz">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sign in to the register – SuperKasa</title>
-<meta name="description" content="Sign in to the SuperKasa register with the owner's e-mail and password. The device pairs itself and opens the register.">
+<title>Sign in to your till – SuperKasa</title>
+<meta name="description" content="Sign in to your SuperKasa till with the owner's e-mail and password. The device pairs itself and opens the till.">
 <link rel="canonical" href="https://superkasa.cz/en/prihlaseni.html">
 <link rel="alternate" hreflang="cs" href="https://superkasa.cz/prihlaseni.html">
 <link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/prihlaseni.html">
@@ -17,14 +17,16 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:locale:alternate" content="cs_CZ">
 <meta property="og:locale:alternate" content="vi_VN">
-<meta property="og:title" content="Sign in to the register – SuperKasa">
-<meta property="og:description" content="Sign in to the SuperKasa register with the owner's e-mail and password. The device pairs itself and opens the register.">
+<meta property="og:title" content="Sign in to your till – SuperKasa">
+<meta property="og:description" content="Sign in to your SuperKasa till with the owner's e-mail and password. The device pairs itself and opens the till.">
 <meta property="og:url" content="https://superkasa.cz/en/prihlaseni.html">
-<meta property="og:image" content="https://superkasa.cz/img/og.png">
+<meta property="og:image" content="https://superkasa.cz/img/og-en.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SuperKasa – POS system for shops, food service and services">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://superkasa.cz/img/og-en.jpg">
 <meta name="theme-color" content="#5c1a46">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -37,9 +39,9 @@
 <a class="skip" href="#obsah">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="SuperKasa – home page"><img src="../img/logo.png" alt="SuperKasa" width="200" height="40"></a>
+    <a class="brand" href="./" aria-label="SuperKasa – home page"><img src="../img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Website language"><a href="../prihlaseni.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="../vi/prihlaseni.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="../en/prihlaseni.html" hreflang="en" lang="en" title="English" aria-label="English" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
-    <a class="login-top" href="prihlaseni.html" aria-label="Sign in to the register" title="Sign in to the register" aria-current="page"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Sign in</span></a>
+    <a class="login-top" href="prihlaseni.html" aria-label="Sign in to your till" title="Sign in to your till" aria-current="page"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Sign in</span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main menu">
       <a href="obory.html">Who it's for</a>
@@ -49,6 +51,7 @@
       <a href="navody.html">Guides</a>
       <a href="jak-zacit.html">Get started</a>
       <a href="kontakt.html">Contact</a>
+      <a class="nav-login" href="prihlaseni.html">Sign in</a>
       <a class="btn btn-primary nav-price" href="cenik.html">CZK 189 / month</a>
       <a class="btn btn-gold" href="https://app.superkasa.cz/">Try it free</a>
     </nav>
@@ -57,8 +60,8 @@
 <main id="obsah">
 <section class="page-head">
   <div class="wrap">
-    <h1>Sign in to the register</h1>
-    <p class="lead">The owner's e-mail and password. Your computer, tablet or phone pairs itself and opens the register. Staff then sign in with their PIN.</p>
+    <h1>Sign in to your till</h1>
+    <p class="lead">The owner's e-mail and password. Your computer, tablet or phone pairs itself and opens the till. Staff then sign in with their PIN.</p>
   </div>
 </section>
 
@@ -66,7 +69,7 @@
   <div class="wrap">
     <div class="grid grid-2">
       <form class="card login-form" id="login-form" action="https://app.superkasa.cz/#prihlaseni" method="post" novalidate data-api="https://app.superkasa.cz" data-busy="Signing in…" data-choose="This e-mail has several shops – choose one:" data-error="Sign-in failed. Please try again." data-offline="The sign-in server isn't responding right now. Please try again in a moment, or open your shop's own address (name.superkasa.cz).">
-        <h2>Sign in to the register</h2>
+        <h2>Sign in to your till</h2>
         <!-- Upozornění je vidět i bez JavaScriptu; skript ho schová, až cloud odpoví. Heslo nikdy v adrese (POST). -->
         <p class="cloud-soon" id="login-note">The sign-in server isn't responding right now. Please try again in a moment, or open your shop's own address (name.superkasa.cz).</p>
         <label>E-mail<input type="email" name="email" autocomplete="username" maxlength="120" required></label>
@@ -74,15 +77,15 @@
         <p class="login-err" role="alert" hidden></p>
         <button class="btn btn-primary" type="submit">Sign in</button>
         <div class="login-shops" hidden></div>
-        <p class="small">Forgot your password? Reset it right on the sign-in screen: account e-mail, owner PIN and a new password. Or call us: <a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a>.</p>
-        <a class="btn btn-gold login-register" href="https://app.superkasa.cz/">No register yet? Create one free (10 days)</a>
+        <p class="small">Forgot your password? Open your shop's address (name.superkasa.cz) on a device that is not signed in yet and tap Forgot password. Enter the account e-mail, the owner PIN and a new password. Or call us: <a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a>.</p>
+        <a class="btn btn-gold login-register" href="https://app.superkasa.cz/">No till yet? Create one free (10 days)</a>
       </form>
       <article class="card">
         <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
         <h2>More devices and staff</h2>
-        <p>The register runs at your shop's own address (name.superkasa.cz). Open it on a new computer, tablet or phone and the owner signs in once with e-mail and password. Staff then sign in with their PIN.</p>
+        <p>The till runs at your shop's own address (name.superkasa.cz). Open it on a new computer, tablet or phone and the owner signs in once with e-mail and password. Staff then sign in with their PIN.</p>
         <p>The owner's e-mail and password are entered when creating the shop on app.superkasa.cz. You can change them in Admin → System → Owner account.</p>
-        <div class="actions" style="margin-top:8px"><a class="btn btn-ghost" href="jak-zacit.html">How to start</a></div>
+        <div class="actions" style="margin-top:8px"><a class="btn btn-ghost" href="jak-zacit.html">Get started</a></div>
       </article>
     </div>
   </div>
@@ -99,7 +102,7 @@
       <div>
         <h2>Pages</h2>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="./">Home</a></li>
           <li><a href="obory.html">Who it's for</a></li>
           <li><a href="funkce.html">Features</a></li>
           <li><a href="cenik.html">Pricing</a></li>

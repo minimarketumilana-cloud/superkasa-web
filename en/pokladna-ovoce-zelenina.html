@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-pfgOMgfVZwm2ODyms34QYW9h8EwicylhV77q5LHK8c0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://app.superkasa.cz; base-uri 'self'; form-action 'self' https://app.superkasa.cz">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>POS for fruit and vegetable shops – SuperKasa</title>
+<title>POS for fruit and vegetable shops with EET 2.0 – SuperKasa</title>
 <meta name="description" content="Goods sold by the kilogram, barcodes from scale labels, pictures of fruit and vegetables and price labels with the price per kg.">
 <link rel="canonical" href="https://superkasa.cz/en/pokladna-ovoce-zelenina.html">
 <link rel="alternate" hreflang="cs" href="https://superkasa.cz/pokladna-ovoce-zelenina.html">
@@ -17,14 +17,16 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:locale:alternate" content="cs_CZ">
 <meta property="og:locale:alternate" content="vi_VN">
-<meta property="og:title" content="POS for fruit and vegetable shops – SuperKasa">
+<meta property="og:title" content="POS for fruit and vegetable shops with EET 2.0 – SuperKasa">
 <meta property="og:description" content="Goods sold by the kilogram, barcodes from scale labels, pictures of fruit and vegetables and price labels with the price per kg.">
 <meta property="og:url" content="https://superkasa.cz/en/pokladna-ovoce-zelenina.html">
-<meta property="og:image" content="https://superkasa.cz/img/og.png">
+<meta property="og:image" content="https://superkasa.cz/img/og-en.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SuperKasa – POS system for shops, food service and services">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://superkasa.cz/img/og-en.jpg">
 <meta name="theme-color" content="#5c1a46">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -38,9 +40,9 @@
 <a class="skip" href="#obsah">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="SuperKasa – home page"><img src="../img/logo.png" alt="SuperKasa" width="200" height="40"></a>
+    <a class="brand" href="./" aria-label="SuperKasa – home page"><img src="../img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Website language"><a href="../pokladna-ovoce-zelenina.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="../vi/pokladna-ovoce-zelenina.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="../en/pokladna-ovoce-zelenina.html" hreflang="en" lang="en" title="English" aria-label="English" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
-    <a class="login-top" href="prihlaseni.html" aria-label="Sign in to the register" title="Sign in to the register"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Sign in</span></a>
+    <a class="login-top" href="prihlaseni.html" aria-label="Sign in to your till" title="Sign in to your till"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Sign in</span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main menu">
       <a href="obory.html" aria-current="page">Who it's for</a>
@@ -50,6 +52,7 @@
       <a href="navody.html">Guides</a>
       <a href="jak-zacit.html">Get started</a>
       <a href="kontakt.html">Contact</a>
+      <a class="nav-login" href="prihlaseni.html">Sign in</a>
       <a class="btn btn-primary nav-price" href="cenik.html">CZK 189 / month</a>
       <a class="btn btn-gold" href="https://app.superkasa.cz/">Try it free</a>
     </nav>
@@ -59,7 +62,7 @@
 <section class="page-head obor-head">
   <div class="wrap obor-hero">
     <div>
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">›</span><a href="obory.html">Who it's for</a><span aria-hidden="true">›</span><span aria-current="page">Fruit and vegetables</span></nav>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="./">Home</a><span aria-hidden="true">›</span><a href="obory.html">Who it's for</a><span aria-hidden="true">›</span><span aria-current="page">Fruit and vegetables</span></nav>
       <div class="obor-badge"><span class="obor-art sm"><img src="../img/obory/g-ovoce.svg" alt="" width="40" height="40"></span><span><strong>Shop</strong> plan · CZK 189 a month incl. VAT</span></div>
       <h1>POS for fruit and vegetable shops</h1>
       <p class="lead">Goods sold by the kilogram, barcodes from scale labels, pictures of fruit and vegetables and price labels with the price per kg.</p>
@@ -74,7 +77,7 @@
       <div class="pos-screen" aria-hidden="true">
         <div class="pos-main">
           <div class="pos-search">Search item or scan code…</div>
-          <div class="pos-tiles"><div class="pt"><img src="../img/obory/banan.svg" alt="" width="34" height="34"><span>Banány</span><b>34,90/kg</b></div><div class="pt"><img src="../img/obory/jablko.svg" alt="" width="34" height="34"><span>Jablka</span><b>39,90/kg</b></div><div class="pt"><img src="../img/obory/rajcata.svg" alt="" width="34" height="34"><span>Rajčata</span><b>69,00/kg</b></div><div class="pt"><img src="../img/obory/brambory.svg" alt="" width="34" height="34"><span>Brambory</span><b>19,90/kg</b></div><div class="pt"><img src="../img/obory/mrkev.svg" alt="" width="34" height="34"><span>Mrkev</span><b>24,90/kg</b></div><div class="pt"><img src="../img/obory/paprika-cervena.svg" alt="" width="34" height="34"><span>Paprika červená</span><b>79,00/kg</b></div><div class="pt"><img src="../img/obory/taska.svg" alt="" width="34" height="34"><span>Igelitová taška</span><b>2,00</b></div><div class="pt grp"><img src="../img/obory/g-potraviny.svg" alt="" width="34" height="34"><span>Groceries</span><b>›</b></div><div class="pt grp"><img src="../img/obory/g-napoje.svg" alt="" width="34" height="34"><span>Soft drinks</span><b>›</b></div></div>
+          <div class="pos-tiles"><div class="pt"><span>Banány</span><b>34,90/kg</b></div><div class="pt"><span>Jablka</span><b>39,90/kg</b></div><div class="pt"><span>Rajčata</span><b>69,00/kg</b></div><div class="pt"><span>Brambory</span><b>19,90/kg</b></div><div class="pt"><span>Mrkev</span><b>24,90/kg</b></div><div class="pt"><span>Paprika červená</span><b>79,00/kg</b></div><div class="pt"><span>Igelitová taška</span><b>2,00</b></div><div class="pt grp"><span>Groceries</span><b>›</b></div><div class="pt grp"><span>Soft drinks</span><b>›</b></div></div>
           <div class="pos-tabs"><span class="on">Fruit &amp; veg</span></div>
         </div>
         <div class="pos-cart">
@@ -98,7 +101,7 @@
       <p>When you first start the POS, you choose the business type “Fruit and vegetables” and it sets up the following for you. You can change all of it later in Admin.</p>
     </div>
     <div class="grid grid-3">
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Product groups</h3><ul class="gchips"><li><img src="../img/obory/g-ovoce.svg" alt="" width="26" height="26">Fruit &amp; veg</li><li><img src="../img/obory/g-potraviny.svg" alt="" width="26" height="26">Groceries</li><li><img src="../img/obory/g-napoje.svg" alt="" width="26" height="26">Soft drinks</li><li><img src="../img/obory/g-tasky.svg" alt="" width="26" height="26">Bags</li></ul><p class="small mt-1">Plus the groups Uncategorised 12 % and 21 %. The VAT (DPH) rates in the groups are only a suggestion – check them with your accountant.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Product groups</h3><ul class="gchips"><li>Fruit &amp; veg</li><li>Groceries</li><li>Soft drinks</li><li>Bags</li></ul><p class="small mt-1">Plus the groups Uncategorised 12 % and 21 %. The VAT (DPH) rates in the groups are only a suggestion – check them with your accountant.</p></article>
       <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Tiles and sample items</h3><p>Tabs at the bottom of the sales screen: <strong>Fruit &amp; veg</strong>.</p><p>23 kinds of fruit and vegetables with pictures (potatoes, onions, tomatoes, bananas, apples…) and bags.</p><p class="small">Prices are approximate – you can change them right from the sales screen.</p></article>
       <article class="card"><div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Features switched on</h3><ul class="checks"><li>Stock</li><li>Price labels</li><li>Scales and weighed-item barcodes</li><li>Promotions and quantity prices</li><li>Customer display</li><li>QR payments</li></ul><p class="small mt-1">Sales, EET 2.0, receipts, cash and closing always work.</p></article>
     </div>
@@ -112,7 +115,7 @@
       <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M6 21h12M5 7h14M5 7l-3 7a3.5 3.5 0 0 0 6 0zM19 7l-3 7a3.5 3.5 0 0 0 6 0z"/></svg></div><h3>Selling by the kilogram</h3><p>For goods sold by the kg the POS asks for the weight and works out the price itself.</p></article>
       <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M7 8v8M10 8v8M13 8v8M17 8v8"/></svg></div><h3>Scale labels</h3><p>The POS reads barcodes from scale labels (with weight or price). You set up and test the format in Admin.</p></article>
       <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div><h3>Price labels with the price per kg</h3><p>Price labels with the price per kilogram and promotional price on the receipt printer or A4.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Pictures on the tiles</h3><p>Fruit and vegetables have drawn pictures, so staff can find them without reading.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Pictures on the tiles</h3><p>Fruit and vegetables have real photos on their tiles, so staff can find them without reading.</p></article>
     </div>
   </div>
 </section>
@@ -129,8 +132,8 @@
         <dl class="feat"><dt>Stock</dt><dd>Receiving goods, stock counts, stock level on the tile, what's running low and order suggestions.</dd><dt>Price labels</dt><dd>Print price labels on the receipt printer, a label printer or A4.</dd><dt>Scales and weighed-item barcodes</dt><dd>Barcodes from scale labels – with weight or price.</dd><dt>Promotions and quantity prices</dt><dd>Promotions until a set date, a lower unit price from a certain quantity.</dd><dt>Customer display</dt><dd>A second screen for the customer showing the purchase and the QR payment.</dd><dt>QR payments</dt><dd>Bank transfer payment via a QR code on the display and on the receipt.</dd></dl>
       </article>
       <article class="card">
-        <h3>You can switch on at any time</h3>
-        <dl class="feat"><dt>Expiry</dt><dd>Best-before date on the item card and when receiving goods, alerts for expired goods.</dd><dt>Deposits</dt><dd>Returnable bottles and crates; the deposit can be added to beer automatically.</dd><dt>Tables and bills</dt><dd>Table bills for pubs and restaurants: adding items, splitting, moving, kitchen and bar tickets.</dd><dt>Tips</dt><dd>Tips outside sales and EET: who, how much, cash or card; a monthly overview that watches the 7 % limit for tax exemption.</dd></dl><p class="small mt-1">Switch them on in Admin → System → Register features. They are included in the plan price.</p>
+        <h3>You can switch these on any time</h3>
+        <dl class="feat"><dt>Expiry</dt><dd>Best-before date on the item card and when receiving goods, alerts for expired goods.</dd><dt>Deposits</dt><dd>Returnable bottles and crates; the deposit can be added to beer automatically.</dd><dt>Tables and bills</dt><dd>Table bills for pubs and restaurants: adding items, splitting, moving, kitchen and bar tickets.</dd><dt>Tips</dt><dd>Tips outside sales and EET: who, how much, cash or card; a monthly overview that watches the 7% limit for tax exemption.</dd></dl><p class="small mt-1">Switch them on in Admin → System → Register features. They are included in the plan price.</p>
         <div class="actions" style="margin-top:16px"><a class="btn btn-ghost" href="cenik.html">Full pricing</a><a class="btn btn-ghost" href="funkce.html">All features</a></div>
       </article>
     </div>
@@ -193,7 +196,7 @@
       <div>
         <h2>Pages</h2>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="./">Home</a></li>
           <li><a href="obory.html">Who it's for</a></li>
           <li><a href="funkce.html">Features</a></li>
           <li><a href="cenik.html">Pricing</a></li>

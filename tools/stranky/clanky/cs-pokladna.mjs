@@ -9,26 +9,22 @@ export default [
     group: "pokladna",
     kicker: "Návod od začátku",
     title: "Návod k pokladně SuperKasa: od registrace po uzávěrku",
-    metaTitle: "Pokladna návod: od registrace po uzávěrku | SuperKasa",
-    desc: "Jak používat pokladnu SuperKasa krok za krokem: registrace, zboží, první prodej, platby, vratka, uzávěrka, prodavači, zálohy a placení licence.",
-    lead: "Účet založíte na app.superkasa.cz, zboží přidáte skenováním nebo ze souboru a první nákup si vyzkoušíte ještě dnes. Postup pokračuje platbami, vratkou, uzávěrkou, prodavači a placením licence.",
+    metaTitle: "Návod k pokladně: od registrace po uzávěrku | SuperKasa",
+    desc: "Jak používat pokladnu SuperKasa krok za krokem: registrace, zboží, první prodej, platby, vratka, uzávěrka, prodavači, zálohy a placení pronájmu.",
+    lead: "Účet založíte na app.superkasa.cz, zboží přidáte skenováním nebo ze souboru a první nákup si vyzkoušíte ještě dnes. Postup pokračuje platbami, vratkou, uzávěrkou, prodavači a placením pronájmu.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 7,
     sections: [
       {
-        id: "dve-cesty",
+        id: "jak-zacit",
         h2: "Jak začít",
         html: `
 <p>SuperKasa běží v prohlížeči na počítači, tabletu i mobilu. Nic se nestahuje ani neinstaluje. Prvních 10 dní je zdarma a nepotřebujete platební kartu.</p>
-<div class="tbl"><table>
-<thead><tr><th></th><th>SuperKasa v prohlížeči</th></tr></thead>
-<tbody>
-<tr><td>Instalace</td><td>Žádná</td></tr>
-<tr><td>Kde jsou data</td><td>Na serveru SuperKasa, každý den zálohovaná</td></tr>
-<tr><td>Zařízení</td><td>Počítač, tablet, mobil – až 10 v tarifu, všechna prodávají do jedné směny</td></tr>
-</tbody>
-</table></div>`,
+<ul>
+<li><strong>Data:</strong> na serveru SuperKasa v ČR, každý den zálohovaná.</li>
+<li><strong>Zařízení:</strong> až 10 v tarifu (počítač, tablet, mobil), všechna prodávají do jedné společné směny.</li>
+</ul>`,
       },
       {
         id: "registrace",
@@ -43,7 +39,7 @@ export default [
 <li>Klepněte na <strong>Založit pokladnu zdarma</strong>. Chcete-li platit hned, klepněte na <strong>Koupit rovnou</strong>. Po zřízení vás pokladna pošle rovnou k placení a 10 dní zdarma vám zůstane navíc.</li>
 </ol>
 <p>Ztratili jste odkaz na dokončení? Vyplňte registraci znovu se stejnou adresou, e-mailem a IČO.</p>
-<p><strong>Nic se nestahuje:</strong> pokladna běží v prohlížeči. Účtenky tiskne přes okno tisku na tiskárnu, kterou máte nainstalovanou ve Windows.</p>`,
+<p><strong>Nic se nestahuje:</strong> pokladna běží v prohlížeči. Na počítači s Windows tiskne na pokladní tiskárnu bez okna (přes zástupce Chromu), nebo přes okno tisku. Telefon a tablet s Androidem tisknou na Bluetooth či USB tiskárnu, iPhone na tiskárně hlavní kasy. Postup je v návodu <a href="tiskarna-ctecka-zasuvka.html">Pokladní tiskárna, čtečka a zásuvka</a>.</p>`,
       },
       {
         id: "zrizeni",
@@ -142,7 +138,7 @@ export default [
 <p>Pak se ukáže <strong>Otevřít pokladnu</strong>. Do pole <strong>Hotovost v zásuvce na začátku</strong> napište, kolik v zásuvce zůstalo.</p>
 <aside class="note warn"><p>Pokud okno zavřete, pokladna se při dalším přihlášení otevře sama s částkou z minulé uzávěrky, i když jste tržbu odnesli. Zapněte proto ve <strong>Správě → Systém → Kontrola hotovosti</strong> volbu <strong>Při otevření pokladny zadávat hotovost v zásuvce</strong>. Peníze během dne zapisujte přes <strong>Menu → Vklad / výběr</strong>.</p></aside>
 <p>Stav bez uzavření ukáže <strong>Průběžná uzávěrka</strong> v Menu.</p>
-<p>Uzávěrka je jedna za celý obchod: všechna zařízení prodávají do jedné společné směny. Po 20 hodinách pokladna na uzávěrku upozorní a když ji nikdo neudělá, ve 23:59 ji udělá sama.</p>`,
+<p>Uzávěrka je jedna za celý obchod: všechna zařízení prodávají do jedné společné směny. Po 20 hodinách otevřené směny pokladna na uzávěrku upozorní, a když ji nikdo neudělá, ve 23:59 ji udělá sama.</p>`,
       },
       {
         id: "prodavaci",
@@ -159,7 +155,7 @@ export default [
 <tbody>
 <tr><td>Prodavač</td><td>Prodej a Menu, Správu nevidí</td></tr>
 <tr><td>Vedoucí</td><td>Navíc zboží, sklad, přehledy a schvalování PINem</td></tr>
-<tr><td>Majitel</td><td>Všechno včetně Firma, Zařízení, EET 2.0 a Systém</td></tr>
+<tr><td>Majitel</td><td>Všechno včetně sekcí Firma, Zařízení, EET 2.0 a Systém</td></tr>
 </tbody>
 </table></div>`,
       },
@@ -169,20 +165,21 @@ export default [
         html: `
 <p>V tarifu je až 10 zařízení. Nové zařízení se přihlásí e-mailem a heslem majitele, postup je v návodu <a href="prodej-z-telefonu.html">Pokladna v telefonu a tabletu</a>.</p>
 <p>Data obchodu zálohuje server každý den a kopie se ukládá i mimo něj. Nic nastavovat nemusíte.</p>
-<p>Vlastní kopii si stáhnete kdykoli ve <strong>Správě → Systém → Export dat</strong>. Export funguje i po skončení licence.</p>`,
+<p>Vlastní kopii si stáhnete kdykoli ve <strong>Správě → Systém → Export dat</strong>. Export funguje ještě 12 měsíců po skončení pronájmu.</p>`,
       },
       {
         id: "licence-jazyk",
-        h2: "Licence, placení a jazyk",
+        h2: "Pronájem, placení a jazyk",
         html: `
-<p>Licence stojí <strong>189 Kč měsíčně nebo 2 041 Kč ročně, včetně DPH</strong>. Prvních 10 dní je zdarma. Kdo zaplatí během zkoušky, tomu zbylé dny zůstanou a placené období začne až po nich.</p>
+<p>Pronájem stojí <strong>189 Kč měsíčně nebo 2 041 Kč ročně, včetně DPH</strong>. Prvních 10 dní je zdarma. Kdo zaplatí během zkoušky, tomu zbylé dny zůstanou a placené období začne až po nich.</p>
 <ol class="steps">
 <li>Klepněte na <strong>Zaplatit</strong> v liště nahoře, nebo otevřete <strong>Správa → Systém → Licence a tarif</strong>.</li>
 <li>Vyberte doplňky, pokud je chcete, a klepněte na <strong>Vystavit QR platbu</strong>.</li>
-<li>Zvolte <strong>Měsíc</strong> nebo <strong>Rok (−10 %)</strong> a zaplaťte QR kód v bance.</li>
+<li>Zvolte <strong>Měsíc</strong> nebo <strong>Rok (−10 %)</strong> a zaplaťte QR kódem v bankovní aplikaci.</li>
 <li>Klepněte na <strong>Už jsem zaplatil – zkontrolovat</strong>.</li>
 </ol>
-<aside class="note warn"><p>Platby za licenci zatím párujeme ručně, proto se licence neprodlouží hned po zaplacení. Když QR platbu v pokladně nevidíte, zavolejte nám. Licenční klíč vložíte do pole <strong>Licenční klíč</strong> a klepnete na <strong>Aktivovat</strong>.</p></aside>
+<p>V pokladně se pronájem jmenuje licence – najdete ho ve <strong>Správě → Systém → Licence a tarif</strong>.</p>
+<aside class="note warn"><p>Platby za pronájem zatím párujeme ručně, proto se pronájem neprodlouží hned po zaplacení. Když QR platbu v pokladně nevidíte, zavolejte nám a po zaplacení vám pošleme licenční klíč. Vložíte ho ve <strong>Správě → Systém → Licence a tarif</strong> do pole <strong>Licenční klíč</strong> a klepnete na <strong>Aktivovat</strong>.</p></aside>
 <p>Po skončení zkoušky prodáváte ještě 3 dny s upozorněním, po skončení zaplaceného období také 3 dny (rezerva na připsání platby). Pak se prodej zamkne a zůstane jen Správa s daty. Data, doklady, uzávěrky, vratky a export fungují dál.</p>
 <p><strong>Jazyk.</strong> Vlajka nahoře přepne češtinu, vietnamštinu nebo angličtinu. Každý prodavač má svůj jazyk. Doklad pro zákazníka je vždy česky.</p>`,
       },
@@ -190,9 +187,9 @@ export default [
     faq: [
       ["Musím hned po registraci platit?", "Ne. Prvních 10 dní je zdarma a kartu nezadáváte. Platit můžete i během zkoušky, zbylé dny vám zůstanou."],
       ["Zapomněl jsem heslo. Co teď?", "Otevřete adresu svého obchodu na zařízení, které není přihlášené, a klepněte na Zapomenuté heslo. Zadáte e-mail, PIN majitele a nové heslo."],
-      ["Jsou doklady ve zkušební době platné?", "Pokladna založená do konce roku 2026 vydává rovnou platné doklady. Pokladna založená od 1. 1. 2027 začíná ve zkušebním režimu, ve kterém doklady neplatí. Do ostrého provozu přejde až s certifikátem z DIS+, číslem evidenční jednotky, ověřeným spojením a placenou licencí. Kdo evidovat nemusí, zvolí ve Správě → EET 2.0 Tržby evidovat nemusím a certifikát nepotřebuje. Zkušební režim jde zapnout jen před prvním ostrým dokladem."],
+      ["Jsou doklady ve zkušební době platné?", "Pokladna založená do konce roku 2026 vydává rovnou platné doklady. Pokladna založená od 1. 1. 2027 začíná ve zkušebním režimu, ve kterém doklady neplatí. Do ostrého provozu přejde až s certifikátem z DIS+, číslem evidenční jednotky, ověřeným spojením a placeným pronájmem. Kdo evidovat nemusí, zvolí ve Správě → EET 2.0 volbu „Tržby evidovat nemusím“ a certifikát nepotřebuje. Zkušební režim lze zapnout jen před prvním ostrým dokladem."],
       ["Může prodavač vrátit peníze bez vedoucího?", "Ne. Storno i vratku musí prodavač potvrdit PINem vedoucího nebo majitele. Vedoucí a majitel PIN znovu nezadávají."],
-      ["Musím dělat uzávěrku každý den?", "Po 20 hodinách pokladna upozorní a ve 23:59 udělá uzávěrku sama, takže se tržby více dnů neslijí. Hotovost v zásuvce ale spočítáte jen vy, proto je lepší udělat uzávěrku na konci dne ručně."],
+      ["Musím dělat uzávěrku každý den?", "Po 20 hodinách otevřené směny pokladna upozorní a ve 23:59 udělá uzávěrku sama, takže se tržby více dnů neslijí. Hotovost v zásuvce ale spočítáte jen vy, proto je lepší udělat uzávěrku na konci dne ručně."],
     ],
     sources: [],
     related: ["tiskarna-ctecka-zasuvka", "prodej-z-telefonu", "eet-2-0-krok-za-krokem"],
@@ -208,7 +205,7 @@ export default [
     desc: "Na co se dívat při výběru pokladny pro malý obchod: skutečná cena s DPH, další zařízení, EET 2.0, sklad, výpadek internetu, jazyk a seznam otázek.",
     lead: "Večerka potřebuje čtečku a sklad, kadeřnice hlavně dlaždice se službami. Podle svého provozu si spočítejte cenu za celý rok a prodejci položte 14 otázek ze seznamu na konci článku.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 6,
     sections: [
       {
@@ -276,7 +273,7 @@ export default [
 <li><strong>Příjem a inventura.</strong> Jde naskladnit dodávku skenováním?</li>
 <li><strong>Čtečka.</strong> Funguje běžná USB čtečka, nebo jen jeden model? Jde na tabletu skenovat fotoaparátem?</li>
 </ul>
-<p>Kadeřnice sklad možná řešit nemusí. Sklad je jedna z věcí, kterou si má jít vypnout, aby pokladna zůstala přehledná.</p>`,
+<p>Kadeřnice sklad možná řešit nemusí. Dobrá pokladna proto umožní sklad vypnout, aby zůstala přehledná.</p>`,
       },
       {
         id: "vypadek",
@@ -289,7 +286,7 @@ export default [
 <li>Kde jsou uložená data a jak se po výpadku nahrají?</li>
 <li>Jde pokladnu otevřít i po restartu počítače nebo tabletu?</li>
 </ul>
-<p>Pokladna nainstalovaná na počítači v obchodě internet k samotnému prodeji obvykle nepotřebuje. Pokladna v prohlížeči musí mít vyřešený offline režim. U SuperKasy v prohlížeči jde bez internetu platit hotově a kartou, QR platba nejde. Podrobnosti jsou v návodu <a href="prodej-z-telefonu.html">Pokladna v telefonu a tabletu</a>.</p>`,
+<p>Pokladna nainstalovaná na počítači v obchodě internet k samotnému prodeji obvykle nepotřebuje. Pokladna v prohlížeči musí mít vyřešený offline režim. U SuperKasy v prohlížeči můžete bez internetu platit hotově a kartou, QR platba nefunguje. Podrobnosti jsou v návodu <a href="prodej-z-telefonu.html">Pokladna v telefonu a tabletu</a>.</p>`,
       },
       {
         id: "jazyk-data",
@@ -349,9 +346,9 @@ export default [
 <tr><td>Poplatek z tržeb</td><td>Žádný</td></tr>
 <tr><td>Platební terminál</td><td>Váš vlastní. Pokladna s ním není propojená, částku zadáváte ručně.</td></tr>
 <tr><td>Hardware</td><td>Vlastní. Pokladní tiskárna musí umět ESC/POS, čtečka se chová jako USB klávesnice.</td></tr>
-<tr><td>QR platba</td><td>Jde jen s vyplněným IBAN. Příchod platby potvrzuje prodavač.</td></tr>
+<tr><td>QR platba</td><td>Funguje jen s vyplněným IBAN. Příchod platby potvrzuje prodavač.</td></tr>
 <tr><td>Jazyk obsluhy</td><td>Česky, vietnamsky, anglicky. Doklad vždy česky.</td></tr>
-<tr><td>Export dat</td><td>CSV, i po skončení licence</td></tr>
+<tr><td>Export dat</td><td>CSV, ještě 12 měsíců po skončení pronájmu</td></tr>
 </tbody>
 </table></div>
 <p>Celé srovnání tarifů najdete v <a href="cenik.html">ceníku</a>.</p>`,
@@ -359,7 +356,7 @@ export default [
     ],
     faq: [
       ["Potřebuji pro malý obchod drahou pokladnu?", "Ne nutně. Rozhoduje, co každý den děláte. Spočítejte si ale cenu za celý rok, včetně dalších zařízení a doplňků."],
-      ["Stačí mi tablet místo počítače?", "Záleží na provozu. U kadeřnice nebo stánku tablet často stačí. Ve večerce s čtečkou a zásuvkou se víc hodí počítač s dotykovým monitorem."],
+      ["Stačí mi tablet místo počítače?", "Záleží na provozu. U kadeřnice nebo stánku tablet často stačí. Ve večerce se čtečkou a zásuvkou se víc hodí počítač s dotykovým monitorem."],
       ["Musím mít pokladnu kvůli EET?", "Ne nutně. Evidovat jde i z tabletu, počítače nebo mobilu s vhodným programem a malým podnikatelům má stačit státní aplikace MOJE eet. Kdo se evidence týká, ověřte u Finanční správy nebo s účetní."],
       ["Jde pokladnu vyzkoušet před placením?", "U SuperKasy ano, prvních 10 dní je zdarma a kartu nezadáváte. U jiných dodavatelů se zeptejte, jestli zkouška nevyžaduje smlouvu."],
     ],
@@ -377,7 +374,7 @@ export default [
     desc: "Jaká pokladní tiskárna a čtečka čárových kódů fungují se SuperKasou: 58 a 80 mm, USB, Bluetooth, síť, zásuvka, cenovky a co dělat, když se netiskne.",
     lead: "Přímý tisk účtenek potřebuje tiskárnu s příkazy ESC/POS, čtečka má fungovat jako USB klávesnice a zásuvka se zapojuje do tiskárny. Návod popisuje připojení i to, co dělat, když se účtenka netiskne.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 7,
     sections: [
       {
@@ -415,16 +412,16 @@ export default [
         id: "pripojeni",
         h2: "Jak tiskárnu připojit",
         html: `
-<p>Průvodce otevřete v <strong>Menu → Tiskárna</strong>, nebo ve <strong>Správě → Zařízení → Přidat tiskárnu</strong>. Nabídne jen to, co na vašem zařízení jde. Prodavač vidí méně voleb než majitel.</p>
+<p>Průvodce otevřete v <strong>Menu → Tiskárna</strong>, nebo ve <strong>Správě → Zařízení → Přidat tiskárnu</strong>. Nabídne jen to, co vaše zařízení umí. Prodavač vidí méně voleb než majitel.</p>
 <div class="tbl"><table>
 <thead><tr><th>Máte</th><th>Volba v průvodci</th></tr></thead>
 <tbody>
-<tr><td>Počítač s Windows a pokladní tiskárna</td><td>Tisk bez okna (tiskárna u tohoto počítače)</td></tr>
+<tr><td>Počítač s Windows a pokladní tiskárna</td><td>Tisk přes okno prohlížeče (bez okna přes zástupce Chromu, viz níže)</td></tr>
 <tr><td>Android a Bluetooth tiskárna</td><td>Bluetooth tiskárna</td></tr>
 <tr><td>Android a tiskárna na kabelu (OTG)</td><td>USB tiskárna k telefonu / tabletu</td></tr>
 <tr><td>Starší tiskárna se sériovým kabelem</td><td>Tiskárna na COM portu</td></tr>
 <tr><td>Telefon nebo tablet, tiskárna u hlavní kasy</td><td>Tisknout na tiskárně hlavní kasy</td></tr>
-<tr><td>Kancelářská tiskárna nebo PDF</td><td>Bez pokladní tiskárny, v prohlížeči na počítači Tisk přes okno prohlížeče</td></tr>
+<tr><td>Kancelářská tiskárna nebo PDF</td><td>Bez pokladní tiskárny (na počítači v prohlížeči se volba jmenuje Tisk přes okno prohlížeče)</td></tr>
 </tbody>
 </table></div>
 <h3>Ovladač ve Windows</h3>
@@ -433,9 +430,8 @@ export default [
 <li>Zapojte tiskárnu USB kabelem a zapněte ji.</li>
 <li>Počkejte, až ji Windows nainstalují. Epson TM potřebuje ovladač z webu Epsonu (EPSON Advanced Printer Driver). Jiné značky mají ovladač na CD nebo na webu prodejce.</li>
 <li>Ve Windows nastavte pokladní tiskárnu jako výchozí.</li>
-<li>V průvodci pokladny zvolte <strong>Tisk bez okna (tiskárna u tohoto počítače)</strong>, nebo tisk přes okno prohlížeče.</li>
-<li>Klepněte na <strong>Použít a vytisknout zkoušku</strong>.</li>
-<li>Vyjel zkušební lístek? Klepněte na <strong>Ano, tiskne</strong>.</li>
+<li>V průvodci pokladny zvolte <strong>Tisk přes okno prohlížeče</strong> a klepněte na <strong>Uložit</strong>. Hned se otevře okno tisku se zkušebním lístkem.</li>
+<li>V okně tisku vyberte pokladní tiskárnu a u Okrajů zvolte <strong>Žádné</strong>. Prohlížeč si volbu pamatuje.</li>
 </ol>
 <h3>Tisk bez okna</h3>
 <p>Nic se nestahuje. Pokladnu jen otevíráte zástupcem Chromu, který tiskne rovnou na výchozí tiskárnu bez tiskového okna.</p>
@@ -445,7 +441,7 @@ export default [
 <li>Do pole <strong>Cíl</strong> vložte <code>"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --kiosk-printing --user-data-dir="C:\\SuperKasaChrome"</code> a za to adresu svého obchodu.</li>
 <li>Pokladnu otevírejte jen tímto zástupcem. Poprvé se v něm přihlaste.</li>
 </ol>
-<p>SuperKasa pak běží ve vlastním okně Chromu, i když běžný Chrome běží dál. Přesný příkaz i s adresou vašeho obchodu najdete v průvodci tiskárnou u volby <strong>Tisk bez okna (tiskárna u tohoto počítače)</strong>. Tuto volbu vidí jen majitel.</p>
+<p>SuperKasa se pak otevírá ve vlastním okně Chromu nezávisle na běžném Chromu. Postup najdete i v pokladně ve <strong>Správě → Periferie → Tisk bez potvrzovacího okna</strong>. Správu Periferie vidí jen majitel.</p>
 <h3>Bluetooth</h3>
 <ol class="steps">
 <li>Zapněte tiskárnu a v telefonu zapněte Bluetooth. Když se Android zeptá, zapněte i polohu.</li>
@@ -480,14 +476,14 @@ export default [
 <li>Pokladna napíše <strong>Čtečka funguje</strong> a kód.</li>
 </ol>
 <p>Čtečka má po kódu posílat Enter. Když ho neposílá, pokladna si poradí, jen o chvilku pomaleji. V návodu čtečky hledejte volbu „Enter suffix“. Česká klávesnice nevadí, pokladna si znaky ě, š, č převede na číslice sama.</p>
-<p>Když čtečka píše divné znaky, přepněte ji podle jejího návodu do režimu „USB klávesnice (HID)“. Režim „COM / sériový port“ pokladna nepoužívá. Bezdrátová čtečka potřebuje svůj USB přijímač.</p>`,
+<p>Když čtečka píše nesmyslné znaky, přepněte ji podle jejího návodu do režimu „USB klávesnice (HID)“. Režim „COM / sériový port“ pokladna nepoužívá. Bezdrátová čtečka potřebuje svůj USB přijímač.</p>`,
       },
       {
         id: "tablet-telefon",
         h2: "Tablet nebo telefon a tisk u hlavní kasy",
         html: `
 <p>Na telefonu a tabletu čte kódy fotoaparát. Bluetooth čtečku spárujete v nastavení telefonu.</p>
-<p>Prodáváte na telefonu a tiskárna stojí u hlavní kasy? Hlavní kasa musí mít tiskárnu nastavenou jako první.</p>
+<p>Prodáváte na telefonu a tiskárna stojí u hlavní kasy? Nejdřív musí mít tiskárnu nastavenou hlavní kasa.</p>
 <ol class="steps">
 <li>Na telefonu otevřete <strong>Menu → Tiskárna</strong>.</li>
 <li>Zvolte <strong>Tisknout na tiskárně hlavní kasy</strong>.</li>
@@ -509,7 +505,7 @@ export default [
 <li>Nechte zapnuté <strong>Cena za kg / l (vyžaduje zákon)</strong>.</li>
 <li>Klepněte na <strong>Tisknout cenovky</strong>.</li>
 </ol>
-<p>Pod <strong>Jiné tiskárny (etiketová tiskárna, A4)</strong> jsou termo etikety a archy A4. Štítkové tiskárny tisknou přes okno prohlížeče. Velikost etikety nastavte v ovladači tiskárny, třeba 58 × 40 mm. Barevné vzhledy se tisknou jen na A4.</p>
+<p>Pod <strong>Jiné tiskárny (etiketová tiskárna, A4)</strong> jsou termoetikety a archy A4. Štítkové tiskárny tisknou přes okno prohlížeče. Velikost etikety nastavte v ovladači tiskárny, třeba 58 × 40 mm. Barevné vzhledy se tisknou jen na A4.</p>
 <p>Aby cenovky šly přímo do pokladní tiskárny, musí být zaškrtnuté <strong>Tisknout sem i cenovky (role 80/58 mm)</strong> ve <strong>Správě → Zařízení → Nastavit</strong>.</p>`,
       },
       {
@@ -522,10 +518,9 @@ export default [
 <tr><td>Vyjel prázdný lístek</td><td>Otočte roli. Termopapír musí být tiskovou stranou k hlavě.</td></tr>
 <tr><td>Nevyjelo nic</td><td>Zkontrolujte, že je tiskárna zapnutá, má papír a zavřené víko. Vypněte ji, zapněte a klepněte na <strong>Zkusit znovu</strong>.</td></tr>
 <tr><td>Účtenka je useknutá</td><td>Nastavte správnou šířku v poli <strong>Papír účtenky</strong>.</td></tr>
-<tr><td>Pokladní tiskárnu jsem nenašel</td><td>Nainstalujte ovladač a klepněte na <strong>Hledat znovu</strong>.</td></tr>
-<tr><td>Tiskárna je v seznamu pod textem „Nehodí se na účtenky“</td><td>Je to kancelářská, štítková nebo PDF tiskárna. Vraťte se zpět a zvolte <strong>Bez pokladní tiskárny</strong>.</td></tr>
+<tr><td>Pokladní tiskárna chybí v okně tisku</td><td>Nainstalujte ovladač ve Windows a otevřete okno tisku znovu.</td></tr>
 <tr><td>Bluetooth po obnovení stránky</td><td>Klepněte na <strong>Připojit tiskárnu</strong>, nebo <strong>Vytisknout oknem tisku</strong>.</td></tr>
-<tr><td>USB tiskárnu teď používá systém</td><td>Na Windows tiskněte přes systém: zvolte <strong>Tisk bez okna (tiskárna u tohoto počítače)</strong> nebo tisk přes okno prohlížeče.</td></tr>
+<tr><td>USB tiskárnu teď používá systém</td><td>Na počítači s Windows tiskněte přes systém: v průvodci zvolte <strong>Tisk přes okno prohlížeče</strong>, případně tiskněte bez okna přes zástupce Chromu.</td></tr>
 <tr><td>Prodej bez internetu přes hlavní kasu</td><td>Účtenka se tiskne oknem prohlížeče. Hlavní kasa bez internetu nepřijme tisk z telefonu.</td></tr>
 </tbody>
 </table></div>
@@ -535,10 +530,10 @@ export default [
     ],
     faq: [
       ["Funguje SuperKasa s mojí tiskárnou?", "Přímý tisk potřebuje tiskárnu, která rozumí příkazům ESC/POS. Všechny typy jsme nezkoušeli, proto si to ověřte zkušebním tiskem během 10 dní zdarma. Bez pokladní tiskárny můžete tisknout oknem prohlížeče."],
-      ["Potřebuji k čtečce ovladač?", "Běžná USB čtečka ovladač nepotřebuje. Musí být v režimu USB klávesnice (HID). Vyzkoušíte ji v Menu → Čtečka čárových kódů."],
-      ["Jde zásuvka otevřít bez tiskárny?", "Ne. Zásuvka se otevírá přes pokladní tiskárnu, ke které je zapojená."],
+      ["Potřebuji ke čtečce ovladač?", "Běžná USB čtečka ovladač nepotřebuje. Musí být v režimu USB klávesnice (HID). Vyzkoušíte ji v Menu → Čtečka čárových kódů."],
+      ["Otevře se zásuvka i bez tiskárny?", "Ne. Zásuvka se otevírá přes pokladní tiskárnu, ke které je zapojená."],
       ["Mohu tisknout z iPhonu?", "Bluetooth tiskárnu iPhone v prohlížeči nepřipojí. Použijte tiskárnu u hlavní kasy, nebo tablet s Androidem."],
-      ["Musím používat pokladní tiskárnu na cenovky?", "Ne. Cenovky jdou také na etiketovou tiskárnu přes prohlížeč nebo na obyčejnou tiskárnu na archy A4."],
+      ["Musím používat pokladní tiskárnu na cenovky?", "Ne. Cenovky lze tisknout také na etiketovou tiskárnu přes prohlížeč nebo na obyčejnou tiskárnu na archy A4."],
     ],
     sources: [],
     related: ["navod-superkasa", "prodej-z-telefonu", "co-musi-byt-na-uctence"],
@@ -554,7 +549,7 @@ export default [
     desc: "Jak prodávat s pokladnou v telefonu nebo tabletu: přihlášení, PIN prodavače, počet zařízení, kamera jako čtečka, tisk u hlavní kasy a výpadek internetu.",
     lead: "Telefon nebo tablet se k pokladně poprvé přihlásí e-mailem a heslem majitele, prodavač pak jen PINem. Účtenky můžou vyjíždět z tiskárny u hlavní kasy a v pokladně v prohlížeči se prodává i bez internetu.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 6,
     sections: [
       {
@@ -583,8 +578,8 @@ export default [
 <li>Zadejte <strong>E-mail</strong> a <strong>Heslo</strong> majitele.</li>
 <li>Klepněte na <strong>Přihlásit se</strong>.</li>
 </ol>
-<p>Zařízení se spáruje samo a majitel je rovnou přihlášený. Adresu si přidejte na plochu telefonu, ať ji prodavač najde.</p>
-<aside class="note"><p>E-mail a heslo najdete ve <strong>Správě → Systém → Účet majitele</strong>. Když heslo zapomenete, na přihlašovací obrazovce klepněte na <strong>Zapomenuté heslo</strong>. Zadáte e-mail, PIN majitele a nové heslo.</p></aside>`,
+<p>Zařízení se spáruje samo a majitel je rovnou přihlášený. Adresu si přidejte na plochu telefonu, aby ji prodavač snadno našel.</p>
+<aside class="note"><p>E-mail účtu uvidíte a heslo změníte ve <strong>Správě → Systém → Účet majitele</strong>. Když heslo zapomenete, na přihlašovací obrazovce klepněte na <strong>Zapomenuté heslo</strong>. Zadáte e-mail, PIN majitele a nové heslo.</p></aside>`,
       },
       {
         id: "pin",
@@ -596,7 +591,7 @@ export default [
 <li>Pokladna ukáže číselník. Prodavač zadá svůj PIN a potvrdí.</li>
 <li>Zařízení zůstane spárované. Příště stačí PIN.</li>
 </ol>
-<p>Prodavač v pokladně v prohlížeči může na adresu přejít i z <a href="https://app.superkasa.cz/">app.superkasa.cz</a>: v části <strong>Prodavači: adresa obchodu a PIN</strong> napíše adresu a klepne na <strong>Přejít do pokladny</strong>. Na nepřihlášeném zařízení se ale objeví přihlášení majitele.</p>
+<p>Prodavač se do pokladny dostane i přes <a href="https://app.superkasa.cz/">app.superkasa.cz</a>: v části <strong>Prodavači: adresa obchodu a PIN</strong> napíše adresu a klepne na <strong>Přejít do pokladny</strong>. Na nepřihlášeném zařízení se ale objeví přihlášení majitele.</p>
 <p>Po 10 špatných PINech se přihlášení na zařízení na 5 minut zamkne.</p>`,
       },
       {
@@ -661,8 +656,8 @@ export default [
         html: `
 <p>Prodej běží dál a nad nákupem se ukáže <strong>Bez internetu – prodává se dál, účtenky se nahrají samy</strong>.</p>
 <ul>
-<li>Platit jde jen hotově a kartou. QR platba, věrnostní body a účet ze stolu nejdou.</li>
-<li>Zařízení má předem rezervovaná čísla dokladů. Bez nich prodej nejde uložit.</li>
+<li>Platit můžete jen hotově a kartou. QR platba, věrnostní body a účet ze stolu nefungují.</li>
+<li>Zařízení má předem rezervovaná čísla dokladů. Bez nich prodej nelze uložit.</li>
 <li>Účtenky se uloží v zařízení a po připojení se samy nahrají s původním časem, i do EET.</li>
 <li>Tlačítko <strong>Čeká</strong> ukáže čekající účtenky. <strong>Nahrát teď</strong> je pošle hned.</li>
 <li>Uzávěrka počká, až se všechny účtenky nahrají.</li>
@@ -674,10 +669,10 @@ export default [
     ],
     faq: [
       ["Může prodavač použít vlastní telefon?", "Ano, ale první přihlášení musí udělat majitel svým e-mailem a heslem. Pak se odhlásí a prodavač zadá PIN."],
-      ["Spotřebuje každý telefon jedno zařízení?", "Ano. V tarifu je až 10 zařízení. Přehled Majitel na mobilu se do limitu nepočítá."],
+      ["Počítá se každý telefon do limitu zařízení?", "Ano. V tarifu je až 10 zařízení. Přehled Majitel na mobilu se do limitu nepočítá."],
       ["Musí být telefon na stejné Wi-Fi jako hlavní kasa?", "Ne. Tisk na hlavní kase jde přes internet, telefon může být klidně na mobilních datech."],
       ["Funguje pokladna na iPhonu?", "Ano, v prohlížeči. Nefunguje jen přímé připojení Bluetooth tiskárny. Tisknout můžete na tiskárně u hlavní kasy."],
-      ["Jde na telefonu tisknout cenovky?", "Ano, když jste vedoucí nebo majitel a telefon má nastavenou tiskárnu. Správa je na malé obrazovce ale méně pohodlná než na počítači."],
+      ["Můžu na telefonu tisknout cenovky?", "Ano, když jste vedoucí nebo majitel a telefon má nastavenou tiskárnu. Správa je ale na malé obrazovce méně pohodlná než na počítači."],
     ],
     sources: [],
     related: ["tiskarna-ctecka-zasuvka", "navod-superkasa", "moje-eet-nebo-pokladna"],
@@ -693,7 +688,7 @@ export default [
     desc: "Večerka a pokladna vietnamsky: prodavač pracuje ve svém jazyce, doklad zůstane česky. Kategorie, cenovky, názvy zboží a pomoc s EET 2.0 v SuperKase.",
     lead: "Prodavač může mít pokladnu vietnamsky a zákazník přesto dostane účtenku česky. Návod ukáže, jak to nastavit ve večerce nebo v asijských potravinách.",
     published: "2026-10-31",
-    updated: "2026-10-31",
+    updated: "2026-11-05",
     minutes: 6,
     sections: [
       {
@@ -737,7 +732,7 @@ export default [
 <li><strong>Večerka</strong> dostane skupiny jako tabák, alkohol, nápoje, pečivo, ovoce a zelenina, zálohy a tašky.</li>
 <li><strong>Asijské potraviny</strong> dostanou i ukázkové položky, třeba koriandr nebo tofu.</li>
 </ul>
-<p>Můžete také popsat sortiment vlastními slovy vietnamsky, například „thực phẩm châu Á, rượu sake, gạo, rau thơm“. Pokladna navrhne skupiny se sazbami DPH zdarma a bez internetu. Než pokladnu založíte, návrh si upravíte. Sazby ověřte s účetní.</p>
+<p>Můžete také popsat sortiment vlastními slovy vietnamsky, například „thực phẩm châu Á, rượu sake, gạo, rau thơm“. Pokladna navrhne skupiny včetně sazeb DPH. Návrh nic nestojí a funguje i bez internetu. Než pokladnu založíte, návrh si upravíte. Sazby ověřte s účetní.</p>
 <p>Názvy skupin, které pokladna založí sama, jsou přeložené. U vlastní skupiny doplňte překlad:</p>
 <ol class="steps">
 <li>Otevřete <strong>Správa → Skupiny</strong> a klepněte na skupinu.</li>
@@ -755,7 +750,7 @@ export default [
 <li>Místo „Bún gạo“ napište „Rýžové nudle 200 g“.</li>
 <li>Velikost balení dejte do názvu. Pokladna z ní spočítá jednotkovou cenu.</li>
 </ul>
-<p>Aby prodavač poznal zboží i bez češtiny, přidejte k němu fotku. V kartě zboží klepněte na <strong>Nahrát fotku</strong> nebo <strong>Hledat na internetu</strong>. Tlačítko <strong>Doplnit fotky podle EAN</strong> ve <strong>Správě → Sklad → Zboží</strong> zkusí najít fotky ke všemu zboží s čárovým kódem. Dlaždice s obrázkem se pak hledá rychleji než text.</p>
+<p>Aby prodavač poznal zboží i bez češtiny, přidejte k němu fotku. V kartě zboží klepněte na <strong>Nahrát fotku</strong> nebo <strong>Hledat na internetu</strong>. Fotky ke zboží s čárovým kódem pokladna dohledává sama na pozadí. Jak daleko je, ukáže tlačítko <strong>Fotky podle EAN</strong> ve <strong>Správě → Sklad → Zboží</strong> (dohledávání lze vypnout ve <strong>Správě → Systém</strong>). Dlaždice s obrázkem se pak hledá rychleji než text.</p>
 <p>Naskenujete-li neznámý kód, pokladna zkusí najít český název ve sdílené databázi SuperKasa a v Open Food Facts. Název jen zkontrolujete a doplníte cenu. Když to nefunguje, zkontrolujte ve <strong>Správě → Systém → Tisk dokladů</strong> volbu <strong>Dohledávat názvy podle čárového kódu na internetu</strong>.</p>
 <p>Popisky na účtence, třeba CELKEM nebo Hotově, jsou pevně česky. Vlastní text si upravíte ve <strong>Správě → Firma</strong> v poli <strong>Text na konci dokladu</strong>. Napište ho česky. Co na účtence musí být, popisuje návod <a href="co-musi-byt-na-uctence.html">Co musí být na účtence</a>.</p>`,
       },
@@ -772,7 +767,7 @@ export default [
 <tr><td>Rohlíky na kusy</td><td>Napište počet, klepněte na <strong>×</strong> a pak na dlaždici.</td></tr>
 <tr><td>Ovoce na váhu</td><td>Klepněte na dlaždici. Pokladna se zeptá na hmotnost v kg.</td></tr>
 <tr><td>Štítek z váhy</td><td>Naskenujte ho. Pokladna přečte PLU a hmotnost nebo cenu z kódu EAN-13.</td></tr>
-<tr><td>Nová cena cigaret</td><td>Klepněte na položku v nákupu a změňte cenu. Platí to jen pro tento prodej, trvale cenu změníte v kartě zboží. Sleva na zboží s pevnou cenou nejde.</td></tr>
+<tr><td>Nová cena cigaret</td><td>Klepněte na položku v nákupu a změňte cenu. Platí to jen pro tento prodej, trvale cenu změníte v kartě zboží. Na zboží s pevnou cenou nelze dát slevu.</td></tr>
 <tr><td>Zákazník se ptá na cenu</td><td>Stiskněte F2 a naskenujte zboží. Nic se neprodá. F2 kontrolu vypne.</td></tr>
 </tbody>
 </table></div>
@@ -783,7 +778,7 @@ export default [
 <li>Nechte ji udělat několik nákupů s vámi. Nákup před zaplacením zrušíte tlačítkem <strong>Zrušit</strong> nad nákupem.</li>
 <li>Řekněte jí, že storno a vratku potvrzuje vedoucí nebo majitel svým PINem.</li>
 </ol>
-<aside class="note"><p>Zkušební režim, ve kterém doklady neplatí, jde zapnout jen dokud pokladna nevydala žádný ostrý doklad. Tlačítko <strong>Zpět do zkušebního režimu</strong> je ve <strong>Správě → Systém</strong> v části <strong>Ostrý provoz</strong>.</p></aside>`,
+<aside class="note"><p>Zkušební režim, ve kterém doklady neplatí, lze zapnout, jen dokud pokladna nevydala žádný ostrý doklad. Tlačítko <strong>Zpět do zkušebního režimu</strong> je ve <strong>Správě → Systém</strong> v části <strong>Ostrý provoz</strong>.</p></aside>`,
       },
       {
         id: "cenovky",
@@ -796,7 +791,7 @@ export default [
 <li>Nechte zapnuté <strong>Cena za kg / l (vyžaduje zákon)</strong>.</li>
 <li>Klepněte na <strong>Tisknout cenovky</strong>.</li>
 </ol>
-<p>Na termo cenovce je název, cena, jednotková cena a čárový kód. Datum tisku se na ni netiskne. Datum se objeví jen u akce, když vyplníte <strong>Akce platí do</strong>. Podrobnosti o tiskárně jsou v návodu <a href="tiskarna-ctecka-zasuvka.html">Pokladní tiskárna, čtečka a zásuvka</a>.</p>`,
+<p>Na cenovce z termotiskárny je název, cena, jednotková cena a čárový kód. Datum tisku se na ni netiskne. Datum se objeví jen u akce, když vyplníte <strong>Akce platí do</strong>. Podrobnosti o tiskárně jsou v návodu <a href="tiskarna-ctecka-zasuvka.html">Pokladní tiskárna, čtečka a zásuvka</a>.</p>`,
       },
       {
         id: "eet",
@@ -809,7 +804,7 @@ export default [
 <li>Ve <strong>Správě → EET 2.0</strong> nahrajte soubor a heslo a klepněte na <strong>Ověřit spojení</strong>.</li>
 <li>V roce 2026 můžete zvolit režim <strong>Nanečisto</strong>. Ostré EET zapněte k 1. 1. 2027, nejpozději k první tržbě v roce 2027.</li>
 </ol>
-<p>Ostré EET vyžaduje placenou licenci. Podrobný postup je v návodu <a href="eet-2-0-krok-za-krokem.html">EET 2.0 krok za krokem</a>. Web SuperKasa je i <a href="vi/index.html">ve vietnamštině</a>.</p>
+<p>Ostré EET vyžaduje placený pronájem. Podrobný postup je v návodu <a href="eet-2-0-krok-za-krokem.html">EET 2.0 krok za krokem</a>. Web SuperKasa je i <a href="vi/index.html">ve vietnamštině</a>.</p>
 <p>Pomůžeme vám po telefonu, i ve vietnamštině: <a href="tel:+420608886882">+420 608 886 882</a>. Nastavení pokladny projdeme s vámi.</p>`,
       },
     ],

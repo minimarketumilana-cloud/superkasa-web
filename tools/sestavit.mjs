@@ -3,7 +3,7 @@
 // Hotové HTML soubory jsou v Gitu, takže na hosting se nahrávají tak, jak jsou – tenhle skript je jen pro úpravy.
 //   node tools/sestavit.mjs
 import { createHash } from "node:crypto";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { LANG_INFO, LANGS, OBORY_TEXTS, SITE, TEXTS, compareShape, pageUrl } from "./stranky/i18n.mjs";
@@ -21,6 +21,31 @@ import clankyEn from "./stranky/clanky/en.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DAY = new Date().toLocaleDateString("sv-SE"); // RRRR-MM-DD v místním čase
+
+/**
+ * Česká typografie v hotovém HTML: nezlomitelná mezera po jednopísmenných předložkách a spojkách, v číslech
+ * (2 041, +420 608 886 882), před jednotkami (189 Kč, 12 %), v datech (1. 1. 2027) a za §. Jen textové uzly –
+ * <script>, <style>, <pre>, <code>, <textarea>, <title> a atributy zůstávají beze změny.
+ */
+const typo = (t) => {
+  for (let i = 0; i < 2; i++) t = t.replace(/(^|[\s(„–]|&nbsp;)([kKsSvVzZoOuUaAiI]) /g, "$1$2&nbsp;");
+  for (let prev = ""; prev !== t; ) { prev = t; t = t.replace(/(\d) (?=\d{3}(?!\d))/g, "$1&nbsp;"); }
+  t = t.replace(/(\d) (?=(Kč|%|kg|g|l|ml|mm|dní|dnů|dny|hodin|minut|let|ks)(?=[\s.,;:)!?]|&nbsp;|$))/g, "$1&nbsp;");
+  t = t.replace(/(\d{1,2}\.) (\d{1,2}\.) (\d{4})/g, "$1&nbsp;$2&nbsp;$3");
+  return t.replace(/§ /g, "§&nbsp;");
+};
+const typography = (html) => html.split(/(<(script|style|pre|code|textarea|title)\b[\s\S]*?<\/\2>)/i)
+  .map((part, i) => (i % 3 === 0 ? part.replace(/>([^<]+)</g, (m, t) => `>${typo(t)}<`) : i % 3 === 1 ? part : ""))
+  .join("");
+/** Odkazy na úvod bez „index.html“ (kanonická adresa je …/): index.html → ./, ../vi/index.html → ../vi/ … */
+const homeLinks = (html) => html.replace(/href="((?:\.\.\/)*|\/)?((?:vi|en)\/)?index\.html(#[^"]*)?"/g, (_, up = "", lang = "", hash = "") => `href="${(up + lang) || "./"}${hash}"`);
+const decode = (s) => s.replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+// lastmod v sitemap: datum se mění, jen když se obsah stránky opravdu změnil.
+const SM = path.join(ROOT, "sitemap.xml");
+const oldMod = new Map(existsSync(SM) ? [...readFileSync(SM, "utf8").matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)].map((m) => [m[1], m[2]]) : []);
+const lastmod = {};
+const norm = (s) => s.replace(/\r\n/g, "\n");
+const warnings = [];
 
 // Překlad musí mít stejnou stavbu jako čeština – jinak by na stránce chyběl text.
 let shapeErrors = 0;
@@ -52,7 +77,7 @@ const FOOTER_OBORY = ["vecerka", "trafika", "pekarna", "drogerie", "gastro", "ho
 const indexable = Object.fromEntries(LANGS.map((l) => [l, []]));
 // Právní stránky mají závazné jen české znění: hreflang uvádí jen češtinu.
 const LEGAL_FILES = ["obchodni-podminky.html", "ochrana-osobnich-udaju.html"];
-// Staré adresy, které jen přesměrují na novou (meta refresh, noindex, canonical; do sitemap ne).
+// Staré adresy, které jen přesměrují na novou (okamžitý meta refresh a canonical; do sitemap ne).
 const REDIRECTS = [["ke-stazeni.html", "jak-zacit.html"]];
 let count = 0;
 
@@ -77,27 +102,41 @@ for (const lang of LANGS) {
         return `${attr}="${u.pathname}${u.search}${u.hash}"`;
       });
     }
-    writeFileSync(path.join(ROOT, dir, p.file), html);
+    if (lang === "cs") html = typography(html);
+    html = homeLinks(html);
+    const out = path.join(ROOT, dir, p.file);
+    const url = pageUrl(lang, p.file);
+    const changed = !existsSync(out) || norm(readFileSync(out, "utf8")) !== norm(html);
+    lastmod[url] = changed ? DAY : (oldMod.get(url) ?? DAY);
+    writeFileSync(out, html);
     count++;
-    if (!p.noindex && p.file !== "404.html") indexable[lang].push(p.file);
+    if (!p.noindex && p.file !== "404.html") {
+      indexable[lang].push(p.file);
+      // Titulek nad 60 znaků Google usekne; popisek pod 100 často přepíše, nad 160 zkrátí (právní stránky stranou).
+      const title = decode(html.match(/<title>([^<]*)<\/title>/)[1]);
+      const desc = decode(html.match(/<meta name="description" content="([^"]*)"/)[1]);
+      if ([...title].length > 60) warnings.push(`titulek ${[...title].length} znaků: ${dir}${p.file}`);
+      if (!LEGAL_FILES.includes(p.file) && ([...desc].length < 100 || [...desc].length > 160)) warnings.push(`popisek ${[...desc].length} znaků: ${dir}${p.file}`);
+    }
   }
   for (const [from, to] of REDIRECTS) {
-    writeFileSync(path.join(ROOT, dir, from), redirectPage(c, to, c.T.stazeni.movedTitle, c.T.stazeni.movedText));
+    writeFileSync(path.join(ROOT, dir, from), homeLinks(redirectPage(c, to, c.T.stazeni.movedTitle, c.T.stazeni.movedText)));
   }
 }
 console.log(`✓ ${count} stránek (${LANGS.join(", ")}), přesměrování: ${REDIRECTS.map(([f, t]) => `${f} → ${t}`).join(", ")}`);
+for (const w of warnings) console.warn(`! ${w}`);
 
 // Sitemap: každá indexovatelná adresa ve všech jazycích, s odkazy na jazykové verze (hreflang).
 const alternates = (file) => [...LANGS.filter((l) => indexable[l].includes(file)).map((l) => [l, pageUrl(l, file)]), ["x-default", pageUrl("cs", file)]]
   .map(([l, href]) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${href}"/>`).join("\n");
 const urls = LANGS.flatMap((lang) => indexable[lang].map((file) =>
-  `  <url>\n    <loc>${pageUrl(lang, file)}</loc>\n    <lastmod>${DAY}</lastmod>\n${alternates(file)}\n  </url>`));
+  `  <url>\n    <loc>${pageUrl(lang, file)}</loc>\n    <lastmod>${lastmod[pageUrl(lang, file)] ?? DAY}</lastmod>\n${alternates(file)}\n  </url>`));
 writeFileSync(path.join(ROOT, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.join("\n")}
 </urlset>
 `);
-writeFileSync(path.join(ROOT, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /aktualizace/\n\nSitemap: ${SITE}/sitemap.xml\n`);
+writeFileSync(path.join(ROOT, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /aktualizace/\nDisallow: /tools/\nDisallow: /README.md\nDisallow: /.htaccess\n\nSitemap: ${SITE}/sitemap.xml\n`);
 console.log(`✓ sitemap.xml (${urls.length} adres), robots.txt`);
 
 // Hash vloženého skriptu musí sedět s Content-Security-Policy v .htaccess, jinak ho prohlížeč na serveru nespustí.

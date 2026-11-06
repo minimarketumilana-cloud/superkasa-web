@@ -20,11 +20,13 @@
 <meta property="og:title" content="Contact – SuperKasa">
 <meta property="og:description" content="Contact the maker of the SuperKasa POS: Thanh Lam Nguyen, IČO 14161648, 1. května 117/141, 725 25 Ostrava, tel. +420 608 886 882.">
 <meta property="og:url" content="https://superkasa.cz/en/kontakt.html">
-<meta property="og:image" content="https://superkasa.cz/img/og.png">
+<meta property="og:image" content="https://superkasa.cz/img/og-en.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SuperKasa – POS system for shops, food service and services">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://superkasa.cz/img/og-en.jpg">
 <meta name="theme-color" content="#5c1a46">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -32,14 +34,15 @@
 <link rel="stylesheet" href="../css/style.css">
 <script>document.documentElement.className+=" js"</script>
 <script src="../js/site.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","url":"https://superkasa.cz/en/kontakt.html","mainEntity":{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","url":"https://superkasa.cz/","logo":{"@type":"ImageObject","url":"https://superkasa.cz/apple-touch-icon.png"},"image":"https://superkasa.cz/img/logo.png","telephone":"+420608886882","address":{"@type":"PostalAddress","streetAddress":"1. května 117/141","postalCode":"725 25","addressLocality":"Ostrava","addressCountry":"CZ"},"identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"14161648"}}}</script>
 </head>
 <body>
 <a class="skip" href="#obsah">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="SuperKasa – home page"><img src="../img/logo.png" alt="SuperKasa" width="200" height="40"></a>
+    <a class="brand" href="./" aria-label="SuperKasa – home page"><img src="../img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Website language"><a href="../kontakt.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="../vi/kontakt.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="../en/kontakt.html" hreflang="en" lang="en" title="English" aria-label="English" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
-    <a class="login-top" href="prihlaseni.html" aria-label="Sign in to the register" title="Sign in to the register"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Sign in</span></a>
+    <a class="login-top" href="prihlaseni.html" aria-label="Sign in to your till" title="Sign in to your till"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Sign in</span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main menu">
       <a href="obory.html">Who it's for</a>
@@ -49,6 +52,7 @@
       <a href="navody.html">Guides</a>
       <a href="jak-zacit.html">Get started</a>
       <a href="kontakt.html" aria-current="page">Contact</a>
+      <a class="nav-login" href="prihlaseni.html">Sign in</a>
       <a class="btn btn-primary nav-price" href="cenik.html">CZK 189 / month</a>
       <a class="btn btn-gold" href="https://app.superkasa.cz/">Try it free</a>
     </nav>
@@ -70,6 +74,12 @@
         <h2>Phone</h2>
         <p><a class="contact-big" href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
         <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="tel:+420608886882">Call</a></div>
+        <ul class="checks" style="margin-top:22px">
+          <li>Choosing a plan and equipment (printer, scanner, scales)</li>
+          <li>Setting up EET 2.0 and printing without a dialog</li>
+          <li>Moving your goods over and your first sale</li>
+        </ul>
+        <p class="mt-1"><a href="navod-krok-za-krokem.html">Step-by-step guides</a> · <a href="jak-zacit.html">Get started</a></p>
       </article>
       <article class="card">
         <div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 9-8 9 8"/><path d="M5 10v11h14V10M10 21v-6h4v6"/></svg></div>
@@ -99,7 +109,7 @@
       <div>
         <h2>Pages</h2>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="./">Home</a></li>
           <li><a href="obory.html">Who it's for</a></li>
           <li><a href="funkce.html">Features</a></li>
           <li><a href="cenik.html">Pricing</a></li>

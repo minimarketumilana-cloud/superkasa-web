@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /aktualizace/
+Disallow: /tools/
+Disallow: /README.md
+Disallow: /.htaccess
 
 Sitemap: https://superkasa.cz/sitemap.xml

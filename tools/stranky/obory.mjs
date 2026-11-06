@@ -20,7 +20,7 @@ export const GROUPS = {
 };
 
 // Sazby DPH v nápojích ve stravovací službě (skupiny Nealko a Káva a čaj) – podle data zřízení pokladny.
-const DRINKS_VAT = "Nealko nápoje a káva podávané v kavárně, hospodě nebo restauraci mají do konce roku 2026 sazbu 21 %, od 1. 1. 2027 12 %. S sebou zůstává 21 % – na pokladně přepnete Na místě / S sebou a doklad použije správnou sazbu. Pokladna při zřízení použije sazbu platnou k tomu dni – ověřte ji s účetní.";
+const DRINKS_VAT = "Nealko nápoje a káva podávané v kavárně, hospodě nebo restauraci mají do konce roku 2026 sazbu 21 %, od 1. 1. 2027 sazbu 12 %. Při prodeji s sebou zůstává 21 % – na pokladně přepnete Na místě / S sebou a doklad použije správnou sazbu. Pokladna při zřízení použije sazbu platnou k tomu dni – ověřte ji s účetní.";
 
 // Prodej na místě / s sebou a spropitné (zdarma v tarifu Gastro) – společný bod pro kavárnu, cukrárnu a hospodu.
 const GASTRO_2027 = ["cup", "Na místě / S sebou a spropitné", "Jedním přepínačem prodáte na místě nebo s sebou – doklad použije správnou sazbu DPH, cena se nemění. Spropitné zapíšete mimo tržbu a EET a pokladna hlídá limit 7 % pro osvobození od daně (od 1. 1. 2027). Obojí je v ceně tarifu."];
@@ -51,7 +51,7 @@ const yearly = (month) => Math.floor(month * 12 * 0.9);
 export const ADDONS = [
   { key: "attendance", icon: "clock", name: "Docházka a směny", desc: "Prodavači zapisují příchod a odchod PINem na pokladně. Rozpis směn na týden, plán proti odpracovaným hodinám a podklad pro mzdy.", priceMonth: 79, kinds: ["shop", "food", "service"] },
   { key: "loyalty", icon: "star", name: "Věrnost a dárkové poukazy", desc: "Zákaznická karta nebo telefon: body za nákup, sleva za body, stálá sleva pro VIP. Dárkové poukazy s čárovým kódem a zůstatkem; do EET 2.0 jdou podle § 17 odst. 2 zákona č. 180/2026 Sb. – ověřte s účetní.", priceMonth: 69, kinds: ["shop", "food", "service"] },
-  { key: "reservations", icon: "calendar", name: "Rezervace a termíny", desc: "Kalendář termínů pro salony a služby (kdo, kdy, jak dlouho, jaká služba) i rezervace stolů. Hlídá překryvy, službu z rezervace prodáte jedním ťuknutím.", priceMonth: 99, kinds: ["service", "food"] },
+  { key: "reservations", icon: "calendar", name: "Rezervace a termíny", desc: "Kalendář termínů pro salony a služby (kdo, kdy, jak dlouho, jaká služba) i rezervace stolů. Hlídá překryvy, službu z rezervace prodáte jedním klepnutím.", priceMonth: 99, kinds: ["service", "food"] },
   { key: "recipes", icon: "bowl", name: "Receptury a normy", desc: "Suroviny kávy, jídel, koktejlů a zákusků: prodej odepíše suroviny ze skladu, storno je vrátí. Nákladová cena, marže a kolik porcí ještě uděláte.", priceMonth: 79, kinds: ["food"] },
   { key: "control", icon: "eye", name: "Kontrola obsluhy", desc: "Storna, vratky, zrušené nákupy, odebrané položky, slevy, otevření zásuvky a rozdíly při uzávěrce po prodavačích – pokladna ukáže, kdo je výrazně nad průměrem.", priceMonth: 69, kinds: ["shop", "food", "service"] },
 ].map((a) => ({ ...a, priceYear: yearly(a.priceMonth) }));
@@ -74,7 +74,7 @@ export const OBORY = [
     highlights: [
       ["bottle", "Zálohy bez přemýšlení", "Záloha se dá s pivem propojit – pak se přidá sama a s odebráním piva zase odejde. Výkup lahví a přepravek je na jedné dlaždici."],
       ["scale", "Ovoce, zelenina a vážené zboží", "Pokladna se u zboží na kilogramy zeptá na hmotnost a přečte i čárové kódy ze štítků váhy."],
-      ["tag", "Cigarety za cenu z nálepky", "Tabák má pevnou cenu z tabákové nálepky, takže na něj omylem nejde dát sleva."],
+      ["tag", "Cigarety za cenu z nálepky", "Tabák má pevnou cenu z tabákové nálepky, takže na něj nelze omylem dát slevu."],
       ["calendar", "Expirace a co dochází", "Datum spotřeby při příjmu, přehled zboží, které brzy projde, a návrh objednávky podle prodejů."],
       ["printer", "Cenovky na pokladní tiskárně", "Cenovky s cenou za kilogram nebo litr, akční cenou a čárovým kódem. Vyberete jen zboží, kterému se změnila cena."],
       ["lang", "Obsluha ve vietnamštině", "Každý prodavač má svůj jazyk – čeština, vietnamština nebo angličtina. Doklad pro zákazníka je vždy česky.", "gold"],
@@ -101,7 +101,7 @@ export const OBORY = [
       ["scale", "Bylinky na svazky, zelenina na kg", "Svazky bylinek mají cenu za kus, pak choi, chilli nebo klíčky se váží. Pokladna přečte i čárové kódy ze štítků váhy."],
       ["db", "Názvy zboží podle čárového kódu", "Neznámý kód pokladna dohledá ve sdílené databázi SuperKasa – i s fotkou, často i u dovozového zboží. Jinak zkusí internet."],
       ["calendar", "Expirace čerstvého zboží", "Datum spotřeby u tofu, nudlí a mraženého při příjmu a přehled zboží, které brzy projde."],
-      ["bottle", "Zálohy na láhve a přepravky", "Zálohy jsou zapnuté. Zálohu jde s pivem propojit, aby se přidávala sama, výkup lahví je na jedné dlaždici."],
+      ["bottle", "Zálohy na láhve a přepravky", "Zálohy jsou zapnuté. Zálohu můžete s pivem propojit, aby se přidávala sama, výkup lahví je na jedné dlaždici."],
       ["printer", "Cenovky na pokladní tiskárně", "Cenovky s cenou za kilogram nebo litr, akční cenou a čárovým kódem."],
     ],
   },
@@ -114,12 +114,12 @@ export const OBORY = [
     groups: ["tabak", "ecig", "tisk", "napoje", "sladkosti", "alkohol", "tasky"],
     pages: ["tabak", "tisk"],
     features: ["stock", "labels", "promo", "display", "qr"],
-    items: "Tašky. Zboží naskenujete čtečkou – název pokladna dohledá ve sdílené databázi SuperKasa nebo na internetu, případně ho převezmete z CSV.",
+    items: "Připravené jsou jen tašky (igelitová a velká). Zboží naskenujete čtečkou – název pokladna dohledá ve sdílené databázi SuperKasa nebo na internetu, případně ho převezmete z CSV.",
     tiles: [["g-tabak", "Tabák", null], ["g-ecig", "E-cigarety", null], ["g-tisk", "Noviny a časopisy", null], ["g-napoje", "Nealko nápoje", null], ["g-sladkosti", "Sladkosti", null], ["g-alkohol", "Alkohol", null], ["taska", "Igelitová taška", 2], ["g-tasky", "Taška velká", 5]],
     cart: [["Cigarety (cena z nálepky)", 1, 165], ["Noviny", 1, 25], ["Igelitová taška", 1, 2]],
     illustrativeCart: true,
     highlights: [
-      ["tag", "Pevná cena tabáku", "Cigarety se prodávají za cenu z tabákové nálepky a sleva na ně nejde dát."],
+      ["tag", "Pevná cena tabáku", "Cigarety se prodávají za cenu z tabákové nálepky a slevu na ně dát nelze."],
       ["db", "Názvy podle čárového kódu", "Neznámý kód pokladna dohledá ve sdílené databázi SuperKasa, která zná i cigarety. Jinak zkusí internet."],
       ["box", "Sklad a co dochází", "Příjem zboží skenováním, inventura regálu a návrh objednávky podle prodejů."],
       ["percent", "Akce a množstevní ceny", "Akce do zvoleného data a levnější kus od určitého počtu."],
@@ -161,7 +161,7 @@ export const OBORY = [
       ["scale", "Prodej na kilogramy", "U zboží na kg se pokladna zeptá na hmotnost a sama spočítá cenu."],
       ["scan", "Štítky z váhy", "Čárové kódy ze štítků váhy (s hmotností nebo cenou) pokladna přečte. Formát si nastavíte a vyzkoušíte ve Správě."],
       ["tag", "Cenovky s cenou za kg", "Cenovky s cenou za kilogram a akční cenou na pokladní tiskárně nebo na A4."],
-      ["touch", "Obrázky na dlaždicích", "Ovoce a zelenina mají kreslené obrázky, takže je obsluha najde i bez čtení."],
+      ["touch", "Obrázky na dlaždicích", "Ovoce a zelenina mají na dlaždicích skutečné fotky, takže je obsluha najde i bez čtení."],
     ],
   },
   {
@@ -192,7 +192,7 @@ export const OBORY = [
     groups: ["drogerie", "domaci", "krmivo", "hracky", "tasky"],
     pages: ["drogerie", "domaci"],
     features: ["stock", "labels", "promo", "display", "qr"],
-    items: "Tašky. Zboží naskenujete čtečkou – název a fotku navrhne pokladna podle čárového kódu, nebo ho převezmete z CSV.",
+    items: "Připravené jsou jen tašky (igelitová a velká). Zboží naskenujete čtečkou – název a fotku navrhne pokladna podle čárového kódu, nebo ho převezmete z CSV.",
     tiles: [["g-drogerie", "Drogerie", null], ["g-domaci", "Domácí potřeby", null], ["g-krmivo", "Krmivo pro zvířata", null], ["g-hracky", "Hračky", null], ["taska", "Igelitová taška", 2], ["g-tasky", "Taška velká", 5]],
     cart: [["Šampon 400 ml", 1, 89.9], ["Prací gel 1,5 l", 1, 199], ["Igelitová taška", 1, 2]],
     illustrativeCart: true,
@@ -340,12 +340,12 @@ export const OBORY = [
     key: "obchod", file: "pokladna-obchod.html", kind: "shop", tariff: "obchod", art: "g-domaci",
     card: "Jiný obchod", cardDesc: "Dárky, hračky, hobby, sport…",
     title: "Pokladna pro dárky, hračky, hobby a další obchody",
-    desc: "Pro dárky, hračky, hobby, sport, železářství a další obchody – skupiny si doplníte sami, necháte je navrhnout podle popisu sortimentu, nebo zboží převezmete z CSV.",
+    desc: "Pokladna pro dárky, hračky, hobby a železářství: skupiny zboží si doplníte sami, necháte navrhnout, nebo převezmete z CSV.",
     preset: "Jiný obchod",
     groups: ["domaci", "darky", "hracky", "tasky"],
     pages: [],
     features: ["stock", "labels", "promo", "display", "qr"],
-    items: "Tašky. Skupiny a zboží si doplníte sami, nebo je převezmete z CSV (i z exportu jiné pokladny).",
+    items: "Připravené jsou jen tašky (igelitová a velká). Skupiny a zboží si doplníte sami, nebo je převezmete z CSV (i z exportu jiné pokladny).",
     tiles: [["g-domaci", "Domácí potřeby", null], ["g-darky", "Dárky a dekorace", null], ["g-hracky", "Hračky", null], ["g-ostatni", "Vaše skupina", null], ["taska", "Igelitová taška", 2], ["g-tasky", "Taška velká", 5]],
     cart: [["Hrnek s potiskem", 1, 149], ["Přání", 2, 39], ["Taška velká", 1, 5]],
     illustrativeCart: true,
@@ -360,7 +360,7 @@ export const OBORY = [
     key: "gastro", file: "pokladna-kavarna-bistro.html", kind: "food", tariff: "gastro", art: "g-kava",
     card: "Kavárna, bistro, stánek", cardDesc: "Káva, zákusky, jídlo, nápoje",
     title: "Pokladna pro kavárny, bistra a stánky",
-    desc: "Rychlý prodej kávy, zákusků, jídla a nápojů na dotykové obrazovce, zákaznický displej a QR platby. Sklad, zálohy i stoly jde zapnout.",
+    desc: "Rychlý prodej kávy, zákusků, jídla a nápojů na dotykové obrazovce, zákaznický displej a QR platby. Sklad, zálohy i stoly můžete zapnout.",
     preset: "Kavárna, bistro, stánek",
     groups: ["kava", "zakusky", "jidlo", "nealko", "alkohol"],
     pages: ["kava", "zakusky", "jidlo", "nealko"],
@@ -371,7 +371,7 @@ export const OBORY = [
     highlights: [
       ["touch", "Rychlý prodej", "Káva, zákusky a jídla na velkých dlaždicích. Bez skladu, takže objednávku namarkujete na pár dotyků."],
       ["monitor", "Zákaznický displej", "Zákazník vidí, co platí, a může zaplatit QR kódem z druhé obrazovky."],
-      ["percent", "Akce", "Akce do data a cena od určitého počtu kusů, třeba levnější káva s sebou."],
+      ["percent", "Akce", "Akce do data a cena od určitého počtu kusů, třeba dvě kávy za zvýhodněnou cenu."],
       ["box", "Sklad, zálohy a stoly podle potřeby", "Když chcete hlídat zásoby, vykupovat láhve nebo nosit ke stolům, zapnete v tarifu Gastro sklad, zálohy na obaly nebo stoly a účty."],
       GASTRO_2027,
     ],
@@ -412,18 +412,18 @@ export const OBORY = [
     groups: ["pivo", "nealko", "alkohol", "kava", "jidlo", "zalohy"],
     pages: ["pivo", "nealko", "alkohol", "jidlo"],
     features: ["tables", "tips", "deposits", "promo", "display", "qr"],
-    items: "Nápojový lístek a jídla – pivo 10° a 12°, nealko, rum, Becherovka, víno, káva, polévka, guláš, smažený sýr, utopenec – a zálohy. K tomu 13 stolů: Stůl 1–10 v sále, Bar a dva stoly na zahrádce.",
+    items: "Nápojový lístek a jídla – pivo 10° a 12°, nealko, rum, Becherovka, víno, káva, polévka, guláš, smažený sýr, utopenec – a zálohy. K tomu 13 stolů: stoly 1–10 v sále, bar a dva stoly na zahrádce.",
     mockSearch: "Stůl 4 · účet",
     mockPay: "Zaplatit účet",
     tiles: [["g-pivo", "Pivo 10° 0,5 l", 45], ["g-pivo", "Pivo 12° 0,5 l", 55], ["g-nealko", "Kofola 0,5 l", 45], ["g-alkohol", "Rum 4 cl", 45], ["g-alkohol", "Becherovka 4 cl", 50], ["g-alkohol", "Víno bílé 0,2 l", 55], ["g-jidlo", "Polévka dne", 59], ["g-jidlo", "Guláš s knedlíkem", 189], ["g-jidlo", "Utopenec", 69]],
     cart: [["Pivo 12° 0,5 l", 4, 55], ["Guláš s knedlíkem", 1, 189], ["Kofola 0,5 l", 1, 45]],
     highlights: [
       ["table", "Stoly a účty na stůl", "Pokladna začíná na obrazovce stolů po místnostech – sál, bar, zahrádka. Vidíte útratu a čas od poslední objednávky. U stolu může být víc účtů a host u baru má účet na jméno."],
-      ["network", "Pokladna i tablet číšníka", "Účty jsou uložené na hlavním počítači, ne v prohlížeči. Objednávku přidáte z tabletu u stolu a pokladna u výčepu ji hned vidí."],
+      ["network", "Pokladna i tablet číšníka", "Účty ke stolům se ukládají na serveru SuperKasa, ne v jednom zařízení. Objednávku přidáte z tabletu u stolu a pokladna u výčepu ji hned vidí."],
       ["split", "Rozdělit a přesunout", "Každý host zaplatí své – vyberete jeho položky. Položky nebo celý účet přesunete k jinému stolu nebo na nový účet."],
       ["printer", "Bony do kuchyně a na výčep", "Po objednání vyjede bon na pokladní tiskárně v kuchyni nebo u výčepu, i s poznámkou „bez cibule“. Při odebrání položky vyjede storno bon."],
       ["eet", "Doklad a EET až při placení", "Účet na stole není doklad. Doklad a odeslání do EET 2.0 vzniknou až při zaplacení – hotově, kartou, QR nebo kombinovaně."],
-      ["bottle", "Zálohy na láhve a přepravky", "Zálohy jsou zapnuté. Zálohu jde s lahvovým pivem propojit, aby se přidávala sama."],
+      ["bottle", "Zálohy na láhve a přepravky", "Zálohy jsou zapnuté. Zálohu můžete s lahvovým pivem propojit, aby se přidávala sama."],
       GASTRO_2027,
     ],
     addons: [
@@ -433,7 +433,7 @@ export const OBORY = [
     ],
     notes: [
       "Zatím chybí plánek stolů podle rozmístění v sále a rozdělení účtu rovným dílem. Bony se tisknou přímým tiskem na pokladní tiskárnu.",
-      "Odebrání objednané položky chce důvod. Vlastní položku jde opravit do 3 minut, později ji schvaluje vedoucí PINem – všechno se zapisuje.",
+      "Odebrání objednané položky vyžaduje důvod. Vlastní položku můžete opravit do 3 minut, později ji schvaluje vedoucí PINem – všechno se zapisuje.",
       DRINKS_VAT + " Alkohol a pivo mají 21 %.",
     ],
   },
@@ -449,7 +449,7 @@ export const OBORY = [
     items: "Střih pánský, dámský a dětský, mytí a foukaná, barvení a úprava vousů.",
     tiles: [["g-kadernictvi", "Střih pánský", 350], ["g-kadernictvi", "Střih dámský", 550], ["g-kadernictvi", "Střih dětský", 250], ["g-kadernictvi", "Mytí a foukaná", 300], ["g-kadernictvi", "Barvení", 900], ["g-kadernictvi", "Úprava vousů", 200], ["g-drogerie", "Drogerie", null]],
     cart: [["Střih dámský", 1, 550], ["Barvení", 1, 900]],
-    addons: [["reservations", "objednávky klientů po kadeřnicích, hlídání překryvů a střih z rezervace prodáte jedním ťuknutím."]],
+    addons: [["reservations", "objednávky klientů po kadeřnicích, hlídání překryvů a střih z rezervace prodáte jedním klepnutím."]],
   },
   {
     key: "nehty", file: "pokladna-nehtove-studio.html", kind: "service", tariff: "sluzby", art: "g-nehty",
@@ -463,7 +463,7 @@ export const OBORY = [
     items: "Manikúra, gelové nehty nové i doplnění, gel lak, akrylové nehty, pedikúra, zdobení a odstranění gelu.",
     tiles: [["g-nehty", "Manikúra klasická", 350], ["g-nehty", "Gelové nehty – nové", 750], ["g-nehty", "Gelové nehty – doplnění", 590], ["g-nehty", "Gel lak", 450], ["g-nehty", "Akrylové nehty", 850], ["g-nehty", "Pedikúra", 550], ["g-nehty", "Zdobení (za nehet)", 20], ["g-nehty", "Odstranění gelu", 200], ["g-drogerie", "Drogerie", null]],
     cart: [["Gelové nehty – doplnění", 1, 590], ["Zdobení (za nehet)", 4, 20]],
-    addons: [["reservations", "termíny klientek po nehtařkách, hlídání překryvů a službu z rezervace prodáte jedním ťuknutím."]],
+    addons: [["reservations", "termíny klientek po nehtařkách, hlídání překryvů a službu z rezervace prodáte jedním klepnutím."]],
   },
   {
     key: "kosmetika", file: "pokladna-kosmetika.html", kind: "service", tariff: "sluzby", art: "g-kosmetika",
@@ -597,6 +597,7 @@ export function csOverlay() {
     serviceNotes: [...SERVICE_NOTES],
     obory: Object.fromEntries(OBORY.map((o) => [o.key, {
       card: o.card, cardDesc: o.cardDesc, title: o.title, desc: o.desc, preset: o.preset, items: o.items,
+      ...(o.metaTitle ? { metaTitle: o.metaTitle } : {}),
       ...(o.mockSearch ? { mockSearch: o.mockSearch, mockPay: o.mockPay } : {}),
       ...(o.highlights ? { highlights: texts(o.highlights) } : {}),
       ...(o.addons ? { addons: o.addons.map(([, txt]) => txt) } : {}),

@@ -1,5 +1,6 @@
 // Ceník, EET 2.0, Jak začít, Přihlášení a Kontakt. Texty jsou ve slovníku c.T.<stránka> (tools/stranky/texty/<jazyk>.mjs).
-import { CONTACT_EMAIL, LOGIN_LIVE, PROVIDER, REGISTER_URL, card, cta, icon } from "./parts.mjs";
+import { CONTACT_EMAIL, LOGIN_LIVE, OFFERS, ORG, ORG_ID, PROVIDER, REGISTER_URL, SITE, card, cta, icon, plain } from "./parts.mjs";
+import { pageUrl } from "./i18n.mjs";
 import { FEATURE_ORDER } from "./obory.mjs";
 
 /** Počet ikon musí sedět s počtem karet v textech – jinak by se karta potichu nevykreslila. */
@@ -35,6 +36,7 @@ export const cenik = (c) => {
         <p class="who">${t.planText[key]}</p>
         <div class="p">${t.planPrice}</div>
         <div class="py">${t.planYear}</div>
+        ${LOGIN_LIVE ? `<a class="btn ${all ? "btn-gold" : "btn-ghost"} plan-btn" href="${REGISTER_URL}">${c.T.common.registerBtn}</a>` : ""}
         <ul class="checks">
           ${[...t.planBase, ...tar.features.map((f) => FEATURES[f][0]), ...(key === "gastro" ? [t.planExtraGastro] : [])].map((x) => `<li>${x}</li>`).join("\n          ")}
         </ul>
@@ -63,8 +65,18 @@ export const cenik = (c) => {
     desc: t.desc,
     jsonld: {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: t.faqLd.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
+      "@graph": [
+        { "@type": "FAQPage", mainEntity: t.faq.map(([q, a]) => ({ "@type": "Question", name: plain(q), acceptedAnswer: { "@type": "Answer", text: plain(a) } })) },
+        {
+          "@type": "SoftwareApplication",
+          "@id": `${SITE}/#app`,
+          name: "SuperKasa",
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web browser (Windows, Android, iOS, macOS)",
+          provider: { "@id": ORG_ID },
+          offers: OFFERS(pageUrl(c.lang, "cenik.html"), c.T.index),
+        },
+      ],
     },
     body: `
 <section class="page-head">
@@ -80,7 +92,7 @@ export const cenik = (c) => {
       <div class="price-box">
         <div class="amount">${t.boxAmount}</div>
         <div class="year">${t.boxYear}</div>
-        <span class="tag">${t.boxTag}</span>
+        ${LOGIN_LIVE ? `<a class="btn btn-gold btn-lg price-cta" href="${REGISTER_URL}">${c.T.common.registerBtn}</a><p class="price-trial">${t.boxTag}</p>` : `<span class="tag">${t.boxTag}</span>`}
         <p>${t.boxText}</p>
       </div>
       <div class="card">
@@ -94,11 +106,10 @@ export const cenik = (c) => {
     <h2>${t.tariffsTitle}</h2>
     <div class="grid grid-3">
       ${PLAN_KEYS.map(plan).join("")}
-      <article class="card plan" style="background:var(--cream)">
-        <h3>${t.unsure[0]}</h3>
-        <p class="who">${t.unsure[1]}</p>
-        <div class="actions" style="margin-top:auto"><a class="btn btn-ghost" href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></div>
-      </article>
+    </div>
+    <div class="card plan-unsure">
+      <div><h3>${t.unsure[0]}</h3><p>${t.unsure[1]}</p></div>
+      <a class="btn btn-ghost" href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a>
     </div>
   </div>
 </section>
@@ -158,7 +169,7 @@ export const cenik = (c) => {
         <h3>${t.trial[0]}</h3>
         <p>${t.trial[1]}</p>
         <p>${t.trial[2]}</p>
-        <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="jak-zacit.html">${c.T.login.pcBtn}</a>${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${c.T.common.registerCta}</a>` : ""}</div>
+        <div class="actions" style="margin-top:8px">${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${c.T.common.registerBtn}</a>` : ""}<a class="btn btn-ghost" href="jak-zacit.html">${c.T.login.pcBtn}</a></div>
       </article>
       <article class="card">
         ${icon("shield")}
@@ -178,7 +189,7 @@ export const cenik = (c) => {
     </details>`).join("\n    ")}
   </div>
 </section>
-${cta(c, t.cta[0], t.cta[1])}`,
+${cta(c, t.cta[0], t.cta[1], { pricing: false })}`,
   };
 };
 
@@ -271,17 +282,26 @@ export const stazeni = (c) => {
 
 <section class="section" style="padding-top:32px">
   <div class="wrap">
+    <ol class="steps">
+      ${c.T.index.steps.map(([s, txt]) => `<li><strong>${s}</strong>${txt}</li>`).join("\n      ")}
+    </ol>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
     <div class="grid grid-2">
       <article class="card">
         ${icon("monitor")}
         <h2>${t.appTitle}</h2>
         <p>${t.appMeta}</p>
         <div class="actions" style="margin-top:12px">
-          <a class="btn btn-primary" href="${REGISTER_URL}">${t.download}</a>
+          <a class="btn btn-gold" href="${REGISTER_URL}">${t.download}</a>
           <a class="btn btn-ghost" href="tel:+420608886882">${c.T.common.call}</a>
         </div>
       </article>
       <article class="card">
+        ${icon("refresh", "gold")}
         <h2>${t.doesTitle}</h2>
         <ul class="checks">
           ${t.does.map((x) => `<li>${x}</li>`).join("\n          ")}
@@ -291,7 +311,7 @@ export const stazeni = (c) => {
   </div>
 </section>
 
-<section class="section alt" id="vybaveni">
+<section class="section" id="vybaveni">
   <div class="wrap">
     <div class="section-head"><h2>${t.needTitle}</h2></div>
     <div class="grid grid-3">
@@ -358,6 +378,7 @@ export const kontakt = (c) => {
     current: "kontakt.html",
     title: t.title,
     desc: t.desc,
+    jsonld: { "@context": "https://schema.org", "@type": "ContactPage", url: pageUrl(c.lang, "kontakt.html"), mainEntity: ORG },
     body: `
 <section class="page-head">
   <div class="wrap">
@@ -375,6 +396,10 @@ export const kontakt = (c) => {
         <p><a class="contact-big" href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>${CONTACT_EMAIL ? `
         <p><a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a></p>` : ""}
         <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="tel:+420608886882">${c.T.common.call}</a></div>
+        <ul class="checks" style="margin-top:22px">
+          ${t.helpItems.map((x) => `<li>${x}</li>`).join("\n          ")}
+        </ul>
+        <p class="mt-1"><a href="navod-krok-za-krokem.html">${t.guidesLink}</a> · <a href="jak-zacit.html">${t.startLink}</a></p>
       </article>
       <article class="card">
         ${icon("home", "gold")}

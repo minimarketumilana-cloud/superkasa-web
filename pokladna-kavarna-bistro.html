@@ -5,8 +5,8 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-pfgOMgfVZwm2ODyms34QYW9h8EwicylhV77q5LHK8c0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://app.superkasa.cz; base-uri 'self'; form-action 'self' https://app.superkasa.cz">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pokladna pro kavárny, bistra a stánky – SuperKasa</title>
-<meta name="description" content="Rychlý prodej kávy, zákusků, jídla a nápojů na dotykové obrazovce, zákaznický displej a QR platby. Sklad, zálohy i stoly jde zapnout.">
+<title>Pokladna pro kavárny, bistra a stánky s EET 2.0 – SuperKasa</title>
+<meta name="description" content="Rychlý prodej kávy, zákusků, jídla a nápojů na dotykové obrazovce, zákaznický displej a QR platby. Sklad, zálohy i stoly můžete zapnout.">
 <link rel="canonical" href="https://superkasa.cz/pokladna-kavarna-bistro.html">
 <link rel="alternate" hreflang="cs" href="https://superkasa.cz/pokladna-kavarna-bistro.html">
 <link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/pokladna-kavarna-bistro.html">
@@ -17,14 +17,16 @@
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:locale:alternate" content="vi_VN">
 <meta property="og:locale:alternate" content="en_GB">
-<meta property="og:title" content="Pokladna pro kavárny, bistra a stánky – SuperKasa">
-<meta property="og:description" content="Rychlý prodej kávy, zákusků, jídla a nápojů na dotykové obrazovce, zákaznický displej a QR platby. Sklad, zálohy i stoly jde zapnout.">
+<meta property="og:title" content="Pokladna pro kavárny, bistra a stánky s EET 2.0 – SuperKasa">
+<meta property="og:description" content="Rychlý prodej kávy, zákusků, jídla a nápojů na dotykové obrazovce, zákaznický displej a QR platby. Sklad, zálohy i stoly můžete zapnout.">
 <meta property="og:url" content="https://superkasa.cz/pokladna-kavarna-bistro.html">
-<meta property="og:image" content="https://superkasa.cz/img/og.png">
+<meta property="og:image" content="https://superkasa.cz/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SuperKasa – pokladna pro obchody, gastro a služby">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://superkasa.cz/img/og.jpg">
 <meta name="theme-color" content="#5c1a46">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -38,7 +40,7 @@
 <a class="skip" href="#obsah">Přeskočit na obsah</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
+    <a class="brand" href="./" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Jazyk webu"><a href="pokladna-kavarna-bistro.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="vi/pokladna-kavarna-bistro.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="en/pokladna-kavarna-bistro.html" hreflang="en" lang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
     <a class="login-top" href="prihlaseni.html" aria-label="Přihlásit se do pokladny" title="Přihlásit se do pokladny"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Přihlásit</span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
@@ -50,7 +52,8 @@
       <a href="navody.html">Návody</a>
       <a href="jak-zacit.html">Jak začít</a>
       <a href="kontakt.html">Kontakt</a>
-      <a class="btn btn-primary nav-price" href="cenik.html">189 Kč / měsíc</a>
+      <a class="nav-login" href="prihlaseni.html">Přihlásit</a>
+      <a class="btn btn-primary nav-price" href="cenik.html">189 Kč/měsíc</a>
       <a class="btn btn-gold" href="https://app.superkasa.cz/">Vyzkoušet zdarma</a>
     </nav>
   </div>
@@ -59,33 +62,33 @@
 <section class="page-head obor-head">
   <div class="wrap obor-hero">
     <div>
-      <nav class="crumbs" aria-label="Drobečková navigace"><a href="index.html">Úvod</a><span aria-hidden="true">›</span><a href="obory.html">Pro koho</a><span aria-hidden="true">›</span><span aria-current="page">Kavárna, bistro, stánek</span></nav>
-      <div class="obor-badge"><span class="obor-art sm"><img src="img/obory/g-kava.svg" alt="" width="40" height="40"></span><span>Tarif <strong>Gastro</strong> · 189 Kč měsíčně s DPH</span></div>
-      <h1>Pokladna pro kavárny, bistra a stánky</h1>
-      <p class="lead">Rychlý prodej kávy, zákusků, jídla a nápojů na dotykové obrazovce, zákaznický displej a QR platby. Sklad, zálohy i stoly jde zapnout.</p>
+      <nav class="crumbs" aria-label="Drobečková navigace"><a href="./">Úvod</a><span aria-hidden="true">›</span><a href="obory.html">Pro koho</a><span aria-hidden="true">›</span><span aria-current="page">Kavárna, bistro, stánek</span></nav>
+      <div class="obor-badge"><span class="obor-art sm"><img src="img/obory/g-kava.svg" alt="" width="40" height="40"></span><span>Tarif <strong>Gastro</strong> · 189&nbsp;Kč měsíčně s&nbsp;DPH</span></div>
+      <h1>Pokladna pro kavárny, bistra a&nbsp;stánky</h1>
+      <p class="lead">Rychlý prodej kávy, zákusků, jídla a&nbsp;nápojů na dotykové obrazovce, zákaznický displej a&nbsp;QR platby. Sklad, zálohy i&nbsp;stoly můžete zapnout.</p>
       <div class="actions">
         <a class="btn btn-gold" href="https://app.superkasa.cz/">Vyzkoušet zdarma</a>
         <a class="btn btn-ghost" href="cenik.html">Ceník</a>
       </div>
-      <p class="hero-note">10 dní zkouška zdarma. Pokladnu <a href="https://app.superkasa.cz/">založíte v prohlížeči</a>, nic se nestahuje ani neinstaluje.</p>
+      <p class="hero-note">10&nbsp;dní zkouška zdarma. Pokladnu <a href="https://app.superkasa.cz/">založíte v&nbsp;prohlížeči</a>, nic se nestahuje ani neinstaluje.</p>
     </div>
     
     <figure class="pos">
       <div class="pos-screen" aria-hidden="true">
         <div class="pos-main">
           <div class="pos-search">Hledat nebo naskenovat…</div>
-          <div class="pos-tiles"><div class="pt"><img src="img/obory/g-kava.svg" alt="" width="34" height="34"><span>Espresso</span><b>49,00</b></div><div class="pt"><img src="img/obory/g-kava.svg" alt="" width="34" height="34"><span>Cappuccino</span><b>65,00</b></div><div class="pt"><img src="img/obory/g-kava.svg" alt="" width="34" height="34"><span>Caffè latte</span><b>72,00</b></div><div class="pt"><img src="img/obory/g-kava.svg" alt="" width="34" height="34"><span>Čaj</span><b>45,00</b></div><div class="pt"><img src="img/obory/g-jidlo.svg" alt="" width="34" height="34"><span>Polévka dne</span><b>59,00</b></div><div class="pt"><img src="img/obory/g-jidlo.svg" alt="" width="34" height="34"><span>Menu dne</span><b>149,00</b></div><div class="pt"><img src="img/obory/g-jidlo.svg" alt="" width="34" height="34"><span>Bageta plněná</span><b>79,00</b></div><div class="pt"><img src="img/obory/g-zakusky.svg" alt="" width="34" height="34"><span>Zákusek</span><b>59,00</b></div><div class="pt"><img src="img/obory/g-nealko.svg" alt="" width="34" height="34"><span>Domácí limonáda 0,4 l</span><b>59,00</b></div></div>
-          <div class="pos-tabs"><span class="on">Káva a čaj</span><span>Zákusky a dorty</span><span>Jídlo</span><span>Nealko</span></div>
+          <div class="pos-tiles"><div class="pt"><span>Espresso</span><b>49,00</b></div><div class="pt"><span>Cappuccino</span><b>65,00</b></div><div class="pt"><span>Caffè latte</span><b>72,00</b></div><div class="pt"><span>Čaj</span><b>45,00</b></div><div class="pt"><span>Polévka dne</span><b>59,00</b></div><div class="pt"><span>Menu dne</span><b>149,00</b></div><div class="pt"><span>Bageta plněná</span><b>79,00</b></div><div class="pt"><span>Zákusek</span><b>59,00</b></div><div class="pt"><span>Domácí limonáda 0,4&nbsp;l</span><b>59,00</b></div></div>
+          <div class="pos-tabs"><span class="on">Káva a&nbsp;čaj</span><span>Zákusky a&nbsp;dorty</span><span>Jídlo</span><span>Nealko</span></div>
         </div>
         <div class="pos-cart">
           <div class="row"><span>Cappuccino <i>2×</i></span><span>130,00</span></div>
           <div class="row"><span>Zákusek <i>2×</i></span><span>118,00</span></div>
           <div class="row"><span>Bageta plněná</span><span>79,00</span></div>
-          <div class="sum"><span>Celkem</span><span>327,00 Kč</span></div>
+          <div class="sum"><span>Celkem</span><span>327,00&nbsp;Kč</span></div>
           <div class="pay">Zaplatit</div>
         </div>
       </div>
-      <figcaption>Ilustrační náhled s ukázkovými položkami a orientačními cenami z nastavení „Kavárna, bistro, stánek“.</figcaption>
+      <figcaption>Ilustrační náhled s&nbsp;ukázkovými položkami a&nbsp;orientačními cenami z&nbsp;nastavení „Kavárna, bistro, stánek“.</figcaption>
     </figure>
   </div>
 </section>
@@ -94,12 +97,12 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Co bude připravené hned po spuštění</h2>
-      <p>Při prvním spuštění vyberete typ provozu „Kavárna, bistro, stánek“ a pokladna si sama připraví tohle. Všechno jde později změnit ve Správě.</p>
+      <p>Při prvním spuštění vyberete typ provozu „Kavárna, bistro, stánek“ a&nbsp;pokladna si sama připraví tohle. Všechno můžete později změnit ve Správě.</p>
     </div>
     <div class="grid grid-3">
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Skupiny zboží</h3><ul class="gchips"><li><img src="img/obory/g-kava.svg" alt="" width="26" height="26">Káva a čaj</li><li><img src="img/obory/g-zakusky.svg" alt="" width="26" height="26">Zákusky a dorty</li><li><img src="img/obory/g-jidlo.svg" alt="" width="26" height="26">Jídlo</li><li><img src="img/obory/g-nealko.svg" alt="" width="26" height="26">Nealko</li><li><img src="img/obory/g-alkohol.svg" alt="" width="26" height="26">Alkohol</li></ul><p class="small mt-1">K tomu skupiny Nezařazeno 12 % a 21 %. Sazby DPH ve skupinách jsou návrh – zkontrolujte je s účetní.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Dlaždice a ukázkové položky</h3><p>Karty dole na prodejní obrazovce: <strong>Káva a čaj, Zákusky a dorty, Jídlo, Nealko</strong>.</p><p>Espresso, cappuccino, caffè latte, čaj, horká čokoláda, polévka dne, menu dne, plněná bageta, toast, zákusek, dort – řez, domácí limonáda, minerální voda a džus.</p><p class="small">Ceny jsou orientační – upravíte je přímo z prodejní obrazovky.</p></article>
-      <article class="card"><div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Zapnuté funkce</h3><ul class="checks"><li>Akce a množstevní ceny</li><li>Zákaznický displej</li><li>QR platby</li><li>Spropitné</li></ul><p class="small mt-1">Prodej, EET 2.0, účtenky, hotovost a uzávěrka fungují vždy.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Skupiny zboží</h3><ul class="gchips"><li>Káva a&nbsp;čaj</li><li>Zákusky a&nbsp;dorty</li><li>Jídlo</li><li>Nealko</li><li>Alkohol</li></ul><p class="small mt-1">K&nbsp;tomu skupiny Nezařazeno 12&nbsp;% a&nbsp;21&nbsp;%. Sazby DPH ve skupinách jsou návrh – zkontrolujte je s&nbsp;účetní.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Dlaždice a&nbsp;ukázkové položky</h3><p>Karty dole na prodejní obrazovce: <strong>Káva a&nbsp;čaj, Zákusky a&nbsp;dorty, Jídlo, Nealko</strong>.</p><p>Espresso, cappuccino, caffè latte, čaj, horká čokoláda, polévka dne, menu dne, plněná bageta, toast, zákusek, dort – řez, domácí limonáda, minerální voda a&nbsp;džus.</p><p class="small">Ceny jsou orientační – upravíte je přímo z&nbsp;prodejní obrazovky.</p></article>
+      <article class="card"><div class="ico gold" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Zapnuté funkce</h3><ul class="checks"><li>Akce a&nbsp;množstevní ceny</li><li>Zákaznický displej</li><li>QR platby</li><li>Spropitné</li></ul><p class="small mt-1">Prodej, EET 2.0, účtenky, hotovost a&nbsp;uzávěrka fungují vždy.</p></article>
     </div>
   </div>
 </section>
@@ -108,11 +111,11 @@
   <div class="wrap">
     <div class="section-head"><h2>Co se vám bude hodit</h2></div>
     <div class="grid grid-3">
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Rychlý prodej</h3><p>Káva, zákusky a jídla na velkých dlaždicích. Bez skladu, takže objednávku namarkujete na pár dotyků.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Zákaznický displej</h3><p>Zákazník vidí, co platí, a může zaplatit QR kódem z druhé obrazovky.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></div><h3>Akce</h3><p>Akce do data a cena od určitého počtu kusů, třeba levnější káva s sebou.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Sklad, zálohy a stoly podle potřeby</h3><p>Když chcete hlídat zásoby, vykupovat láhve nebo nosit ke stolům, zapnete v tarifu Gastro sklad, zálohy na obaly nebo stoly a účty.</p></article>
-      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6h14l-1.6 15H6.6z"/><path d="M4 6h16M8 6l1-3h6l1 3M6 11h12"/></svg></div><h3>Na místě / S sebou a spropitné</h3><p>Jedním přepínačem prodáte na místě nebo s sebou – doklad použije správnou sazbu DPH, cena se nemění. Spropitné zapíšete mimo tržbu a EET a pokladna hlídá limit 7 % pro osvobození od daně (od 1. 1. 2027). Obojí je v ceně tarifu.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Rychlý prodej</h3><p>Káva, zákusky a&nbsp;jídla na velkých dlaždicích. Bez skladu, takže objednávku namarkujete na pár dotyků.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Zákaznický displej</h3><p>Zákazník vidí, co platí, a&nbsp;může zaplatit QR kódem z&nbsp;druhé obrazovky.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></div><h3>Akce</h3><p>Akce do data a&nbsp;cena od určitého počtu kusů, třeba dvě kávy za zvýhodněnou cenu.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg></div><h3>Sklad, zálohy a&nbsp;stoly podle potřeby</h3><p>Když chcete hlídat zásoby, vykupovat láhve nebo nosit ke stolům, zapnete v&nbsp;tarifu Gastro sklad, zálohy na obaly nebo stoly a&nbsp;účty.</p></article>
+      <article class="card"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6h14l-1.6 15H6.6z"/><path d="M4 6h16M8 6l1-3h6l1 3M6 11h12"/></svg></div><h3>Na místě / S&nbsp;sebou a&nbsp;spropitné</h3><p>Jedním přepínačem prodáte na místě nebo s&nbsp;sebou – doklad použije správnou sazbu DPH, cena se nemění. Spropitné zapíšete mimo tržbu a&nbsp;EET a&nbsp;pokladna hlídá limit 7&nbsp;% pro osvobození od daně (od 1.&nbsp;1.&nbsp;2027). Obojí je v&nbsp;ceně tarifu.</p></article>
     </div>
   </div>
 </section>
@@ -121,23 +124,23 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Tarif Gastro</h2>
-      <p>189 Kč měsíčně nebo 2 041 Kč ročně, vždy včetně DPH. Prvních 10 dní zdarma.</p>
+      <p>189&nbsp;Kč měsíčně nebo 2&nbsp;041&nbsp;Kč ročně, vždy včetně DPH. Prvních 10&nbsp;dní zdarma.</p>
     </div>
     <div class="grid grid-2">
       <article class="card">
         <h3>Zapnuto hned po spuštění</h3>
-        <dl class="feat"><dt>Akce a množstevní ceny</dt><dd>Akce do data, levnější kus od určitého počtu.</dd><dt>Zákaznický displej</dt><dd>Druhá obrazovka pro zákazníka s nákupem a QR platbou.</dd><dt>QR platby</dt><dd>Platba převodem přes QR kód na displeji a na účtence.</dd><dt>Spropitné</dt><dd>Spropitné mimo tržbu a EET: komu, kolik, hotově nebo kartou; přehled za měsíc s hlídáním limitu 7 % pro osvobození od daně.</dd></dl>
+        <dl class="feat"><dt>Akce a&nbsp;množstevní ceny</dt><dd>Akce do data, levnější kus od určitého počtu.</dd><dt>Zákaznický displej</dt><dd>Druhá obrazovka pro zákazníka s&nbsp;nákupem a&nbsp;QR platbou.</dd><dt>QR platby</dt><dd>Platba převodem přes QR kód na displeji a&nbsp;na účtence.</dd><dt>Spropitné</dt><dd>Spropitné mimo tržbu a&nbsp;EET: komu, kolik, hotově nebo kartou; přehled za měsíc s&nbsp;hlídáním limitu 7&nbsp;% pro osvobození od daně.</dd></dl>
       </article>
       <article class="card">
         <h3>Můžete kdykoli zapnout</h3>
-        <dl class="feat"><dt>Sklad</dt><dd>Příjem zboží, inventura, stav na dlaždici, co dochází a návrh objednávky.</dd><dt>Zálohy na obaly</dt><dd>Vratné láhve a přepravky, záloha se může k pivu přidávat sama.</dd><dt>Stoly a účty</dt><dd>Účty na stůl pro hospodu a restauraci: doplňování, rozdělení, přesun, bony do kuchyně a na výčep.</dd></dl><p class="small mt-1">Zapnete je ve Správě → Systém → Funkce pokladny. Jsou v ceně tarifu.</p>
+        <dl class="feat"><dt>Sklad</dt><dd>Příjem zboží, inventura, stav na dlaždici, co dochází a&nbsp;návrh objednávky.</dd><dt>Zálohy na obaly</dt><dd>Vratné láhve a&nbsp;přepravky, záloha se může k&nbsp;pivu přidávat sama.</dd><dt>Stoly a&nbsp;účty</dt><dd>Účty na stůl pro hospodu a&nbsp;restauraci: doplňování, rozdělení, přesun, bony do kuchyně a&nbsp;na výčep.</dd></dl><p class="small mt-1">Zapnete je ve Správě → Systém → Funkce pokladny. Jsou v&nbsp;ceně tarifu.</p>
         <div class="actions" style="margin-top:16px"><a class="btn btn-ghost" href="cenik.html">Celý ceník</a><a class="btn btn-ghost" href="funkce.html">Všechny funkce</a></div>
       </article>
     </div>
     <div class="note mt-1">
       <p><strong>Placený doplněk, který se hodí</strong></p>
-      <ul class="checks"><li><b>Receptury a normy</b> (79 Kč měsíčně s DPH) – kolik kávy, mléka a surovin na jídla spotřebujete, nákladová cena a marže každého nápoje.</li></ul>
-      <p class="small">Doplňky se platí k tarifu zvlášť, ve 10denní zkoušce jsou zdarma. <a href="cenik.html#doplnky">Všechny doplňky v ceníku</a></p>
+      <ul class="checks"><li><b>Receptury a&nbsp;normy</b> (79&nbsp;Kč měsíčně s&nbsp;DPH) – kolik kávy, mléka a&nbsp;surovin na jídla spotřebujete, nákladová cena a&nbsp;marže každého nápoje.</li></ul>
+      <p class="small">Doplňky se platí k&nbsp;tarifu zvlášť, ve 10denní zkoušce jsou zdarma. <a href="cenik.html#doplnky">Všechny doplňky v&nbsp;ceníku</a></p>
     </div>
   </div>
 </section>
@@ -145,7 +148,7 @@
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="note">
-      <p><strong>Dobré vědět:</strong> Obsluhujete hosty u stolů? Podívejte se na nastavení <a href="pokladna-hospoda-restaurace.html">Hospoda, bar, restaurace</a> se stoly a účty. Prodáváte hlavně zákusky a zmrzlinu? Pak <a href="pokladna-cukrarna-zmrzlina.html">Cukrárna a zmrzlina</a>. Nealko nápoje a káva podávané v kavárně, hospodě nebo restauraci mají do konce roku 2026 sazbu 21 %, od 1. 1. 2027 12 %. S sebou zůstává 21 % – na pokladně přepnete Na místě / S sebou a doklad použije správnou sazbu. Pokladna při zřízení použije sazbu platnou k tomu dni – ověřte ji s účetní.</p>
+      <p><strong>Dobré vědět:</strong> Obsluhujete hosty u&nbsp;stolů? Podívejte se na nastavení <a href="pokladna-hospoda-restaurace.html">Hospoda, bar, restaurace</a> se stoly a&nbsp;účty. Prodáváte hlavně zákusky a&nbsp;zmrzlinu? Pak <a href="pokladna-cukrarna-zmrzlina.html">Cukrárna a&nbsp;zmrzlina</a>. Nealko nápoje a&nbsp;káva podávané v&nbsp;kavárně, hospodě nebo restauraci mají do konce roku 2026 sazbu 21&nbsp;%, od 1.&nbsp;1.&nbsp;2027 sazbu 12&nbsp;%. Při prodeji s&nbsp;sebou zůstává 21&nbsp;% – na pokladně přepnete Na místě / S&nbsp;sebou a&nbsp;doklad použije správnou sazbu. Pokladna při zřízení použije sazbu platnou k&nbsp;tomu dni – ověřte ji s&nbsp;účetní.</p>
     </div>
   </div>
 </section>
@@ -153,30 +156,30 @@
   <div class="wrap">
     <div class="section-head"><h2>Další obory</h2></div>
     <ul class="others">
-      <li><a href="pokladna-vecerka.html"><img src="img/obory/g-potraviny.svg" alt="" width="28" height="28">Večerka a minimarket</a></li>
+      <li><a href="pokladna-vecerka.html"><img src="img/obory/g-potraviny.svg" alt="" width="28" height="28">Večerka a&nbsp;minimarket</a></li>
       <li><a href="pokladna-asijske-potraviny.html"><img src="img/obory/g-asie.svg" alt="" width="28" height="28">Asijské potraviny</a></li>
       <li><a href="pokladna-trafika.html"><img src="img/obory/g-tabak.svg" alt="" width="28" height="28">Trafika</a></li>
       <li><a href="pokladna-pekarna.html"><img src="img/obory/g-pecivo.svg" alt="" width="28" height="28">Pekárna</a></li>
-      <li><a href="pokladna-ovoce-zelenina.html"><img src="img/obory/g-ovoce.svg" alt="" width="28" height="28">Ovoce a zelenina</a></li>
-      <li><a href="pokladna-reznictvi.html"><img src="img/obory/g-maso.svg" alt="" width="28" height="28">Řeznictví a uzeniny</a></li>
+      <li><a href="pokladna-ovoce-zelenina.html"><img src="img/obory/g-ovoce.svg" alt="" width="28" height="28">Ovoce a&nbsp;zelenina</a></li>
+      <li><a href="pokladna-reznictvi.html"><img src="img/obory/g-maso.svg" alt="" width="28" height="28">Řeznictví a&nbsp;uzeniny</a></li>
       <li><a href="pokladna-drogerie.html"><img src="img/obory/g-drogerie.svg" alt="" width="28" height="28">Drogerie</a></li>
       <li><a href="pokladna-kvetinarstvi.html"><img src="img/obory/g-kvetiny.svg" alt="" width="28" height="28">Květinářství</a></li>
-      <li><a href="pokladna-papirnictvi.html"><img src="img/obory/g-papirnictvi.svg" alt="" width="28" height="28">Papírnictví a knihy</a></li>
-      <li><a href="pokladna-obleceni-obuv.html"><img src="img/obory/g-obleceni.svg" alt="" width="28" height="28">Oblečení a obuv</a></li>
-      <li><a href="pokladna-mobily-elektro.html"><img src="img/obory/g-mobily.svg" alt="" width="28" height="28">Mobily a elektro</a></li>
-      <li><a href="pokladna-zdrava-vyziva.html"><img src="img/obory/g-zdrava.svg" alt="" width="28" height="28">Zdravá výživa a doplňky</a></li>
-      <li><a href="pokladna-vinoteka.html"><img src="img/obory/g-vino.svg" alt="" width="28" height="28">Vinotéka a nápoje</a></li>
+      <li><a href="pokladna-papirnictvi.html"><img src="img/obory/g-papirnictvi.svg" alt="" width="28" height="28">Papírnictví a&nbsp;knihy</a></li>
+      <li><a href="pokladna-obleceni-obuv.html"><img src="img/obory/g-obleceni.svg" alt="" width="28" height="28">Oblečení a&nbsp;obuv</a></li>
+      <li><a href="pokladna-mobily-elektro.html"><img src="img/obory/g-mobily.svg" alt="" width="28" height="28">Mobily a&nbsp;elektro</a></li>
+      <li><a href="pokladna-zdrava-vyziva.html"><img src="img/obory/g-zdrava.svg" alt="" width="28" height="28">Zdravá výživa a&nbsp;doplňky</a></li>
+      <li><a href="pokladna-vinoteka.html"><img src="img/obory/g-vino.svg" alt="" width="28" height="28">Vinotéka a&nbsp;nápoje</a></li>
       <li><a href="pokladna-chovatelske-potreby.html"><img src="img/obory/g-chovatel.svg" alt="" width="28" height="28">Chovatelské potřeby</a></li>
       <li><a href="pokladna-obchod.html"><img src="img/obory/g-domaci.svg" alt="" width="28" height="28">Jiný obchod</a></li>
-      <li><a href="pokladna-cukrarna-zmrzlina.html"><img src="img/obory/g-zmrzlina.svg" alt="" width="28" height="28">Cukrárna a zmrzlina</a></li>
+      <li><a href="pokladna-cukrarna-zmrzlina.html"><img src="img/obory/g-zmrzlina.svg" alt="" width="28" height="28">Cukrárna a&nbsp;zmrzlina</a></li>
       <li><a href="pokladna-hospoda-restaurace.html"><img src="img/obory/g-pivo.svg" alt="" width="28" height="28">Hospoda, bar, restaurace</a></li>
-      <li><a href="pokladna-kadernictvi.html"><img src="img/obory/g-kadernictvi.svg" alt="" width="28" height="28">Kadeřnictví a holičství</a></li>
+      <li><a href="pokladna-kadernictvi.html"><img src="img/obory/g-kadernictvi.svg" alt="" width="28" height="28">Kadeřnictví a&nbsp;holičství</a></li>
       <li><a href="pokladna-nehtove-studio.html"><img src="img/obory/g-nehty.svg" alt="" width="28" height="28">Nehtové studio</a></li>
-      <li><a href="pokladna-kosmetika.html"><img src="img/obory/g-kosmetika.svg" alt="" width="28" height="28">Kosmetika a pedikúra</a></li>
-      <li><a href="pokladna-masaze-wellness.html"><img src="img/obory/g-masaze.svg" alt="" width="28" height="28">Masáže a wellness</a></li>
-      <li><a href="pokladna-fitness-sport.html"><img src="img/obory/g-fitness.svg" alt="" width="28" height="28">Fitness a sport</a></li>
-      <li><a href="pokladna-autoservis-pneuservis.html"><img src="img/obory/g-autoservis.svg" alt="" width="28" height="28">Autoservis a pneuservis</a></li>
-      <li><a href="pokladna-opravna.html"><img src="img/obory/g-opravy.svg" alt="" width="28" height="28">Opravna a servis</a></li>
+      <li><a href="pokladna-kosmetika.html"><img src="img/obory/g-kosmetika.svg" alt="" width="28" height="28">Kosmetika a&nbsp;pedikúra</a></li>
+      <li><a href="pokladna-masaze-wellness.html"><img src="img/obory/g-masaze.svg" alt="" width="28" height="28">Masáže a&nbsp;wellness</a></li>
+      <li><a href="pokladna-fitness-sport.html"><img src="img/obory/g-fitness.svg" alt="" width="28" height="28">Fitness a&nbsp;sport</a></li>
+      <li><a href="pokladna-autoservis-pneuservis.html"><img src="img/obory/g-autoservis.svg" alt="" width="28" height="28">Autoservis a&nbsp;pneuservis</a></li>
+      <li><a href="pokladna-opravna.html"><img src="img/obory/g-opravy.svg" alt="" width="28" height="28">Opravna a&nbsp;servis</a></li>
       <li><a href="pokladna-sluzby.html"><img src="img/obory/g-sluzby.svg" alt="" width="28" height="28">Jiné služby</a></li>
     </ul>
   </div>
@@ -185,7 +188,7 @@
 <section class="section dark cta">
   <div class="wrap">
     <h2>Vyzkoušejte SuperKasu ve svém provozu</h2>
-    <p>Prvních 10 dní zdarma, bez karty a bez závazku. Pokladnu založíte v prohlížeči hned – a když chcete, poradíme po telefonu s nastavením i vybavením: počítač, tiskárna, čtečka.</p>
+    <p>Prvních 10&nbsp;dní zdarma, bez karty a&nbsp;bez závazku. Pokladnu založíte v&nbsp;prohlížeči hned – a&nbsp;když chcete, poradíme po telefonu s&nbsp;nastavením i&nbsp;vybavením: počítač, tiskárna, čtečka.</p>
     <div class="actions">
       <a class="btn btn-gold" href="https://app.superkasa.cz/">Vyzkoušet zdarma</a>
       <a class="btn btn-light" href="tel:+420608886882">Zavolat&nbsp;+420&nbsp;608&nbsp;886&nbsp;882</a>
@@ -199,13 +202,13 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand"><img src="favicon.svg" alt="" width="40" height="40"><b>Super<span>Kasa</span></b></div>
-        <p>Pokladní systém pro obchody, občerstvení a služby s EET&nbsp;2.0, skladem a cenovkami. Pro obsluhu i ve vietnamštině.</p>
+        <p>Pokladní systém pro obchody, občerstvení a&nbsp;služby s&nbsp;EET&nbsp;2.0, skladem a&nbsp;cenovkami. Pro obsluhu i&nbsp;ve vietnamštině.</p>
         <p><a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>
       </div>
       <div>
         <h2>Stránky</h2>
         <ul>
-          <li><a href="index.html">Úvod</a></li>
+          <li><a href="./">Úvod</a></li>
           <li><a href="obory.html">Pro koho</a></li>
           <li><a href="funkce.html">Funkce</a></li>
           <li><a href="cenik.html">Ceník</a></li>
@@ -218,13 +221,13 @@
       <div>
         <h2>Obory</h2>
         <ul>
-          <li><a href="pokladna-vecerka.html">Večerka a minimarket</a></li>
+          <li><a href="pokladna-vecerka.html">Večerka a&nbsp;minimarket</a></li>
           <li><a href="pokladna-trafika.html">Trafika</a></li>
           <li><a href="pokladna-pekarna.html">Pekárna</a></li>
           <li><a href="pokladna-drogerie.html">Drogerie</a></li>
           <li><a href="pokladna-kavarna-bistro.html">Kavárna, bistro, stánek</a></li>
           <li><a href="pokladna-hospoda-restaurace.html">Hospoda, bar, restaurace</a></li>
-          <li><a href="pokladna-kadernictvi.html">Kadeřnictví a holičství</a></li>
+          <li><a href="pokladna-kadernictvi.html">Kadeřnictví a&nbsp;holičství</a></li>
           <li><a href="pokladna-nehtove-studio.html">Nehtové studio</a></li>
           <li><a href="obory.html">Všechny obory</a></li>
         </ul>
@@ -239,7 +242,7 @@
       </div>
     </div>
     <div class="foot-bottom">
-      © 2026 Thanh Lam Nguyen, IČO 14161648, místo podnikání 1. května 117/141, 725 25 Ostrava, fyzická osoba podnikající podle živnostenského zákona, zapsaná v živnostenském rejstříku. Tento web nepoužívá cookies ani sledovací nástroje.
+      © 2026 Thanh Lam Nguyen, IČO 14161648, místo podnikání 1. května 117/141, 725 25 Ostrava, fyzická osoba podnikající podle živnostenského zákona, zapsaná v&nbsp;živnostenském rejstříku. Tento web nepoužívá cookies ani sledovací nástroje.
     </div>
   </div>
 </footer>

@@ -1,7 +1,16 @@
 // Úvod a Funkce. Texty jsou ve slovníku c.T.index a c.T.funkce (tools/stranky/texty/<jazyk>.mjs).
-import { LANG_INFO, LANGS, langHref, pageUrl } from "./i18n.mjs";
-import { LOGIN_LIVE, REGISTER_URL, card, cta } from "./parts.mjs";
+import { pageUrl, SITE } from "./i18n.mjs";
+import { LOGIN_LIVE, ORG, ORG_ID, OFFERS, REGISTER_URL, card, cta } from "./parts.mjs";
 import { oborPicker } from "./obory-stranky.mjs";
+
+/**
+ * Skutečný snímek ukázkové pokladny (img/pokladna, pořízený bez značek) v jazyce stránky: 1920×1200 a 960×600.
+ * `name` = prodej | platba | cenovky; `above` = obrázek nad ohybem stránky (bez lazy, s vyšší prioritou).
+ */
+export const shot = (c, name, alt, { above = false, sizes = "(max-width: 900px) 100vw, 640px", cap = "" } = {}) => {
+  const base = `${c.up}img/pokladna/${name}${c.lang === "cs" ? "" : "-" + c.lang}`;
+  return `<figure class="shot"><img src="${base}.webp" srcset="${base}-960.webp 960w, ${base}.webp 1920w" sizes="${sizes}" width="1920" height="1200" alt="${alt}"${above ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async">${cap ? `<figcaption>${cap}</figcaption>` : ""}</figure>`;
+};
 
 /** Karty se stejnými ikonami ve všech jazycích: `icons` = [ikona, třída] ve stejném pořadí jako texty [nadpis, text]. */
 /** Počet ikon musí sedět s počtem karet v textech – jinak by se karta potichu nevykreslila. */
@@ -12,8 +21,6 @@ const cards = (icons, texts) => {
 
 export const index = (c) => {
   const t = c.T.index;
-  const [g1, g2, g3] = t.mockGroups;
-  const langLinks = Object.fromEntries(LANGS.map((l) => [l, `<a href="${langHref(c.lang, l, "index.html")}" hreflang="${l}" lang="${l}">${LANG_INFO[l].name}</a>`]));
   return {
     file: "index.html",
     current: "index.html",
@@ -21,14 +28,22 @@ export const index = (c) => {
     desc: t.desc,
     jsonld: {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      name: "SuperKasa",
-      url: pageUrl(c.lang, "index.html"),
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web browser (Windows, Android, iOS, macOS)",
-      inLanguage: ["cs", "vi", "en"],
-      description: t.ldDesc,
-      offers: { "@type": "Offer", price: "189", priceCurrency: "CZK", description: t.ldOffer },
+      "@graph": [
+        ORG,
+        { "@type": "WebSite", "@id": `${SITE}/#website`, url: pageUrl(c.lang, "index.html"), name: "SuperKasa", inLanguage: c.lang, publisher: { "@id": ORG_ID } },
+        {
+          "@type": "SoftwareApplication",
+          "@id": `${SITE}/#app`,
+          name: "SuperKasa",
+          url: pageUrl(c.lang, "index.html"),
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web browser (Windows, Android, iOS, macOS)",
+          inLanguage: ["cs", "vi", "en"],
+          description: t.ldDesc,
+          provider: { "@id": ORG_ID },
+          offers: OFFERS(pageUrl(c.lang, "cenik.html"), t),
+        },
+      ],
     },
     body: `
 <section class="hero hero-pick">
@@ -44,18 +59,16 @@ export const index = (c) => {
         </div>
         <p class="small hero-cta-note">${t.heroCtaNote}</p>
       </div>
-      <ul class="hero-facts">
-        ${t.heroFacts.map((x) => `<li>${x}</li>`).join("\n        ")}
-      </ul>
+      ${shot(c, "prodej", t.shotAlt, { above: true, sizes: "(max-width: 900px) 100vw, 620px" })}
     </div>
+    <ul class="hero-facts">
+      ${t.heroFacts.map((x) => `<li>${x}</li>`).join("\n      ")}
+    </ul>
     ${oborPicker(c, { headingLevel: 1 })}
     <p class="hero-links">
-      <span>${t.heroLinks[0]}</span>
-      <span>${t.heroLinks[1]}</span>
-      <a href="cenik.html">${t.heroLinks[2]}</a>
-      <a href="funkce.html">${t.heroLinks[3]}</a>
+      <a href="cenik.html">${t.heroLinks[0]}</a>
+      <a href="funkce.html">${t.heroLinks[1]}</a>
     </p>
-    <p class="lang-note">${t.langNote(langLinks)}</p>
   </div>
 </section>
 
@@ -69,31 +82,7 @@ export const index = (c) => {
       </ul>
       <div class="actions"><a class="btn btn-primary" href="funkce.html">${t.splitBtn}</a></div>
     </div>
-    <figure class="mock">
-      <div class="mock-screen" aria-hidden="true">
-        <div class="mock-tiles">
-          <div class="mock-bar"><span></span><span></span><span></span><span></span></div>
-          <div class="tile">Rohlík<b>2,90</b></div>
-          <div class="tile g">${g1}<b>›</b></div>
-          <div class="tile">Mléko 1 l<b>24,90</b></div>
-          <div class="tile p">Pivo 0,5 l<b>22,90</b></div>
-          <div class="tile">Banány / kg<b>34,90</b></div>
-          <div class="tile g">${g2}<b>›</b></div>
-          <div class="tile">Káva<b>89,90</b></div>
-          <div class="tile">Taška<b>2,00</b></div>
-          <div class="tile g">${g3}<b>›</b></div>
-        </div>
-        <div class="mock-cart">
-          <div class="row"><span>Rohlík 4×</span><span>11,60</span></div>
-          <div class="row"><span>Pivo 0,5 l 2×</span><span>45,80</span></div>
-          <div class="row"><span>Záloha láhev 2×</span><span>6,00</span></div>
-          <div class="row"><span>Banány 0,84 kg</span><span>29,32</span></div>
-          <div class="sum"><span>${c.T.obor.mockTotal}</span><span>92,72 Kč</span></div>
-          <div class="pay">${c.T.obor.mockPay}</div>
-        </div>
-      </div>
-      <figcaption class="mock-cap">${t.mockCap}</figcaption>
-    </figure>
+    ${shot(c, "platba", t.payAlt, { cap: t.shotCap })}
   </div>
 </section>
 
@@ -116,7 +105,7 @@ export const index = (c) => {
       <p>${t.newLead}</p>
     </div>
     <div class="grid grid-3">
-      ${cards([["bell", "gold"], ["db"], ["bag"], ["printer"], ["network"], ["chart"], ["touch", "gold"]], t.newCards)}
+      ${cards([["bell", "gold"], ["db"], ["bag"], ["touch", "gold"], ["printer"], ["chart"]], t.newCards)}
     </div>
   </div>
 </section>
@@ -175,6 +164,7 @@ export const funkce = (c) => {
 <section class="section feature-group" id="prodej">
   <div class="wrap">
     <div class="section-head"><h2>${t.prodejTitle}</h2></div>
+    ${shot(c, "platba", c.T.index.payAlt, { sizes: "(max-width: 1240px) 100vw, 1180px" })}
     <div class="grid grid-3">
       ${cards([["touch"], ["scan"], ["scale"], ["percent"], ["bottle"], ["qr"], ["keyboard", "gold"]], t.prodej)}
     </div>
@@ -218,6 +208,7 @@ export const funkce = (c) => {
 <section class="section feature-group" id="sklad">
   <div class="wrap">
     <div class="section-head"><h2>${t.skladTitle}</h2></div>
+    ${shot(c, "cenovky", t.labelsAlt, { sizes: "(max-width: 1240px) 100vw, 1180px" })}
     <div class="grid grid-3">
       ${cards([["box"], ["calendar"], ["tag"], ["db", "gold"], ["download"], ["bag", "gold"], ["home"]], t.sklad)}
     </div>
