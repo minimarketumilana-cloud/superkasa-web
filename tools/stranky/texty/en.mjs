@@ -107,7 +107,7 @@ export default {
   index: {
     title: "SuperKasa – POS with EET 2.0 for your type of business",
     desc: "Touchscreen POS in the browser for shops, food service and services. EET 2.0, stock, price labels, Vietnamese for staff. CZK 189 a month incl. VAT, 10 days free",
-    ldDesc: "POS system with EET 2.0 for shops, snack bars and services.",
+    ldDesc: "SuperKasa is a browser-based POS system for shops, hospitality and services. The interface is available in Czech, Vietnamese and English.",
     ldOffer: "Per month incl. VAT, first 10 days free",
     eyebrow: "POS system in the browser",
     h1: "A POS with EET 2.0, set up for your type of business",
@@ -407,6 +407,7 @@ export default {
     lead: "We're happy to help you choose a plan and POS equipment and to set everything up by phone – in Czech or Vietnamese.",
     phone: "Phone",
     makerTitle: "Maker and operator",
+    entityTitle: "What is SuperKasa",
     labels: ["Name", "IČO (company ID)", "Place of business", "Registration", "VAT", "E-mail", "Web"],
     register: "Sole trader under the Czech Trade Licensing Act, registered in the Trade Register (živnostenský rejstřík)",
     vat: "VAT payer",

@@ -1,6 +1,6 @@
 // Úvod a Funkce. Texty jsou ve slovníku c.T.index a c.T.funkce (tools/stranky/texty/<jazyk>.mjs).
 import { pageUrl, SITE } from "./i18n.mjs";
-import { LOGIN_LIVE, ORG, ORG_ID, OFFERS, REGISTER_URL, card, cta } from "./parts.mjs";
+import { LOGIN_LIVE, REGISTER_URL, card, cta, software } from "./parts.mjs";
 import { oborPicker } from "./obory-stranky.mjs";
 
 /**
@@ -29,20 +29,7 @@ export const index = (c) => {
     jsonld: {
       "@context": "https://schema.org",
       "@graph": [
-        ORG,
-        { "@type": "WebSite", "@id": `${SITE}/#website`, url: pageUrl(c.lang, "index.html"), name: "SuperKasa", inLanguage: c.lang, publisher: { "@id": ORG_ID } },
-        {
-          "@type": "SoftwareApplication",
-          "@id": `${SITE}/#app`,
-          name: "SuperKasa",
-          url: pageUrl(c.lang, "index.html"),
-          applicationCategory: "BusinessApplication",
-          operatingSystem: "Web browser (Windows, Android, iOS, macOS)",
-          inLanguage: ["cs", "vi", "en"],
-          description: t.ldDesc,
-          provider: { "@id": ORG_ID },
-          offers: OFFERS(pageUrl(c.lang, "cenik.html"), t),
-        },
+        software(c),
       ],
     },
     body: `

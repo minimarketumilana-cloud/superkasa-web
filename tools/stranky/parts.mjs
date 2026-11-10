@@ -16,7 +16,7 @@ export const REGISTER_URL = "https://app.superkasa.cz/";
  * Kontaktní e-mail provozovatele – jediné místo, kde se doplňuje. Dokud je prázdný, web e-mail nikde neuvádí
  * (kontakt je telefon a adresa); po doplnění se sám objeví v patičce, na Kontaktu, v podmínkách i v ochraně údajů.
  */
-export const CONTACT_EMAIL = "";
+export const CONTACT_EMAIL = "info@superkasa.cz";
 /** Identifikace provozovatele podle § 435 občanského zákoníku (DIČ se na web nedává – obsahuje rodné číslo). */
 export const PROVIDER = {
   name: "Thanh Lam Nguyen",
@@ -33,12 +33,17 @@ export const plain = (h) => String(h).replace(/<[^>]+>/g, "").replace(/&nbsp;/g,
 
 /** Organizace SuperKasa pro strukturovaná data (jedna entita pro celý web). E-mail přibude, až bude CONTACT_EMAIL. */
 export const ORG_ID = `${SITE}/#organization`;
+export const APP_ID = `${SITE}/#app`;
+export const WEBSITE_ID = `${SITE}/#website`;
+/** Ověřeno proti src/domain/license.ts v projektu pokladna. Ceny včetně DPH. */
+export const PRODUCT = Object.freeze({ name: "SuperKasa", month: 189, year: 2041, currency: "CZK", trialDays: 10 });
 export const ORG = {
   "@type": "Organization",
   "@id": ORG_ID,
   name: "SuperKasa",
+  legalName: PROVIDER.name,
   url: `${SITE}/`,
-  logo: { "@type": "ImageObject", url: `${SITE}/apple-touch-icon.png` },
+  logo: { "@type": "ImageObject", "@id": `${SITE}/#logo`, url: `${SITE}/img/logo.png` },
   image: `${SITE}/img/logo.png`,
   telephone: "+420608886882",
   ...(CONTACT_EMAIL ? { email: CONTACT_EMAIL } : {}),
@@ -48,9 +53,50 @@ export const ORG = {
 const priceSpec = (price, dur) => ({ "@type": "UnitPriceSpecification", price, priceCurrency: "CZK", valueAddedTaxIncluded: true, billingDuration: dur });
 /** Nabídky pronájmu: měsíčně a ročně, včetně DPH. `t` = c.T.index (popisek nabídky). */
 export const OFFERS = (url, t) => [
-  { "@type": "Offer", url, price: "189", priceCurrency: "CZK", availability: "https://schema.org/InStock", description: t.ldOffer, priceSpecification: priceSpec(189, "P1M") },
-  { "@type": "Offer", url, price: "2041", priceCurrency: "CZK", availability: "https://schema.org/InStock", priceSpecification: priceSpec(2041, "P1Y") },
+  { "@type": "Offer", url, price: String(PRODUCT.month), priceCurrency: PRODUCT.currency, availability: "https://schema.org/InStock", description: t.ldOffer, priceSpecification: priceSpec(PRODUCT.month, "P1M") },
+  { "@type": "Offer", url, price: String(PRODUCT.year), priceCurrency: PRODUCT.currency, availability: "https://schema.org/InStock", priceSpecification: priceSpec(PRODUCT.year, "P1Y") },
 ];
+/** Jedna definice produktu pro úvod i ceník ve všech jazycích. */
+export const software = (c) => ({
+  "@type": "SoftwareApplication", "@id": APP_ID,
+  name: PRODUCT.name, url: `${SITE}/`,
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web browser (Windows, Android, iOS, macOS)",
+  inLanguage: LANGS,
+  description: c.T.index.ldDesc,
+  provider: { "@id": ORG_ID }, publisher: { "@id": ORG_ID },
+  image: `${SITE}/img/logo.png`,
+  screenshot: `${SITE}/img/pokladna/prodej${c.lang === "cs" ? "" : "-" + c.lang}.webp`,
+  softwareHelp: { "@type": "WebPage", url: pageUrl(c.lang, "navod-krok-za-krokem.html") },
+  offers: OFFERS(pageUrl(c.lang, "cenik.html"), c.T.index),
+});
+
+/** Společná identita webu a provozovatele i na stránkách bez vlastního JSON-LD. */
+export function entityGraph(c, { file, title, desc, url, jsonld, noindex }) {
+  const supplied = jsonld ? (jsonld["@graph"] ?? [jsonld]) : [];
+  const isPage = n => /^(WebPage|ContactPage|CollectionPage|AboutPage)$/.test(n["@type"]);
+  const pageNode = supplied.find(isPage) ?? {};
+  const extra = supplied.filter(n => !isPage(n) && ![ORG_ID, WEBSITE_ID, APP_ID].includes(n["@id"]))
+    .map(({ "@context": ignored, ...n }) => n);
+  const hasApp = supplied.some(n => n["@id"] === APP_ID);
+  const { "@context": ignored, ...pageData } = pageNode;
+  const webpage = {
+    ...pageData, "@type": pageNode["@type"] ?? "WebPage", "@id": `${url}#webpage`,
+    url, name: plain(title), description: plain(desc), inLanguage: c.lang,
+    isPartOf: { "@id": WEBSITE_ID }, publisher: { "@id": ORG_ID }, about: { "@id": APP_ID },
+  };
+  const crumbs = !noindex && file !== "index.html" && !extra.some(n => n["@type"] === "BreadcrumbList")
+    ? [{ "@type": "BreadcrumbList", "@id": `${url}#breadcrumbs`, itemListElement: [
+      { "@type": "ListItem", position: 1, name: c.T.common.nav[0], item: pageUrl(c.lang, "index.html") },
+      { "@type": "ListItem", position: 2, name: plain(title), item: url },
+    ] }] : [];
+  return { "@context": "https://schema.org", "@graph": [
+    ORG,
+    { "@type": "WebSite", "@id": WEBSITE_ID, url: `${SITE}/`, name: PRODUCT.name,
+      inLanguage: LANGS, publisher: { "@id": ORG_ID } },
+    webpage, ...(hasApp ? [software(c)] : []), ...extra, ...crumbs,
+  ] };
+}
 /** Náhledový obrázek pro sdílení v jazyce stránky (JPEG pod 150 kB kvůli WhatsAppu). */
 export const ogImage = (lang) => `${SITE}/img/og${lang === "cs" ? "" : "-" + lang}.jpg`;
 
@@ -189,7 +235,8 @@ export function page(c, { file, title, desc, current, body, noindex = false, can
     .map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join("\n");
   // V hlavičce bez „Úvod“ (vede tam logo) – menu se pak vejde do řádku i na běžném notebooku; v patičce je celé.
   const nav = NAV_FILES.map((href, i) => (href === "index.html" ? "" : `<a href="${href}"${href === current ? ' aria-current="page"' : ""}>${L.nav[i]}</a>`)).filter(Boolean).join("\n      ");
-  const ld = jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, "\\u003c")}</script>\n` : "";
+  const graph = entityGraph(c, { file, title, desc, url: pageUrl(lang, file), jsonld, noindex });
+  const ld = `<script type="application/ld+json">${JSON.stringify(graph).replace(/</g, "\\u003c")}</script>\n`;
   return `<!DOCTYPE html>
 <html lang="${lang}">
 <head>
@@ -199,7 +246,7 @@ export function page(c, { file, title, desc, current, body, noindex = false, can
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title>
 <meta name="description" content="${esc(desc)}">
-${noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${url}">`}
+${noindex ? '<meta name="robots" content="noindex">' : `<meta name="robots" content="max-image-preview:large">\n<link rel="canonical" href="${url}">`}
 ${alternates}
 <meta property="og:type" content="${og.type ?? "website"}">${og.published ? `\n<meta property="article:published_time" content="${og.published}">` : ""}${og.modified ? `\n<meta property="article:modified_time" content="${og.modified}">` : ""}
 <meta property="og:site_name" content="SuperKasa">

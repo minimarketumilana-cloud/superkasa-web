@@ -1,5 +1,5 @@
 // Ceník, EET 2.0, Jak začít, Přihlášení a Kontakt. Texty jsou ve slovníku c.T.<stránka> (tools/stranky/texty/<jazyk>.mjs).
-import { CONTACT_EMAIL, LOGIN_LIVE, OFFERS, ORG, ORG_ID, PROVIDER, REGISTER_URL, SITE, card, cta, icon, plain } from "./parts.mjs";
+import { CONTACT_EMAIL, LOGIN_LIVE, ORG, ORG_ID, PROVIDER, REGISTER_URL, SITE, card, cta, icon, plain, software } from "./parts.mjs";
 import { pageUrl } from "./i18n.mjs";
 import { FEATURE_ORDER } from "./obory.mjs";
 
@@ -67,15 +67,7 @@ export const cenik = (c) => {
       "@context": "https://schema.org",
       "@graph": [
         { "@type": "FAQPage", mainEntity: t.faq.map(([q, a]) => ({ "@type": "Question", name: plain(q), acceptedAnswer: { "@type": "Answer", text: plain(a) } })) },
-        {
-          "@type": "SoftwareApplication",
-          "@id": `${SITE}/#app`,
-          name: "SuperKasa",
-          applicationCategory: "BusinessApplication",
-          operatingSystem: "Web browser (Windows, Android, iOS, macOS)",
-          provider: { "@id": ORG_ID },
-          offers: OFFERS(pageUrl(c.lang, "cenik.html"), c.T.index),
-        },
+        software(c),
       ],
     },
     body: `
@@ -378,7 +370,7 @@ export const kontakt = (c) => {
     current: "kontakt.html",
     title: t.title,
     desc: t.desc,
-    jsonld: { "@context": "https://schema.org", "@type": "ContactPage", url: pageUrl(c.lang, "kontakt.html"), mainEntity: ORG },
+    jsonld: { "@context": "https://schema.org", "@type": "ContactPage", url: pageUrl(c.lang, "kontakt.html"), mainEntity: { "@id": ORG_ID } },
     body: `
 <section class="page-head">
   <div class="wrap">
@@ -415,6 +407,18 @@ export const kontakt = (c) => {
           <dt>${t.labels[6]}</dt><dd>superkasa.cz</dd>
         </dl>
       </article>
+    </div>
+  </div>
+</section>
+<section class="section alt">
+  <div class="wrap">
+    <h2>${t.entityTitle}</h2>
+    <p class="lead-sm">${c.T.index.ldDesc}</p>
+    <p>${t.makerTitle}: ${PROVIDER.name}, IČO ${PROVIDER.ico}.</p>
+    <div class="actions">
+      <a class="btn btn-ghost" href="funkce.html">${c.T.common.nav[2]}</a>
+      <a class="btn btn-ghost" href="cenik.html">${c.T.common.nav[3]}</a>
+      <a class="btn btn-ghost" href="navody.html">${c.T.common.nav[5]}</a>
     </div>
   </div>
 </section>`,

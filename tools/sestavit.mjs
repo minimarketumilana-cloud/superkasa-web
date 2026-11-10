@@ -97,7 +97,7 @@ for (const lang of LANGS) {
     let html = page(c, p);
     // 404 se zobrazuje na libovolné adrese – odkazy, styly a obrázky proto od kořene webu (/, /vi/, /en/).
     if (p.file === "404.html") {
-      html = html.replace(/(href|src)="(?!https?:|tel:|#|\/)([^"]*)"/g, (_, attr, rel) => {
+      html = html.replace(/(href|src)="(?!https?:|tel:|mailto:|#|\/)([^"]*)"/g, (_, attr, rel) => {
         const u = new URL(rel, `${SITE}/${dir}`);
         return `${attr}="${u.pathname}${u.search}${u.hash}"`;
       });

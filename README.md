@@ -78,6 +78,21 @@ Staré adresy, které mají jen přesměrovat, jsou v `REDIRECTS` v `tools/sesta
   tiskový pomocník ani skript. Nové funkce pokladny doplňte na `funkce.html` (`funkce.*` ve slovnících) a případně do
   „Novinek v pokladně“ na úvodu (`index.newCards`).
 
+## Kontrola SEO a identity produktu
+
+Po sestavení spusťte `node tools/overit.mjs`. Kontrola projde canonical URL, sitemap, obousměrné jazykové odkazy,
+místní odkazy a kotvy, obrázky včetně srcset, H1, titulky a JSON-LD. Při chybě skončí nenulovým návratovým kódem.
+
+Identita produktu, provozovatele a webu je společná v `tools/stranky/parts.mjs`: `ORG`, `PRODUCT`, `software(c)`
+a `entityGraph(c, ...)`. Úvod a ceník používají totožnou definici produktu v daném jazyce. Popis `index.ldDesc`
+ve slovnících se zobrazuje také na stránce Kontakt. Ceny strukturovaných nabídek jsou v `PRODUCT`; při jejich
+změně upravte také viditelné texty ceníku a ostatních stránek a ověřte shodu s licenčním kódem pokladny.
+Nepřidávejte vymyšlené recenze, hodnocení, kontakty, certifikace ani odkazy `sameAs` na neověřené profily.
+
+Přístup pro vyhledávací roboty už umožňuje pravidlo `User-agent: *` v robots.txt. Samotná strukturovaná data
+nejsou zárukou indexace ani citování v AI odpovědích. Pro Google AI platí stejné základy jako pro běžné vyhledávání:
+https://developers.google.com/search/docs/appearance/ai-features
+
 ## Zveřejnění (GitHub Pages)
 
 Web běží zdarma na **GitHub Pages** z repozitáře `minimarketumilana-cloud/superkasa-web` (větev `main`, kořen repozitáře),

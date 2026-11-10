@@ -107,7 +107,7 @@ export default {
   index: {
     title: "SuperKasa – máy tính tiền EET 2.0 cho ngành của bạn",
     desc: "Máy tính tiền cảm ứng trên trình duyệt cho cửa hàng, quán ăn và dịch vụ. EET 2.0, kho, nhãn giá, tiếng Việt. 189 Kč/tháng đã gồm DPH, 10 ngày miễn phí.",
-    ldDesc: "Phần mềm máy tính tiền có EET 2.0 cho cửa hàng, quán ăn và dịch vụ.",
+    ldDesc: "SuperKasa là phần mềm máy tính tiền chạy trong trình duyệt dành cho cửa hàng, quán ăn và dịch vụ. Giao diện có tiếng Séc, tiếng Việt và tiếng Anh.",
     ldOffer: "Mỗi tháng, đã gồm thuế DPH, 10 ngày đầu miễn phí",
     eyebrow: "Máy tính tiền trên trình duyệt",
     h1: "Máy tính tiền EET 2.0 cài sẵn cho ngành hàng của bạn",
@@ -407,6 +407,7 @@ export default {
     lead: "Chúng tôi sẵn lòng tư vấn chọn gói, thiết bị cho máy tính tiền và cùng bạn thiết lập qua điện thoại – bằng tiếng Việt hoặc tiếng Séc.",
     phone: "Điện thoại",
     makerTitle: "Nhà sản xuất và nhà cung cấp",
+    entityTitle: "SuperKasa là gì",
     labels: ["Họ tên", "IČO", "Địa điểm kinh doanh", "Đăng ký", "Thuế DPH", "E-mail", "Web"],
     register: "Cá nhân kinh doanh theo Luật kinh doanh Séc (živnostenský zákon), đã đăng ký trong Sổ đăng ký kinh doanh (živnostenský rejstřík)",
     vat: "Người nộp thuế DPH",

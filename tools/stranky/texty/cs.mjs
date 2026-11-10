@@ -109,7 +109,7 @@ export default {
   index: {
     title: "SuperKasa – pokladna s EET 2.0 nastavená pro váš obor",
     desc: "Dotyková pokladna v prohlížeči pro obchody, gastro a služby. EET 2.0, sklad, cenovky, obsluha vietnamsky. 189 Kč měsíčně s DPH, 10 dní zdarma.",
-    ldDesc: "Pokladní systém s EET 2.0 pro obchody, občerstvení a služby.",
+    ldDesc: "SuperKasa je pokladní systém v prohlížeči pro obchody, gastro a služby. Obsluha je dostupná česky, vietnamsky a anglicky.",
     ldOffer: "Měsíčně včetně DPH, prvních 10 dní zdarma",
     eyebrow: "Pokladní systém v prohlížeči",
     h1: "Pokladna s EET 2.0 nastavená pro váš obor",
@@ -410,6 +410,7 @@ export default {
     lead: "Rádi poradíme s výběrem tarifu, vybavením pokladny i s nastavením po telefonu – česky i vietnamsky.",
     phone: "Telefon",
     makerTitle: "Výrobce a provozovatel",
+    entityTitle: "Co je SuperKasa",
     labels: ["Jméno", "IČO", "Místo podnikání", "Zápis", "DPH", "E-mail", "Web"],
     register: "Fyzická osoba podnikající podle živnostenského zákona, zapsaná v živnostenském rejstříku",
     vat: "Plátce DPH",

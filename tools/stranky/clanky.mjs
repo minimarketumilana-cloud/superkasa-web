@@ -93,7 +93,7 @@ export function clanekPage(c, { ui, items }, a) {
           dateModified: a.updated,
           image: ogImage(c.lang),
           author: { "@type": "Organization", "@id": ORG_ID, name: "SuperKasa", url: SITE },
-          publisher: { "@type": "Organization", "@id": ORG_ID, name: "SuperKasa", url: SITE, logo: { "@type": "ImageObject", url: `${SITE}/apple-touch-icon.png` } },
+          publisher: { "@id": ORG_ID },
         },
         {
           "@type": "BreadcrumbList",
