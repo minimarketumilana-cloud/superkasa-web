@@ -29,7 +29,7 @@ export const op = {
     <p class="lead">Pronájem pokladního systému SuperKasa (pokladna v prohlížeči).</p>
   </div>
 </section>
-<section class="section" style="padding-top:24px">
+<section class="section u-pt-24">
   <div class="wrap prose">
     <h2>1. Úvodní ustanovení</h2>
     <ol>
@@ -143,7 +143,7 @@ export const gdpr = {
     <p class="lead">Jak zacházíme s údaji na webu superkasa.cz a v pokladně SuperKasa.</p>
   </div>
 </section>
-<section class="section" style="padding-top:24px">
+<section class="section u-pt-24">
   <div class="wrap prose">
     <h2>1. Správce</h2>
     <p>${PROVIDER}, ${CONTACTS} (dále „správce“).</p>
@@ -198,11 +198,11 @@ export const notFound = (c) => {
     title: t.title,
     desc: t.desc,
     body: `
-<section class="page-head" style="padding:72px 0">
+<section class="page-head u-pad-72">
   <div class="wrap center">
     <h1>${t.h1}</h1>
-    <p class="lead" style="margin:0 auto">${t.lead}</p>
-    <div class="actions" style="justify-content:center">
+    <p class="lead u-mx-auto">${t.lead}</p>
+    <div class="actions u-jc-center">
       <a class="btn btn-primary" href="index.html">${t.home}</a>
       <a class="btn btn-ghost" href="obory.html">${t.pick}</a>
     </div>
@@ -231,7 +231,7 @@ export const legalStub = (c, kind) => {
     <h1>${op ? t.opH1 : t.gdprH1}</h1>
   </div>
 </section>
-<section class="section" style="padding-top:24px">
+<section class="section u-pt-24">
   <div class="wrap prose">
     <div class="note warn">
       <p><strong>${t.noticeTitle}</strong></p>

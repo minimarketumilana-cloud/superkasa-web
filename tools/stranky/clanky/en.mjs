@@ -1240,7 +1240,7 @@ export default {
     desc: "Which receipt printer and barcode scanner work with SuperKasa: 58 and 80 mm, USB, Bluetooth, network, drawer, price labels and what to do if nothing prints.",
     lead: "Direct receipt printing needs a printer with ESC/POS commands, the scanner should work as a USB keyboard and the cash drawer plugs into the printer. This guide describes how to connect them and what to do when a receipt does not print.",
     published: "2026-10-31",
-    updated: "2026-11-05",
+    updated: "2026-11-11",
     minutes: 7,
     sections: [
       {
@@ -1322,13 +1322,16 @@ export default {
         id: "zasuvka",
         h2: "Cash drawer",
         html: `
-<p>The drawer plugs into the receipt printer, not into the computer. The POS sends a command to the printer and the printer opens the drawer.</p>
+<p>The drawer plugs into the receipt printer, not into the computer. The drawer cable goes into the printer port marked <strong>DK</strong>. A network (internet) cable looks similar but will not open the drawer. Do not plug it into the DK port.</p>
+<p><strong>Printing through the browser window</strong> (the usual setup on a computer): the Windows printer driver opens the drawer with every print.</p>
 <ol class="steps">
-<li>Connect the drawer cable to the printer.</li>
-<li>In the printer wizard, tick <strong>Open the drawer on cash payments (drawer plugged into the printer)</strong>.</li>
-<li>Try a cash sale.</li>
+<li>Connect the drawer cable to the DK port on the printer.</li>
+<li>In Windows open <strong>Settings → Printers &amp; scanners</strong>, choose the receipt printer and <strong>Printing preferences</strong>. In the driver, switch on opening the cash drawer at the start of printing. In the Epson driver the option is on the <strong>Peripherals → Cash Drawer → Start of Document</strong> tab.</li>
+<li>In the POS open <strong>Admin → Peripherals → Cash drawer</strong>, switch on <strong>The cash drawer is plugged into this computer's printer</strong> and click <strong>Test the drawer</strong>.</li>
 </ol>
-<p>To open the drawer by hand, use <strong>Menu → Open the drawer</strong>. Each opening is recorded. When printing through the browser window, the POS does not control the drawer directly. The printer driver must open it, and the option is in the driver's settings.</p>`,
+<p>With a receipt the drawer opens by itself. Without a receipt (the <strong>Drawer</strong> button, a cash payment without printing) the POS sends a short blank print that opens the drawer. The driver opens it with every print, so also with a receipt for a card payment.</p>
+<p><strong>A printer connected directly</strong> (Bluetooth, USB or a serial port in the browser): in the printer wizard, tick <strong>Open the drawer on cash payments (drawer plugged into the printer)</strong>. The POS then opens the drawer only for cash.</p>
+<p>Each manual opening of the drawer is recorded.</p>`,
       },
       {
         id: "ctecka",

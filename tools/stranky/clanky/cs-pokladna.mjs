@@ -374,7 +374,7 @@ export default [
     desc: "Jaká pokladní tiskárna a čtečka čárových kódů fungují se SuperKasou: 58 a 80 mm, USB, Bluetooth, síť, zásuvka, cenovky a co dělat, když se netiskne.",
     lead: "Přímý tisk účtenek potřebuje tiskárnu s příkazy ESC/POS, čtečka má fungovat jako USB klávesnice a zásuvka se zapojuje do tiskárny. Návod popisuje připojení i to, co dělat, když se účtenka netiskne.",
     published: "2026-10-31",
-    updated: "2026-11-05",
+    updated: "2026-11-11",
     minutes: 7,
     sections: [
       {
@@ -456,13 +456,16 @@ export default [
         id: "zasuvka",
         h2: "Pokladní zásuvka",
         html: `
-<p>Zásuvka se zapojuje do pokladní tiskárny, ne do počítače. Pokladna pošle příkaz tiskárně a ta zásuvku otevře.</p>
+<p>Zásuvka se zapojuje do pokladní tiskárny, ne do počítače. Kabel zásuvky patří do zdířky tiskárny označené <strong>DK</strong>. Síťový (internetový) kabel vypadá podobně, ale zásuvku neotevře. Do zdířky DK ho nezapojujte.</p>
+<p><strong>Tisk oknem prohlížeče</strong> (běžné nastavení na počítači): zásuvku otevírá ovladač tiskárny ve Windows s každým tiskem.</p>
 <ol class="steps">
-<li>Zapojte kabel zásuvky do tiskárny.</li>
-<li>V průvodci tiskárnou zaškrtněte <strong>Otevřít zásuvku při platbě hotově (zásuvka je zapojená do tiskárny)</strong>.</li>
-<li>Zkuste prodej za hotové.</li>
+<li>Zapojte kabel zásuvky do zdířky DK na tiskárně.</li>
+<li>Ve Windows otevřete <strong>Nastavení → Tiskárny a skenery</strong>, vyberte pokladní tiskárnu a <strong>Předvolby tisku</strong>. V ovladači zapněte otevření pokladní zásuvky na začátku tisku. U ovladače Epson je volba na záložce <strong>Perif. zař. → Pokladní zásuvka → Začátek dokumentu</strong>.</li>
+<li>V pokladně otevřete <strong>Správa → Periferie → Pokladní zásuvka</strong>, zapněte <strong>Pokladní zásuvka je zapojená do tiskárny u tohoto počítače</strong> a klepněte na <strong>Vyzkoušet zásuvku</strong>.</li>
 </ol>
-<p>Ručně zásuvku otevřete v <strong>Menu → Otevřít zásuvku</strong>. Každé otevření se zapíše. Při tisku oknem prohlížeče pokladna zásuvku přímo neovládá. Musí ji otevřít ovladač tiskárny, volba je v jeho nastavení.</p>`,
+<p>S účtenkou se zásuvka otevře sama. Bez účtenky (tlačítko <strong>Zásuvka</strong>, platba hotově bez tisku) pošle pokladna krátký prázdný tisk, který zásuvku otevře. Ovladač ji otevírá s každým tiskem, tedy i s účtenkou při platbě kartou.</p>
+<p><strong>Tiskárna připojená přímo</strong> (Bluetooth, USB nebo sériový port v prohlížeči): v průvodci tiskárnou zaškrtněte <strong>Otevřít zásuvku při platbě hotově (zásuvka je zapojená do tiskárny)</strong>. Pokladna pak zásuvku otevře jen u hotovosti.</p>
+<p>Každé ruční otevření zásuvky se zapíše.</p>`,
       },
       {
         id: "ctecka",

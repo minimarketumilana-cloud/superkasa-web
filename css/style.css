@@ -638,3 +638,17 @@ dl.feat dd { margin: 2px 0 0; color: var(--muted); }
 .howto-promo b { font-size: 1.6rem; color: var(--plum); }
 .howto-promo:hover b { text-decoration: underline; }
 @media (max-width: 720px) { .howto-promo { grid-template-columns: 1fr; } .howto-step figcaption { font-size: 1.08rem; } }
+
+/* Drobné úpravy mezer a zarovnání místo vložených stylů (style="…"): stránky tak nepotřebují v Content-Security-Policy
+   výjimku 'unsafe-inline' pro styly. !important = stejná přednost, jakou měl vložený styl. */
+.u-mt-8 { margin-top: 8px !important; }
+.u-mt-12 { margin-top: 12px !important; }
+.u-mt-16 { margin-top: 16px !important; }
+.u-mt-22 { margin-top: 22px !important; }
+.u-pt-0 { padding-top: 0 !important; }
+.u-pt-24 { padding-top: 24px !important; }
+.u-pt-32 { padding-top: 32px !important; }
+.u-pad-72 { padding: 72px 0 !important; }
+.u-mx-auto { margin: 0 auto !important; }
+.u-jc-center { justify-content: center !important; }
+.u-bg-cream { background: var(--cream) !important; }

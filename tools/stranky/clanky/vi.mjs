@@ -1238,7 +1238,7 @@ export default {
     desc: "Máy in hóa đơn và máy quét mã nào dùng được với SuperKasa: khổ 58 và 80 mm, USB, Bluetooth, mạng, ngăn kéo, nhãn giá và khi không in được.",
     lead: "In hóa đơn trực tiếp cần máy in hiểu lệnh ESC/POS, máy quét mã nên hoạt động như bàn phím USB, còn ngăn kéo đựng tiền cắm vào máy in. Hướng dẫn này mô tả cách kết nối và cách xử lý khi hóa đơn không in ra.",
     published: "2026-10-31",
-    updated: "2026-11-05",
+    updated: "2026-11-11",
     minutes: 7,
     sections: [
       {
@@ -1320,13 +1320,16 @@ export default {
         id: "zasuvka",
         h2: "Ngăn kéo đựng tiền",
         html: `
-<p>Ngăn kéo cắm vào máy in hóa đơn, không cắm vào máy tính. Máy tính tiền gửi lệnh cho máy in và máy in mở ngăn kéo.</p>
+<p>Ngăn kéo cắm vào máy in hóa đơn, không cắm vào máy tính. Cáp của ngăn kéo cắm vào cổng có ghi <strong>DK</strong> trên máy in. Cáp mạng (internet) trông giống nhưng không mở được ngăn kéo. Đừng cắm cáp mạng vào cổng DK.</p>
+<p><strong>In qua hộp thoại của trình duyệt</strong> (cài đặt thông thường trên máy tính): driver máy in trong Windows mở ngăn kéo mỗi lần in.</p>
 <ol class="steps">
-<li>Cắm cáp của ngăn kéo vào máy in.</li>
-<li>Trong trình hướng dẫn máy in, tích <strong>Mở ngăn kéo khi trả tiền mặt (ngăn kéo cắm vào máy in)</strong>.</li>
-<li>Thử một lần bán bằng tiền mặt.</li>
+<li>Cắm cáp của ngăn kéo vào cổng DK trên máy in.</li>
+<li>Trong Windows mở <strong>Cài đặt → Máy in và máy quét</strong>, chọn máy in hóa đơn rồi <strong>Tùy chọn in</strong>. Trong driver, bật mở ngăn kéo khi bắt đầu in. Với driver Epson, tùy chọn nằm ở thẻ <strong>Peripherals → Cash Drawer → Start of Document</strong> (trong driver tiếng Séc: <span lang="cs">Perif. zař. → Pokladní zásuvka → Začátek dokumentu</span>).</li>
+<li>Trong máy tính tiền mở <strong>Quản lý → Thiết bị ngoại vi → Ngăn kéo tiền</strong>, bật <strong>Ngăn kéo tiền cắm vào máy in của máy tính này</strong> rồi bấm <strong>Thử ngăn kéo</strong>.</li>
 </ol>
-<p>Muốn mở ngăn kéo bằng tay, dùng <strong>Menu → Mở ngăn kéo</strong>. Mỗi lần mở đều được ghi lại. Khi in qua hộp thoại của trình duyệt, máy tính tiền không điều khiển trực tiếp ngăn kéo. Driver máy in phải mở ngăn kéo, tùy chọn này nằm trong cài đặt của driver.</p>`,
+<p>Khi in hóa đơn, ngăn kéo tự mở. Khi không in hóa đơn (nút <strong>Ngăn kéo</strong>, trả tiền mặt không in), máy tính tiền gửi một lệnh in trống ngắn để mở ngăn kéo. Driver mở ngăn kéo mỗi lần in, kể cả khi in hóa đơn trả bằng thẻ.</p>
+<p><strong>Máy in kết nối trực tiếp</strong> (Bluetooth, USB hoặc cổng nối tiếp trong trình duyệt): trong trình hướng dẫn máy in, tích <strong>Mở ngăn kéo khi trả tiền mặt (ngăn kéo cắm vào máy in)</strong>. Khi đó máy tính tiền chỉ mở ngăn kéo khi trả tiền mặt.</p>
+<p>Mỗi lần mở ngăn kéo bằng tay đều được ghi lại.</p>`,
       },
       {
         id: "ctecka",

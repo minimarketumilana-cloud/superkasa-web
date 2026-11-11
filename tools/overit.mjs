@@ -132,6 +132,19 @@ const headers = readFileSync(path.join(root, '_headers'), 'utf8');
 const metaCsp = pages.get('index.html').match(/http-equiv="Content-Security-Policy" content="([^"]+)"/)?.[1].replaceAll('&#39;', "'");
 check(Boolean(metaCsp) && headers.includes(`Content-Security-Policy: ${metaCsp}; frame-ancestors 'none'`), '_headers: CSP se liší od stránek');
 check(headers.includes('Strict-Transport-Security: max-age=31536000') && headers.includes('X-Content-Type-Options: nosniff') && headers.includes('X-Frame-Options: DENY'), '_headers: chybí hlavička');
+// llms.txt: každý odkaz vede na existující indexovatelnou stránku a nic v něm není rozbité.
+{
+  const llms = readFileSync(path.join(root, 'llms.txt'), 'utf8');
+  const urls = [...llms.matchAll(/\]\((https:\/\/superkasa\.cz\/[^)]*)\)/g)].map(m => m[1]);
+  check(urls.length >= 40, `llms.txt: jen ${urls.length} odkazů`);
+  for (const u of urls) check(locations.includes(u) || /obchodni-podminky|ochrana-osobnich-udaju/.test(u), `llms.txt: adresa není v sitemap ${u}`);
+  check(!/undefined|null|&nbsp;|&amp;|<[a-z]/.test(llms), 'llms.txt: zbytky HTML nebo prázdné hodnoty');
+}
+// Žádné vložené styly: Content-Security-Policy je bez 'unsafe-inline' a prohlížeč by vložený styl potichu zahodil.
+for (const [file, html] of pages) {
+  check(!/\sstyle="/.test(html) && !/<style\b/.test(html), `${file}: vložený styl (style="…" nebo <style>) – použij třídu v css/style.css`);
+  check(!/Content-Security-Policy" content="[^"]*unsafe-inline/.test(html), `${file}: CSP povoluje unsafe-inline`);
+}
 // CSS: přebytečná nebo chybějící složená závorka potichu zahodí pravidlo za ní (6. 11. 2026 tak zmizely mezery oddílů).
 {
   const css = readFileSync(path.join(root, 'css', 'style.css'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, m => m.replace(/[^\n]/g, ' '));

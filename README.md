@@ -36,7 +36,11 @@ z commitu 06a9566 (nové obory jako Asijské potraviny, Květinářství, Cukrá
 Další soubory: `css/style.css`, `img/` (logo, náhled pro sdílení `og.png`, `img/obory/` = kreslené obrázky skupin
 z pokladny), `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `manifest.webmanifest` (v každém
 jazyce: název, ikona a barva při přidání webu na plochu; `display: browser`, protože web je prezentace – pokladna má
-vlastní manifest na adrese obchodu), `sitemap.xml`, `robots.txt`, `_headers` (bezpečnostní hlavičky pro hosting, který je umí).
+vlastní manifest na adrese obchodu), `sitemap.xml`, `robots.txt`, `llms.txt` (přehled webu pro jazykové modely, generuje se z titulků a popisků stránek),
+`_headers` (bezpečnostní hlavičky pro hosting, který je umí).
+
+Stránky nemají žádný vložený styl (`style="…"` ani `<style>`): Content-Security-Policy je bez `'unsafe-inline'`.
+Drobné mezery a zarovnání řeší třídy `u-*` na konci `css/style.css`; kontrola webu vložený styl nepustí.
 
 ## Lokální náhled
 

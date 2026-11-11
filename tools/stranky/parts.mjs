@@ -121,7 +121,8 @@ const INLINE_HASH = createHash("sha256").update(INLINE_JS).digest("base64");
 export const CSP = [
   "default-src 'self'",
   `script-src 'self' 'sha256-${INLINE_HASH}'`,
-  "style-src 'self' 'unsafe-inline'",
+  // Bez 'unsafe-inline': stránky nemají žádný vložený styl (style="…" ani <style>), mezery řeší třídy u-* v css/style.css.
+  "style-src 'self'",
   "img-src 'self' data:",
   "connect-src 'self' https://app.superkasa.cz",
   "base-uri 'self'",

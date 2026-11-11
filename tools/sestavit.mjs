@@ -79,6 +79,8 @@ const LEGAL_FILES = ["obchodni-podminky.html", "ochrana-osobnich-udaju.html"];
 // Staré adresy, které jen přesměrují na novou (okamžitý meta refresh a canonical; do sitemap ne).
 const REDIRECTS = [["ke-stazeni.html", "jak-zacit.html"]];
 let count = 0;
+/** Podklady pro /llms.txt (přehled webu pro jazykové modely) – české stránky, jak je sestavil cyklus níže. */
+let llms = null;
 
 for (const lang of LANGS) {
   const dir = LANG_INFO[lang].dir;
@@ -91,6 +93,7 @@ for (const lang of LANGS) {
     ...CLANKY[lang].items.map((a) => clanekPage(c, CLANKY[lang], a)), ...legal, notFound(c)]
     .map((p) => ({ footerObory, ...p, ...(LEGAL_FILES.includes(p.file) ? { altLangs: ["cs"] } : {}) }));
 
+  if (lang === "cs") llms = { pages, obory: c.D.OBORY.map((o) => o.file), clanky: CLANKY.cs.items.map((a) => `${a.slug}.html`), lead: c.T.index.ldDesc };
   mkdirSync(path.join(ROOT, dir), { recursive: true });
   for (const p of pages) {
     let html = page(c, p);
@@ -157,6 +160,40 @@ ${urls.join("\n")}
 `);
 writeFileSync(path.join(ROOT, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /aktualizace/\nDisallow: /tools/\nDisallow: /README.md\nDisallow: /_headers\n\nSitemap: ${SITE}/sitemap.xml\n`);
 console.log(`✓ sitemap.xml (${urls.length} adres), robots.txt`);
+
+// /llms.txt: stručný přehled webu pro jazykové modely (Markdown podle llmstxt.org) – titulky a popisky stejné jako
+// na stránkách, takže se nemůže rozejít s tím, co web tvrdí. Jen indexovatelné české stránky, jazykové verze odkazem.
+{
+  const text = (s) => decode(String(s).replace(/<[^>]+>/g, "")).replace(/\s+/g, " ").trim();
+  const line = (file) => {
+    const p = llms.pages.find((x) => x.file === file);
+    return p && !p.noindex ? `- [${text(p.title).replace(/ [–|] SuperKasa$/, "")}](${pageUrl("cs", file)}): ${text(p.desc)}` : null;
+  };
+  const list = (files) => files.map(line).filter(Boolean).join("\n");
+  writeFileSync(path.join(ROOT, "llms.txt"), `# SuperKasa
+
+> ${text(llms.lead)} Cena je 189 Kč měsíčně nebo 2 041 Kč ročně včetně DPH, prvních 10 dní je zdarma. Pokladna běží v prohlížeči, nic se neinstaluje. Je připravená na evidenci tržeb EET 2.0, která začíná 1. 1. 2027.
+
+Web je česky (${SITE}/), vietnamsky (${SITE}/vi/) a anglicky (${SITE}/en/); stránky mají ve všech jazycích stejné názvy souborů. Informace o EET 2.0 nejsou právní ani daňové poradenství, závazné jsou údaje Finanční správy na https://eet.gov.cz/.
+
+## Hlavní stránky
+
+${list(["index.html", "obory.html", "funkce.html", "cenik.html", "eet.html", "jak-zacit.html", "kontakt.html"])}
+
+## Návody
+
+${list(["navody.html", "navod-krok-za-krokem.html", ...llms.clanky])}
+
+## Pokladna podle oboru
+
+${list(llms.obory)}
+
+## Dokumenty
+
+${list(["obchodni-podminky.html", "ochrana-osobnich-udaju.html"])}
+`);
+  console.log("✓ llms.txt");
+}
 
 // Bezpečnostní hlavičky pro hosting, který je umí (Netlify, Cloudflare Pages – soubor _headers). GitHub Pages ho
 // nepoužije; tam platí jen <meta> CSP ve stránkách. Pravidla jsou stejná jako ve stránkách (včetně hashe vloženého

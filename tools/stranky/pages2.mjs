@@ -78,7 +78,7 @@ export const cenik = (c) => {
   </div>
 </section>
 
-<section class="section" style="padding-top:32px">
+<section class="section u-pt-32">
   <div class="wrap">
     <div class="price-hero">
       <div class="price-box">
@@ -114,7 +114,7 @@ export const cenik = (c) => {
     </div>
     <div class="grid grid-3">
       ${ADDONS.map(addonCard).join("")}
-      <article class="card plan" style="background:var(--cream)">
+      <article class="card plan u-bg-cream">
         ${icon("clock")}
         <h3>${t.trialAddons[0]}</h3>
         <p class="who">${t.trialAddons[1]}</p>
@@ -161,7 +161,7 @@ export const cenik = (c) => {
         <h3>${t.trial[0]}</h3>
         <p>${t.trial[1]}</p>
         <p>${t.trial[2]}</p>
-        <div class="actions" style="margin-top:8px">${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${c.T.common.registerBtn}</a>` : ""}<a class="btn btn-ghost" href="jak-zacit.html">${c.T.login.pcBtn}</a></div>
+        <div class="actions u-mt-8">${LOGIN_LIVE ? `<a class="btn btn-gold" href="${REGISTER_URL}">${c.T.common.registerBtn}</a>` : ""}<a class="btn btn-ghost" href="jak-zacit.html">${c.T.login.pcBtn}</a></div>
       </article>
       <article class="card">
         ${icon("shield")}
@@ -201,7 +201,7 @@ export const eet = (c) => {
   </div>
 </section>
 
-<section class="section" style="padding-top:32px">
+<section class="section u-pt-32">
   <div class="wrap">
     <div class="note warn">
       <p>${t.warn}</p>
@@ -209,7 +209,7 @@ export const eet = (c) => {
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section u-pt-0">
   <div class="wrap">
     <div class="section-head">
       <h2>${t.datesTitle}</h2>
@@ -291,7 +291,7 @@ export const stazeni = (c) => {
   </div>
 </section>
 
-<section class="section" style="padding-top:32px">
+<section class="section u-pt-32">
   <div class="wrap">
     <ol class="steps">
       ${c.T.index.steps.map(([s, txt]) => `<li><strong>${s}</strong>${txt}</li>`).join("\n      ")}
@@ -306,7 +306,7 @@ export const stazeni = (c) => {
         ${icon("monitor")}
         <h2>${t.appTitle}</h2>
         <p>${t.appMeta}</p>
-        <div class="actions" style="margin-top:12px">
+        <div class="actions u-mt-12">
           <a class="btn btn-gold" href="${REGISTER_URL}">${t.download}</a>
           <a class="btn btn-ghost" href="tel:+420608886882">${c.T.common.call}</a>
         </div>
@@ -354,7 +354,7 @@ export const prihlaseni = (c) => {
   </div>
 </section>
 
-<section class="section" style="padding-top:32px">
+<section class="section u-pt-32">
   <div class="wrap">
     <div class="grid grid-2">
       <form class="card login-form" id="login-form" action="https://app.superkasa.cz/#prihlaseni" method="post" novalidate data-api="https://app.superkasa.cz" data-busy="${t.busy}" data-choose="${t.choose}" data-error="${t.error}" data-offline="${t.offline}">
@@ -375,7 +375,7 @@ export const prihlaseni = (c) => {
         <h2>${t.pcTitle}</h2>
         <p>${t.pcText}</p>
         <p>${t.accText}</p>
-        <div class="actions" style="margin-top:8px"><a class="btn btn-ghost" href="jak-zacit.html">${t.pcBtn}</a></div>
+        <div class="actions u-mt-8"><a class="btn btn-ghost" href="jak-zacit.html">${t.pcBtn}</a></div>
       </article>
     </div>
   </div>
@@ -399,7 +399,7 @@ export const kontakt = (c) => {
   </div>
 </section>
 
-<section class="section" style="padding-top:32px">
+<section class="section u-pt-32">
   <div class="wrap">
     <div class="grid grid-2">
       <article class="card">
@@ -407,8 +407,8 @@ export const kontakt = (c) => {
         <h2>${t.phone}</h2>
         <p><a class="contact-big" href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a></p>${CONTACT_EMAIL ? `
         <p><a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a></p>` : ""}
-        <div class="actions" style="margin-top:8px"><a class="btn btn-primary" href="tel:+420608886882">${c.T.common.call}</a></div>
-        <ul class="checks" style="margin-top:22px">
+        <div class="actions u-mt-8"><a class="btn btn-primary" href="tel:+420608886882">${c.T.common.call}</a></div>
+        <ul class="checks u-mt-22">
           ${t.helpItems.map((x) => `<li>${x}</li>`).join("\n          ")}
         </ul>
         <p class="mt-1"><a href="navod-krok-za-krokem.html">${t.guidesLink}</a> · <a href="jak-zacit.html">${t.startLink}</a></p>

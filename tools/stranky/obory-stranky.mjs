@@ -140,7 +140,7 @@ export function oborPage(c, o, footerObory) {
         ${more.length
           ? `<dl class="feat">${more.map((f) => `<dt>${FEATURES[f][0]}</dt><dd>${FEATURES[f][1]}</dd>`).join("")}</dl><p class="small mt-1">${t.moreNote}</p>`
           : `<p>${t.allOn(tar.name)}</p>`}
-        <div class="actions" style="margin-top:16px"><a class="btn btn-ghost" href="cenik.html">${t.fullPricing}</a><a class="btn btn-ghost" href="funkce.html">${t.allFeatures}</a></div>
+        <div class="actions u-mt-16"><a class="btn btn-ghost" href="cenik.html">${t.fullPricing}</a><a class="btn btn-ghost" href="funkce.html">${t.allFeatures}</a></div>
       </article>
     </div>${addons.length ? `
     <div class="note mt-1">
@@ -151,7 +151,7 @@ export function oborPage(c, o, footerObory) {
   </div>
 </section>
 ${notes.length ? `
-<section class="section" style="padding-top:0">
+<section class="section u-pt-0">
   <div class="wrap">
     <div class="note">
       <p><strong>${t.goodToKnow}</strong> ${notes.join(" ")}</p>
@@ -215,7 +215,7 @@ export const oboryPage = (c, footerObory) => {
     <p class="lead">${t.lead}</p>
   </div>
 </section>
-<section class="section" style="padding-top:24px">
+<section class="section u-pt-24">
   <div class="wrap">
     ${oborPicker(c, { headingLevel: 1 })}
     <div class="note mt-2">
