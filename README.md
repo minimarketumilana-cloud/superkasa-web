@@ -34,8 +34,9 @@ Obory odpovídají typům provozu v pokladně (`src/domain/presets.ts` v repozit
 z commitu 06a9566 (nové obory jako Asijské potraviny, Květinářství, Cukrárna a zmrzlina, Fitness nebo Autoservis).
 
 Další soubory: `css/style.css`, `img/` (logo, náhled pro sdílení `og.png`, `img/obory/` = kreslené obrázky skupin
-z pokladny), `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `sitemap.xml`, `robots.txt`, `.htaccess` (Apache: 404,
-bezpečnostní hlavičky, cache, komprese).
+z pokladny), `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `manifest.webmanifest` (v každém
+jazyce: název, ikona a barva při přidání webu na plochu; `display: browser`, protože web je prezentace – pokladna má
+vlastní manifest na adrese obchodu), `sitemap.xml`, `robots.txt`, `_headers` (bezpečnostní hlavičky pro hosting, který je umí).
 
 ## Lokální náhled
 
@@ -64,7 +65,7 @@ node tools/sestavit.mjs
 | `tools/stranky/clanky.mjs`, `clanky/*.mjs` | šablona a texty návodů (čeština v `cs-eet.mjs` a `cs-pokladna.mjs`, překlady ve `vi.mjs` a `en.mjs`) |
 
 Skript sestaví všechny tři jazyky (144 stránek a 3 přesměrování), zapíše i `sitemap.xml` (s dnešním datem, jen indexovatelné
-stránky) a `robots.txt` a zkontroluje, že hash vloženého skriptu sedí s Content-Security-Policy v `.htaccess`.
+stránky) a `robots.txt`, manifesty (`manifest.webmanifest`, `vi/`, `en/`) a `_headers` se stejnou Content-Security-Policy jako ve stránkách.
 Staré adresy, které mají jen přesměrovat, jsou v `REDIRECTS` v `tools/sestavit.mjs`.
 
 - Když se v pokladně změní typ provozu, tarif nebo funkce, upravte `tools/stranky/obory.mjs` **a** stejné místo
@@ -108,8 +109,10 @@ s vlastní doménou `superkasa.cz` (soubor `CNAME`, HTTPS vynucené v nastavení
 5. **Vyhledávače (volitelně):** v Google Search Console a Bing Webmaster Tools ověřit doménu a odeslat
    `https://superkasa.cz/sitemap.xml`.
 
-GitHub Pages neumí vlastní hlavičky: `.htaccess` (Content-Security-Policy, cache) se nepoužije. Je v repozitáři pro
-případný přechod na Apache; na serveru s Caddy by se hlavičky přenesly do jeho konfigurace. Stránku 404 GitHub Pages
+GitHub Pages neumí vlastní hlavičky: platí jen `<meta>` Content-Security-Policy ve stránkách a ochrana proti vložení do
+cizího rámu v `js/site.js`; HSTS, `X-Content-Type-Options` a `frame-ancestors` tam nastavit nejdou. Soubor `_headers`
+(generuje ho `tools/sestavit.mjs`) je připravený pro hosting, který hlavičky umí (Netlify, Cloudflare Pages) – tam se
+použije sám; na serveru s Caddy nebo nginx by se stejné hlavičky přenesly do jeho konfigurace. Stránku 404 GitHub Pages
 zobrazí kořenovou českou `404.html`.
 
 Obchodní podmínky a ochrana osobních údajů jsou v konečném znění pro pronájem v prohlížeči (`pages3.mjs`); chybí v nich

@@ -1,0 +1,31 @@
+{
+  "id": "/vi/",
+  "name": "SuperKasa",
+  "short_name": "SuperKasa",
+  "description": "SuperKasa – máy tính tiền cho cửa hàng, quán ăn và dịch vụ",
+  "lang": "vi",
+  "dir": "ltr",
+  "start_url": "/vi/",
+  "scope": "/vi/",
+  "display": "browser",
+  "background_color": "#fdf9f5",
+  "theme_color": "#5c1a46",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

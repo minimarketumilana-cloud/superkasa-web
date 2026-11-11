@@ -318,7 +318,7 @@ ${cta(c, t.cta[0], t.cta[1])}`,
 /**
  * Přihlášení do pokladny: e-mail a heslo majitele se pošlou na app.superkasa.cz (SuperKasa Cloud), ten najde obchod
  * a pošle prohlížeč do jeho pokladny (zařízení se samo spáruje). Formulář obsluhuje js/site.js; když server
- * neodpovídá, ukáže upozornění (login.offline). Vedle je karta o dalších zařízeních a prodavačích.
+ * neodpovídá (chyba spojení nebo 6 s bez odpovědi), ukáže upozornění (login.offline) – ve výchozím stavu je skryté. Vedle je karta o dalších zařízeních a prodavačích.
  */
 export const prihlaseni = (c) => {
   const t = c.T.login;
@@ -340,8 +340,9 @@ export const prihlaseni = (c) => {
     <div class="grid grid-2">
       <form class="card login-form" id="login-form" action="https://app.superkasa.cz/#prihlaseni" method="post" novalidate data-api="https://app.superkasa.cz" data-busy="${t.busy}" data-choose="${t.choose}" data-error="${t.error}" data-offline="${t.offline}">
         <h2>${t.h1}</h2>
-        <!-- Upozornění je vidět i bez JavaScriptu; skript ho schová, až cloud odpoví. Heslo nikdy v adrese (POST). -->
-        <p class="cloud-soon" id="login-note">${t.offline}</p>
+        <!-- Upozornění na nedostupný server je ve výchozím stavu skryté: skript ho ukáže až po skutečném selhání. Heslo nikdy v adrese (POST). -->
+        <p class="cloud-soon" id="login-note" role="status" hidden></p>
+        <noscript><p class="cloud-soon">${t.noscript}</p></noscript>
         <label>${t.email}<input type="email" name="email" autocomplete="username" maxlength="120" required></label>
         <label>${t.password}<input type="password" name="password" autocomplete="current-password" maxlength="200" required></label>
         <p class="login-err" role="alert" hidden></p>

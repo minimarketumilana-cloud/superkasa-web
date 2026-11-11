@@ -391,6 +391,7 @@ export default {
     busy: "Đang đăng nhập…",
     choose: "E-mail này có nhiều cửa hàng – chọn cửa hàng muốn vào:",
     error: "Đăng nhập không thành công. Vui lòng thử lại.",
+    noscript: "Đăng nhập trên trang này cần bật JavaScript. Nếu không, hãy mở thẳng địa chỉ cửa hàng của bạn (ten-cua-hang.superkasa.cz).",
     offline: "Máy chủ đăng nhập hiện chưa phản hồi. Vui lòng thử lại sau ít phút, hoặc mở thẳng địa chỉ cửa hàng của bạn (ten-cua-hang.superkasa.cz).",
     forgot: `Quên mật khẩu? Mở địa chỉ cửa hàng của bạn (ten-cua-hang.superkasa.cz) trên thiết bị chưa đăng nhập và bấm Quên mật khẩu. Nhập e-mail tài khoản, mã PIN của chủ và mật khẩu mới. Hoặc gọi: <a href="tel:+420608886882">${PHONE}</a>.`,
     register: "Chưa có máy tính tiền? Tạo miễn phí (10 ngày)",

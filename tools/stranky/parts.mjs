@@ -100,10 +100,11 @@ export function entityGraph(c, { file, title, desc, url, jsonld, noindex }) {
 /** Náhledový obrázek pro sdílení v jazyce stránky (JPEG pod 150 kB kvůli WhatsAppu). */
 export const ogImage = (lang) => `${SITE}/img/og${lang === "cs" ? "" : "-" + lang}.jpg`;
 
-// Bezpečnostní pravidla přímo ve stránce: GitHub Pages hlavičky z .htaccess neposílá. (frame-ancestors v <meta>
+// Bezpečnostní pravidla přímo ve stránce: GitHub Pages vlastní hlavičky neposílá. (frame-ancestors v <meta>
 // nefunguje, to umí jen hlavička serveru – ochranu proti vložení do cizího rámu proto dělá js/site.js.) Hash patří k vloženému skriptu INLINE_JS; app.superkasa.cz = přihlášení.
+// Stejná pravidla zapisuje sestavit.mjs i do souboru _headers (hosting, který hlavičky umí – Netlify, Cloudflare Pages).
 const INLINE_HASH = createHash("sha256").update(INLINE_JS).digest("base64");
-const CSP = [
+export const CSP = [
   "default-src 'self'",
   `script-src 'self' 'sha256-${INLINE_HASH}'`,
   "style-src 'self' 'unsafe-inline'",
@@ -266,6 +267,7 @@ ${LANGS.filter((l) => l !== lang).map((l) => `<meta property="og:locale:alternat
 <link rel="icon" href="${up}favicon.ico" sizes="any">
 <link rel="icon" href="${up}favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="${up}apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="${up}css/style.css">
 <script>${INLINE_JS}</script>
 <script src="${up}js/site.js" defer></script>

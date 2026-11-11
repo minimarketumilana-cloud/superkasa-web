@@ -32,6 +32,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.className+=" js"</script>
 <script src="js/site.js" defer></script>
@@ -72,8 +73,9 @@
     <div class="grid grid-2">
       <form class="card login-form" id="login-form" action="https://app.superkasa.cz/#prihlaseni" method="post" novalidate data-api="https://app.superkasa.cz" data-busy="Přihlašuji…" data-choose="K tomuto e-mailu patří více obchodů. Vyberte, do kterého se chcete přihlásit:" data-error="Přihlášení se nepovedlo. Zkuste to prosím znovu." data-offline="Server přihlášení teď neodpovídá. Zkuste to prosím za chvíli, nebo otevřete přímo adresu svého obchodu (název.superkasa.cz).">
         <h2>Přihlásit se do pokladny</h2>
-        <!-- Upozornění je vidět i bez JavaScriptu; skript ho schová, až cloud odpoví. Heslo nikdy v adrese (POST). -->
-        <p class="cloud-soon" id="login-note">Server přihlášení teď neodpovídá. Zkuste to prosím za chvíli, nebo otevřete přímo adresu svého obchodu (název.superkasa.cz).</p>
+        <!-- Upozornění na nedostupný server je ve výchozím stavu skryté: skript ho ukáže až po skutečném selhání. Heslo nikdy v adrese (POST). -->
+        <p class="cloud-soon" id="login-note" role="status" hidden></p>
+        <noscript><p class="cloud-soon">Přihlášení na této stránce potřebuje zapnutý JavaScript. Bez něj otevřete přímo adresu svého obchodu (název.superkasa.cz).</p></noscript>
         <label>E-mail<input type="email" name="email" autocomplete="username" maxlength="120" required></label>
         <label>Heslo<input type="password" name="password" autocomplete="current-password" maxlength="200" required></label>
         <p class="login-err" role="alert" hidden></p>

@@ -31,9 +31,11 @@
     var btn = form.querySelector("button[type=submit]");
     var label = btn.textContent;
     var offline = function () { note.textContent = form.getAttribute("data-offline"); note.hidden = false; };
-    // Běží cloud? Upozornění je v HTML vidět předem (i bez JavaScriptu); schová se, až server odpoví.
+    // Běží cloud? Upozornění je ve výchozím stavu skryté (formulář je hned použitelný); ukáže se až po skutečném
+    // selhání spojení, nebo když server 6 s neodpovídá. Když pak přece odpoví, zase zmizí.
+    var slow = setTimeout(offline, 6000);
     fetch(api + "/api/cloud/health", { mode: "no-cors", cache: "no-store" })
-      .then(function () { note.hidden = true; }, offline);
+      .then(function () { clearTimeout(slow); note.hidden = true; }, function () { clearTimeout(slow); offline(); });
     var send = function (slug) {
       err.hidden = true;
       btn.disabled = true;

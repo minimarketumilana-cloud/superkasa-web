@@ -391,6 +391,7 @@ export default {
     busy: "Signing in…",
     choose: "This e-mail has several shops – choose one:",
     error: "Sign-in failed. Please try again.",
+    noscript: "Signing in on this page needs JavaScript. Without it, open your shop's own address (name.superkasa.cz).",
     offline: "The sign-in server isn't responding right now. Please try again in a moment, or open your shop's own address (name.superkasa.cz).",
     forgot: `Forgot your password? Open your shop's address (name.superkasa.cz) on a device that is not signed in yet and tap Forgot password. Enter the account e-mail, the owner PIN and a new password. Or call us: <a href="tel:+420608886882">${PHONE}</a>.`,
     register: "No till yet? Create one free (10 days)",

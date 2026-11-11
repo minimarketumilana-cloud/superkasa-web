@@ -3,6 +3,6 @@ Allow: /
 Disallow: /aktualizace/
 Disallow: /tools/
 Disallow: /README.md
-Disallow: /.htaccess
+Disallow: /_headers
 
 Sitemap: https://superkasa.cz/sitemap.xml

@@ -2,14 +2,13 @@
 // Čeština je v kořeni webu, vietnamština v /vi/, angličtina v /en/ (stejné názvy souborů).
 // Hotové HTML soubory jsou v Gitu, takže na hosting se nahrávají tak, jak jsou – tenhle skript je jen pro úpravy.
 //   node tools/sestavit.mjs
-import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { LANG_INFO, LANGS, OBORY_TEXTS, SITE, TEXTS, compareShape, pageUrl } from "./stranky/i18n.mjs";
 import { csOverlay, oboryData } from "./stranky/obory.mjs";
 import { oborPage, oboryPage } from "./stranky/obory-stranky.mjs";
-import { INLINE_JS, page, redirectPage } from "./stranky/parts.mjs";
+import { CSP, page, redirectPage } from "./stranky/parts.mjs";
 import { funkce, index } from "./stranky/pages1.mjs";
 import { cenik, eet, kontakt, prihlaseni, stazeni } from "./stranky/pages2.mjs";
 import { gdpr, legalStub, notFound, op } from "./stranky/pages3.mjs";
@@ -122,6 +121,26 @@ for (const lang of LANGS) {
   for (const [from, to] of REDIRECTS) {
     writeFileSync(path.join(ROOT, dir, from), homeLinks(redirectPage(c, to, c.T.stazeni.movedTitle, c.T.stazeni.movedText)));
   }
+  // Manifest webu v jazyce stránek: správný název, ikona a barva při přidání na plochu telefonu. Web je prezentace,
+  // ne aplikace – proto „browser“ (pokladna má vlastní manifest na adrese obchodu a otevírá se přes celou obrazovku).
+  writeFileSync(path.join(ROOT, dir, "manifest.webmanifest"), `${JSON.stringify({
+    id: `/${dir}`,
+    name: "SuperKasa",
+    short_name: "SuperKasa",
+    description: c.T.common.ogImageAlt,
+    lang,
+    dir: "ltr",
+    start_url: `/${dir}`,
+    scope: `/${dir}`,
+    display: "browser",
+    background_color: "#fdf9f5",
+    theme_color: "#5c1a46",
+    icons: [
+      { src: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { src: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      { src: "/icon-512.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
+    ],
+  }, null, 2)}\n`);
 }
 console.log(`✓ ${count} stránek (${LANGS.join(", ")}), přesměrování: ${REDIRECTS.map(([f, t]) => `${f} → ${t}`).join(", ")}`);
 for (const w of warnings) console.warn(`! ${w}`);
@@ -136,12 +155,18 @@ writeFileSync(path.join(ROOT, "sitemap.xml"), `<?xml version="1.0" encoding="UTF
 ${urls.join("\n")}
 </urlset>
 `);
-writeFileSync(path.join(ROOT, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /aktualizace/\nDisallow: /tools/\nDisallow: /README.md\nDisallow: /.htaccess\n\nSitemap: ${SITE}/sitemap.xml\n`);
+writeFileSync(path.join(ROOT, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /aktualizace/\nDisallow: /tools/\nDisallow: /README.md\nDisallow: /_headers\n\nSitemap: ${SITE}/sitemap.xml\n`);
 console.log(`✓ sitemap.xml (${urls.length} adres), robots.txt`);
 
-// Hash vloženého skriptu musí sedět s Content-Security-Policy v .htaccess, jinak ho prohlížeč na serveru nespustí.
-const hash = createHash("sha256").update(INLINE_JS).digest("base64");
-if (!readFileSync(path.join(ROOT, ".htaccess"), "utf8").includes(`'sha256-${hash}'`)) {
-  console.error(`✗ .htaccess nemá hash vloženého skriptu: 'sha256-${hash}'`);
-  process.exitCode = 1;
-}
+// Bezpečnostní hlavičky pro hosting, který je umí (Netlify, Cloudflare Pages – soubor _headers). GitHub Pages ho
+// nepoužije; tam platí jen <meta> CSP ve stránkách. Pravidla jsou stejná jako ve stránkách (včetně hashe vloženého
+// skriptu), navíc frame-ancestors, které v <meta> nefunguje. HSTS bez includeSubDomains: poddomény mají vlastní servery.
+writeFileSync(path.join(ROOT, "_headers"), `/*
+  Strict-Transport-Security: max-age=31536000
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: ${CSP}; frame-ancestors 'none'
+`);
+console.log("✓ _headers, manifest.webmanifest (cs, vi, en)");

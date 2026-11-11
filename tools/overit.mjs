@@ -98,5 +98,26 @@ for (const [file, html] of pages) {
   }
 }
 for (const loc of locations) check(pages.has(localFile(new URL(loc))), `Sitemap: neexistující stránka ${loc}`);
+// Manifest webu v každém jazyce: platný JSON, adresy v rámci jazyka, ikony na disku; každá stránka na něj odkazuje.
+for (const [lang, dir] of [['cs', ''], ['vi', 'vi/'], ['en', 'en/']]) {
+  const file = `${dir}manifest.webmanifest`;
+  try {
+    const m = JSON.parse(readFileSync(path.join(root, file), 'utf8'));
+    check(m.lang === lang && m.start_url === `/${dir}` && m.scope === `/${dir}`, `${file}: jazyk nebo adresy nesedí`);
+    check(m.name === 'SuperKasa' && Boolean(m.description) && m.display === 'browser', `${file}: název, popis nebo zobrazení`);
+    check(['192x192', '512x512'].every(s => m.icons.some(i => i.sizes === s)), `${file}: chybí ikona 192 nebo 512`);
+    for (const i of m.icons) check(existsSync(path.join(root, i.src)), `${file}: chybí soubor ikony ${i.src}`);
+  } catch (error) { check(false, `${file}: ${error.message}`); }
+}
+for (const [file, html] of pages) {
+  if (!/http-equiv="refresh"/.test(html)) check(html.includes('<link rel="manifest" href="') && html.includes('manifest.webmanifest">'), `${file}: chybí odkaz na manifest`);
+  // Přihlášení: upozornění na nedostupný server nesmí být vidět ve výchozím stavu (ukáže ho až skript po selhání).
+  if (file.endsWith('prihlaseni.html')) check(html.includes('<p class="cloud-soon" id="login-note" role="status" hidden></p>'), `${file}: upozornění u přihlášení není skryté`);
+}
+// Hlavičky pro hosting, který je umí: stejná CSP jako ve stránkách a navíc frame-ancestors.
+const headers = readFileSync(path.join(root, '_headers'), 'utf8');
+const metaCsp = pages.get('index.html').match(/http-equiv="Content-Security-Policy" content="([^"]+)"/)?.[1].replaceAll('&#39;', "'");
+check(Boolean(metaCsp) && headers.includes(`Content-Security-Policy: ${metaCsp}; frame-ancestors 'none'`), '_headers: CSP se liší od stránek');
+check(headers.includes('Strict-Transport-Security: max-age=31536000') && headers.includes('X-Content-Type-Options: nosniff') && headers.includes('X-Frame-Options: DENY'), '_headers: chybí hlavička');
 console.log(JSON.stringify({ pages: pages.size, indexable, graphs, localLinks: links, errors }, null, 2));
 assert.equal(errors.length, 0, 'Kontrola webu neprošla');

@@ -394,6 +394,7 @@ export default {
     busy: "Přihlašuji…",
     choose: "K tomuto e-mailu patří více obchodů. Vyberte, do kterého se chcete přihlásit:",
     error: "Přihlášení se nepovedlo. Zkuste to prosím znovu.",
+    noscript: "Přihlášení na této stránce potřebuje zapnutý JavaScript. Bez něj otevřete přímo adresu svého obchodu (název.superkasa.cz).",
     offline: "Server přihlášení teď neodpovídá. Zkuste to prosím za chvíli, nebo otevřete přímo adresu svého obchodu (název.superkasa.cz).",
     forgot: `Zapomenuté heslo? Otevřete adresu svého obchodu (název.superkasa.cz) na zařízení, které ještě není přihlášené, a klepněte na Zapomenuté heslo. Zadáte e-mail účtu, PIN majitele a nové heslo. Jinak zavolejte: <a href="tel:+420608886882">${PHONE}</a>.`,
     register: "Nemáte pokladnu? Založit zdarma (10 dní)",
