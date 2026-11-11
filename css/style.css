@@ -226,9 +226,6 @@ small, .small { font-size: .9rem; color: var(--muted); }
 .page-head { background: linear-gradient(180deg, var(--cream), var(--white)); padding: 48px 0 24px; }
 .page-head .lead { font-size: 1.15rem; color: var(--muted); max-width: 44em; margin: 0; }
 
-
-}
-
 /* Oddíly */
 .section { padding: 64px 0; }
 .section.alt { background: var(--cream); }
