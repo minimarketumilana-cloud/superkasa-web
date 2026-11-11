@@ -114,9 +114,9 @@ for (const [file, html] of pages) {
   // Přihlášení: upozornění na nedostupný server nesmí být vidět ve výchozím stavu (ukáže ho až skript po selhání).
   if (file.endsWith('prihlaseni.html')) check(html.includes('<p class="cloud-soon" id="login-note" role="status" hidden></p>'), `${file}: upozornění u přihlášení není skryté`);
 }
-// Časté otázky na úvodu, oborech a ceníku: strukturovaná data (FAQPage) musí odpovídat tomu, co je na stránce vidět.
+// Časté otázky na úvodu, oborech, ceníku a stránce EET: strukturovaná data (FAQPage) musí odpovídat tomu, co je na stránce vidět.
 for (const dir of ['', 'vi/', 'en/']) {
-  for (const name of ['index.html', 'obory.html', 'cenik.html']) {
+  for (const name of ['index.html', 'obory.html', 'cenik.html', 'eet.html']) {
     const file = `${dir}${name}`;
     const html = pages.get(file);
     const graph = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
@@ -132,5 +132,17 @@ const headers = readFileSync(path.join(root, '_headers'), 'utf8');
 const metaCsp = pages.get('index.html').match(/http-equiv="Content-Security-Policy" content="([^"]+)"/)?.[1].replaceAll('&#39;', "'");
 check(Boolean(metaCsp) && headers.includes(`Content-Security-Policy: ${metaCsp}; frame-ancestors 'none'`), '_headers: CSP se liší od stránek');
 check(headers.includes('Strict-Transport-Security: max-age=31536000') && headers.includes('X-Content-Type-Options: nosniff') && headers.includes('X-Frame-Options: DENY'), '_headers: chybí hlavička');
+// CSS: přebytečná nebo chybějící složená závorka potichu zahodí pravidlo za ní (6. 11. 2026 tak zmizely mezery oddílů).
+{
+  const css = readFileSync(path.join(root, 'css', 'style.css'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, m => m.replace(/[^\n]/g, ' '));
+  let depth = 0, line = 1;
+  for (const ch of css) {
+    if (ch === '\n') line++;
+    else if (ch === '{') depth++;
+    else if (ch === '}' && --depth < 0) { check(false, `css/style.css: přebytečná } na řádku ${line}`); depth = 0; }
+  }
+  check(depth === 0, 'css/style.css: neuzavřená {');
+  check(/^\.section \{ padding: 64px 0; \}$/m.test(css), 'css/style.css: chybí základní mezery oddílů (.section)');
+}
 console.log(JSON.stringify({ pages: pages.size, indexable, graphs, localLinks: links, errors }, null, 2));
 assert.equal(errors.length, 0, 'Kontrola webu neprošla');

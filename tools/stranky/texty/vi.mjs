@@ -330,7 +330,25 @@ export default {
     lead: "SuperKasa gửi được doanh thu lên EET 2.0 – hệ thống ghi nhận doanh thu điện tử. Trang này mô tả máy tính tiền làm việc đó như thế nào. Còn chính xác bạn phải ghi nhận những gì và từ khi nào thì Finanční správa (Cục Thuế Séc) sẽ cho bạn biết.",
     warn: '<strong>Quan trọng:</strong> Thông tin trên trang này không phải là tư vấn pháp lý hay tư vấn thuế. Việc ghi nhận doanh thu có áp dụng cho bạn không, từ khi nào và những khoản thanh toán nào phải ghi nhận, hãy kiểm tra trên <a href="https://eet.gov.cz/" rel="noopener">eet.gov.cz</a>, <a href="https://financnisprava.gov.cz/" rel="noopener">financnisprava.gov.cz</a> hoặc với tư vấn thuế hay kế toán của bạn.',
     datesTitle: "Thời hạn theo Finanční správa",
-    datesLead: 'Theo eet.gov.cz (tính đến 5/11/2026): hệ thống DIS+ chính thức hoạt động từ <strong>1/11/2026</strong>, nên ngay bây giờ bạn đã kích hoạt được EET, tạo đơn vị ghi nhận và tạo chứng chỉ máy tính tiền. Việc ghi nhận doanh thu bắt đầu từ <strong>1/1/2027</strong>. Tháng 1/2027 là giai đoạn thí điểm, nhưng đã là ghi nhận chính thức – đừng để việc chuẩn bị đến phút cuối. Lịch trình mới nhất có trên <a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">eet.gov.cz</a>.',
+    datesLead: "Theo lịch trình trên <a href=\"https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0\" rel=\"noopener\">eet.gov.cz</a> (tính đến 11/11/2026). Đừng để việc chuẩn bị đến phút cuối.",
+    // Harmonogram Finanční správy (eet.gov.cz, ověřeno 11. 11. 2026): [datum, stav, co se děje, co s tím].
+    dates: [
+      ["1/11/2026","Đã xong","DIS+ và chứng chỉ máy tính tiền","Trên cổng MOJE daně, trong DIS+ bạn đăng ký ghi nhận doanh thu, tạo đơn vị ghi nhận và tạo chứng chỉ máy tính tiền. Làm được ngay bây giờ."],
+      ["1/12/2026","Dự kiến","Ứng dụng MOJE eet","Finanční správa (Cục Thuế Séc) sẽ ra mắt ứng dụng web miễn phí cho người kinh doanh nhỏ. Có thể đủ nếu bạn chỉ ghi nhận ít khoản thanh toán."],
+      ["1/1/2027","Dự kiến","EET 2.0 hoạt động chính thức","Bắt đầu ghi nhận doanh thu. Tháng 1/2027 là giai đoạn thí điểm, nhưng đã là ghi nhận chính thức."],
+    ],
+    vsTitle: "MOJE eet miễn phí hay SuperKasa?",
+    vsLead: "MOJE eet là ứng dụng miễn phí của Finanční správa, dự kiến chạy từ 1/12/2026. Ứng dụng chưa hoạt động, nên chúng tôi chỉ dựa vào những gì Finanční správa đã công bố.",
+    vsFree: ["MOJE eet có thể đủ khi",["bạn chỉ ghi nhận ít khoản thanh toán,","bạn có nhiều nhất 2 đơn vị ghi nhận,","bạn chỉ cần danh mục mặt hàng kèm giá và hóa đơn dạng PDF."]],
+    vsPos: ["SuperKasa phù hợp khi bạn cần",["kho: nhập hàng bằng cách quét mã, kiểm kê và gợi ý đặt hàng,","nhãn giá và in hóa đơn trên máy in hóa đơn,","máy quét mã vạch và bán hàng trên màn hình cảm ứng cả lúc đông khách,","tối đa 10 thiết bị – máy tính, máy tính bảng và điện thoại,","giao diện tiếng Séc, tiếng Việt và tiếng Anh,","bán tiếp khi mất internet,","kết nối với cửa hàng online trên <a href=\"https://eshopsuper.cz/\">E-shop super</a>."]],
+    vsNote: "Chúng tôi không tìm thấy kho, máy in hóa đơn hay máy quét mã trong mô tả MOJE eet của Finanční správa. Điều đó không có nghĩa là ứng dụng sẽ không có. So sánh đầy đủ: <a href=\"moje-eet-nebo-pokladna.html\">MOJE eet hay hệ thống máy tính tiền</a>.",
+    faq: [
+      ["Doanh thu được ghi nhận qua EET 2.0 từ khi nào?","Theo lịch trình của Finanční správa là từ 1/1/2027. Tháng 1/2027 là giai đoạn thí điểm, nhưng đã là ghi nhận chính thức."],
+      ["Tôi cần gì để bật EET 2.0 thật trong SuperKasa?","Gói thuê đã trả tiền và chứng chỉ máy tính tiền của riêng bạn từ DIS+. Trong Quản lý → EET 2.0 bạn tải chứng chỉ lên, điền số đơn vị ghi nhận và kiểm tra kết nối."],
+      ["Đang bán mà mất internet thì sao?","Hóa đơn được lưu và in ngay. Máy tính tiền tự gửi lại EET cho đến khi có mạng, và bạn vẫn bán tiếp được."],
+      ["SuperKasa có chứng nhận của Finanční správa không?","Không. SuperKasa không có chứng nhận hay phê duyệt nào của Finanční správa và chúng tôi không tuyên bố điều đó. Chúng tôi đã kiểm tra việc gửi dữ liệu trong môi trường thử nghiệm của Finanční správa."],
+      ["Mọi người kinh doanh đều phải ghi nhận doanh thu?","Không phải lúc nào cũng vậy. Bạn có phải ghi nhận hay không và từ khi nào, hãy kiểm tra trên <a href=\"https://eet.gov.cz/\" rel=\"noopener\">eet.gov.cz</a> hoặc hỏi kế toán. Một số hộ kinh doanh nhỏ nhất theo chế độ thuế khoán có thể bỏ ghi nhận trong chế độ <a href=\"eet-off-pausalni-dan.html\">EET OFF</a>."],
+    ],
     doesTitle: "Máy tính tiền làm thay bạn những gì",
     does: [
       ["Gửi ở chế độ nền", "Hóa đơn được lưu và in ngay. Doanh thu gửi lên EET ở chế độ nền, nên khách không phải chờ."],

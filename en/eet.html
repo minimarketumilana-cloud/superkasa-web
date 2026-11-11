@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="../css/style.css">
 <script>document.documentElement.className+=" js"</script>
 <script src="../js/site.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","legalName":"Thanh Lam Nguyen","url":"https://superkasa.cz/","logo":{"@type":"ImageObject","@id":"https://superkasa.cz/#logo","url":"https://superkasa.cz/img/logo.png"},"image":"https://superkasa.cz/img/logo.png","telephone":"+420608886882","email":"info@superkasa.cz","address":{"@type":"PostalAddress","streetAddress":"1. května 117/141","postalCode":"725 25","addressLocality":"Ostrava","addressCountry":"CZ"},"identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"14161648"}},{"@type":"WebSite","@id":"https://superkasa.cz/#website","url":"https://superkasa.cz/","name":"SuperKasa","inLanguage":["cs","vi","en"],"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"WebPage","@id":"https://superkasa.cz/en/eet.html#webpage","url":"https://superkasa.cz/en/eet.html","name":"POS with EET 2.0 – sales sent in the background – SuperKasa","description":"How SuperKasa sends sales to EET 2.0: in the background, retrying when the internet is down, with a training mode. Dates and steps in DIS+.","inLanguage":"en","isPartOf":{"@id":"https://superkasa.cz/#website"},"publisher":{"@id":"https://superkasa.cz/#organization"},"about":{"@id":"https://superkasa.cz/#app"}},{"@type":"BreadcrumbList","@id":"https://superkasa.cz/en/eet.html#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://superkasa.cz/en/"},{"@type":"ListItem","position":2,"name":"POS with EET 2.0 – sales sent in the background – SuperKasa","item":"https://superkasa.cz/en/eet.html"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","legalName":"Thanh Lam Nguyen","url":"https://superkasa.cz/","logo":{"@type":"ImageObject","@id":"https://superkasa.cz/#logo","url":"https://superkasa.cz/img/logo.png"},"image":"https://superkasa.cz/img/logo.png","telephone":"+420608886882","email":"info@superkasa.cz","address":{"@type":"PostalAddress","streetAddress":"1. května 117/141","postalCode":"725 25","addressLocality":"Ostrava","addressCountry":"CZ"},"identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"14161648"}},{"@type":"WebSite","@id":"https://superkasa.cz/#website","url":"https://superkasa.cz/","name":"SuperKasa","inLanguage":["cs","vi","en"],"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"WebPage","@id":"https://superkasa.cz/en/eet.html#webpage","url":"https://superkasa.cz/en/eet.html","name":"POS with EET 2.0 – sales sent in the background – SuperKasa","description":"How SuperKasa sends sales to EET 2.0: in the background, retrying when the internet is down, with a training mode. Dates and steps in DIS+.","inLanguage":"en","isPartOf":{"@id":"https://superkasa.cz/#website"},"publisher":{"@id":"https://superkasa.cz/#organization"},"about":{"@id":"https://superkasa.cz/#app"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When does sales registration in EET 2.0 start?","acceptedAnswer":{"@type":"Answer","text":"According to the Financial Administration's schedule, on 1 January 2027. January 2027 is a pilot period, but it is already standard registration."}},{"@type":"Question","name":"What do I need to switch on live EET 2.0 in SuperKasa?","acceptedAnswer":{"@type":"Answer","text":"A paid plan and your own POS certificate from DIS+. In Admin → EET 2.0 you upload the certificate, enter the recording unit number and verify the connection."}},{"@type":"Question","name":"What if the internet goes down during a sale?","acceptedAnswer":{"@type":"Answer","text":"The receipt is saved and printed straight away. The POS keeps retrying the EET submission until the connection is back, and you can keep selling."}},{"@type":"Question","name":"Is SuperKasa certified by the Financial Administration?","acceptedAnswer":{"@type":"Answer","text":"No. SuperKasa has no certification or approval from the Financial Administration, and we don't claim any. We verified the submission in the Financial Administration's test environment."}},{"@type":"Question","name":"Does sales registration apply to every business?","acceptedAnswer":{"@type":"Answer","text":"Not always. Check whether and from when you have to register on eet.gov.cz or with your accountant. Some of the smallest sole traders in the flat-rate tax regime can opt out in the EET OFF regime."}}]},{"@type":"BreadcrumbList","@id":"https://superkasa.cz/en/eet.html#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://superkasa.cz/en/"},{"@type":"ListItem","position":2,"name":"POS with EET 2.0 – sales sent in the background – SuperKasa","item":"https://superkasa.cz/en/eet.html"}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#obsah">Skip to content</a>
@@ -80,12 +80,32 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Dates according to the Financial Administration</h2>
-      <p>According to eet.gov.cz (as of 5 November 2026): the DIS+ system has been officially running since <strong>1 November 2026</strong>, so you can already activate EET, create recording units and generate a POS certificate. Sales registration begins on <strong>1 January 2027</strong>. January 2027 is a pilot period, but it is already standard registration – don't leave the preparation to the last minute. You can find the current schedule on <a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">eet.gov.cz</a>.</p>
+      <p>According to the schedule on <a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">eet.gov.cz</a> (as of 11 November 2026). Don't leave the preparation to the last minute.</p>
+    </div>
+    <!-- Termíny z harmonogramu Finanční správy: datum, stav (hotovo / plánováno), co se děje a co s tím udělat. -->
+    <div class="grid grid-3">
+      <article class="card"><span class="badge">Done</span><h3>1 Nov 2026</h3><p><strong>DIS+ and POS certificates</strong></p><p>On the MOJE daně portal, in DIS+, you sign up for sales registration, create recording units and generate a POS certificate. You can do it now.</p></article>
+      <article class="card"><span class="badge">Planned</span><h3>1 Dec 2026</h3><p><strong>The MOJE eet app</strong></p><p>The Financial Administration will launch a free web app for small businesses. It may be enough if you only register a few payments.</p></article>
+      <article class="card"><span class="badge">Planned</span><h3>1 Jan 2027</h3><p><strong>EET 2.0 in regular operation</strong></p><p>Sales registration begins. January 2027 is a pilot period, but it is already standard registration.</p></article>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section alt" id="moje-eet">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Free MOJE eet, or SuperKasa?</h2>
+      <p>MOJE eet is a free app from the Financial Administration, with launch planned for 1 December 2026. It isn't running yet, so we rely only on what the Financial Administration has published about it.</p>
+    </div>
+    <div class="grid grid-2">
+      <article class="card"><h3>MOJE eet may be enough when</h3><ul class="checks"><li>you only register a few payments,</li><li>you have no more than 2 recording units,</li><li>a catalogue of items with prices and a PDF receipt are all you need.</li></ul></article>
+      <article class="card"><h3>SuperKasa suits you when you need</h3><ul class="checks"><li>stock: receiving goods by scanning, stocktaking and suggested orders,</li><li>price labels and receipts printed on a receipt printer,</li><li>a barcode scanner and touchscreen selling, even at peak times,</li><li>up to 10 devices – computer, tablet and phone,</li><li>a staff interface in Czech, Vietnamese and English,</li><li>to keep selling when the internet goes down,</li><li>a connection to your online shop on <a href="https://eshopsuper.cz/">E-shop super</a>.</li></ul></article>
+    </div>
+    <p class="small mt-1">We did not find stock, a receipt printer or a scanner in the Financial Administration's description of MOJE eet. That does not mean the app will never have them. Full comparison: <a href="moje-eet-nebo-pokladna.html">MOJE eet or a POS system</a>.</p>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap">
     <div class="section-head"><h2>What the POS does for you</h2></div>
     <div class="grid grid-2">
@@ -130,6 +150,32 @@
     <p>SuperKasa has no certification or approval from the Financial Administration – and we do not claim anything of the kind. We have tested sending in the Financial Administration's test environment. The business owner is responsible for meeting the registration obligations; the POS is a tool that helps with this.</p>
     <p>Some of the smallest self-employed people (OSVČ) in the flat-rate tax regime can opt out of sales registration in the so-called EET OFF regime. The Financial Administration describes the conditions on <a href="https://eet.gov.cz/cs/eet-off/co-je-rezim-eet-off" rel="noopener">eet.gov.cz</a>.</p>
     <p>The EET 2.0 rules may change. You will always find current information, dates and answers to frequently asked questions on <a href="https://eet.gov.cz/" rel="noopener">eet.gov.cz</a>.</p>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap faq">
+    <div class="section-head"><h2>Frequently asked questions</h2></div>
+    <details>
+      <summary>When does sales registration in EET 2.0 start?</summary>
+      <div><p>According to the Financial Administration's schedule, on 1 January 2027. January 2027 is a pilot period, but it is already standard registration.</p></div>
+    </details>
+    <details>
+      <summary>What do I need to switch on live EET 2.0 in SuperKasa?</summary>
+      <div><p>A paid plan and your own POS certificate from DIS+. In Admin → EET 2.0 you upload the certificate, enter the recording unit number and verify the connection.</p></div>
+    </details>
+    <details>
+      <summary>What if the internet goes down during a sale?</summary>
+      <div><p>The receipt is saved and printed straight away. The POS keeps retrying the EET submission until the connection is back, and you can keep selling.</p></div>
+    </details>
+    <details>
+      <summary>Is SuperKasa certified by the Financial Administration?</summary>
+      <div><p>No. SuperKasa has no certification or approval from the Financial Administration, and we don't claim any. We verified the submission in the Financial Administration's test environment.</p></div>
+    </details>
+    <details>
+      <summary>Does sales registration apply to every business?</summary>
+      <div><p>Not always. Check whether and from when you have to register on <a href="https://eet.gov.cz/" rel="noopener">eet.gov.cz</a> or with your accountant. Some of the smallest sole traders in the flat-rate tax regime can opt out in the <a href="eet-off-pausalni-dan.html">EET OFF</a> regime.</p></div>
+    </details>
   </div>
 </section>
 

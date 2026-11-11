@@ -334,7 +334,25 @@ export default {
     lead: "SuperKasa umí odesílat tržby do elektronické evidence tržeb EET 2.0. Na této stránce popisujeme, jak to pokladna dělá. Co přesně a odkdy musíte evidovat, vám řekne Finanční správa.",
     warn: '<strong>Důležité:</strong> Informace na této stránce nejsou právní ani daňové poradenství. Zda se vás evidence tržeb týká, odkdy a jaké platby evidujete, ověřte na <a href="https://eet.gov.cz/" rel="noopener">eet.gov.cz</a>, na <a href="https://financnisprava.gov.cz/" rel="noopener">financnisprava.gov.cz</a> nebo u svého daňového poradce či účetní.',
     datesTitle: "Termíny podle Finanční správy",
-    datesLead: 'Podle eet.gov.cz (stav k 5. 11. 2026): systém DIS+ je od <strong>1. 11. 2026</strong> oficiálně spuštěný, takže už teď aktivujete EET, založíte evidenční jednotky a vytvoříte pokladní certifikát. Evidence tržeb začíná <strong>1. 1. 2027</strong>. Leden 2027 je pilotní režim, ale už jde o standardní evidenci – přípravu nenechávejte na poslední chvíli. Aktuální harmonogram najdete na <a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">eet.gov.cz</a>.',
+    datesLead: "Podle harmonogramu na <a href=\"https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0\" rel=\"noopener\">eet.gov.cz</a> (stav k 11. 11. 2026). Přípravu nenechávejte na poslední chvíli.",
+    // Harmonogram Finanční správy (eet.gov.cz, ověřeno 11. 11. 2026): [datum, stav, co se děje, co s tím].
+    dates: [
+      ["1. 11. 2026","Hotovo","DIS+ a pokladní certifikáty","Na portálu MOJE daně se v DIS+ přihlásíte k evidenci tržeb, založíte evidenční jednotky a vygenerujete pokladní certifikát. Jde to už teď."],
+      ["1. 12. 2026","Plánováno","Aplikace MOJE eet","Finanční správa spustí bezplatnou webovou aplikaci pro malé podnikatele. Stačit může tam, kde evidujete jen málo plateb."],
+      ["1. 1. 2027","Plánováno","Běžný provoz EET 2.0","Začíná evidence tržeb. Leden 2027 je pilotní režim, ale už jde o standardní evidenci."],
+    ],
+    vsTitle: "MOJE eet zdarma, nebo SuperKasa?",
+    vsLead: "MOJE eet je bezplatná aplikace Finanční správy, její spuštění je plánované na 1. 12. 2026. Zatím neběží, proto vycházíme jen z toho, co o ní Finanční správa zveřejnila.",
+    vsFree: ["MOJE eet může stačit, když",["evidujete jen málo plateb,","máte nejvýše 2 evidenční jednotky,","vystačíte s katalogem položek a cen a s dokladem v PDF."]],
+    vsPos: ["SuperKasa se hodí, když potřebujete",["sklad: příjem zboží skenováním, inventuru a návrh objednávky,","cenovky a tisk účtenek na pokladní tiskárně,","čtečku čárových kódů a prodej na dotyk i ve špičce,","až 10 zařízení – počítač, tablet i mobil,","obsluhu česky, vietnamsky i anglicky,","prodávat dál při výpadku internetu,","propojení s e-shopem na <a href=\"https://eshopsuper.cz/\">E-shop super</a>."]],
+    vsNote: "Sklad, pokladní tiskárnu ani čtečku jsme v popisu MOJE eet od Finanční správy nenašli. Neznamená to, že je aplikace umět nebude. Celé srovnání: <a href=\"moje-eet-nebo-pokladna.html\">MOJE eet, nebo pokladní systém</a>.",
+    faq: [
+      ["Odkdy se tržby evidují v EET 2.0?","Podle harmonogramu Finanční správy od 1. 1. 2027. Leden 2027 je pilotní režim, ale už jde o standardní evidenci."],
+      ["Co potřebuji, abych v SuperKase zapnul ostré EET 2.0?","Placený pronájem a vlastní pokladní certifikát z DIS+. Ve Správě → EET 2.0 certifikát nahrajete, vyplníte číslo evidenční jednotky a ověříte spojení."],
+      ["Co když při prodeji vypadne internet?","Doklad se uloží a vytiskne hned. Pokladna odesílání do EET sama opakuje, dokud se spojení neobnoví, a prodávat můžete dál."],
+      ["Má SuperKasa certifikaci od Finanční správy?","Ne. SuperKasa nemá od Finanční správy žádnou certifikaci ani schválení a nic takového netvrdíme. Odesílání jsme ověřili v testovacím prostředí Finanční správy."],
+      ["Týká se evidence tržeb každého podnikatele?","Ne vždy. Zda a odkdy evidujete, ověřte na <a href=\"https://eet.gov.cz/\" rel=\"noopener\">eet.gov.cz</a> nebo u účetní. Některé nejmenší OSVČ v paušálním režimu se mohou evidence vzdát v režimu <a href=\"eet-off-pausalni-dan.html\">EET OFF</a>."],
+    ],
     doesTitle: "Co pokladna dělá za vás",
     does: [
       ["Odeslání na pozadí", "Doklad se uloží a vytiskne hned. Do EET se tržba odesílá na pozadí, takže zákazník nečeká."],

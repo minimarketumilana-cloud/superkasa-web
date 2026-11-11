@@ -1,5 +1,5 @@
 // Ceník, EET 2.0, Jak začít, Přihlášení a Kontakt. Texty jsou ve slovníku c.T.<stránka> (tools/stranky/texty/<jazyk>.mjs).
-import { CONTACT_EMAIL, LOGIN_LIVE, ORG, ORG_ID, PROVIDER, REGISTER_URL, SITE, card, cta, icon, plain, software } from "./parts.mjs";
+import { CONTACT_EMAIL, LOGIN_LIVE, ORG, ORG_ID, PROVIDER, REGISTER_URL, SITE, card, cta, faqLd, faqSection, icon, plain, software } from "./parts.mjs";
 import { pageUrl } from "./i18n.mjs";
 import { FEATURE_ORDER } from "./obory.mjs";
 
@@ -192,6 +192,7 @@ export const eet = (c) => {
     current: "eet.html",
     title: t.title,
     desc: t.desc,
+    jsonld: { "@context": "https://schema.org", "@graph": [faqLd(t.faq)] },
     body: `
 <section class="page-head">
   <div class="wrap">
@@ -214,10 +215,27 @@ export const eet = (c) => {
       <h2>${t.datesTitle}</h2>
       <p>${t.datesLead}</p>
     </div>
+    <!-- Termíny z harmonogramu Finanční správy: datum, stav (hotovo / plánováno), co se děje a co s tím udělat. -->
+    <div class="grid grid-3">
+      ${t.dates.map(([date, status, title, text]) => `<article class="card"><span class="badge">${status}</span><h3>${date}</h3><p><strong>${title}</strong></p><p>${text}</p></article>`).join("\n      ")}
+    </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section alt" id="moje-eet">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>${t.vsTitle}</h2>
+      <p>${t.vsLead}</p>
+    </div>
+    <div class="grid grid-2">
+      ${[t.vsFree, t.vsPos].map(([title, items]) => `<article class="card"><h3>${title}</h3><ul class="checks">${items.map((x) => `<li>${x}</li>`).join("")}</ul></article>`).join("\n      ")}
+    </div>
+    <p class="small mt-1">${t.vsNote}</p>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap">
     <div class="section-head"><h2>${t.doesTitle}</h2></div>
     <div class="grid grid-2">
@@ -252,6 +270,7 @@ export const eet = (c) => {
     ${t.limits.map((x) => `<p>${x}</p>`).join("\n    ")}
   </div>
 </section>
+${faqSection(c.T.cenik.faqTitle, t.faq, "section alt")}
 ${cta(c, t.cta[0], t.cta[1])}`,
   };
 };
