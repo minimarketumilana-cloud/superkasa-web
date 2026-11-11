@@ -31,6 +31,20 @@ export const PROVIDER = {
 /** Text bez HTML značek a entit (do strukturovaných dat a popisků). */
 export const plain = (h) => String(h).replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
 
+/** Časté otázky do strukturovaných dat (FAQPage) – stejné otázky, jaké jsou na stránce vidět (faqSection). */
+export const faqLd = (faq) => ({ "@type": "FAQPage", mainEntity: faq.map(([q, a]) => ({ "@type": "Question", name: plain(q), acceptedAnswer: { "@type": "Answer", text: plain(a) } })) });
+/** Oddíl častých otázek na stránce (rozbalovací, ovládá se i klávesnicí). `faq` = [[otázka, odpověď], …]. */
+export const faqSection = (title, faq, cls = "section") => `
+<section class="${cls}">
+  <div class="wrap faq">
+    <div class="section-head"><h2>${title}</h2></div>
+    ${faq.map(([q, a]) => `<details>
+      <summary>${q}</summary>
+      <div><p>${a}</p></div>
+    </details>`).join("\n    ")}
+  </div>
+</section>`;
+
 /** Organizace SuperKasa pro strukturovaná data (jedna entita pro celý web). E-mail přibude, až bude CONTACT_EMAIL. */
 export const ORG_ID = `${SITE}/#organization`;
 export const APP_ID = `${SITE}/#app`;

@@ -1,6 +1,6 @@
 // Úvod a Funkce. Texty jsou ve slovníku c.T.index a c.T.funkce (tools/stranky/texty/<jazyk>.mjs).
 import { pageUrl, SITE } from "./i18n.mjs";
-import { LOGIN_LIVE, REGISTER_URL, card, cta, software } from "./parts.mjs";
+import { LOGIN_LIVE, REGISTER_URL, card, cta, faqLd, faqSection, software } from "./parts.mjs";
 import { oborPicker } from "./obory-stranky.mjs";
 
 /**
@@ -30,6 +30,7 @@ export const index = (c) => {
       "@context": "https://schema.org",
       "@graph": [
         software(c),
+        faqLd(t.faq),
       ],
     },
     body: `
@@ -121,6 +122,7 @@ export const index = (c) => {
     </ol>
   </div>
 </section>
+${faqSection(c.T.cenik.faqTitle, t.faq)}
 ${cta(c)}`,
   };
 };

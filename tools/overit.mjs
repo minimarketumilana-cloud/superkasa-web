@@ -114,6 +114,19 @@ for (const [file, html] of pages) {
   // Přihlášení: upozornění na nedostupný server nesmí být vidět ve výchozím stavu (ukáže ho až skript po selhání).
   if (file.endsWith('prihlaseni.html')) check(html.includes('<p class="cloud-soon" id="login-note" role="status" hidden></p>'), `${file}: upozornění u přihlášení není skryté`);
 }
+// Časté otázky na úvodu, oborech a ceníku: strukturovaná data (FAQPage) musí odpovídat tomu, co je na stránce vidět.
+for (const dir of ['', 'vi/', 'en/']) {
+  for (const name of ['index.html', 'obory.html', 'cenik.html']) {
+    const file = `${dir}${name}`;
+    const html = pages.get(file);
+    const graph = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
+    const faq = graph.find(n => n['@type'] === 'FAQPage');
+    const shown = [...html.matchAll(/<summary>([\s\S]*?)<\/summary>/g)].map(m => m[1].replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim());
+    check(Boolean(faq) && faq.mainEntity.length >= 4, `${file}: chybí FAQPage nebo má málo otázek`);
+    check(Boolean(faq) && JSON.stringify(faq.mainEntity.map(q => q.name)) === JSON.stringify(shown), `${file}: otázky ve strukturovaných datech neodpovídají stránce`);
+    check(Boolean(faq) && faq.mainEntity.every(q => q.acceptedAnswer?.text?.length > 20), `${file}: prázdná odpověď ve FAQPage`);
+  }
+}
 // Hlavičky pro hosting, který je umí: stejná CSP jako ve stránkách a navíc frame-ancestors.
 const headers = readFileSync(path.join(root, '_headers'), 'utf8');
 const metaCsp = pages.get('index.html').match(/http-equiv="Content-Security-Policy" content="([^"]+)"/)?.[1].replaceAll('&#39;', "'");

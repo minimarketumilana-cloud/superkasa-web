@@ -1,7 +1,7 @@
 // Výběr oboru (velké karty jako v aplikaci) a stránka pro každý obor s náhledem nastavené pokladny.
 // Všechno je v jazyce `c` (c.T = texty stránek, c.D = data oborů v tom jazyce, c.up = cesta ke kořeni webu).
 import { pageUrl } from "./i18n.mjs";
-import { LOGIN_LIVE, REGISTER_URL, card, icon } from "./parts.mjs";
+import { LOGIN_LIVE, REGISTER_URL, card, faqLd, faqSection, icon } from "./parts.mjs";
 import { FEATURE_ORDER } from "./obory.mjs";
 
 /** Cena po česku: 1 450,00 (tisíce oddělené nezlomitelnou mezerou). Náhled pokladny ji ukazuje tak ve všech jazycích. */
@@ -207,6 +207,7 @@ export const oboryPage = (c, footerObory) => {
     title: t.title,
     desc: t.desc(c.D.OBORY.length),
     footerObory,
+    jsonld: { "@context": "https://schema.org", "@graph": [faqLd(t.faq)] },
     body: `
 <section class="page-head">
   <div class="wrap">
@@ -222,6 +223,7 @@ export const oboryPage = (c, footerObory) => {
       <p>${t.orOther}</p>
     </div>
   </div>
-</section>`,
+</section>
+${faqSection(c.T.cenik.faqTitle, t.faq, "section alt")}`,
   };
 };

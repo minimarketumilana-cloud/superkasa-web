@@ -101,6 +101,14 @@ export default {
     title: "Pro koho je SuperKasa – vyberte svůj obor",
     desc: (count) => `Pokladna nastavená pro váš obor – ${count} typů provozu: večerka, trafika, pekárna, kavárna, hospoda, kadeřnictví, nehty, fitness, autoservis a další.`,
     h1: "Pro koho je SuperKasa",
+    // Časté otázky (vidět na stránce i ve strukturovaných datech FAQPage). Odpovědi jen z toho, co web tvrdí jinde.
+    faq: [
+      ["Co výběr oboru v pokladně nastaví?", "Skupiny zboží se sazbami DPH, dlaždice, ukázkové položky a funkce, které se pro váš provoz hodí. Všechno uvidíte a upravíte, než pokladnu založíte."],
+      ["Co když svůj obor v seznamu nenajdu?", 'Při zřízení pokladny popište vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky. Nebo vyberte <a href="pokladna-obchod.html">Jiný obchod</a> či <a href="pokladna-sluzby.html">Jiné služby</a> a skupiny si upravte podle sebe.'],
+      ["Liší se cena podle oboru?", 'Ne. Cena je pro kterýkoli obor stejná: 189 Kč měsíčně nebo 2 041 Kč ročně včetně DPH. <a href="cenik.html">Ceník</a>'],
+      ["Hodí se SuperKasa i pro hospodu nebo restauraci se stoly?", 'Ano. Nastavení <a href="pokladna-hospoda-restaurace.html">Hospoda, bar, restaurace</a> má stoly a účty na stůl.'],
+      ["Musím sazby DPH nastavovat sám?", "Ne. Pokladna připraví skupiny i se sazbami DPH. Před ostrým prodejem je ověřte s účetní."],
+    ],
     lead: "Vyberte svůj obor a uvidíte, jak bude pokladna po prvním spuštění nastavená – skupiny zboží, dlaždice, ukázkové položky a funkce.",
     notFound: "<strong>Nenašli jste svůj obor?</strong> Při zřízení pokladny popište vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky – zdarma a bez internetu, česky, vietnamsky i anglicky. Všechno uvidíte a upravíte, než pokladnu založíte. Sazby DPH ověřte s účetní.",
     orOther: `Nebo vyberte <a href="pokladna-obchod.html">Jiný obchod</a> či <a href="pokladna-sluzby.html">Jiné služby</a> a skupiny si upravte podle sebe. Poradíme i po telefonu: <a href="tel:+420608886882">${PHONE}</a>.`,
@@ -111,6 +119,15 @@ export default {
     desc: "Dotyková pokladna v prohlížeči pro obchody, gastro a služby. EET 2.0, sklad, cenovky, obsluha vietnamsky. 189 Kč měsíčně s DPH, 10 dní zdarma.",
     ldDesc: "SuperKasa je pokladní systém v prohlížeči pro obchody, gastro a služby. Obsluha je dostupná česky, vietnamsky a anglicky.",
     ldOffer: "Měsíčně včetně DPH, prvních 10 dní zdarma",
+    // Časté otázky na úvodu (vidět na stránce i ve strukturovaných datech FAQPage). Odpovědi jen z toho, co web tvrdí jinde.
+    faq: [
+      ["Co je SuperKasa?", "SuperKasa je pokladní systém v prohlížeči pro obchody, gastro a služby. Umí prodej na dotyk, sklad, cenovky a evidenci tržeb EET 2.0. Obsluha si ji přepne do češtiny, vietnamštiny nebo angličtiny."],
+      ["Musím něco instalovat?", 'Ne. SuperKasa běží v prohlížeči na počítači, tabletu i mobilu – nic se nestahuje ani neinstaluje. V každém tarifu je až 10 zařízení. <a href="jak-zacit.html">Jak začít</a>'],
+      ["Kolik SuperKasa stojí?", '189 Kč měsíčně nebo 2 041 Kč ročně včetně DPH, stejně pro kterýkoli obor. Prvních 10 dní je zdarma, bez karty a bez závazku. Z vašich tržeb si nic nebereme. <a href="cenik.html">Ceník</a>'],
+      ["Je SuperKasa připravená na EET 2.0?", 'Ano. Evidence tržeb EET 2.0 začíná 1. 1. 2027. S placeným pronájmem a pokladním certifikátem z DIS+ zapnete ostré odesílání tržeb ve Správě → EET 2.0. <a href="eet.html">Jak na EET 2.0</a>'],
+      ["Co když vypadne internet?", "Prodáváte dál hotově i kartou. Účtenky se po připojení nahrají samy a do EET jdou s původním časem."],
+      ["Umí SuperKasa vietnamsky?", 'Ano. Obsluha je česky, vietnamsky i anglicky a každý prodavač má svůj jazyk. Doklad pro zákazníka je vždy česky. <a href="pokladna-pro-vietnamske-obchody.html">Pokladna pro vietnamské obchody</a>'],
+    ],
     eyebrow: "Pokladní systém v prohlížeči",
     h1: "Pokladna s EET 2.0 nastavená pro váš obor",
     lead: "Vyberte, co provozujete. SuperKasa si připraví skupiny zboží, dlaždice a funkce přesně pro vás – a vy můžete začít prodávat.",
