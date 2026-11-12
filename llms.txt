@@ -28,6 +28,7 @@ Web je česky (https://superkasa.cz/), vietnamsky (https://superkasa.cz/vi/) a a
 - [Pokladní tiskárna a čtečka čárových kódů](https://superkasa.cz/tiskarna-ctecka-zasuvka.html): Jaká pokladní tiskárna a čtečka čárových kódů fungují se SuperKasou: 58 a 80 mm, USB, Bluetooth, síť, zásuvka, cenovky a co dělat, když se netiskne.
 - [Pokladna v mobilu a tisk u hlavní kasy](https://superkasa.cz/prodej-z-telefonu.html): Jak prodávat s pokladnou v telefonu nebo tabletu: přihlášení, PIN prodavače, počet zařízení, kamera jako čtečka, tisk u hlavní kasy a výpadek internetu.
 - [Pokladna vietnamsky pro večerky a potraviny](https://superkasa.cz/pokladna-pro-vietnamske-obchody.html): Večerka a pokladna vietnamsky: prodavač pracuje ve svém jazyce, doklad zůstane česky. Kategorie, cenovky, názvy zboží a pomoc s EET 2.0 v SuperKase.
+- [Srovnání pokladen: ceny a funkce 2026](https://superkasa.cz/srovnani-pokladnich-systemu.html): Ceny a funkce pokladních systémů SuperKasa, Dotykačka, Storyous a helloCash a státní aplikace MOJE eet. Údaje z veřejných ceníků k 12. 11. 2026.
 
 ## Pokladna podle oboru
 

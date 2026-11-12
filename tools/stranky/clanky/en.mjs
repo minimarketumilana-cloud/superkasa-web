@@ -1687,5 +1687,124 @@ export default {
     sources: [["Finanční správa: Who must register sales", "https://eet.gov.cz/cs/koho-se-eet-tyka/kdo-musi-evidovat-trzby"]],
     related: ["navod-superkasa", "tiskarna-ctecka-zasuvka", "eet-2-0-krok-za-krokem"],
   },
+  {
+    slug: "srovnani-pokladnich-systemu",
+    group: "pokladna",
+    kicker: "Choosing a POS",
+    title: "SuperKasa, Dotykačka, Storyous, helloCash and MOJE eet: prices and features compared",
+    metaTitle: "POS systems compared: prices and features | SuperKasa",
+    desc: "Prices and features of the SuperKasa, Dotykačka, Storyous and helloCash POS systems and the state app MOJE eet. Data from public price lists as of 12 Nov 2026.",
+    lead: "We compared the public price lists of four POS systems and the state app MOJE eet. Every figure has a source and a date. Competitors' prices are shown both without and with VAT so they can be compared.",
+    published: "2026-11-12",
+    updated: "2026-11-12",
+    minutes: 6,
+    sections: [
+      {
+        id: "prehled",
+        h2: "Prices and features at a glance",
+        html: `
+<p>The data comes from public price lists as of 12 November 2026. Prices are per month with monthly billing. Vendors change their prices, so check them before you order.</p>
+<div class="tbl"><table>
+  <thead><tr><th>System</th><th>Lowest plan</th><th>Plan with stock</th><th>Extra devices</th><th>EET 2.0</th></tr></thead>
+  <tbody>
+    <tr><td>SuperKasa</td><td>CZK 189 incl. VAT (CZK 156.20 excl. VAT)</td><td>Same plan, stock is included</td><td>Up to 10 devices included</td><td>Yes, included</td></tr>
+    <tr><td>Dotykačka</td><td>SNADNO CZK 590 excl. VAT (CZK 713.90 incl. VAT)</td><td>NAPLNO CZK 1,190 excl. VAT (CZK 1,439.90 incl. VAT)</td><td>Not stated in the price list</td><td>Yes, in all licences from 1 January 2027</td></tr>
+    <tr><td>Storyous (O2 price list)</td><td>Mini CZK 390 excl. VAT (CZK 471.90 incl. VAT)</td><td>Stock is an add-on for CZK 990 excl. VAT (CZK 1,197.90 incl. VAT)</td><td>CZK 740 excl. VAT (CZK 895.40 incl. VAT)</td><td>The vendor says it is ready</td></tr>
+    <tr><td>helloCash</td><td>Basic CZK 69 excl. VAT (CZK 83.49 incl. VAT)</td><td>Prémiová CZK 219 excl. VAT (CZK 264.99 incl. VAT)</td><td>Not stated in the price list</td><td>We found no mention on the website</td></tr>
+    <tr><td>MOJE eet</td><td>Free</td><td>The Financial Administration does not mention stock</td><td>No more than 2 recording units</td><td>Yes, a state app from 1 December 2026</td></tr>
+  </tbody>
+</table></div>`,
+      },
+      {
+        id: "dotykacka",
+        h2: "Dotykačka",
+        html: `
+<p>Dotykačka sells a licence and its own POS devices. According to the <a href="https://dotykacka.cz/cenik/" rel="noopener">price list on dotykacka.cz</a> as of 12 November 2026:</p>
+<ul>
+  <li>The SNADNO licence costs CZK 590 a month excl. VAT, NAPLNO CZK 1,190 and NEOMEZENĚ CZK 1,990. These are prices without a card terminal, with monthly billing.</li>
+  <li>Annual billing brings a 15% discount. With Dotykačka's card terminal the licence is cheaper, depending on your card turnover.</li>
+  <li>Stock management starts with the NAPLNO licence. For SNADNO the price list shows it as not available.</li>
+  <li>The attendance system and ordering systems are in the NEOMEZENĚ licence.</li>
+  <li>The price list shows EET 2.0 in all licences from 1 January 2027.</li>
+  <li>POS devices in the price list cost from CZK 6,990 to CZK 22,990 excl. VAT.</li>
+</ul>
+<p>It suits businesses that want the POS, the device and the card terminal from one supplier, with round-the-clock technical support.</p>`,
+      },
+      {
+        id: "storyous",
+        h2: "Storyous",
+        html: `
+<p>Storyous is a POS aimed mainly at hospitality. We did not find a public price list on the Storyous website, so we rely on the <a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">offer of the reseller O2</a> as of 12 November 2026:</p>
+<ul>
+  <li>The Business plan costs CZK 690 a month excl. VAT with the All-in-One device and CZK 890 with the Medium 10" tablet.</li>
+  <li>Storyous Mini costs CZK 390 a month excl. VAT. According to O2 it lacks the hospitality features, such as the table layout.</li>
+  <li>Each additional active device costs CZK 740 excl. VAT.</li>
+  <li>With the plans, O2 also lists stock management for CZK 990, integrations (Foodora, Wolt, hotel systems) for CZK 490 and a loyalty programme for CZK 590, all excl. VAT.</li>
+  <li>The devices cost CZK 4,990 (All-in-One) or CZK 9,990 (Medium 10" tablet) excl. VAT.</li>
+  <li>On EET 2.0, Storyous says <a href="https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni" rel="noopener">on its website</a> that it is ready and that the feature and updates will be free.</li>
+</ul>
+<p>It suits restaurants and cafés that need connections to delivery services and hotel systems.</p>`,
+      },
+      {
+        id: "hellocash",
+        h2: "helloCash",
+        html: `
+<p>helloCash is a cloud POS with the lowest entry price among the paid systems in this comparison. According to the <a href="https://hellocash.cz/cena" rel="noopener">price list on hellocash.cz</a> as of 12 November 2026:</p>
+<ul>
+  <li>Basic costs CZK 69 a month excl. VAT, Střední CZK 99, Prémiová CZK 219 and Gastro CZK 329.</li>
+  <li>Stock and stocktaking and the barcode scanner interface start with the Prémiová version. For stock, a note in the price list mentions a fee of CZK 120.90 per module.</li>
+  <li>The table overview and bill splitting are in the Gastro version.</li>
+  <li>Support is charged separately: CZK 849 a year excl. VAT, or CZK 3,500 excl. VAT per hour.</li>
+  <li>As of 12 November 2026 we found no mention of EET 2.0 on the helloCash website. Ask the vendor.</li>
+</ul>
+<p>It suits services and small sellers who only need a basic POS at a low price.</p>`,
+      },
+      {
+        id: "moje-eet",
+        h2: "MOJE eet",
+        html: `
+<p>MOJE eet is a free web app from the Financial Administration. According to the <a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">schedule</a>, its launch is planned for 1 December 2026. It is meant mainly for small businesses with a low volume of payments and no more than 2 recording units. According to the published description it registers sales, keeps a catalogue of items with prices and creates a PDF receipt. The description does not mention stock, a receipt printer or a scanner.</p>
+<p>The article <a href="moje-eet-nebo-pokladna.html">MOJE eet or a POS system</a> covers it in detail.</p>`,
+      },
+      {
+        id: "superkasa",
+        h2: "SuperKasa",
+        html: `
+<ul>
+  <li>It costs CZK 189 a month or CZK 2,041 a year including VAT, the same for any type of business. The first 10 days are free.</li>
+  <li>Every plan includes stock, price labels, EET 2.0 and up to 10 devices.</li>
+  <li>It runs in the browser on your own computer, tablet or phone.</li>
+  <li>The staff interface is in Czech, Vietnamese and English.</li>
+  <li>You keep selling when the internet goes down.</li>
+</ul>
+<p><strong>What SuperKasa does not have:</strong></p>
+<ul>
+  <li>Its own card terminal. Card payments go through your terminal from a bank and you enter the amount on it by hand.</li>
+  <li>Connections to delivery services such as Wolt or Foodora.</li>
+  <li>Its own POS devices or device servicing.</li>
+</ul>
+<p>It suits shops, hospitality and services that want a POS with stock at a low price on their own device. <a href="cenik.html">SuperKasa pricing</a></p>`,
+      },
+      {
+        id: "jak-cist",
+        h2: "How to read the comparison",
+        html: `
+<ul>
+  <li>Competitors list prices without VAT. We added the conversion with 21% VAT ourselves.</li>
+  <li>We compare only what the vendors state publicly. Where a figure is missing, we say so.</li>
+  <li>We do not compare support quality, speed or ease of use. Check those in a trial.</li>
+  <li>Prices and features change. The vendor's current offer is what counts.</li>
+</ul>
+<p>The general approach to choosing is in the article <a href="jak-vybrat-pokladnu.html">How to choose a POS system</a>.</p>`,
+      },
+    ],
+    faq: [
+      ["Which POS is the cheapest?","The state app MOJE eet is free. Among the paid systems, according to the price lists as of 12 November 2026, helloCash Basic has the lowest entry price at CZK 69 a month excl. VAT. With stock, SuperKasa is the cheapest at CZK 189 a month including VAT."],
+      ["Why are competitors' prices shown both without and with VAT?","The vendors list prices without VAT, while SuperKasa lists them including VAT. To make them comparable, we show both amounts for the competitors."],
+      ["How old is the data in the comparison?","It comes from public price lists as of 12 November 2026. The sources are listed at the end of the article. Check the price with the vendor before you order."],
+    ],
+    sources: [["Dotykačka: price list","https://dotykacka.cz/cenik/"],["O2: Storyous POS solutions","https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni"],["Storyous: EET 2.0? My jsme připraveni","https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni"],["helloCash: prices and fees","https://hellocash.cz/cena"],["Financial Administration: EET 2.0 schedule","https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0"]],
+    related: ["jak-vybrat-pokladnu", "moje-eet-nebo-pokladna", "navod-superkasa"],
+  },
   ],
 };

@@ -274,7 +274,7 @@
   </url>
   <url>
     <loc>https://superkasa.cz/navody.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/navody.html"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/navody.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/navody.html"/>
@@ -367,6 +367,14 @@
     <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/pokladna-pro-vietnamske-obchody.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/pokladna-pro-vietnamske-obchody.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/pokladna-pro-vietnamske-obchody.html"/>
+  </url>
+  <url>
+    <loc>https://superkasa.cz/srovnani-pokladnich-systemu.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/srovnani-pokladnich-systemu.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/srovnani-pokladnich-systemu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/srovnani-pokladnich-systemu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/srovnani-pokladnich-systemu.html"/>
   </url>
   <url>
     <loc>https://superkasa.cz/obchodni-podminky.html</loc>
@@ -654,7 +662,7 @@
   </url>
   <url>
     <loc>https://superkasa.cz/vi/navody.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/navody.html"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/navody.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/navody.html"/>
@@ -747,6 +755,14 @@
     <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/pokladna-pro-vietnamske-obchody.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/pokladna-pro-vietnamske-obchody.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/pokladna-pro-vietnamske-obchody.html"/>
+  </url>
+  <url>
+    <loc>https://superkasa.cz/vi/srovnani-pokladnich-systemu.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/srovnani-pokladnich-systemu.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/srovnani-pokladnich-systemu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/srovnani-pokladnich-systemu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/srovnani-pokladnich-systemu.html"/>
   </url>
   <url>
     <loc>https://superkasa.cz/en/</loc>
@@ -1022,7 +1038,7 @@
   </url>
   <url>
     <loc>https://superkasa.cz/en/navody.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/navody.html"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/navody.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/navody.html"/>
@@ -1115,5 +1131,13 @@
     <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/pokladna-pro-vietnamske-obchody.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/pokladna-pro-vietnamske-obchody.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/pokladna-pro-vietnamske-obchody.html"/>
+  </url>
+  <url>
+    <loc>https://superkasa.cz/en/srovnani-pokladnich-systemu.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://superkasa.cz/srovnani-pokladnich-systemu.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://superkasa.cz/vi/srovnani-pokladnich-systemu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://superkasa.cz/en/srovnani-pokladnich-systemu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://superkasa.cz/srovnani-pokladnich-systemu.html"/>
   </url>
 </urlset>
