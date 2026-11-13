@@ -7,7 +7,7 @@ const kc = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "&nbsp;");
 export default {
   common: {
     nav: ["Trang chủ", "Dành cho ai", "Chức năng", "Bảng giá", "EET 2.0", "Hướng dẫn", "Bắt đầu", "Liên hệ"],
-    priceBtn: "189 Kč/tháng",
+    priceBtn: "149 Kč/tháng",
     loginBtn: "Đăng nhập",
     loginSoon: "",
     loginAria: "Đăng nhập vào máy tính tiền",
@@ -44,7 +44,7 @@ export default {
     /** Doplněk titulku stránky oboru (jen když se celý titulek vejde do 60 znaků). */
     oborTitleEet: " có EET 2.0",
     /** Konec popisku stránky oboru: cena a zkouška (hasEet = popisek už EET 2.0 zmiňuje). */
-    oborDescTail: (hasEet) => (hasEet ? "189 Kč/tháng đã gồm DPH, 10 ngày miễn phí." : "Máy tính tiền có EET 2.0, 189 Kč/tháng đã gồm DPH, 10 ngày miễn phí."),
+    oborDescTail: (hasEet) => (hasEet ? "149 Kč/tháng đã gồm DPH, 10 ngày miễn phí." : "Máy tính tiền có EET 2.0, 149 Kč/tháng đã gồm DPH, 10 ngày miễn phí."),
   },
 
   picker: {
@@ -53,7 +53,7 @@ export default {
   },
 
   obor: {
-    tariffBadge: (name) => `Gói <strong>${name}</strong> · 189 Kč/tháng, đã gồm thuế DPH`,
+    tariffBadge: (name) => `Gói <strong>${name}</strong> · 149 Kč/tháng, đã gồm thuế DPH`,
     pricing: "Bảng giá",
     heroNote: '10 ngày dùng thử miễn phí. <a href="https://app.superkasa.cz/">Tạo máy tính tiền trên trình duyệt</a>, không cần tải hay cài gì.',
     readyTitle: "Có sẵn ngay từ lần chạy đầu tiên",
@@ -68,7 +68,7 @@ export default {
     alwaysOn: "Bán hàng, EET 2.0, hóa đơn, tiền mặt và chốt ca luôn hoạt động.",
     usefulTitle: "Những gì sẽ có ích cho bạn",
     tariffTitle: (name) => `Gói ${name}`,
-    tariffLead: "189 Kč/tháng hoặc 2 041 Kč/năm, luôn đã gồm thuế DPH. 10 ngày đầu miễn phí.",
+    tariffLead: "149 Kč/tháng hoặc 1 490 Kč/năm, luôn đã gồm thuế DPH. 10 ngày đầu miễn phí.",
     onTitle: "Bật sẵn ngay khi chạy",
     moreTitle: "Có thể bật bất cứ lúc nào",
     otherTitle: "Chức năng khác",
@@ -102,7 +102,7 @@ export default {
     faq: [
       ["Chọn ngành hàng thì máy tính tiền cài sẵn những gì?", "Nhóm hàng kèm thuế suất DPH, ô hàng, hàng mẫu và các chức năng phù hợp với cửa hàng của bạn. Bạn xem và sửa được mọi thứ trước khi tạo máy tính tiền."],
       ["Không thấy ngành hàng của mình thì sao?", 'Khi thiết lập máy tính tiền, bạn chỉ cần tự mô tả mình bán gì, máy sẽ gợi ý nhóm hàng kèm DPH, hình ảnh và những mặt hàng đầu tiên. Hoặc chọn <a href="pokladna-obchod.html">Cửa hàng khác</a> hay <a href="pokladna-sluzby.html">Dịch vụ khác</a> rồi tự sửa nhóm hàng cho phù hợp.'],
-      ["Giá có khác nhau theo ngành hàng không?", 'Không. Giá như nhau cho mọi ngành hàng: 189 Kč mỗi tháng hoặc 2 041 Kč mỗi năm, đã gồm thuế DPH. <a href="cenik.html">Bảng giá</a>'],
+      ["Giá có khác nhau theo ngành hàng không?", 'Không. Giá như nhau cho mọi ngành hàng: 149 Kč mỗi tháng hoặc 1 490 Kč mỗi năm, đã gồm thuế DPH. <a href="cenik.html">Bảng giá</a>'],
       ["SuperKasa có hợp với quán bia hay nhà hàng có bàn không?", 'Có. Cài đặt <a href="pokladna-hospoda-restaurace.html">Quán bia, bar, nhà hàng</a> có bàn và hóa đơn theo bàn.'],
       ["Tôi có phải tự cài thuế suất DPH không?", "Không. Máy tính tiền chuẩn bị nhóm hàng kèm thuế suất DPH. Trước khi bán thật, hãy kiểm tra thuế suất với kế toán."],
     ],
@@ -113,13 +113,14 @@ export default {
 
   index: {
     title: "SuperKasa – máy tính tiền EET 2.0 cho ngành của bạn",
-    desc: "Máy tính tiền cảm ứng trên trình duyệt cho cửa hàng, quán ăn và dịch vụ. EET 2.0, kho, nhãn giá, tiếng Việt. 189 Kč/tháng đã gồm DPH, 10 ngày miễn phí.",
+    desc: "Máy tính tiền cảm ứng trên trình duyệt cho cửa hàng, quán ăn và dịch vụ. EET 2.0, kho, nhãn giá, tiếng Việt. 149 Kč/tháng đã gồm DPH, 10 ngày miễn phí.",
     ldDesc: "SuperKasa là phần mềm máy tính tiền chạy trong trình duyệt dành cho cửa hàng, quán ăn và dịch vụ. Giao diện có tiếng Séc, tiếng Việt và tiếng Anh.",
     ldOffer: "Mỗi tháng, đã gồm thuế DPH, 10 ngày đầu miễn phí",
+    ldOfferBuy: "Mua giấy phép: két vĩnh viễn, 2 năm cập nhật và hỗ trợ",
     faq: [
       ["SuperKasa là gì?", "SuperKasa là phần mềm máy tính tiền chạy trong trình duyệt dành cho cửa hàng, quán ăn và dịch vụ. Có bán hàng trên màn hình cảm ứng, kho, nhãn giá và ghi nhận doanh thu EET 2.0. Nhân viên chuyển giao diện sang tiếng Séc, tiếng Việt hoặc tiếng Anh."],
       ["Tôi có phải cài đặt gì không?", 'Không. SuperKasa chạy trên trình duyệt ở máy tính, máy tính bảng và điện thoại – không cần tải hay cài gì. Mỗi gói có tối đa 10 thiết bị. <a href="jak-zacit.html">Bắt đầu</a>'],
-      ["SuperKasa giá bao nhiêu?", '189 Kč mỗi tháng hoặc 2 041 Kč mỗi năm, đã gồm thuế DPH, như nhau cho mọi ngành hàng. 10 ngày đầu miễn phí, không cần thẻ, không ràng buộc. Chúng tôi không lấy gì từ doanh thu của bạn. <a href="cenik.html">Bảng giá</a>'],
+      ["SuperKasa giá bao nhiêu?", '149 Kč mỗi tháng hoặc 1 490 Kč mỗi năm, đã gồm thuế DPH, như nhau cho mọi ngành hàng. Bạn cũng có thể mua két với giá 4 000 Kč một lần, gồm 2 năm tính năng mới và hỗ trợ. 10 ngày đầu miễn phí, không cần thẻ, không ràng buộc. Chúng tôi không lấy gì từ doanh thu của bạn. <a href="cenik.html">Bảng giá</a>'],
       ["SuperKasa đã sẵn sàng cho EET 2.0 chưa?", 'Rồi. Việc ghi nhận doanh thu EET 2.0 bắt đầu từ 1/1/2027. Khi đã trả tiền thuê và có chứng chỉ máy tính tiền từ DIS+, bạn bật gửi doanh thu thật trong Quản lý → EET 2.0. <a href="eet.html">Hướng dẫn EET 2.0</a>'],
       ["Mất internet thì sao?", "Bạn vẫn bán tiếp bằng tiền mặt và thẻ. Hóa đơn tự tải lên khi có mạng lại và gửi EET với thời gian gốc."],
       ["SuperKasa có tiếng Việt không?", 'Có. Giao diện có tiếng Séc, tiếng Việt và tiếng Anh, mỗi nhân viên có ngôn ngữ riêng. Hóa đơn cho khách luôn bằng tiếng Séc. <a href="pokladna-pro-vietnamske-obchody.html">Máy tính tiền cho cửa hàng Việt</a>'],
@@ -143,7 +144,7 @@ export default {
     whyTitle: "Vì sao chọn SuperKasa",
     whyLead: "Máy tính tiền đầy đủ, có kho và nhãn giá, với một mức giá thấp – không phí ẩn, không cần phần cứng đắt tiền.",
     whyCards: [
-      ["189 Kč/tháng, đã gồm thuế DPH", 'Giá cuối cùng, đã gồm thuế DPH (thuế giá trị gia tăng), cho mọi ngành hàng; cả năm 2 041 Kč. <strong>Không giới hạn số mặt hàng</strong> – kho, khuyến mãi và màn hình khách hàng đều có trong mọi gói. 10 ngày đầu miễn phí. <a href="cenik.html">Bảng giá</a>'],
+      ["149 Kč/tháng, đã gồm thuế DPH", 'Giá cuối cùng, đã gồm thuế DPH (thuế giá trị gia tăng), cho mọi ngành hàng; cả năm 1 490 Kč. <strong>Không giới hạn số mặt hàng</strong> – kho, khuyến mãi và màn hình khách hàng đều có trong mọi gói. 10 ngày đầu miễn phí. <a href="cenik.html">Bảng giá</a>'],
       ["Không phí giao dịch", "Chúng tôi không lấy gì từ doanh thu của bạn, và bạn không cần lấy máy quẹt thẻ của chúng tôi. Khách trả thẻ qua máy quẹt thẻ riêng của bạn từ bất kỳ ngân hàng nào, ngoài ra vẫn trả tiền mặt hoặc mã QR."],
       ["Máy tính, máy tính bảng và điện thoại", "Quầy chính trên máy tính có màn hình cảm ứng, thêm quầy trên máy tính bảng và điện thoại – tất cả trên trình duyệt. <strong>Tối đa 10 thiết bị</strong> trong giá gói, tất cả cùng bán chung một ca. Ví dụ quầy thu ngân, máy tính bảng để nhập hàng và điện thoại của chủ."],
       ["Chạy được cả khi không có internet", "Khi mất internet bạn vẫn bán tiếp bằng tiền mặt và thẻ. Hóa đơn tự tải lên khi có mạng lại và gửi EET với thời gian gốc. Dữ liệu được sao lưu mỗi ngày trên máy chủ và cả bên ngoài máy chủ."],
@@ -151,7 +152,7 @@ export default {
       ["Kho có sẵn trong gói", 'Nhập hàng bằng cách quét mã, kiểm kê và gợi ý đặt hàng có trong mọi gói; với cửa hàng còn có hạn dùng và in nhãn giá trên máy in hóa đơn. Chấm công, chương trình khách hàng thân thiết hay đặt lịch thì chỉ thêm khi bạn cần. <a href="cenik.html#doplnky">Tiện ích trả thêm</a>'],
     ],
     heroCta: ["Dùng thử miễn phí 10 ngày", "Bắt đầu thế nào"],
-    heroFacts: ["Sẵn sàng cho EET 2.0 từ 1/1/2027", "189 Kč/tháng đã gồm DPH, 10 ngày miễn phí", "Tối đa 10 thiết bị: máy tính, máy tính bảng, điện thoại", "Giao diện tiếng Séc, tiếng Việt và tiếng Anh", "Hóa đơn từ điện thoại in ra ở quầy chính"],
+    heroFacts: ["Sẵn sàng cho EET 2.0 từ 1/1/2027", "149 Kč/tháng đã gồm DPH, 10 ngày miễn phí", "Tối đa 10 thiết bị: máy tính, máy tính bảng, điện thoại", "Giao diện tiếng Séc, tiếng Việt và tiếng Anh", "Hóa đơn từ điện thoại in ra ở quầy chính"],
     heroCtaNote: "Không cần thẻ, không ràng buộc. Chạy trên trình duyệt ở máy tính, máy tính bảng và điện thoại – không cần tải hay cài gì.",
     newTitle: "Tính năng mới",
     newLead: "SuperKasa được cải tiến mỗi tuần. Đây là những gì mới nhất – đã có trong giá gói.",
@@ -255,13 +256,13 @@ export default {
     addonsTitle: "Tiện ích trả thêm",
     addonsLead: 'Chức năng ngoài gói, bạn chỉ thêm khi thật sự cần. Cùng một giá cho mọi ngành hàng, miễn phí trong 10 ngày dùng thử. <a href="cenik.html#doplnky">Bảng giá tiện ích</a>',
     addonMeta: (price, kinds) => `<strong>${price} Kč/tháng, đã gồm thuế DPH</strong> · cho ngành ${kinds} · <a href="cenik.html#doplnky">Bảng giá tiện ích</a>`,
-    payCard: ["Chỉ trả cho những gì bạn bật", 'Tiện ích được tính riêng ngoài gói (189 Kč), trả theo năm rẻ hơn 10 %. Không ràng buộc – cùng một mã giấy phép với gói sẽ mở khóa tiện ích, và bạn bật nó trong Quản lý → Hệ thống → Chức năng. <a href="cenik.html#doplnky">Bảng giá</a>'],
+    payCard: ["Chỉ trả cho những gì bạn bật", 'Tiện ích được tính riêng ngoài gói (149 Kč), trả theo năm chỉ tính 10 tháng. Không ràng buộc – cùng một mã giấy phép với gói sẽ mở khóa tiện ích, và bạn bật nó trong Quản lý → Hệ thống → Chức năng. <a href="cenik.html#doplnky">Bảng giá</a>'],
     cta: ["Bạn cần thêm chức năng nào?", "Hãy gọi cho chúng tôi và kể bạn cần gì cho cửa hàng của mình. Chúng tôi tiếp tục phát triển SuperKasa theo nhu cầu của các cửa hàng."],
   },
 
   cenik: {
-    title: "Bảng giá SuperKasa – 189 Kč/tháng gồm DPH, 10 ngày miễn phí",
-    desc: "Gói Cửa hàng, Ăn uống và Dịch vụ: 189 Kč/tháng hoặc 2 041 Kč/năm, đã gồm DPH. 10 ngày miễn phí, chạy trên trình duyệt. Tiện ích từ 69 Kč.",
+    title: "Bảng giá SuperKasa – 149 Kč/tháng gồm DPH, 10 ngày miễn phí",
+    desc: "Gói Cửa hàng, Ăn uống và Dịch vụ: 149 Kč/tháng hoặc 1 490 Kč/năm, đã gồm DPH. 10 ngày miễn phí, chạy trên trình duyệt. Tiện ích từ 69 Kč.",
     planText: {
       obchod: "Tạp hóa, quầy báo thuốc lá, hóa mỹ phẩm, quần áo và mọi cửa hàng khác – có đủ cả cân và tiền cược vỏ chai.",
       gastro: "Quán cà phê, bistro, quầy ăn, tiệm bánh ngọt, quán bia, bar và nhà hàng.",
@@ -270,8 +271,8 @@ export default {
     planBase: ["Bán hàng trên màn hình cảm ứng", "EET 2.0 và hóa đơn", "Tiền mặt và chốt ca", "Tối đa 10 thiết bị máy tính tiền"],
     planExtraGastro: "Ăn tại chỗ / Mang đi (thuế suất DPH mang đi)",
     planAllBadge: "Tất cả chức năng",
-    planPrice: "189 Kč<small>/tháng</small>",
-    planYear: "hoặc 2 041 Kč/năm · đã gồm thuế DPH",
+    planPrice: "149 Kč<small>/tháng</small>",
+    planYear: "hoặc 1 490 Kč/năm · đã gồm thuế DPH",
     planObory: "Ngành hàng:",
     addonPrice: (n) => `${n} Kč<small>/tháng</small>`,
     addonYear: (n) => `hoặc ${kc(n)} Kč/năm · đã gồm thuế DPH`,
@@ -283,8 +284,8 @@ export default {
     no: "không",
     h1: "Bảng giá máy tính tiền",
     lead: "Một giá cho mọi ngành hàng. Gói được chọn theo loại hình kinh doanh và chỉ khác nhau ở những chức năng mà ngành của bạn cần. SuperKasa dành cho người kinh doanh (có IČO), không bán cho người tiêu dùng.",
-    boxAmount: "189 Kč <span>mỗi tháng, đã gồm thuế DPH (VAT)</span>",
-    boxYear: "hoặc <strong>2 041 Kč/năm</strong> – rẻ hơn 10 %",
+    boxAmount: "149 Kč <span>mỗi tháng, đã gồm thuế DPH (VAT)</span>",
+    boxYear: "hoặc <strong>1 490 Kč/năm</strong> – tặng 2 tháng",
     boxTag: "Dùng thử miễn phí 10 ngày",
     boxText: "Áp dụng cho tất cả các gói: Cửa hàng, Ăn uống (Gastro) và Dịch vụ.",
     everyTitle: "Có trong mọi gói",
@@ -302,20 +303,24 @@ export default {
     addonsTitle: "Tiện ích trả thêm",
     addonsLead: "Gói đã có mọi thứ cho việc bán hàng thông thường. Khi cần nhiều hơn, bạn chỉ thêm đúng tiện ích mình thật sự dùng – cùng một giá cho mọi ngành hàng.",
     trialAddons: ["Miễn phí khi dùng thử", "Trong 10 ngày dùng thử, bạn dùng thử tất cả tiện ích miễn phí. Không ràng buộc – chỉ trả cho những gì bạn bật, và có thể tắt tiện ích bất cứ lúc nào.", "Bật tiện ích trong Quản lý → Hệ thống → Chức năng."],
-    addonsNote: "Giá tính theo tháng, đã gồm thuế DPH, trả thêm ngoài gói (189 Kč). Trả theo năm, tiện ích rẻ hơn 10 %. Bán Ăn tại chỗ / Mang đi và ghi nhận tiền boa đã có miễn phí trong gói, không phải tiện ích trả thêm.",
+    addonsNote: "Giá tính theo tháng, đã gồm thuế DPH, trả thêm ngoài gói (149 Kč). Trả theo năm, tiện ích chỉ tính 10 tháng. Bán Ăn tại chỗ / Mang đi và ghi nhận tiền boa đã có miễn phí trong gói, không phải tiện ích trả thêm.",
     compareTitle: "So sánh các gói",
-    compareLead: "Tất cả các gói cùng giá – 189 Kč/tháng hoặc 2 041 Kč/năm, đã gồm thuế DPH.",
+    compareLead: "Tất cả các gói cùng giá – 149 Kč/tháng hoặc 1 490 Kč/năm, đã gồm thuế DPH.",
     rentTitle: "Cách thanh toán",
-    rent: ["Thuê", "Trả theo tháng (189 Kč) hoặc theo năm (2 041 Kč), luôn đã gồm thuế DPH. Thời hạn thuê có hiệu lực đến ngày đã trả và không tự động gia hạn."],
-    buy: ["Đã gồm tất cả", "Máy tính tiền chạy trên trình duyệt, không cần cài đặt. Cập nhật, sao lưu và hỗ trợ luôn đã gồm trong giá. Không ràng buộc: không trả kỳ tiếp theo thì việc thuê tự kết thúc."],
+    rent: ["Thuê", "149 Kč/tháng hoặc 1 490 Kč/năm (tặng 2 tháng), luôn đã gồm thuế DPH. Cập nhật, tính năng mới và hỗ trợ luôn có trong giá. Thời hạn thuê có hiệu lực đến ngày đã trả và không tự động gia hạn."],
+    buy: ["Tất cả trong giá", "Máy tính tiền chạy trên trình duyệt, không cần cài đặt. Sao lưu và vận hành SuperKasa Cloud đã có trong giá thuê và giá mua. Không ràng buộc: nếu không trả kỳ thuê tiếp theo, thời hạn thuê đơn giản là kết thúc."],
+    purchase: ["Mua giấy phép", "4 000 Kč trả một lần, đã gồm DPH. Két tiền là của bạn vĩnh viễn. Gồm <strong>2 năm</strong> tính năng mới, hỗ trợ và bảo hành. Sau đó két vẫn chạy không giới hạn, chỉ không có tính năng mới và hỗ trợ. Thay đổi theo luật (EET 2.0, DPH) và bản vá bảo mật luôn miễn phí. Có lợi nếu bạn dùng két từ 3 năm trở lên."],
+    renew: ["Gia hạn cập nhật", "Với giấy phép đã mua, bạn gia hạn tính năng mới và hỗ trợ với giá <strong>990 Kč/năm</strong> đã gồm DPH, bất cứ lúc nào, kể cả sau khi đã hết. Tính năng mới mở khóa từ ngày thanh toán."],
     trial: ["Dùng thử miễn phí 10 ngày", "Máy tính tiền mới chạy miễn phí 10 ngày. Bạn có thể bán hàng, in và cài đặt mọi thứ cần thiết. Đến hết năm 2026 máy xuất hóa đơn hợp lệ ngay cả khi dùng thử. Chế độ thử dùng để đào tạo nhân viên. Từ 1/1/2027, bán hàng thật có EET cần thanh toán gói.", "Hết thời gian dùng thử, máy tính tiền còn nhắc thêm 3 ngày, sau đó nếu chưa thanh toán sẽ dừng bán hàng mới. Dữ liệu vẫn nằm trong tài khoản cửa hàng."],
     ends: ["Khi hết hạn thanh toán", "Bán hàng và EET vẫn chạy thêm <strong>3 ngày</strong> kèm thông báo nhắc rõ ràng. Sau đó việc bán hàng mới dừng lại, nhưng hóa đơn, chốt ca, trả hàng và xuất dữ liệu vẫn hoạt động. Dữ liệu vẫn là của bạn và nằm trong tài khoản cửa hàng thêm 12 tháng sau khi hết thuê, sau đó sẽ bị xóa – hãy xuất dữ liệu kịp thời."],
     faqTitle: "Câu hỏi thường gặp",
     faq: [
-      ["Giá này đã là giá cuối cùng chưa?", "Rồi, 189 Kč/tháng và 2 041 Kč/năm là giá đã gồm thuế DPH."],
+      ["Giá này đã là giá cuối cùng chưa?", "Rồi, 149 Kč/tháng và 1 490 Kč/năm là giá đã gồm thuế DPH."],
+      ["Thuê hay mua?", "Thuê (149 Kč/tháng, 1 490 Kč/năm) luôn có tính năng mới và hỗ trợ. Mua giấy phép 4 000 Kč tương đương khoảng hai năm thuê theo năm (2 980 Kč) và két là của bạn vĩnh viễn. Có lợi nếu bạn dùng két từ 3 năm trở lên và sau hai năm không cần tính năng mới – hoặc gia hạn 990 Kč/năm. Mua là gói không gồm tiện ích trả phí."],
+      ["Sau hai năm kể từ khi mua thì sao?", "Két vẫn chạy không giới hạn và dữ liệu vẫn còn. Tính năng mới và hỗ trợ dừng cho đến khi bạn gia hạn (990 Kč/năm). Thay đổi theo luật – EET 2.0, DPH, sửa lỗi bắt buộc – và bản vá bảo mật luôn miễn phí để két không vi phạm pháp luật."],
       ["Giá có gồm máy tính, máy in hay máy quét mã không?", 'Không, giá là cho phần mềm máy tính tiền. Máy tính hoặc máy tính bảng, máy in hóa đơn, máy quét mã vạch và nếu cần thì cân hoặc màn hình khách hàng, bạn tự mua. Chúng tôi sẵn lòng tư vấn loại phù hợp – <a href="jak-zacit.html#vybaveni">bạn sẽ cần những gì</a>.'],
       ["Tôi dùng được bao nhiêu thiết bị?", "Mỗi gói có tối đa 10 thiết bị máy tính tiền – ví dụ quầy thu ngân, máy tính bảng để nhập hàng và điện thoại cho nhân viên. Cửa hàng lớn hơn thì hãy liên hệ."],
-      ["Tiện ích trả thêm là gì và giá bao nhiêu?", 'Tiện ích bổ sung chức năng ngoài gói: Chấm công và ca làm (79 Kč), Khách hàng thân thiết và phiếu quà tặng (69 Kč), Đặt lịch và lịch hẹn (99 Kč), Công thức và định mức (79 Kč) và Kiểm soát nhân viên (69 Kč) – giá theo tháng, đã gồm thuế DPH, trả theo năm rẻ hơn 10 %. Trong 10 ngày dùng thử, tất cả đều miễn phí. Không ràng buộc: chỉ trả cho tiện ích đã bật, và cùng một mã giấy phép với gói sẽ mở khóa chúng. <a href="#doplnky">Danh sách tiện ích</a>'],
+      ["Tiện ích trả thêm là gì và giá bao nhiêu?", 'Tiện ích bổ sung chức năng ngoài gói: Chấm công và ca làm (79 Kč), Khách hàng thân thiết và phiếu quà tặng (69 Kč), Đặt lịch và lịch hẹn (99 Kč), Công thức và định mức (79 Kč) và Kiểm soát nhân viên (69 Kč) – giá theo tháng, đã gồm thuế DPH, trả theo năm chỉ tính 10 tháng. Trong 10 ngày dùng thử, tất cả đều miễn phí. Không ràng buộc: chỉ trả cho tiện ích đã bật, và cùng một mã giấy phép với gói sẽ mở khóa chúng. <a href="#doplnky">Danh sách tiện ích</a>'],
       ["Tôi trả tiền thuê thế nào?", "Trong máy tính tiền, bấm Thanh toán trên thanh phía trên (hoặc Quản lý → Hệ thống → Giấy phép và gói), chọn tháng hoặc năm và trả bằng mã QR trong ứng dụng ngân hàng. Hiện chúng tôi đối chiếu thanh toán bằng tay – nếu thời hạn thuê chưa được gia hạn ngay, hãy gọi cho chúng tôi."],
       ["Thuê có tự động gia hạn không?", "Không. Thời hạn thuê có hiệu lực đến ngày đã trả và không có khoản nào bị trừ tự động. Kỳ tiếp theo bạn trả cùng cách, bằng mã QR trong máy tính tiền. Nếu chưa trả, máy tính tiền vẫn chạy thêm 3 ngày kèm thông báo nhắc."],
       ["Dữ liệu sẽ ra sao nếu tôi ngừng trả tiền?", "Dữ liệu vẫn nằm trong tài khoản cửa hàng của bạn thêm 12 tháng sau khi hết thuê. Sau 3 ngày có thông báo nhắc, việc bán hàng mới sẽ dừng, nhưng hóa đơn, chốt ca và xuất dữ liệu vẫn hoạt động."],
@@ -473,7 +478,7 @@ export default {
     summaryTitle: "Các điểm chính (chỉ để tham khảo, không ràng buộc)",
     opSummary: [
       "Máy tính tiền dành cho người kinh doanh (có IČO – mã số doanh nghiệp); hợp đồng thuê bắt đầu khi bạn đăng ký trên app.superkasa.cz.",
-      "Dùng thử miễn phí 10 ngày, sau đó 189 Kč/tháng hoặc 2 041 Kč/năm, đã gồm thuế DPH. Thuê không tự động gia hạn.",
+      "Dùng thử miễn phí 10 ngày, sau đó 149 Kč/tháng hoặc 1 490 Kč/năm, đã gồm thuế DPH. Thuê không tự động gia hạn.",
       "Máy tính tiền chạy trên trình duyệt, dữ liệu nằm trên máy chủ SuperKasa tại Cộng hòa Séc. Sau khi hết hạn thuê, hóa đơn, chốt ca và xuất dữ liệu vẫn dùng được thêm 12 tháng.",
       "Người kinh doanh chịu trách nhiệm về việc ghi nhận doanh thu (EET), chứng chỉ máy tính tiền và thuế suất DPH đúng.",
     ],

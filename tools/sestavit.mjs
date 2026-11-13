@@ -23,7 +23,7 @@ const DAY = new Date().toLocaleDateString("sv-SE"); // RRRR-MM-DD v místním č
 
 /**
  * Česká typografie v hotovém HTML: nezlomitelná mezera po jednopísmenných předložkách a spojkách, v číslech
- * (2 041, +420 608 886 882), před jednotkami (189 Kč, 12 %), v datech (1. 1. 2027) a za §. Jen textové uzly –
+ * (2 041, +420 608 886 882), před jednotkami (149 Kč, 12 %), v datech (1. 1. 2027) a za §. Jen textové uzly –
  * <script>, <style>, <pre>, <code>, <textarea>, <title> a atributy zůstávají beze změny.
  */
 const typo = (t) => {
@@ -172,7 +172,7 @@ console.log(`✓ sitemap.xml (${urls.length} adres), robots.txt`);
   const list = (files) => files.map(line).filter(Boolean).join("\n");
   writeFileSync(path.join(ROOT, "llms.txt"), `# SuperKasa
 
-> ${text(llms.lead)} Cena je 189 Kč měsíčně nebo 2 041 Kč ročně včetně DPH, prvních 10 dní je zdarma. Pokladna běží v prohlížeči, nic se neinstaluje. Je připravená na evidenci tržeb EET 2.0, která začíná 1. 1. 2027.
+> ${text(llms.lead)} Cena je 149 Kč měsíčně nebo 1 490 Kč ročně včetně DPH (případně koupě licence za 4 000 Kč s 2 roky aktualizací), prvních 10 dní je zdarma. Pokladna běží v prohlížeči, nic se neinstaluje. Je připravená na evidenci tržeb EET 2.0, která začíná 1. 1. 2027.
 
 Web je česky (${SITE}/), vietnamsky (${SITE}/vi/) a anglicky (${SITE}/en/); stránky mají ve všech jazycích stejné názvy souborů. Informace o EET 2.0 nejsou právní ani daňové poradenství, závazné jsou údaje Finanční správy na https://eet.gov.cz/.
 

@@ -58,7 +58,7 @@ for (const [file, html] of pages) {
         if (/(^|\/)(index|cenik)\.html$/.test(file)) {
           check(Boolean(app), `${file}: chybí produkt`);
           check(app?.url === `${site}/`, `${file}: nestabilní URL produktu`);
-          check(app?.offers?.map(o => o.price).join(',') === '189,2041', `${file}: nesprávné ceny`);
+          check(app?.offers?.map(o => o.price).join(',') === '149,1490,4000', `${file}: nesprávné ceny`);
           check(app?.softwareHelp?.url?.includes('navod-krok-za-krokem.html'), `${file}: chybí dokumentace`);
           const lang = file.startsWith('en/') ? 'en' : file.startsWith('vi/') ? 'vi' : 'cs';
           const other = pages.get(`${lang === 'cs' ? '' : lang + '/'}${file.endsWith('cenik.html') ? 'index.html' : 'cenik.html'}`);

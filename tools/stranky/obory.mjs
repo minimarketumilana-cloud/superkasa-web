@@ -46,8 +46,8 @@ export const TARIFFS = {
 };
 
 // Placené doplňky nad tarif – podle ADDONS v src/domain/license.ts (popisy zkrácené pro web).
-// Ceny v Kč měsíčně včetně DPH, ročně o 10 % levněji (12 měsíců × 0,9, dolů na koruny). Ve zkoušce jsou zdarma.
-const yearly = (month) => Math.floor(month * 12 * 0.9);
+// Ceny v Kč měsíčně včetně DPH, ročně za 10 měsíců (2 měsíce zdarma), stejně jako v pokladně. Ve zkoušce jsou zdarma.
+const yearly = (month) => month * 10;
 export const ADDONS = [
   { key: "attendance", icon: "clock", name: "Docházka a směny", desc: "Prodavači zapisují příchod a odchod PINem na pokladně. Rozpis směn na týden, plán proti odpracovaným hodinám a podklad pro mzdy.", priceMonth: 79, kinds: ["shop", "food", "service"] },
   { key: "loyalty", icon: "star", name: "Věrnost a dárkové poukazy", desc: "Zákaznická karta nebo telefon: body za nákup, sleva za body, stálá sleva pro VIP. Dárkové poukazy s čárovým kódem a zůstatkem; do EET 2.0 jdou podle § 17 odst. 2 zákona č. 180/2026 Sb. – ověřte s účetní.", priceMonth: 69, kinds: ["shop", "food", "service"] },

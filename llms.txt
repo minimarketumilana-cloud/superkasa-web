@@ -1,15 +1,15 @@
 # SuperKasa
 
-> SuperKasa je pokladní systém v prohlížeči pro obchody, gastro a služby. Obsluha je dostupná česky, vietnamsky a anglicky. Cena je 189 Kč měsíčně nebo 2 041 Kč ročně včetně DPH, prvních 10 dní je zdarma. Pokladna běží v prohlížeči, nic se neinstaluje. Je připravená na evidenci tržeb EET 2.0, která začíná 1. 1. 2027.
+> SuperKasa je pokladní systém v prohlížeči pro obchody, gastro a služby. Obsluha je dostupná česky, vietnamsky a anglicky. Cena je 149 Kč měsíčně nebo 1 490 Kč ročně včetně DPH (případně koupě licence za 4 000 Kč s 2 roky aktualizací), prvních 10 dní je zdarma. Pokladna běží v prohlížeči, nic se neinstaluje. Je připravená na evidenci tržeb EET 2.0, která začíná 1. 1. 2027.
 
 Web je česky (https://superkasa.cz/), vietnamsky (https://superkasa.cz/vi/) a anglicky (https://superkasa.cz/en/); stránky mají ve všech jazycích stejné názvy souborů. Informace o EET 2.0 nejsou právní ani daňové poradenství, závazné jsou údaje Finanční správy na https://eet.gov.cz/.
 
 ## Hlavní stránky
 
-- [SuperKasa – pokladna s EET 2.0 nastavená pro váš obor](https://superkasa.cz/): Dotyková pokladna v prohlížeči pro obchody, gastro a služby. EET 2.0, sklad, cenovky, obsluha vietnamsky. 189 Kč měsíčně s DPH, 10 dní zdarma.
+- [SuperKasa – pokladna s EET 2.0 nastavená pro váš obor](https://superkasa.cz/): Dotyková pokladna v prohlížeči pro obchody, gastro a služby. EET 2.0, sklad, cenovky, obsluha vietnamsky. 149 Kč měsíčně s DPH, 10 dní zdarma.
 - [Pro koho je SuperKasa – vyberte svůj obor](https://superkasa.cz/obory.html): Pokladna nastavená pro váš obor – 26 typů provozu: večerka, trafika, pekárna, kavárna, hospoda, kadeřnictví, nehty, fitness, autoservis a další.
 - [Funkce pokladny SuperKasa – prodej, EET 2.0, sklad, cenovky](https://superkasa.cz/funkce.html): Co SuperKasa umí: dotykový prodej, EET 2.0, sklad, cenovky, QR platby, váha, uzávěrky, upozornění do telefonu, propojení s e-shopem a vietnamština.
-- [Ceník SuperKasa – 189 Kč měsíčně s DPH, 10 dní zdarma](https://superkasa.cz/cenik.html): Tarify Obchod, Gastro a Služby za 189 Kč měsíčně nebo 2 041 Kč ročně včetně DPH. 10 dní zdarma, pokladna běží v prohlížeči. Doplňky od 69 Kč.
+- [Ceník SuperKasa – 149 Kč měsíčně s DPH, 10 dní zdarma](https://superkasa.cz/cenik.html): Tarify Obchod, Gastro a Služby za 149 Kč měsíčně nebo 1 490 Kč ročně včetně DPH. 10 dní zdarma, pokladna běží v prohlížeči. Doplňky od 69 Kč.
 - [Pokladna s EET 2.0 – tržby odesílá na pozadí](https://superkasa.cz/eet.html): Jak SuperKasa odesílá tržby do EET 2.0: na pozadí, s opakováním při výpadku internetu a se zkušebním režimem. Termíny a postup pro DIS+.
 - [Jak začít – pokladna SuperKasa v prohlížeči bez instalace](https://superkasa.cz/jak-zacit.html): Pokladnu SuperKasa založíte v prohlížeči na počítači, tabletu i mobilu. Nic se neinstaluje, 10 dní zdarma. Jaké vybavení budete potřebovat.
 - [Kontakt](https://superkasa.cz/kontakt.html): Kontakt na výrobce pokladny SuperKasa: Thanh Lam Nguyen, IČO 14161648, 1. května 117/141, 725 25 Ostrava, tel. +420 608 886 882.
@@ -37,7 +37,7 @@ Web je česky (https://superkasa.cz/), vietnamsky (https://superkasa.cz/vi/) a a
 - [Pokladna pro trafiky a tabák s EET 2.0](https://superkasa.cz/pokladna-trafika.html): Cigarety, e-cigarety, noviny a časopisy, nápoje a sladkosti – s pevnou cenou tabáku, skladem a cenovkami.
 - [Pokladna pro pekárny s EET 2.0](https://superkasa.cz/pokladna-pekarna.html): Chléb, pečivo, koláče a zákusky s sebou a nápoje – s rychlými dlaždicemi, expirací, odpisem neprodaného pečiva a cenovkami.
 - [Pokladna pro prodejny ovoce a zeleniny s EET 2.0](https://superkasa.cz/pokladna-ovoce-zelenina.html): Vážené zboží na kilogramy, čárové kódy ze štítků váhy, obrázky ovoce a zeleniny a cenovky s cenou za kg.
-- [Pokladna pro řeznictví a uzeniny s EET 2.0](https://superkasa.cz/pokladna-reznictvi.html): Maso a uzeniny na kilogramy, vážené kódy ze štítků váhy, expirace a cenovky s cenou za kg. Pokladna s EET 2.0 za 189 Kč měsíčně s DPH, 10 dní zdarma.
+- [Pokladna pro řeznictví a uzeniny s EET 2.0](https://superkasa.cz/pokladna-reznictvi.html): Maso a uzeniny na kilogramy, vážené kódy ze štítků váhy, expirace a cenovky s cenou za kg. Pokladna s EET 2.0 za 149 Kč měsíčně s DPH, 10 dní zdarma.
 - [Pokladna pro drogerie a domácí potřeby s EET 2.0](https://superkasa.cz/pokladna-drogerie.html): Drogerie, kosmetika, domácí potřeby a krmivo – s dohledáním názvů a fotek podle EAN, skladem a cenovkami.
 - [Pokladna pro květinářství s EET 2.0](https://superkasa.cz/pokladna-kvetinarstvi.html): Řezané květiny na kusy, kytice a vazba, hrnkové rostliny, dárky a přání – každá skupina se svou sazbou DPH, se skladem a cenovkami.
 - [Pokladna pro papírnictví a knihkupectví](https://superkasa.cz/pokladna-papirnictvi.html): Sešity, psací a kancelářské potřeby, knihy s 0 % DPH, noviny, přání, hračky a kopírování – se skladem, názvy podle čárového kódu a cenovkami.
@@ -50,16 +50,16 @@ Web je česky (https://superkasa.cz/), vietnamsky (https://superkasa.cz/vi/) a a
 - [Pokladna pro kavárny, bistra a stánky s EET 2.0](https://superkasa.cz/pokladna-kavarna-bistro.html): Rychlý prodej kávy, zákusků, jídla a nápojů na dotykové obrazovce, zákaznický displej a QR platby. Sklad, zálohy i stoly můžete zapnout.
 - [Pokladna pro cukrárny a zmrzlinárny s EET 2.0](https://superkasa.cz/pokladna-cukrarna-zmrzlina.html): Zákusky, dorty na objednávku, zmrzlina do kornoutu i pohár, káva a nápoje – rychlý prodej na dotykové obrazovce, zákaznický displej a QR platby.
 - [Pokladna pro hospody, bary a restaurace](https://superkasa.cz/pokladna-hospoda-restaurace.html): Stoly a účty na stůl, rozdělení a přesun účtu, bony do kuchyně a na výčep, zálohy na láhve – a tablet pro obsluhu.
-- [Pokladna pro kadeřnictví a holičství s EET 2.0](https://superkasa.cz/pokladna-kadernictvi.html): Ceník služeb na dlaždicích, prodej vlasové kosmetiky, QR platby a EET 2.0 – jednoduše na tabletu nebo počítači. 189 Kč měsíčně s DPH, 10 dní zdarma.
+- [Pokladna pro kadeřnictví a holičství s EET 2.0](https://superkasa.cz/pokladna-kadernictvi.html): Ceník služeb na dlaždicích, prodej vlasové kosmetiky, QR platby a EET 2.0 – jednoduše na tabletu nebo počítači. 149 Kč měsíčně s DPH, 10 dní zdarma.
 - [Pokladna pro nehtová studia s EET 2.0](https://superkasa.cz/pokladna-nehtove-studio.html): Manikúra, gelové a akrylové nehty, pedikúra a prodej laků – ceník na dlaždicích, QR platby, EET 2.0 a vietnamština pro obsluhu.
-- [Pokladna pro kosmetické salony a pedikúru](https://superkasa.cz/pokladna-kosmetika.html): Ošetření pleti, líčení, obočí a řasy, pedikúra a prodej kosmetiky – ceník na dlaždicích, QR platby a EET 2.0. 189 Kč měsíčně s DPH, 10 dní zdarma.
-- [Pokladna pro masáže a wellness s EET 2.0](https://superkasa.cz/pokladna-masaze-wellness.html): Masáže podle délky, dárkové poukazy a prodej olejů a kosmetiky – ceník na dlaždicích, QR platby a EET 2.0. 189 Kč měsíčně s DPH, 10 dní zdarma.
+- [Pokladna pro kosmetické salony a pedikúru](https://superkasa.cz/pokladna-kosmetika.html): Ošetření pleti, líčení, obočí a řasy, pedikúra a prodej kosmetiky – ceník na dlaždicích, QR platby a EET 2.0. 149 Kč měsíčně s DPH, 10 dní zdarma.
+- [Pokladna pro masáže a wellness s EET 2.0](https://superkasa.cz/pokladna-masaze-wellness.html): Masáže podle délky, dárkové poukazy a prodej olejů a kosmetiky – ceník na dlaždicích, QR platby a EET 2.0. 149 Kč měsíčně s DPH, 10 dní zdarma.
 - [Pokladna pro fitness centra a sportoviště](https://superkasa.cz/pokladna-fitness-sport.html): Vstupy a permanentky, lekce a osobní trénink, doplňky stravy a nápoje – každá skupina se svou sazbou DPH, sklad, QR platby a EET 2.0.
 - [Pokladna pro autoservisy a pneuservisy s EET 2.0](https://superkasa.cz/pokladna-autoservis-pneuservis.html): Práce na hodiny, výměna oleje, diagnostika, přezutí a uskladnění pneu, díly a materiál – na dlaždicích, se skladem, QR platbami a EET 2.0.
-- [Pokladna pro opravny a servisy s EET 2.0](https://superkasa.cz/pokladna-opravna.html): Opravy obuvi a oděvů, klíče, kola, elektro a telefony – práce i materiál na dlaždicích, sklad, QR platby a EET 2.0. 189 Kč měsíčně s DPH, 10 dní zdarma.
-- [Pokladna pro služby s EET 2.0](https://superkasa.cz/pokladna-sluzby.html): Práce na hodiny, doprava, konzultace nebo pronájem – služby na dlaždicích, QR platby a EET 2.0. 189 Kč měsíčně s DPH, 10 dní zdarma.
+- [Pokladna pro opravny a servisy s EET 2.0](https://superkasa.cz/pokladna-opravna.html): Opravy obuvi a oděvů, klíče, kola, elektro a telefony – práce i materiál na dlaždicích, sklad, QR platby a EET 2.0. 149 Kč měsíčně s DPH, 10 dní zdarma.
+- [Pokladna pro služby s EET 2.0](https://superkasa.cz/pokladna-sluzby.html): Práce na hodiny, doprava, konzultace nebo pronájem – služby na dlaždicích, QR platby a EET 2.0. 149 Kč měsíčně s DPH, 10 dní zdarma.
 
 ## Dokumenty
 
-- [Obchodní podmínky SuperKasa](https://superkasa.cz/obchodni-podminky.html): Obchodní podmínky pronájmu pokladního systému SuperKasa včetně smlouvy o zpracování osobních údajů.
+- [Obchodní podmínky SuperKasa](https://superkasa.cz/obchodni-podminky.html): Obchodní podmínky pronájmu a koupě licence pokladního systému SuperKasa včetně smlouvy o zpracování osobních údajů.
 - [Ochrana osobních údajů](https://superkasa.cz/ochrana-osobnich-udaju.html): Jak SuperKasa zachází s osobními údaji na webu superkasa.cz a v pokladně v prohlížeči.

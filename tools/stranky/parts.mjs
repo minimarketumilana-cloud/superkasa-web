@@ -50,7 +50,7 @@ export const ORG_ID = `${SITE}/#organization`;
 export const APP_ID = `${SITE}/#app`;
 export const WEBSITE_ID = `${SITE}/#website`;
 /** Ověřeno proti src/domain/license.ts v projektu pokladna. Ceny včetně DPH. */
-export const PRODUCT = Object.freeze({ name: "SuperKasa", month: 189, year: 2041, currency: "CZK", trialDays: 10 });
+export const PRODUCT = Object.freeze({ name: "SuperKasa", month: 149, year: 1490, buy: 4000, renew: 990, currency: "CZK", trialDays: 10 });
 export const ORG = {
   "@type": "Organization",
   "@id": ORG_ID,
@@ -69,6 +69,7 @@ const priceSpec = (price, dur) => ({ "@type": "UnitPriceSpecification", price, p
 export const OFFERS = (url, t) => [
   { "@type": "Offer", url, price: String(PRODUCT.month), priceCurrency: PRODUCT.currency, availability: "https://schema.org/InStock", description: t.ldOffer, priceSpecification: priceSpec(PRODUCT.month, "P1M") },
   { "@type": "Offer", url, price: String(PRODUCT.year), priceCurrency: PRODUCT.currency, availability: "https://schema.org/InStock", priceSpecification: priceSpec(PRODUCT.year, "P1Y") },
+  { "@type": "Offer", url, price: String(PRODUCT.buy), priceCurrency: PRODUCT.currency, availability: "https://schema.org/InStock", description: t.ldOfferBuy, priceSpecification: { "@type": "UnitPriceSpecification", price: String(PRODUCT.buy), priceCurrency: PRODUCT.currency, valueAddedTaxIncluded: true } },
 ];
 /** Jedna definice produktu pro úvod i ceník ve všech jazycích. */
 export const software = (c) => ({

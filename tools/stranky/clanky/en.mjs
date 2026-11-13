@@ -1038,11 +1038,11 @@ export default {
         id: "licence-jazyk",
         h2: "Licence, payment and language",
         html: `
-<p>The licence costs <strong>CZK 189 a month or CZK 2,041 a year, including VAT</strong>. The first 10 days are free. If you pay during the trial, you keep the remaining days and the paid period starts only after them.</p>
+<p>The licence costs <strong>CZK 149 a month or CZK 1,490 a year, including VAT</strong>. The first 10 days are free. If you pay during the trial, you keep the remaining days and the paid period starts only after them.</p>
 <ol class="steps">
 <li>Tap <strong>Pay</strong> in the top bar, or open <strong>Admin → System → Licence and plan</strong>.</li>
 <li>Select add-ons if you want them, and tap <strong>Create QR payment</strong>.</li>
-<li>Choose <strong>Month</strong> or <strong>Year (−10 %)</strong> and pay with the QR code in your banking app.</li>
+<li>Choose <strong>Month</strong> or <strong>Year (2 months free)</strong> and pay with the QR code in your banking app.</li>
 <li>Tap <strong>I've paid – check now</strong>.</li>
 </ol>
 <aside class="note warn"><p>For now we match licence payments by hand, so the licence is not extended straight after payment. If you do not see the QR payment in the POS, call us. You enter the licence key in the <strong>Licence key</strong> field and tap <strong>Activate</strong>.</p></aside>
@@ -1103,7 +1103,7 @@ export default {
 <h3>Add-ons and fees</h3>
 <p>Attendance, a loyalty programme or reservations often cost extra. Also ask about fees on sales and card payments, about any contract commitment and about the cost of ending it.</p>
 <h3>Example calculation</h3>
-<p>With SuperKasa the price is CZK 189 a month or CZK 2,041 a year, always including VAT. A café that also wants Recipes and portion costing for CZK 79 pays CZK 268 a month. It buys its hardware itself.</p>
+<p>With SuperKasa the price is CZK 149 a month or CZK 1,490 a year, always including VAT. A café that also wants Recipes and portion costing for CZK 79 pays CZK 228 a month. It buys its hardware itself.</p>
 <div class="tbl"><table>
 <thead><tr><th>Add-on</th><th>CZK a month incl. VAT</th></tr></thead>
 <tbody>
@@ -1206,7 +1206,7 @@ export default {
 <div class="tbl"><table>
 <thead><tr><th>Question</th><th>Answer</th></tr></thead>
 <tbody>
-<tr><td>Price</td><td>CZK 189 a month or CZK 2,041 a year incl. VAT</td></tr>
+<tr><td>Price</td><td>CZK 149 a month or CZK 1,490 a year incl. VAT</td></tr>
 <tr><td>Trial</td><td>10 days free, no card</td></tr>
 <tr><td>Devices included</td><td>Up to 10</td></tr>
 <tr><td>Fee on sales</td><td>None</td></tr>
@@ -1707,7 +1707,7 @@ export default {
 <div class="tbl"><table>
   <thead><tr><th>System</th><th>Lowest plan</th><th>Plan with stock</th><th>Extra devices</th><th>EET 2.0</th></tr></thead>
   <tbody>
-    <tr><td>SuperKasa</td><td>CZK 189 incl. VAT (CZK 156.20 excl. VAT)</td><td>Same plan, stock is included</td><td>Up to 10 devices included</td><td>Yes, included</td></tr>
+    <tr><td>SuperKasa</td><td>CZK 149 incl. VAT (CZK 123.14 excl. VAT)</td><td>Same plan, stock is included</td><td>Up to 10 devices included</td><td>Yes, included</td></tr>
     <tr><td>Dotykačka</td><td>SNADNO CZK 590 excl. VAT (CZK 713.90 incl. VAT)</td><td>NAPLNO CZK 1,190 excl. VAT (CZK 1,439.90 incl. VAT)</td><td>Not stated in the price list</td><td>Yes, in all licences from 1 January 2027</td></tr>
     <tr><td>Storyous (O2 price list)</td><td>Mini CZK 390 excl. VAT (CZK 471.90 incl. VAT)</td><td>Stock is an add-on for CZK 990 excl. VAT (CZK 1,197.90 incl. VAT)</td><td>CZK 740 excl. VAT (CZK 895.40 incl. VAT)</td><td>The vendor says it is ready</td></tr>
     <tr><td>helloCash</td><td>Basic CZK 69 excl. VAT (CZK 83.49 incl. VAT)</td><td>Prémiová CZK 219 excl. VAT (CZK 264.99 incl. VAT)</td><td>Not stated in the price list</td><td>We found no mention on the website</td></tr>
@@ -1771,7 +1771,7 @@ export default {
         h2: "SuperKasa",
         html: `
 <ul>
-  <li>It costs CZK 189 a month or CZK 2,041 a year including VAT, the same for any type of business. The first 10 days are free.</li>
+  <li>It costs CZK 149 a month or CZK 1,490 a year including VAT, the same for any type of business. The first 10 days are free.</li>
   <li>Every plan includes stock, price labels, EET 2.0 and up to 10 devices.</li>
   <li>It runs in the browser on your own computer, tablet or phone.</li>
   <li>The staff interface is in Czech, Vietnamese and English.</li>
@@ -1799,7 +1799,7 @@ export default {
       },
     ],
     faq: [
-      ["Which POS is the cheapest?","The state app MOJE eet is free. Among the paid systems, according to the price lists as of 12 November 2026, helloCash Basic has the lowest entry price at CZK 69 a month excl. VAT. With stock, SuperKasa is the cheapest at CZK 189 a month including VAT."],
+      ["Which POS is the cheapest?","The state app MOJE eet is free. Among the paid systems, according to the price lists as of 12 November 2026, helloCash Basic has the lowest entry price at CZK 69 a month excl. VAT. With stock, SuperKasa is the cheapest at CZK 149 a month including VAT."],
       ["Why are competitors' prices shown both without and with VAT?","The vendors list prices without VAT, while SuperKasa lists them including VAT. To make them comparable, we show both amounts for the competitors."],
       ["How old is the data in the comparison?","It comes from public price lists as of 12 November 2026. The sources are listed at the end of the article. Check the price with the vendor before you order."],
     ],

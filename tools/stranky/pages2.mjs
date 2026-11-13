@@ -146,6 +146,16 @@ export const cenik = (c) => {
       </article>
       <article class="card">
         ${icon("shield", "gold")}
+        <h3>${t.purchase[0]}</h3>
+        <p>${t.purchase[1]}</p>
+      </article>
+      <article class="card">
+        ${icon("clock")}
+        <h3>${t.renew[0]}</h3>
+        <p>${t.renew[1]}</p>
+      </article>
+      <article class="card">
+        ${icon("shield")}
         <h3>${t.buy[0]}</h3>
         <p>${t.buy[1]}</p>
       </article>
