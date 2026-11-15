@@ -15,7 +15,8 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const icon = readFileSync(path.join(ROOT, "favicon.svg"), "utf8");
-const logoUrl = pathToFileURL(path.join(ROOT, "img", "superkasa-logo.webp")).href;
+// Od 15. 11. 2026 nové logo (pokladna s dotykovou obrazovkou): img/logo.png 520×104 je hotové, náhledy z něj.
+const logoUrl = pathToFileURL(path.join(ROOT, "img", "logo.png")).href;
 const only = process.argv[2];
 
 const browser = [
@@ -52,20 +53,16 @@ function toJpeg(png, out, quality = 86) {
 }
 
 // Logo 2000×694 má kolem nápisu bílý okraj – vyřízneme pás 90..1920 × 165..530.
-const crop = (w) => {
-  const s = w / 1830;
-  return `<div style="width:${w}px;height:${Math.round(365 * s)}px;overflow:hidden;background:#fff"><img src="${logoUrl}" style="display:block;width:${2000 * s}px;margin:${-165 * s}px 0 0 ${-90 * s}px"></div>`;
-};
+const crop = (w) => `<img src="${logoUrl}" style="display:block;width:${w}px;height:${Math.round(w / 5)}px">`;
 if (only !== "og") {
-  render(crop(520), 520, Math.round(365 * (520 / 1830)), "img/logo.png");
-  render(`<div style="width:180px;height:180px">${icon.replace("<svg ", '<svg width="180" height="180" ').replace('rx="14"', 'rx="0"')}</div>`, 180, 180, "apple-touch-icon.png");
+  render(`<div style="width:180px;height:180px">${icon.replace("<svg ", '<svg width="180" height="180" ').replace('rx="16"', 'rx="0"')}</div>`, 180, 180, "apple-touch-icon.png");
 }
 
 /** Náhled pro sdílení: [nadpis, podnadpis, patička, velikost písma nadpisu]. */
 const OG = {
-  cs: ["Pokladna pro obchody,<br>gastro a služby", "EET 2.0 · dotyková obrazovka · sklad a cenovky", "superkasa.cz · 189 Kč měsíčně s DPH · 10 dní zdarma", 62],
-  vi: ["Máy tính tiền cho cửa hàng,<br>quán ăn và dịch vụ", "EET 2.0 · màn hình cảm ứng · kho và nhãn giá", "superkasa.cz · 189 Kč/tháng gồm DPH · 10 ngày miễn phí", 54],
-  en: ["POS for shops,<br>food service and services", "EET 2.0 · touchscreen · stock and price labels", "superkasa.cz · CZK 189 a month incl. VAT · 10 days free", 62],
+  cs: ["Pokladna pro obchody,<br>gastro a služby", "EET 2.0 · dotyková obrazovka · sklad a cenovky", "superkasa.cz · 149 Kč měsíčně s DPH · 10 dní zdarma", 62],
+  vi: ["Máy tính tiền cho cửa hàng,<br>quán ăn và dịch vụ", "EET 2.0 · màn hình cảm ứng · kho và nhãn giá", "superkasa.cz · 149 Kč/tháng gồm DPH · 10 ngày miễn phí", 54],
+  en: ["POS for shops,<br>food service and services", "EET 2.0 · touchscreen · stock and price labels", "superkasa.cz · CZK 149 a month incl. VAT · 10 days free", 62],
 };
 for (const [lang, [h, sub, foot, size]] of Object.entries(OG)) {
   const png = render(`
