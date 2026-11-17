@@ -163,7 +163,7 @@ export default {
     newCards: [
       ["Upozornění do telefonu", "O každém prodeji se dozvíte hned v telefonu – částka, platba, prodavač i položky. Zdarma a bez další aplikace, upozornění můžete kdykoli vypnout. Na iPhonu z ikony na ploše."],
       ["Sdílená databáze zboží s fotkami", "Naskenujete neznámý kód a pokladna sama doplní název i fotku ze sdílené databáze SuperKasa. Vy jen zkontrolujete název a zadáte cenu."],
-      ["Propojení s E-shopem super", 'Objednávky z vašeho e-shopu na <a href="https://eshopsuper.cz/">eshopsuper.cz</a> přijdou rovnou do pokladny a e-shop i kasa mají jeden společný sklad.'],
+      ["Propojení s E-shopem super", 'Objednávky z vašeho e-shopu na <a href="https://eshopsuper.cz/">eshopsuper.cz</a> pokladna vám na přání oznámí a e-shop spravujete z pokladny bez dalšího hesla. Sklad pokladny a e-shopu zůstává oddělený.'],
       ["Pokladna v mobilu, tisk u hlavní kasy", "Na telefonu je nahoře hledání a čtečka, hned pod nimi nákup. Účtenka i cenovky vyjedou z tiskárny u hlavní kasy – přes internet, mobil nemusí být na stejné Wi-Fi."],
       ["Tiskárna nastavená za minutu", "Průvodce vás nastavením provede krok za krokem: u počítače tisk přes prohlížeč, u tabletu a mobilu s Androidem připojí tiskárnu přes Bluetooth nebo USB. Hned vytisknete zkoušku."],
       ["Podklady pro účetní", "Tržby po dnech podle sazeb DPH a způsobu platby, oceněný sklad, doklady a uzávěrky – jedním klepnutím do Excelu."],
@@ -238,7 +238,7 @@ export default {
       ["Cenovky na pokladní tiskárně", "Cenovky vytisknete na pokladní tiskárně (Epson TM-T88 a kompatibilní), na etiketové tiskárně nebo na A4. S cenou za kg, litr nebo 100 g, akční přeškrtnutou cenou a čárovým kódem. Snadno vyberete zboží, kterému se změnila cena."],
       ["Sdílená databáze zboží s fotkami", "Naskenujete neznámý kód a pokladna sama dohledá název i fotku ve sdílené databázi SuperKasa – i u cigaret a místních výrobků. Vy jen zkontrolujete název a doplníte cenu. Do databáze se posílá jen kód, název, balení, skupina, DPH a fotka zboží – nikdy ceny, prodeje ani údaje o obchodě. Přispívání vypnete ve Správě → Systém."],
       ["Import zboží", "Zboží načtete ze souboru CSV, třeba z exportu jiné pokladny. Opakovaný import nic nezdvojí, jen aktualizuje ceny. Fotky zboží se doplní podle EAN."],
-      ["Propojení s E-shopem super", 'Objednávky z <a href="https://eshopsuper.cz/">E-shopu super</a> přijdou rovnou do pokladny. E-shop i kasa mají jeden společný sklad, takže se zboží neprodá dvakrát. Propojíte jednou, pak e-shop spravujete z pokladny bez dalšího hesla.'],
+      ["Propojení s E-shopem super", 'Objednávky z <a href="https://eshopsuper.cz/">E-shopu super</a> vám pokladna na přání oznámí, i do telefonu. Sklad pokladny a e-shopu zůstává oddělený. Propojíte jednou, pak e-shop spravujete z pokladny bez dalšího hesla.'],
       ["Nastavená pro váš obor", '<p>Podle oboru se založí skupiny s DPH, dlaždice a ukázkové položky – pečivo, ovoce, zelenina, zálohy, káva nebo služby. <a href="obory.html">Vyberte svůj obor</a></p><p>Nebo popíšete vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky – zdarma a bez internetu, česky, vietnamsky i anglicky. Návrh uvidíte a upravíte. Sazby DPH ověřte s účetní.</p>'],
     ],
     provozTitle: "Obsluha a provoz",

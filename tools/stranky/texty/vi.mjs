@@ -159,7 +159,7 @@ export default {
     newCards: [
       ["Thông báo về điện thoại", "Mỗi lần bán hàng, điện thoại báo ngay cho bạn – số tiền, cách thanh toán, nhân viên và món hàng. Miễn phí, không cần cài thêm ứng dụng, tắt được bất cứ lúc nào. Trên iPhone, mở từ biểu tượng trên màn hình chính."],
       ["Cơ sở dữ liệu hàng hóa dùng chung có ảnh", "Quét một mã lạ, máy tính tiền tự điền tên và ảnh từ cơ sở dữ liệu dùng chung của SuperKasa. Bạn chỉ cần kiểm tra tên và nhập giá."],
-      ["Kết nối với E-shop super", 'Đơn hàng từ cửa hàng online của bạn trên <a href="https://eshopsuper.cz/">eshopsuper.cz</a> về thẳng máy tính tiền, cửa hàng online và quầy dùng chung một kho.'],
+      ["Kết nối với E-shop super", 'Đơn hàng từ cửa hàng online của bạn trên <a href="https://eshopsuper.cz/">eshopsuper.cz</a> có thể được báo trên máy tính tiền, và bạn quản lý cửa hàng online từ máy tính tiền không cần mật khẩu khác. Kho của quầy và cửa hàng online vẫn tách riêng.'],
       ["Máy tính tiền trên điện thoại, in ở quầy chính", "Trên điện thoại, phía trên là ô tìm và máy quét, ngay bên dưới là đơn hàng. Hóa đơn và nhãn giá in ra ở máy in của quầy chính – qua internet, điện thoại không cần cùng Wi-Fi."],
       ["Cài máy in trong một phút", "Trình hướng dẫn giúp bạn từng bước: trên máy tính in qua trình duyệt, trên máy tính bảng và điện thoại Android kết nối máy in Bluetooth hoặc USB. In thử ngay."],
       ["Số liệu cho kế toán", "Doanh thu theo ngày theo thuế suất DPH và cách thanh toán, giá trị kho, hóa đơn và chốt ca – xuất ra Excel một lần bấm."],
@@ -234,7 +234,7 @@ export default {
       ["Nhãn giá trên máy in hóa đơn", "Bạn in nhãn giá trên máy in hóa đơn (Epson TM-T88 và loại tương thích), máy in tem nhãn hoặc giấy A4. Có giá theo kg, lít hoặc 100 g, giá khuyến mãi gạch ngang và mã vạch. Dễ dàng chọn những hàng vừa đổi giá."],
       ["Cơ sở dữ liệu hàng hóa dùng chung có ảnh", "Quét một mã lạ, máy tính tiền tự tìm tên và ảnh trong cơ sở dữ liệu dùng chung của SuperKasa – kể cả thuốc lá và sản phẩm địa phương. Bạn chỉ cần kiểm tra tên và nhập giá. Vào cơ sở dữ liệu chỉ có mã, tên, quy cách đóng gói, nhóm hàng, DPH và ảnh hàng – không bao giờ có giá, doanh số hay thông tin cửa hàng. Tắt đóng góp trong Quản lý → Hệ thống."],
       ["Nhập danh sách hàng", "Nhập hàng hóa từ tệp CSV, kể cả tệp xuất từ máy tính tiền khác. Nhập lại nhiều lần không bị trùng, chỉ cập nhật giá. Ảnh hàng được bổ sung theo EAN."],
-      ["Kết nối với E-shop super", 'Đơn hàng từ <a href="https://eshopsuper.cz/">E-shop super</a> về thẳng máy tính tiền. Cửa hàng online và quầy dùng chung một kho, nên hàng không bị bán hai lần. Kết nối một lần, sau đó quản lý cửa hàng online ngay từ máy tính tiền, không cần mật khẩu khác.'],
+      ["Kết nối với E-shop super", 'Đơn hàng từ <a href="https://eshopsuper.cz/">E-shop super</a> có thể được báo trên máy tính tiền và điện thoại nếu bạn muốn. Kho của quầy và cửa hàng online vẫn tách riêng. Kết nối một lần, sau đó quản lý cửa hàng online ngay từ máy tính tiền, không cần mật khẩu khác.'],
       ["Cài sẵn cho ngành hàng của bạn", '<p>Theo ngành hàng, máy tạo sẵn nhóm hàng kèm DPH, ô hàng và hàng mẫu – bánh mì, trái cây, rau, tiền cược vỏ chai, cà phê hoặc dịch vụ. <a href="obory.html">Chọn ngành hàng của bạn</a></p><p>Hoặc bạn tự mô tả mình bán gì, máy sẽ gợi ý nhóm hàng kèm DPH, hình ảnh và những mặt hàng đầu tiên – miễn phí, không cần internet, bằng tiếng Séc, tiếng Việt hoặc tiếng Anh. Bạn xem và sửa được gợi ý. Hãy kiểm tra thuế suất DPH với kế toán.</p>'],
     ],
     provozTitle: "Nhân viên và vận hành",
