@@ -121,7 +121,7 @@ export default {
       ["What is SuperKasa?", "SuperKasa is a browser-based POS system for shops, hospitality and services. It covers touchscreen selling, stock, price labels and EET 2.0 sales recording. Staff can switch it to Czech, Vietnamese or English."],
       ["Do I need to install anything?", 'No. SuperKasa runs in the browser on a computer, tablet or phone – nothing to download or install. Every plan includes up to 10 devices. <a href="jak-zacit.html">Get started</a>'],
       ["How much does SuperKasa cost?", 'CZK 149 a month or CZK 1,490 a year including VAT, the same for any type of business. You can also buy the till for CZK 4,000 once, with 2 years of new features and support. The first 10 days are free, with no card and no commitment. We take nothing from your sales. <a href="cenik.html">Pricing</a>'],
-      ["Is SuperKasa ready for EET 2.0?", 'Yes. EET 2.0 sales recording starts on 1 January 2027. With a paid plan and a POS certificate from DIS+, you switch on live sales reporting in Admin → EET 2.0. <a href="eet.html">Getting started with EET 2.0</a>'],
+      ["Is SuperKasa ready for EET 2.0?", 'Yes. EET 2.0 sales recording starts on 1 January 2027. With a POS certificate from DIS+, you switch on live sales reporting in Admin → EET 2.0. <a href="eet.html">Getting started with EET 2.0</a>'],
       ["What happens if the internet goes down?", "You keep selling for cash and card. Receipts upload by themselves once you're back online and go to EET with their original time."],
       ["Is SuperKasa available in Vietnamese?", 'Yes. The interface is available in Czech, Vietnamese and English, and each cashier has their own language. The customer receipt is always in Czech. <a href="pokladna-pro-vietnamske-obchody.html">POS for Vietnamese shops</a>'],
     ],
@@ -177,8 +177,8 @@ export default {
     steps: [
       ["Create your till in the browser", '<a href="https://app.superkasa.cz/">Create your till in the browser</a> – on a computer, tablet or phone.'],
       ["Choose your type of business and add your cashiers", "The POS sets up groups, VAT rates, tiles and features. Or describe in your own words what you sell, and the POS will suggest groups with VAT rates, pictures and first items – free and offline, in Czech, Vietnamese or English. You'll see everything and can edit it; check the VAT rates with your accountant. Cashiers log in with their own PIN."],
-      ["Try it free for 10 days", "Until the end of 2026 the POS issues valid receipts even during the trial. From 1 January 2027, live sales with EET require a paid plan. Training mode is optional, for training staff."],
-      ["Switch on live EET 2.0", 'With a paid plan and a POS certificate from DIS+, you switch on live sales reporting in Admin → EET 2.0, from 1 January 2027 at the latest. If you do not have to record sales, choose “I do not have to record sales” there. <a href="eet.html">Getting started with EET 2.0</a>'],
+      ["Try it free for 10 days", "Until the end of 2026 the POS issues valid receipts even during the trial. Live sales with EET work in every plan, including Free. Training mode is optional, for training staff."],
+      ["Switch on live EET 2.0", 'With a POS certificate from DIS+, you switch on live sales reporting in Admin → EET 2.0, from 1 January 2027 at the latest. If you do not have to record sales, choose “I do not have to record sales” there. <a href="eet.html">Getting started with EET 2.0</a>'],
     ],
   },
 
@@ -291,7 +291,7 @@ export default {
     everyTitle: "In every plan",
     every: [
       "Selling on a touchscreen",
-      "EET 2.0 (live EET with a paid plan)",
+      "EET 2.0 (live EET even on the Free plan)",
       "Receipts, cash and closings",
       "Stock, promotions, customer display and QR payments",
       "Czech, Vietnamese and English for staff",
@@ -311,8 +311,8 @@ export default {
     buy: ["Everything included", "The POS runs in the browser, nothing is installed. Backups and running SuperKasa Cloud are included in both rental and purchase. No commitment: if you do not pay the next rental period, the rental simply ends."],
     purchase: ["Buy a licence", "CZK 4,000 once, incl. VAT. The till is yours for good. It includes <strong>2 years</strong> of new features, support and warranty. After that it keeps working without limits, just without new features and support. Legal updates (EET 2.0, VAT changes) and security fixes are always free. It pays off if you want the till for 3 years or more."],
     renew: ["Extending updates", "For a bought licence you can extend new features and support for <strong>CZK 990 a year</strong> incl. VAT, at any time, even after they end. New features unlock from the day of payment."],
-    trial: ["10-day free trial", "A new POS runs free for 10 days. You can sell, print and set up everything you need. Until the end of 2026 the POS issues valid receipts even during the trial. Training mode is there for training staff. From 1 January 2027, live sales with EET require a paid plan.", "After the trial ends, the POS shows warnings for another 3 days; then, without payment, it stops new sales. Your data stays in your shop's account."],
-    ends: ["When payment ends", "Sales and EET keep running for another <strong>3 days</strong> with a clear warning. Then new sales stop, but receipts, closings, refunds and data export keep working. Your data stays in your shop's account for 12 months after the rental ends, then it is deleted – export it in time."],
+    trial: ["10-day free trial","A new POS runs free for 10 days with all features and add-ons. You can sell, print and set up everything you need. Until the end of 2026 the POS issues valid receipts even during the trial. Training mode is there for training staff.","After the trial ends, all features keep working for 3 more days; then, without payment, the POS switches to the Free plan. Your data stays in your shop's account."],
+    ends: ["When payment ends – the Free plan","All features keep running for another <strong>3 days</strong> with a clear warning. Then the POS switches to the <strong>Free plan</strong>: sales, EET 2.0, receipts, closings, refunds and data export keep working with limits – 1 device, at most 300 products, no stock, promotions, customer display or add-ons. Paying unlocks everything at once. Your data stays in your shop's account."],
     faqTitle: "Frequently asked questions",
     faq: [
       ["Is the price final?", "Yes, CZK 149 a month and CZK 1,490 a year are prices including VAT."],
@@ -321,9 +321,9 @@ export default {
       ["Does the price include a computer, printer or scanner?", `No, the price is for the POS software. You get the computer or tablet, receipt printer, barcode scanner and, if needed, scales or a customer display yourself. We're happy to advise on what is suitable – <a href="jak-zacit.html#vybaveni">what you will need</a>.`],
       ["How many devices can I use?", "Every plan includes up to 10 POS devices – for example the till, a tablet for receiving goods and phones for staff. For larger businesses, get in touch."],
       ["What are paid add-ons and how much do they cost?", 'Add-ons add features beyond the plan: Attendance and shifts (CZK 79), Loyalty and gift vouchers (CZK 69), Reservations and appointments (CZK 99), Recipes and portion costing (CZK 79) and Staff control (CZK 69) – per month incl. VAT, a year costs 10 months. All are free during the 10-day trial. No commitment: you only pay for the ones you switch on, and they are unlocked by the same licence key as the plan. <a href="#doplnky">Add-ons overview</a>'],
-      ["How do I pay for the rental?", "In the POS, tap Pay in the top bar (or Admin → System → Licence and plan), choose a month, a year or buying the licence and pay with the QR code in your banking app. For now we match payments by hand – if the rental isn't extended right away, give us a call."],
+      ["How do I pay for the rental?", "In the POS, tap Pay in the top bar (or Admin → System → Licence and plan), choose a month, a year or buying the licence and pay with the QR code in your banking app. The payment is matched automatically within a few minutes and the invoice arrives by e-mail."],
       ["Does the rental renew automatically?", "No. The rental is valid until the paid-up date and nothing is charged automatically. You pay the next period the same way, with a QR code in the POS. If you don't pay, the POS keeps running for another 3 days with a warning."],
-      ["What happens to my data if I stop paying?", "Your data stays in your shop's account for 12 months after the rental ends. After 3 days with a warning, new sales stop, but receipts, closings and data export keep working."],
+      ["What happens if I stop paying?","The POS switches to the Free plan: you can keep selling, sending sales to EET 2.0 and printing receipts on 1 device with at most 300 products. Stock, promotions, customer display and add-ons unlock once you pay. Data and export always stay."],
     ],
     cta: ["Try SuperKasa free for 10 days", "Create your till in the browser in a few minutes. If you like, we'll set it up with you by phone."],
   },
@@ -349,7 +349,7 @@ export default {
     vsNote: "We did not find stock, a receipt printer or a scanner in the Financial Administration's description of MOJE eet. That does not mean the app will never have them. Full comparison: <a href=\"moje-eet-nebo-pokladna.html\">MOJE eet or a POS system</a>.",
     faq: [
       ["When does sales registration in EET 2.0 start?","According to the Financial Administration's schedule, on 1 January 2027. January 2027 is a pilot period, but it is already standard registration."],
-      ["What do I need to switch on live EET 2.0 in SuperKasa?","A paid plan and your own POS certificate from DIS+. In Admin → EET 2.0 you upload the certificate, enter the recording unit number and verify the connection."],
+      ["What do I need to switch on live EET 2.0 in SuperKasa?","Your own POS certificate from DIS+ (any plan, including Free). In Admin → EET 2.0 you upload the certificate, enter the recording unit number and verify the connection."],
       ["What if the internet goes down during a sale?","The receipt is saved and printed straight away. The POS keeps retrying the EET submission until the connection is back, and you can keep selling."],
       ["Is SuperKasa certified by the Financial Administration?","No. SuperKasa has no certification or approval from the Financial Administration, and we don't claim any. We verified the submission in the Financial Administration's test environment."],
       ["Does sales registration apply to every business?","Not always. Check whether and from when you have to register on <a href=\"https://eet.gov.cz/\" rel=\"noopener\">eet.gov.cz</a> or with your accountant. Some of the smallest sole traders in the flat-rate tax regime can opt out in the <a href=\"eet-off-pausalni-dan.html\">EET OFF</a> regime."],
@@ -367,7 +367,7 @@ export default {
     modes: [
       "<strong>Training mode</strong> – optional, for training staff. Receipts are marked as training receipts and are never sent to live EET.",
       "<strong>Test environment</strong> – you can try the EET connection in the Financial Administration's test environment (Playground) with a test certificate.",
-      "<strong>Live mode</strong> – only with a paid plan and your own POS certificate. Before switching, you go through a checklist (company details, certificate, verified connection).",
+      "<strong>Live mode</strong> – with your own POS certificate. Before switching, you go through a checklist (company details, certificate, verified connection).",
     ],
     youTitle: "What you arrange yourself",
     you: [

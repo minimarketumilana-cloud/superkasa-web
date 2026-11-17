@@ -121,7 +121,7 @@ export default {
       ["SuperKasa là gì?", "SuperKasa là phần mềm máy tính tiền chạy trong trình duyệt dành cho cửa hàng, quán ăn và dịch vụ. Có bán hàng trên màn hình cảm ứng, kho, nhãn giá và ghi nhận doanh thu EET 2.0. Nhân viên chuyển giao diện sang tiếng Séc, tiếng Việt hoặc tiếng Anh."],
       ["Tôi có phải cài đặt gì không?", 'Không. SuperKasa chạy trên trình duyệt ở máy tính, máy tính bảng và điện thoại – không cần tải hay cài gì. Mỗi gói có tối đa 10 thiết bị. <a href="jak-zacit.html">Bắt đầu</a>'],
       ["SuperKasa giá bao nhiêu?", '149 Kč mỗi tháng hoặc 1 490 Kč mỗi năm, đã gồm thuế DPH, như nhau cho mọi ngành hàng. Bạn cũng có thể mua két với giá 4 000 Kč một lần, gồm 2 năm tính năng mới và hỗ trợ. 10 ngày đầu miễn phí, không cần thẻ, không ràng buộc. Chúng tôi không lấy gì từ doanh thu của bạn. <a href="cenik.html">Bảng giá</a>'],
-      ["SuperKasa đã sẵn sàng cho EET 2.0 chưa?", 'Rồi. Việc ghi nhận doanh thu EET 2.0 bắt đầu từ 1/1/2027. Khi đã trả tiền thuê và có chứng chỉ máy tính tiền từ DIS+, bạn bật gửi doanh thu thật trong Quản lý → EET 2.0. <a href="eet.html">Hướng dẫn EET 2.0</a>'],
+      ["SuperKasa đã sẵn sàng cho EET 2.0 chưa?", 'Rồi. Việc ghi nhận doanh thu EET 2.0 bắt đầu từ 1/1/2027. Khi có chứng chỉ máy tính tiền từ DIS+, bạn bật gửi doanh thu thật trong Quản lý → EET 2.0. <a href="eet.html">Hướng dẫn EET 2.0</a>'],
       ["Mất internet thì sao?", "Bạn vẫn bán tiếp bằng tiền mặt và thẻ. Hóa đơn tự tải lên khi có mạng lại và gửi EET với thời gian gốc."],
       ["SuperKasa có tiếng Việt không?", 'Có. Giao diện có tiếng Séc, tiếng Việt và tiếng Anh, mỗi nhân viên có ngôn ngữ riêng. Hóa đơn cho khách luôn bằng tiếng Séc. <a href="pokladna-pro-vietnamske-obchody.html">Máy tính tiền cho cửa hàng Việt</a>'],
     ],
@@ -177,8 +177,8 @@ export default {
     steps: [
       ["Tạo máy tính tiền trên trình duyệt", '<a href="https://app.superkasa.cz/">Tạo máy tính tiền trên trình duyệt</a> – trên máy tính, máy tính bảng và điện thoại.'],
       ["Chọn ngành hàng và tạo nhân viên", "Máy tính tiền chuẩn bị nhóm hàng, thuế suất DPH, ô hàng và chức năng. Hoặc bạn tự mô tả mình bán gì, máy sẽ gợi ý nhóm hàng kèm DPH, hình ảnh và những mặt hàng đầu tiên – miễn phí, không cần internet, bằng tiếng Séc, tiếng Việt hoặc tiếng Anh. Bạn xem và sửa được mọi thứ; hãy kiểm tra thuế suất DPH với kế toán. Nhân viên đăng nhập bằng mã PIN riêng."],
-      ["Dùng thử miễn phí 10 ngày", "Đến hết năm 2026 máy xuất hóa đơn hợp lệ ngay cả khi dùng thử. Từ 1/1/2027, bán hàng thật có EET cần thanh toán gói. Chế độ thử là tùy chọn, dùng để đào tạo nhân viên."],
-      ["Bật EET 2.0 thật", 'Khi đã trả tiền thuê và có chứng chỉ máy tính tiền từ DIS+, bạn bật gửi doanh thu thật trong Quản lý → EET 2.0, chậm nhất từ 1/1/2027. Nếu không phải ghi nhận doanh thu, chọn “Tôi không phải ghi nhận doanh thu” ở đó. <a href="eet.html">Hướng dẫn EET 2.0</a>'],
+      ["Dùng thử miễn phí 10 ngày", "Đến hết năm 2026 máy xuất hóa đơn hợp lệ ngay cả khi dùng thử. Bán hàng thật có EET hoạt động ở mọi gói, kể cả gói Miễn phí. Chế độ thử là tùy chọn, dùng để đào tạo nhân viên."],
+      ["Bật EET 2.0 thật", 'Khi có chứng chỉ máy tính tiền từ DIS+, bạn bật gửi doanh thu thật trong Quản lý → EET 2.0, chậm nhất từ 1/1/2027. Nếu không phải ghi nhận doanh thu, chọn “Tôi không phải ghi nhận doanh thu” ở đó. <a href="eet.html">Hướng dẫn EET 2.0</a>'],
     ],
   },
 
@@ -291,7 +291,7 @@ export default {
     everyTitle: "Có trong mọi gói",
     every: [
       "Bán hàng trên màn hình cảm ứng",
-      "EET 2.0 – ghi nhận doanh thu điện tử (EET thật khi đã trả tiền thuê)",
+      "EET 2.0 – ghi nhận doanh thu điện tử (EET thật cả ở gói Miễn phí)",
       "Hóa đơn, tiền mặt và chốt ca",
       "Kho, khuyến mãi, màn hình khách hàng và thanh toán QR",
       "Tiếng Séc, tiếng Việt và tiếng Anh cho nhân viên",
@@ -311,8 +311,8 @@ export default {
     buy: ["Tất cả trong giá", "Máy tính tiền chạy trên trình duyệt, không cần cài đặt. Sao lưu và vận hành SuperKasa Cloud đã có trong giá thuê và giá mua. Không ràng buộc: nếu không trả kỳ thuê tiếp theo, thời hạn thuê đơn giản là kết thúc."],
     purchase: ["Mua giấy phép", "4 000 Kč trả một lần, đã gồm DPH. Két tiền là của bạn vĩnh viễn. Gồm <strong>2 năm</strong> tính năng mới, hỗ trợ và bảo hành. Sau đó két vẫn chạy không giới hạn, chỉ không có tính năng mới và hỗ trợ. Thay đổi theo luật (EET 2.0, DPH) và bản vá bảo mật luôn miễn phí. Có lợi nếu bạn dùng két từ 3 năm trở lên."],
     renew: ["Gia hạn cập nhật", "Với giấy phép đã mua, bạn gia hạn tính năng mới và hỗ trợ với giá <strong>990 Kč/năm</strong> đã gồm DPH, bất cứ lúc nào, kể cả sau khi đã hết. Tính năng mới mở khóa từ ngày thanh toán."],
-    trial: ["Dùng thử miễn phí 10 ngày", "Máy tính tiền mới chạy miễn phí 10 ngày. Bạn có thể bán hàng, in và cài đặt mọi thứ cần thiết. Đến hết năm 2026 máy xuất hóa đơn hợp lệ ngay cả khi dùng thử. Chế độ thử dùng để đào tạo nhân viên. Từ 1/1/2027, bán hàng thật có EET cần thanh toán gói.", "Hết thời gian dùng thử, máy tính tiền còn nhắc thêm 3 ngày, sau đó nếu chưa thanh toán sẽ dừng bán hàng mới. Dữ liệu vẫn nằm trong tài khoản cửa hàng."],
-    ends: ["Khi hết hạn thanh toán", "Bán hàng và EET vẫn chạy thêm <strong>3 ngày</strong> kèm thông báo nhắc rõ ràng. Sau đó việc bán hàng mới dừng lại, nhưng hóa đơn, chốt ca, trả hàng và xuất dữ liệu vẫn hoạt động. Dữ liệu vẫn là của bạn và nằm trong tài khoản cửa hàng thêm 12 tháng sau khi hết thuê, sau đó sẽ bị xóa – hãy xuất dữ liệu kịp thời."],
+    trial: ["Dùng thử miễn phí 10 ngày","Máy tính tiền mới chạy miễn phí 10 ngày với mọi chức năng và tiện ích. Bạn có thể bán hàng, in và cài đặt mọi thứ cần thiết. Đến hết năm 2026 máy xuất hóa đơn hợp lệ ngay cả khi dùng thử. Chế độ thử dùng để đào tạo nhân viên.","Hết thời gian dùng thử, mọi chức năng chạy thêm 3 ngày, sau đó nếu chưa thanh toán máy chuyển sang gói Miễn phí. Dữ liệu vẫn nằm trong tài khoản cửa hàng."],
+    ends: ["Khi hết hạn thanh toán – gói Miễn phí","Mọi chức năng chạy thêm <strong>3 ngày</strong> kèm thông báo nhắc rõ ràng. Sau đó máy chuyển sang <strong>gói Miễn phí</strong>: bán hàng, EET 2.0, hóa đơn, chốt ca, trả hàng và xuất dữ liệu vẫn hoạt động, có giới hạn – 1 thiết bị, tối đa 300 mặt hàng, không có kho, khuyến mãi, màn hình khách và tiện ích. Thanh toán là mở lại tất cả ngay. Dữ liệu vẫn nằm trong tài khoản cửa hàng."],
     faqTitle: "Câu hỏi thường gặp",
     faq: [
       ["Giá này đã là giá cuối cùng chưa?", "Rồi, 149 Kč/tháng và 1 490 Kč/năm là giá đã gồm thuế DPH."],
@@ -321,9 +321,9 @@ export default {
       ["Giá có gồm máy tính, máy in hay máy quét mã không?", 'Không, giá là cho phần mềm máy tính tiền. Máy tính hoặc máy tính bảng, máy in hóa đơn, máy quét mã vạch và nếu cần thì cân hoặc màn hình khách hàng, bạn tự mua. Chúng tôi sẵn lòng tư vấn loại phù hợp – <a href="jak-zacit.html#vybaveni">bạn sẽ cần những gì</a>.'],
       ["Tôi dùng được bao nhiêu thiết bị?", "Mỗi gói có tối đa 10 thiết bị máy tính tiền – ví dụ quầy thu ngân, máy tính bảng để nhập hàng và điện thoại cho nhân viên. Cửa hàng lớn hơn thì hãy liên hệ."],
       ["Tiện ích trả thêm là gì và giá bao nhiêu?", 'Tiện ích bổ sung chức năng ngoài gói: Chấm công và ca làm (79 Kč), Khách hàng thân thiết và phiếu quà tặng (69 Kč), Đặt lịch và lịch hẹn (99 Kč), Công thức và định mức (79 Kč) và Kiểm soát nhân viên (69 Kč) – giá theo tháng, đã gồm thuế DPH, trả theo năm chỉ tính 10 tháng. Trong 10 ngày dùng thử, tất cả đều miễn phí. Không ràng buộc: chỉ trả cho tiện ích đã bật, và cùng một mã giấy phép với gói sẽ mở khóa chúng. <a href="#doplnky">Danh sách tiện ích</a>'],
-      ["Tôi trả tiền thuê thế nào?", "Trong máy tính tiền, bấm Thanh toán trên thanh phía trên (hoặc Quản lý → Hệ thống → Giấy phép và gói), chọn tháng hoặc năm và trả bằng mã QR trong ứng dụng ngân hàng. Hiện chúng tôi đối chiếu thanh toán bằng tay – nếu thời hạn thuê chưa được gia hạn ngay, hãy gọi cho chúng tôi."],
+      ["Tôi trả tiền thuê thế nào?", "Trong máy tính tiền, bấm Thanh toán trên thanh phía trên (hoặc Quản lý → Hệ thống → Giấy phép và gói), chọn tháng hoặc năm và trả bằng mã QR trong ứng dụng ngân hàng. Thanh toán được ghép tự động trong vài phút và hóa đơn được gửi qua e-mail."],
       ["Thuê có tự động gia hạn không?", "Không. Thời hạn thuê có hiệu lực đến ngày đã trả và không có khoản nào bị trừ tự động. Kỳ tiếp theo bạn trả cùng cách, bằng mã QR trong máy tính tiền. Nếu chưa trả, máy tính tiền vẫn chạy thêm 3 ngày kèm thông báo nhắc."],
-      ["Dữ liệu sẽ ra sao nếu tôi ngừng trả tiền?", "Dữ liệu vẫn nằm trong tài khoản cửa hàng của bạn thêm 12 tháng sau khi hết thuê. Sau 3 ngày có thông báo nhắc, việc bán hàng mới sẽ dừng, nhưng hóa đơn, chốt ca và xuất dữ liệu vẫn hoạt động."],
+      ["Nếu tôi ngừng trả tiền thì sao?","Máy chuyển sang gói Miễn phí: vẫn bán hàng, gửi doanh thu lên EET 2.0 và in hóa đơn trên 1 thiết bị với tối đa 300 mặt hàng. Kho, khuyến mãi, màn hình khách và tiện ích mở lại khi thanh toán. Dữ liệu và xuất dữ liệu luôn được giữ."],
     ],
     cta: ["Dùng thử SuperKasa miễn phí 10 ngày", "Tạo máy tính tiền trên trình duyệt chỉ trong vài phút. Nếu cần, chúng tôi cùng bạn thiết lập qua điện thoại."],
   },
@@ -367,7 +367,7 @@ export default {
     modes: [
       "<strong>Chế độ thử</strong> – tùy chọn, dùng để đào tạo nhân viên. Hóa đơn được đánh dấu là hóa đơn thử và không bao giờ gửi lên EET thật.",
       "<strong>Môi trường thử</strong> – bạn có thể thử kết nối EET trong môi trường thử của Finanční správa bằng chứng chỉ thử.",
-      "<strong>Chế độ thật</strong> – chỉ khi đã trả tiền thuê và có chứng chỉ máy tính tiền riêng. Trước khi chuyển, bạn đi qua danh sách kiểm tra (thông tin doanh nghiệp, chứng chỉ, kết nối đã kiểm tra).",
+      "<strong>Chế độ thật</strong> – khi có chứng chỉ máy tính tiền riêng. Trước khi chuyển, bạn đi qua danh sách kiểm tra (thông tin doanh nghiệp, chứng chỉ, kết nối đã kiểm tra).",
     ],
     youTitle: "Những việc bạn cần làm",
     you: [
