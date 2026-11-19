@@ -179,7 +179,7 @@ small, .small { font-size: .9rem; color: var(--muted); }
 .login-form [hidden], .login-shops[hidden] { display: none; }
 /* Přihlášení přes Google a Seznam: světlé tlačítko podle pravidel značky Google. */
 .login-oauth { display: grid; gap: 8px; }
-.btn-oauth { display: flex; align-items: center; justify-content: center; min-height: 48px; background: #fff; color: #1f1f1f; border: 1px solid #dadce0; font-weight: 600; text-decoration: none; }
+.btn-oauth { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; background: #fff; color: #1f1f1f; border: 1px solid #dadce0; font-weight: 600; text-decoration: none; }
 .btn-oauth:hover { background: #f7f8f8; border-color: #c6c9cc; }
 .login-oauth-or { text-align: center; color: #6d6a64; }
 .cloud-soon { margin: 0 0 18px; padding: 14px 18px; border-radius: 14px; background: var(--plum-soft); color: var(--plum-dark); font-weight: 600; }
