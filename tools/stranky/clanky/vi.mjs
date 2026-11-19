@@ -1045,15 +1045,15 @@ export default {
 <li>Chọn <strong>Tháng</strong> hoặc <strong>Năm (tặng 2 tháng)</strong> và quét mã QR trong ứng dụng ngân hàng để thanh toán.</li>
 <li>Chạm vào <strong>Tôi đã trả – kiểm tra</strong>.</li>
 </ol>
-<aside class="note warn"><p>Hiện chúng tôi đối chiếu tiền giấy phép bằng tay, nên giấy phép không gia hạn ngay sau khi bạn trả. Nếu bạn không thấy thanh toán QR trong máy tính tiền, hãy gọi cho chúng tôi. Mã giấy phép thì bạn dán vào ô <strong>Mã giấy phép</strong> và chạm vào <strong>Kích hoạt</strong>.</p></aside>
-<p>Sau khi hết thời gian dùng thử, bạn còn bán được 3 ngày kèm thông báo nhắc, sau khi hết thời gian đã trả cũng là 3 ngày (để kịp nhận tiền). Sau đó việc bán hàng mới sẽ dừng. Dữ liệu, hóa đơn, chốt ca, trả hàng và xuất dữ liệu vẫn hoạt động.</p>
+<aside class="note warn"><p>Thanh toán QR được ghép tự động, thường trong vài phút sau khi tiền vào tài khoản của chúng tôi, và giấy phép được gia hạn mà bạn không cần làm gì thêm. Nếu bạn không thấy thanh toán QR trong máy tính tiền, hoặc đến ngày làm việc tiếp theo thanh toán vẫn chưa được ghép, hãy gọi cho chúng tôi và chúng tôi sẽ gửi mã giấy phép. Mã giấy phép thì bạn dán vào ô <strong>Mã giấy phép</strong> và chạm vào <strong>Kích hoạt</strong>.</p></aside>
+<p>Sau khi hết thời gian dùng thử, bạn còn bán được 3 ngày kèm thông báo nhắc, sau khi hết thời gian đã trả cũng là 3 ngày (để kịp nhận tiền). Sau đó máy chuyển sang gói Miễn phí: bán hàng, hóa đơn, chốt ca và EET 2.0 vẫn chạy trên 1 thiết bị, tối đa 300 mặt hàng và không có chức năng trả phí. Dữ liệu, hóa đơn, chốt ca, trả hàng và xuất dữ liệu vẫn hoạt động.</p>
 <p><strong>Ngôn ngữ.</strong> Lá cờ ở phía trên chuyển giữa tiếng Séc, tiếng Việt và tiếng Anh. Mỗi nhân viên có ngôn ngữ riêng. Hóa đơn cho khách luôn bằng tiếng Séc.</p>`,
       },
     ],
     faq: [
       ["Sau khi đăng ký tôi có phải trả tiền ngay không?", "Không. 10 ngày đầu miễn phí và bạn không cần nhập thẻ. Bạn cũng có thể trả tiền trong thời gian dùng thử, những ngày còn lại vẫn được giữ."],
       ["Tôi quên mật khẩu. Phải làm sao?", "Mở địa chỉ cửa hàng của bạn trên thiết bị chưa đăng nhập và chạm vào Quên mật khẩu. Bạn nhập e-mail, mã PIN của chủ và mật khẩu mới."],
-      ["Hóa đơn trong thời gian dùng thử có hợp lệ không?", "Máy tính tiền tạo đến hết năm 2026 xuất hóa đơn hợp lệ ngay. Máy tạo từ ngày 1 tháng 1 năm 2027 bắt đầu ở chế độ thử, trong đó hóa đơn không có giá trị. Máy chỉ chuyển sang vận hành thật khi có chứng chỉ từ DIS+, số đơn vị ghi nhận (evidenční jednotka), kết nối đã kiểm tra và giấy phép trả phí. Ai không phải ghi nhận doanh thu thì chọn Tôi không phải ghi nhận doanh thu trong Quản lý → EET 2.0 và không cần chứng chỉ. Chế độ thử chỉ bật được trước hóa đơn thật đầu tiên."],
+      ["Hóa đơn trong thời gian dùng thử có hợp lệ không?", "Máy tính tiền tạo đến hết năm 2026 xuất hóa đơn hợp lệ ngay. Máy tạo từ ngày 1 tháng 1 năm 2027 bắt đầu ở chế độ thử, trong đó hóa đơn không có giá trị. Máy chỉ chuyển sang vận hành thật khi có chứng chỉ từ DIS+, số đơn vị ghi nhận (evidenční jednotka), kết nối đã kiểm tra và gói đã trả tiền (sau khi hết dùng thử, gói Miễn phí cũng đủ). Ai không phải ghi nhận doanh thu thì chọn Tôi không phải ghi nhận doanh thu trong Quản lý → EET 2.0 và không cần chứng chỉ. Chế độ thử chỉ bật được trước hóa đơn thật đầu tiên."],
       ["Nhân viên có trả tiền lại cho khách mà không có quản lý được không?", "Không. Với hủy hóa đơn và trả hàng, nhân viên phải xác nhận bằng mã PIN của quản lý hoặc chủ. Quản lý và chủ không phải nhập lại mã PIN."],
       ["Tôi có phải chốt ca mỗi ngày không?", "Sau 20 giờ máy nhắc, và lúc 23:59 máy tự chốt ca, nên doanh thu của nhiều ngày không bị gộp lại. Nhưng tiền mặt trong ngăn kéo thì chỉ bạn đếm được, vì vậy tốt hơn là cuối ngày tự chốt ca."],
     ],
@@ -1669,7 +1669,7 @@ export default {
 <li>Trong <strong>Quản lý → EET 2.0</strong>, tải tệp và mật khẩu lên rồi chạm vào <strong>Kiểm tra kết nối</strong>.</li>
 <li>Trong năm 2026, bạn có thể chọn chế độ <strong>Chạy thử</strong>. Hãy bật EET thật vào ngày 1 tháng 1 năm 2027, chậm nhất là lúc có khoản doanh thu đầu tiên của năm 2027.</li>
 </ol>
-<p>EET thật cần trả tiền thuê. Cách làm chi tiết có trong hướng dẫn <a href="eet-2-0-krok-za-krokem.html">EET 2.0 từng bước</a>.</p>
+<p>EET thật chạy khi bạn đã trả tiền gói, hoặc ở gói Miễn phí sau khi hết dùng thử. Cách làm chi tiết có trong hướng dẫn <a href="eet-2-0-krok-za-krokem.html">EET 2.0 từng bước</a>.</p>
 <p>Chúng tôi hỗ trợ qua điện thoại, cả bằng tiếng Việt: <a href="tel:+420608886882">+420 608 886 882</a>. Chúng tôi sẽ cùng bạn thiết lập máy.</p>`,
       },
     ],

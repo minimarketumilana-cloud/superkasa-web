@@ -1045,15 +1045,15 @@ export default {
 <li>Choose <strong>Month</strong> or <strong>Year (2 months free)</strong> and pay with the QR code in your banking app.</li>
 <li>Tap <strong>I've paid – check now</strong>.</li>
 </ol>
-<aside class="note warn"><p>For now we match licence payments by hand, so the licence is not extended straight after payment. If you do not see the QR payment in the POS, call us. You enter the licence key in the <strong>Licence key</strong> field and tap <strong>Activate</strong>.</p></aside>
-<p>After the trial ends you can still sell for 3 days with a warning, and after a paid period ends also for 3 days (time for the payment to arrive). Then new sales stop. Data, receipts, closings, refunds and export keep working.</p>
+<aside class="note warn"><p>A QR payment is matched automatically, usually within a few minutes after it reaches our account, and the licence is extended with no further step. If you do not see the QR payment in the POS, or the payment has not been matched by the next working day, call us and we will send you a licence key. You enter the licence key in the <strong>Licence key</strong> field and tap <strong>Activate</strong>.</p></aside>
+<p>After the trial ends you can still sell for 3 days with a warning, and after a paid period ends also for 3 days (time for the payment to arrive). Then the POS switches to the Free plan: sales, receipts, closings and EET 2.0 keep running on 1 device, with at most 300 products and without paid features. Data, receipts, closings, refunds and export keep working.</p>
 <p><strong>Language.</strong> The flag at the top switches between Czech, Vietnamese and English. Each cashier has their own language. The customer receipt is always in Czech.</p>`,
       },
     ],
     faq: [
       ["Must I pay straight after signing up?", "No. The first 10 days are free and you do not enter a card. You can also pay during the trial, and you keep the remaining days."],
       ["I forgot my password. What now?", "Open your shop's address on a device that is not signed in and tap Forgot password. You enter your e-mail, the owner's PIN and a new password."],
-      ["Are receipts valid during the trial period?", "A POS created by the end of 2026 issues valid receipts straight away. A POS created from 1 January 2027 starts in training mode, in which receipts are not valid. It goes into live mode only with a certificate from DIS+, a recording unit number (číslo evidenční jednotky), a verified connection and a paid licence. If you do not have to register sales, choose “I do not have to record sales” in Admin → EET 2.0 and you do not need a certificate. Training mode can be switched on only before the first live receipt."],
+      ["Are receipts valid during the trial period?", "A POS created by the end of 2026 issues valid receipts straight away. A POS created from 1 January 2027 starts in training mode, in which receipts are not valid. It goes into live mode only with a certificate from DIS+, a recording unit number (číslo evidenční jednotky), a verified connection and a paid plan (after the trial, the Free plan is enough). If you do not have to register sales, choose “I do not have to record sales” in Admin → EET 2.0 and you do not need a certificate. Training mode can be switched on only before the first live receipt."],
       ["Can a cashier refund money without a manager?", "No. A cashier must confirm a void or a refund with a manager's or owner's PIN. Managers and owners do not enter a PIN again."],
       ["Must I do a closing every day?", "After 20 hours the POS reminds you, and at 23:59 it closes by itself, so sales from several days do not run together. Only you can count the cash in the drawer, though, so it is better to close by hand at the end of the day."],
     ],
@@ -1673,7 +1673,7 @@ export default {
 <li>In <strong>Admin → EET 2.0</strong>, upload the file and password and tap <strong>Verify connection</strong>.</li>
 <li>In 2026 you can choose <strong>Dry run</strong> mode. Switch on live EET on 1 January 2027, at the latest for the first sale in 2027.</li>
 </ol>
-<p>Live EET requires a paid licence. The detailed procedure is in the guide <a href="eet-2-0-krok-za-krokem.html">EET 2.0 step by step</a>. The SuperKasa website is also available <a href="../vi/index.html">in Vietnamese</a>.</p>
+<p>Live EET runs once you pay for a plan, or on the Free plan after the trial. The detailed procedure is in the guide <a href="eet-2-0-krok-za-krokem.html">EET 2.0 step by step</a>. The SuperKasa website is also available <a href="../vi/index.html">in Vietnamese</a>.</p>
 <p>We can help you by phone, in Vietnamese too: <a href="tel:+420608886882">+420 608 886 882</a>. We will go through the setup with you.</p>`,
       },
     ],

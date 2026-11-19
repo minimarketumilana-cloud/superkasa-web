@@ -179,15 +179,15 @@ export default [
 <li>Klepněte na <strong>Už jsem zaplatil – zkontrolovat</strong>.</li>
 </ol>
 <p>V pokladně se pronájem jmenuje licence – najdete ho ve <strong>Správě → Systém → Licence a tarif</strong>.</p>
-<aside class="note warn"><p>Platby za pronájem zatím párujeme ručně, proto se pronájem neprodlouží hned po zaplacení. Když QR platbu v pokladně nevidíte, zavolejte nám a po zaplacení vám pošleme licenční klíč. Vložíte ho ve <strong>Správě → Systém → Licence a tarif</strong> do pole <strong>Licenční klíč</strong> a klepnete na <strong>Aktivovat</strong>.</p></aside>
-<p>Po skončení zkoušky prodáváte ještě 3 dny s upozorněním, po skončení zaplaceného období také 3 dny (rezerva na připsání platby). Pak se prodej zamkne a zůstane jen Správa s daty. Data, doklady, uzávěrky, vratky a export fungují dál.</p>
+<aside class="note warn"><p>Platba QR kódem se spáruje sama, obvykle během pár minut po připsání na náš účet, a pronájem se prodlouží bez dalšího kroku. Když QR platbu v pokladně nevidíte nebo se platba nespárovala do druhého pracovního dne, zavolejte nám a pošleme vám licenční klíč. Vložíte ho ve <strong>Správě → Systém → Licence a tarif</strong> do pole <strong>Licenční klíč</strong> a klepnete na <strong>Aktivovat</strong>.</p></aside>
+<p>Po skončení zkoušky prodáváte ještě 3 dny s upozorněním, po skončení zaplaceného období také 3 dny (rezerva na připsání platby). Pak pokladna přejde na tarif Zdarma: prodej, účtenky, uzávěrka a EET 2.0 běží dál, jen na 1 zařízení, s nejvýš 300 položkami zboží a bez placených funkcí. Data, doklady, uzávěrky, vratky a export fungují dál.</p>
 <p><strong>Jazyk.</strong> Vlajka nahoře přepne češtinu, vietnamštinu nebo angličtinu. Každý prodavač má svůj jazyk. Doklad pro zákazníka je vždy česky.</p>`,
       },
     ],
     faq: [
       ["Musím hned po registraci platit?", "Ne. Prvních 10 dní je zdarma a kartu nezadáváte. Platit můžete i během zkoušky, zbylé dny vám zůstanou."],
       ["Zapomněl jsem heslo. Co teď?", "Otevřete adresu svého obchodu na zařízení, které není přihlášené, a klepněte na Zapomenuté heslo. Zadáte e-mail, PIN majitele a nové heslo."],
-      ["Jsou doklady ve zkušební době platné?", "Pokladna založená do konce roku 2026 vydává rovnou platné doklady. Pokladna založená od 1. 1. 2027 začíná ve zkušebním režimu, ve kterém doklady neplatí. Do ostrého provozu přejde až s certifikátem z DIS+, číslem evidenční jednotky, ověřeným spojením a placeným pronájmem. Kdo evidovat nemusí, zvolí ve Správě → EET 2.0 volbu „Tržby evidovat nemusím“ a certifikát nepotřebuje. Zkušební režim lze zapnout jen před prvním ostrým dokladem."],
+      ["Jsou doklady ve zkušební době platné?", "Pokladna založená do konce roku 2026 vydává rovnou platné doklady. Pokladna založená od 1. 1. 2027 začíná ve zkušebním režimu, ve kterém doklady neplatí. Do ostrého provozu přejde až s certifikátem z DIS+, číslem evidenční jednotky, ověřeným spojením a zaplaceným tarifem (po skončení zkoušky stačí tarif Zdarma). Kdo evidovat nemusí, zvolí ve Správě → EET 2.0 volbu „Tržby evidovat nemusím“ a certifikát nepotřebuje. Zkušební režim lze zapnout jen před prvním ostrým dokladem."],
       ["Může prodavač vrátit peníze bez vedoucího?", "Ne. Storno i vratku musí prodavač potvrdit PINem vedoucího nebo majitele. Vedoucí a majitel PIN znovu nezadávají."],
       ["Musím dělat uzávěrku každý den?", "Po 20 hodinách otevřené směny pokladna upozorní a ve 23:59 udělá uzávěrku sama, takže se tržby více dnů neslijí. Hotovost v zásuvce ale spočítáte jen vy, proto je lepší udělat uzávěrku na konci dne ručně."],
     ],
@@ -807,7 +807,7 @@ export default [
 <li>Ve <strong>Správě → EET 2.0</strong> nahrajte soubor a heslo a klepněte na <strong>Ověřit spojení</strong>.</li>
 <li>V roce 2026 můžete zvolit režim <strong>Nanečisto</strong>. Ostré EET zapněte k 1. 1. 2027, nejpozději k první tržbě v roce 2027.</li>
 </ol>
-<p>Ostré EET vyžaduje placený pronájem. Podrobný postup je v návodu <a href="eet-2-0-krok-za-krokem.html">EET 2.0 krok za krokem</a>. Web SuperKasa je i <a href="vi/index.html">ve vietnamštině</a>.</p>
+<p>Ostré EET běží po zaplacení tarifu, nebo po skončení zkoušky v tarifu Zdarma. Podrobný postup je v návodu <a href="eet-2-0-krok-za-krokem.html">EET 2.0 krok za krokem</a>. Web SuperKasa je i <a href="vi/index.html">ve vietnamštině</a>.</p>
 <p>Pomůžeme vám po telefonu, i ve vietnamštině: <a href="tel:+420608886882">+420 608 886 882</a>. Nastavení pokladny projdeme s vámi.</p>`,
       },
     ],

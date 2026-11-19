@@ -13,8 +13,8 @@ const PROVIDER = `${P.name}, IČO ${P.ico}, místo podnikání ${P.street}, ${P.
 const CONTACTS = `telefon ${PHONE}${EMAIL ? `, e-mail ${EMAIL}` : ""}`;
 /** Jak se poskytovateli dá něco oznámit (vady, odstoupení, ukončení). */
 const NOTICE_WAYS = `telefonicky na čísle ${PHONE}${EMAIL ? `, e-mailem na ${EMAIL}` : ""} nebo písemně na adresu místa podnikání poskytovatele`;
-const EFFECTIVE = "13. 11. 2026";
-const VERSION = "2026-11-13";
+const EFFECTIVE = "19. 11. 2026";
+const VERSION = "2026-11-19";
 
 export const op = {
   file: "obchodni-podminky.html",
@@ -51,7 +51,7 @@ export const op = {
 
     <h2>3. Užívání pokladny</h2>
     <ol>
-      <li>Poskytovatel uživateli umožní užívat pokladnu v rozsahu zvoleného tarifu pro podnikání uživatele na území České republiky, na zařízeních podle tarifu (v každém tarifu až 10 zařízení).</li>
+      <li>Poskytovatel uživateli umožní užívat pokladnu v rozsahu zvoleného tarifu pro podnikání uživatele na území České republiky, na zařízeních podle tarifu (v placeném tarifu až 10 zařízení, v tarifu Zdarma 1 zařízení).</li>
       <li>Uživatel nesmí přístup k pokladně dále prodávat, pronajímat ani poskytovat třetím osobám mimo svůj podnik, nesmí obcházet technické ochrany ani pokladnu zneužívat (například k útokům nebo nadměrné zátěži serveru).</li>
       <li>Pokladnu poskytovatel průběžně zlepšuje. Změny mohou měnit vzhled a rozšiřovat funkce; podstatné funkce zvoleného tarifu (prodej, doklady, uzávěrky, export dat, evidence tržeb) poskytovatel bez náhrady neodebere.</li>
     </ol>
@@ -59,17 +59,18 @@ export const op = {
     <h2>4. Zkušební doba</h2>
     <ol>
       <li>Prvních 10 dní je pokladna zdarma a nezavazuje uživatele k placení.</li>
-      <li>Evidence tržeb v systému EET 2.0 je součástí placeného tarifu. Od 1. 1. 2027 proto pokladna bez zaplaceného tarifu nepřejde do ostrého provozu s evidencí tržeb; vystavuje jen zkušební doklady, které se do EET 2.0 neodesílají a nesmí se použít pro skutečný prodej. Výjimkou je uživatel, který evidenci tržeb nepodléhá. Do 31. 12. 2026 vydává pokladna platné doklady i ve zkušební době.</li>
-      <li>Po skončení zkušební doby pokladna ještě 3 dny upozorňuje na platbu. Pokud platba nepřijde, prodej se zamkne; přístup do Správy (doklady, uzávěrky, export dat, zaplacení) zůstává.</li>
+      <li>Evidence tržeb v systému EET 2.0 je součástí každého tarifu včetně tarifu Zdarma (čl. 5 odst. 6). Během zkušební doby a lhůty podle odstavce 3 pokladna od 1. 1. 2027 nepřejde do ostrého provozu s evidencí tržeb, dokud uživatel nezaplatí tarif; vystavuje jen zkušební doklady, které se do EET 2.0 neodesílají a nesmí se použít pro skutečný prodej. Výjimkou je uživatel, který evidenci tržeb nepodléhá. Do 31. 12. 2026 vydává pokladna platné doklady i ve zkušební době.</li>
+      <li>Po skončení zkušební doby pokladna ještě 3 dny upozorňuje na platbu. Pokud platba nepřijde, pokladna přejde na tarif Zdarma (čl. 5 odst. 6).</li>
     </ol>
 
     <h2>5. Cena a platby</h2>
     <ol>
       <li>Cena pronájmu je 149 Kč měsíčně nebo 1 490 Kč ročně, včetně DPH. Poskytovatel je plátcem DPH. Placené doplňky mají cenu uvedenou v pokladně (Správa → Systém → Licence a tarif) a na webu poskytovatele. Aktualizace, nové funkce a podpora jsou v ceně pronájmu.</li>
-      <li>Platí se předem za celé období bankovním převodem podle QR kódu a platebních údajů zobrazených v pokladně. Chce-li uživatel v pronájmu pokračovat bez přerušení, zaplatí další období nejpozději posledním dnem zaplaceného (nebo zkušebního) období; pronájem prodlouží i platba připsaná během 3denní lhůty podle čl. 4 odst. 3 a čl. 6 odst. 2. Zaplacení dalšího období je na rozhodnutí uživatele: jeho nezaplacením nevzniká dluh ani prodlení, jen smlouva skončí podle čl. 6 odst. 1. Připsanou platbu poskytovatel přiřadí k účtu obchodu (podle variabilního symbolu) a pronájem bez zbytečného odkladu prodlouží o zaplacené období, aniž by uživatel musel cokoli dalšího udělat. Částka, která nepokryje celé období, i přeplatek zůstávají jako kredit a započtou se při další platbě.</li>
+      <li>Platí se předem za celé období bankovním převodem podle QR kódu a platebních údajů zobrazených v pokladně. Chce-li uživatel v pronájmu pokračovat bez přerušení, zaplatí další období nejpozději posledním dnem zaplaceného (nebo zkušebního) období; pronájem prodlouží i platba připsaná během 3denní lhůty podle čl. 4 odst. 3 a čl. 6 odst. 2. Zaplacení dalšího období je na rozhodnutí uživatele: jeho nezaplacením nevzniká dluh ani prodlení, jen pokladna přejde na tarif Zdarma podle odstavce 6. Připsanou platbu poskytovatel přiřadí k účtu obchodu (podle variabilního symbolu) a pronájem bez zbytečného odkladu prodlouží o zaplacené období, aniž by uživatel musel cokoli dalšího udělat. Částka, která nepokryje celé období, i přeplatek zůstávají jako kredit a započtou se při další platbě.</li>
       <li>Daňový doklad k přijaté platbě poskytovatel vystaví do 15 dnů od jejího připsání a zašle ho elektronicky na e-mail uživatele.</li>
       <li>Cenu pro další období může poskytovatel změnit; změnu oznámí e-mailem nejméně 30 dní předem. Nová cena platí jen pro období zaplacená po účinnosti změny. Snížení ceny platí bez této lhůty, protože je v prospěch uživatele.</li>
       <li>Přechodné ustanovení: do 12. 11. 2026 byla cena pronájmu 189 Kč měsíčně a 2 041 Kč ročně. Uživatelé, kteří platili podle dřívější ceny, platí od příštího zaplaceného období novou nižší cenu 149 Kč měsíčně nebo 1 490 Kč ročně. Kredit z dřívějších plateb se započte v nové ceně. Již zaplacené období se nemění a nevzniká z něj nárok na vrácení rozdílu.</li>
+      <li>Tarif Zdarma: nemá-li uživatel po skončení zkušební doby nebo zaplaceného období a 3denní lhůty (čl. 4 odst. 3, čl. 6 odst. 2) zaplacený tarif, pokladna bez poplatku přejde na tarif Zdarma. V něm uživatel dál prodává, vystavuje doklady, eviduje tržby v systému EET 2.0, dělá uzávěrky a vratky a exportuje data, a to na 1 zařízení, s nejvýše 300 položkami zboží, bez dalších funkcí tarifu a bez placených doplňků. Zaplacením tarifu se všechny funkce tarifu znovu odemknou.</li>
     </ol>
 
     <h2>5a. Koupě licence</h2>
@@ -84,9 +85,9 @@ export const op = {
 
     <h2>6. Doba trvání a ukončení</h2>
     <ol>
-      <li>Smlouva se uzavírá na dobu neurčitou. Pronájem platí vždy do konce zaplaceného období a automaticky se neprodlužuje; pokračuje zaplacením dalšího období. Pokud uživatel další období nezaplatí, smlouva skončí uplynutím lhůty 3 dnů podle odstavce 2 (po zkušební době uplynutím 3 dnů po jejím konci).</li>
-      <li>Po skončení zaplaceného období pokladna ještě 3 dny umožňuje prodej i evidenci tržeb a zobrazuje upozornění. Poté se prodej zamkne; prohlížení dokladů, uzávěrky a export dat zůstávají dostupné.</li>
-      <li>Uživatel může pronájem kdykoli ukončit tím, že další období nezaplatí; cena zaplacená za započaté období se nevrací. Poskytovatel může smlouvu vypovědět s výpovědní dobou 3 měsíce, nebo s okamžitou účinností při podstatném porušení podmínek uživatelem; vypoví-li smlouvu poskytovatel, vrátí uživateli poměrnou část ceny za nevyčerpané období. Uživatel může smlouvu ukončit také oznámením poskytovateli ${NOTICE_WAYS}. Smlouva skončí dnem, který uživatel v oznámení určí, nejpozději však uplynutím zaplaceného (nebo zkušebního) období; neurčí-li den, skončí dnem doručení oznámení. Zaplacená cena se ani v tomto případě za zbytek období nevrací. Na žádost uživatele poskytovatel data smaže dříve, než stanoví odstavec 4.</li>
+      <li>Smlouva se uzavírá na dobu neurčitou. Pronájem platí vždy do konce zaplaceného období a automaticky se neprodlužuje; pokračuje zaplacením dalšího období. Pokud uživatel další období nezaplatí, pokladna po uplynutí lhůty 3 dnů podle odstavce 2 (po zkušební době 3 dnů po jejím konci) přejde na tarif Zdarma (čl. 5 odst. 6) a smlouva pokračuje bez poplatku.</li>
+      <li>Po skončení zaplaceného období pokladna ještě 3 dny umožňuje prodej i evidenci tržeb a zobrazuje upozornění. Poté pokladna přejde na tarif Zdarma (čl. 5 odst. 6); prodej, evidence tržeb, doklady, uzávěrky a export dat zůstávají dostupné.</li>
+      <li>Uživatel může pronájem kdykoli ukončit tím, že další období nezaplatí (pokladna pak přejde na tarif Zdarma); cena zaplacená za započaté období se nevrací. Poskytovatel může smlouvu vypovědět s výpovědní dobou 3 měsíce, nebo s okamžitou účinností při podstatném porušení podmínek uživatelem; vypoví-li smlouvu poskytovatel, vrátí uživateli poměrnou část ceny za nevyčerpané období. Uživatel může smlouvu ukončit také oznámením poskytovateli ${NOTICE_WAYS}. Smlouva skončí dnem, který uživatel v oznámení určí, nejpozději však uplynutím zaplaceného (nebo zkušebního) období, pokud právě běží; neurčí-li den, skončí dnem doručení oznámení. Zaplacená cena se ani v tomto případě za zbytek období nevrací. Na žádost uživatele poskytovatel data smaže dříve, než stanoví odstavec 4.</li>
       <li>Po skončení smlouvy zůstávají data účtu obchodu k dispozici pro prohlížení a export po dobu 12 měsíců. Poté je poskytovatel smaže, včetně záloh nejpozději do dalších 30 dní. Uchování dokladů po dobu stanovenou zákonem (zejména 10 let podle zákona o DPH) je povinností uživatele – proto si data před koncem této lhůty exportuje.</li>
     </ol>
 
@@ -102,7 +103,7 @@ export const op = {
       <li>Uživatel odpovídá za plnění svých zákonných povinností, zejména evidence tržeb (vlastní certifikát a evidenční jednotka u Finanční správy), náležitostí dokladů, cen a jejich označování, a za správnost údajů v pokladně (údaje firmy, ceny, sazby DPH). Předvyplněné sazby DPH a zařazení zboží jsou jen návrhem.</li>
       <li>Uživatel chrání své přihlašovací údaje (e-mail, heslo, PINy prodavačů) a zařízení, ze kterých se do pokladny pracuje, a neprodleně oznámí jejich zneužití.</li>
       <li>Uživatel zajistí připojení k internetu, vhodný prohlížeč a tiskárnu.</li>
-      <li>Je-li zaplacen tarif a nastaven platný pokladní certifikát a evidenční jednotka, pokladna odesílá evidované tržby do systému EET 2.0 Finanční správy automaticky; poskytovatel odpovídá za to, že odesílání funguje podle technických pravidel Finanční správy. Uživatel odpovídá za správnost a úplnost evidovaných údajů, za platnost svého pokladního certifikátu a za kontrolu, že se všechny tržby odeslaly (stav ukazuje lišta pokladny). Soukromý klíč pokladního certifikátu poskytovatel uchovává na serveru zašifrovaný a používá ho jen k odesílání tržeb uživatele.</li>
+      <li>Je-li pokladna v ostrém provozu (čl. 4 odst. 2) a je-li nastaven platný pokladní certifikát a evidenční jednotka, pokladna odesílá evidované tržby do systému EET 2.0 Finanční správy automaticky; poskytovatel odpovídá za to, že odesílání funguje podle technických pravidel Finanční správy. Uživatel odpovídá za správnost a úplnost evidovaných údajů, za platnost svého pokladního certifikátu a za kontrolu, že se všechny tržby odeslaly (stav ukazuje lišta pokladny). Soukromý klíč pokladního certifikátu poskytovatel uchovává na serveru zašifrovaný a používá ho jen k odesílání tržeb uživatele.</li>
     </ol>
 
     <h2>9. Sdílená databáze zboží a fotobanka</h2>
@@ -188,7 +189,7 @@ export const gdpr = {
     </ul>
 
     <h2>5. Příjemci</h2>
-    <p>Údaje zpracovávají tito dodavatelé správce: INTERNET CZ, a.s., IČO 26043319 (server pokladny, Česká republika), GitHub, Inc. (web superkasa.cz, USA), Google Ireland Limited (e-mailová schránka – komunikace se zákazníky, zasílání daňových dokladů a upozornění na nové registrace) a osoba vedoucí správci účetnictví. Platby procházejí bankou správce; daňové údaje a evidované tržby dostává ze zákona Finanční správa. Předání údajů do USA (GitHub, Google) se opírá o rozhodnutí Evropské komise o odpovídající ochraně (EU-US Data Privacy Framework). Údaje neprodáváme a nepoužíváme k reklamě.</p>
+    <p>Údaje zpracovávají tito dodavatelé správce: INTERNET CZ, a.s., IČO 26043319 (server pokladny, Česká republika), GitHub, Inc. (web superkasa.cz, USA), Seznam.cz, a.s., IČO 26168685 (e-mailová schránka info@superkasa.cz – komunikace se zákazníky a zasílání daňových dokladů, Česká republika), Google Ireland Limited (e-mailová schránka správce – upozornění na nové registrace) a osoba vedoucí správci účetnictví. Platby procházejí bankou správce; daňové údaje a evidované tržby dostává ze zákona Finanční správa. Předání údajů do USA (GitHub, Google) se opírá o rozhodnutí Evropské komise o odpovídající ochraně (EU-US Data Privacy Framework). Údaje neprodáváme a nepoužíváme k reklamě.</p>
 
     <h2>6. Vaše práva</h2>
     <p>Máte právo na přístup k osobním údajům, jejich opravu, výmaz, omezení zpracování, přenositelnost a právo vznést námitku proti zpracování na základě oprávněného zájmu. Žádost pošlete na kontakt výše; vyřídíme ji do jednoho měsíce. Stížnost můžete podat u Úřadu pro ochranu osobních údajů (<a href="https://uoou.gov.cz/" rel="noopener">uoou.gov.cz</a>).</p>
