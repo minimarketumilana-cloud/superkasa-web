@@ -62,4 +62,5 @@ Web je česky (https://superkasa.cz/), vietnamsky (https://superkasa.cz/vi/) a a
 ## Dokumenty
 
 - [Obchodní podmínky SuperKasa](https://superkasa.cz/obchodni-podminky.html): Obchodní podmínky pronájmu a koupě licence pokladního systému SuperKasa včetně smlouvy o zpracování osobních údajů.
-- [Ochrana osobních údajů](https://superkasa.cz/ochrana-osobnich-udaju.html): Jak SuperKasa zachází s osobními údaji na webu superkasa.cz a v pokladně v prohlížeči.
+- [Ochrana osobních údajů](https://superkasa.cz/ochrana-osobnich-udaju.html): Jak SuperKasa zachází s osobními údaji na webu superkasa.cz, v pokladně v prohlížeči a v aplikaci SuperKasa pro Android a iOS.
+- [Smazání účtu a dat obchodu](https://superkasa.cz/smazani-uctu.html): Jak majitel zruší účet obchodu v pokladně a v aplikaci SuperKasa (Android, iOS): postup v aplikaci i na webu, lhůta 30 dní, co se smaže a co zůstává.

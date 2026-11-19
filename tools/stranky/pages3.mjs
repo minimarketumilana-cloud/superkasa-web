@@ -1,6 +1,9 @@
 // Obchodní podmínky (včetně smlouvy o zpracování osobních údajů) a zásady ochrany osobních údajů SuperKasa.
-// Odpovídají skutečnému provozu: pokladna jen v prohlížeči (SuperKasa Cloud), pronájem 149 Kč/měsíc s DPH, 10 dní zkouška,
+// Odpovídají skutečnému provozu: pokladna v prohlížeči (SuperKasa Cloud) nebo v aplikaci SuperKasa (Android, iOS), která
+// otevírá tutéž pokladnu ze serveru; pronájem 149 Kč/měsíc s DPH, 10 dní zkouška,
 // 3 dny tolerance, server INTERNET CZ v ČR. Fakta: src/domain/license.ts, src/services/license.ts, deploy/cloud/zaloha.sh.
+// Upozornění: src/services/webpush.ts (prohlížeč) a nativní FCM/APNs (aplikace); AI: src/katalog/ai.ts, src/services/aisetup.ts.
+// VERSION musí být stejná jako TERMS_VERSION v src/services/cloud.ts pokladny (souhlas při registraci).
 // Jen pro podnikatele (B2B); čl. 1.5 je pojistka pro případ, že by smlouvu přesto uzavřel spotřebitel.
 // Údaje provozovatele a kontaktní e-mail jsou v parts.mjs (PROVIDER, CONTACT_EMAIL). Dokud je e-mail prázdný, texty ho
 // prostě neuvádějí (kontakt je telefon a adresa místa podnikání); po doplnění se sám objeví ve všech větách níže.
@@ -13,6 +16,11 @@ const PROVIDER = `${P.name}, IČO ${P.ico}, místo podnikání ${P.street}, ${P.
 const CONTACTS = `telefon ${PHONE}${EMAIL ? `, e-mail ${EMAIL}` : ""}`;
 /** Jak se poskytovateli dá něco oznámit (vady, odstoupení, ukončení). */
 const NOTICE_WAYS = `telefonicky na čísle ${PHONE}${EMAIL ? `, e-mailem na ${EMAIL}` : ""} nebo písemně na adresu místa podnikání poskytovatele`;
+// Verze zůstává 2026-11-19 (= TERMS_VERSION v pokladně). Nové texty o aplikaci SuperKasa (čl. 2, čl. 5a odst. 6, čl. 6
+// odst. 5 o smazání účtu majitelem, čl. 11 odst. 5 a 8 se zpracovateli pro upozornění a AI) jsou připravené, ale platit
+// smějí až po oznámení stávajícím zákazníkům e-mailem nejméně 30 dní předem (čl. 12 odst. 1) a se lhůtou 14 dní na
+// námitku proti novým zpracovatelům (čl. 11 odst. 5). Teprve potom zvednout EFFECTIVE a VERSION a stejně TERMS_VERSION
+// v src/services/cloud.ts pokladny (postup v docs/APLIKACE-OBCHODY.md pokladny, kap. 0).
 const EFFECTIVE = "19. 11. 2026";
 const VERSION = "2026-11-19";
 
@@ -43,7 +51,7 @@ export const op = {
 
     <h2>2. Pojmy</h2>
     <ul>
-      <li><strong>Pokladna</strong> – pokladní systém SuperKasa provozovaný na serveru poskytovatele, který uživatel používá v internetovém prohlížeči na adrese svého obchodu (název.superkasa.cz). Na zařízení uživatele se nic neinstaluje.</li>
+      <li><strong>Pokladna</strong> – pokladní systém SuperKasa provozovaný na serveru poskytovatele, který uživatel používá v internetovém prohlížeči na adrese svého obchodu (název.superkasa.cz), případně v aplikaci SuperKasa pro Android nebo iOS, která tutéž pokladnu otevírá. Data pokladny jsou vždy na serveru poskytovatele, ne v zařízení uživatele.</li>
       <li><strong>Účet obchodu</strong> – data jednoho uživatele v pokladně (zboží, doklady, uzávěrky, prodavači, nastavení).</li>
       <li><strong>Zařízení</strong> – počítač, tablet nebo telefon, ze kterého se do pokladny pracuje.</li>
       <li><strong>Zkušební doba</strong> – prvních 10 dní od registrace bez poplatku.</li>
@@ -80,15 +88,16 @@ export const op = {
       <li>Po dobu 2 let od zaplacení koupě (u uživatele se zaplaceným pronájmem od konce zaplaceného období) má uživatel v ceně nové funkce, podporu a záruku podle čl. 10. Poté pokladna funguje dál bez omezení, ale bez nových funkcí vydaných po tomto datu a bez podpory.</li>
       <li>Úpravy nutné kvůli právním předpisům (zejména evidence tržeb EET 2.0, změny sazeb a pravidel DPH a povinné náležitosti dokladů) a bezpečnostní opravy dostane koupená licence vždy zdarma, i po skončení 2 let, aby pokladna nebyla v rozporu se zákonem.</li>
       <li>Nové funkce a podporu lze ke koupené licenci kdykoli prodloužit za 990 Kč včetně DPH na rok. Prodloužení navazuje na dosavadní konec; po jeho uplynutí platí ode dne zaplacení a nové funkce se odemknou od tohoto dne.</li>
-      <li>Koupená licence zaniká jen výpovědí podle čl. 6 odst. 3 pro podstatné porušení podmínek nebo ukončením provozu SuperKasa Cloud. Ukončí-li poskytovatel provoz z jiného důvodu než pro porušení podmínek uživatelem, oznámí to nejméně 6 měsíců předem, umožní export dat a vrátí poměrnou část ceny koupě za dobu kratší než 5 let od zaplacení. Ustanovení čl. 6 o nezaplacení dalšího období se na koupenou licenci nevztahuje.</li>
+      <li>Koupená licence zaniká jen výpovědí podle čl. 6 odst. 3 pro podstatné porušení podmínek, smazáním účtu obchodu na žádost uživatele podle čl. 6 odst. 5 nebo ukončením provozu SuperKasa Cloud. Ukončí-li poskytovatel provoz z jiného důvodu než pro porušení podmínek uživatelem, oznámí to nejméně 6 měsíců předem, umožní export dat a vrátí poměrnou část ceny koupě za dobu kratší než 5 let od zaplacení. Ustanovení čl. 6 o nezaplacení dalšího období se na koupenou licenci nevztahuje.</li>
     </ol>
 
     <h2>6. Doba trvání a ukončení</h2>
     <ol>
       <li>Smlouva se uzavírá na dobu neurčitou. Pronájem platí vždy do konce zaplaceného období a automaticky se neprodlužuje; pokračuje zaplacením dalšího období. Pokud uživatel další období nezaplatí, pokladna po uplynutí lhůty 3 dnů podle odstavce 2 (po zkušební době 3 dnů po jejím konci) přejde na tarif Zdarma (čl. 5 odst. 6) a smlouva pokračuje bez poplatku.</li>
       <li>Po skončení zaplaceného období pokladna ještě 3 dny umožňuje prodej i evidenci tržeb a zobrazuje upozornění. Poté pokladna přejde na tarif Zdarma (čl. 5 odst. 6); prodej, evidence tržeb, doklady, uzávěrky a export dat zůstávají dostupné.</li>
-      <li>Uživatel může pronájem kdykoli ukončit tím, že další období nezaplatí (pokladna pak přejde na tarif Zdarma); cena zaplacená za započaté období se nevrací. Poskytovatel může smlouvu vypovědět s výpovědní dobou 3 měsíce, nebo s okamžitou účinností při podstatném porušení podmínek uživatelem; vypoví-li smlouvu poskytovatel, vrátí uživateli poměrnou část ceny za nevyčerpané období. Uživatel může smlouvu ukončit také oznámením poskytovateli ${NOTICE_WAYS}. Smlouva skončí dnem, který uživatel v oznámení určí, nejpozději však uplynutím zaplaceného (nebo zkušebního) období, pokud právě běží; neurčí-li den, skončí dnem doručení oznámení. Zaplacená cena se ani v tomto případě za zbytek období nevrací. Na žádost uživatele poskytovatel data smaže dříve, než stanoví odstavec 4.</li>
+      <li>Uživatel může pronájem kdykoli ukončit tím, že další období nezaplatí (pokladna pak přejde na tarif Zdarma); cena zaplacená za započaté období se nevrací. Poskytovatel může smlouvu vypovědět s výpovědní dobou 3 měsíce, nebo s okamžitou účinností při podstatném porušení podmínek uživatelem; vypoví-li smlouvu poskytovatel, vrátí uživateli poměrnou část ceny za nevyčerpané období. Uživatel může smlouvu ukončit také oznámením poskytovateli ${NOTICE_WAYS}. Smlouva skončí dnem, který uživatel v oznámení určí, nejpozději však uplynutím zaplaceného (nebo zkušebního) období, pokud právě běží; neurčí-li den, skončí dnem doručení oznámení. Zaplacená cena se ani v tomto případě za zbytek období nevrací. Na žádost uživatele poskytovatel data smaže dříve, než stanoví odstavec 4; uživatel o to může požádat i sám v pokladně podle odstavce 5.</li>
       <li>Po skončení smlouvy zůstávají data účtu obchodu k dispozici pro prohlížení a export po dobu 12 měsíců. Poté je poskytovatel smaže, včetně záloh nejpozději do dalších 30 dní. Uchování dokladů po dobu stanovenou zákonem (zejména 10 let podle zákona o DPH) je povinností uživatele – proto si data před koncem této lhůty exportuje.</li>
+      <li>Majitel účtu obchodu může smlouvu ukončit a nechat účet obchodu smazat i sám, v pokladně nebo v aplikaci SuperKasa ve Správě → Systém (volba „Zrušit účet a smazat data obchodu“), po zadání hesla majitele a opsání adresy obchodu. Poskytovatel žádost potvrdí na e-mail účtu majitele. Účet obchodu se všemi daty se smaže 30 dní po podání žádosti; do té doby pokladna funguje beze změny a majitel může žádost na stejném místě zrušit. Smazáním účtu smlouva skončí a zaplacená cena za zbytek období se nevrací. Lhůta 12 měsíců podle odstavce 4 se v tomto případě neuplatní: smazaná data nelze obnovit a zálohy s nimi zaniknou nejpozději do dalších 30 dní. Uchování dokladů je povinností uživatele, proto si je před podáním žádosti exportuje. Poskytovatel dál uchovává jen daňové doklady a záznamy o platbách za pronájem nebo licenci, a to po dobu stanovenou zákonem. Postup popisuje i stránka <a href="smazani-uctu.html">Smazání účtu a dat obchodu</a>.</li>
     </ol>
 
     <h2>7. Provoz, zálohy a podpora</h2>
@@ -124,10 +133,10 @@ export const op = {
       <li>Předmětem zpracování je provoz pokladny pro uživatele (ukládání, zálohování, zobrazení, tisk a export dat a odesílání evidovaných tržeb Finanční správě). Zpracovávají se identifikační a kontaktní údaje, údaje o nákupech, rezervacích (jméno, telefon, termín, služba, poznámka) a docházce, záznamy o činnosti prodavačů v pokladně včetně jejich vyhodnocení v doplňku Kontrola obsluhy a další údaje, které uživatel do pokladny vloží; subjekty údajů jsou zaměstnanci a zákazníci uživatele. Uživatel se zavazuje neukládat do pokladny, zejména do poznámek u zákazníků a rezervací, zvláštní kategorie osobních údajů (například údaje o zdraví či alergiích); pokud tak přesto učiní, odpovídá za zákonnost jejich zpracování sám.</li>
       <li>Poskytovatel zpracovává osobní údaje jen podle pokynů uživatele daných funkcemi pokladny a těmito podmínkami, nepoužívá je pro vlastní účely a zavazuje k mlčenlivosti každého, kdo k nim má přístup. Pokud by podle poskytovatele pokyn uživatele porušoval předpisy o ochraně osobních údajů, neprodleně na to uživatele upozorní.</li>
       <li>Poskytovatel zajišťuje technická a organizační opatření: šifrované spojení (HTTPS), oddělená data každého obchodu, hesla a PINy uložené jen jako jednosměrný otisk se solí (hash), ze kterého je nelze zpětně získat, soukromý klíč pokladního certifikátu uložený zašifrovaně, omezený a chráněný přístup k serveru, denní zálohy a záznam změn.</li>
-      <li>Dalším zpracovatelem je INTERNET CZ, a.s., IČO 26043319 (provoz serveru v České republice). Další zpracovatele poskytovatel zapojí jen po předchozím oznámení uživateli e-mailem; uživatel může do 14 dnů vznést námitku a smlouvu ukončit. Dalšího zpracovatele poskytovatel zaváže ke stejným povinnostem ochrany údajů, jaké má sám podle tohoto článku. Kopie záloh mimo server uchovává poskytovatel sám, v České republice, po dobu 14 dní. Údaje se nepředávají mimo Evropskou unii.</li>
+      <li>Dalším zpracovatelem je INTERNET CZ, a.s., IČO 26043319 (provoz serveru v České republice). Jen pokud uživatel příslušnou funkci použije, jsou dalšími zpracovateli také služby, které doručují upozornění do telefonu (v aplikaci SuperKasa Google – Firebase Cloud Messaging na Androidu a Apple – Apple Push Notification service na iOS; v prohlížeči služba výrobce prohlížeče, tj. Google, Apple, Mozilla nebo Microsoft) a k doručení dostanou identifikátor zařízení pro upozornění a text upozornění (v prohlížeči zašifrovaný tak, že ho služba nepřečte), a Anthropic, PBC (návrh skupin zboží pomocí AI podle popisu podnikání, který uživatel napíše při zřízení pokladny). Další zpracovatele poskytovatel zapojí jen po předchozím oznámení uživateli e-mailem; uživatel může do 14 dnů vznést námitku a smlouvu ukončit. Dalšího zpracovatele poskytovatel zaváže ke stejným povinnostem ochrany údajů, jaké má sám podle tohoto článku. Kopie záloh mimo server uchovává poskytovatel sám, v České republice, po dobu 14 dní. Data obchodu uložená v pokladně zůstávají na serveru v České republice. Mimo Evropskou unii (zejména do USA) se mohou dostat jen údaje předávané uvedeným službám upozornění a AI, a to na základě rozhodnutí Evropské komise o odpovídající ochraně (EU-US Data Privacy Framework) nebo standardních smluvních doložek schválených Evropskou komisí.</li>
       <li>Poskytovatel uživateli pomáhá vyřizovat žádosti subjektů údajů (export a oprava údajů je dostupná přímo ve Správě), plnit povinnosti podle čl. 32 až 36 GDPR, poskytne mu informace potřebné k doložení plnění povinností a umožní audity, včetně kontrol, prováděné uživatelem nebo auditorem, kterého uživatel pověří, po oznámení nejméně 14 dní předem.</li>
       <li>Porušení zabezpečení osobních údajů poskytovatel oznámí uživateli bez zbytečného odkladu, nejpozději do 48 hodin od jeho zjištění.</li>
-      <li>Po skončení smlouvy poskytovatel data uživateli zpřístupní k exportu a poté je vymaže podle čl. 6 odst. 4.</li>
+      <li>Po skončení smlouvy poskytovatel data uživateli zpřístupní k exportu a poté je vymaže podle čl. 6 odst. 4, při smazání účtu na žádost uživatele podle čl. 6 odst. 5.</li>
     </ol>
 
     <h2>12. Změny podmínek a závěrečná ustanovení</h2>
@@ -147,12 +156,12 @@ export const gdpr = {
   current: "",
   noindex: false,
   title: "Ochrana osobních údajů – SuperKasa",
-  desc: "Jak SuperKasa zachází s osobními údaji na webu superkasa.cz a v pokladně v prohlížeči.",
+  desc: "Jak SuperKasa zachází s osobními údaji na webu superkasa.cz, v pokladně v prohlížeči a v aplikaci SuperKasa pro Android a iOS.",
   body: `
 <section class="page-head">
   <div class="wrap">
     <h1>Ochrana osobních údajů</h1>
-    <p class="lead">Jak zacházíme s údaji na webu superkasa.cz a v pokladně SuperKasa.</p>
+    <p class="lead">Jak zacházíme s údaji na webu superkasa.cz, v pokladně SuperKasa a v aplikaci SuperKasa pro Android a iOS.</p>
   </div>
 </section>
 <section class="section u-pt-24">
@@ -176,27 +185,97 @@ export const gdpr = {
         <tr><td>Zabezpečení pokladny</td><td>čas přihlášení a záznam změn (kdo a kdy co změnil); server krátkodobě eviduje IP adresy proti zneužití</td><td>oprávněný zájem na zabezpečení pokladny a ochraně před zneužitím (čl. 6 odst. 1 písm. f)</td><td>záznam změn spolu s daty obchodu v pokladně (čl. 6 odst. 4 obchodních podmínek), IP adresy nejvýše 30 dní</td></tr>
       </tbody>
     </table></div>
-    <p>Údaje potřebné k uzavření a plnění smlouvy jsou nutné – bez nich nelze účet obchodu zřídit; údaje na daňových dokladech vyžaduje zákon. Název a adresu firmy doplňujeme podle IČO z veřejného rejstříku ARES. Automatizované rozhodování ani profilování neprovádíme. Data obchodu v pokladně (zboží, doklady, uzávěrky, záznam změn) se po skončení smlouvy mažou podle čl. 6 odst. 4 obchodních podmínek (po 12 měsících, zálohy nejpozději do dalších 30 dní).</p>
+    <p>Údaje potřebné k uzavření a plnění smlouvy jsou nutné – bez nich nelze účet obchodu zřídit; údaje na daňových dokladech vyžaduje zákon. Název a adresu firmy doplňujeme podle IČO z veřejného rejstříku ARES. Automatizované rozhodování ani profilování neprovádíme. Data obchodu v pokladně (zboží, doklady, uzávěrky, záznam změn) se po skončení smlouvy mažou podle čl. 6 odst. 4 obchodních podmínek (po 12 měsících, zálohy nejpozději do dalších 30 dní), při zrušení účtu majitelem 30 dní po žádosti (oddíl 7).</p>
 
     <h2>4. Data v pokladně</h2>
     <ul>
       <li>Pokladna běží v prohlížeči; doklady, zboží, prodavači, zákazníci věrnostního programu a další data obchodu jsou uložená na serveru v České republice (INTERNET CZ, a.s.) a denně se zálohují; kopie záloh se 14 dní uchovává i mimo server, u správce v České republice.</li>
       <li>Za osobní údaje, které obchod do pokladny ukládá, odpovídá obchod jako jejich správce; SuperKasa je pro něj zpracovává jako zpracovatel podle smlouvy o zpracování v <a href="obchodni-podminky.html">obchodních podmínkách</a> (čl. 11).</li>
-      <li>Pokladna používá jen technicky nezbytnou cookie s přihlášením a ukládá v prohlížeči nastavení zařízení (vzhled, jazyk, rozpracovaný nákup, katalog zboží pro rychlé spuštění). Souhlas k tomu není potřeba (§ 89 odst. 3 zákona č. 127/2005 Sb.).</li>
+      <li>Pokladna používá jen technicky nezbytnou cookie s přihlášením a ukládá v prohlížeči nastavení zařízení (vzhled, jazyk, rozpracovaný nákup, katalog zboží pro rychlé spuštění) a při výpadku internetu i účtenky, které ještě nestihla odeslat na server (po připojení se odešlou). Souhlas k tomu není potřeba (§ 89 odst. 3 zákona č. 127/2005 Sb.).</li>
       <li>Evidované tržby odesílá server SuperKasa do systému evidence tržeb Finanční správy.</li>
       <li>Překlad do dalších jazyků a asistent používají jen funkce prohlížeče přímo v zařízení; text se nikam neodesílá.</li>
+      <li>Upozornění do telefonu (prodej, uzávěrka, storno, objednávka) chodí jen tehdy, když je majitel ve Správě zapne, a jen na jedno jeho zařízení. V prohlížeči je doručuje služba výrobce prohlížeče (Google, Apple, Mozilla nebo Microsoft) a obsah zprávy je zašifrovaný tak, že ho tato služba nepřečte. V aplikaci SuperKasa je doručuje Google Firebase Cloud Messaging (Android) nebo Apple Push Notification service (iOS); ty k doručení dostanou identifikátor zařízení pro upozornění (token) a text upozornění. V soukromém režimu upozornění obsahuje jen obecný text bez částek, jmen a položek. Vypnutím upozornění se identifikátor zařízení na serveru smaže.</li>
+      <li>Návrh skupin zboží pomocí AI: když majitel při zřízení pokladny nechá navrhnout skupiny zboží podle popisu svého podnikání a na serveru SuperKasa je návrh pomocí AI zapnutý, odešle se tento popis (nic jiného) přes server SuperKasa službě Claude společnosti Anthropic, PBC (USA). Do popisu proto nepište osobní údaje. Jinak pokladna skupiny navrhne podle slov v popisu bez AI.</li>
       <li>Názvy a obrázky zboží podle čárového kódu se mohou dohledávat ve veřejných databázích (Open Food Facts, Wikimedia Commons); dotaz obsahuje jen čárový kód nebo název zboží. Pokud je zapnuté přispívání do sdílené databáze SuperKasa (výchozí stav, jde vypnout ve Správě), odesílají se tam i údaje a fotky zboží podle čl. 9 obchodních podmínek – nikdy ceny, prodeje ani osobní údaje.</li>
     </ul>
 
-    <h2>5. Příjemci</h2>
-    <p>Údaje zpracovávají tito dodavatelé správce: INTERNET CZ, a.s., IČO 26043319 (server pokladny, Česká republika), GitHub, Inc. (web superkasa.cz, USA), Seznam.cz, a.s., IČO 26168685 (e-mailová schránka info@superkasa.cz – komunikace se zákazníky a zasílání daňových dokladů, Česká republika), Google Ireland Limited (e-mailová schránka správce – upozornění na nové registrace) a osoba vedoucí správci účetnictví. Platby procházejí bankou správce; daňové údaje a evidované tržby dostává ze zákona Finanční správa. Předání údajů do USA (GitHub, Google) se opírá o rozhodnutí Evropské komise o odpovídající ochraně (EU-US Data Privacy Framework). Údaje neprodáváme a nepoužíváme k reklamě.</p>
+    <h2>5. Aplikace SuperKasa pro Android a iOS</h2>
+    <ul>
+      <li>Aplikace otevírá tutéž pokladnu ze serveru SuperKasa; pro data v ní platí oddíly 3 a 4. Přihlášení probíhá stejně jako v prohlížeči (e-mail a heslo majitele, PIN prodavače).</li>
+      <li>Aplikace si v telefonu pamatuje adresu naposledy otevřeného obchodu, aby ho příště otevřela rovnou. Pokladna v ní jako v prohlížeči ukládá technicky nezbytné údaje: cookie s přihlášením zařízení, nastavení zařízení a při výpadku internetu účtenky, které ještě nestihla odeslat na server. Export dat (například seznam dokladů nebo zákazníků) vznikne v telefonu jen jako dočasný soubor pro nabídku Sdílet. Na iPhonu a iPadu ho aplikace smaže po dokončení sdílení, jinak při dalším exportu nebo dalším spuštění aplikace; na Androidu nejpozději při dalším exportu nebo dalším spuštění aplikace (a do hodiny, dokud aplikace běží). Odinstalováním aplikace se všechny tyto údaje z telefonu smažou. Kam si export uložíte nebo komu ho pošlete, určujete sami.</li>
+      <li>Aplikace neobsahuje analytické, reklamní ani sledovací nástroje, nezjišťuje polohu a nepoužívá mikrofon ani kontakty.</li>
+      <li>Kamera slouží jen ke čtení čárových kódů. Obraz se zpracovává přímo v zařízení a nikam se neodesílá.</li>
+      <li>Upozornění do telefonu: viz oddíl 4.</li>
+    </ul>
 
-    <h2>6. Vaše práva</h2>
+    <h2>6. Příjemci</h2>
+    <p>Údaje zpracovávají tito dodavatelé správce: INTERNET CZ, a.s., IČO 26043319 (server pokladny, Česká republika), GitHub, Inc. (web superkasa.cz, USA), Seznam.cz, a.s., IČO 26168685 (e-mailová schránka info@superkasa.cz – komunikace se zákazníky a zasílání daňových dokladů, Česká republika), Google Ireland Limited (e-mailová schránka správce – upozornění na nové registrace) a osoba vedoucí správci účetnictví. Jen při použití příslušné funkce dále: Google (Firebase Cloud Messaging) a Apple (Apple Push Notification service) – doručení upozornění v aplikaci SuperKasa; služby výrobců prohlížečů (Google, Apple, Mozilla, Microsoft) – doručení upozornění v prohlížeči; Anthropic, PBC (USA) – návrh skupin zboží pomocí AI (oddíl 4). Platby procházejí bankou správce; daňové údaje a evidované tržby dostává ze zákona Finanční správa. Data obchodu uložená v pokladně zůstávají na serveru v České republice. Předání údajů do USA (GitHub, Google, Apple, Anthropic a další služby uvedené výše) se opírá o rozhodnutí Evropské komise o odpovídající ochraně (EU-US Data Privacy Framework) nebo o standardní smluvní doložky schválené Evropskou komisí. Údaje neprodáváme a nepoužíváme k reklamě třetích stran. V e-mailech o platbě a licenci SuperKasa může být krátká zmínka o naší další službě E-shop super (oprávněný zájem správce, čl. 6 odst. 1 písm. f) GDPR); proti tomu můžete kdykoli vznést námitku (oddíl 8).</p>
+
+    <h2>7. Zrušení účtu a smazání dat</h2>
+    <p>Majitel může účet obchodu zrušit a nechat smazat sám, v pokladně nebo v aplikaci SuperKasa ve Správě → Systém (volba „Zrušit účet a smazat data obchodu“). Obchod se smaže po 30 dnech od žádosti, do té doby lze žádost zrušit; ze záloh data zmizí nejpozději do dalších 30 dní. Co se smaže a co zůstává, popisuje stránka <a href="smazani-uctu.html">Smazání účtu a dat obchodu</a> a čl. 6 <a href="obchodni-podminky.html">obchodních podmínek</a>.</p>
+
+    <h2>8. Vaše práva</h2>
     <p>Máte právo na přístup k osobním údajům, jejich opravu, výmaz, omezení zpracování, přenositelnost a právo vznést námitku proti zpracování na základě oprávněného zájmu. Žádost pošlete na kontakt výše; vyřídíme ji do jednoho měsíce. Stížnost můžete podat u Úřadu pro ochranu osobních údajů (<a href="https://uoou.gov.cz/" rel="noopener">uoou.gov.cz</a>).</p>
 
     <p class="small">Účinné od ${EFFECTIVE} (verze ${VERSION}).</p>
   </div>
 </section>`,
+};
+
+/**
+ * Smazání účtu a dat obchodu (vyžaduje Google Play – veřejná adresa pro „Data deletion“ – a Apple 5.1.1(v)).
+ * Ve všech jazycích stejná šablona; čeština je úplná, vietnamština a angličtina stručně s odkazem na české znění.
+ * Fakta: src/services/cloud.ts removeTenant (maže databázi, soubory a registr obchodu), deploy/cloud/zaloha.sh
+ * (zálohy se přepisují), src/services/account.ts resetPassword (zapomenuté heslo e-mailem a PINem majitele);
+ * žádost s lhůtou 30 dní ve Správě → Systém podle docs/APLIKACE-OBCHODY.md v repu pokladny.
+ */
+export const smazani = (c) => {
+  const t = c.T.deletion;
+  return {
+    file: "smazani-uctu.html",
+    current: "",
+    noindex: false,
+    title: `${t.title}${c.T.common.titleSuffix}`,
+    desc: t.desc,
+    body: `
+<section class="page-head">
+  <div class="wrap">
+    <h1>${t.h1}</h1>
+    <p class="lead">${t.lead}</p>
+  </div>
+</section>
+<section class="section u-pt-24">
+  <div class="wrap prose">
+    <h2>${t.appTitle}</h2>
+    <p>${t.app}</p>
+    <p>${t.providerLabel} ${P.name}, IČO ${P.ico}, ${P.street}, ${P.city}, <a href="tel:+420608886882">${PHONE}</a>${EMAIL ? `, ${EMAIL}` : ""}.</p>
+
+    <h2>${t.howTitle}</h2>
+    <ol>
+      ${t.steps.map((x) => `<li>${x}</li>`).join("\n      ")}
+    </ol>
+
+    <h2>${t.termTitle}</h2>
+    <p>${t.term}</p>
+
+    <h2>${t.deletedTitle}</h2>
+    <p>${t.deleted}</p>
+
+    <h2>${t.keptTitle}</h2>
+    <ul>
+      ${t.kept.map((x) => `<li>${x}</li>`).join("\n      ")}
+    </ul>
+
+    <h2>${t.partTitle}</h2>
+    <p>${t.part}</p>
+
+    <h2>${t.noLoginTitle}</h2>
+    <p>${t.noLogin}</p>
+
+    <p class="small">${t.note}</p>
+  </div>
+</section>`,
+  };
 };
 
 /** Stránka 404 (odkazy převede sestavení na adresy od kořene webu, protože se zobrazuje na libovolné adrese). */
@@ -254,6 +333,7 @@ export const legalStub = (c, kind) => {
     <ul class="checks">
       ${(op ? t.opSummary : t.gdprSummary).map((x) => `<li>${x}</li>`).join("\n      ")}
     </ul>
+    <p><a href="smazani-uctu.html">${c.T.deletion.linkText}</a></p>
     <p class="small mt-2">${t.help}</p>
   </div>
 </section>`,
