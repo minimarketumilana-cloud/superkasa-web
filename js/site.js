@@ -74,6 +74,18 @@
         .then(function () { btn.disabled = false; btn.textContent = label; });
     };
     form.addEventListener("submit", function (e) { e.preventDefault(); send(); });
+    // Přihlášení přes Google a Seznam: tlačítka jen pro poskytovatele, které cloud opravdu nabízí (bez .env žádné).
+    var oauth = form.querySelector(".login-oauth");
+    if (oauth) {
+      fetch(api + "/api/cloud/oauth/providers", { cache: "no-store" })
+        .then(function (r) { return r.ok ? r.json() : { providers: [] }; })
+        .then(function (d) {
+          var list = (d && d.providers) || [];
+          oauth.querySelectorAll("[data-p]").forEach(function (a) { a.hidden = list.indexOf(a.getAttribute("data-p")) < 0; });
+          oauth.hidden = !list.length;
+        })
+        .catch(function () { oauth.hidden = true; });
+    }
   }
 
   var seg = document.querySelector(".picker .seg");

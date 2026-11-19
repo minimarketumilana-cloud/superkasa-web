@@ -76,6 +76,12 @@
         <!-- Upozornění na nedostupný server je ve výchozím stavu skryté: skript ho ukáže až po skutečném selhání. Heslo nikdy v adrese (POST). -->
         <p class="cloud-soon" id="login-note" role="status" hidden></p>
         <noscript><p class="cloud-soon">Přihlášení na této stránce potřebuje zapnutý JavaScript. Bez něj otevřete přímo adresu svého obchodu (název.superkasa.cz).</p></noscript>
+        <!-- Přihlášení přes Google a Seznam (SuperKasa Cloud, jen propojené účty): skript tlačítka ukáže, až je cloud nabízí. -->
+        <div class="login-oauth" hidden>
+          <a class="btn btn-oauth" data-p="google" href="https://app.superkasa.cz/api/cloud/oauth/google/start" hidden>Přihlásit se přes Google</a>
+          <a class="btn btn-oauth" data-p="seznam" href="https://app.superkasa.cz/api/cloud/oauth/seznam/start" hidden>Přihlásit se přes Seznam</a>
+          <p class="small login-oauth-or">nebo e-mailem a&nbsp;heslem</p>
+        </div>
         <label>E-mail<input type="email" name="email" autocomplete="username" maxlength="120" required></label>
         <label>Heslo<input type="password" name="password" autocomplete="current-password" maxlength="200" required></label>
         <p class="login-err" role="alert" hidden></p>
