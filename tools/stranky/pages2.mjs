@@ -148,6 +148,7 @@ export const cenik = (c) => {
         ${icon("shield", "gold")}
         <h3>${t.purchase[0]}</h3>
         <p>${t.purchase[1]}</p>
+        <p class="small">${t.purchase[2]}</p>
       </article>
       <article class="card">
         ${icon("clock")}

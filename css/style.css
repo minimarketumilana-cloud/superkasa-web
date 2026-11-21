@@ -604,7 +604,9 @@ dl.feat dd { margin: 2px 0 0; color: var(--muted); }
 .prose ol.timeline > li { position: relative; margin: 0 0 18px; }
 .prose ol.timeline > li::before { content: ""; position: absolute; left: -31px; top: 8px; width: 15px; height: 15px; border-radius: 50%; background: var(--plum); box-shadow: 0 0 0 4px var(--cream); }
 .prose ol.timeline b { color: var(--plum-dark); display: block; }
-.prose .tbl { overflow-x: auto; margin: 1.4em 0; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.prose .tbl { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.4em 0; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+/* Dlouhá cesta nebo adresa v <code> se zalomí, aby na mobilu neroztáhla stránku. */
+.prose code { overflow-wrap: anywhere; }
 .prose table { width: 100%; border-collapse: collapse; background: var(--white); font-size: .98rem; }
 .prose th, .prose td { padding: 11px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
 .prose th { background: var(--plum-soft); color: var(--plum-dark); }
@@ -613,7 +615,8 @@ dl.feat dd { margin: 2px 0 0; color: var(--muted); }
 .disclaimer { color: var(--muted); font-size: .92rem; }
 .related { margin-top: 12px; }
 @media (max-width: 960px) {
-  .article-grid { grid-template-columns: 1fr; gap: 26px; }
+  /* minmax(0, …): sloupec se nesmí roztáhnout podle široké tabulky – ta se posouvá uvnitř rámečku .tbl. */
+  .article-grid { grid-template-columns: minmax(0, 1fr); gap: 26px; }
   .guide-toc { position: static; max-height: none; padding: 16px 18px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-sm); }
 }
 

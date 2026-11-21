@@ -904,8 +904,9 @@ export default {
 <li>Fill in your <strong>E-mail</strong>. A phone number is optional.</li>
 <li>Tick the box to accept the terms.</li>
 <li>Tap <strong>Create for free</strong>. If you want to pay straight away, tap <strong>Buy now</strong>. After setup the POS sends you straight to payment, and you keep the 10 free days on top.</li>
+<li>A verification link arrives by e-mail. It is valid for 30 minutes and works once. Open it and tap <strong>Verify email and continue</strong>. Check your spam folder too.</li>
 </ol>
-<p>Lost the link to finish? Fill in the sign-up again with the same address, e-mail and company ID (IČO).</p>
+<p>The link did not arrive or has expired? Fill in the sign-up again with the same address, e-mail and company ID (IČO) and we will send a new one.</p>
 <p><strong>Nothing to download:</strong> the till runs in the browser. On a Windows computer it prints to the receipt printer without a dialog (through a Chrome shortcut) or through the print window. Android phones and tablets print to a Bluetooth or USB printer, an iPhone prints on the main till's printer. See the guide <a href="tiskarna-ctecka-zasuvka.html">Receipt printer, barcode scanner and cash drawer</a>.</p>`,
       },
       {
@@ -913,7 +914,7 @@ export default {
         h2: "Setting up the shop",
         html: `
 <ol class="steps">
-<li>On the <strong>What kind of business?</strong> screen, choose your type of business, for example Convenience store, minimarket or Hairdresser and barber.</li>
+<li>On the <strong>What do you run?</strong> screen, choose your type of business, for example Convenience store, minimarket or Hairdresser and barber.</li>
 <li>Did not find your type of business? Type in the field <strong>Describe in your own words what you sell</strong> and tap <strong>Suggest groups</strong>. You can edit the suggestion.</li>
 <li>Fill in <strong>Your name</strong> and enter your <strong>PIN</strong> twice (4 to 8 digits).</li>
 <li>Fill in your <strong>E-mail</strong> and <strong>Password</strong> (at least 8 characters). You will need them on every new device.</li>
@@ -966,7 +967,7 @@ export default {
         html: `
 <p><strong>Cash.</strong> Tap the notes the customer gave you. The amounts add up. The POS shows <strong>Change</strong>. Cash is rounded to whole crowns. Confirm with the <strong>Confirm payment</strong> button.</p>
 <p><strong>Card.</strong> Tap <strong>Card</strong>. Enter the amount by hand on your card terminal, because the POS is not connected to it. When the payment goes through, tap <strong>Card payment approved</strong>.</p>
-<p><strong>QR payment.</strong> The <strong>QR payment</strong> button appears only when the IBAN is filled in. You enter it in <strong>Admin → Business</strong> in the <strong>IBAN for QR payments</strong> field. The customer scans the code in their banking app. Tap <strong>Payment received</strong> when you see the money in the account. A “sent” screen on the customer's phone does not guarantee payment.</p>
+<p><strong>QR payment.</strong> The <strong>QR payment</strong> button appears only when the IBAN is filled in. You enter it in <strong>Admin → Business</strong> in the <strong>IBAN for QR payments</strong> field. The customer scans the code in their banking app. When you see the money in the account, tap <strong>Paid, print the receipt</strong> or <strong>Paid, no receipt</strong>. A “sent” screen on the customer's phone does not guarantee payment.</p>
 <p><strong>Split.</strong> Part by card or QR, the rest in cash. It is a small icon at the end of the row of payment methods.</p>
 <p>The receipt prints by itself. If you do not have a printer yet, the POS sends you to the wizard. The guide <a href="tiskarna-ctecka-zasuvka.html">Receipt printer, barcode scanner and cash drawer</a> will help.</p>`,
       },
@@ -1693,23 +1694,23 @@ export default {
     kicker: "Choosing a POS",
     title: "SuperKasa, Dotykačka, Storyous, helloCash and MOJE eet: prices and features compared",
     metaTitle: "POS systems compared: prices and features | SuperKasa",
-    desc: "Prices and features of the SuperKasa, Dotykačka, Storyous and helloCash POS systems and the state app MOJE eet. Data from public price lists as of 12 Nov 2026.",
+    desc: "Prices and features of the SuperKasa, Dotykačka, Storyous and helloCash POS systems and the state app MOJE eet. Data from public price lists as of 21 Nov 2026.",
     lead: "We compared the public price lists of four POS systems and the state app MOJE eet. Every figure has a source and a date. Competitors' prices are shown both without and with VAT so they can be compared.",
     published: "2026-11-12",
-    updated: "2026-11-12",
+    updated: "2026-11-21",
     minutes: 6,
     sections: [
       {
         id: "prehled",
         h2: "Prices and features at a glance",
         html: `
-<p>The data comes from public price lists as of 12 November 2026. Prices are per month with monthly billing. Vendors change their prices, so check them before you order.</p>
+<p>The data comes from public price lists as of 21 November 2026. Prices are per month with monthly billing. Vendors change their prices, so check them before you order.</p>
 <div class="tbl"><table>
   <thead><tr><th>System</th><th>Lowest plan</th><th>Plan with stock</th><th>Extra devices</th><th>EET 2.0</th></tr></thead>
   <tbody>
     <tr><td>SuperKasa</td><td>CZK 149 incl. VAT (CZK 123.14 excl. VAT)</td><td>Same plan, stock is included</td><td>Up to 10 devices included</td><td>Yes, included</td></tr>
     <tr><td>Dotykačka</td><td>SNADNO CZK 590 excl. VAT (CZK 713.90 incl. VAT)</td><td>NAPLNO CZK 1,190 excl. VAT (CZK 1,439.90 incl. VAT)</td><td>Not stated in the price list</td><td>Yes, in all licences from 1 January 2027</td></tr>
-    <tr><td>Storyous (O2 price list)</td><td>Mini CZK 390 excl. VAT (CZK 471.90 incl. VAT)</td><td>Stock is an add-on for CZK 990 excl. VAT (CZK 1,197.90 incl. VAT)</td><td>CZK 740 excl. VAT (CZK 895.40 incl. VAT)</td><td>The vendor says it is ready</td></tr>
+    <tr><td>Storyous (O2 offer)</td><td>Licence from CZK 890 excl. VAT (CZK 1,076.90 incl. VAT); O2 offers it with a device set</td><td>Business licence from CZK 890 excl. VAT (CZK 1,076.90 incl. VAT); O2 lists stock management with it</td><td>Not stated in the offer</td><td>Supported according to O2; the vendor says it is ready</td></tr>
     <tr><td>helloCash</td><td>Basic CZK 69 excl. VAT (CZK 83.49 incl. VAT)</td><td>Prémiová CZK 219 excl. VAT (CZK 264.99 incl. VAT)</td><td>Not stated in the price list</td><td>We found no mention on the website</td></tr>
     <tr><td>MOJE eet</td><td>Free</td><td>The Financial Administration does not mention stock</td><td>No more than 2 recording units</td><td>Yes, a state app from 1 December 2026</td></tr>
   </tbody>
@@ -1719,14 +1720,14 @@ export default {
         id: "dotykacka",
         h2: "Dotykačka",
         html: `
-<p>Dotykačka sells a licence and its own POS devices. According to the <a href="https://dotykacka.cz/cenik/" rel="noopener">price list on dotykacka.cz</a> as of 12 November 2026:</p>
+<p>Dotykačka sells a licence and its own POS devices. According to the <a href="https://dotykacka.cz/cenik/" rel="noopener">price list on dotykacka.cz</a> as of 21 November 2026:</p>
 <ul>
   <li>The SNADNO licence costs CZK 590 a month excl. VAT, NAPLNO CZK 1,190 and NEOMEZENĚ CZK 1,990. These are prices without a card terminal, with monthly billing.</li>
   <li>Annual billing brings a 15% discount. With Dotykačka's card terminal the licence is cheaper, depending on your card turnover.</li>
   <li>Stock management starts with the NAPLNO licence. For SNADNO the price list shows it as not available.</li>
   <li>The attendance system and ordering systems are in the NEOMEZENĚ licence.</li>
   <li>The price list shows EET 2.0 in all licences from 1 January 2027.</li>
-  <li>POS devices in the price list cost from CZK 6,990 to CZK 22,990 excl. VAT.</li>
+  <li>POS devices in the price list cost from CZK 9,990 to CZK 22,990 excl. VAT.</li>
 </ul>
 <p>It suits businesses that want the POS, the device and the card terminal from one supplier, with round-the-clock technical support.</p>`,
       },
@@ -1734,28 +1735,27 @@ export default {
         id: "storyous",
         h2: "Storyous",
         html: `
-<p>Storyous is a POS aimed mainly at hospitality. We did not find a public price list on the Storyous website, so we rely on the <a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">offer of the reseller O2</a> as of 12 November 2026:</p>
+<p>Storyous is a POS aimed mainly at hospitality. We did not find a public price list on the Storyous website, so we rely on the <a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">offer of the reseller O2</a> as of 21 November 2026. O2 offers two sets:</p>
 <ul>
-  <li>The Business plan costs CZK 690 a month excl. VAT with the All-in-One device and CZK 890 with the Medium 10" tablet.</li>
-  <li>Storyous Mini costs CZK 390 a month excl. VAT. According to O2 it lacks the hospitality features, such as the table layout.</li>
-  <li>Each additional active device costs CZK 740 excl. VAT.</li>
-  <li>With the plans, O2 also lists stock management for CZK 990, integrations (Foodora, Wolt, hotel systems) for CZK 490 and a loyalty programme for CZK 590, all excl. VAT.</li>
-  <li>The devices cost CZK 4,990 (All-in-One) or CZK 9,990 (Medium 10" tablet) excl. VAT.</li>
-  <li>On EET 2.0, Storyous says <a href="https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni" rel="noopener">on its website</a> that it is ready and that the feature and updates will be free.</li>
+  <li>Storyous Maxi 15": POS, card terminal and printer in one device. The set costs CZK 14,499 excl. VAT, the Business licence from CZK 890 a month excl. VAT. O2 lists stock management and reports and statistics with it.</li>
+  <li>Storyous Medium 10": a tablet with a stand and a printer. The set costs CZK 9,999 excl. VAT, the Stock licence from CZK 890 a month excl. VAT. O2 lists remote management of the POS and exports for accountants with it.</li>
+  <li>The O2 offer does not state the price of a licence without a set, the price of an additional device or the prices of add-ons. Ask the vendor.</li>
+  <li>For hospitality POS systems, O2 mentions a table map, deliveries, kitchen order tickets and stock management.</li>
+  <li>On EET 2.0, O2 writes that all the solutions it offers support it. Storyous says <a href="https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni" rel="noopener">on its website</a> that it is ready and that the feature and updates will be free.</li>
 </ul>
-<p>It suits restaurants and cafés that need connections to delivery services and hotel systems.</p>`,
+<p>It suits restaurants, cafés and bars that want the POS, card terminal and printer as one set.</p>`,
       },
       {
         id: "hellocash",
         h2: "helloCash",
         html: `
-<p>helloCash is a cloud POS with the lowest entry price among the paid systems in this comparison. According to the <a href="https://hellocash.cz/cena" rel="noopener">price list on hellocash.cz</a> as of 12 November 2026:</p>
+<p>helloCash is a cloud POS with the lowest entry price among the paid systems in this comparison. According to the <a href="https://hellocash.cz/cena" rel="noopener">price list on hellocash.cz</a> as of 21 November 2026:</p>
 <ul>
   <li>Basic costs CZK 69 a month excl. VAT, Střední CZK 99, Prémiová CZK 219 and Gastro CZK 329.</li>
   <li>Stock and stocktaking and the barcode scanner interface start with the Prémiová version. For stock, a note in the price list mentions a fee of CZK 120.90 per module.</li>
   <li>The table overview and bill splitting are in the Gastro version.</li>
   <li>Support is charged separately: CZK 849 a year excl. VAT, or CZK 3,500 excl. VAT per hour.</li>
-  <li>As of 12 November 2026 we found no mention of EET 2.0 on the helloCash website. Ask the vendor.</li>
+  <li>As of 21 November 2026 we found no mention of EET 2.0 on the helloCash website. Ask the vendor.</li>
 </ul>
 <p>It suits services and small sellers who only need a basic POS at a low price.</p>`,
       },
@@ -1794,16 +1794,17 @@ export default {
   <li>We compare only what the vendors state publicly. Where a figure is missing, we say so.</li>
   <li>We do not compare support quality, speed or ease of use. Check those in a trial.</li>
   <li>Prices and features change. The vendor's current offer is what counts.</li>
+  <li>We last checked the data on 21 November 2026 on the pages listed in the sources. When a vendor changes its page, the figure may no longer be there.</li>
 </ul>
 <p>The general approach to choosing is in the article <a href="jak-vybrat-pokladnu.html">How to choose a POS system</a>.</p>`,
       },
     ],
     faq: [
-      ["Which POS is the cheapest?","The state app MOJE eet is free. Among the paid systems, according to the price lists as of 12 November 2026, helloCash Basic has the lowest entry price at CZK 69 a month excl. VAT. With stock, SuperKasa is the cheapest at CZK 149 a month including VAT."],
+      ["Which POS is the cheapest?","The state app MOJE eet is free. Among the paid systems, according to the price lists as of 21 November 2026, helloCash Basic has the lowest entry price at CZK 69 a month excl. VAT. With stock, SuperKasa is the cheapest at CZK 149 a month including VAT."],
       ["Why are competitors' prices shown both without and with VAT?","The vendors list prices without VAT, while SuperKasa lists them including VAT. To make them comparable, we show both amounts for the competitors."],
-      ["How old is the data in the comparison?","It comes from public price lists as of 12 November 2026. The sources are listed at the end of the article. Check the price with the vendor before you order."],
+      ["How old is the data in the comparison?","It comes from public price lists as of 21 November 2026. The sources are listed at the end of the article. Check the price with the vendor before you order."],
     ],
-    sources: [["Dotykačka: price list","https://dotykacka.cz/cenik/"],["O2: Storyous POS solutions","https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni"],["Storyous: EET 2.0? My jsme připraveni","https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni"],["helloCash: prices and fees","https://hellocash.cz/cena"],["Financial Administration: EET 2.0 schedule","https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0"]],
+    sources: [["Dotykačka: price list","https://dotykacka.cz/cenik/"],["O2: POS solutions (Storyous)","https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni"],["Storyous: EET 2.0? My jsme připraveni","https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni"],["helloCash: prices and fees","https://hellocash.cz/cena"],["Financial Administration: EET 2.0 schedule","https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0"],["Financial Administration: when the MOJE eet web app is enough","https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace#kdy-mi-postaci-webova-aplikace-moje-eet-821"]],
     related: ["jak-vybrat-pokladnu", "moje-eet-nebo-pokladna", "navod-superkasa"],
   },
   ],

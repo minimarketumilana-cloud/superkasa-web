@@ -904,8 +904,9 @@ export default {
 <li>Điền <strong>E-mail</strong>. Số điện thoại không bắt buộc.</li>
 <li>Tích đồng ý với điều khoản.</li>
 <li>Chạm vào <strong>Tạo miễn phí</strong>. Nếu muốn trả tiền ngay, chạm vào <strong>Mua ngay</strong>. Sau khi tạo xong, máy tính tiền đưa bạn thẳng đến bước thanh toán và bạn vẫn được giữ thêm 10 ngày miễn phí.</li>
+<li>Bạn sẽ nhận được liên kết xác minh qua e-mail. Liên kết có hiệu lực 30 phút và chỉ dùng được một lần. Mở liên kết và chạm vào <strong>Xác minh email và tiếp tục</strong>. Hãy kiểm tra cả thư rác.</li>
 </ol>
-<p>Mất đường dẫn để hoàn tất đăng ký? Hãy điền lại đăng ký với cùng địa chỉ, e-mail và IČO.</p>
+<p>Không nhận được liên kết hoặc liên kết đã hết hạn? Hãy điền lại đăng ký với cùng địa chỉ, e-mail và IČO, chúng tôi sẽ gửi liên kết mới.</p>
 <p><strong>Không cần tải gì:</strong> máy tính tiền chạy trên trình duyệt. Trên máy tính Windows, hóa đơn in ra máy in hóa đơn không cần hộp thoại (qua lối tắt Chrome) hoặc qua cửa sổ in. Điện thoại và máy tính bảng Android in ra máy in Bluetooth hoặc USB, iPhone in ở máy in của quầy chính. Xem hướng dẫn <a href="tiskarna-ctecka-zasuvka.html">Máy in hóa đơn, máy quét mã và ngăn kéo đựng tiền</a>.</p>`,
       },
       {
@@ -966,7 +967,7 @@ export default {
         html: `
 <p><strong>Tiền mặt.</strong> Chạm vào các tờ tiền khách đưa. Số tiền được cộng dồn. Máy hiện <strong>Tiền thối lại</strong>. Tiền mặt được làm tròn đến koruna. Xác nhận bằng nút <strong>Xác nhận thanh toán</strong>.</p>
 <p><strong>Thẻ.</strong> Chạm vào <strong>Thẻ</strong>. Nhập số tiền bằng tay trên máy quẹt thẻ của bạn, vì máy tính tiền không nối với máy quẹt thẻ. Khi thanh toán xong, chạm vào <strong>Thanh toán thẻ thành công</strong>.</p>
-<p><strong>Thanh toán QR.</strong> Nút <strong>Thanh toán QR</strong> chỉ hiện khi đã điền IBAN. Bạn ghi IBAN trong <strong>Quản lý → Công ty</strong>, ô <strong>IBAN tài khoản nhận QR</strong>. Khách quét mã trong ứng dụng ngân hàng. Chỉ chạm vào <strong>Đã nhận tiền</strong> khi đã thấy tiền vào tài khoản. Màn hình “đã gửi” trên điện thoại của khách không bảo đảm là tiền đã được trả.</p>
+<p><strong>Thanh toán QR.</strong> Nút <strong>Thanh toán QR</strong> chỉ hiện khi đã điền IBAN. Bạn ghi IBAN trong <strong>Quản lý → Công ty</strong>, ô <strong>IBAN tài khoản nhận QR</strong>. Khách quét mã trong ứng dụng ngân hàng. Khi đã thấy tiền vào tài khoản, hãy chạm vào <strong>Đã trả, in hóa đơn</strong> hoặc <strong>Đã trả, không in</strong>. Màn hình “đã gửi” trên điện thoại của khách không bảo đảm là tiền đã được trả.</p>
 <p><strong>Kết hợp.</strong> Một phần bằng thẻ hoặc QR, phần còn lại tiền mặt. Đó là biểu tượng nhỏ ở cuối hàng các cách thanh toán.</p>
 <p>Hóa đơn tự in ra. Nếu bạn chưa có máy in, máy tính tiền sẽ đưa bạn đến trình hướng dẫn. Bạn có thể xem thêm hướng dẫn <a href="tiskarna-ctecka-zasuvka.html">Máy in hóa đơn, máy quét mã và ngăn kéo đựng tiền</a>.</p>`,
       },
@@ -1689,23 +1690,23 @@ export default {
     kicker: "Chọn máy tính tiền",
     title: "SuperKasa, Dotykačka, Storyous, helloCash và MOJE eet: so sánh giá và chức năng",
     metaTitle: "So sánh máy tính tiền: giá, chức năng | SuperKasa",
-    desc: "Giá và chức năng của SuperKasa, Dotykačka, Storyous, helloCash và ứng dụng nhà nước MOJE eet. Số liệu từ bảng giá công khai, tính đến 12/11/2026.",
+    desc: "Giá và chức năng của SuperKasa, Dotykačka, Storyous, helloCash và ứng dụng nhà nước MOJE eet. Số liệu từ bảng giá công khai, tính đến 21/11/2026.",
     lead: "Chúng tôi so sánh bảng giá công khai của bốn hệ thống máy tính tiền và ứng dụng nhà nước MOJE eet. Mỗi số liệu đều có nguồn và ngày. Giá của đối thủ được ghi cả chưa gồm và đã gồm thuế DPH để dễ so sánh.",
     published: "2026-11-12",
-    updated: "2026-11-12",
+    updated: "2026-11-21",
     minutes: 6,
     sections: [
       {
         id: "prehled",
         h2: "Tổng quan giá và chức năng",
         html: `
-<p>Số liệu lấy từ bảng giá công khai, tính đến 12/11/2026. Giá tính theo tháng khi trả từng tháng. Nhà cung cấp có thể đổi giá, hãy kiểm tra lại trước khi đặt.</p>
+<p>Số liệu lấy từ bảng giá công khai, tính đến 21/11/2026. Giá tính theo tháng khi trả từng tháng. Nhà cung cấp có thể đổi giá, hãy kiểm tra lại trước khi đặt.</p>
 <div class="tbl"><table>
   <thead><tr><th>Hệ thống</th><th>Gói thấp nhất</th><th>Gói có kho</th><th>Thiết bị thêm</th><th>EET 2.0</th></tr></thead>
   <tbody>
     <tr><td>SuperKasa</td><td>149 Kč đã gồm DPH (123,14 Kč chưa gồm DPH)</td><td>Cùng một gói, kho đã có trong giá</td><td>Tối đa 10 thiết bị trong giá</td><td>Có, trong giá</td></tr>
     <tr><td>Dotykačka</td><td>SNADNO 590 Kč chưa gồm DPH (713,90 Kč đã gồm DPH)</td><td>NAPLNO 1 190 Kč chưa gồm DPH (1 439,90 Kč đã gồm DPH)</td><td>Bảng giá không ghi</td><td>Có, trong mọi giấy phép từ 1/1/2027</td></tr>
-    <tr><td>Storyous (bảng giá O2)</td><td>Mini 390 Kč chưa gồm DPH (471,90 Kč đã gồm DPH)</td><td>Kho là phần thêm, 990 Kč chưa gồm DPH (1 197,90 Kč đã gồm DPH)</td><td>740 Kč chưa gồm DPH (895,40 Kč đã gồm DPH)</td><td>Nhà sản xuất cho biết đã sẵn sàng</td></tr>
+    <tr><td>Storyous (chào bán của O2)</td><td>Giấy phép từ 890 Kč chưa gồm DPH (1 076,90 Kč đã gồm DPH); O2 bán kèm bộ thiết bị</td><td>Giấy phép Business từ 890 Kč chưa gồm DPH (1 076,90 Kč đã gồm DPH); O2 ghi có quản lý kho</td><td>Chào bán không ghi</td><td>Theo O2 là có hỗ trợ; nhà sản xuất cho biết đã sẵn sàng</td></tr>
     <tr><td>helloCash</td><td>Basic 69 Kč chưa gồm DPH (83,49 Kč đã gồm DPH)</td><td>Prémiová 219 Kč chưa gồm DPH (264,99 Kč đã gồm DPH)</td><td>Bảng giá không ghi</td><td>Chúng tôi không tìm thấy thông tin trên trang web</td></tr>
     <tr><td>MOJE eet</td><td>Miễn phí</td><td>Finanční správa không nhắc đến kho</td><td>Nhiều nhất 2 đơn vị ghi nhận</td><td>Có, ứng dụng nhà nước từ 1/12/2026</td></tr>
   </tbody>
@@ -1715,14 +1716,14 @@ export default {
         id: "dotykacka",
         h2: "Dotykačka",
         html: `
-<p>Dotykačka bán giấy phép và thiết bị máy tính tiền riêng. Theo <a href="https://dotykacka.cz/cenik/" rel="noopener">bảng giá trên dotykacka.cz</a>, tính đến 12/11/2026:</p>
+<p>Dotykačka bán giấy phép và thiết bị máy tính tiền riêng. Theo <a href="https://dotykacka.cz/cenik/" rel="noopener">bảng giá trên dotykacka.cz</a>, tính đến 21/11/2026:</p>
 <ul>
   <li>Giấy phép SNADNO giá 590 Kč mỗi tháng chưa gồm DPH, NAPLNO 1 190 Kč và NEOMEZENĚ 1 990 Kč. Đây là giá không kèm máy quẹt thẻ, khi trả từng tháng.</li>
   <li>Trả cả năm được giảm 15 %. Nếu dùng máy quẹt thẻ của Dotykačka, giấy phép rẻ hơn tùy theo doanh số thanh toán bằng thẻ.</li>
   <li>Quản lý kho có từ giấy phép NAPLNO. Với SNADNO, bảng giá ghi là không có.</li>
   <li>Chấm công và hệ thống đặt hàng có trong giấy phép NEOMEZENĚ.</li>
   <li>Bảng giá ghi EET 2.0 ở mọi giấy phép từ 1/1/2027.</li>
-  <li>Thiết bị máy tính tiền trong bảng giá có giá từ 6 990 Kč đến 22 990 Kč chưa gồm DPH.</li>
+  <li>Thiết bị máy tính tiền trong bảng giá có giá từ 9 990 Kč đến 22 990 Kč chưa gồm DPH.</li>
 </ul>
 <p>Phù hợp với cửa hàng muốn có máy tính tiền, thiết bị và máy quẹt thẻ từ cùng một nhà cung cấp, kèm hỗ trợ kỹ thuật suốt ngày đêm.</p>`,
       },
@@ -1730,28 +1731,27 @@ export default {
         id: "storyous",
         h2: "Storyous",
         html: `
-<p>Storyous là máy tính tiền chủ yếu dành cho nhà hàng, quán ăn. Chúng tôi không tìm thấy bảng giá công khai trên trang web của Storyous, nên dựa vào <a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">chào bán của nhà phân phối O2</a>, tính đến 12/11/2026:</p>
+<p>Storyous là máy tính tiền chủ yếu dành cho nhà hàng, quán ăn. Chúng tôi không tìm thấy bảng giá công khai trên trang web của Storyous, nên dựa vào <a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">chào bán của nhà phân phối O2</a>, tính đến 21/11/2026. O2 chào bán hai bộ:</p>
 <ul>
-  <li>Gói Business giá 690 Kč mỗi tháng chưa gồm DPH với thiết bị All-in-One và 890 Kč với máy tính bảng Medium 10".</li>
-  <li>Storyous Mini giá 390 Kč mỗi tháng chưa gồm DPH. Theo O2, gói này không có các chức năng dành cho nhà hàng, ví dụ sơ đồ bàn.</li>
-  <li>Mỗi thiết bị hoạt động thêm giá 740 Kč chưa gồm DPH.</li>
-  <li>O2 còn ghi kèm các gói: quản lý kho 990 Kč, tích hợp (Foodora, Wolt, hệ thống khách sạn) 490 Kč và chương trình khách hàng thân thiết 590 Kč, đều chưa gồm DPH.</li>
-  <li>Thiết bị giá 4 990 Kč (All-in-One) hoặc 9 990 Kč (máy tính bảng Medium 10") chưa gồm DPH.</li>
-  <li>Về EET 2.0, Storyous viết <a href="https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni" rel="noopener">trên trang web của mình</a> rằng họ đã sẵn sàng và chức năng cùng các bản cập nhật sẽ miễn phí.</li>
+  <li>Storyous Maxi 15": máy tính tiền, máy quẹt thẻ và máy in trong một thiết bị. Bộ thiết bị giá 14 499 Kč chưa gồm DPH, giấy phép Business từ 890 Kč mỗi tháng chưa gồm DPH. O2 ghi kèm quản lý kho, báo cáo và thống kê.</li>
+  <li>Storyous Medium 10": máy tính bảng kèm chân đế và máy in. Bộ thiết bị giá 9 999 Kč chưa gồm DPH, giấy phép Stock từ 890 Kč mỗi tháng chưa gồm DPH. O2 ghi kèm quản lý máy từ xa và xuất dữ liệu cho kế toán.</li>
+  <li>Chào bán của O2 không ghi giá giấy phép khi không mua bộ thiết bị, giá thiết bị thêm và giá các phần thêm. Hãy hỏi nhà cung cấp.</li>
+  <li>Với máy tính tiền cho nhà hàng, O2 nhắc đến sơ đồ bàn, giao hàng, chuyển món xuống bếp và quản lý kho.</li>
+  <li>Về EET 2.0, O2 viết rằng mọi giải pháp họ chào bán đều hỗ trợ. Storyous viết <a href="https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni" rel="noopener">trên trang web của mình</a> rằng họ đã sẵn sàng và chức năng cùng các bản cập nhật sẽ miễn phí.</li>
 </ul>
-<p>Phù hợp với nhà hàng và quán cà phê cần kết nối với dịch vụ giao đồ ăn và hệ thống khách sạn.</p>`,
+<p>Phù hợp với nhà hàng, quán cà phê và quán bar muốn có máy tính tiền, máy quẹt thẻ và máy in trong một bộ.</p>`,
       },
       {
         id: "hellocash",
         h2: "helloCash",
         html: `
-<p>helloCash là máy tính tiền trên đám mây, có giá khởi điểm thấp nhất trong các hệ thống trả phí ở bài so sánh này. Theo <a href="https://hellocash.cz/cena" rel="noopener">bảng giá trên hellocash.cz</a>, tính đến 12/11/2026:</p>
+<p>helloCash là máy tính tiền trên đám mây, có giá khởi điểm thấp nhất trong các hệ thống trả phí ở bài so sánh này. Theo <a href="https://hellocash.cz/cena" rel="noopener">bảng giá trên hellocash.cz</a>, tính đến 21/11/2026:</p>
 <ul>
   <li>Basic giá 69 Kč mỗi tháng chưa gồm DPH, Střední 99 Kč, Prémiová 219 Kč và Gastro 329 Kč.</li>
   <li>Quản lý kho, kiểm kê và kết nối máy quét mã vạch có từ bản Prémiová. Với kho, bảng giá có ghi chú về phí 120,90 Kč cho mỗi mô-đun.</li>
   <li>Sơ đồ bàn và tách hóa đơn có trong bản Gastro.</li>
   <li>Hỗ trợ tính phí riêng: 849 Kč mỗi năm chưa gồm DPH, hoặc 3 500 Kč chưa gồm DPH mỗi giờ.</li>
-  <li>Tính đến 12/11/2026, chúng tôi không tìm thấy thông tin về EET 2.0 trên trang web của helloCash. Hãy hỏi nhà cung cấp.</li>
+  <li>Tính đến 21/11/2026, chúng tôi không tìm thấy thông tin về EET 2.0 trên trang web của helloCash. Hãy hỏi nhà cung cấp.</li>
 </ul>
 <p>Phù hợp với ngành dịch vụ và người bán nhỏ chỉ cần máy tính tiền cơ bản với giá thấp.</p>`,
       },
@@ -1790,16 +1790,17 @@ export default {
   <li>Chúng tôi chỉ so sánh những gì nhà sản xuất công bố công khai. Chỗ nào thiếu thông tin, chúng tôi ghi rõ.</li>
   <li>Chúng tôi không so sánh chất lượng hỗ trợ, tốc độ hay sự tiện lợi khi dùng. Bạn hãy tự thử bằng bản dùng thử.</li>
   <li>Giá và chức năng có thể thay đổi. Chào bán hiện tại của nhà cung cấp mới là căn cứ.</li>
+  <li>Chúng tôi kiểm tra số liệu lần gần nhất vào 21/11/2026 trên các trang ghi ở phần nguồn. Khi nhà cung cấp sửa trang, số liệu có thể không còn ở đó.</li>
 </ul>
 <p>Cách chọn nói chung có trong bài <a href="jak-vybrat-pokladnu.html">Cách chọn hệ thống máy tính tiền</a>.</p>`,
       },
     ],
     faq: [
-      ["Máy tính tiền nào rẻ nhất?","Ứng dụng nhà nước MOJE eet là miễn phí. Trong các hệ thống trả phí, theo bảng giá tính đến 12/11/2026, helloCash Basic có giá khởi điểm thấp nhất: 69 Kč mỗi tháng chưa gồm DPH. Nếu cần kho thì SuperKasa rẻ nhất: 149 Kč mỗi tháng đã gồm DPH."],
+      ["Máy tính tiền nào rẻ nhất?","Ứng dụng nhà nước MOJE eet là miễn phí. Trong các hệ thống trả phí, theo bảng giá tính đến 21/11/2026, helloCash Basic có giá khởi điểm thấp nhất: 69 Kč mỗi tháng chưa gồm DPH. Nếu cần kho thì SuperKasa rẻ nhất: 149 Kč mỗi tháng đã gồm DPH."],
       ["Vì sao giá của đối thủ ghi cả chưa gồm và đã gồm DPH?","Các nhà sản xuất ghi giá chưa gồm DPH, còn SuperKasa ghi giá đã gồm DPH. Để so sánh được, chúng tôi ghi cả hai số cho đối thủ."],
-      ["Số liệu trong bài so sánh có từ khi nào?","Từ bảng giá công khai, tính đến 12/11/2026. Nguồn được ghi ở cuối bài. Trước khi đặt, hãy kiểm tra giá với nhà cung cấp."],
+      ["Số liệu trong bài so sánh có từ khi nào?","Từ bảng giá công khai, tính đến 21/11/2026. Nguồn được ghi ở cuối bài. Trước khi đặt, hãy kiểm tra giá với nhà cung cấp."],
     ],
-    sources: [["Dotykačka: bảng giá","https://dotykacka.cz/cenik/"],["O2: giải pháp máy tính tiền Storyous","https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni"],["Storyous: EET 2.0? My jsme připraveni","https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni"],["helloCash: giá và phí","https://hellocash.cz/cena"],["Finanční správa: lịch trình EET 2.0","https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0"]],
+    sources: [["Dotykačka: bảng giá","https://dotykacka.cz/cenik/"],["O2: giải pháp máy tính tiền (Storyous)","https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni"],["Storyous: EET 2.0? My jsme připraveni","https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni"],["helloCash: giá và phí","https://hellocash.cz/cena"],["Finanční správa: lịch trình EET 2.0","https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0"],["Finanční správa: khi nào ứng dụng web MOJE eet là đủ","https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace#kdy-mi-postaci-webova-aplikace-moje-eet-821"]],
     related: ["jak-vybrat-pokladnu", "moje-eet-nebo-pokladna", "navod-superkasa"],
   },
   ],
