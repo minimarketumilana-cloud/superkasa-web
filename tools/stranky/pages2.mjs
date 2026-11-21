@@ -1,5 +1,5 @@
 // Ceník, EET 2.0, Jak začít, Přihlášení a Kontakt. Texty jsou ve slovníku c.T.<stránka> (tools/stranky/texty/<jazyk>.mjs).
-import { CONTACT_EMAIL, LOGIN_LIVE, ORG, ORG_ID, PROVIDER, REGISTER_URL, SITE, card, cta, faqLd, faqSection, icon, plain, software } from "./parts.mjs";
+import { CONTACT_EMAIL, DEMO_URL, LOGIN_LIVE, ORG, ORG_ID, PROVIDER, REGISTER_URL, SITE, card, cta, faqLd, faqSection, icon, plain, software } from "./parts.mjs";
 import { pageUrl } from "./i18n.mjs";
 import { FEATURE_ORDER } from "./obory.mjs";
 
@@ -84,7 +84,7 @@ export const cenik = (c) => {
       <div class="price-box">
         <div class="amount">${t.boxAmount}</div>
         <div class="year">${t.boxYear}</div>
-        ${LOGIN_LIVE ? `<a class="btn btn-gold btn-lg price-cta" href="${REGISTER_URL}">${c.T.common.registerBtn}</a><p class="price-trial">${t.boxTag}</p>` : `<span class="tag">${t.boxTag}</span>`}
+        ${LOGIN_LIVE ? `<div class="price-actions"><a class="btn btn-gold btn-lg price-cta" href="${REGISTER_URL}">${c.T.common.registerBtn}</a><a class="btn btn-light btn-lg" href="${DEMO_URL}">${c.T.common.demoBtn}</a></div><p class="price-trial">${t.boxTag}</p>` : `<span class="tag">${t.boxTag}</span>`}
         <p>${t.boxText}</p>
       </div>
       <div class="card">

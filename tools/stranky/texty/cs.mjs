@@ -14,6 +14,8 @@ export default {
     loginSoon: "",
     loginAria: "Přihlásit se do pokladny",
     registerBtn: "Vyzkoušet zdarma",
+    demoBtn: "Vyzkoušet ukázku",
+    demoLink: "Ukázka pokladny",
     registerCta: "Založit v prohlížeči",
     loginBtnSoon: "V prohlížeči",
     loginSoonTag: "připravujeme",
@@ -421,6 +423,7 @@ export default {
     // Stará adresa ke-stazeni.html přesměrovává sem (jak-zacit.html).
     movedTitle: "Stránka se přestěhovala – SuperKasa",
     movedText: "Tato stránka se přestěhovala. Pokračujte na",
+    movedDesc: "Stránka Ke stažení se přestěhovala. SuperKasa běží v prohlížeči a nic se nestahuje – jak začít, najdete na stránce Jak začít.",
   },
 
   login: {

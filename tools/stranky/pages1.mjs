@@ -1,6 +1,6 @@
 // Úvod a Funkce. Texty jsou ve slovníku c.T.index a c.T.funkce (tools/stranky/texty/<jazyk>.mjs).
 import { pageUrl, SITE } from "./i18n.mjs";
-import { LOGIN_LIVE, REGISTER_URL, card, cta, faqLd, faqSection, software } from "./parts.mjs";
+import { DEMO_URL, LOGIN_LIVE, REGISTER_URL, card, cta, faqLd, faqSection, software } from "./parts.mjs";
 import { oborPicker } from "./obory-stranky.mjs";
 
 /**
@@ -43,6 +43,7 @@ export const index = (c) => {
         <p class="lead">${t.lead}</p>
         <div class="actions hero-cta">
           ${LOGIN_LIVE ? `<a class="btn btn-gold btn-lg" href="${REGISTER_URL}">${t.heroCta[0]}</a>` : ""}
+          <a class="btn btn-ghost btn-lg" href="${DEMO_URL}">${c.T.common.demoBtn}</a>
           <a class="btn btn-ghost btn-lg" href="jak-zacit.html">${t.heroCta[1]}</a>
         </div>
         <p class="small hero-cta-note">${t.heroCtaNote}</p>

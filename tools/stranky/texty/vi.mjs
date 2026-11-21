@@ -12,6 +12,8 @@ export default {
     loginSoon: "",
     loginAria: "Đăng nhập vào máy tính tiền",
     registerBtn: "Dùng thử miễn phí",
+    demoBtn: "Thử bản demo",
+    demoLink: "Bản demo máy tính tiền",
     registerCta: "Tạo trên trình duyệt",
     loginBtnSoon: "Trên trình duyệt",
     loginSoonTag: "sắp ra mắt",
@@ -416,6 +418,7 @@ export default {
     cta: ["Cần giúp cài đặt?", "Gọi cho chúng tôi – chúng tôi cùng bạn thiết lập máy tính tiền và máy in, bằng tiếng Việt."],
     movedTitle: "Trang đã chuyển – SuperKasa",
     movedText: "Trang này đã chuyển sang địa chỉ mới. Tiếp tục tới",
+    movedDesc: "Trang Tải về đã chuyển. SuperKasa chạy trên trình duyệt, không cần tải gì – cách bắt đầu có trên trang Bắt đầu.",
   },
 
   login: {

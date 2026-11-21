@@ -122,7 +122,7 @@ for (const lang of LANGS) {
     }
   }
   for (const [from, to] of REDIRECTS) {
-    writeFileSync(path.join(ROOT, dir, from), homeLinks(redirectPage(c, to, c.T.stazeni.movedTitle, c.T.stazeni.movedText)));
+    writeFileSync(path.join(ROOT, dir, from), homeLinks(redirectPage(c, to, c.T.stazeni.movedTitle, c.T.stazeni.movedText, c.T.stazeni.movedDesc)));
   }
   // Manifest webu v jazyce stránek: správný název, ikona a barva při přidání na plochu telefonu. Web je prezentace,
   // ne aplikace – proto „browser“ (pokladna má vlastní manifest na adrese obchodu a otevírá se přes celou obrazovku).

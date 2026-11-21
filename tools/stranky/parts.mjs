@@ -11,6 +11,8 @@ export const INLINE_JS = 'document.documentElement.className+=" js"';
 export const LOGIN_LIVE = true;
 /** Registrace nového obchodu v SuperKasa Cloud (jen když LOGIN_LIVE). */
 export const REGISTER_URL = "https://app.superkasa.cz/";
+/** Veřejná ukázka pokladny s vymyšlenými daty (demo.superkasa.cz) – bez registrace, data se každou noc smažou. */
+export const DEMO_URL = "https://demo.superkasa.cz/";
 
 /**
  * Kontaktní e-mail provozovatele – jediné místo, kde se doplňuje. Dokud je prázdný, web e-mail nikde neuvádí
@@ -185,7 +187,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").repl
  * Stará adresa, která jen přesměruje na novou (GitHub Pages neumí přesměrování 301):
  * okamžitý meta refresh a canonical na novou adresu (Google to bere jako trvalé přesměrování). Do sitemap se nedává.
  */
-export const redirectPage = (c, to, title, text) => {
+export const redirectPage = (c, to, title, text, desc = text) => {
   const url = pageUrl(c.lang, to);
   return `<!DOCTYPE html>
 <html lang="${c.lang}">
@@ -196,6 +198,7 @@ export const redirectPage = (c, to, title, text) => {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="refresh" content="0; url=${to}">
 <title>${title}</title>
+<meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${url}">
 <link rel="stylesheet" href="${c.up}css/style.css">
 </head>
@@ -241,13 +244,16 @@ const langSwitch = (c, file) => `<nav class="langs" aria-label="${c.T.common.lan
  * Celá stránka. `c` = jazyk ({ lang, T, up }), `footerObory` = odkazy na obory do patičky,
  * `jsonld` = strukturovaná data (objekt), `canonicalPath` = jiný soubor pro canonical a hreflang (404 → úvod),
  * `altLangs` = jazyky, které stránka uvádí v hreflang (právní stránky jen čeština – překlady jsou noindex),
- * `og` = { type, published, modified } pro články (og:type article a data).
+ * `og` = { type, published, modified } pro články (og:type article a data), `canonicalUrl` = canonical stránky noindex
+ * jinam (překlady právních stránek → závazné české znění). Stránka noindex má canonical jen s `canonicalPath`
+ * (404 → úvod jazyka) nebo `canonicalUrl`.
  */
-export function page(c, { file, title, desc, current, body, noindex = false, canonicalPath, jsonld, footerObory = [], altLangs = LANGS, og = {} }) {
+export function page(c, { file, title, desc, current, body, noindex = false, canonicalPath, canonicalUrl, jsonld, footerObory = [], altLangs = LANGS, og = {} }) {
   const { T, up, lang } = c;
   const L = T.common;
   const target = canonicalPath ?? file;
   const url = pageUrl(lang, target);
+  const noindexCanonical = canonicalUrl ?? (canonicalPath ? url : null);
   const alternates = [...altLangs.map((l) => [l, pageUrl(l, target)]), ["x-default", pageUrl("cs", target)]]
     .map(([l, href]) => `<link rel="alternate" hreflang="${l}" href="${href}">`).join("\n");
   // V hlavičce bez „Úvod“ (vede tam logo) – menu se pak vejde do řádku i na běžném notebooku; v patičce je celé.
@@ -263,7 +269,7 @@ export function page(c, { file, title, desc, current, body, noindex = false, can
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title>
 <meta name="description" content="${esc(desc)}">
-${noindex ? '<meta name="robots" content="noindex">' : `<meta name="robots" content="max-image-preview:large">\n<link rel="canonical" href="${url}">`}
+${noindex ? `<meta name="robots" content="noindex">${noindexCanonical ? `\n<link rel="canonical" href="${noindexCanonical}">` : ""}` : `<meta name="robots" content="max-image-preview:large">\n<link rel="canonical" href="${url}">`}
 ${alternates}
 <meta property="og:type" content="${og.type ?? "website"}">${og.published ? `\n<meta property="article:published_time" content="${og.published}">` : ""}${og.modified ? `\n<meta property="article:modified_time" content="${og.modified}">` : ""}
 <meta property="og:site_name" content="SuperKasa">
@@ -322,6 +328,7 @@ ${body.trim()}
         <h2>${L.footPages}</h2>
         <ul>
           ${NAV_FILES.map((href, i) => `<li><a href="${href}">${L.nav[i]}</a></li>`).join("\n          ")}
+          <li><a href="${DEMO_URL}">${L.demoLink}</a></li>
         </ul>
       </div>
       <div>

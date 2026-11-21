@@ -12,6 +12,8 @@ export default {
     loginSoon: "",
     loginAria: "Sign in to your till",
     registerBtn: "Try it free",
+    demoBtn: "Try the demo",
+    demoLink: "Till demo",
     registerCta: "Create in the browser",
     loginBtnSoon: "In the browser",
     loginSoonTag: "coming soon",
@@ -416,6 +418,7 @@ export default {
     cta: ["Need help setting up?", "Give us a call – we'll set up the till and printer together with you, in Vietnamese too."],
     movedTitle: "This page has moved – SuperKasa",
     movedText: "This page has moved. Continue to",
+    movedDesc: "The Downloads page has moved. SuperKasa runs in the browser and nothing is downloaded – see the Get started page.",
   },
 
   login: {

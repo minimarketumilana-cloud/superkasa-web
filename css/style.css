@@ -298,6 +298,9 @@ small, .small { font-size: .9rem; color: var(--muted); }
 .price-box .tag { display: inline-block; margin-top: 18px; background: var(--gold); color: var(--plum-dark); font-weight: 700; border-radius: 999px; padding: 6px 14px; font-size: .95rem; }
 .price-box p { color: #ecdbe4; margin: 16px 0 0; }
 .price-box .price-cta { margin-top: 22px; }
+.price-box .price-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.price-box .price-actions .price-cta { margin-top: 0; }
+@media (max-width: 760px) { .price-box .price-actions .btn { width: 100%; } }
 .price-box .price-trial { margin: 10px 0 0; color: #f3dfca; font-weight: 600; }
 .plan-btn { margin: 0 0 16px; }
 .plan-unsure { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; margin-top: 18px; background: var(--cream); }

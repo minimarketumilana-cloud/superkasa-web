@@ -4,6 +4,7 @@
 // Jen pro podnikatele (B2B); čl. 1.5 je pojistka pro případ, že by smlouvu přesto uzavřel spotřebitel.
 // Údaje provozovatele a kontaktní e-mail jsou v parts.mjs (PROVIDER, CONTACT_EMAIL). Dokud je e-mail prázdný, texty ho
 // prostě neuvádějí (kontakt je telefon a adresa místa podnikání); po doplnění se sám objeví ve všech větách níže.
+import { pageUrl } from "./i18n.mjs";
 import { CONTACT_EMAIL, PROVIDER as P } from "./parts.mjs";
 
 const PHONE = "+420&nbsp;608&nbsp;886&nbsp;882";
@@ -235,6 +236,8 @@ export const legalStub = (c, kind) => {
     file,
     current: "",
     noindex: true,
+    // Závazné je jen české znění – na něj ukazuje canonical.
+    canonicalUrl: pageUrl("cs", file),
     title: `${op ? t.opTitle : t.gdprTitle}${c.T.common.titleSuffix}`,
     desc: op ? t.opDesc : t.gdprDesc,
     body: `
