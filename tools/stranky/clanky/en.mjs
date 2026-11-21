@@ -1468,7 +1468,7 @@ export default {
         id: "kolik-zarizeni",
         h2: "How many devices the plan includes",
         html: `
-<p>Every plan includes <strong>up to 10 devices</strong>. Each computer, tablet, phone and each browser that signs in as a new device counts. You can see how many you have in <strong>Admin → System → Licence and plan</strong> in the <strong>Devices</strong> row.</p>
+<p>Every paid plan includes <strong>up to 10 devices</strong>; the Free plan has 1. Each computer, tablet, phone and each browser that signs in as a new device counts. You can see how many you have in <strong>Admin → System → Licence and plan</strong> in the <strong>Devices</strong> row.</p>
 <ul>
 <li>When the limit is full, the POS shows <strong>Replace an old device</strong>. You select the one you no longer use.</li>
 <li>You remove an old device in <strong>Admin → Devices</strong> with the <strong>Revoke</strong> button.</li>
@@ -1695,7 +1695,7 @@ export default {
     title: "SuperKasa, Dotykačka, Storyous, helloCash and MOJE eet: prices and features compared",
     metaTitle: "POS systems compared: prices and features | SuperKasa",
     desc: "Prices and features of the SuperKasa, Dotykačka, Storyous and helloCash POS systems and the state app MOJE eet. Data from public price lists as of 21 Nov 2026.",
-    lead: "We compared the public price lists of four POS systems and the state app MOJE eet. Every figure has a source and a date. Competitors' prices are shown both without and with VAT so they can be compared.",
+    lead: "We compared the public price lists of four POS systems and the state app MOJE eet. Every figure has a source and a date. In the table, competitors' prices are shown both without and with VAT so they can be compared.",
     published: "2026-11-12",
     updated: "2026-11-21",
     minutes: 6,
@@ -1704,15 +1704,15 @@ export default {
         id: "prehled",
         h2: "Prices and features at a glance",
         html: `
-<p>The data comes from public price lists as of 21 November 2026. Prices are per month with monthly billing. Vendors change their prices, so check them before you order.</p>
+<p>The data comes from public price lists as of 21 November 2026. Prices are per month with monthly billing; for Storyous, O2 gives a “from” price without stating the billing period. Vendors change their prices, so check them before you order.</p>
 <div class="tbl"><table>
   <thead><tr><th>System</th><th>Lowest plan</th><th>Plan with stock</th><th>Extra devices</th><th>EET 2.0</th></tr></thead>
   <tbody>
     <tr><td>SuperKasa</td><td>CZK 149 incl. VAT (CZK 123.14 excl. VAT)</td><td>Same plan, stock is included</td><td>Up to 10 devices included</td><td>Yes, included</td></tr>
-    <tr><td>Dotykačka</td><td>SNADNO CZK 590 excl. VAT (CZK 713.90 incl. VAT)</td><td>NAPLNO CZK 1,190 excl. VAT (CZK 1,439.90 incl. VAT)</td><td>Not stated in the price list</td><td>Yes, in all licences from 1 January 2027</td></tr>
+    <tr><td>Dotykačka</td><td>SNADNO CZK 590 excl. VAT (CZK 713.90 incl. VAT)</td><td>NAPLNO CZK 1,190 excl. VAT (CZK 1,439.90 incl. VAT)</td><td>Mobile waiter (Mobilní číšník): none in SNADNO, 1 in NAPLNO, unlimited in NEOMEZENĚ; the price list does not state the price of another POS</td><td>Yes, in all licences from 1 January 2027</td></tr>
     <tr><td>Storyous (O2 offer)</td><td>Licence from CZK 890 excl. VAT (CZK 1,076.90 incl. VAT); O2 offers it with a device set</td><td>Business licence from CZK 890 excl. VAT (CZK 1,076.90 incl. VAT); O2 lists stock management with it</td><td>Not stated in the offer</td><td>Supported according to O2; the vendor says it is ready</td></tr>
-    <tr><td>helloCash</td><td>Basic CZK 69 excl. VAT (CZK 83.49 incl. VAT)</td><td>Prémiová CZK 219 excl. VAT (CZK 264.99 incl. VAT)</td><td>Not stated in the price list</td><td>We found no mention on the website</td></tr>
-    <tr><td>MOJE eet</td><td>Free</td><td>The Financial Administration does not mention stock</td><td>No more than 2 recording units</td><td>Yes, a state app from 1 December 2026</td></tr>
+    <tr><td>helloCash</td><td>Basic CZK 69 excl. VAT (CZK 83.49 incl. VAT)</td><td>Prémiová CZK 219 excl. VAT (CZK 264.99 incl. VAT)</td><td>Several devices at once; the price list states neither their number nor a surcharge</td><td>We found no mention on the website</td></tr>
+    <tr><td>MOJE eet</td><td>Free</td><td>The Financial Administration does not mention stock</td><td>Any device with an internet connection, the Financial Administration does not state their number; no more than 2 recording units (for example premises) and 4 authorised staff</td><td>Yes, a state app from 1 December 2026</td></tr>
   </tbody>
 </table></div>`,
       },
@@ -1726,6 +1726,7 @@ export default {
   <li>Annual billing brings a 15% discount. With Dotykačka's card terminal the licence is cheaper, depending on your card turnover.</li>
   <li>Stock management starts with the NAPLNO licence. For SNADNO the price list shows it as not available.</li>
   <li>The attendance system and ordering systems are in the NEOMEZENĚ licence.</li>
+  <li>The price list shows the mobile waiter (Mobilní číšník) as not available in the SNADNO licence; NAPLNO includes one and NEOMEZENĚ an unlimited number. The price list does not state the price of another POS.</li>
   <li>The price list shows EET 2.0 in all licences from 1 January 2027.</li>
   <li>POS devices in the price list cost from CZK 9,990 to CZK 22,990 excl. VAT.</li>
 </ul>
@@ -1735,7 +1736,7 @@ export default {
         id: "storyous",
         h2: "Storyous",
         html: `
-<p>Storyous is a POS aimed mainly at hospitality. We did not find a public price list on the Storyous website, so we rely on the <a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">offer of the reseller O2</a> as of 21 November 2026. O2 offers two sets:</p>
+<p>Storyous is a POS aimed mainly at hospitality. We did not find a public price list on the Storyous website, so we rely on the <a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">partner offer on the O2 website</a> as of 21 November 2026. According to O2, the contract is concluded directly with the partner company, in this case Storyous. O2 offers two sets:</p>
 <ul>
   <li>Storyous Maxi 15": POS, card terminal and printer in one device. The set costs CZK 14,499 excl. VAT, the Business licence from CZK 890 a month excl. VAT. O2 lists stock management and reports and statistics with it.</li>
   <li>Storyous Medium 10": a tablet with a stand and a printer. The set costs CZK 9,999 excl. VAT, the Stock licence from CZK 890 a month excl. VAT. O2 lists remote management of the POS and exports for accountants with it.</li>
@@ -1754,6 +1755,7 @@ export default {
   <li>Basic costs CZK 69 a month excl. VAT, Střední CZK 99, Prémiová CZK 219 and Gastro CZK 329.</li>
   <li>Stock and stocktaking and the barcode scanner interface start with the Prémiová version. For stock, a note in the price list mentions a fee of CZK 120.90 per module.</li>
   <li>The table overview and bill splitting are in the Gastro version.</li>
+  <li>According to the price list, the system can run on several devices at once and you are not charged more by the number of employees. The price list states neither the number of devices nor a surcharge for them.</li>
   <li>Support is charged separately: CZK 849 a year excl. VAT, or CZK 3,500 excl. VAT per hour.</li>
   <li>As of 21 November 2026 we found no mention of EET 2.0 on the helloCash website. Ask the vendor.</li>
 </ul>
@@ -1763,7 +1765,7 @@ export default {
         id: "moje-eet",
         h2: "MOJE eet",
         html: `
-<p>MOJE eet is a free web app from the Financial Administration. According to the <a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">schedule</a>, its launch is planned for 1 December 2026. It is meant mainly for small businesses with a low volume of payments and no more than 2 recording units. According to the published description it registers sales, keeps a catalogue of items with prices and creates a PDF receipt. The description does not mention stock, a receipt printer or a scanner.</p>
+<p>MOJE eet is a free web app from the Financial Administration. According to the <a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">schedule</a>, its launch is planned for 1 December 2026. It is meant mainly for small businesses with a low volume of payments and no more than 2 recording units. According to the <a href="https://eet.gov.cz/cs/zacinam-s-eet/webova-aplikace-moje-eet" rel="noopener">description of the app</a>, it can be used on any device connected to the internet, and there can be no more than 4 authorised staff. According to the published description it registers sales, keeps a catalogue of items with prices and creates a PDF receipt. The description does not mention stock, a receipt printer or a scanner.</p>
 <p>The article <a href="moje-eet-nebo-pokladna.html">MOJE eet or a POS system</a> covers it in detail.</p>`,
       },
       {
@@ -1772,7 +1774,8 @@ export default {
         html: `
 <ul>
   <li>It costs CZK 149 a month or CZK 1,490 a year including VAT, the same for any type of business. The first 10 days are free.</li>
-  <li>Every plan includes stock, price labels, EET 2.0 and up to 10 devices.</li>
+  <li>Every paid plan includes stock, EET 2.0 and up to 10 devices; price labels are in the Shop plan.</li>
+  <li>Without payment the POS switches to the Free plan: 1 device, no more than 300 items, no stock.</li>
   <li>It runs in the browser on your own computer, tablet or phone.</li>
   <li>The staff interface is in Czech, Vietnamese and English.</li>
   <li>You keep selling when the internet goes down.</li>
@@ -1790,7 +1793,7 @@ export default {
         h2: "How to read the comparison",
         html: `
 <ul>
-  <li>Competitors list prices without VAT. We added the conversion with 21% VAT ourselves.</li>
+  <li>Competitors list prices without VAT. We added the conversion with 21% VAT in the table ourselves. In the sections on the competitors, prices are as the price lists state them, without conversion.</li>
   <li>We compare only what the vendors state publicly. Where a figure is missing, we say so.</li>
   <li>We do not compare support quality, speed or ease of use. Check those in a trial.</li>
   <li>Prices and features change. The vendor's current offer is what counts.</li>
@@ -1801,10 +1804,10 @@ export default {
     ],
     faq: [
       ["Which POS is the cheapest?","The state app MOJE eet is free. Among the paid systems, according to the price lists as of 21 November 2026, helloCash Basic has the lowest entry price at CZK 69 a month excl. VAT. With stock, SuperKasa is the cheapest at CZK 149 a month including VAT."],
-      ["Why are competitors' prices shown both without and with VAT?","The vendors list prices without VAT, while SuperKasa lists them including VAT. To make them comparable, we show both amounts for the competitors."],
+      ["Why does the table show competitors' prices both without and with VAT?","The vendors list prices without VAT, while SuperKasa lists them including VAT. To make them comparable, the table shows both amounts for the competitors. In the sections on the competitors, prices are as the price lists state them, without conversion."],
       ["How old is the data in the comparison?","It comes from public price lists as of 21 November 2026. The sources are listed at the end of the article. Check the price with the vendor before you order."],
     ],
-    sources: [["Dotykačka: price list","https://dotykacka.cz/cenik/"],["O2: POS solutions (Storyous)","https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni"],["Storyous: EET 2.0? My jsme připraveni","https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni"],["helloCash: prices and fees","https://hellocash.cz/cena"],["Financial Administration: EET 2.0 schedule","https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0"],["Financial Administration: when the MOJE eet web app is enough","https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace#kdy-mi-postaci-webova-aplikace-moje-eet-821"]],
+    sources: [["Dotykačka: price list","https://dotykacka.cz/cenik/"],["O2: POS solutions (Storyous)","https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni"],["Storyous: EET 2.0? My jsme připraveni","https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni"],["helloCash: prices and fees","https://hellocash.cz/cena"],["Financial Administration: EET 2.0 schedule","https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0"],["Financial Administration: when the MOJE eet web app is enough","https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace#kdy-mi-postaci-webova-aplikace-moje-eet-821"],["Financial Administration: the MOJE eet web app","https://eet.gov.cz/cs/zacinam-s-eet/webova-aplikace-moje-eet"]],
     related: ["jak-vybrat-pokladnu", "moje-eet-nebo-pokladna", "navod-superkasa"],
   },
   ],

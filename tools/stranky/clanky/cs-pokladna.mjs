@@ -602,7 +602,7 @@ export default [
         id: "kolik-zarizeni",
         h2: "Kolik zařízení je v tarifu",
         html: `
-<p>V každém tarifu je <strong>až 10 zařízení</strong>. Počítá se každý počítač, tablet, telefon i každý prohlížeč, který se přihlásí jako nové zařízení. Kolik jich máte, uvidíte ve <strong>Správě → Systém → Licence a tarif</strong> v řádku <strong>Zařízení</strong>.</p>
+<p>V každém placeném tarifu je <strong>až 10 zařízení</strong>, v tarifu Zdarma 1. Počítá se každý počítač, tablet, telefon i každý prohlížeč, který se přihlásí jako nové zařízení. Kolik jich máte, uvidíte ve <strong>Správě → Systém → Licence a tarif</strong> v řádku <strong>Zařízení</strong>.</p>
 <ul>
 <li>Když je limit plný, pokladna ukáže <strong>Nahradit staré zařízení</strong>. Vyberete to, které už nepoužíváte.</li>
 <li>Staré zařízení odeberete ve <strong>Správě → Zařízení</strong> tlačítkem <strong>Odebrat</strong>.</li>
@@ -829,7 +829,7 @@ export default [
     title: "SuperKasa, Dotykačka, Storyous, helloCash a MOJE eet: srovnání cen a funkcí",
     metaTitle: "Srovnání pokladen: ceny a funkce 2026 | SuperKasa",
     desc: "Ceny a funkce pokladních systémů SuperKasa, Dotykačka, Storyous a helloCash a státní aplikace MOJE eet. Údaje z veřejných ceníků k 21. 11. 2026.",
-    lead: "Srovnali jsme veřejné ceníky čtyř pokladních systémů a státní aplikace MOJE eet. U každého údaje je zdroj a datum. Ceny konkurence uvádíme bez DPH i s DPH, aby se daly porovnat.",
+    lead: "Srovnali jsme veřejné ceníky čtyř pokladních systémů a státní aplikace MOJE eet. U každého údaje je zdroj a datum. V tabulce uvádíme ceny konkurence bez DPH i s DPH, aby se daly porovnat.",
     published: "2026-11-12",
     updated: "2026-11-21",
     minutes: 6,
@@ -838,15 +838,15 @@ export default [
         id: "prehled",
         h2: "Přehled cen a funkcí",
         html: `
-<p>Údaje jsou z veřejných ceníků k 21. 11. 2026. Ceny jsou za měsíc při měsíční platbě. Výrobci ceny mění, před objednávkou si je ověřte.</p>
+<p>Údaje jsou z veřejných ceníků k 21. 11. 2026. Ceny jsou za měsíc při měsíční platbě; u Storyous uvádí O2 cenu „od“ bez upřesnění platebního období. Výrobci ceny mění, před objednávkou si je ověřte.</p>
 <div class="tbl"><table>
   <thead><tr><th>Systém</th><th>Nejnižší tarif</th><th>Tarif se skladem</th><th>Další zařízení</th><th>EET 2.0</th></tr></thead>
   <tbody>
     <tr><td>SuperKasa</td><td>149 Kč s DPH (123,14 Kč bez DPH)</td><td>Stejný tarif, sklad je v ceně</td><td>Až 10 zařízení v ceně</td><td>Ano, v ceně</td></tr>
-    <tr><td>Dotykačka</td><td>SNADNO 590 Kč bez DPH (713,90 Kč s DPH)</td><td>NAPLNO 1 190 Kč bez DPH (1 439,90 Kč s DPH)</td><td>Ceník neuvádí</td><td>Ano, ve všech licencích od 1. 1. 2027</td></tr>
+    <tr><td>Dotykačka</td><td>SNADNO 590 Kč bez DPH (713,90 Kč s DPH)</td><td>NAPLNO 1 190 Kč bez DPH (1 439,90 Kč s DPH)</td><td>Mobilní číšník: SNADNO ne, NAPLNO 1×, NEOMEZENĚ neomezeně; cenu další pokladny ceník neuvádí</td><td>Ano, ve všech licencích od 1. 1. 2027</td></tr>
     <tr><td>Storyous (nabídka O2)</td><td>Licence od 890 Kč bez DPH (1 076,90 Kč s DPH); O2 ji nabízí se sestavou zařízení</td><td>Licence Business od 890 Kč bez DPH (1 076,90 Kč s DPH); O2 u ní uvádí skladové hospodářství</td><td>Nabídka neuvádí</td><td>Podle O2 ho podporuje; výrobce uvádí, že je připraven</td></tr>
-    <tr><td>helloCash</td><td>Basic 69 Kč bez DPH (83,49 Kč s DPH)</td><td>Prémiová 219 Kč bez DPH (264,99 Kč s DPH)</td><td>Ceník neuvádí</td><td>Zmínku jsme na webu nenašli</td></tr>
-    <tr><td>MOJE eet</td><td>Zdarma</td><td>Sklad Finanční správa neuvádí</td><td>Nejvýše 2 evidenční jednotky</td><td>Ano, státní aplikace od 1. 12. 2026</td></tr>
+    <tr><td>helloCash</td><td>Basic 69 Kč bez DPH (83,49 Kč s DPH)</td><td>Prémiová 219 Kč bez DPH (264,99 Kč s DPH)</td><td>Více zařízení souběžně; počet ani příplatek ceník neuvádí</td><td>Zmínku jsme na webu nenašli</td></tr>
+    <tr><td>MOJE eet</td><td>Zdarma</td><td>Sklad Finanční správa neuvádí</td><td>Na jakémkoli zařízení s internetem, jejich počet Finanční správa neuvádí; nejvýše 2 evidenční jednotky (například provozovny) a 4 pověření pracovníci</td><td>Ano, státní aplikace od 1. 12. 2026</td></tr>
   </tbody>
 </table></div>`,
       },
@@ -860,6 +860,7 @@ export default [
   <li>Při roční platbě je sleva 15 %. S platebním terminálem Dotykačky je licence levnější podle obratu plateb kartou.</li>
   <li>Skladové hospodářství je od licence NAPLNO. V licenci SNADNO ho ceník uvádí jako nedostupné.</li>
   <li>Docházkový systém a objednávkové systémy jsou v licenci NEOMEZENĚ.</li>
+  <li>Mobilního číšníka ceník v licenci SNADNO uvádí jako nedostupného, v licenci NAPLNO je jeden a v NEOMEZENĚ neomezeně. Cenu další pokladny ceník neuvádí.</li>
   <li>EET 2.0 uvádí ceník u všech licencí od 1. 1. 2027.</li>
   <li>Pokladní zařízení stojí v ceníku od 9 990 Kč do 22 990 Kč bez DPH.</li>
 </ul>
@@ -869,7 +870,7 @@ export default [
         id: "storyous",
         h2: "Storyous",
         html: `
-<p>Storyous je pokladna zaměřená hlavně na gastro. Vlastní veřejný ceník jsme na webu Storyous nenašli, proto vycházíme z <a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">nabídky prodejce O2</a> k 21. 11. 2026. O2 nabízí dvě sestavy:</p>
+<p>Storyous je pokladna zaměřená hlavně na gastro. Vlastní veřejný ceník jsme na webu Storyous nenašli, proto vycházíme z <a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">partnerské nabídky na webu O2</a> k 21. 11. 2026. Podle O2 se smlouva uzavírá přímo s partnerskou společností, tedy se Storyous. O2 nabízí dvě sestavy:</p>
 <ul>
   <li>Storyous Maxi 15": pokladna, platební terminál a tiskárna v jednom zařízení. Sestava stojí 14 499 Kč bez DPH, licence Business od 890 Kč měsíčně bez DPH. O2 u ní uvádí skladové hospodářství a přehledy a statistiky.</li>
   <li>Storyous Medium 10": tablet se stojánkem a tiskárnou. Sestava stojí 9 999 Kč bez DPH, licence Stock od 890 Kč měsíčně bez DPH. O2 u ní uvádí vzdálenou správu pokladny a výstupy pro účetní.</li>
@@ -888,6 +889,7 @@ export default [
   <li>Basic stojí 69 Kč měsíčně bez DPH, Střední 99 Kč, Prémiová 219 Kč a Gastro 329 Kč.</li>
   <li>Správa skladu a inventury a rozhraní ke snímači čárových kódů jsou od verze Prémiová. U skladu ceník v poznámce zmiňuje poplatek 120,90 Kč za modul.</li>
   <li>Přehled stolů a rozdělení účtu jsou ve verzi Gastro.</li>
+  <li>Podle ceníku lze systém spustit souběžně na několika zařízeních a podle počtu zaměstnanců se neúčtuje víc. Počet zařízení ani příplatek za ně ceník neuvádí.</li>
   <li>Podpora se platí zvlášť: 849 Kč ročně bez DPH, nebo 3 500 Kč bez DPH za hodinu.</li>
   <li>Zmínku o EET 2.0 jsme na webu helloCash k 21. 11. 2026 nenašli. Zeptejte se dodavatele.</li>
 </ul>
@@ -897,7 +899,7 @@ export default [
         id: "moje-eet",
         h2: "MOJE eet",
         html: `
-<p>MOJE eet je bezplatná webová aplikace Finanční správy. Její spuštění je podle <a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">harmonogramu</a> plánované na 1. 12. 2026. Je určená hlavně malým podnikatelům s nižším objemem plateb a nejvýše 2 evidenčními jednotkami. Podle zveřejněného popisu umí evidovat tržby, vést katalog položek s cenami a vytvořit doklad v PDF. Sklad, pokladní tiskárnu ani čtečku popis neuvádí.</p>
+<p>MOJE eet je bezplatná webová aplikace Finanční správy. Její spuštění je podle <a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">harmonogramu</a> plánované na 1. 12. 2026. Je určená hlavně malým podnikatelům s nižším objemem plateb a nejvýše 2 evidenčními jednotkami. Podle <a href="https://eet.gov.cz/cs/zacinam-s-eet/webova-aplikace-moje-eet" rel="noopener">popisu aplikace</a> ji lze použít na jakémkoli zařízení připojeném k internetu a pověření pracovníci mohou být nejvýše 4. Podle zveřejněného popisu umí evidovat tržby, vést katalog položek s cenami a vytvořit doklad v PDF. Sklad, pokladní tiskárnu ani čtečku popis neuvádí.</p>
 <p>Podrobně ji rozebírá článek <a href="moje-eet-nebo-pokladna.html">MOJE eet, nebo pokladní systém</a>.</p>`,
       },
       {
@@ -906,7 +908,8 @@ export default [
         html: `
 <ul>
   <li>Stojí 149 Kč měsíčně nebo 1 490 Kč ročně včetně DPH, stejně pro kterýkoli obor. Prvních 10 dní je zdarma.</li>
-  <li>V každém tarifu je sklad, cenovky, EET 2.0 a až 10 zařízení.</li>
+  <li>V každém placeném tarifu je sklad, EET 2.0 a až 10 zařízení; cenovky jsou v tarifu Obchod.</li>
+  <li>Bez zaplacení pokladna přejde na tarif Zdarma: 1 zařízení, nejvýš 300 položek zboží, bez skladu.</li>
   <li>Běží v prohlížeči na vašem počítači, tabletu nebo mobilu.</li>
   <li>Obsluha je česky, vietnamsky a anglicky.</li>
   <li>Při výpadku internetu prodáváte dál.</li>
@@ -924,7 +927,7 @@ export default [
         h2: "Jak srovnání číst",
         html: `
 <ul>
-  <li>Konkurence uvádí v cenících ceny bez DPH. Přepočet s DPH 21 % jsme doplnili sami.</li>
+  <li>Konkurence uvádí v cenících ceny bez DPH. Přepočet s DPH 21 % v tabulce jsme doplnili sami. V oddílech o konkurenci jsou ceny tak, jak je uvádějí ceníky, bez přepočtu.</li>
   <li>Srovnáváme jen to, co výrobci veřejně uvádějí. Kde údaj chybí, píšeme to.</li>
   <li>Neporovnáváme kvalitu podpory, rychlost ani pohodlí obsluhy. To si ověřte ve zkušební verzi.</li>
   <li>Ceny a funkce se mění. Rozhodující je aktuální nabídka dodavatele.</li>
@@ -935,10 +938,10 @@ export default [
     ],
     faq: [
       ["Která pokladna je nejlevnější?","Zdarma je státní aplikace MOJE eet. Z placených systémů má podle ceníků k 21. 11. 2026 nejnižší vstupní cenu helloCash Basic za 69 Kč měsíčně bez DPH. Se skladem vychází nejlevněji SuperKasa za 149 Kč měsíčně včetně DPH."],
-      ["Proč jsou u konkurence ceny bez DPH i s DPH?","Výrobci uvádějí ceny bez DPH, SuperKasa včetně DPH. Aby se daly porovnat, uvádíme u konkurence obě částky."],
+      ["Proč jsou v tabulce u konkurence ceny bez DPH i s DPH?","Výrobci uvádějí ceny bez DPH, SuperKasa včetně DPH. Aby se daly porovnat, uvádíme v tabulce u konkurence obě částky. V oddílech o konkurenci jsou ceny podle ceníků, bez přepočtu."],
       ["Jak staré jsou údaje ve srovnání?","Jsou z veřejných ceníků k 21. 11. 2026. Zdroje jsou uvedené na konci článku. Před objednávkou si cenu ověřte u dodavatele."],
     ],
-    sources: [["Dotykačka: ceník","https://dotykacka.cz/cenik/"],["O2: pokladní řešení (Storyous)","https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni"],["Storyous: EET 2.0? My jsme připraveni","https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni"],["helloCash: ceny a poplatky","https://hellocash.cz/cena"],["Finanční správa: harmonogram EET 2.0","https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0"],["Finanční správa: Kdy mi postačí webová aplikace MOJE eet","https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace#kdy-mi-postaci-webova-aplikace-moje-eet-821"]],
+    sources: [["Dotykačka: ceník","https://dotykacka.cz/cenik/"],["O2: pokladní řešení (Storyous)","https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni"],["Storyous: EET 2.0? My jsme připraveni","https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni"],["helloCash: ceny a poplatky","https://hellocash.cz/cena"],["Finanční správa: harmonogram EET 2.0","https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0"],["Finanční správa: Kdy mi postačí webová aplikace MOJE eet","https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace#kdy-mi-postaci-webova-aplikace-moje-eet-821"],["Finanční správa: webová aplikace MOJE eet","https://eet.gov.cz/cs/zacinam-s-eet/webova-aplikace-moje-eet"]],
     related: ["jak-vybrat-pokladnu", "moje-eet-nebo-pokladna", "navod-superkasa"],
   },
 ];

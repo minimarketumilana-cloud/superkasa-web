@@ -1465,7 +1465,7 @@ export default {
         id: "kolik-zarizeni",
         h2: "Trong gói có bao nhiêu thiết bị",
         html: `
-<p>Mỗi gói có <strong>tối đa 10 thiết bị</strong>. Mỗi máy tính, máy tính bảng, điện thoại và mỗi trình duyệt đăng nhập như một thiết bị mới đều được tính. Bạn xem số thiết bị đang có trong <strong>Quản lý → Hệ thống → Giấy phép và gói</strong>, ở dòng <strong>Thiết bị</strong>.</p>
+<p>Mỗi gói trả phí có <strong>tối đa 10 thiết bị</strong>, gói Miễn phí có 1 thiết bị. Mỗi máy tính, máy tính bảng, điện thoại và mỗi trình duyệt đăng nhập như một thiết bị mới đều được tính. Bạn xem số thiết bị đang có trong <strong>Quản lý → Hệ thống → Giấy phép và gói</strong>, ở dòng <strong>Thiết bị</strong>.</p>
 <ul>
 <li>Khi đã hết hạn mức, máy hiện <strong>Thay thiết bị cũ</strong>. Bạn chọn thiết bị không còn dùng.</li>
 <li>Bạn gỡ thiết bị cũ trong <strong>Quản lý → Thiết bị</strong> bằng nút <strong>Gỡ bỏ</strong>.</li>
@@ -1691,7 +1691,7 @@ export default {
     title: "SuperKasa, Dotykačka, Storyous, helloCash và MOJE eet: so sánh giá và chức năng",
     metaTitle: "So sánh máy tính tiền: giá, chức năng | SuperKasa",
     desc: "Giá và chức năng của SuperKasa, Dotykačka, Storyous, helloCash và ứng dụng nhà nước MOJE eet. Số liệu từ bảng giá công khai, tính đến 21/11/2026.",
-    lead: "Chúng tôi so sánh bảng giá công khai của bốn hệ thống máy tính tiền và ứng dụng nhà nước MOJE eet. Mỗi số liệu đều có nguồn và ngày. Giá của đối thủ được ghi cả chưa gồm và đã gồm thuế DPH để dễ so sánh.",
+    lead: "Chúng tôi so sánh bảng giá công khai của bốn hệ thống máy tính tiền và ứng dụng nhà nước MOJE eet. Mỗi số liệu đều có nguồn và ngày. Trong bảng so sánh, giá của đối thủ được ghi cả chưa gồm và đã gồm thuế DPH để dễ so sánh.",
     published: "2026-11-12",
     updated: "2026-11-21",
     minutes: 6,
@@ -1700,15 +1700,15 @@ export default {
         id: "prehled",
         h2: "Tổng quan giá và chức năng",
         html: `
-<p>Số liệu lấy từ bảng giá công khai, tính đến 21/11/2026. Giá tính theo tháng khi trả từng tháng. Nhà cung cấp có thể đổi giá, hãy kiểm tra lại trước khi đặt.</p>
+<p>Số liệu lấy từ bảng giá công khai, tính đến 21/11/2026. Giá tính theo tháng khi trả từng tháng; với Storyous, O2 ghi giá “từ” và không nói rõ kỳ thanh toán. Nhà cung cấp có thể đổi giá, hãy kiểm tra lại trước khi đặt.</p>
 <div class="tbl"><table>
   <thead><tr><th>Hệ thống</th><th>Gói thấp nhất</th><th>Gói có kho</th><th>Thiết bị thêm</th><th>EET 2.0</th></tr></thead>
   <tbody>
     <tr><td>SuperKasa</td><td>149 Kč đã gồm DPH (123,14 Kč chưa gồm DPH)</td><td>Cùng một gói, kho đã có trong giá</td><td>Tối đa 10 thiết bị trong giá</td><td>Có, trong giá</td></tr>
-    <tr><td>Dotykačka</td><td>SNADNO 590 Kč chưa gồm DPH (713,90 Kč đã gồm DPH)</td><td>NAPLNO 1 190 Kč chưa gồm DPH (1 439,90 Kč đã gồm DPH)</td><td>Bảng giá không ghi</td><td>Có, trong mọi giấy phép từ 1/1/2027</td></tr>
+    <tr><td>Dotykačka</td><td>SNADNO 590 Kč chưa gồm DPH (713,90 Kč đã gồm DPH)</td><td>NAPLNO 1 190 Kč chưa gồm DPH (1 439,90 Kč đã gồm DPH)</td><td>Mobilní číšník (máy phục vụ di động): SNADNO không có, NAPLNO 1 máy, NEOMEZENĚ không giới hạn; bảng giá không ghi giá của máy tính tiền thêm</td><td>Có, trong mọi giấy phép từ 1/1/2027</td></tr>
     <tr><td>Storyous (chào bán của O2)</td><td>Giấy phép từ 890 Kč chưa gồm DPH (1 076,90 Kč đã gồm DPH); O2 bán kèm bộ thiết bị</td><td>Giấy phép Business từ 890 Kč chưa gồm DPH (1 076,90 Kč đã gồm DPH); O2 ghi có quản lý kho</td><td>Chào bán không ghi</td><td>Theo O2 là có hỗ trợ; nhà sản xuất cho biết đã sẵn sàng</td></tr>
-    <tr><td>helloCash</td><td>Basic 69 Kč chưa gồm DPH (83,49 Kč đã gồm DPH)</td><td>Prémiová 219 Kč chưa gồm DPH (264,99 Kč đã gồm DPH)</td><td>Bảng giá không ghi</td><td>Chúng tôi không tìm thấy thông tin trên trang web</td></tr>
-    <tr><td>MOJE eet</td><td>Miễn phí</td><td>Finanční správa không nhắc đến kho</td><td>Nhiều nhất 2 đơn vị ghi nhận</td><td>Có, ứng dụng nhà nước từ 1/12/2026</td></tr>
+    <tr><td>helloCash</td><td>Basic 69 Kč chưa gồm DPH (83,49 Kč đã gồm DPH)</td><td>Prémiová 219 Kč chưa gồm DPH (264,99 Kč đã gồm DPH)</td><td>Chạy cùng lúc trên nhiều thiết bị; bảng giá không ghi số lượng và phụ phí</td><td>Chúng tôi không tìm thấy thông tin trên trang web</td></tr>
+    <tr><td>MOJE eet</td><td>Miễn phí</td><td>Finanční správa không nhắc đến kho</td><td>Dùng trên bất kỳ thiết bị nào có internet, Finanční správa không ghi số thiết bị; nhiều nhất 2 đơn vị ghi nhận (ví dụ cơ sở kinh doanh) và 4 nhân viên được ủy quyền</td><td>Có, ứng dụng nhà nước từ 1/12/2026</td></tr>
   </tbody>
 </table></div>`,
       },
@@ -1722,6 +1722,7 @@ export default {
   <li>Trả cả năm được giảm 15 %. Nếu dùng máy quẹt thẻ của Dotykačka, giấy phép rẻ hơn tùy theo doanh số thanh toán bằng thẻ.</li>
   <li>Quản lý kho có từ giấy phép NAPLNO. Với SNADNO, bảng giá ghi là không có.</li>
   <li>Chấm công và hệ thống đặt hàng có trong giấy phép NEOMEZENĚ.</li>
+  <li>Với Mobilní číšník (máy phục vụ di động), bảng giá ghi là không có ở giấy phép SNADNO; NAPLNO có 1 máy và NEOMEZENĚ không giới hạn. Bảng giá không ghi giá của máy tính tiền thêm.</li>
   <li>Bảng giá ghi EET 2.0 ở mọi giấy phép từ 1/1/2027.</li>
   <li>Thiết bị máy tính tiền trong bảng giá có giá từ 9 990 Kč đến 22 990 Kč chưa gồm DPH.</li>
 </ul>
@@ -1731,7 +1732,7 @@ export default {
         id: "storyous",
         h2: "Storyous",
         html: `
-<p>Storyous là máy tính tiền chủ yếu dành cho nhà hàng, quán ăn. Chúng tôi không tìm thấy bảng giá công khai trên trang web của Storyous, nên dựa vào <a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">chào bán của nhà phân phối O2</a>, tính đến 21/11/2026. O2 chào bán hai bộ:</p>
+<p>Storyous là máy tính tiền chủ yếu dành cho nhà hàng, quán ăn. Chúng tôi không tìm thấy bảng giá công khai trên trang web của Storyous, nên dựa vào <a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">chào bán của đối tác trên trang web O2</a>, tính đến 21/11/2026. Theo O2, hợp đồng được ký trực tiếp với công ty đối tác, ở đây là Storyous. O2 chào bán hai bộ:</p>
 <ul>
   <li>Storyous Maxi 15": máy tính tiền, máy quẹt thẻ và máy in trong một thiết bị. Bộ thiết bị giá 14 499 Kč chưa gồm DPH, giấy phép Business từ 890 Kč mỗi tháng chưa gồm DPH. O2 ghi kèm quản lý kho, báo cáo và thống kê.</li>
   <li>Storyous Medium 10": máy tính bảng kèm chân đế và máy in. Bộ thiết bị giá 9 999 Kč chưa gồm DPH, giấy phép Stock từ 890 Kč mỗi tháng chưa gồm DPH. O2 ghi kèm quản lý máy từ xa và xuất dữ liệu cho kế toán.</li>
@@ -1750,6 +1751,7 @@ export default {
   <li>Basic giá 69 Kč mỗi tháng chưa gồm DPH, Střední 99 Kč, Prémiová 219 Kč và Gastro 329 Kč.</li>
   <li>Quản lý kho, kiểm kê và kết nối máy quét mã vạch có từ bản Prémiová. Với kho, bảng giá có ghi chú về phí 120,90 Kč cho mỗi mô-đun.</li>
   <li>Sơ đồ bàn và tách hóa đơn có trong bản Gastro.</li>
+  <li>Theo bảng giá, hệ thống chạy được cùng lúc trên nhiều thiết bị và không tính thêm phí theo số nhân viên. Bảng giá không ghi số thiết bị và phụ phí cho thiết bị.</li>
   <li>Hỗ trợ tính phí riêng: 849 Kč mỗi năm chưa gồm DPH, hoặc 3 500 Kč chưa gồm DPH mỗi giờ.</li>
   <li>Tính đến 21/11/2026, chúng tôi không tìm thấy thông tin về EET 2.0 trên trang web của helloCash. Hãy hỏi nhà cung cấp.</li>
 </ul>
@@ -1759,7 +1761,7 @@ export default {
         id: "moje-eet",
         h2: "MOJE eet",
         html: `
-<p>MOJE eet là ứng dụng web miễn phí của Finanční správa (Cục Thuế Séc). Theo <a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">lịch trình</a>, ứng dụng dự kiến chạy từ 1/12/2026. Ứng dụng chủ yếu dành cho người kinh doanh nhỏ có ít khoản thanh toán và nhiều nhất 2 đơn vị ghi nhận. Theo mô tả đã công bố, ứng dụng ghi nhận doanh thu, có danh mục mặt hàng kèm giá và tạo hóa đơn dạng PDF. Mô tả không nhắc đến kho, máy in hóa đơn hay máy quét mã.</p>
+<p>MOJE eet là ứng dụng web miễn phí của Finanční správa (Cục Thuế Séc). Theo <a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">lịch trình</a>, ứng dụng dự kiến chạy từ 1/12/2026. Ứng dụng chủ yếu dành cho người kinh doanh nhỏ có ít khoản thanh toán và nhiều nhất 2 đơn vị ghi nhận. Theo <a href="https://eet.gov.cz/cs/zacinam-s-eet/webova-aplikace-moje-eet" rel="noopener">mô tả ứng dụng</a>, có thể dùng trên bất kỳ thiết bị nào có kết nối internet và có nhiều nhất 4 nhân viên được ủy quyền. Theo mô tả đã công bố, ứng dụng ghi nhận doanh thu, có danh mục mặt hàng kèm giá và tạo hóa đơn dạng PDF. Mô tả không nhắc đến kho, máy in hóa đơn hay máy quét mã.</p>
 <p>Xem chi tiết trong bài <a href="moje-eet-nebo-pokladna.html">MOJE eet hay hệ thống máy tính tiền</a>.</p>`,
       },
       {
@@ -1768,7 +1770,8 @@ export default {
         html: `
 <ul>
   <li>Giá 149 Kč mỗi tháng hoặc 1 490 Kč mỗi năm, đã gồm thuế DPH, như nhau cho mọi ngành hàng. 10 ngày đầu miễn phí.</li>
-  <li>Mọi gói đều có kho, nhãn giá, EET 2.0 và tối đa 10 thiết bị.</li>
+  <li>Mọi gói trả phí đều có kho, EET 2.0 và tối đa 10 thiết bị; nhãn giá có trong gói Cửa hàng.</li>
+  <li>Nếu không trả phí, máy chuyển sang gói Miễn phí: 1 thiết bị, nhiều nhất 300 mặt hàng, không có kho.</li>
   <li>Chạy trên trình duyệt ở máy tính, máy tính bảng hoặc điện thoại của bạn.</li>
   <li>Giao diện có tiếng Séc, tiếng Việt và tiếng Anh.</li>
   <li>Mất internet bạn vẫn bán tiếp được.</li>
@@ -1786,7 +1789,7 @@ export default {
         h2: "Cách đọc bài so sánh",
         html: `
 <ul>
-  <li>Đối thủ ghi giá chưa gồm thuế DPH trong bảng giá. Phần quy đổi đã gồm DPH 21 % là do chúng tôi tự tính.</li>
+  <li>Đối thủ ghi giá chưa gồm thuế DPH trong bảng giá. Phần quy đổi đã gồm DPH 21 % trong bảng so sánh là do chúng tôi tự tính. Ở các phần về từng đối thủ, giá được ghi đúng như trong bảng giá, không quy đổi.</li>
   <li>Chúng tôi chỉ so sánh những gì nhà sản xuất công bố công khai. Chỗ nào thiếu thông tin, chúng tôi ghi rõ.</li>
   <li>Chúng tôi không so sánh chất lượng hỗ trợ, tốc độ hay sự tiện lợi khi dùng. Bạn hãy tự thử bằng bản dùng thử.</li>
   <li>Giá và chức năng có thể thay đổi. Chào bán hiện tại của nhà cung cấp mới là căn cứ.</li>
@@ -1797,10 +1800,10 @@ export default {
     ],
     faq: [
       ["Máy tính tiền nào rẻ nhất?","Ứng dụng nhà nước MOJE eet là miễn phí. Trong các hệ thống trả phí, theo bảng giá tính đến 21/11/2026, helloCash Basic có giá khởi điểm thấp nhất: 69 Kč mỗi tháng chưa gồm DPH. Nếu cần kho thì SuperKasa rẻ nhất: 149 Kč mỗi tháng đã gồm DPH."],
-      ["Vì sao giá của đối thủ ghi cả chưa gồm và đã gồm DPH?","Các nhà sản xuất ghi giá chưa gồm DPH, còn SuperKasa ghi giá đã gồm DPH. Để so sánh được, chúng tôi ghi cả hai số cho đối thủ."],
+      ["Vì sao trong bảng so sánh, giá của đối thủ ghi cả chưa gồm và đã gồm DPH?","Các nhà sản xuất ghi giá chưa gồm DPH, còn SuperKasa ghi giá đã gồm DPH. Để so sánh được, trong bảng so sánh chúng tôi ghi cả hai số cho đối thủ. Ở các phần về từng đối thủ, giá được ghi đúng như trong bảng giá, không quy đổi."],
       ["Số liệu trong bài so sánh có từ khi nào?","Từ bảng giá công khai, tính đến 21/11/2026. Nguồn được ghi ở cuối bài. Trước khi đặt, hãy kiểm tra giá với nhà cung cấp."],
     ],
-    sources: [["Dotykačka: bảng giá","https://dotykacka.cz/cenik/"],["O2: giải pháp máy tính tiền (Storyous)","https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni"],["Storyous: EET 2.0? My jsme připraveni","https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni"],["helloCash: giá và phí","https://hellocash.cz/cena"],["Finanční správa: lịch trình EET 2.0","https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0"],["Finanční správa: khi nào ứng dụng web MOJE eet là đủ","https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace#kdy-mi-postaci-webova-aplikace-moje-eet-821"]],
+    sources: [["Dotykačka: bảng giá","https://dotykacka.cz/cenik/"],["O2: giải pháp máy tính tiền (Storyous)","https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni"],["Storyous: EET 2.0? My jsme připraveni","https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni"],["helloCash: giá và phí","https://hellocash.cz/cena"],["Finanční správa: lịch trình EET 2.0","https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0"],["Finanční správa: khi nào ứng dụng web MOJE eet là đủ","https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace#kdy-mi-postaci-webova-aplikace-moje-eet-821"],["Finanční správa: ứng dụng web MOJE eet","https://eet.gov.cz/cs/zacinam-s-eet/webova-aplikace-moje-eet"]],
     related: ["jak-vybrat-pokladnu", "moje-eet-nebo-pokladna", "navod-superkasa"],
   },
   ],
