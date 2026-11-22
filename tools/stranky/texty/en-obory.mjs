@@ -3,7 +3,7 @@
 
 const EAT_IN_TIPS = [
   "Eat in / Take away and tips",
-  "One switch sells eat in or take away – the receipt uses the correct VAT rate and the price stays the same. Tips are recorded outside sales and EET, and the POS watches the 7% limit for tax exemption (from 1 Jan 2027). Both are included in the plan price.",
+  "One switch sells eat in or take away – the receipt uses the correct VAT rate and the price stays the same. Employee tips are recorded outside sales and EET, tips the business keeps go to sales and EET, and the POS watches the 7% limit for tax exemption (from 1 Jan 2027). Both are included in the plan price.",
 ];
 
 const DRINKS_VAT =
@@ -84,7 +84,7 @@ export default {
     display: ["Customer display", "A second screen for the customer showing the purchase and the QR payment."],
     qr: ["QR payments", "Bank transfer payment via a QR code on the display and on the receipt."],
     tables: ["Tables and bills", "Table bills for pubs and restaurants: adding items, splitting, moving, kitchen and bar tickets."],
-    tips: ["Tips", "Tips outside sales and EET: who, how much, cash or card; a monthly overview that watches the 7% limit for tax exemption."],
+    tips: ["Tips", "Employee tips outside sales and EET, business tips as sales with EET: who, how much, cash or card; a monthly overview that watches the 7% limit for tax exemption."],
   },
   tariffs: {
     obchod: "Shop",

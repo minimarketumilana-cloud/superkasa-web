@@ -23,7 +23,7 @@ export const GROUPS = {
 const DRINKS_VAT = "Nealko nápoje a káva podávané v kavárně, hospodě nebo restauraci mají do konce roku 2026 sazbu 21 %, od 1. 1. 2027 sazbu 12 %. Při prodeji s sebou zůstává 21 % – na pokladně přepnete Na místě / S sebou a doklad použije správnou sazbu. Pokladna při zřízení použije sazbu platnou k tomu dni – ověřte ji s účetní.";
 
 // Prodej na místě / s sebou a spropitné (zdarma v tarifu Gastro) – společný bod pro kavárnu, cukrárnu a hospodu.
-const GASTRO_2027 = ["cup", "Na místě / S sebou a spropitné", "Jedním přepínačem prodáte na místě nebo s sebou – doklad použije správnou sazbu DPH, cena se nemění. Spropitné zapíšete mimo tržbu a EET a pokladna hlídá limit 7 % pro osvobození od daně (od 1. 1. 2027). Obojí je v ceně tarifu."];
+const GASTRO_2027 = ["cup", "Na místě / S sebou a spropitné", "Jedním přepínačem prodáte na místě nebo s sebou – doklad použije správnou sazbu DPH, cena se nemění. Spropitné zaměstnanců zapíšete mimo tržbu a EET, spropitné, které si nechává podnik, jde do tržeb a EET. Pokladna hlídá limit 7 % pro osvobození od daně (od 1. 1. 2027). Obojí je v ceně tarifu."];
 
 export const FEATURES = {
   stock: ["Sklad", "Příjem zboží, inventura, stav na dlaždici, co dochází a návrh objednávky."],
@@ -35,7 +35,7 @@ export const FEATURES = {
   display: ["Zákaznický displej", "Druhá obrazovka pro zákazníka s nákupem a QR platbou."],
   qr: ["QR platby", "Platba převodem přes QR kód na displeji a na účtence."],
   tables: ["Stoly a účty", "Účty na stůl pro hospodu a restauraci: doplňování, rozdělení, přesun, bony do kuchyně a na výčep."],
-  tips: ["Spropitné", "Spropitné mimo tržbu a EET: komu, kolik, hotově nebo kartou; přehled za měsíc s hlídáním limitu 7 % pro osvobození od daně."],
+  tips: ["Spropitné", "Spropitné zaměstnanců mimo tržbu a EET, spropitné podniku jako tržba s EET: komu, kolik, hotově nebo kartou; přehled za měsíc s hlídáním limitu 7 % pro osvobození od daně."],
 };
 export const FEATURE_ORDER = ["stock", "expiry", "labels", "deposits", "scale", "promo", "display", "qr", "tables", "tips"];
 

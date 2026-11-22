@@ -3,7 +3,7 @@
 // Opakované texty (Na místě / S sebou a spropitné, sazby DPH u nápojů, společné body).
 const NA_MISTE = [
   "Ăn tại chỗ / Mang đi và tiền boa",
-  "Chỉ một nút gạt là bạn bán ăn tại chỗ hoặc mang đi – hóa đơn tự dùng đúng mức thuế DPH, giá bán không đổi. Tiền boa được ghi riêng, không tính vào doanh thu và EET, và máy theo dõi giới hạn 7 % để được miễn thuế (từ 1/1/2027). Cả hai đều đã có trong giá gói.",
+  "Chỉ một nút gạt là bạn bán ăn tại chỗ hoặc mang đi – hóa đơn tự dùng đúng mức thuế DPH, giá bán không đổi. Tiền boa của nhân viên được ghi riêng, không tính vào doanh thu và EET; tiền boa do doanh nghiệp giữ lại được tính vào doanh thu và EET. Máy theo dõi giới hạn 7 % để được miễn thuế (từ 1/1/2027). Cả hai đều đã có trong giá gói.",
 ];
 const NAPOJE_DPH =
   "Nước giải khát và cà phê phục vụ tại quán cà phê, quán bia hay nhà hàng chịu thuế DPH 21 % đến hết năm 2026, từ 1/1/2027 là 12 %. Mang đi vẫn là 21 % – trên máy bạn gạt Ăn tại chỗ / Mang đi và hóa đơn tự dùng đúng mức thuế. Khi cài đặt, máy dùng mức thuế có hiệu lực vào ngày đó – hãy kiểm tra lại với kế toán.";
@@ -91,7 +91,7 @@ export default {
     ],
     tips: [
       "Tiền boa",
-      "Tiền boa ngoài doanh thu và EET: cho ai, bao nhiêu, tiền mặt hay thẻ; tổng kết theo tháng và theo dõi giới hạn 7 % để được miễn thuế.",
+      "Tiền boa của nhân viên ngoài doanh thu và EET, tiền boa của doanh nghiệp tính vào doanh thu và EET: cho ai, bao nhiêu, tiền mặt hay thẻ; tổng kết theo tháng và theo dõi giới hạn 7 % để được miễn thuế.",
     ],
   },
   tariffs: {
