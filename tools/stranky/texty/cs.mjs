@@ -8,8 +8,16 @@ const kc = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "&nbsp;");
 
 export default {
   common: {
+    bundle: {
+      title: "SuperKasa a E-shop super",
+      lead: 'Pokladna SuperKasa a e-shop <a href="https://eshopsuper.cz/">E-shop super</a> jsou od stejného výrobce. Kdo platí jedno z nich, má druhé zdarma.',
+      cards: [
+        ["K placené SuperKase e-shop zdarma", 'E-shop do 100 položek máte k placené SuperKase zdarma, propojený s pokladnou. Větší e-shop (1 000 a víc položek) doplácíte podle ceníku na <a href="https://eshopsuper.cz/">eshopsuper.cz</a>.'],
+        ["K placenému E-shopu super SuperKasa zdarma", 'Kdo platí kterýkoli placený tarif E-shopu super, má SuperKasu zdarma. E-shop stojí od 99 Kč měsíčně s DPH, tarify jsou na <a href="https://eshopsuper.cz/">eshopsuper.cz</a>.'],
+      ],
+    },
     nav: ["Úvod", "Pro koho", "Funkce", "Ceník", "EET 2.0", "Návody", "Jak začít", "Kontakt"],
-    priceBtn: "149 Kč/měsíc",
+    priceBtn: "99 Kč/měsíc",
     loginBtn: "Přihlásit",
     loginSoon: "",
     loginAria: "Přihlásit se do pokladny",
@@ -48,7 +56,7 @@ export default {
     /** Doplněk titulku stránky oboru (jen když se celý titulek vejde do 60 znaků). */
     oborTitleEet: " s EET 2.0",
     /** Konec popisku stránky oboru: cena a zkouška (hasEet = popisek už EET 2.0 zmiňuje). */
-    oborDescTail: (hasEet) => (hasEet ? "149 Kč měsíčně s DPH, 10 dní zdarma." : "Pokladna s EET 2.0 za 149 Kč měsíčně s DPH, 10 dní zdarma."),
+    oborDescTail: (hasEet) => (hasEet ? "99 Kč měsíčně s DPH, 10 dní zdarma." : "Pokladna s EET 2.0 za 99 Kč měsíčně s DPH, 10 dní zdarma."),
   },
 
   picker: {
@@ -57,7 +65,7 @@ export default {
   },
 
   obor: {
-    tariffBadge: (name) => `Tarif <strong>${name}</strong> · 149 Kč měsíčně s DPH`,
+    tariffBadge: (name) => `Tarif <strong>${name}</strong> · 99 Kč měsíčně s DPH`,
     pricing: "Ceník",
     heroNote: '10 dní zkouška zdarma. Pokladnu <a href="https://app.superkasa.cz/">založíte v prohlížeči</a>, nic se nestahuje ani neinstaluje.',
     readyTitle: "Co bude připravené hned po spuštění",
@@ -72,7 +80,7 @@ export default {
     alwaysOn: "Prodej, EET 2.0, účtenky, hotovost a uzávěrka fungují vždy.",
     usefulTitle: "Co se vám bude hodit",
     tariffTitle: (name) => `Tarif ${name}`,
-    tariffLead: "149 Kč měsíčně nebo 1 490 Kč ročně, vždy včetně DPH. Prvních 10 dní zdarma.",
+    tariffLead: "99 Kč měsíčně nebo 990 Kč ročně, vždy včetně DPH. Prvních 10 dní zdarma.",
     onTitle: "Zapnuto hned po spuštění",
     moreTitle: "Můžete kdykoli zapnout",
     otherTitle: "Další funkce",
@@ -107,7 +115,7 @@ export default {
     faq: [
       ["Co výběr oboru v pokladně nastaví?", "Skupiny zboží se sazbami DPH, dlaždice, ukázkové položky a funkce, které se pro váš provoz hodí. Všechno uvidíte a upravíte, než pokladnu založíte."],
       ["Co když svůj obor v seznamu nenajdu?", 'Při zřízení pokladny popište vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky. Nebo vyberte <a href="pokladna-obchod.html">Jiný obchod</a> či <a href="pokladna-sluzby.html">Jiné služby</a> a skupiny si upravte podle sebe.'],
-      ["Liší se cena podle oboru?", 'Ne. Cena je pro kterýkoli obor stejná: 149 Kč měsíčně nebo 1 490 Kč ročně včetně DPH. <a href="cenik.html">Ceník</a>'],
+      ["Liší se cena podle oboru?", 'Ne. Cena je pro kterýkoli obor stejná: 99 Kč měsíčně nebo 990 Kč ročně včetně DPH. <a href="cenik.html">Ceník</a>'],
       ["Hodí se SuperKasa i pro hospodu nebo restauraci se stoly?", 'Ano. Nastavení <a href="pokladna-hospoda-restaurace.html">Hospoda, bar, restaurace</a> má stoly a účty na stůl.'],
       ["Musím sazby DPH nastavovat sám?", "Ne. Pokladna připraví skupiny i se sazbami DPH. Před ostrým prodejem je ověřte s účetní."],
     ],
@@ -118,7 +126,7 @@ export default {
 
   index: {
     title: "SuperKasa – pokladna s EET 2.0 nastavená pro váš obor",
-    desc: "Dotyková pokladna v prohlížeči pro obchody, gastro a služby. EET 2.0, sklad, cenovky, obsluha vietnamsky. 149 Kč měsíčně s DPH, 10 dní zdarma.",
+    desc: "Dotyková pokladna v prohlížeči pro obchody, gastro a služby. EET 2.0, sklad, cenovky, obsluha vietnamsky. 99 Kč měsíčně s DPH, 10 dní zdarma.",
     ldDesc: "SuperKasa je pokladní systém v prohlížeči pro obchody, gastro a služby. Obsluha je dostupná česky, vietnamsky a anglicky.",
     ldOffer: "Měsíčně včetně DPH, prvních 10 dní zdarma",
     ldOfferBuy: "Koupě licence: bez časového omezení, 2 roky aktualizací a podpory",
@@ -126,7 +134,7 @@ export default {
     faq: [
       ["Co je SuperKasa?", "SuperKasa je pokladní systém v prohlížeči pro obchody, gastro a služby. Umí prodej na dotyk, sklad, cenovky a evidenci tržeb EET 2.0. Obsluha si ji přepne do češtiny, vietnamštiny nebo angličtiny."],
       ["Musím něco instalovat?", 'Ne. SuperKasa běží v prohlížeči na počítači, tabletu i mobilu – nic se nestahuje ani neinstaluje. V každém placeném tarifu je až 10 zařízení. <a href="jak-zacit.html">Jak začít</a>'],
-      ["Kolik SuperKasa stojí?", '149 Kč měsíčně nebo 1 490 Kč ročně včetně DPH, stejně pro kterýkoli obor. Kasu můžete také koupit za 4 000 Kč jednorázově, se 2 roky nových funkcí a podpory. Prvních 10 dní je zdarma, bez karty a bez závazku. Z vašich tržeb si nic nebereme. <a href="cenik.html">Ceník</a>'],
+      ["Kolik SuperKasa stojí?", '99 Kč měsíčně nebo 990 Kč ročně včetně DPH, stejně pro kterýkoli obor. Kasu můžete také koupit za 2 990 Kč jednorázově, se 2 roky nových funkcí a podpory. Prvních 10 dní je zdarma, bez karty a bez závazku. Z vašich tržeb si nic nebereme. <a href="cenik.html">Ceník</a>'],
       ["Je SuperKasa připravená na EET 2.0?", 'Ano. Evidence tržeb EET 2.0 začíná 1. 1. 2027. S pokladním certifikátem z DIS+ zapnete ostré odesílání tržeb ve Správě → EET 2.0. <a href="eet.html">Jak na EET 2.0</a>'],
       ["Co když vypadne internet?", "Prodáváte dál hotově i kartou. Účtenky se po připojení nahrají samy a do EET jdou s původním časem."],
       ["Umí SuperKasa vietnamsky?", 'Ano. Obsluha je česky, vietnamsky i anglicky a každý prodavač má svůj jazyk. Doklad pro zákazníka je vždy česky. <a href="pokladna-pro-vietnamske-obchody.html">Pokladna pro vietnamské obchody</a>'],
@@ -150,7 +158,7 @@ export default {
     whyTitle: "Proč SuperKasa",
     whyLead: "Plná pokladna se skladem a cenovkami za jednu nízkou cenu – bez skrytých poplatků a bez drahého hardwaru.",
     whyCards: [
-      ["149 Kč měsíčně včetně DPH", 'Konečná cena pro kterýkoli obor, ročně 1 490 Kč. <strong>Neomezeně položek</strong> – sklad, akce i zákaznický displej jsou v ceně každého placeného tarifu. Prvních 10 dní zdarma. <a href="cenik.html">Ceník</a>'],
+      ["99 Kč měsíčně včetně DPH", 'Konečná cena pro kterýkoli obor, ročně 990 Kč. <strong>Neomezeně položek</strong> – sklad, akce i zákaznický displej jsou v ceně každého placeného tarifu. Prvních 10 dní zdarma. <a href="cenik.html">Ceník</a>'],
       ["Bez transakčních poplatků", "Z vašich tržeb si nic nebereme a terminál od nás mít nemusíte. Kartou se platí přes váš vlastní platební terminál od kterékoli banky. Zákazník může zaplatit i hotově nebo QR kódem."],
       ["Počítač, tablet i mobil", "Hlavní pokladna na počítači s dotykovým monitorem, další na tabletu a mobilu – všechno v prohlížeči. <strong>Až 10 zařízení</strong> v ceně tarifu a všechna prodávají do jedné společné směny. Třeba pokladna, tablet na příjem zboží a mobil majitele."],
       ["Funguje i bez internetu", "Při výpadku internetu prodáváte dál hotově i kartou. Účtenky se po připojení nahrají samy a do EET jdou s původním časem. Data se každý den zálohují na serveru i mimo něj."],
@@ -158,14 +166,14 @@ export default {
       ["Sklad v ceně tarifu", 'Příjem zboží skenováním, inventura a návrh objednávky v každém placeném tarifu, pro obchody i expirace a cenovky na pokladní tiskárně. Docházku, věrnostní program nebo rezervace si přidáte, jen když je chcete. <a href="cenik.html#doplnky">Doplňky</a>'],
     ],
     heroCta: ["Vyzkoušet 10 dní zdarma", "Jak začít"],
-    heroFacts: ["Připraveno na EET 2.0 od 1. 1. 2027", "149 Kč měsíčně s DPH, 10 dní zdarma", "Až 10 zařízení: počítač, tablet, mobil", "Obsluha česky, vietnamsky i anglicky", "Účtenka z mobilu vyjede u hlavní kasy"],
+    heroFacts: ["Připraveno na EET 2.0 od 1. 1. 2027", "99 Kč měsíčně s DPH, 10 dní zdarma", "Až 10 zařízení: počítač, tablet, mobil", "Obsluha česky, vietnamsky i anglicky", "Účtenka z mobilu vyjede u hlavní kasy"],
     heroCtaNote: "Bez karty a bez závazku. V prohlížeči na počítači, tabletu i mobilu – nic se nestahuje ani neinstaluje.",
     newTitle: "Novinky v pokladně",
     newLead: "SuperKasu vyvíjíme každý týden. Tyto novinky přibyly v poslední době – všechny v ceně tarifu.",
     newCards: [
       ["Upozornění do telefonu", "O každém prodeji se dozvíte hned v telefonu – částka, platba, prodavač i položky. Zdarma a bez další aplikace, upozornění můžete kdykoli vypnout. Na iPhonu z ikony na ploše."],
       ["Sdílená databáze zboží s fotkami", "Naskenujete neznámý kód a pokladna sama doplní název i fotku ze sdílené databáze SuperKasa. Vy jen zkontrolujete název a zadáte cenu."],
-      ["Propojení s E-shopem super", 'Objednávky z vašeho e-shopu na <a href="https://eshopsuper.cz/">eshopsuper.cz</a> pokladna vám na přání oznámí a e-shop spravujete z pokladny bez dalšího hesla. Sklad pokladny a e-shopu zůstává oddělený. E-shop super se platí zvlášť podle svého ceníku.'],
+      ["Propojení s E-shopem super", 'Objednávky z vašeho e-shopu na <a href="https://eshopsuper.cz/">eshopsuper.cz</a> pokladna vám na přání oznámí a e-shop spravujete z pokladny bez dalšího hesla. Sklad pokladny a e-shopu zůstává oddělený. K placené SuperKase je E-shop super do 100 položek zdarma, větší e-shop doplácíte podle ceníku na eshopsuper.cz.'],
       ["Pokladna v mobilu, tisk u hlavní kasy", "Na telefonu je nahoře hledání a čtečka, hned pod nimi nákup. Účtenka i cenovky vyjedou z tiskárny u hlavní kasy – přes internet, mobil nemusí být na stejné Wi-Fi."],
       ["Tiskárna nastavená za minutu", "Průvodce vás nastavením provede krok za krokem: u počítače tisk přes prohlížeč, u tabletu a mobilu s Androidem připojí tiskárnu přes Bluetooth nebo USB. Hned vytisknete zkoušku."],
       ["Podklady pro účetní", "Tržby po dnech podle sazeb DPH a způsobu platby, oceněný sklad, doklady a uzávěrky – jedním klepnutím do Excelu."],
@@ -240,7 +248,7 @@ export default {
       ["Cenovky na pokladní tiskárně", "Cenovky vytisknete na pokladní tiskárně (Epson TM-T88 a kompatibilní), na etiketové tiskárně nebo na A4. S cenou za kg, litr nebo 100 g, akční přeškrtnutou cenou a čárovým kódem. Snadno vyberete zboží, kterému se změnila cena."],
       ["Sdílená databáze zboží s fotkami", "Naskenujete neznámý kód a pokladna sama dohledá název i fotku ve sdílené databázi SuperKasa – i u cigaret a místních výrobků. Vy jen zkontrolujete název a doplníte cenu. Do databáze se posílá jen kód, název, balení, skupina, DPH a fotka zboží – nikdy ceny, prodeje ani údaje o obchodě. Přispívání vypnete ve Správě → Systém."],
       ["Import zboží", "Zboží načtete ze souboru CSV, třeba z exportu jiné pokladny. Opakovaný import nic nezdvojí, jen aktualizuje ceny. Fotky zboží se doplní podle EAN."],
-      ["Propojení s E-shopem super", 'Objednávky z <a href="https://eshopsuper.cz/">E-shopu super</a> vám pokladna na přání oznámí, i do telefonu. Sklad pokladny a e-shopu zůstává oddělený. Propojíte jednou, pak e-shop spravujete z pokladny bez dalšího hesla. E-shop super není v ceně SuperKasy: platí se zvlášť podle ceníku na eshopsuper.cz a propojení se SuperKasou tam je od tarifu Plus.'],
+      ["Propojení s E-shopem super", 'Objednávky z <a href="https://eshopsuper.cz/">E-shopu super</a> vám pokladna na přání oznámí, i do telefonu. Sklad pokladny a e-shopu zůstává oddělený. Propojíte jednou, pak e-shop spravujete z pokladny bez dalšího hesla. K placené SuperKase je E-shop super do 100 položek zdarma; větší e-shop doplácíte podle ceníku na eshopsuper.cz.'],
       ["Nastavená pro váš obor", '<p>Podle oboru se založí skupiny s DPH, dlaždice a ukázkové položky – pečivo, ovoce, zelenina, zálohy, káva nebo služby. <a href="obory.html">Vyberte svůj obor</a></p><p>Nebo popíšete vlastními slovy, co prodáváte, a pokladna navrhne skupiny s DPH, obrázky a první položky – zdarma a bez internetu, česky, vietnamsky i anglicky. Návrh uvidíte a upravíte. Sazby DPH ověřte s účetní.</p>'],
     ],
     provozTitle: "Obsluha a provoz",
@@ -262,13 +270,13 @@ export default {
     addonsTitle: "Placené doplňky",
     addonsLead: 'Funkce nad tarif, které si přidáte jen tehdy, když je opravdu využijete. Stejná cena ve všech oborech, ve 10denní zkoušce zdarma. <a href="cenik.html#doplnky">Ceník doplňků</a>',
     addonMeta: (price, kinds) => `<strong>${price} Kč měsíčně s DPH</strong> · pro obory ${kinds} · <a href="cenik.html#doplnky">Ceník doplňků</a>`,
-    payCard: ["Platíte jen to, co zapnete", 'Doplněk se platí k tarifu (149 Kč) zvlášť, ročně za cenu 10 měsíců. Bez závazku – odemkne ho stejný licenční klíč jako tarif a zapnete ho ve Správě → Systém → Funkce pokladny. <a href="cenik.html#doplnky">Ceník</a>'],
+    payCard: ["Platíte jen to, co zapnete", 'Doplněk se platí k tarifu (99 Kč) zvlášť, ročně za cenu 10 měsíců. Bez závazku – odemkne ho stejný licenční klíč jako tarif a zapnete ho ve Správě → Systém → Funkce pokladny. <a href="cenik.html#doplnky">Ceník</a>'],
     cta: ["Chybí vám nějaká funkce?", "Zavolejte nám a popište, co ve vašem provozu potřebujete. SuperKasu dál rozvíjíme podle potřeb obchodů."],
   },
 
   cenik: {
-    title: "Ceník SuperKasa – 149 Kč měsíčně s DPH, 10 dní zdarma",
-    desc: "Tarify Obchod, Gastro a Služby za 149 Kč měsíčně nebo 1 490 Kč ročně včetně DPH. 10 dní zdarma, pokladna běží v prohlížeči. Doplňky od 69 Kč.",
+    title: "Ceník SuperKasa – 99 Kč měsíčně s DPH, 10 dní zdarma",
+    desc: "Tarify Obchod, Gastro a Služby za 99 Kč měsíčně nebo 990 Kč ročně včetně DPH. 10 dní zdarma, pokladna běží v prohlížeči. Doplňky od 69 Kč.",
     planText: {
       obchod: "Potraviny, večerka, trafika, drogerie, oblečení a všechny další obchody – včetně váhy a záloh.",
       gastro: "Kavárna, bistro, stánek, cukrárna, hospoda, bar a restaurace.",
@@ -277,8 +285,8 @@ export default {
     planBase: ["Prodej na dotykové obrazovce", "EET 2.0 a účtenky", "Hotovost a uzávěrky", "Až 10 pokladních zařízení"],
     planExtraGastro: "Na místě / S sebou (sazba DPH s sebou)",
     planAllBadge: "Všechny funkce",
-    planPrice: "149 Kč<small>/měsíc</small>",
-    planYear: "nebo 1 490 Kč ročně · včetně DPH",
+    planPrice: "99 Kč<small>/měsíc</small>",
+    planYear: "nebo 990 Kč ročně · včetně DPH",
     planObory: "Obory:",
     addonPrice: (n) => `${n} Kč<small>/měsíc</small>`,
     addonYear: (n) => `nebo ${kc(n)} Kč ročně · včetně DPH`,
@@ -290,8 +298,8 @@ export default {
     no: "ne",
     h1: "Ceník pokladny",
     lead: "Jedna cena pro všechny obory. Tarif se řídí typem provozu a liší se jen funkcemi, které váš obor potřebuje. SuperKasa je určená podnikatelům (s IČO), ne spotřebitelům.",
-    boxAmount: "149 Kč <span>měsíčně včetně DPH</span>",
-    boxYear: "nebo <strong>1 490 Kč ročně</strong> – 2 měsíce zdarma",
+    boxAmount: "99 Kč <span>měsíčně včetně DPH</span>",
+    boxYear: "nebo <strong>990 Kč ročně</strong> – 2 měsíce zdarma",
     boxTag: "10 dní zkouška zdarma",
     boxText: "Platí pro všechny tarify: Obchod, Gastro a Služby.",
     everyTitle: "V každém placeném tarifu",
@@ -309,20 +317,20 @@ export default {
     addonsTitle: "Placené doplňky",
     addonsLead: "Tarif obsahuje všechno pro běžný prodej. Když potřebujete víc, přidáte si jen ten doplněk, který opravdu využijete – za stejnou cenu ve všech oborech.",
     trialAddons: ["Ve zkoušce zdarma", "Ve 10denní zkoušce si vyzkoušíte všechny doplňky zdarma. Bez závazku – platí se jen to, co zapnete, a doplněk můžete kdykoli zase vypnout.", "Doplňky zapnete ve Správě → Systém → Funkce pokladny. Po zkoušce si je vyberete při placení (Zaplatit v liště nahoře nebo Správa → Systém → Licence a tarif) a zaplatíte jedním QR kódem spolu s tarifem. Když doplněk přidáte během zaplaceného období, doplatíte jen zbytek období."],
-    addonsNote: "Ceny jsou měsíčně včetně DPH a platí k tarifu (149 Kč). Ročně platíte za doplněk 10 měsíců. Prodej Na místě / S sebou a evidence spropitného jsou v tarifech zdarma, nejsou to placené doplňky. Doplňky lze používat jen v pronájmu, ke koupené licenci je přidat nejde.",
+    addonsNote: "Ceny jsou měsíčně včetně DPH a platí k tarifu (99 Kč). Ročně platíte za doplněk 10 měsíců. Prodej Na místě / S sebou a evidence spropitného jsou v tarifech zdarma, nejsou to placené doplňky. Doplňky lze používat jen v pronájmu, ke koupené licenci je přidat nejde.",
     compareTitle: "Srovnání tarifů",
-    compareLead: "Všechny tarify stojí stejně – 149 Kč měsíčně nebo 1 490 Kč ročně včetně DPH.",
+    compareLead: "Všechny tarify stojí stejně – 99 Kč měsíčně nebo 990 Kč ročně včetně DPH.",
     rentTitle: "Jak se platí",
-    rent: ["Pronájem", "149 Kč měsíčně nebo 1 490 Kč ročně (2 měsíce zdarma), vždy včetně DPH. Aktualizace, nové funkce a podpora jsou vždy v ceně. Pronájem platí do zaplaceného data a automaticky se neprodlužuje."],
+    rent: ["Pronájem", "99 Kč měsíčně nebo 990 Kč ročně (2 měsíce zdarma), vždy včetně DPH. Aktualizace, nové funkce a podpora jsou vždy v ceně. Pronájem platí do zaplaceného data a automaticky se neprodlužuje."],
     buy: ["Všechno v ceně", "Pokladna běží v prohlížeči, nic se neinstaluje. Zálohy a provoz SuperKasa Cloud jsou v ceně pronájmu i koupě. Bez závazku: když další období pronájmu nezaplatíte, pokladna přejde na omezený tarif Zdarma."],
-    purchase: ["Koupě licence", "4 000 Kč jednorázově včetně DPH. Licenci můžete používat bez časového omezení. V ceně jsou <strong>2 roky</strong> nových funkcí, podpory a záruky. Potom kasa dál funguje bez omezení, jen bez nových funkcí a podpory. Zákonné úpravy (EET 2.0, změny DPH) a bezpečnostní opravy dostane vždy zdarma. Koupená licence je tarif bez placených doplňků; doplňky lze používat jen v pronájmu. Proti ročnímu pronájmu se vyplatí, když chcete kasu na 3 a více let a nové funkce po dvou letech nepotřebujete.", 'Koupená kasa běží stejně jako pronajatá jen v SuperKasa Cloud, na vaše zařízení se nic neinstaluje. Provoz a zálohy jsou v ceně koupě. Licence zaniká ukončením provozu SuperKasa Cloud, nebo výpovědí při podstatném porušení podmínek. Ukončení provozu z jiného důvodu oznámíme nejméně 6 měsíců předem, umožníme export dat a vrátíme poměrnou část ceny koupě za dobu kratší než 5 let od zaplacení. Podrobnosti jsou v článku 5a <a href="obchodni-podminky.html">obchodních podmínek</a>.'],
+    purchase: ["Koupě licence", "2 990 Kč jednorázově včetně DPH. Licenci můžete používat bez časového omezení. V ceně jsou <strong>2 roky</strong> nových funkcí, podpory a záruky. Potom kasa dál funguje bez omezení, jen bez nových funkcí a podpory. Zákonné úpravy (EET 2.0, změny DPH) a bezpečnostní opravy dostane vždy zdarma. Koupená licence je tarif bez placených doplňků; doplňky lze používat jen v pronájmu. Proti ročnímu pronájmu se vyplatí, když chcete kasu na víc než 3 roky a nové funkce po dvou letech nepotřebujete.", 'Koupená kasa běží stejně jako pronajatá jen v SuperKasa Cloud, na vaše zařízení se nic neinstaluje. Provoz a zálohy jsou v ceně koupě. Licence zaniká ukončením provozu SuperKasa Cloud, nebo výpovědí při podstatném porušení podmínek. Ukončení provozu z jiného důvodu oznámíme nejméně 6 měsíců předem, umožníme export dat a vrátíme poměrnou část ceny koupě za dobu kratší než 5 let od zaplacení. Podrobnosti jsou v článku 5a <a href="obchodni-podminky.html">obchodních podmínek</a>.'],
     renew: ["Prodloužení aktualizací", "Ke koupené licenci si nové funkce a podporu prodloužíte za <strong>990 Kč na rok</strong> včetně DPH, kdykoli i po skončení. Nové funkce se odemknou ode dne zaplacení."],
     trial: ["10 dní zkouška zdarma","Nová pokladna běží 10 dní zdarma se všemi funkcemi a doplňky. Můžete prodávat, tisknout a nastavit si všechno potřebné. Do konce roku 2026 vydává pokladna platné doklady i ve zkoušce. Pro zaškolení prodavačů je k dispozici zkušební režim.","Po skončení zkoušky běží funkce tarifu ještě 3 dny (doplňky končí se zkouškou), potom pokladna bez zaplacení přejde na tarif Zdarma. Data zůstávají v účtu obchodu."],
     ends: ["Když platba skončí – tarif Zdarma","Všechny funkce běží ještě <strong>3 dny</strong> s výrazným upozorněním. Potom pokladna přejde na <strong>tarif Zdarma</strong>: prodej, EET 2.0, účtenky, uzávěrky, vratky a export dál fungují, jen s omezením – 1 zařízení, nejvýš 300 položek zboží, bez skladu, expirací, váhy a vážených kódů, akcí, zákaznického displeje, stolů, spropitného, kontroly hotovosti a doplňků. Po zaplacení se vše hned odemkne. Data zůstávají v účtu obchodu."],
     faqTitle: "Časté otázky",
     faq: [
-      ["Je cena konečná?", "Ano, 149 Kč měsíčně a 1 490 Kč ročně jsou ceny včetně DPH."],
-      ["Pronájem, nebo koupě?", "Pronájem (149 Kč měsíčně, 1 490 Kč ročně) má vždy nové funkce a podporu. Koupě licence za 4 000 Kč odpovídá zhruba 2,7 roku ročního pronájmu a licenci můžete používat bez časového omezení. Vyplatí se tomu, kdo chce kasu 3 a více let a nové funkce po dvou letech nepotřebuje. Když si nové funkce a podporu po dvou letech prodlužujete za 990 Kč na rok, vyjde koupě levněji než roční pronájem až od pátého roku. Koupená licence je tarif bez placených doplňků; doplňky lze používat jen v pronájmu. Koupená kasa běží v SuperKasa Cloud stejně jako pronajatá; co platí při ukončení jeho provozu, je popsané výše u koupě licence."],
+      ["Je cena konečná?", "Ano, 99 Kč měsíčně a 990 Kč ročně jsou ceny včetně DPH."],
+      ["Pronájem, nebo koupě?", "Pronájem (99 Kč měsíčně, 990 Kč ročně) má vždy nové funkce a podporu. Koupě licence za 2 990 Kč odpovídá zhruba 30 měsícům měsíčního nebo 3 rokům ročního pronájmu a licenci můžete používat bez časového omezení. Vyplatí se tomu, kdo chce kasu víc než 3 roky a nové funkce po dvou letech nepotřebuje. Když si nové funkce a podporu po dvou letech prodlužujete za 990 Kč na rok, vyjde koupě dráž než roční pronájem, protože prodloužení stojí stejně jako rok pronájmu. Koupená licence je tarif bez placených doplňků; doplňky lze používat jen v pronájmu. Koupená kasa běží v SuperKasa Cloud stejně jako pronajatá; co platí při ukončení jeho provozu, je popsané výše u koupě licence."],
       ["Co platí po dvou letech od koupě?", "Kasa funguje dál bez omezení a data zůstávají. Nové funkce a podpora skončí, dokud si je neprodloužíte (990 Kč na rok). Zákonné úpravy – EET 2.0, změny DPH a povinné opravy – a bezpečnostní opravy dostane koupená kasa vždy zdarma, aby nebyla v rozporu se zákonem."],
       ["Je v ceně počítač, tiskárna nebo čtečka?", 'Ne, cena je za pokladní program. Počítač nebo tablet, pokladní tiskárnu, čtečku čárových kódů a případně váhu nebo zákaznický displej si pořizujete sami. Rádi poradíme, co se hodí – <a href="jak-zacit.html#vybaveni">co budete potřebovat</a>.'],
       ["Kolik zařízení můžu používat?", "V každém placeném tarifu je až 10 pokladních zařízení – například pokladna, tablet pro příjem zboží a mobily pro obsluhu. V tarifu Zdarma je 1 zařízení. Pro větší provozy se domluvíme."],
@@ -488,14 +496,14 @@ export default {
     summaryTitle: "Hlavní body (jen pro orientaci, nezávazně)",
     opSummary: [
       "Pokladna je pro podnikatele (s IČO). Smlouva vzniká dokončením registrace na app.superkasa.cz, při které souhlasíte s podmínkami.",
-      "Zkouška a pronájem: 10 dní zdarma, potom 149 Kč měsíčně nebo 1 490 Kč ročně včetně DPH. Platí se předem převodem podle QR kódu v pokladně. Pronájem se automaticky neprodlužuje a nezaplacením dalšího období nevzniká dluh.",
+      "Zkouška a pronájem: 10 dní zdarma, potom 99 Kč měsíčně nebo 990 Kč ročně včetně DPH. Platí se předem převodem podle QR kódu v pokladně. Pronájem se automaticky neprodlužuje a nezaplacením dalšího období nevzniká dluh.",
       "Tarif Zdarma: bez zaplaceného tarifu pokladna po 3 dnech upozorňování přejde na tarif Zdarma. Prodej, doklady, evidence tržeb EET 2.0, uzávěrky, vratky a export dat fungují dál, ale jen na 1 zařízení, s nejvýše 300 položkami zboží, bez dalších funkcí tarifu a bez placených doplňků. Zaplacením se funkce znovu odemknou.",
-      "Koupě licence: 4 000 Kč včetně DPH jednorázově, k užívání bez časového omezení, bez placených doplňků (ty jsou jen v pronájmu). Nové funkce, podpora a záruka jsou v ceně 2 roky; nové funkce a podporu lze potom prodloužit za 990 Kč včetně DPH na rok. Úpravy nutné kvůli zákonům (EET 2.0, DPH) a bezpečnostní opravy jsou vždy zdarma.",
+      "Koupě licence: 2 990 Kč včetně DPH jednorázově, k užívání bez časového omezení, bez placených doplňků (ty jsou jen v pronájmu). Nové funkce, podpora a záruka jsou v ceně 2 roky; nové funkce a podporu lze potom prodloužit za 990 Kč včetně DPH na rok. Úpravy nutné kvůli zákonům (EET 2.0, DPH) a bezpečnostní opravy jsou vždy zdarma.",
       "Zánik koupené licence: koupená pokladna běží v SuperKasa Cloud. Licence zaniká výpovědí pro podstatné porušení podmínek nebo ukončením provozu SuperKasa Cloud. Ukončení provozu z jiného důvodu poskytovatel oznámí nejméně 6 měsíců předem, umožní export dat a vrátí poměrnou část ceny koupě za dobu kratší než 5 let od zaplacení.",
       "Ukončení smlouvy: pronájem ukončíte tím, že další období nezaplatíte (pokladna přejde na tarif Zdarma), nebo oznámením poskytovateli; cena za započaté období se nevrací. Poskytovatel může smlouvu vypovědět s výpovědní dobou 3 měsíce, při podstatném porušení podmínek ihned; pak vrátí poměrnou část ceny za nevyčerpané období.",
       "Data: pokladna běží v prohlížeči, data jsou na serveru v České republice a denně se zálohují. Po skončení smlouvy jsou data k prohlížení a exportu ještě 12 měsíců, potom se mažou. Doklady po dobu stanovenou zákonem si uchováváte sami – exportujte si je včas.",
       "Sdílená databáze zboží: přispívání je u každé pokladny zapnuté od začátku a jde vypnout ve Správě → Systém. Odesílá se čárový kód, název, velikost balení, skupina, sazba DPH a vaše fotka zboží – nikdy ceny, sklad, prodeje ani údaje o obchodě či zákaznících. K odeslaným údajům a fotkám dáváte poskytovateli bezúplatnou, časově neomezenou licenci, která trvá i po skončení smlouvy; po vypnutí už sdílené údaje v databázi zůstávají.",
-      "Odpovědnost: za evidenci tržeb (EET), pokladní certifikát, správné údaje a sazby DPH odpovídá podnikatel. Náhrada škody od poskytovatele je omezena částkou zaplacenou za posledních 12 měsíců, nejméně cenou ročního pronájmu (nyní 1 490 Kč); omezení neplatí pro škodu způsobenou úmyslně nebo z hrubé nedbalosti a pro újmu na přirozených právech člověka.",
+      "Odpovědnost: za evidenci tržeb (EET), pokladní certifikát, správné údaje a sazby DPH odpovídá podnikatel. Náhrada škody od poskytovatele je omezena částkou zaplacenou za posledních 12 měsíců, nejméně cenou ročního pronájmu (nyní 990 Kč); omezení neplatí pro škodu způsobenou úmyslně nebo z hrubé nedbalosti a pro újmu na přirozených právech člověka.",
       "Změny: cenu pro další období a podmínky může poskytovatel změnit, oznámí to e-mailem nejméně 30 dní předem. Když se změnou podmínek nesouhlasíte, můžete smlouvu ke dni účinnosti změny ukončit a dostanete poměrnou část ceny za nevyčerpané období.",
     ],
     gdprSummary: [

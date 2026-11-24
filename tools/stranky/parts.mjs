@@ -52,7 +52,7 @@ export const ORG_ID = `${SITE}/#organization`;
 export const APP_ID = `${SITE}/#app`;
 export const WEBSITE_ID = `${SITE}/#website`;
 /** Ověřeno proti src/domain/license.ts v projektu pokladna. Ceny včetně DPH. */
-export const PRODUCT = Object.freeze({ name: "SuperKasa", month: 149, year: 1490, buy: 4000, renew: 990, currency: "CZK", trialDays: 10 });
+export const PRODUCT = Object.freeze({ name: "SuperKasa", month: 99, year: 990, buy: 2990, renew: 990, currency: "CZK", trialDays: 10 });
 export const ORG = {
   "@type": "Organization",
   "@id": ORG_ID,

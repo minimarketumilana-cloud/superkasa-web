@@ -1,13 +1,21 @@
 // Texty stránek – angličtina. Stavba musí odpovídat cs.mjs (stejné klíče, délky polí, funkce).
-// Ceny v Kč zapisujeme anglicky: "CZK 149", "CZK 1,490".
+// Ceny v Kč zapisujeme anglicky: "CZK 99", "CZK 990".
 
 const PHONE = "+420&nbsp;608&nbsp;886&nbsp;882";
 const num = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 export default {
   common: {
+    bundle: {
+      title: "SuperKasa and E-shop super",
+      lead: 'The SuperKasa till and the <a href="https://eshopsuper.cz/">E-shop super</a> online shop come from the same maker. Pay for one and you get the other free.',
+      cards: [
+        ["Online shop free with paid SuperKasa", 'With paid SuperKasa you get an online shop with up to 100 items free, connected to the till. A larger shop (1,000 items or more) is paid for under the price list on <a href="https://eshopsuper.cz/">eshopsuper.cz</a>.'],
+        ["SuperKasa free with paid E-shop super", 'If you pay for any paid E-shop super plan, SuperKasa is free. The online shop costs from CZK 99 a month incl. VAT; the plans are on <a href="https://eshopsuper.cz/">eshopsuper.cz</a>.'],
+      ],
+    },
     nav: ["Home", "Who it's for", "Features", "Pricing", "EET 2.0", "Guides", "Get started", "Contact"],
-    priceBtn: "CZK 149 / month",
+    priceBtn: "CZK 99 / month",
     loginBtn: "Sign in",
     loginSoon: "",
     loginAria: "Sign in to your till",
@@ -46,7 +54,7 @@ export default {
     /** Doplněk titulku stránky oboru (jen když se celý titulek vejde do 60 znaků). */
     oborTitleEet: " with EET 2.0",
     /** Konec popisku stránky oboru: cena a zkouška (hasEet = popisek už EET 2.0 zmiňuje). */
-    oborDescTail: (hasEet) => (hasEet ? "CZK 149 a month incl. VAT, 10 days free." : "POS with EET 2.0, CZK 149 a month incl. VAT, 10 days free."),
+    oborDescTail: (hasEet) => (hasEet ? "CZK 99 a month incl. VAT, 10 days free." : "POS with EET 2.0, CZK 99 a month incl. VAT, 10 days free."),
   },
 
   picker: {
@@ -55,7 +63,7 @@ export default {
   },
 
   obor: {
-    tariffBadge: (name) => `<strong>${name}</strong> plan · CZK 149 a month incl. VAT`,
+    tariffBadge: (name) => `<strong>${name}</strong> plan · CZK 99 a month incl. VAT`,
     pricing: "Pricing",
     heroNote: '10-day free trial. <a href="https://app.superkasa.cz/">Create your till in the browser</a>, with nothing to download or install.',
     readyTitle: "What's ready as soon as you start",
@@ -70,7 +78,7 @@ export default {
     alwaysOn: "Sales, EET 2.0, receipts, cash and closing always work.",
     usefulTitle: "What you'll find useful",
     tariffTitle: (name) => `${name} plan`,
-    tariffLead: "CZK 149 a month or CZK 1,490 a year, always incl. VAT. The first 10 days are free.",
+    tariffLead: "CZK 99 a month or CZK 990 a year, always incl. VAT. The first 10 days are free.",
     onTitle: "Switched on from the start",
     moreTitle: "You can switch these on any time",
     otherTitle: "Other features",
@@ -104,7 +112,7 @@ export default {
     faq: [
       ["What does choosing a business type set up?", "Product groups with VAT rates, tiles, sample items and the features that suit your business. You'll see everything and can edit it before you create the POS."],
       ["What if my type of business isn't listed?", 'When setting up the POS, describe in your own words what you sell, and the POS will suggest groups with VAT rates, pictures and first items. Or choose <a href="pokladna-obchod.html">Other shop</a> or <a href="pokladna-sluzby.html">Other services</a> and adjust the groups to suit you.'],
-      ["Does the price depend on the type of business?", 'No. The price is the same for any type of business: CZK 149 a month or CZK 1,490 a year including VAT. <a href="cenik.html">Pricing</a>'],
+      ["Does the price depend on the type of business?", 'No. The price is the same for any type of business: CZK 99 a month or CZK 990 a year including VAT. <a href="cenik.html">Pricing</a>'],
       ["Does SuperKasa suit a pub or restaurant with tables?", 'Yes. The <a href="pokladna-hospoda-restaurace.html">Pub, bar, restaurant</a> setup has tables and tabs per table.'],
       ["Do I have to set the VAT rates myself?", "No. The POS sets up groups with their VAT rates. Check them with your accountant before you start live sales."],
     ],
@@ -115,14 +123,14 @@ export default {
 
   index: {
     title: "SuperKasa – POS with EET 2.0 for your type of business",
-    desc: "Touchscreen POS in the browser for shops, food service and services. EET 2.0, stock, price labels, Vietnamese for staff. CZK 149 a month incl. VAT, 10 days free",
+    desc: "Touchscreen POS in the browser for shops, food service and services. EET 2.0, stock, price labels, Vietnamese for staff. CZK 99 a month incl. VAT, 10 days free",
     ldDesc: "SuperKasa is a browser-based POS system for shops, hospitality and services. The interface is available in Czech, Vietnamese and English.",
     ldOffer: "Per month incl. VAT, first 10 days free",
     ldOfferBuy: "Licence purchase: no time limit, 2 years of updates and support",
     faq: [
       ["What is SuperKasa?", "SuperKasa is a browser-based POS system for shops, hospitality and services. It covers touchscreen selling, stock, price labels and EET 2.0 sales recording. Staff can switch it to Czech, Vietnamese or English."],
       ["Do I need to install anything?", 'No. SuperKasa runs in the browser on a computer, tablet or phone – nothing to download or install. Every paid plan includes up to 10 devices. <a href="jak-zacit.html">Get started</a>'],
-      ["How much does SuperKasa cost?", 'CZK 149 a month or CZK 1,490 a year including VAT, the same for any type of business. You can also buy the till for CZK 4,000 once, with 2 years of new features and support. The first 10 days are free, with no card and no commitment. We take nothing from your sales. <a href="cenik.html">Pricing</a>'],
+      ["How much does SuperKasa cost?", 'CZK 99 a month or CZK 990 a year including VAT, the same for any type of business. You can also buy the till for CZK 2,990 once, with 2 years of new features and support. The first 10 days are free, with no card and no commitment. We take nothing from your sales. <a href="cenik.html">Pricing</a>'],
       ["Is SuperKasa ready for EET 2.0?", 'Yes. EET 2.0 sales recording starts on 1 January 2027. With a POS certificate from DIS+, you switch on live sales reporting in Admin → EET 2.0. <a href="eet.html">Getting started with EET 2.0</a>'],
       ["What happens if the internet goes down?", "You keep selling for cash and card. Receipts upload by themselves once you're back online and go to EET with their original time."],
       ["Is SuperKasa available in Vietnamese?", 'Yes. The interface is available in Czech, Vietnamese and English, and each cashier has their own language. The customer receipt is always in Czech. <a href="pokladna-pro-vietnamske-obchody.html">POS for Vietnamese shops</a>'],
@@ -146,7 +154,7 @@ export default {
     whyTitle: "Why SuperKasa",
     whyLead: "A full POS with stock and price labels at one low price – no hidden fees and no expensive hardware.",
     whyCards: [
-      ["CZK 149 a month incl. VAT", 'The final price for any type of business, or CZK 1,490 a year. <strong>Unlimited items</strong> – stock, promotions and the customer display are included in every paid plan. First 10 days free. <a href="cenik.html">Pricing</a>'],
+      ["CZK 99 a month incl. VAT", 'The final price for any type of business, or CZK 990 a year. <strong>Unlimited items</strong> – stock, promotions and the customer display are included in every paid plan. First 10 days free. <a href="cenik.html">Pricing</a>'],
       ["No transaction fees", "We take nothing from your sales, and you don't need a terminal from us. Card payments go through your own card terminal from any bank; customers can also pay in cash or by QR code."],
       ["Computer, tablet and phone", "The main till on a computer with a touchscreen, more tills on tablets and phones – all in the browser. <strong>Up to 10 devices</strong> included in the plan, all selling into one shared shift. For example the till, a tablet for receiving goods and the owner's phone."],
       ["Works without internet too", "If the internet goes down, you keep selling for cash and card. Receipts upload by themselves once you're back online and go to EET with their original time. Data is backed up every day on the server and off it."],
@@ -154,14 +162,14 @@ export default {
       ["Stock included in the plan", 'Receiving goods by scanning, stock counts and order suggestions in every paid plan; for shops also expiry dates and price labels on the receipt printer. Add attendance, a loyalty programme or reservations only if you want them. <a href="cenik.html#doplnky">Add-ons</a>'],
     ],
     heroCta: ["Try it free for 10 days", "Get started"],
-    heroFacts: ["Ready for EET 2.0 from 1 Jan 2027", "CZK 149 a month incl. VAT, 10 days free", "Up to 10 devices: computer, tablet, phone", "Staff UI in Czech, Vietnamese and English", "Receipts from your phone print at the main till"],
+    heroFacts: ["Ready for EET 2.0 from 1 Jan 2027", "CZK 99 a month incl. VAT, 10 days free", "Up to 10 devices: computer, tablet, phone", "Staff UI in Czech, Vietnamese and English", "Receipts from your phone print at the main till"],
     heroCtaNote: "No card, no commitment. In the browser on a computer, tablet or phone – nothing to download or install.",
     newTitle: "What's new",
     newLead: "SuperKasa improves every week. Here is the latest – included in the plan.",
     newCards: [
       ["Notifications on your phone", "Hear about every sale on your phone straight away – amount, payment, cashier and items. Free, no extra app, and you can switch notifications off at any time. On iPhone, from the home-screen icon."],
       ["Shared product database with photos", "Scan an unknown barcode and the POS fills in the name and photo from the shared SuperKasa database. You just check the name and enter the price."],
-      ["Connected to E-shop super", 'Orders from your online shop on <a href="https://eshopsuper.cz/">eshopsuper.cz</a> can be announced on the till, and you manage the online shop from the till without another password. The till and the online shop keep separate stock. E-shop super is paid for separately under its own price list.'],
+      ["Connected to E-shop super", 'Orders from your online shop on <a href="https://eshopsuper.cz/">eshopsuper.cz</a> can be announced on the till, and you manage the online shop from the till without another password. The till and the online shop keep separate stock. With paid SuperKasa, E-shop super with up to 100 items is free; a larger shop is paid for under the price list on eshopsuper.cz.'],
       ["The till on your phone, printing at the main till", "On a phone, search and the scanner are on top with the current sale right below. Receipts and price labels come out of the printer at the main till – over the internet, the phone doesn't need the same Wi-Fi."],
       ["Printer set up in a minute", "The wizard walks you through it step by step: on a computer you print through the browser, and on an Android tablet or phone it connects a Bluetooth or USB printer. You print a test page right away."],
       ["Reports for your accountant", "Daily sales by VAT rate and payment method, stock valuation, receipts and closings – to Excel with one tap."],
@@ -236,7 +244,7 @@ export default {
       ["Price labels on the receipt printer", "Print price labels on the receipt printer (Epson TM-T88 and compatible), on a label printer or on A4. With price per kg, litre or 100 g, a crossed-out promotional price and a barcode. You can easily pick the goods whose price has changed."],
       ["Shared product database with photos", "Scan an unknown barcode and the POS looks up the name and photo in the shared SuperKasa database – even for cigarettes and local products. You just check the name and add the price. Only the code, name, pack size, group, VAT rate and product photo go into the database – never prices, sales or details about your shop. You can switch contributing off in Admin → System."],
       ["Importing goods", "Bring in goods from a CSV file, even from another POS's export. Repeating the import doesn't create duplicates, it only updates prices. Product photos are added by EAN."],
-      ["Connected to E-shop super", 'Orders from <a href="https://eshopsuper.cz/">E-shop super</a> can be announced on the till and on your phone if you wish. The till and the online shop keep separate stock. Connect once, then manage the online shop from the till without another password. E-shop super is not included in the SuperKasa price: it is paid for separately under the price list on eshopsuper.cz, where the SuperKasa connection starts with the Plus plan.'],
+      ["Connected to E-shop super", 'Orders from <a href="https://eshopsuper.cz/">E-shop super</a> can be announced on the till and on your phone if you wish. The till and the online shop keep separate stock. Connect once, then manage the online shop from the till without another password. With paid SuperKasa, E-shop super with up to 100 items is free; a larger shop is paid for under the price list on eshopsuper.cz.'],
       ["Set up for your type of business", '<p>Depending on your type of business, it creates groups with VAT rates, tiles and sample items – bakery, fruit, vegetables, deposits, coffee or services. <a href="obory.html">Choose your type of business</a></p><p>Or describe in your own words what you sell, and the POS will suggest groups with VAT rates, pictures and first items – free and offline, in Czech, Vietnamese or English. You will see the suggestion and can edit it. Check the VAT (DPH) rates with your accountant.</p>'],
     ],
     provozTitle: "Staff and operation",
@@ -258,13 +266,13 @@ export default {
     addonsTitle: "Paid add-ons",
     addonsLead: 'Features beyond the plan that you add only when you will really use them. The same price for every type of business, free during the 10-day trial. <a href="cenik.html#doplnky">Add-on prices</a>',
     addonMeta: (price, kinds) => `<strong>CZK ${price} a month incl. VAT</strong> · business types: ${kinds} · <a href="cenik.html#doplnky">Add-on prices</a>`,
-    payCard: ["You only pay for what you switch on", 'An add-on is paid separately on top of the plan (CZK 149), a year costs 10 months. No commitment – it is unlocked by the same licence key as the plan, and you switch it on in Admin → System → Register features. <a href="cenik.html#doplnky">Pricing</a>'],
+    payCard: ["You only pay for what you switch on", 'An add-on is paid separately on top of the plan (CZK 99), a year costs 10 months. No commitment – it is unlocked by the same licence key as the plan, and you switch it on in Admin → System → Register features. <a href="cenik.html#doplnky">Pricing</a>'],
     cta: ["Missing a feature?", "Give us a call and tell us what your business needs. We keep developing SuperKasa based on what shops need."],
   },
 
   cenik: {
-    title: "SuperKasa pricing – CZK 149 a month incl. VAT, 10 days free",
-    desc: "Shop, Food service and Services plans for CZK 149 a month or CZK 1,490 a year incl. VAT. 10 days free, runs in the browser. Add-ons from CZK 69.",
+    title: "SuperKasa pricing – CZK 99 a month incl. VAT, 10 days free",
+    desc: "Shop, Food service and Services plans for CZK 99 a month or CZK 990 a year incl. VAT. 10 days free, runs in the browser. Add-ons from CZK 69.",
     planText: {
       obchod: "Groceries, newsagent, drugstore, clothing and every other shop – including scales and deposits.",
       gastro: "Café, bistro, stand, patisserie, pub, bar and restaurant.",
@@ -273,8 +281,8 @@ export default {
     planBase: ["Selling on a touchscreen", "EET 2.0 and receipts", "Cash and closings", "Up to 10 POS devices"],
     planExtraGastro: "Eat in / Take away (take-away VAT rate)",
     planAllBadge: "All features",
-    planPrice: "CZK 149 <small>/ month</small>",
-    planYear: "or CZK 1,490 a year · incl. VAT",
+    planPrice: "CZK 99 <small>/ month</small>",
+    planYear: "or CZK 990 a year · incl. VAT",
     planObory: "Business types:",
     addonPrice: (n) => `CZK ${n} <small>/ month</small>`,
     addonYear: (n) => `or CZK ${num(n)} a year · incl. VAT`,
@@ -286,8 +294,8 @@ export default {
     no: "no",
     h1: "POS pricing",
     lead: "One price for every type of business. The plan follows your business type and differs only in the features your type of business needs. SuperKasa is for businesses (with a Czech company ID, IČO), not for consumers.",
-    boxAmount: "CZK 149 <span>a month incl. VAT</span>",
-    boxYear: "or <strong>CZK 1,490 a year</strong> – 2 months free",
+    boxAmount: "CZK 99 <span>a month incl. VAT</span>",
+    boxYear: "or <strong>CZK 990 a year</strong> – 2 months free",
     boxTag: "10-day free trial",
     boxText: "Applies to all plans: Shop, Food service (Gastro) and Services.",
     everyTitle: "In every paid plan",
@@ -305,20 +313,20 @@ export default {
     addonsTitle: "Paid add-ons",
     addonsLead: "The plan includes everything for everyday selling. When you need more, you add only the add-on you will really use – at the same price for every type of business.",
     trialAddons: ["Free during the trial", "During the 10-day trial you can try all add-ons for free. No commitment – you only pay for what you switch on, and you can switch an add-on off again at any time.", "Switch add-ons on in Admin → System → Register features. After the trial you pick them when you pay (Pay in the top bar or Admin → System → Licence and plan) and pay with one QR code together with the plan. If you add an add-on during a paid period, you only pay for the rest of that period."],
-    addonsNote: "Prices are per month incl. VAT and are paid on top of the plan (CZK 149). Per year, an add-on costs 10 months. Eat in / Take away selling and tip records are free in the plans; they are not paid add-ons. Add-ons can only be used with rental; they cannot be added to a bought licence.",
+    addonsNote: "Prices are per month incl. VAT and are paid on top of the plan (CZK 99). Per year, an add-on costs 10 months. Eat in / Take away selling and tip records are free in the plans; they are not paid add-ons. Add-ons can only be used with rental; they cannot be added to a bought licence.",
     compareTitle: "Plan comparison",
-    compareLead: "All plans cost the same – CZK 149 a month or CZK 1,490 a year incl. VAT.",
+    compareLead: "All plans cost the same – CZK 99 a month or CZK 990 a year incl. VAT.",
     rentTitle: "How you pay",
-    rent: ["Rental", "CZK 149 a month or CZK 1,490 a year (2 months free), always incl. VAT. Updates, new features and support are always included. The rental is valid until the paid-up date and does not renew automatically."],
+    rent: ["Rental", "CZK 99 a month or CZK 990 a year (2 months free), always incl. VAT. Updates, new features and support are always included. The rental is valid until the paid-up date and does not renew automatically."],
     buy: ["Everything included", "The POS runs in the browser, nothing is installed. Backups and running SuperKasa Cloud are included in both rental and purchase. No commitment: if you do not pay the next rental period, the POS switches to the limited Free plan."],
-    purchase: ["Buy a licence", "CZK 4,000 once, incl. VAT. You can use the licence with no time limit. It includes <strong>2 years</strong> of new features, support and warranty. After that it keeps working without limits, just without new features and support. Legal updates (EET 2.0, VAT changes) and security fixes are always free. A bought licence is the plan without paid add-ons; add-ons can only be used with rental. Compared with yearly rental it pays off if you want the till for 3 years or more and do not need new features after two years.", 'A purchased till runs only in SuperKasa Cloud, just like a rented one; nothing is installed on your device. Operation and backups are included in the purchase price. The licence ends if SuperKasa Cloud is shut down, or if the contract is terminated for a material breach of the terms. If the service is shut down for another reason, we give at least 6 months of notice, let you export your data and refund a proportionate part of the purchase price for the time short of 5 years from payment. Details are in Article 5a of the <a href="obchodni-podminky.html">Terms and Conditions</a>; the binding version is in Czech.'],
+    purchase: ["Buy a licence", "CZK 2,990 once, incl. VAT. You can use the licence with no time limit. It includes <strong>2 years</strong> of new features, support and warranty. After that it keeps working without limits, just without new features and support. Legal updates (EET 2.0, VAT changes) and security fixes are always free. A bought licence is the plan without paid add-ons; add-ons can only be used with rental. Compared with yearly rental it pays off if you want the till for more than 3 years and do not need new features after two years.", 'A purchased till runs only in SuperKasa Cloud, just like a rented one; nothing is installed on your device. Operation and backups are included in the purchase price. The licence ends if SuperKasa Cloud is shut down, or if the contract is terminated for a material breach of the terms. If the service is shut down for another reason, we give at least 6 months of notice, let you export your data and refund a proportionate part of the purchase price for the time short of 5 years from payment. Details are in Article 5a of the <a href="obchodni-podminky.html">Terms and Conditions</a>; the binding version is in Czech.'],
     renew: ["Extending updates", "For a bought licence you can extend new features and support for <strong>CZK 990 a year</strong> incl. VAT, at any time, even after they end. New features unlock from the day of payment."],
     trial: ["10-day free trial","A new POS runs free for 10 days with all features and add-ons. You can sell, print and set up everything you need. Until the end of 2026 the POS issues valid receipts even during the trial. Training mode is there for training staff.","After the trial ends, the plan's features keep working for 3 more days (add-ons end with the trial); then, without payment, the POS switches to the Free plan. Your data stays in your shop's account."],
     ends: ["When payment ends – the Free plan","All features keep running for another <strong>3 days</strong> with a clear warning. Then the POS switches to the <strong>Free plan</strong>: sales, EET 2.0, receipts, closings, refunds and data export keep working with limits – 1 device, at most 300 products, no stock, expiry dates, scale and weighed barcodes, promotions, customer display, tables, tips, cash control or add-ons. Paying unlocks everything at once. Your data stays in your shop's account."],
     faqTitle: "Frequently asked questions",
     faq: [
-      ["Is the price final?", "Yes, CZK 149 a month and CZK 1,490 a year are prices including VAT."],
-      ["Rent or buy?", "Rental (CZK 149 a month, CZK 1,490 a year) always has new features and support. Buying a licence for CZK 4,000 equals about 2.7 years of yearly rental, and you can use the licence with no time limit. It pays off if you want the till for 3+ years and do not need new features after two years. If you extend new features and support for CZK 990 a year after the two years, buying only becomes cheaper than yearly rental from the fifth year. A bought licence is the plan without paid add-ons; add-ons can only be used with rental. A purchased till runs in SuperKasa Cloud just like a rented one; what applies if the service is shut down is described above under buying a licence."],
+      ["Is the price final?", "Yes, CZK 99 a month and CZK 990 a year are prices including VAT."],
+      ["Rent or buy?", "Rental (CZK 99 a month, CZK 990 a year) always has new features and support. Buying a licence for CZK 2,990 equals about 30 months of monthly or 3 years of yearly rental, and you can use the licence with no time limit. It pays off if you want the till for more than 3 years and do not need new features after two years. If you extend new features and support for CZK 990 a year after the two years, buying costs more than yearly rental, because the extension costs the same as a year of rental. A bought licence is the plan without paid add-ons; add-ons can only be used with rental. A purchased till runs in SuperKasa Cloud just like a rented one; what applies if the service is shut down is described above under buying a licence."],
       ["What applies two years after buying?", "The till keeps working without limits and your data stays. New features and support end until you extend them (CZK 990 a year). Legal updates – EET 2.0, VAT changes and mandatory fixes – and security fixes are always free, so the till never breaks the law."],
       ["Does the price include a computer, printer or scanner?", `No, the price is for the POS software. You get the computer or tablet, receipt printer, barcode scanner and, if needed, scales or a customer display yourself. We're happy to advise on what is suitable – <a href="jak-zacit.html#vybaveni">what you will need</a>.`],
       ["How many devices can I use?", "Every paid plan includes up to 10 POS devices – for example the till, a tablet for receiving goods and phones for staff. The Free plan has 1 device. For larger businesses, get in touch."],
@@ -481,14 +489,14 @@ export default {
     summaryTitle: "Main points (for guidance only, not binding)",
     opSummary: [
       "The POS is for businesses (with an IČO, company ID number). The contract starts when you complete registration at app.superkasa.cz and agree to the terms.",
-      "Trial and rental: 10 days free, then CZK 149 a month or CZK 1,490 a year incl. VAT. You pay in advance by bank transfer using the QR code in the POS. The rental does not renew automatically, and not paying for the next period creates no debt.",
+      "Trial and rental: 10 days free, then CZK 99 a month or CZK 990 a year incl. VAT. You pay in advance by bank transfer using the QR code in the POS. The rental does not renew automatically, and not paying for the next period creates no debt.",
       "Free plan: without a paid plan, after 3 days of reminders the POS switches to the Free plan. Sales, receipts, EET 2.0 sales registration, closings, refunds and data export keep working, but on 1 device only, with at most 300 products, without the other plan features and without paid add-ons. Paying unlocks the features again.",
-      "Buying a licence: CZK 4,000 once, incl. VAT, for use with no time limit, without paid add-ons (these come with rental only). New features, support and warranty are included for 2 years; new features and support can then be extended for CZK 990 a year incl. VAT. Changes required by law (EET 2.0, VAT) and security fixes are always free.",
+      "Buying a licence: CZK 2,990 once, incl. VAT, for use with no time limit, without paid add-ons (these come with rental only). New features, support and warranty are included for 2 years; new features and support can then be extended for CZK 990 a year incl. VAT. Changes required by law (EET 2.0, VAT) and security fixes are always free.",
       "When a purchased licence ends: a purchased POS runs in SuperKasa Cloud. The licence ends if the provider terminates the contract for a material breach of the terms, or if SuperKasa Cloud is shut down. If it is shut down for another reason, the provider gives at least 6 months of notice, lets you export your data and refunds a proportionate part of the purchase price for the time short of 5 years from payment.",
       "Ending the contract: you end the rental by not paying for the next period (the POS switches to the Free plan) or by giving notice to the provider; the price of a period already started is not refunded. The provider may terminate the contract with 3 months of notice, or immediately for a material breach of the terms; it then refunds a proportionate part of the price for the unused period.",
       "Data: the POS runs in the browser, the data is on a server in the Czech Republic and is backed up daily. After the contract ends, the data stays available for viewing and export for another 12 months and is then deleted. Keeping receipts for the period required by law is your responsibility – export them in time.",
       "Shared product database: contributing is switched on from the start in every POS and can be switched off in Admin → System. The barcode, name, pack size, group, VAT rate and your product photo are sent – never prices, stock, sales or information about the shop or its customers. For the data and photos sent, you grant the provider a free licence with no time limit that continues after the contract ends; data already shared stays in the database after you switch contributing off.",
-      "Liability: the business owner is responsible for sales registration (EET), the POS certificate, and correct details and VAT rates. Compensation for damage from the provider is limited to the amount you paid in the last 12 months, and at least the price of one year of rental (currently CZK 1,490); the limit does not apply to damage caused intentionally or by gross negligence, or to harm to a person's natural rights.",
+      "Liability: the business owner is responsible for sales registration (EET), the POS certificate, and correct details and VAT rates. Compensation for damage from the provider is limited to the amount you paid in the last 12 months, and at least the price of one year of rental (currently CZK 990); the limit does not apply to damage caused intentionally or by gross negligence, or to harm to a person's natural rights.",
       "Changes: the provider may change the price for future periods and the terms, with at least 30 days of notice by e-mail. If you disagree with a change to the terms, you can end the contract on the day the change takes effect and receive a proportionate part of the price for the unused period.",
     ],
     gdprSummary: [

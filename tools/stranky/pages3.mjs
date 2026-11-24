@@ -1,5 +1,5 @@
 // Obchodní podmínky (včetně smlouvy o zpracování osobních údajů) a zásady ochrany osobních údajů SuperKasa.
-// Odpovídají skutečnému provozu: pokladna jen v prohlížeči (SuperKasa Cloud), pronájem 149 Kč/měsíc s DPH, 10 dní zkouška,
+// Odpovídají skutečnému provozu: pokladna jen v prohlížeči (SuperKasa Cloud), pronájem 99 Kč/měsíc s DPH, 10 dní zkouška,
 // 3 dny tolerance, server INTERNET CZ v ČR. Fakta: src/domain/license.ts, src/services/license.ts, deploy/cloud/zaloha.sh.
 // Jen pro podnikatele (B2B); čl. 1.5 je pojistka pro případ, že by smlouvu přesto uzavřel spotřebitel.
 // Údaje provozovatele a kontaktní e-mail jsou v parts.mjs (PROVIDER, CONTACT_EMAIL). Dokud je e-mail prázdný, texty ho
@@ -66,17 +66,17 @@ export const op = {
 
     <h2>5. Cena a platby</h2>
     <ol>
-      <li>Cena pronájmu je 149 Kč měsíčně nebo 1 490 Kč ročně, včetně DPH. Poskytovatel je plátcem DPH. Placené doplňky mají cenu uvedenou v pokladně (Správa → Systém → Licence a tarif) a na webu poskytovatele. Aktualizace, nové funkce a podpora jsou v ceně pronájmu.</li>
+      <li>Cena pronájmu je 99 Kč měsíčně nebo 990 Kč ročně, včetně DPH. Poskytovatel je plátcem DPH. Placené doplňky mají cenu uvedenou v pokladně (Správa → Systém → Licence a tarif) a na webu poskytovatele. Aktualizace, nové funkce a podpora jsou v ceně pronájmu.</li>
       <li>Platí se předem za celé období bankovním převodem podle QR kódu a platebních údajů zobrazených v pokladně. Chce-li uživatel v pronájmu pokračovat bez přerušení, zaplatí další období nejpozději posledním dnem zaplaceného (nebo zkušebního) období; pronájem prodlouží i platba připsaná během 3denní lhůty podle čl. 4 odst. 3 a čl. 6 odst. 2. Zaplacení dalšího období je na rozhodnutí uživatele: jeho nezaplacením nevzniká dluh ani prodlení, jen pokladna přejde na tarif Zdarma podle odstavce 6. Připsanou platbu poskytovatel přiřadí k účtu obchodu (podle variabilního symbolu) a pronájem bez zbytečného odkladu prodlouží o zaplacené období, aniž by uživatel musel cokoli dalšího udělat. Částka, která nepokryje celé období, i přeplatek zůstávají jako kredit a započtou se při další platbě.</li>
       <li>Daňový doklad k přijaté platbě poskytovatel vystaví do 15 dnů od jejího připsání a zašle ho elektronicky na e-mail uživatele.</li>
       <li>Cenu pro další období může poskytovatel změnit; změnu oznámí e-mailem nejméně 30 dní předem. Nová cena platí jen pro období zaplacená po účinnosti změny. Snížení ceny platí bez této lhůty, protože je v prospěch uživatele.</li>
-      <li>Přechodné ustanovení: do 12. 11. 2026 byla cena pronájmu 189 Kč měsíčně a 2 041 Kč ročně. Uživatelé, kteří platili podle dřívější ceny, platí od příštího zaplaceného období novou nižší cenu 149 Kč měsíčně nebo 1 490 Kč ročně. Kredit z dřívějších plateb se započte v nové ceně. Již zaplacené období se nemění a nevzniká z něj nárok na vrácení rozdílu.</li>
+      <li>Přechodné ustanovení: do 12. 11. 2026 byla cena pronájmu 189 Kč měsíčně a 2 041 Kč ročně, do 23. 11. 2026 pak 149 Kč měsíčně a 1 490 Kč ročně a cena koupě licence 4 000 Kč. Uživatelé, kteří platili podle dřívější ceny, platí od příštího zaplaceného období novou nižší cenu 99 Kč měsíčně nebo 990 Kč ročně. Kredit z dřívějších plateb se započte v nové ceně. Již zaplacené období se nemění a nevzniká z něj nárok na vrácení rozdílu.</li>
       <li>Tarif Zdarma: nemá-li uživatel po skončení zkušební doby nebo zaplaceného období a 3denní lhůty (čl. 4 odst. 3, čl. 6 odst. 2) zaplacený tarif, pokladna bez poplatku přejde na tarif Zdarma. V něm uživatel dál prodává, vystavuje doklady, eviduje tržby v systému EET 2.0, dělá uzávěrky a vratky a exportuje data, a to na 1 zařízení, s nejvýše 300 položkami zboží, bez dalších funkcí tarifu a bez placených doplňků. Zaplacením tarifu se všechny funkce tarifu znovu odemknou.</li>
     </ol>
 
     <h2>5a. Koupě licence</h2>
     <ol>
-      <li>Místo pronájmu může uživatel koupit licenci za 4 000 Kč včetně DPH, jednorázově. Koupě se platí stejně jako pronájem (čl. 5 odst. 2); koupi uživatel zvolí v pokladně, za koupi se považuje i platba přesně 4 000 Kč. Licence se týká tarifu bez placených doplňků; doplňky lze používat jen v pronájmu.</li>
+      <li>Místo pronájmu může uživatel koupit licenci za 2 990 Kč včetně DPH, jednorázově. Koupě se platí stejně jako pronájem (čl. 5 odst. 2); koupi uživatel zvolí v pokladně, za koupi se považuje i platba přesně 2 990 Kč. Licence se týká tarifu bez placených doplňků; doplňky lze používat jen v pronájmu.</li>
       <li>Koupenou licenci může uživatel používat bez časového omezení. Pokladna běží v SuperKasa Cloud (čl. 3), provoz a zálohy jsou v ceně koupě.</li>
       <li>Po dobu 2 let od zaplacení koupě (u uživatele se zaplaceným pronájmem od konce zaplaceného období) má uživatel v ceně nové funkce, podporu a záruku podle čl. 10. Poté pokladna funguje dál bez omezení, ale bez nových funkcí vydaných po tomto datu a bez podpory.</li>
       <li>Úpravy nutné kvůli právním předpisům (zejména evidence tržeb EET 2.0, změny sazeb a pravidel DPH a povinné náležitosti dokladů) a bezpečnostní opravy dostane koupená licence vždy zdarma, i po skončení 2 let, aby pokladna nebyla v rozporu se zákonem.</li>
@@ -115,7 +115,7 @@ export const op = {
     <ol>
       <li>Vady pokladny uživatel oznamuje bez zbytečného odkladu ${NOTICE_WAYS}. Poskytovatel vadu odstraní opravou v přiměřené lhůtě; vady znemožňující prodej zpravidla do následujícího pracovního dne od oznámení.</li>
       <li>Poskytovatel neodpovídá za škodu způsobenou porušením povinností uživatele, nesprávnými údaji zadanými uživatelem, výpadkem internetu, elektřiny nebo zařízení uživatele ani výpadkem systémů třetích stran, které poskytovatel nezajišťuje (zejména systému evidence tržeb Finanční správy, bank, platebních terminálů a připojení uživatele k internetu).</li>
-      <li>Celková náhrada škody, kterou poskytovatel uživateli hradí, je omezena částkou, kterou uživatel poskytovateli zaplatil za posledních 12 měsíců, nejméně však částkou odpovídající ceně ročního pronájmu podle čl. 5 odst. 1 (nyní 1&nbsp;490 Kč). Omezení se nevztahuje na škodu způsobenou úmyslně nebo z hrubé nedbalosti a na újmu na přirozených právech člověka (§ 2898 občanského zákoníku).</li>
+      <li>Celková náhrada škody, kterou poskytovatel uživateli hradí, je omezena částkou, kterou uživatel poskytovateli zaplatil za posledních 12 měsíců, nejméně však částkou odpovídající ceně ročního pronájmu podle čl. 5 odst. 1 (nyní 990 Kč). Omezení se nevztahuje na škodu způsobenou úmyslně nebo z hrubé nedbalosti a na újmu na přirozených právech člověka (§ 2898 občanského zákoníku).</li>
       <li>Při ztrátě nebo poškození dat poskytovatel obnoví data z poslední denní zálohy.</li>
     </ol>
 

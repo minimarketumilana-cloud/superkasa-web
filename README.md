@@ -17,7 +17,7 @@ osobních údajů se nepřekládají: ve `vi/` a `en/` je krátká stránka „Z
 | `obory.html` | Pro koho – stejný výběr oboru |
 | `pokladna-*.html` | 26 stránek oborů: jak bude pokladna nastavená (skupiny, dlaždice, ukázkové položky, funkce, tarif) s náhledem |
 | `funkce.html` | Funkce pokladny |
-| `cenik.html` | Tarify Obchod, Gastro a Služby: pronájem 149 Kč měsíčně nebo 1 490 Kč ročně s DPH, koupě licence 4 000 Kč (2 roky aktualizací, prodloužení 990 Kč/rok), placené doplňky, 10 dní zkouška, pak tarif Zdarma, časté otázky |
+| `cenik.html` | Tarify Obchod, Gastro a Služby: pronájem 99 Kč měsíčně nebo 990 Kč ročně s DPH, koupě licence 2 990 Kč (2 roky aktualizací, prodloužení 990 Kč/rok), placené doplňky, 10 dní zkouška, pak tarif Zdarma, časté otázky |
 | `eet.html` | EET 2.0 – jak to pokladna dělá, termíny (DIS+ od 1. 11. 2026, evidence od 1. 1. 2027), co zařídí podnikatel |
 | `jak-zacit.html` | Jak začít: pokladna v prohlížeči bez instalace (registrace na app.superkasa.cz) a potřebné vybavení |
 | `ke-stazeni.html` | Jen přesměrování na `jak-zacit.html` (stará adresa; meta refresh, `noindex`, není v sitemap). Nic se nestahuje |

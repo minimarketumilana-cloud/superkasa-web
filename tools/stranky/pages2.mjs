@@ -12,6 +12,7 @@ const PLAN_KEYS = ["obchod", "gastro", "sluzby"];
 
 export const cenik = (c) => {
   const t = c.T.cenik;
+  const b = c.T.common.bundle;
   const { ADDONS, FEATURES, KINDS, OBORY, TARIFFS } = c.D;
   const kindNames = Object.fromEntries(KINDS);
 
@@ -160,6 +161,18 @@ export const cenik = (c) => {
         <h3>${t.buy[0]}</h3>
         <p>${t.buy[1]}</p>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>${b.title}</h2>
+      <p>${b.lead}</p>
+    </div>
+    <div class="grid grid-2">
+      ${cards(["bag", "wallet"], b.cards)}
     </div>
   </div>
 </section>

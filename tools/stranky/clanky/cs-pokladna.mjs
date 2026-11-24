@@ -172,7 +172,7 @@ export default [
         id: "licence-jazyk",
         h2: "Pronájem, placení a jazyk",
         html: `
-<p>Pronájem stojí <strong>149 Kč měsíčně nebo 1 490 Kč ročně, včetně DPH</strong>. Prvních 10 dní je zdarma. Kdo zaplatí během zkoušky, tomu zbylé dny zůstanou a placené období začne až po nich.</p>
+<p>Pronájem stojí <strong>99 Kč měsíčně nebo 990 Kč ročně, včetně DPH</strong>. Prvních 10 dní je zdarma. Kdo zaplatí během zkoušky, tomu zbylé dny zůstanou a placené období začne až po nich.</p>
 <ol class="steps">
 <li>Klepněte na <strong>Zaplatit</strong> v liště nahoře, nebo otevřete <strong>Správa → Systém → Licence a tarif</strong>.</li>
 <li>Vyberte doplňky, pokud je chcete, a klepněte na <strong>Vystavit QR platbu</strong>.</li>
@@ -238,7 +238,7 @@ export default [
 <h3>Doplňky a poplatky</h3>
 <p>Docházka, věrnostní program nebo rezervace bývají za příplatek. Zeptejte se také na poplatek z tržeb a z plateb kartou, na smluvní závazek a na cenu za ukončení.</p>
 <h3>Příklad výpočtu</h3>
-<p>U SuperKasy je cena 149 Kč měsíčně nebo 1 490 Kč ročně, vždy včetně DPH. Kavárna, která chce navíc Receptury a normy za 79 Kč, platí 228 Kč měsíčně. Hardware si pořizuje sama.</p>
+<p>U SuperKasy je cena 99 Kč měsíčně nebo 990 Kč ročně, vždy včetně DPH. Kavárna, která chce navíc Receptury a normy za 79 Kč, platí 178 Kč měsíčně. Hardware si pořizuje sama.</p>
 <div class="tbl"><table>
 <thead><tr><th>Doplněk</th><th>Kč měsíčně s DPH</th></tr></thead>
 <tbody>
@@ -341,7 +341,7 @@ export default [
 <div class="tbl"><table>
 <thead><tr><th>Otázka</th><th>Odpověď</th></tr></thead>
 <tbody>
-<tr><td>Cena</td><td>149 Kč měsíčně nebo 1 490 Kč ročně s DPH</td></tr>
+<tr><td>Cena</td><td>99 Kč měsíčně nebo 990 Kč ročně s DPH</td></tr>
 <tr><td>Zkouška</td><td>10 dní zdarma, bez karty</td></tr>
 <tr><td>Zařízení v ceně</td><td>Až 10</td></tr>
 <tr><td>Poplatek z tržeb</td><td>Žádný</td></tr>
@@ -842,7 +842,7 @@ export default [
 <div class="tbl"><table>
   <thead><tr><th>Systém</th><th>Nejnižší tarif</th><th>Tarif se skladem</th><th>Další zařízení</th><th>EET 2.0</th></tr></thead>
   <tbody>
-    <tr><td>SuperKasa</td><td>149 Kč s DPH (123,14 Kč bez DPH)</td><td>Stejný tarif, sklad je v ceně</td><td>Až 10 zařízení v ceně</td><td>Ano, v ceně</td></tr>
+    <tr><td>SuperKasa</td><td>99 Kč s DPH (81,82 Kč bez DPH)</td><td>Stejný tarif, sklad je v ceně</td><td>Až 10 zařízení v ceně</td><td>Ano, v ceně</td></tr>
     <tr><td>Dotykačka</td><td>SNADNO 590 Kč bez DPH (713,90 Kč s DPH)</td><td>NAPLNO 1 190 Kč bez DPH (1 439,90 Kč s DPH)</td><td>Mobilní číšník: SNADNO ne, NAPLNO 1×, NEOMEZENĚ neomezeně; cenu další pokladny ceník neuvádí</td><td>Ano, ve všech licencích od 1. 1. 2027</td></tr>
     <tr><td>Storyous (nabídka O2)</td><td>Licence od 890 Kč bez DPH (1 076,90 Kč s DPH); O2 ji nabízí se sestavou zařízení</td><td>Licence Business od 890 Kč bez DPH (1 076,90 Kč s DPH); O2 u ní uvádí skladové hospodářství</td><td>Nabídka neuvádí</td><td>Podle O2 ho podporuje; výrobce uvádí, že je připraven</td></tr>
     <tr><td>helloCash</td><td>Basic 69 Kč bez DPH (83,49 Kč s DPH)</td><td>Prémiová 219 Kč bez DPH (264,99 Kč s DPH)</td><td>Více zařízení souběžně; počet ani příplatek ceník neuvádí</td><td>Zmínku jsme na webu nenašli</td></tr>
@@ -907,7 +907,7 @@ export default [
         h2: "SuperKasa",
         html: `
 <ul>
-  <li>Stojí 149 Kč měsíčně nebo 1 490 Kč ročně včetně DPH, stejně pro kterýkoli obor. Prvních 10 dní je zdarma.</li>
+  <li>Stojí 99 Kč měsíčně nebo 990 Kč ročně včetně DPH, stejně pro kterýkoli obor. Prvních 10 dní je zdarma.</li>
   <li>V každém placeném tarifu je sklad, EET 2.0 a až 10 zařízení; cenovky jsou v tarifu Obchod.</li>
   <li>Bez zaplacení pokladna přejde na tarif Zdarma: 1 zařízení, nejvýš 300 položek zboží, bez skladu.</li>
   <li>Běží v prohlížeči na vašem počítači, tabletu nebo mobilu.</li>
@@ -937,7 +937,7 @@ export default [
       },
     ],
     faq: [
-      ["Která pokladna je nejlevnější?","Zdarma je státní aplikace MOJE eet. Z placených systémů má podle ceníků k 21. 11. 2026 nejnižší vstupní cenu helloCash Basic za 69 Kč měsíčně bez DPH. Se skladem vychází nejlevněji SuperKasa za 149 Kč měsíčně včetně DPH."],
+      ["Která pokladna je nejlevnější?","Zdarma je státní aplikace MOJE eet. Z placených systémů má podle ceníků k 21. 11. 2026 nejnižší vstupní cenu helloCash Basic za 69 Kč měsíčně bez DPH. Se skladem vychází nejlevněji SuperKasa za 99 Kč měsíčně včetně DPH."],
       ["Proč jsou v tabulce u konkurence ceny bez DPH i s DPH?","Výrobci uvádějí ceny bez DPH, SuperKasa včetně DPH. Aby se daly porovnat, uvádíme v tabulce u konkurence obě částky. V oddílech o konkurenci jsou ceny podle ceníků, bez přepočtu."],
       ["Jak staré jsou údaje ve srovnání?","Jsou z veřejných ceníků k 21. 11. 2026. Zdroje jsou uvedené na konci článku. Před objednávkou si cenu ověřte u dodavatele."],
     ],

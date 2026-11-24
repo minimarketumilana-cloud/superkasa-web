@@ -21,6 +21,7 @@ const cards = (icons, texts) => {
 
 export const index = (c) => {
   const t = c.T.index;
+  const b = c.T.common.bundle;
   return {
     file: "index.html",
     current: "index.html",
@@ -83,6 +84,18 @@ export const index = (c) => {
     </div>
     <div class="grid grid-3">
       ${cards([["wallet", "gold"], ["cash"], ["network"], ["clock"], ["lang", "gold"], ["box"]], t.whyCards)}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>${b.title}</h2>
+      <p>${b.lead}</p>
+    </div>
+    <div class="grid grid-2">
+      ${cards([["bag", "gold"], ["wallet"]], b.cards)}
     </div>
   </div>
 </section>

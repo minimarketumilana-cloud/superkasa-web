@@ -1039,7 +1039,7 @@ export default {
         id: "licence-jazyk",
         h2: "Giấy phép, thanh toán và ngôn ngữ",
         html: `
-<p>Giấy phép có giá <strong>149 Kč/tháng hoặc 1 490 Kč/năm, đã gồm thuế DPH</strong>. 10 ngày đầu miễn phí. Ai trả tiền trong thời gian dùng thử thì vẫn giữ những ngày còn lại, và thời gian trả phí chỉ bắt đầu sau đó.</p>
+<p>Giấy phép có giá <strong>99 Kč/tháng hoặc 990 Kč/năm, đã gồm thuế DPH</strong>. 10 ngày đầu miễn phí. Ai trả tiền trong thời gian dùng thử thì vẫn giữ những ngày còn lại, và thời gian trả phí chỉ bắt đầu sau đó.</p>
 <ol class="steps">
 <li>Chạm vào <strong>Thanh toán</strong> ở thanh phía trên, hoặc mở <strong>Quản lý → Hệ thống → Giấy phép và gói</strong>.</li>
 <li>Chọn tiện ích trả thêm nếu bạn muốn, rồi chạm vào <strong>Tạo mã QR thanh toán</strong>.</li>
@@ -1103,7 +1103,7 @@ export default {
 <h3>Tiện ích và phí</h3>
 <p>Chấm công, chương trình khách hàng thân thiết hay đặt lịch thường phải trả thêm. Hãy hỏi cả phí trên doanh thu và trên thanh toán thẻ, ràng buộc hợp đồng và chi phí khi chấm dứt.</p>
 <h3>Ví dụ tính</h3>
-<p>Với SuperKasa, giá là 149 Kč/tháng hoặc 1 490 Kč/năm, luôn đã gồm thuế DPH. Quán cà phê muốn thêm Công thức và định mức giá 79 Kč sẽ trả 228 Kč/tháng. Phần cứng quán tự mua.</p>
+<p>Với SuperKasa, giá là 99 Kč/tháng hoặc 990 Kč/năm, luôn đã gồm thuế DPH. Quán cà phê muốn thêm Công thức và định mức giá 79 Kč sẽ trả 178 Kč/tháng. Phần cứng quán tự mua.</p>
 <div class="tbl"><table>
 <thead><tr><th>Tiện ích trả thêm</th><th>Kč/tháng, đã gồm DPH</th></tr></thead>
 <tbody>
@@ -1206,7 +1206,7 @@ export default {
 <div class="tbl"><table>
 <thead><tr><th>Câu hỏi</th><th>Trả lời</th></tr></thead>
 <tbody>
-<tr><td>Giá</td><td>149 Kč/tháng hoặc 1 490 Kč/năm, đã gồm thuế DPH</td></tr>
+<tr><td>Giá</td><td>99 Kč/tháng hoặc 990 Kč/năm, đã gồm thuế DPH</td></tr>
 <tr><td>Dùng thử</td><td>10 ngày miễn phí, không cần thẻ</td></tr>
 <tr><td>Thiết bị trong giá</td><td>Tối đa 10</td></tr>
 <tr><td>Phí trên doanh thu</td><td>Không có</td></tr>
@@ -1704,7 +1704,7 @@ export default {
 <div class="tbl"><table>
   <thead><tr><th>Hệ thống</th><th>Gói thấp nhất</th><th>Gói có kho</th><th>Thiết bị thêm</th><th>EET 2.0</th></tr></thead>
   <tbody>
-    <tr><td>SuperKasa</td><td>149 Kč đã gồm DPH (123,14 Kč chưa gồm DPH)</td><td>Cùng một gói, kho đã có trong giá</td><td>Tối đa 10 thiết bị trong giá</td><td>Có, trong giá</td></tr>
+    <tr><td>SuperKasa</td><td>99 Kč đã gồm DPH (81,82 Kč chưa gồm DPH)</td><td>Cùng một gói, kho đã có trong giá</td><td>Tối đa 10 thiết bị trong giá</td><td>Có, trong giá</td></tr>
     <tr><td>Dotykačka</td><td>SNADNO 590 Kč chưa gồm DPH (713,90 Kč đã gồm DPH)</td><td>NAPLNO 1 190 Kč chưa gồm DPH (1 439,90 Kč đã gồm DPH)</td><td>Mobilní číšník (máy phục vụ di động): SNADNO không có, NAPLNO 1 máy, NEOMEZENĚ không giới hạn; bảng giá không ghi giá của máy tính tiền thêm</td><td>Có, trong mọi giấy phép từ 1/1/2027</td></tr>
     <tr><td>Storyous (chào bán của O2)</td><td>Giấy phép từ 890 Kč chưa gồm DPH (1 076,90 Kč đã gồm DPH); O2 bán kèm bộ thiết bị</td><td>Giấy phép Business từ 890 Kč chưa gồm DPH (1 076,90 Kč đã gồm DPH); O2 ghi có quản lý kho</td><td>Chào bán không ghi</td><td>Theo O2 là có hỗ trợ; nhà sản xuất cho biết đã sẵn sàng</td></tr>
     <tr><td>helloCash</td><td>Basic 69 Kč chưa gồm DPH (83,49 Kč đã gồm DPH)</td><td>Prémiová 219 Kč chưa gồm DPH (264,99 Kč đã gồm DPH)</td><td>Chạy cùng lúc trên nhiều thiết bị; bảng giá không ghi số lượng và phụ phí</td><td>Chúng tôi không tìm thấy thông tin trên trang web</td></tr>
@@ -1769,7 +1769,7 @@ export default {
         h2: "SuperKasa",
         html: `
 <ul>
-  <li>Giá 149 Kč mỗi tháng hoặc 1 490 Kč mỗi năm, đã gồm thuế DPH, như nhau cho mọi ngành hàng. 10 ngày đầu miễn phí.</li>
+  <li>Giá 99 Kč mỗi tháng hoặc 990 Kč mỗi năm, đã gồm thuế DPH, như nhau cho mọi ngành hàng. 10 ngày đầu miễn phí.</li>
   <li>Mọi gói trả phí đều có kho, EET 2.0 và tối đa 10 thiết bị; nhãn giá có trong gói Cửa hàng.</li>
   <li>Nếu không trả phí, máy chuyển sang gói Miễn phí: 1 thiết bị, nhiều nhất 300 mặt hàng, không có kho.</li>
   <li>Chạy trên trình duyệt ở máy tính, máy tính bảng hoặc điện thoại của bạn.</li>
@@ -1799,7 +1799,7 @@ export default {
       },
     ],
     faq: [
-      ["Máy tính tiền nào rẻ nhất?","Ứng dụng nhà nước MOJE eet là miễn phí. Trong các hệ thống trả phí, theo bảng giá tính đến 21/11/2026, helloCash Basic có giá khởi điểm thấp nhất: 69 Kč mỗi tháng chưa gồm DPH. Nếu cần kho thì SuperKasa rẻ nhất: 149 Kč mỗi tháng đã gồm DPH."],
+      ["Máy tính tiền nào rẻ nhất?","Ứng dụng nhà nước MOJE eet là miễn phí. Trong các hệ thống trả phí, theo bảng giá tính đến 21/11/2026, helloCash Basic có giá khởi điểm thấp nhất: 69 Kč mỗi tháng chưa gồm DPH. Nếu cần kho thì SuperKasa rẻ nhất: 99 Kč mỗi tháng đã gồm DPH."],
       ["Vì sao trong bảng so sánh, giá của đối thủ ghi cả chưa gồm và đã gồm DPH?","Các nhà sản xuất ghi giá chưa gồm DPH, còn SuperKasa ghi giá đã gồm DPH. Để so sánh được, trong bảng so sánh chúng tôi ghi cả hai số cho đối thủ. Ở các phần về từng đối thủ, giá được ghi đúng như trong bảng giá, không quy đổi."],
       ["Số liệu trong bài so sánh có từ khi nào?","Từ bảng giá công khai, tính đến 21/11/2026. Nguồn được ghi ở cuối bài. Trước khi đặt, hãy kiểm tra giá với nhà cung cấp."],
     ],
