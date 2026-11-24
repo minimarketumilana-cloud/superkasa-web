@@ -80,7 +80,7 @@ export const op = {
       <li>Koupenou licenci může uživatel používat bez časového omezení. Pokladna běží v SuperKasa Cloud (čl. 3), provoz a zálohy jsou v ceně koupě.</li>
       <li>Po dobu 2 let od zaplacení koupě (u uživatele se zaplaceným pronájmem od konce zaplaceného období) má uživatel v ceně nové funkce, podporu a záruku podle čl. 10. Poté pokladna funguje dál bez omezení, ale bez nových funkcí vydaných po tomto datu a bez podpory.</li>
       <li>Úpravy nutné kvůli právním předpisům (zejména evidence tržeb EET 2.0, změny sazeb a pravidel DPH a povinné náležitosti dokladů) a bezpečnostní opravy dostane koupená licence vždy zdarma, i po skončení 2 let, aby pokladna nebyla v rozporu se zákonem.</li>
-      <li>Nové funkce a podporu lze ke koupené licenci kdykoli prodloužit za 990 Kč včetně DPH na rok. Prodloužení navazuje na dosavadní konec; po jeho uplynutí platí ode dne zaplacení a nové funkce se odemknou od tohoto dne.</li>
+      <li>Nové funkce a podporu lze ke koupené licenci kdykoli prodloužit za 490 Kč včetně DPH na rok. Prodloužení navazuje na dosavadní konec; po jeho uplynutí platí ode dne zaplacení a nové funkce se odemknou od tohoto dne.</li>
       <li>Koupená licence zaniká jen výpovědí podle čl. 6 odst. 3 pro podstatné porušení podmínek nebo ukončením provozu SuperKasa Cloud. Ukončí-li poskytovatel provoz z jiného důvodu než pro porušení podmínek uživatelem, oznámí to nejméně 6 měsíců předem, umožní export dat a vrátí poměrnou část ceny koupě za dobu kratší než 5 let od zaplacení. Ustanovení čl. 6 o nezaplacení dalšího období se na koupenou licenci nevztahuje.</li>
     </ol>
 
