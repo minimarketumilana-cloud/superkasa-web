@@ -181,6 +181,9 @@ export const card = (ic, title, text, cls = "") => `<article class="card">${icon
 /** Soubory hlavního menu (popisky jsou ve slovníku common.nav ve stejném pořadí). */
 export const NAV_FILES = ["index.html", "obory.html", "funkce.html", "cenik.html", "eet.html", "navody.html", "jak-zacit.html", "kontakt.html"];
 
+/** Ověření webu pro Seznam Webmaster – jen na české úvodní stránce (kořen webu). */
+const SEZNAM_WMT = `<meta name="seznam-wmt" content="hHH0CkwOzJjTBgouGSlDIMKXitCyrb6Q">`;
+
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 
 /**
@@ -266,7 +269,8 @@ export function page(c, { file, title, desc, current, body, noindex = false, can
 <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="${CSP}">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">${lang === "cs" && file === "index.html" ? `
+${SEZNAM_WMT}` : ""}
 <title>${title}</title>
 <meta name="description" content="${esc(desc)}">
 ${noindex ? `<meta name="robots" content="noindex">${noindexCanonical ? `\n<link rel="canonical" href="${noindexCanonical}">` : ""}` : `<meta name="robots" content="max-image-preview:large">\n<link rel="canonical" href="${url}">`}
