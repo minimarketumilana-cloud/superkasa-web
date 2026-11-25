@@ -60,7 +60,7 @@ export const op = {
     <h2>4. Zkušební doba</h2>
     <ol>
       <li>Prvních 10 dní je pokladna zdarma a nezavazuje uživatele k placení.</li>
-      <li>Evidence tržeb v systému EET 2.0 je součástí každého tarifu včetně tarifu Zdarma (čl. 5 odst. 6). Během zkušební doby a lhůty podle odstavce 3 pokladna od 1. 1. 2027 nepřejde do ostrého provozu s evidencí tržeb, dokud uživatel nezaplatí tarif; vystavuje jen zkušební doklady, které se do EET 2.0 neodesílají a nesmí se použít pro skutečný prodej. Výjimkou je uživatel, který evidenci tržeb nepodléhá. Do 31. 12. 2026 vydává pokladna platné doklady i ve zkušební době.</li>
+      <li>Evidence tržeb v systému EET 2.0 je součástí každého tarifu včetně tarifu Zdarma (čl. 5 odst. 6). Pokladna vydává platné doklady i během zkušební doby. Od 1. 1. 2027 jsou to doklady pro evidenci tržeb: během zkušební doby a lhůty podle odstavce 3 se do systému EET 2.0 zatím neodesílají a čekají v pokladně; odeslání se zapne zaplacením tarifu, jinak přechodem na tarif Zdarma (odstavec 3), a čekající doklady se pak odešlou dodatečně. Uživatel, který evidenci tržeb podléhá, má proto zaplatit tarif nebo přejít na tarif Zdarma co nejdříve. Zkušební doklady, které se do EET 2.0 nikdy neodesílají a nesmí se použít pro skutečný prodej, vystavuje pokladna jen ve volitelném zkušebním režimu pro zaškolení obsluhy. Uživatel, který evidenci tržeb nepodléhá, si evidenci v pokladně vypne.</li>
       <li>Po skončení zkušební doby pokladna ještě 3 dny upozorňuje na platbu. Pokud platba nepřijde, pokladna přejde na tarif Zdarma (čl. 5 odst. 6).</li>
     </ol>
 
