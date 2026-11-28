@@ -81,19 +81,28 @@ export const cenik = (c) => {
 
 <section class="section u-pt-32">
   <div class="wrap">
-    <div class="price-hero">
-      <div class="price-box">
-        <div class="amount">${t.boxAmount}</div>
-        <div class="year">${t.boxYear}</div>
-        ${LOGIN_LIVE ? `<div class="price-actions"><a class="btn btn-gold btn-lg price-cta" href="${REGISTER_URL}">${c.T.common.registerBtn}</a><a class="btn btn-light btn-lg" href="${DEMO_URL}">${c.T.common.demoBtn}</a></div><p class="price-trial">${t.boxTag}</p>` : `<span class="tag">${t.boxTag}</span>`}
-        <p>${t.boxText}</p>
-      </div>
-      <div class="card">
-        <h2>${t.everyTitle}</h2>
+    <h2 class="pay-title">${t.pay.title}</h2>
+    <p class="pay-lead">${t.pay.lead}</p>
+    <div class="pay-grid">
+      ${t.pay.cards.map((p, i) => `
+      <article class="pay-card${i === 1 ? " pay-best" : ""}">
+        ${p.badge ? `<span class="pay-badge">${p.badge}</span>` : ""}
+        <h3>${p.name}</h3>
+        <div class="pay-price">${p.price}<small>${p.per}</small></div>
+        <p class="pay-note">${p.note}</p>
+        ${LOGIN_LIVE ? `<a class="btn ${i === 1 ? "btn-gold" : "btn-ghost"} pay-btn" href="${REGISTER_URL}">${p.cta}</a>` : ""}
         <ul class="checks">
-          ${t.every.map((x) => `<li>${x}</li>`).join("\n          ")}
+          ${p.items.map((x) => `<li>${x}</li>`).join("\n          ")}
         </ul>
-      </div>
+      </article>`).join("")}
+    </div>
+    <p class="pay-foot">${t.pay.foot}${LOGIN_LIVE ? ` <a href="${DEMO_URL}">${c.T.common.demoBtn}</a>` : ""}</p>
+
+    <div class="card pay-every">
+      <h2>${t.everyTitle}</h2>
+      <ul class="checks">
+        ${t.every.map((x) => `<li>${x}</li>`).join("\n        ")}
+      </ul>
     </div>
 
     <h2>${t.tariffsTitle}</h2>

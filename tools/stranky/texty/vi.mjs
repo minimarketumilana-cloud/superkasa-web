@@ -299,6 +299,16 @@ export default {
     boxTag: "Dùng thử miễn phí 10 ngày",
     boxText: "Áp dụng cho tất cả các gói: Cửa hàng, Ăn uống (Gastro) và Dịch vụ.",
     everyTitle: "Có trong mọi gói trả phí",
+    pay: {
+      title: "Chọn cách thanh toán",
+      lead: "Cả ba lựa chọn đều là cùng một máy tính tiền với mọi tính năng cho ngành của bạn – chỉ khác cách thanh toán. 10 ngày đầu miễn phí, không cần thẻ, không ràng buộc.",
+      cards: [
+        { name: "Thuê theo tháng", price: "99 Kč", per: "/ tháng", note: "Trả từng tháng. Không ràng buộc, dừng bất cứ lúc nào.", cta: "Dùng thử 10 ngày miễn phí", items: ["Mọi tính năng cho ngành của bạn", "Tính năng mới và hỗ trợ suốt thời gian", "Tiện ích trả phí khi cần", "Đám mây, sao lưu và cập nhật đã gồm", "Tối đa 10 thiết bị tính tiền"] },
+        { name: "Thuê theo năm", badge: "Tiết kiệm 198 Kč mỗi năm", price: "990 Kč", per: "/ năm", note: "Chỉ 82,50 Kč mỗi tháng – được miễn phí 2 tháng.", cta: "Dùng thử 10 ngày miễn phí", items: ["Mọi thứ như thuê theo tháng", "Miễn phí 2 tháng so với thuê tháng", "Tính năng mới và hỗ trợ cả năm", "Tiện ích trả phí chỉ tính 10 tháng mỗi năm", "Một lần thanh toán cho cả năm"] },
+        { name: "Mua giấy phép", badge: "Dùng lâu dài", price: "2 990 Kč", per: "một lần", note: "Máy tính tiền thuộc về bạn, không giới hạn thời gian. Từ năm thứ 4 rẻ hơn thuê.", cta: "Dùng thử 10 ngày miễn phí", items: ["Dùng không giới hạn thời gian", "Đã gồm 2 năm tính năng mới, hỗ trợ và bảo hành", "Sau đó cập nhật nếu muốn: 490 Kč / năm", "Thay đổi theo luật (EET 2.0, DPH) và bảo mật luôn miễn phí", "Đám mây và sao lưu đã gồm"] },
+      ],
+      foot: "Mọi giá đã gồm DPH. Bạn có thể đổi cách thanh toán bất cứ lúc nào trong máy (Quản lý → Hệ thống → Giấy phép và gói). Tiện ích trả phí chỉ dành cho thuê.",
+    },
     every: [
       "Bán hàng trên màn hình cảm ứng",
       "EET 2.0 – ghi nhận doanh thu điện tử (EET thật cả ở gói Miễn phí)",

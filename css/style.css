@@ -658,3 +658,23 @@ dl.feat dd { margin: 2px 0 0; color: var(--muted); }
 .u-mx-auto { margin: 0 auto !important; }
 .u-jc-center { justify-content: center !important; }
 .u-bg-cream { background: var(--cream) !important; }
+
+/* Ceník: tři způsoby placení vedle sebe (měsíčně, ročně, koupě) */
+.pay-title { margin: 0 0 6px; }
+.pay-lead { color: var(--muted); margin: 0 0 22px; max-width: 62ch; }
+.pay-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+@media (max-width: 960px) { .pay-grid { grid-template-columns: 1fr; } }
+.pay-card { position: relative; display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line, #e6dde3); border-radius: 18px; padding: 28px 24px 24px; }
+.pay-card h3 { margin: 0; font-size: 1.15rem; }
+.pay-price { margin: 14px 0 4px; font-size: clamp(2.2rem, 1.7rem + 1.6vw, 2.8rem); font-weight: 800; line-height: 1; color: var(--plum-dark); letter-spacing: -.02em; }
+.pay-price small { margin-left: 6px; font-size: 1rem; font-weight: 600; color: var(--muted); letter-spacing: 0; }
+.pay-note { color: var(--muted); font-size: .97rem; min-height: 3em; margin: 6px 0 16px; }
+.pay-btn { width: 100%; justify-content: center; margin-bottom: 18px; }
+.pay-card .checks { margin: 0; }
+.pay-best { background: var(--plum-dark); border-color: var(--plum-dark); color: #fff; box-shadow: 0 18px 40px -24px rgba(40, 10, 30, .55); }
+.pay-best .pay-price { color: #fff; }
+.pay-best .pay-price small, .pay-best .pay-note { color: #f3dfca; }
+.pay-best .checks li { color: #f6ecf1; }
+.pay-badge { position: absolute; top: -12px; left: 24px; background: var(--gold); color: var(--plum-dark); font-weight: 700; font-size: .85rem; border-radius: 999px; padding: 5px 12px; }
+.pay-foot { margin: 16px 0 28px; color: var(--muted); font-size: .95rem; }
+.pay-every { margin-bottom: 40px; }

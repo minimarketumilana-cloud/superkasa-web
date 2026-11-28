@@ -299,6 +299,16 @@ export default {
     boxTag: "10-day free trial",
     boxText: "Applies to all plans: Shop, Food service (Gastro) and Services.",
     everyTitle: "In every paid plan",
+    pay: {
+      title: "Choose how you want to pay",
+      lead: "All three options give you the same till with every feature for your business type – only the way you pay differs. The first 10 days are free, no card, no commitment.",
+      cards: [
+        { name: "Monthly rental", price: "CZK 99", per: "/ month", note: "Pay month by month. No commitment, stop any time.", cta: "Try 10 days free", items: ["All features for your business type", "New features and support all the time", "Paid add-ons when you need them", "Cloud, backups and updates included", "Up to 10 till devices"] },
+        { name: "Yearly rental", badge: "Save CZK 198 a year", price: "CZK 990", per: "/ year", note: "Works out at CZK 82.50 a month – 2 months free.", cta: "Try 10 days free", items: ["Everything in the monthly rental", "2 months free compared with monthly", "New features and support all year", "Paid add-ons for 10 months a year", "One payment for the whole year"] },
+        { name: "Buy a licence", badge: "For years to come", price: "CZK 2,990", per: "one-off", note: "The till is yours with no time limit. From year 4 it costs less than renting.", cta: "Try 10 days free", items: ["Use it with no time limit", "2 years of new features, support and warranty included", "After that, updates only if you want: CZK 490 / year", "Legal changes (EET 2.0, VAT) and security always free", "Cloud and backups included"] },
+      ],
+      foot: "All prices include VAT. You can change how you pay any time in the till (Management → System → Licence and plan). Paid add-ons are for rentals only.",
+    },
     every: [
       "Selling on a touchscreen",
       "EET 2.0 (live EET even on the Free plan)",

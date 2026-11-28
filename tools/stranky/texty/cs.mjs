@@ -303,6 +303,16 @@ export default {
     boxTag: "10 dní zkouška zdarma",
     boxText: "Platí pro všechny tarify: Obchod, Gastro a Služby.",
     everyTitle: "V každém placeném tarifu",
+    pay: {
+      title: "Vyberte si, jak chcete platit",
+      lead: "Ve všech třech možnostech dostanete stejnou pokladnu se všemi funkcemi vašeho oboru. Liší se jen způsob platby. Prvních 10 dní je zdarma, bez karty a bez závazku.",
+      cards: [
+        { name: "Měsíční pronájem", price: "99 Kč", per: "/ měsíc", note: "Platíte měsíc po měsíci. Bez závazku, kdykoli přestanete.", cta: "Vyzkoušet 10 dní zdarma", items: ["Všechny funkce vašeho oboru", "Nové funkce a podpora po celou dobu", "Placené doplňky podle potřeby", "Cloud, zálohy a aktualizace v ceně", "Až 10 pokladních zařízení"] },
+        { name: "Roční pronájem", badge: "Ušetříte 198 Kč ročně", price: "990 Kč", per: "/ rok", note: "Vychází na 82,50 Kč měsíčně – 2 měsíce máte zdarma.", cta: "Vyzkoušet 10 dní zdarma", items: ["Všechno jako v měsíčním pronájmu", "2 měsíce zdarma oproti měsíčnímu", "Nové funkce a podpora po celý rok", "Placené doplňky za 10 měsíců ročně", "Jedna platba za celý rok"] },
+        { name: "Koupě licence", badge: "Na dlouhá léta", price: "2 990 Kč", per: "jednorázově", note: "Pokladna je vaše bez časového omezení. Od 4. roku vychází levněji než pronájem.", cta: "Vyzkoušet 10 dní zdarma", items: ["Používáte bez časového omezení", "2 roky nových funkcí, podpory a záruky v ceně", "Potom aktualizace jen když chcete: 490 Kč / rok", "Zákonné úpravy (EET 2.0, DPH) a bezpečnost vždy zdarma", "Cloud a zálohy v ceně"] },
+      ],
+      foot: "Všechny ceny jsou včetně DPH. Způsob platby změníte kdykoli v pokladně (Správa → Systém → Licence a tarif). Placené doplňky jsou jen k pronájmu.",
+    },
     every: [
       "Prodej na dotykové obrazovce",
       "EET 2.0 (ostré EET i v tarifu Zdarma)",
