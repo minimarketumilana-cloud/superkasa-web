@@ -7,7 +7,7 @@ const num = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 export default {
   common: {
     bundle: {
-      title: "SuperKasa and E-shop super",
+      title: "SuperKasa and E&#8209;shop super",
       lead: 'The SuperKasa till and the <a href="https://eshopsuper.cz/">E-shop super</a> online shop come from the same maker. Pay for one and you get the other free.',
       cards: [
         ["Online shop free with paid SuperKasa", 'With paid SuperKasa you get an online shop with up to 100 items free, connected to the till. A larger shop (1,000 items or more) is paid for under the price list on <a href="https://eshopsuper.cz/">eshopsuper.cz</a>.'],
@@ -151,6 +151,7 @@ export default {
     shotAlt: "The SuperKasa sales screen: product tiles with photos and a sale in progress",
     payAlt: "Paying in SuperKasa: cash, card, QR payment, banknotes to tap and the change due",
     shotCap: "The real screen of a demo till",
+    stats: [["99 Kč", "a month incl. VAT"], ["0 Kč", "fees on your sales"], ["10", "devices included"], ["3", "staff languages"]],
     whyTitle: "Why SuperKasa",
     whyLead: "A full POS with stock and price labels at one low price – no hidden fees and no expensive hardware.",
     whyCards: [

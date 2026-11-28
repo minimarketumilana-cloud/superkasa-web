@@ -36,6 +36,8 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin-ext-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.className+=" js"</script>
 <script src="js/site.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","legalName":"Thanh Lam Nguyen","url":"https://superkasa.cz/","logo":{"@type":"ImageObject","@id":"https://superkasa.cz/#logo","url":"https://superkasa.cz/img/logo.png"},"image":"https://superkasa.cz/img/logo.png","telephone":"+420608886882","email":"info@superkasa.cz","address":{"@type":"PostalAddress","streetAddress":"1. května 117/141","postalCode":"725 25","addressLocality":"Ostrava","addressCountry":"CZ"},"identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"14161648"}},{"@type":"WebSite","@id":"https://superkasa.cz/#website","url":"https://superkasa.cz/","name":"SuperKasa","inLanguage":["cs","vi","en"],"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"WebPage","@id":"https://superkasa.cz/moje-eet-nebo-pokladna.html#webpage","url":"https://superkasa.cz/moje-eet-nebo-pokladna.html","name":"MOJE eet, nebo pokladna: srovnání | SuperKasa","description":"MOJE eet je státní aplikace zdarma pro nejvýše 2 evidenční jednotky, spuštění 1. 12. 2026. Co podle zveřejněných informací umí a kdy je lepší pokladna.","inLanguage":"cs","isPartOf":{"@id":"https://superkasa.cz/#website"},"publisher":{"@id":"https://superkasa.cz/#organization"},"about":{"@id":"https://superkasa.cz/#app"}},{"@type":"Article","headline":"MOJE eet, nebo pokladní systém: co státní aplikace umí a co ne","description":"MOJE eet je státní aplikace zdarma pro nejvýše 2 evidenční jednotky, spuštění 1. 12. 2026. Co podle zveřejněných informací umí a kdy je lepší pokladna.","inLanguage":"cs","url":"https://superkasa.cz/moje-eet-nebo-pokladna.html","mainEntityOfPage":"https://superkasa.cz/moje-eet-nebo-pokladna.html","datePublished":"2026-10-31","dateModified":"2026-10-31","image":"https://superkasa.cz/img/og.jpg","author":{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","url":"https://superkasa.cz"},"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Úvod","item":"https://superkasa.cz/"},{"@type":"ListItem","position":2,"name":"Návody","item":"https://superkasa.cz/navody.html"},{"@type":"ListItem","position":3,"name":"MOJE eet, nebo pokladní systém: co státní aplikace umí a co ne","item":"https://superkasa.cz/moje-eet-nebo-pokladna.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Od kdy bude MOJE eet dostupná?","acceptedAnswer":{"@type":"Answer","text":"Harmonogram Finanční správy uvádí spuštění 1. 12. 2026. Na stránce s praktickými informacemi se píše, že se spuštění předpokládá od tohoto data."}},{"@type":"Question","name":"Je MOJE eet opravdu zdarma?","acceptedAnswer":{"@type":"Answer","text":"Ano, Finanční správa ji popisuje jako bezplatnou aplikaci. Potřebujete jen vlastní zařízení s internetem."}},{"@type":"Question","name":"Potřebuji pro MOJE eet pokladní certifikát?","acceptedAnswer":{"@type":"Answer","text":"Nemusíte ho stahovat ani nahrávat. Podle Finanční správy si ho aplikace po spárování s DIS+ zajistí automaticky. Evidenční jednotku ale založit musíte."}},{"@type":"Question","name":"Vytiskne MOJE eet účtenku?","acceptedAnswer":{"@type":"Answer","text":"Doložené je vytvoření dokladu ve formátu PDF. Tisk na pokladní tiskárně zveřejněné materiály neuvádějí."}},{"@type":"Question","name":"Má MOJE eet sklad?","acceptedAnswer":{"@type":"Answer","text":"Zveřejněné materiály uvádějí katalog zboží a služeb s položkami a cenami. O skladu nepíšou nic."}},{"@type":"Question","name":"Kolik provozoven můžu mít v MOJE eet?","acceptedAnswer":{"@type":"Answer","text":"Finanční správa uvádí nejvýše 2 evidenční jednotky. Evidenční jednotkou je provozovna, ale také například e-shop nebo mobilní stánek."}}]}]}</script>
@@ -47,12 +49,12 @@
     <a class="brand" href="./" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Jazyk webu"><a href="moje-eet-nebo-pokladna.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="vi/moje-eet-nebo-pokladna.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="en/moje-eet-nebo-pokladna.html" hreflang="en" lang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
     <a class="login-top" href="prihlaseni.html" aria-label="Přihlásit se do pokladny" title="Přihlásit se do pokladny"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Přihlásit</span></a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
     <nav class="nav" id="nav" aria-label="Hlavní menu">
       <a href="obory.html">Pro koho</a>
       <a href="funkce.html">Funkce</a>
       <a href="cenik.html">Ceník</a>
-      <a href="eet.html">EET 2.0</a>
+      <a href="eet.html">EET&nbsp;2.0</a>
       <a href="navody.html" aria-current="page">Návody</a>
       <a href="jak-zacit.html">Jak začít</a>
       <a href="kontakt.html">Kontakt</a>
@@ -94,7 +96,7 @@
 <h2>Pro koho se hodí která cesta</h2>
 <p>MOJE eet je určená hlavně malým podnikatelům s&nbsp;menším počtem plateb a&nbsp;nejvýše 2 evidenčními jednotkami. Pokladní systém je vhodnější, když potřebujete víc než samotnou evidenci. Popis vychází z&nbsp;informací Finanční správy zveřejněných do 31.&nbsp;10.&nbsp;2026.</p>
 <div class="tbl"><table>
-  <thead><tr><th>Situace</th><th>Rozumná volba</th></tr></thead>
+  <thead><tr><th scope="col">Situace</th><th scope="col">Rozumná volba</th></tr></thead>
   <tbody>
     <tr><td>Kadeřnice bez zaměstnanců, pár zákaznic denně, několik druhů služeb</td><td>MOJE eet může stačit</td></tr>
     <tr><td>Stánek s&nbsp;malým sortimentem a&nbsp;mobilem nebo tabletem</td><td>MOJE eet může stačit</td></tr>
@@ -130,7 +132,7 @@
 <h2>Co o&nbsp;MOJE eet zatím není doložené</h2>
 <p>Následující funkce jsme v&nbsp;materiálech Finanční správy nenašli. Neznamená to, že je aplikace nikdy umět nebude. Znamená to, že dnes na ně nespoléhejte.</p>
 <div class="tbl"><table>
-  <thead><tr><th>Funkce</th><th>MOJE eet podle zveřejněných informací</th><th>U&nbsp;pokladního systému</th></tr></thead>
+  <thead><tr><th scope="col">Funkce</th><th scope="col">MOJE eet podle zveřejněných informací</th><th scope="col">U&nbsp;pokladního systému</th></tr></thead>
   <tbody>
     <tr><td>Sklad a&nbsp;příjem zboží</td><td>Neuvádí se. Uvádí se jen katalog položek a&nbsp;cen.</td><td>Zeptejte se dodavatele</td></tr>
     <tr><td>Tisk na pokladní tiskárně</td><td>Neuvádí se. Uvádí se doklad v&nbsp;PDF.</td><td>Zeptejte se, jaké tiskárny podporuje</td></tr>
@@ -166,7 +168,7 @@
 <h2>Co se zeptat dodavatele pokladny</h2>
 <p>Finanční správa uvádí, že u&nbsp;pokladního zařízení z&nbsp;doby původního EET obvykle stačí aktualizace softwaru. Než se rozhodnete, zeptejte se dodavatele na tyto věci:</p>
 <ul>
-  <li>Od kdy bude pokladna umět EET 2.0 a&nbsp;kolik stojí aktualizace?</li>
+  <li>Od kdy bude pokladna umět EET&nbsp;2.0 a&nbsp;kolik stojí aktualizace?</li>
   <li>Jak se do ní nahraje soubor .p12 a&nbsp;heslo?</li>
   <li>Dá se před ostrým provozem vyzkoušet spojení v&nbsp;ověřovacím módu?</li>
   <li>Odešle sama tržby po výpadku internetu a&nbsp;ukáže mi, když se odeslat nepodaří?</li>
@@ -180,12 +182,12 @@
 <section id="co-je-spolecne">
 <h2>Co platí pro obě cesty stejně</h2>
 <ul>
-  <li><strong>Přístup do DIS+.</strong> Potřebujete ho v&nbsp;obou případech. Postup je v&nbsp;článku <a href="eet-2-0-krok-za-krokem.html">EET 2.0 krok za krokem</a>.</li>
+  <li><strong>Přístup do DIS+.</strong> Potřebujete ho v&nbsp;obou případech. Postup je v&nbsp;článku <a href="eet-2-0-krok-za-krokem.html">EET&nbsp;2.0 krok za krokem</a>.</li>
   <li><strong>Evidenční jednotka.</strong> Založíte ji v&nbsp;DIS+ pro aplikaci i&nbsp;pro pokladnu.</li>
   <li><strong>Internet.</strong> Finanční správa píše, že pokladní zařízení musí být připojené k&nbsp;internetu.</li>
   <li><strong>Lhůta 48&nbsp;hodin.</strong> Po výpadku musíte tržbu odeslat bez zbytečného odkladu, nejpozději do 48&nbsp;hodin.</li>
   <li><strong>Doklady.</strong> Aplikace ani pokladna neruší povinnost vydat doklad podle zákona o&nbsp;DPH nebo zákona o&nbsp;ochraně spotřebitele.</li>
-  <li><strong>Sleva na dani.</strong> Podnikatel jako fyzická osoba, který podává daňové přiznání, může uplatnit slevu až 5&nbsp;000&nbsp;Kč bez ohledu na to, co k&nbsp;evidenci používá. V&nbsp;paušálním režimu se sleva neuplatňuje. Je to náš výklad zákona, ověřte si ho u&nbsp;finančního úřadu nebo u&nbsp;účetní. Podmínky jsou v&nbsp;článku <a href="eet-2-0-pruvodce.html">EET 2.0: základní průvodce</a>.</li>
+  <li><strong>Sleva na dani.</strong> Podnikatel jako fyzická osoba, který podává daňové přiznání, může uplatnit slevu až 5&nbsp;000&nbsp;Kč bez ohledu na to, co k&nbsp;evidenci používá. V&nbsp;paušálním režimu se sleva neuplatňuje. Je to náš výklad zákona, ověřte si ho u&nbsp;finančního úřadu nebo u&nbsp;účetní. Podmínky jsou v&nbsp;článku <a href="eet-2-0-pruvodce.html">EET&nbsp;2.0: základní průvodce</a>.</li>
 </ul>
 </section>
 <section id="jak-se-rozhodnout">
@@ -198,7 +200,7 @@
   <li><strong>Zeptejte se účetní.</strong> Jaká data od vás potřebuje a&nbsp;v&nbsp;jaké podobě?</li>
   <li><strong>Spočítejte náklady.</strong> K&nbsp;aplikaci potřebujete zařízení a&nbsp;internet. U&nbsp;pokladny přičtěte licenci a&nbsp;případné příslušenství.</li>
 </ol>
-<p>Pokud po těchto otázkách chcete pokladnu, SuperKasa má EET 2.0 v&nbsp;každém tarifu a&nbsp;spojení jsme vyzkoušeli v&nbsp;testovacím prostředí Finanční správy. Ceny najdete v&nbsp;<a href="cenik.html">ceníku</a>. Můžete také počkat na spuštění MOJE eet a&nbsp;podívat se, jestli vám stačí. Certifikát a&nbsp;zkoušku pokladny ale nenechávejte na poslední chvíli, protože evidovat musíte od 1.&nbsp;1.&nbsp;2027.</p>
+<p>Pokud po těchto otázkách chcete pokladnu, SuperKasa má EET&nbsp;2.0 v&nbsp;každém tarifu a&nbsp;spojení jsme vyzkoušeli v&nbsp;testovacím prostředí Finanční správy. Ceny najdete v&nbsp;<a href="cenik.html">ceníku</a>. Můžete také počkat na spuštění MOJE eet a&nbsp;podívat se, jestli vám stačí. Certifikát a&nbsp;zkoušku pokladny ale nenechávejte na poslední chvíli, protože evidovat musíte od 1.&nbsp;1.&nbsp;2027.</p>
 </section>
       <section id="otazky" class="faq"><h2>Časté otázky</h2>
         <details><summary>Od kdy bude MOJE eet dostupná?</summary><div><p>Harmonogram Finanční správy uvádí spuštění 1.&nbsp;12.&nbsp;2026. Na stránce s&nbsp;praktickými informacemi se píše, že se spuštění předpokládá od tohoto data.</p></div></details>
@@ -209,11 +211,11 @@
         <details><summary>Kolik provozoven můžu mít v&nbsp;MOJE eet?</summary><div><p>Finanční správa uvádí nejvýše 2 evidenční jednotky. Evidenční jednotkou je provozovna, ale také například e-shop nebo mobilní stánek.</p></div></details>
       </section>
       <section id="zdroje"><h2>Zdroje</h2>
-        <ul class="sources"><li><a href="https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace#kdy-mi-postaci-webova-aplikace-moje-eet-821" rel="noopener">Praktické informace: Kdy mi postačí webová aplikace MOJE eet (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-media/EET_v_5_krocich.pdf" rel="noopener">EET v&nbsp;5 krocích (Finanční správa)</a></li><li><a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">Harmonogram EET 2.0 (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET2_Prezentace_Seminar_pro_vyvojare_23-.pdf" rel="noopener">Prezentace ze semináře pro vývojáře, 23.&nbsp;6.&nbsp;2026 (Finanční správa)</a></li><li><a href="https://podpora.mojedane.gov.cz/cs/seznam-okruhu/elektronicka-evidence-trzeb-2-0/jake-informace-jsou-dostupne-na-zalozce-4763" rel="noopener">Jaké informace jsou dostupné na záložce Evidence tržeb (MOJE daně)</a></li><li><a href="https://eet.gov.cz/cs/pro-media/tiskove-zpravy/2026/prezident-podepsal-zakon-o-eet-2-0-evidence-trzeb-1315" rel="noopener">Tisková zpráva o&nbsp;podpisu zákona, 22.&nbsp;9.&nbsp;2026 (Finanční správa)</a></li></ul>
+        <ul class="sources"><li><a href="https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace#kdy-mi-postaci-webova-aplikace-moje-eet-821" rel="noopener">Praktické informace: Kdy mi postačí webová aplikace MOJE eet (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-media/EET_v_5_krocich.pdf" rel="noopener">EET v&nbsp;5 krocích (Finanční správa)</a></li><li><a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">Harmonogram EET&nbsp;2.0 (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET2_Prezentace_Seminar_pro_vyvojare_23-.pdf" rel="noopener">Prezentace ze semináře pro vývojáře, 23.&nbsp;6.&nbsp;2026 (Finanční správa)</a></li><li><a href="https://podpora.mojedane.gov.cz/cs/seznam-okruhu/elektronicka-evidence-trzeb-2-0/jake-informace-jsou-dostupne-na-zalozce-4763" rel="noopener">Jaké informace jsou dostupné na záložce Evidence tržeb (MOJE daně)</a></li><li><a href="https://eet.gov.cz/cs/pro-media/tiskove-zpravy/2026/prezident-podepsal-zakon-o-eet-2-0-evidence-trzeb-1315" rel="noopener">Tisková zpráva o&nbsp;podpisu zákona, 22.&nbsp;9.&nbsp;2026 (Finanční správa)</a></li></ul>
         <p class="disclaimer">Návod je obecná informace, ne právní ani daňová rada. U&nbsp;své konkrétní situace se poraďte s&nbsp;daňovým poradcem nebo finančním úřadem.</p>
       </section>
       <nav class="related" aria-label="Mohlo by vás zajímat"><h2>Mohlo by vás zajímat</h2><div class="guide-grid">
-        <a class="guide-card" href="eet-2-0-pruvodce.html"><small>Základní průvodce</small><b>EET 2.0: co to je, koho se týká a&nbsp;co musíte udělat</b></a>
+        <a class="guide-card" href="eet-2-0-pruvodce.html"><small>Základní průvodce</small><b>EET&nbsp;2.0: co to je, koho se týká a&nbsp;co musíte udělat</b></a>
         <a class="guide-card" href="jak-vybrat-pokladnu.html"><small>Výběr pokladny</small><b>Jak vybrat pokladní systém pro malý obchod</b></a>
         <a class="guide-card" href="eet-off-pausalni-dan.html"><small>Režim EET OFF</small><b>Režim EET OFF: kdo nemusí evidovat tržby a&nbsp;kolik to stojí</b></a>
       </div></nav>
@@ -249,7 +251,7 @@
           <li><a href="obory.html">Pro koho</a></li>
           <li><a href="funkce.html">Funkce</a></li>
           <li><a href="cenik.html">Ceník</a></li>
-          <li><a href="eet.html">EET 2.0</a></li>
+          <li><a href="eet.html">EET&nbsp;2.0</a></li>
           <li><a href="navody.html">Návody</a></li>
           <li><a href="jak-zacit.html">Jak začít</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
@@ -275,7 +277,7 @@
         <ul>
           <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
           <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
-          <li><a href="https://eet.gov.cz/" rel="noopener">EET 2.0 – Finanční správa</a></li>
+          <li><a href="https://eet.gov.cz/" rel="noopener">EET&nbsp;2.0 – Finanční správa</a></li>
         </ul>
       </div>
     </div>

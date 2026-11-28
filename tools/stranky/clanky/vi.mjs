@@ -1671,7 +1671,7 @@ export default {
 <li>Trong năm 2026, bạn có thể chọn chế độ <strong>Chạy thử</strong>. Hãy bật EET thật vào ngày 1 tháng 1 năm 2027, chậm nhất là lúc có khoản doanh thu đầu tiên của năm 2027.</li>
 </ol>
 <p>EET thật chạy khi bạn đã trả tiền gói, hoặc ở gói Miễn phí sau khi hết dùng thử. Cách làm chi tiết có trong hướng dẫn <a href="eet-2-0-krok-za-krokem.html">EET 2.0 từng bước</a>.</p>
-<p>Chúng tôi hỗ trợ qua điện thoại, cả bằng tiếng Việt: <a href="tel:+420608886882">+420 608 886 882</a>. Chúng tôi sẽ cùng bạn thiết lập máy.</p>`,
+<p>Chúng tôi hỗ trợ qua điện thoại, cả bằng tiếng Việt: <a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a>. Chúng tôi sẽ cùng bạn thiết lập máy.</p>`,
       },
     ],
     faq: [

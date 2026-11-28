@@ -9,7 +9,7 @@ const kc = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "&nbsp;");
 export default {
   common: {
     bundle: {
-      title: "SuperKasa a E-shop super",
+      title: "SuperKasa a E&#8209;shop super",
       lead: 'Pokladna SuperKasa a e-shop <a href="https://eshopsuper.cz/">E-shop super</a> jsou od stejného výrobce. Kdo platí jedno z nich, má druhé zdarma.',
       cards: [
         ["K placené SuperKase e-shop zdarma", 'E-shop do 100 položek máte k placené SuperKase zdarma, propojený s pokladnou. Větší e-shop (1 000 a víc položek) doplácíte podle ceníku na <a href="https://eshopsuper.cz/">eshopsuper.cz</a>.'],
@@ -155,6 +155,7 @@ export default {
     shotAlt: "Prodejní obrazovka SuperKasy: dlaždice zboží s fotkami a rozpracovaný nákup",
     payAlt: "Placení v SuperKase: hotovost, karta, QR platba, bankovky k výběru a částka k vrácení",
     shotCap: "Skutečná obrazovka ukázkové pokladny",
+    stats: [["99 Kč", "měsíčně včetně DPH"], ["0 Kč", "poplatky z vašich tržeb"], ["10", "zařízení v ceně tarifu"], ["3", "jazyky obsluhy"]],
     whyTitle: "Proč SuperKasa",
     whyLead: "Plná pokladna se skladem a cenovkami za jednu nízkou cenu – bez skrytých poplatků a bez drahého hardwaru.",
     whyCards: [

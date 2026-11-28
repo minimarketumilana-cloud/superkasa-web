@@ -7,7 +7,7 @@ const kc = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "&nbsp;");
 export default {
   common: {
     bundle: {
-      title: "SuperKasa và E-shop super",
+      title: "SuperKasa và E&#8209;shop super",
       lead: 'Máy tính tiền SuperKasa và cửa hàng online <a href="https://eshopsuper.cz/">E-shop super</a> cùng một nhà sản xuất. Trả tiền một dịch vụ thì được dùng dịch vụ kia miễn phí.',
       cards: [
         ["Cửa hàng online miễn phí khi trả SuperKasa", 'Khi trả tiền SuperKasa, bạn được cửa hàng online tối đa 100 mặt hàng miễn phí, kết nối với máy tính tiền. Cửa hàng lớn hơn (từ 1 000 mặt hàng) trả thêm theo bảng giá trên <a href="https://eshopsuper.cz/">eshopsuper.cz</a>.'],
@@ -151,6 +151,7 @@ export default {
     shotAlt: "Màn hình bán hàng SuperKasa: ô hàng có ảnh và đơn hàng đang bán",
     payAlt: "Thanh toán trong SuperKasa: tiền mặt, thẻ, QR, chọn tờ tiền và số tiền thối lại",
     shotCap: "Màn hình thật của máy tính tiền mẫu",
+    stats: [["99 Kč", "mỗi tháng, đã gồm DPH"], ["0 Kč", "phí trên doanh thu của bạn"], ["10", "thiết bị trong giá gói"], ["3", "ngôn ngữ cho nhân viên"]],
     whyTitle: "Vì sao chọn SuperKasa",
     whyLead: "Máy tính tiền đầy đủ, có kho và nhãn giá, với một mức giá thấp – không phí ẩn, không cần phần cứng đắt tiền.",
     whyCards: [

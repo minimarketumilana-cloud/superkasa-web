@@ -1,6 +1,6 @@
 // Úvod a Funkce. Texty jsou ve slovníku c.T.index a c.T.funkce (tools/stranky/texty/<jazyk>.mjs).
 import { pageUrl, SITE } from "./i18n.mjs";
-import { DEMO_URL, LOGIN_LIVE, REGISTER_URL, card, cta, faqLd, faqSection, software } from "./parts.mjs";
+import { DEMO_URL, LOGIN_LIVE, REGISTER_URL, card, cta, faqLd, faqSection, icon, software } from "./parts.mjs";
 import { oborPicker } from "./obory-stranky.mjs";
 
 /**
@@ -35,7 +35,7 @@ export const index = (c) => {
       ],
     },
     body: `
-<section class="hero hero-pick">
+<section class="hero hero-pick hero-x">
   <div class="wrap">
     <div class="hero-top">
       <div class="hero-intro">
@@ -45,11 +45,12 @@ export const index = (c) => {
         <div class="actions hero-cta">
           ${LOGIN_LIVE ? `<a class="btn btn-gold btn-lg" href="${REGISTER_URL}">${t.heroCta[0]}</a>` : ""}
           <a class="btn btn-ghost btn-lg" href="${DEMO_URL}">${c.T.common.demoBtn}</a>
-          <a class="btn btn-ghost btn-lg" href="jak-zacit.html">${t.heroCta[1]}</a>
         </div>
-        <p class="small hero-cta-note">${t.heroCtaNote}</p>
+        <p class="small hero-cta-note">${t.heroCtaNote} <a href="jak-zacit.html">${t.heroCta[1]}</a></p>
       </div>
-      ${shot(c, "prodej", t.shotAlt, { above: true, sizes: "(max-width: 900px) 100vw, 620px" })}
+      <div class="stage">
+        ${shot(c, "prodej", t.shotAlt, { above: true, sizes: "(max-width: 900px) 100vw, 720px" })}
+      </div>
     </div>
     <ul class="hero-facts">
       ${t.heroFacts.map((x) => `<li>${x}</li>`).join("\n      ")}
@@ -62,7 +63,15 @@ export const index = (c) => {
   </div>
 </section>
 
-<section class="section alt">
+<section class="stats" aria-label="${t.whyTitle}">
+  <div class="wrap">
+    <dl class="stat-row">
+      ${t.stats.map(([v, l]) => `<div><dt>${l}</dt><dd>${v}</dd></div>`).join("\n      ")}
+    </dl>
+  </div>
+</section>
+
+<section class="section feature">
   <div class="wrap split">
     <div>
       <h2>${t.splitTitle}</h2>
@@ -76,26 +85,38 @@ export const index = (c) => {
   </div>
 </section>
 
-<section class="section">
+<section class="section feature feature-rev">
+  <div class="wrap split">
+    <div>
+      <h2>${t.whyCards[5][0]}</h2>
+      <p class="lead-sm">${t.whyCards[5][1]}</p>
+    </div>
+    ${shot(c, "cenovky", c.T.funkce.labelsAlt, { cap: t.shotCap })}
+  </div>
+</section>
+
+<section class="section alt">
   <div class="wrap">
     <div class="section-head">
       <h2>${t.whyTitle}</h2>
       <p>${t.whyLead}</p>
     </div>
-    <div class="grid grid-3">
-      ${cards([["wallet", "gold"], ["cash"], ["network"], ["clock"], ["lang", "gold"], ["box"]], t.whyCards)}
+    <div class="flist">
+      ${[["cash"], ["network"], ["clock"], ["lang"]].map(([ic], i) => `<div>${icon(ic)}<h3>${t.whyCards[i + 1][0]}</h3><p>${t.whyCards[i + 1][1]}</p></div>`).join("\n      ")}
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head">
-      <h2>${b.title}</h2>
-      <p>${b.lead}</p>
-    </div>
-    <div class="grid grid-2">
-      ${cards([["bag", "gold"], ["wallet"]], b.cards)}
+    <div class="bundle">
+      <div class="bundle-head">
+        <h2>${b.title}</h2>
+        <p>${b.lead}</p>
+      </div>
+      <div class="bundle-cols">
+        ${b.cards.map(([h, p]) => `<div><h3>${h}</h3>${p.startsWith("<") ? p : `<p>${p}</p>`}</div>`).join("\n        ")}
+      </div>
     </div>
   </div>
 </section>
@@ -106,20 +127,20 @@ export const index = (c) => {
       <h2>${t.newTitle}</h2>
       <p>${t.newLead}</p>
     </div>
-    <div class="grid grid-3">
-      ${cards([["bell", "gold"], ["db"], ["bag"], ["touch", "gold"], ["printer"], ["chart"]], t.newCards)}
+    <div class="flist flist-3">
+      ${[["bell"], ["db"], ["bag"], ["touch"], ["printer"], ["chart"]].map(([ic], i) => `<div>${icon(ic)}<h3>${t.newCards[i][0]}</h3><p>${t.newCards[i][1]}</p></div>`).join("\n      ")}
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section dark ready">
   <div class="wrap">
     <div class="section-head">
       <h2>${t.readyTitle}</h2>
       <p>${t.readyLead}</p>
     </div>
-    <div class="grid grid-3">
-      ${cards([["eet"], ["coins", "gold"], ["cup"]], t.readyCards)}
+    <div class="flist flist-3">
+      ${[["eet"], ["coins"], ["cup"]].map(([ic], i) => `<div>${icon(ic)}<h3>${t.readyCards[i][0]}</h3><p>${t.readyCards[i][1]}</p></div>`).join("\n      ")}
     </div>
     <p class="small mt-1">${t.readyNote}</p>
   </div>
@@ -131,7 +152,7 @@ export const index = (c) => {
       <h2>${t.stepsTitle}</h2>
       <p>${t.stepsLead}</p>
     </div>
-    <ol class="steps">
+    <ol class="steps steps-row">
       ${t.steps.map(([s, txt]) => `<li><strong>${s}</strong>${txt}</li>`).join("\n      ")}
     </ol>
   </div>

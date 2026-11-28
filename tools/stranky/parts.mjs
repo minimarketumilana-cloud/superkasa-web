@@ -181,6 +181,10 @@ export const card = (ic, title, text, cls = "") => `<article class="card">${icon
 /** Soubory hlavního menu (popisky jsou ve slovníku common.nav ve stejném pořadí). */
 export const NAV_FILES = ["index.html", "obory.html", "funkce.html", "cenik.html", "eet.html", "navody.html", "jak-zacit.html", "kontakt.html"];
 
+/** Písmo nadpisů (Fraunces 600) předem: latinka a k ní podmnožina jazyka stránky (čeština, vietnamština). */
+const fontPreload = (lang, up) => ["latin", ...(lang === "cs" ? ["latin-ext"] : lang === "vi" ? ["vietnamese"] : [])]
+  .map((s) => `<link rel="preload" href="${up}fonts/fraunces-${s}-600-normal.woff2" as="font" type="font/woff2" crossorigin>`).join("\n");
+
 /** Ověření webu pro Seznam Webmaster – jen na české úvodní stránce (kořen webu). */
 const SEZNAM_WMT = `<meta name="seznam-wmt" content="hHH0CkwOzJjTBgouGSlDIMKXitCyrb6Q">`;
 
@@ -295,6 +299,7 @@ ${LANGS.filter((l) => l !== lang).map((l) => `<meta property="og:locale:alternat
 <link rel="apple-touch-icon" href="${up}apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="${up}css/style.css">
+${fontPreload(lang, up)}
 <script>${INLINE_JS}</script>
 <script src="${up}js/site.js" defer></script>
 ${ld}</head>
@@ -307,7 +312,7 @@ ${ld}</head>
     ${LOGIN_LIVE
       ? `<a class="login-top" href="prihlaseni.html" aria-label="${esc(L.loginAria)}" title="${esc(L.loginAria)}"${current === "prihlaseni.html" ? ' aria-current="page"' : ""}><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>${L.loginBtn}</span>${L.loginSoon ? `<em class="soon-tag">${L.loginSoon}</em>` : ""}</a>`
       : `<a class="login-top soon" href="prihlaseni.html" aria-label="${esc(L.loginAriaSoon)}" title="${esc(L.loginAriaSoon)}"${current === "prihlaseni.html" ? ' aria-current="page"' : ""}><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg><span>${L.loginBtnSoon}</span><em class="soon-tag">${L.loginSoonTag}</em></a>`}
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">${L.menu}</span></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="${L.menu}"><span class="bars"><span></span></span><span class="menu-txt">${L.menu}</span></button>
     <nav class="nav" id="nav" aria-label="${L.navAria}">
       ${nav}
       ${LOGIN_LIVE ? `<a class="nav-login" href="prihlaseni.html">${L.loginBtn}</a>` : ""}

@@ -809,7 +809,7 @@ export default [
 <li>V roce 2026 můžete zvolit režim <strong>Nanečisto</strong>. Ostré EET zapněte k 1. 1. 2027, nejpozději k první tržbě v roce 2027.</li>
 </ol>
 <p>Ostré EET běží po zaplacení tarifu, nebo po skončení zkoušky v tarifu Zdarma. Podrobný postup je v návodu <a href="eet-2-0-krok-za-krokem.html">EET 2.0 krok za krokem</a>. Web SuperKasa je i <a href="vi/index.html">ve vietnamštině</a>.</p>
-<p>Pomůžeme vám po telefonu, i ve vietnamštině: <a href="tel:+420608886882">+420 608 886 882</a>. Nastavení pokladny projdeme s vámi.</p>`,
+<p>Pomůžeme vám po telefonu, i ve vietnamštině: <a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a>. Nastavení pokladny projdeme s vámi.</p>`,
       },
     ],
     faq: [

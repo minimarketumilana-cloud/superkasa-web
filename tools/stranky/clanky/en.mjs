@@ -1675,7 +1675,7 @@ export default {
 <li>In 2026 you can choose <strong>Dry run</strong> mode. Switch on live EET on 1 January 2027, at the latest for the first sale in 2027.</li>
 </ol>
 <p>Live EET runs once you pay for a plan, or on the Free plan after the trial. The detailed procedure is in the guide <a href="eet-2-0-krok-za-krokem.html">EET 2.0 step by step</a>. The SuperKasa website is also available <a href="../vi/index.html">in Vietnamese</a>.</p>
-<p>We can help you by phone, in Vietnamese too: <a href="tel:+420608886882">+420 608 886 882</a>. We will go through the setup with you.</p>`,
+<p>We can help you by phone, in Vietnamese too: <a href="tel:+420608886882">+420&nbsp;608&nbsp;886&nbsp;882</a>. We will go through the setup with you.</p>`,
       },
     ],
     faq: [

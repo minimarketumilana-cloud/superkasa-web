@@ -23,7 +23,7 @@ const DAY = new Date().toLocaleDateString("sv-SE"); // RRRR-MM-DD v místním č
 
 /**
  * Česká typografie v hotovém HTML: nezlomitelná mezera po jednopísmenných předložkách a spojkách, v číslech
- * (2 041, +420 608 886 882), před jednotkami (99 Kč, 12 %), v datech (1. 1. 2027) a za §. Jen textové uzly –
+ * (2 041, +420 608 886 882), před jednotkami (99 Kč, 12 %), v datech (1. 1. 2027), v „EET 2.0“ a za §. Jen textové uzly –
  * <script>, <style>, <pre>, <code>, <textarea>, <title> a atributy zůstávají beze změny.
  */
 const typo = (t) => {
@@ -31,11 +31,16 @@ const typo = (t) => {
   for (let prev = ""; prev !== t; ) { prev = t; t = t.replace(/(\d) (?=\d{3}(?!\d))/g, "$1&nbsp;"); }
   t = t.replace(/(\d) (?=(Kč|%|kg|g|l|ml|mm|dní|dnů|dny|hodin|minut|let|ks)(?=[\s.,;:)!?]|&nbsp;|$))/g, "$1&nbsp;");
   t = t.replace(/(\d{1,2}\.) (\d{1,2}\.) (\d{4})/g, "$1&nbsp;$2&nbsp;$3");
+  t = t.replace(/\bEET 2\.0\b/g, "EET&nbsp;2.0");
   return t.replace(/§ /g, "§&nbsp;");
 };
 const typography = (html) => html.split(/(<(script|style|pre|code|textarea|title)\b[\s\S]*?<\/\2>)/i)
   .map((part, i) => (i % 3 === 0 ? part.replace(/>([^<]+)</g, (m, t) => `>${typo(t)}<`) : i % 3 === 1 ? part : ""))
   .join("");
+/** Záhlaví tabulek pro čtečky obrazovky: holé <th> v <thead> dostane scope="col", v <tbody> scope="row" (články, srovnání). */
+const thScope = (html) => html
+  .replace(/<thead>[\s\S]*?<\/thead>/g, (m) => m.replace(/<th>/g, '<th scope="col">'))
+  .replace(/<tbody>[\s\S]*?<\/tbody>/g, (m) => m.replace(/<th>/g, '<th scope="row">'));
 /** Odkazy na úvod bez „index.html“ (kanonická adresa je …/): index.html → ./, ../vi/index.html → ../vi/ … */
 const homeLinks = (html) => html.replace(/href="((?:\.\.\/)*|\/)?((?:vi|en)\/)?index\.html(#[^"]*)?"/g, (_, up = "", lang = "", hash = "") => `href="${(up + lang) || "./"}${hash}"`);
 const decode = (s) => s.replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">");
@@ -106,6 +111,7 @@ for (const lang of LANGS) {
     }
     if (lang === "cs") html = typography(html);
     html = homeLinks(html);
+    html = thScope(html);
     const out = path.join(ROOT, dir, p.file);
     const url = pageUrl(lang, p.file);
     const changed = !existsSync(out) || norm(readFileSync(out, "utf8")) !== norm(html);

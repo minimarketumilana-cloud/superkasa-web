@@ -36,6 +36,8 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin-ext-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.className+=" js"</script>
 <script src="js/site.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","legalName":"Thanh Lam Nguyen","url":"https://superkasa.cz/","logo":{"@type":"ImageObject","@id":"https://superkasa.cz/#logo","url":"https://superkasa.cz/img/logo.png"},"image":"https://superkasa.cz/img/logo.png","telephone":"+420608886882","email":"info@superkasa.cz","address":{"@type":"PostalAddress","streetAddress":"1. května 117/141","postalCode":"725 25","addressLocality":"Ostrava","addressCountry":"CZ"},"identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"14161648"}},{"@type":"WebSite","@id":"https://superkasa.cz/#website","url":"https://superkasa.cz/","name":"SuperKasa","inLanguage":["cs","vi","en"],"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"WebPage","@id":"https://superkasa.cz/prodej-z-telefonu.html#webpage","url":"https://superkasa.cz/prodej-z-telefonu.html","name":"Pokladna v mobilu a tisk u hlavní kasy | SuperKasa","description":"Jak prodávat s pokladnou v telefonu nebo tabletu: přihlášení, PIN prodavače, počet zařízení, kamera jako čtečka, tisk u hlavní kasy a výpadek internetu.","inLanguage":"cs","isPartOf":{"@id":"https://superkasa.cz/#website"},"publisher":{"@id":"https://superkasa.cz/#organization"},"about":{"@id":"https://superkasa.cz/#app"}},{"@type":"Article","headline":"Pokladna v telefonu nebo tabletu a tisk u hlavní kasy","description":"Jak prodávat s pokladnou v telefonu nebo tabletu: přihlášení, PIN prodavače, počet zařízení, kamera jako čtečka, tisk u hlavní kasy a výpadek internetu.","inLanguage":"cs","url":"https://superkasa.cz/prodej-z-telefonu.html","mainEntityOfPage":"https://superkasa.cz/prodej-z-telefonu.html","datePublished":"2026-10-31","dateModified":"2026-11-05","image":"https://superkasa.cz/img/og.jpg","author":{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","url":"https://superkasa.cz"},"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Úvod","item":"https://superkasa.cz/"},{"@type":"ListItem","position":2,"name":"Návody","item":"https://superkasa.cz/navody.html"},{"@type":"ListItem","position":3,"name":"Pokladna v telefonu nebo tabletu a tisk u hlavní kasy","item":"https://superkasa.cz/prodej-z-telefonu.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Může prodavač použít vlastní telefon?","acceptedAnswer":{"@type":"Answer","text":"Ano, ale první přihlášení musí udělat majitel svým e-mailem a heslem. Pak se odhlásí a prodavač zadá PIN."}},{"@type":"Question","name":"Počítá se každý telefon do limitu zařízení?","acceptedAnswer":{"@type":"Answer","text":"Ano. V tarifu je až 10 zařízení. Přehled Majitel na mobilu se do limitu nepočítá."}},{"@type":"Question","name":"Musí být telefon na stejné Wi-Fi jako hlavní kasa?","acceptedAnswer":{"@type":"Answer","text":"Ne. Tisk na hlavní kase jde přes internet, telefon může být klidně na mobilních datech."}},{"@type":"Question","name":"Funguje pokladna na iPhonu?","acceptedAnswer":{"@type":"Answer","text":"Ano, v prohlížeči. Nefunguje jen přímé připojení Bluetooth tiskárny. Tisknout můžete na tiskárně u hlavní kasy."}},{"@type":"Question","name":"Můžu na telefonu tisknout cenovky?","acceptedAnswer":{"@type":"Answer","text":"Ano, když jste vedoucí nebo majitel a telefon má nastavenou tiskárnu. Správa je ale na malé obrazovce méně pohodlná než na počítači."}}]}]}</script>
@@ -47,12 +49,12 @@
     <a class="brand" href="./" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Jazyk webu"><a href="prodej-z-telefonu.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="vi/prodej-z-telefonu.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="en/prodej-z-telefonu.html" hreflang="en" lang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
     <a class="login-top" href="prihlaseni.html" aria-label="Přihlásit se do pokladny" title="Přihlásit se do pokladny"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Přihlásit</span></a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
     <nav class="nav" id="nav" aria-label="Hlavní menu">
       <a href="obory.html">Pro koho</a>
       <a href="funkce.html">Funkce</a>
       <a href="cenik.html">Ceník</a>
-      <a href="eet.html">EET 2.0</a>
+      <a href="eet.html">EET&nbsp;2.0</a>
       <a href="navody.html" aria-current="page">Návody</a>
       <a href="jak-zacit.html">Jak začít</a>
       <a href="kontakt.html">Kontakt</a>
@@ -93,7 +95,7 @@
 <h2>Co potřebujete</h2>
 <p>Instalovat nic nemusíte, pokladna běží v&nbsp;prohlížeči.</p>
 <div class="tbl"><table>
-<thead><tr><th>Provoz</th><th>K&nbsp;čemu telefon nebo tablet slouží</th></tr></thead>
+<thead><tr><th scope="col">Provoz</th><th scope="col">K&nbsp;čemu telefon nebo tablet slouží</th></tr></thead>
 <tbody>
 <tr><td>Bistro</td><td>Prodej na zahrádce, účtenka vyjede u&nbsp;hlavní kasy</td></tr>
 <tr><td>Kadeřnice</td><td>Tablet u&nbsp;křesla jako jediná pokladna</td></tr>
@@ -232,7 +234,7 @@
           <li><a href="obory.html">Pro koho</a></li>
           <li><a href="funkce.html">Funkce</a></li>
           <li><a href="cenik.html">Ceník</a></li>
-          <li><a href="eet.html">EET 2.0</a></li>
+          <li><a href="eet.html">EET&nbsp;2.0</a></li>
           <li><a href="navody.html">Návody</a></li>
           <li><a href="jak-zacit.html">Jak začít</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
@@ -258,7 +260,7 @@
         <ul>
           <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
           <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
-          <li><a href="https://eet.gov.cz/" rel="noopener">EET 2.0 – Finanční správa</a></li>
+          <li><a href="https://eet.gov.cz/" rel="noopener">EET&nbsp;2.0 – Finanční správa</a></li>
         </ul>
       </div>
     </div>

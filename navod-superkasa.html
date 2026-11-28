@@ -36,6 +36,8 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin-ext-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.className+=" js"</script>
 <script src="js/site.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","legalName":"Thanh Lam Nguyen","url":"https://superkasa.cz/","logo":{"@type":"ImageObject","@id":"https://superkasa.cz/#logo","url":"https://superkasa.cz/img/logo.png"},"image":"https://superkasa.cz/img/logo.png","telephone":"+420608886882","email":"info@superkasa.cz","address":{"@type":"PostalAddress","streetAddress":"1. května 117/141","postalCode":"725 25","addressLocality":"Ostrava","addressCountry":"CZ"},"identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"14161648"}},{"@type":"WebSite","@id":"https://superkasa.cz/#website","url":"https://superkasa.cz/","name":"SuperKasa","inLanguage":["cs","vi","en"],"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"WebPage","@id":"https://superkasa.cz/navod-superkasa.html#webpage","url":"https://superkasa.cz/navod-superkasa.html","name":"Návod k pokladně: od registrace po uzávěrku | SuperKasa","description":"Jak používat pokladnu SuperKasa krok za krokem: registrace, zboží, první prodej, platby, vratka, uzávěrka, prodavači, zálohy a placení pronájmu.","inLanguage":"cs","isPartOf":{"@id":"https://superkasa.cz/#website"},"publisher":{"@id":"https://superkasa.cz/#organization"},"about":{"@id":"https://superkasa.cz/#app"}},{"@type":"Article","headline":"Návod k pokladně SuperKasa: od registrace po uzávěrku","description":"Jak používat pokladnu SuperKasa krok za krokem: registrace, zboží, první prodej, platby, vratka, uzávěrka, prodavači, zálohy a placení pronájmu.","inLanguage":"cs","url":"https://superkasa.cz/navod-superkasa.html","mainEntityOfPage":"https://superkasa.cz/navod-superkasa.html","datePublished":"2026-10-31","dateModified":"2026-11-05","image":"https://superkasa.cz/img/og.jpg","author":{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","url":"https://superkasa.cz"},"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Úvod","item":"https://superkasa.cz/"},{"@type":"ListItem","position":2,"name":"Návody","item":"https://superkasa.cz/navody.html"},{"@type":"ListItem","position":3,"name":"Návod k pokladně SuperKasa: od registrace po uzávěrku","item":"https://superkasa.cz/navod-superkasa.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Musím hned po registraci platit?","acceptedAnswer":{"@type":"Answer","text":"Ne. Prvních 10 dní je zdarma a kartu nezadáváte. Platit můžete i během zkoušky, zbylé dny vám zůstanou."}},{"@type":"Question","name":"Zapomněl jsem heslo. Co teď?","acceptedAnswer":{"@type":"Answer","text":"Otevřete adresu svého obchodu na zařízení, které není přihlášené, a klepněte na Zapomenuté heslo. Zadáte e-mail, PIN majitele a nové heslo."}},{"@type":"Question","name":"Jsou doklady ve zkušební době platné?","acceptedAnswer":{"@type":"Answer","text":"Pokladna založená do konce roku 2026 vydává rovnou platné doklady. Pokladna založená od 1. 1. 2027 začíná ve zkušebním režimu, ve kterém doklady neplatí. Do ostrého provozu přejde až s certifikátem z DIS+, číslem evidenční jednotky, ověřeným spojením a zaplaceným tarifem (po skončení zkoušky stačí tarif Zdarma). Kdo evidovat nemusí, zvolí ve Správě → EET 2.0 volbu „Tržby evidovat nemusím“ a certifikát nepotřebuje. Zkušební režim lze zapnout jen před prvním ostrým dokladem."}},{"@type":"Question","name":"Může prodavač vrátit peníze bez vedoucího?","acceptedAnswer":{"@type":"Answer","text":"Ne. Storno i vratku musí prodavač potvrdit PINem vedoucího nebo majitele. Vedoucí a majitel PIN znovu nezadávají."}},{"@type":"Question","name":"Musím dělat uzávěrku každý den?","acceptedAnswer":{"@type":"Answer","text":"Po 20 hodinách otevřené směny pokladna upozorní a ve 23:59 udělá uzávěrku sama, takže se tržby více dnů neslijí. Hotovost v zásuvce ale spočítáte jen vy, proto je lepší udělat uzávěrku na konci dne ručně."}}]}]}</script>
@@ -47,12 +49,12 @@
     <a class="brand" href="./" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Jazyk webu"><a href="navod-superkasa.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="vi/navod-superkasa.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="en/navod-superkasa.html" hreflang="en" lang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
     <a class="login-top" href="prihlaseni.html" aria-label="Přihlásit se do pokladny" title="Přihlásit se do pokladny"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Přihlásit</span></a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
     <nav class="nav" id="nav" aria-label="Hlavní menu">
       <a href="obory.html">Pro koho</a>
       <a href="funkce.html">Funkce</a>
       <a href="cenik.html">Ceník</a>
-      <a href="eet.html">EET 2.0</a>
+      <a href="eet.html">EET&nbsp;2.0</a>
       <a href="navody.html" aria-current="page">Návody</a>
       <a href="jak-zacit.html">Jak začít</a>
       <a href="kontakt.html">Kontakt</a>
@@ -136,7 +138,7 @@
 <li>Zkontrolujte pole <strong>Adresa provozovny</strong>. Má tam být adresa obchodu, ne sídlo. Živnostník mívá sídlo doma.</li>
 <li>Klepněte na <strong>Uložit</strong>.</li>
 </ol>
-<aside class="note"><p>EET 2.0 nastavíte ve <strong>Správě → EET 2.0</strong>. Postup je v&nbsp;návodu <a href="eet-2-0-krok-za-krokem.html">EET 2.0 krok za krokem</a>.</p></aside>
+<aside class="note"><p>EET&nbsp;2.0 nastavíte ve <strong>Správě → EET&nbsp;2.0</strong>. Postup je v&nbsp;návodu <a href="eet-2-0-krok-za-krokem.html">EET&nbsp;2.0 krok za krokem</a>.</p></aside>
 </section>
 <section id="zbozi">
 <h2>Zboží v&nbsp;pokladně</h2>
@@ -170,7 +172,7 @@
 <section id="vratka-storno">
 <h2>Vratka a&nbsp;storno</h2>
 <div class="tbl"><table>
-<thead><tr><th></th><th>Storno</th><th>Vratka</th></tr></thead>
+<thead><tr><th scope="col"></th><th scope="col">Storno</th><th scope="col">Vratka</th></tr></thead>
 <tbody>
 <tr><td>Kdy</td><td>Celý doklad z&nbsp;právě otevřené pokladny</td><td>Vybrané položky, i&nbsp;ze staršího nákupu</td></tr>
 <tr><td>Tlačítko</td><td>Stornovat celý doklad</td><td>Vratka položek</td></tr>
@@ -209,11 +211,11 @@
 <li>Klepněte na <strong>Uložit</strong>.</li>
 </ol>
 <div class="tbl"><table>
-<thead><tr><th>Role</th><th>Co smí</th></tr></thead>
+<thead><tr><th scope="col">Role</th><th scope="col">Co smí</th></tr></thead>
 <tbody>
 <tr><td>Prodavač</td><td>Prodej a&nbsp;Menu, Správu nevidí</td></tr>
 <tr><td>Vedoucí</td><td>Navíc zboží, sklad, přehledy a&nbsp;schvalování PINem</td></tr>
-<tr><td>Majitel</td><td>Všechno včetně sekcí Firma, Zařízení, EET 2.0 a&nbsp;Systém</td></tr>
+<tr><td>Majitel</td><td>Všechno včetně sekcí Firma, Zařízení, EET&nbsp;2.0 a&nbsp;Systém</td></tr>
 </tbody>
 </table></div>
 </section>
@@ -234,13 +236,13 @@
 </ol>
 <p>V&nbsp;pokladně se pronájem jmenuje licence – najdete ho ve <strong>Správě → Systém → Licence a&nbsp;tarif</strong>.</p>
 <aside class="note warn"><p>Platba QR kódem se spáruje sama, obvykle během pár minut po připsání na náš účet, a&nbsp;pronájem se prodlouží bez dalšího kroku. Když QR platbu v&nbsp;pokladně nevidíte nebo se platba nespárovala do druhého pracovního dne, zavolejte nám a&nbsp;pošleme vám licenční klíč. Vložíte ho ve <strong>Správě → Systém → Licence a&nbsp;tarif</strong> do pole <strong>Licenční klíč</strong> a&nbsp;klepnete na <strong>Aktivovat</strong>.</p></aside>
-<p>Po skončení zkoušky prodáváte ještě 3&nbsp;dny s&nbsp;upozorněním, po skončení zaplaceného období také 3&nbsp;dny (rezerva na připsání platby). Pak pokladna přejde na tarif Zdarma: prodej, účtenky, uzávěrka a&nbsp;EET 2.0 běží dál, jen na 1 zařízení, s&nbsp;nejvýš 300 položkami zboží a&nbsp;bez placených funkcí. Data, doklady, uzávěrky, vratky a&nbsp;export fungují dál.</p>
+<p>Po skončení zkoušky prodáváte ještě 3&nbsp;dny s&nbsp;upozorněním, po skončení zaplaceného období také 3&nbsp;dny (rezerva na připsání platby). Pak pokladna přejde na tarif Zdarma: prodej, účtenky, uzávěrka a&nbsp;EET&nbsp;2.0 běží dál, jen na 1 zařízení, s&nbsp;nejvýš 300 položkami zboží a&nbsp;bez placených funkcí. Data, doklady, uzávěrky, vratky a&nbsp;export fungují dál.</p>
 <p><strong>Jazyk.</strong> Vlajka nahoře přepne češtinu, vietnamštinu nebo angličtinu. Každý prodavač má svůj jazyk. Doklad pro zákazníka je vždy česky.</p>
 </section>
       <section id="otazky" class="faq"><h2>Časté otázky</h2>
         <details><summary>Musím hned po registraci platit?</summary><div><p>Ne. Prvních 10&nbsp;dní je zdarma a&nbsp;kartu nezadáváte. Platit můžete i&nbsp;během zkoušky, zbylé dny vám zůstanou.</p></div></details>
         <details><summary>Zapomněl jsem heslo. Co teď?</summary><div><p>Otevřete adresu svého obchodu na zařízení, které není přihlášené, a&nbsp;klepněte na Zapomenuté heslo. Zadáte e-mail, PIN majitele a&nbsp;nové heslo.</p></div></details>
-        <details><summary>Jsou doklady ve zkušební době platné?</summary><div><p>Pokladna založená do konce roku 2026 vydává rovnou platné doklady. Pokladna založená od 1.&nbsp;1.&nbsp;2027 začíná ve zkušebním režimu, ve kterém doklady neplatí. Do ostrého provozu přejde až s&nbsp;certifikátem z&nbsp;DIS+, číslem evidenční jednotky, ověřeným spojením a&nbsp;zaplaceným tarifem (po skončení zkoušky stačí tarif Zdarma). Kdo evidovat nemusí, zvolí ve Správě → EET 2.0 volbu „Tržby evidovat nemusím“ a&nbsp;certifikát nepotřebuje. Zkušební režim lze zapnout jen před prvním ostrým dokladem.</p></div></details>
+        <details><summary>Jsou doklady ve zkušební době platné?</summary><div><p>Pokladna založená do konce roku 2026 vydává rovnou platné doklady. Pokladna založená od 1.&nbsp;1.&nbsp;2027 začíná ve zkušebním režimu, ve kterém doklady neplatí. Do ostrého provozu přejde až s&nbsp;certifikátem z&nbsp;DIS+, číslem evidenční jednotky, ověřeným spojením a&nbsp;zaplaceným tarifem (po skončení zkoušky stačí tarif Zdarma). Kdo evidovat nemusí, zvolí ve Správě → EET&nbsp;2.0 volbu „Tržby evidovat nemusím“ a&nbsp;certifikát nepotřebuje. Zkušební režim lze zapnout jen před prvním ostrým dokladem.</p></div></details>
         <details><summary>Může prodavač vrátit peníze bez vedoucího?</summary><div><p>Ne. Storno i&nbsp;vratku musí prodavač potvrdit PINem vedoucího nebo majitele. Vedoucí a&nbsp;majitel PIN znovu nezadávají.</p></div></details>
         <details><summary>Musím dělat uzávěrku každý den?</summary><div><p>Po 20 hodinách otevřené směny pokladna upozorní a&nbsp;ve 23:59 udělá uzávěrku sama, takže se tržby více dnů neslijí. Hotovost v&nbsp;zásuvce ale spočítáte jen vy, proto je lepší udělat uzávěrku na konci dne ručně.</p></div></details>
       </section>
@@ -248,7 +250,7 @@
       <nav class="related" aria-label="Mohlo by vás zajímat"><h2>Mohlo by vás zajímat</h2><div class="guide-grid">
         <a class="guide-card" href="tiskarna-ctecka-zasuvka.html"><small>Vybavení pokladny</small><b>Pokladní tiskárna, čtečka čárových kódů a&nbsp;zásuvka</b></a>
         <a class="guide-card" href="prodej-z-telefonu.html"><small>Telefon a&nbsp;tablet</small><b>Pokladna v&nbsp;telefonu nebo tabletu a&nbsp;tisk u&nbsp;hlavní kasy</b></a>
-        <a class="guide-card" href="eet-2-0-krok-za-krokem.html"><small>Krok za krokem</small><b>EET 2.0 krok za krokem: DIS+, evidenční jednotka a&nbsp;pokladní certifikát</b></a>
+        <a class="guide-card" href="eet-2-0-krok-za-krokem.html"><small>Krok za krokem</small><b>EET&nbsp;2.0 krok za krokem: DIS+, evidenční jednotka a&nbsp;pokladní certifikát</b></a>
       </div></nav>
     </article>
   </div>
@@ -282,7 +284,7 @@
           <li><a href="obory.html">Pro koho</a></li>
           <li><a href="funkce.html">Funkce</a></li>
           <li><a href="cenik.html">Ceník</a></li>
-          <li><a href="eet.html">EET 2.0</a></li>
+          <li><a href="eet.html">EET&nbsp;2.0</a></li>
           <li><a href="navody.html">Návody</a></li>
           <li><a href="jak-zacit.html">Jak začít</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
@@ -308,7 +310,7 @@
         <ul>
           <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
           <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
-          <li><a href="https://eet.gov.cz/" rel="noopener">EET 2.0 – Finanční správa</a></li>
+          <li><a href="https://eet.gov.cz/" rel="noopener">EET&nbsp;2.0 – Finanční správa</a></li>
         </ul>
       </div>
     </div>

@@ -36,6 +36,7 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="preload" href="../fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.className+=" js"</script>
 <script src="../js/site.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","legalName":"Thanh Lam Nguyen","url":"https://superkasa.cz/","logo":{"@type":"ImageObject","@id":"https://superkasa.cz/#logo","url":"https://superkasa.cz/img/logo.png"},"image":"https://superkasa.cz/img/logo.png","telephone":"+420608886882","email":"info@superkasa.cz","address":{"@type":"PostalAddress","streetAddress":"1. května 117/141","postalCode":"725 25","addressLocality":"Ostrava","addressCountry":"CZ"},"identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"14161648"}},{"@type":"WebSite","@id":"https://superkasa.cz/#website","url":"https://superkasa.cz/","name":"SuperKasa","inLanguage":["cs","vi","en"],"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"WebPage","@id":"https://superkasa.cz/en/tiskarna-ctecka-zasuvka.html#webpage","url":"https://superkasa.cz/en/tiskarna-ctecka-zasuvka.html","name":"Receipt printer and barcode scanner | SuperKasa","description":"Which receipt printer and barcode scanner work with SuperKasa: 58 and 80 mm, USB, Bluetooth, network, drawer, price labels and what to do if nothing prints.","inLanguage":"en","isPartOf":{"@id":"https://superkasa.cz/#website"},"publisher":{"@id":"https://superkasa.cz/#organization"},"about":{"@id":"https://superkasa.cz/#app"}},{"@type":"Article","headline":"Receipt printer, barcode scanner and cash drawer","description":"Which receipt printer and barcode scanner work with SuperKasa: 58 and 80 mm, USB, Bluetooth, network, drawer, price labels and what to do if nothing prints.","inLanguage":"en","url":"https://superkasa.cz/en/tiskarna-ctecka-zasuvka.html","mainEntityOfPage":"https://superkasa.cz/en/tiskarna-ctecka-zasuvka.html","datePublished":"2026-10-31","dateModified":"2026-11-11","image":"https://superkasa.cz/img/og-en.jpg","author":{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","url":"https://superkasa.cz"},"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://superkasa.cz/en/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://superkasa.cz/en/navody.html"},{"@type":"ListItem","position":3,"name":"Receipt printer, barcode scanner and cash drawer","item":"https://superkasa.cz/en/tiskarna-ctecka-zasuvka.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does SuperKasa work with my printer?","acceptedAnswer":{"@type":"Answer","text":"Direct printing needs a printer that understands ESC/POS commands. We have not tested all types, so check with a test print during the 10 free days. Without a receipt printer you can print through the browser window."}},{"@type":"Question","name":"Do I need a driver for the scanner?","acceptedAnswer":{"@type":"Answer","text":"An ordinary USB scanner does not need a driver. It must be in USB keyboard (HID) mode. You can try it in Menu → Barcode scanner."}},{"@type":"Question","name":"Can the drawer open without a printer?","acceptedAnswer":{"@type":"Answer","text":"No. The drawer opens through the receipt printer it is connected to."}},{"@type":"Question","name":"Can I print from an iPhone?","acceptedAnswer":{"@type":"Answer","text":"An iPhone does not connect a Bluetooth printer in the browser. Use the printer at the main till, or an Android tablet."}},{"@type":"Question","name":"Must I use a receipt printer for price labels?","acceptedAnswer":{"@type":"Answer","text":"No. Price labels can also go to a label printer through the browser or to an ordinary printer on A4 sheets."}}]}]}</script>
@@ -47,7 +48,7 @@
     <a class="brand" href="./" aria-label="SuperKasa – home page"><img src="../img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Website language"><a href="../tiskarna-ctecka-zasuvka.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="../vi/tiskarna-ctecka-zasuvka.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="../en/tiskarna-ctecka-zasuvka.html" hreflang="en" lang="en" title="English" aria-label="English" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
     <a class="login-top" href="prihlaseni.html" aria-label="Sign in to your till" title="Sign in to your till"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Sign in</span></a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
     <nav class="nav" id="nav" aria-label="Main menu">
       <a href="obory.html">Who it's for</a>
       <a href="funkce.html">Features</a>
@@ -93,7 +94,7 @@
 <h2>What you need</h2>
 <p>You buy the equipment yourself. It is not included in the plan price.</p>
 <div class="tbl"><table>
-<thead><tr><th>Equipment</th><th>What it should do</th></tr></thead>
+<thead><tr><th scope="col">Equipment</th><th scope="col">What it should do</th></tr></thead>
 <tbody>
 <tr><td>Receipt printer</td><td>Thermal paper 80 or 58 mm, ESC/POS commands</td></tr>
 <tr><td>Barcode scanner</td><td>“USB keyboard (HID)” mode</td></tr>
@@ -106,7 +107,7 @@
 <section id="sirka">
 <h2>58 or 80 mm printer</h2>
 <div class="tbl"><table>
-<thead><tr><th></th><th>80 mm</th><th>58 mm</th></tr></thead>
+<thead><tr><th scope="col"></th><th scope="col">80 mm</th><th scope="col">58 mm</th></tr></thead>
 <tbody>
 <tr><td>Characters per line</td><td>42</td><td>32</td></tr>
 <tr><td>For whom</td><td>Convenience store, bistro, main till</td><td>Portable printer, stall, hairdresser</td></tr>
@@ -120,7 +121,7 @@
 <h2>How to connect the printer</h2>
 <p>Open the wizard in <strong>Menu → Printer</strong>, or in <strong>Admin → Devices → Add a printer</strong>. It offers only what is possible on your device. A cashier sees fewer options than the owner.</p>
 <div class="tbl"><table>
-<thead><tr><th>You have</th><th>Option in the wizard</th></tr></thead>
+<thead><tr><th scope="col">You have</th><th scope="col">Option in the wizard</th></tr></thead>
 <tbody>
 <tr><td>Windows computer and a receipt printer</td><td>Print via the browser dialog (without a dialog through a Chrome shortcut, see below)</td></tr>
 <tr><td>Android and a Bluetooth printer</td><td>Bluetooth printer</td></tr>
@@ -212,7 +213,7 @@
 <section id="netiskne">
 <h2>When nothing prints</h2>
 <div class="tbl"><table>
-<thead><tr><th>What you see</th><th>What to do</th></tr></thead>
+<thead><tr><th scope="col">What you see</th><th scope="col">What to do</th></tr></thead>
 <tbody>
 <tr><td>A blank slip came out</td><td>Turn the roll round. The print side of the thermal paper must face the head.</td></tr>
 <tr><td>Nothing came out</td><td>Check that the printer is switched on, has paper and its lid is closed. Switch it off and on, then tap <strong>Try again</strong>.</td></tr>

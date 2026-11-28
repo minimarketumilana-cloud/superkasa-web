@@ -36,6 +36,8 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin-ext-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.className+=" js"</script>
 <script src="js/site.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","legalName":"Thanh Lam Nguyen","url":"https://superkasa.cz/","logo":{"@type":"ImageObject","@id":"https://superkasa.cz/#logo","url":"https://superkasa.cz/img/logo.png"},"image":"https://superkasa.cz/img/logo.png","telephone":"+420608886882","email":"info@superkasa.cz","address":{"@type":"PostalAddress","streetAddress":"1. května 117/141","postalCode":"725 25","addressLocality":"Ostrava","addressCountry":"CZ"},"identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"14161648"}},{"@type":"WebSite","@id":"https://superkasa.cz/#website","url":"https://superkasa.cz/","name":"SuperKasa","inLanguage":["cs","vi","en"],"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"WebPage","@id":"https://superkasa.cz/srovnani-pokladnich-systemu.html#webpage","url":"https://superkasa.cz/srovnani-pokladnich-systemu.html","name":"Srovnání pokladen: ceny a funkce 2026 | SuperKasa","description":"Ceny a funkce pokladních systémů SuperKasa, Dotykačka, Storyous a helloCash a státní aplikace MOJE eet. Údaje z veřejných ceníků k 21. 11. 2026.","inLanguage":"cs","isPartOf":{"@id":"https://superkasa.cz/#website"},"publisher":{"@id":"https://superkasa.cz/#organization"},"about":{"@id":"https://superkasa.cz/#app"}},{"@type":"Article","headline":"SuperKasa, Dotykačka, Storyous, helloCash a MOJE eet: srovnání cen a funkcí","description":"Ceny a funkce pokladních systémů SuperKasa, Dotykačka, Storyous a helloCash a státní aplikace MOJE eet. Údaje z veřejných ceníků k 21. 11. 2026.","inLanguage":"cs","url":"https://superkasa.cz/srovnani-pokladnich-systemu.html","mainEntityOfPage":"https://superkasa.cz/srovnani-pokladnich-systemu.html","datePublished":"2026-11-12","dateModified":"2026-11-21","image":"https://superkasa.cz/img/og.jpg","author":{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","url":"https://superkasa.cz"},"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Úvod","item":"https://superkasa.cz/"},{"@type":"ListItem","position":2,"name":"Návody","item":"https://superkasa.cz/navody.html"},{"@type":"ListItem","position":3,"name":"SuperKasa, Dotykačka, Storyous, helloCash a MOJE eet: srovnání cen a funkcí","item":"https://superkasa.cz/srovnani-pokladnich-systemu.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Která pokladna je nejlevnější?","acceptedAnswer":{"@type":"Answer","text":"Zdarma je státní aplikace MOJE eet. Z placených systémů má podle ceníků k 21. 11. 2026 nejnižší vstupní cenu helloCash Basic za 69 Kč měsíčně bez DPH. Se skladem vychází nejlevněji SuperKasa za 99 Kč měsíčně včetně DPH."}},{"@type":"Question","name":"Proč jsou v tabulce u konkurence ceny bez DPH i s DPH?","acceptedAnswer":{"@type":"Answer","text":"Výrobci uvádějí ceny bez DPH, SuperKasa včetně DPH. Aby se daly porovnat, uvádíme v tabulce u konkurence obě částky. V oddílech o konkurenci jsou ceny podle ceníků, bez přepočtu."}},{"@type":"Question","name":"Jak staré jsou údaje ve srovnání?","acceptedAnswer":{"@type":"Answer","text":"Jsou z veřejných ceníků k 21. 11. 2026. Zdroje jsou uvedené na konci článku. Před objednávkou si cenu ověřte u dodavatele."}}]}]}</script>
@@ -47,12 +49,12 @@
     <a class="brand" href="./" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Jazyk webu"><a href="srovnani-pokladnich-systemu.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="vi/srovnani-pokladnich-systemu.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="en/srovnani-pokladnich-systemu.html" hreflang="en" lang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
     <a class="login-top" href="prihlaseni.html" aria-label="Přihlásit se do pokladny" title="Přihlásit se do pokladny"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Přihlásit</span></a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
     <nav class="nav" id="nav" aria-label="Hlavní menu">
       <a href="obory.html">Pro koho</a>
       <a href="funkce.html">Funkce</a>
       <a href="cenik.html">Ceník</a>
-      <a href="eet.html">EET 2.0</a>
+      <a href="eet.html">EET&nbsp;2.0</a>
       <a href="navody.html" aria-current="page">Návody</a>
       <a href="jak-zacit.html">Jak začít</a>
       <a href="kontakt.html">Kontakt</a>
@@ -92,7 +94,7 @@
 <h2>Přehled cen a&nbsp;funkcí</h2>
 <p>Údaje jsou z&nbsp;veřejných ceníků k&nbsp;21.&nbsp;11.&nbsp;2026. Ceny jsou za měsíc při měsíční platbě; u&nbsp;Storyous uvádí O2 cenu „od“ bez upřesnění platebního období. Výrobci ceny mění, před objednávkou si je ověřte.</p>
 <div class="tbl"><table>
-  <thead><tr><th>Systém</th><th>Nejnižší tarif</th><th>Tarif se skladem</th><th>Další zařízení</th><th>EET 2.0</th></tr></thead>
+  <thead><tr><th scope="col">Systém</th><th scope="col">Nejnižší tarif</th><th scope="col">Tarif se skladem</th><th scope="col">Další zařízení</th><th scope="col">EET&nbsp;2.0</th></tr></thead>
   <tbody>
     <tr><td>SuperKasa</td><td>99&nbsp;Kč s&nbsp;DPH (81,82&nbsp;Kč bez DPH)</td><td>Stejný tarif, sklad je v&nbsp;ceně</td><td>Až 10 zařízení v&nbsp;ceně</td><td>Ano, v&nbsp;ceně</td></tr>
     <tr><td>Dotykačka</td><td>SNADNO 590&nbsp;Kč bez DPH (713,90&nbsp;Kč s&nbsp;DPH)</td><td>NAPLNO 1&nbsp;190&nbsp;Kč bez DPH (1&nbsp;439,90&nbsp;Kč s&nbsp;DPH)</td><td>Mobilní číšník: SNADNO ne, NAPLNO 1×, NEOMEZENĚ neomezeně; cenu další pokladny ceník neuvádí</td><td>Ano, ve všech licencích od 1.&nbsp;1.&nbsp;2027</td></tr>
@@ -111,7 +113,7 @@
   <li>Skladové hospodářství je od licence NAPLNO. V&nbsp;licenci SNADNO ho ceník uvádí jako nedostupné.</li>
   <li>Docházkový systém a&nbsp;objednávkové systémy jsou v&nbsp;licenci NEOMEZENĚ.</li>
   <li>Mobilního číšníka ceník v&nbsp;licenci SNADNO uvádí jako nedostupného, v&nbsp;licenci NAPLNO je jeden a&nbsp;v&nbsp;NEOMEZENĚ neomezeně. Cenu další pokladny ceník neuvádí.</li>
-  <li>EET 2.0 uvádí ceník u&nbsp;všech licencí od 1.&nbsp;1.&nbsp;2027.</li>
+  <li>EET&nbsp;2.0 uvádí ceník u&nbsp;všech licencí od 1.&nbsp;1.&nbsp;2027.</li>
   <li>Pokladní zařízení stojí v&nbsp;ceníku od 9&nbsp;990&nbsp;Kč do 22&nbsp;990&nbsp;Kč bez DPH.</li>
 </ul>
 <p>Hodí se provozům, které chtějí pokladnu, zařízení a&nbsp;platební terminál od jednoho dodavatele s&nbsp;nonstop technickou podporou.</p>
@@ -124,7 +126,7 @@
   <li>Storyous Medium 10": tablet se stojánkem a&nbsp;tiskárnou. Sestava stojí 9&nbsp;999&nbsp;Kč bez DPH, licence Stock od 890&nbsp;Kč měsíčně bez DPH. O2 u&nbsp;ní uvádí vzdálenou správu pokladny a&nbsp;výstupy pro účetní.</li>
   <li>Cenu licence bez sestavy, cenu dalšího zařízení ani ceny doplňků nabídka O2 neuvádí. Zeptejte se dodavatele.</li>
   <li>U&nbsp;pokladen pro gastro O2 zmiňuje mapu stolů, rozvozy, odtahy na kuchyň a&nbsp;skladové hospodářství.</li>
-  <li>K&nbsp;EET 2.0 O2 píše, že ho všechna nabízená řešení podporují. Storyous <a href="https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni" rel="noopener">na svém webu</a> uvádí, že je připraven a&nbsp;že funkce i&nbsp;aktualizace budou zdarma.</li>
+  <li>K&nbsp;EET&nbsp;2.0 O2 píše, že ho všechna nabízená řešení podporují. Storyous <a href="https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni" rel="noopener">na svém webu</a> uvádí, že je připraven a&nbsp;že funkce i&nbsp;aktualizace budou zdarma.</li>
 </ul>
 <p>Hodí se restauracím, kavárnám a&nbsp;barům, které chtějí pokladnu, platební terminál a&nbsp;tiskárnu jako jednu sestavu.</p>
 </section>
@@ -137,7 +139,7 @@
   <li>Přehled stolů a&nbsp;rozdělení účtu jsou ve verzi Gastro.</li>
   <li>Podle ceníku lze systém spustit souběžně na několika zařízeních a&nbsp;podle počtu zaměstnanců se neúčtuje víc. Počet zařízení ani příplatek za ně ceník neuvádí.</li>
   <li>Podpora se platí zvlášť: 849&nbsp;Kč ročně bez DPH, nebo 3&nbsp;500&nbsp;Kč bez DPH za hodinu.</li>
-  <li>Zmínku o&nbsp;EET 2.0 jsme na webu helloCash k&nbsp;21.&nbsp;11.&nbsp;2026 nenašli. Zeptejte se dodavatele.</li>
+  <li>Zmínku o&nbsp;EET&nbsp;2.0 jsme na webu helloCash k&nbsp;21.&nbsp;11.&nbsp;2026 nenašli. Zeptejte se dodavatele.</li>
 </ul>
 <p>Hodí se službám a&nbsp;malým prodejcům, kterým stačí základní pokladna za nízkou cenu.</p>
 </section>
@@ -150,7 +152,7 @@
 <h2>SuperKasa</h2>
 <ul>
   <li>Stojí 99&nbsp;Kč měsíčně nebo 990&nbsp;Kč ročně včetně DPH, stejně pro kterýkoli obor. Prvních 10&nbsp;dní je zdarma.</li>
-  <li>V&nbsp;každém placeném tarifu je sklad, EET 2.0 a&nbsp;až 10 zařízení; cenovky jsou v&nbsp;tarifu Obchod.</li>
+  <li>V&nbsp;každém placeném tarifu je sklad, EET&nbsp;2.0 a&nbsp;až 10 zařízení; cenovky jsou v&nbsp;tarifu Obchod.</li>
   <li>Bez zaplacení pokladna přejde na tarif Zdarma: 1 zařízení, nejvýš 300 položek zboží, bez skladu.</li>
   <li>Běží v&nbsp;prohlížeči na vašem počítači, tabletu nebo mobilu.</li>
   <li>Obsluha je česky, vietnamsky a&nbsp;anglicky.</li>
@@ -181,7 +183,7 @@
         <details><summary>Jak staré jsou údaje ve srovnání?</summary><div><p>Jsou z&nbsp;veřejných ceníků k&nbsp;21.&nbsp;11.&nbsp;2026. Zdroje jsou uvedené na konci článku. Před objednávkou si cenu ověřte u&nbsp;dodavatele.</p></div></details>
       </section>
       <section id="zdroje"><h2>Zdroje</h2>
-        <ul class="sources"><li><a href="https://dotykacka.cz/cenik/" rel="noopener">Dotykačka: ceník</a></li><li><a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">O2: pokladní řešení (Storyous)</a></li><li><a href="https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni" rel="noopener">Storyous: EET 2.0? My jsme připraveni</a></li><li><a href="https://hellocash.cz/cena" rel="noopener">helloCash: ceny a&nbsp;poplatky</a></li><li><a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">Finanční správa: harmonogram EET 2.0</a></li><li><a href="https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace#kdy-mi-postaci-webova-aplikace-moje-eet-821" rel="noopener">Finanční správa: Kdy mi postačí webová aplikace MOJE eet</a></li><li><a href="https://eet.gov.cz/cs/zacinam-s-eet/webova-aplikace-moje-eet" rel="noopener">Finanční správa: webová aplikace MOJE eet</a></li></ul>
+        <ul class="sources"><li><a href="https://dotykacka.cz/cenik/" rel="noopener">Dotykačka: ceník</a></li><li><a href="https://www.o2.cz/podnikatele-a-firmy/pokladni-reseni" rel="noopener">O2: pokladní řešení (Storyous)</a></li><li><a href="https://www.storyous.com/cs/post/eet-2-0-my-jsme-p%C5%99ipraveni" rel="noopener">Storyous: EET&nbsp;2.0? My jsme připraveni</a></li><li><a href="https://hellocash.cz/cena" rel="noopener">helloCash: ceny a&nbsp;poplatky</a></li><li><a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">Finanční správa: harmonogram EET&nbsp;2.0</a></li><li><a href="https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace#kdy-mi-postaci-webova-aplikace-moje-eet-821" rel="noopener">Finanční správa: Kdy mi postačí webová aplikace MOJE eet</a></li><li><a href="https://eet.gov.cz/cs/zacinam-s-eet/webova-aplikace-moje-eet" rel="noopener">Finanční správa: webová aplikace MOJE eet</a></li></ul>
         <p class="disclaimer">Návod je obecná informace, ne právní ani daňová rada. U&nbsp;své konkrétní situace se poraďte s&nbsp;daňovým poradcem nebo finančním úřadem.</p>
       </section>
       <nav class="related" aria-label="Mohlo by vás zajímat"><h2>Mohlo by vás zajímat</h2><div class="guide-grid">
@@ -221,7 +223,7 @@
           <li><a href="obory.html">Pro koho</a></li>
           <li><a href="funkce.html">Funkce</a></li>
           <li><a href="cenik.html">Ceník</a></li>
-          <li><a href="eet.html">EET 2.0</a></li>
+          <li><a href="eet.html">EET&nbsp;2.0</a></li>
           <li><a href="navody.html">Návody</a></li>
           <li><a href="jak-zacit.html">Jak začít</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
@@ -247,7 +249,7 @@
         <ul>
           <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
           <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
-          <li><a href="https://eet.gov.cz/" rel="noopener">EET 2.0 – Finanční správa</a></li>
+          <li><a href="https://eet.gov.cz/" rel="noopener">EET&nbsp;2.0 – Finanční správa</a></li>
         </ul>
       </div>
     </div>

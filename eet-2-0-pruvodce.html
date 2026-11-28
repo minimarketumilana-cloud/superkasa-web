@@ -36,6 +36,8 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="css/style.css">
+<link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin-ext-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.className+=" js"</script>
 <script src="js/site.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","legalName":"Thanh Lam Nguyen","url":"https://superkasa.cz/","logo":{"@type":"ImageObject","@id":"https://superkasa.cz/#logo","url":"https://superkasa.cz/img/logo.png"},"image":"https://superkasa.cz/img/logo.png","telephone":"+420608886882","email":"info@superkasa.cz","address":{"@type":"PostalAddress","streetAddress":"1. května 117/141","postalCode":"725 25","addressLocality":"Ostrava","addressCountry":"CZ"},"identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"14161648"}},{"@type":"WebSite","@id":"https://superkasa.cz/#website","url":"https://superkasa.cz/","name":"SuperKasa","inLanguage":["cs","vi","en"],"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"WebPage","@id":"https://superkasa.cz/eet-2-0-pruvodce.html#webpage","url":"https://superkasa.cz/eet-2-0-pruvodce.html","name":"EET 2.0: co to je a koho se týká | SuperKasa","description":"EET 2.0 platí od 1. 1. 2027. Kdo musí evidovat tržby, které platby se evidují, co dělat při výpadku internetu, výše pokuty a sleva na dani 5 000 Kč.","inLanguage":"cs","isPartOf":{"@id":"https://superkasa.cz/#website"},"publisher":{"@id":"https://superkasa.cz/#organization"},"about":{"@id":"https://superkasa.cz/#app"}},{"@type":"Article","headline":"EET 2.0: co to je, koho se týká a co musíte udělat","description":"EET 2.0 platí od 1. 1. 2027. Kdo musí evidovat tržby, které platby se evidují, co dělat při výpadku internetu, výše pokuty a sleva na dani 5 000 Kč.","inLanguage":"cs","url":"https://superkasa.cz/eet-2-0-pruvodce.html","mainEntityOfPage":"https://superkasa.cz/eet-2-0-pruvodce.html","datePublished":"2026-10-31","dateModified":"2026-10-31","image":"https://superkasa.cz/img/og.jpg","author":{"@type":"Organization","@id":"https://superkasa.cz/#organization","name":"SuperKasa","url":"https://superkasa.cz"},"publisher":{"@id":"https://superkasa.cz/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Úvod","item":"https://superkasa.cz/"},{"@type":"ListItem","position":2,"name":"Návody","item":"https://superkasa.cz/navody.html"},{"@type":"ListItem","position":3,"name":"EET 2.0: co to je, koho se týká a co musíte udělat","item":"https://superkasa.cz/eet-2-0-pruvodce.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Musím evidovat v lednu 2027, když je pilotní režim?","acceptedAnswer":{"@type":"Answer","text":"Ano. Podle harmonogramu Finanční správy jde v lednu o pilotní režim, ale už o standardní evidenci. Zákon stanoví povinnost od 1. 1. 2027 a žádný odklad neobsahuje."}},{"@type":"Question","name":"Musím kvůli EET tisknout účtenku?","acceptedAnswer":{"@type":"Answer","text":"Ne. Zákon o evidenci tržeb účtenku nepřikazuje. Povinnost vydat doklad ale může vzniknout podle zákona o DPH nebo zákona o ochraně spotřebitele."}},{"@type":"Question","name":"Musím si kvůli EET 2.0 koupit novou pokladnu?","acceptedAnswer":{"@type":"Answer","text":"Ve většině případů ne. Zařízení si vybíráte sami, stačí vhodný program a internet. U staré pokladny obvykle pomůže aktualizace od dodavatele."}},{"@type":"Question","name":"Eviduje se platba kartou?","acceptedAnswer":{"@type":"Answer","text":"Ano, když zákazník platí kartou u vás v provozovně nebo při osobním kontaktu. Platba kartou přes platební bránu na webu e-shopu se neeviduje."}},{"@type":"Question","name":"Eviduje se spropitné?","acceptedAnswer":{"@type":"Answer","text":"Záleží na tom, komu patří. Spropitné, které si nechává podnik, se eviduje. Spropitné pro zaměstnance evidovat nemusíte, ale můžete, pokud v něm chcete mít přehled."}},{"@type":"Question","name":"Musí evidovat i neplátce DPH?","acceptedAnswer":{"@type":"Answer","text":"Ano. Povinnost nezávisí na registraci k DPH. Výjimkou je jen OSVČ, která splní podmínky a přihlásí se k režimu EET OFF."}}]}]}</script>
@@ -47,12 +49,12 @@
     <a class="brand" href="./" aria-label="SuperKasa – úvodní stránka"><img src="img/logo.png" alt="SuperKasa" width="200" height="40"></a>
     <nav class="langs" aria-label="Jazyk webu"><a href="eet-2-0-pruvodce.html" hreflang="cs" lang="cs" title="Čeština" aria-label="Čeština" aria-current="true"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#d7141a"/><path d="M0 0 15 10 0 20Z" fill="#11457e"/></svg><span>CZ</span></a><a href="vi/eet-2-0-pruvodce.html" hreflang="vi" lang="vi" title="Tiếng Việt" aria-label="Tiếng Việt"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#da251d"/><path d="M15 4.2l1.42 4.37h4.6l-3.72 2.7 1.42 4.37L15 12.94l-3.72 2.7 1.42-4.37-3.72-2.7h4.6Z" fill="#ffcd00"/></svg><span>VI</span></a><a href="en/eet-2-0-pruvodce.html" hreflang="en" lang="en" title="English" aria-label="English"><svg class="flag" viewBox="0 0 30 20" width="27" height="18" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6.5"/><path d="M15 0v20M0 10h30" stroke="#c8102e" stroke-width="3.6"/></svg><span>EN</span></a></nav>
     <a class="login-top" href="prihlaseni.html" aria-label="Přihlásit se do pokladny" title="Přihlásit se do pokladny"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Přihlásit</span></a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span class="bars"><span></span></span><span class="menu-txt">Menu</span></button>
     <nav class="nav" id="nav" aria-label="Hlavní menu">
       <a href="obory.html">Pro koho</a>
       <a href="funkce.html">Funkce</a>
       <a href="cenik.html">Ceník</a>
-      <a href="eet.html">EET 2.0</a>
+      <a href="eet.html">EET&nbsp;2.0</a>
       <a href="navody.html" aria-current="page">Návody</a>
       <a href="jak-zacit.html">Jak začít</a>
       <a href="kontakt.html">Kontakt</a>
@@ -66,8 +68,8 @@
 <section class="article-head">
   <div class="wrap">
     <nav class="crumbs" aria-label="Drobečková navigace"><a href="./">Úvod</a><span aria-hidden="true">›</span><a href="navody.html">Návody</a><span aria-hidden="true">›</span><span aria-current="page">Základní průvodce</span></nav>
-    <h1>EET 2.0: co to je, koho se týká a&nbsp;co musíte udělat</h1>
-    <p class="lead">EET 2.0 je nová evidence tržeb a&nbsp;povinnost evidovat začíná 1.&nbsp;1.&nbsp;2027. Týká se podnikatelů, kteří přijímají platby při osobním kontaktu se zákazníkem nebo v&nbsp;provozovně. Hotovost se eviduje vždy.</p>
+    <h1>EET&nbsp;2.0: co to je, koho se týká a&nbsp;co musíte udělat</h1>
+    <p class="lead">EET&nbsp;2.0 je nová evidence tržeb a&nbsp;povinnost evidovat začíná 1.&nbsp;1.&nbsp;2027. Týká se podnikatelů, kteří přijímají platby při osobním kontaktu se zákazníkem nebo v&nbsp;provozovně. Hotovost se eviduje vždy.</p>
     <p class="article-meta">Aktualizováno 31. října 2026 · 9 min čtení</p>
   </div>
 </section>
@@ -76,8 +78,8 @@
     <aside class="guide-toc" aria-label="V tomto návodu">
       <b>V&nbsp;tomto návodu</b>
       <ol>
-        <li><a href="#co-je-eet">Co je EET 2.0 a&nbsp;od kdy platí</a></li>
-        <li><a href="#koho-se-tyka">Koho se EET 2.0 týká</a></li>
+        <li><a href="#co-je-eet">Co je EET&nbsp;2.0 a&nbsp;od kdy platí</a></li>
+        <li><a href="#koho-se-tyka">Koho se EET&nbsp;2.0 týká</a></li>
         <li><a href="#koho-se-netyka">Kdo a&nbsp;co evidovat nemusí</a></li>
         <li><a href="#co-se-eviduje">Které platby se evidují a&nbsp;které ne</a></li>
         <li><a href="#jak-probiha">Jak zaevidování probíhá u&nbsp;pokladny</a></li>
@@ -91,8 +93,8 @@
     </aside>
     <article class="prose">
       <section id="co-je-eet">
-<h2>Co je EET 2.0 a&nbsp;od kdy platí</h2>
-<p>EET 2.0 je elektronická evidence tržeb. Když zákazník zaplatí, vaše pokladna nebo aplikace pošle přes internet Finanční správě několik údajů o&nbsp;platbě. Povinnost evidovat začíná 1.&nbsp;1.&nbsp;2027 a&nbsp;stanoví ji zákon č. 180/2026 Sb.</p>
+<h2>Co je EET&nbsp;2.0 a&nbsp;od kdy platí</h2>
+<p>EET&nbsp;2.0 je elektronická evidence tržeb. Když zákazník zaplatí, vaše pokladna nebo aplikace pošle přes internet Finanční správě několik údajů o&nbsp;platbě. Povinnost evidovat začíná 1.&nbsp;1.&nbsp;2027 a&nbsp;stanoví ji zákon č. 180/2026 Sb.</p>
 <p>Oproti původnímu EET se posílá méně údajů, tisk účtenky už není povinný a&nbsp;malí podnikatelé mohou použít bezplatnou státní aplikaci. Evidují se jen kontaktní platby.</p>
 <ol class="timeline">
   <li><b>1.&nbsp;11.&nbsp;2026</b> V&nbsp;DIS+ na portálu MOJE daně můžete aktivovat EET, založit evidenční jednotky a&nbsp;vytvořit pokladní certifikát.</li>
@@ -104,7 +106,7 @@
 <aside class="note warn"><p><strong>Pilotní režim není odklad.</strong> Harmonogram Finanční správy i&nbsp;zákon počítají s&nbsp;evidencí od 1.&nbsp;1.&nbsp;2027. Pokud ve starším článku najdete jiný začátek, řiďte se zákonem a&nbsp;aktuálním harmonogramem na eet.gov.cz.</p></aside>
 </section>
 <section id="koho-se-tyka">
-<h2>Koho se EET 2.0 týká</h2>
+<h2>Koho se EET&nbsp;2.0 týká</h2>
 <p>Evidovat musí podnikatel, který přijímá platby za zboží nebo služby v&nbsp;Česku, pokud platba splní tyto tři podmínky:</p>
 <ul>
   <li><strong>Je to příjem z&nbsp;podnikání.</strong> Mzda ze zaměstnání ani nájem mimo podnikání se neeviduje.</li>
@@ -137,7 +139,7 @@
 <h2>Které platby se evidují a&nbsp;které ne</h2>
 <p>Rozhoduje, jak a&nbsp;kde zákazník platí. Na druhu zboží nezáleží.</p>
 <div class="tbl"><table>
-  <thead><tr><th>Platba</th><th>Evidovat</th></tr></thead>
+  <thead><tr><th scope="col">Platba</th><th scope="col">Evidovat</th></tr></thead>
   <tbody>
     <tr><td>Hotovost v&nbsp;obchodě, v&nbsp;salonu nebo u&nbsp;zákazníka doma</td><td>Ano</td></tr>
     <tr><td>Platební karta nebo mobil na terminálu</td><td>Ano</td></tr>
@@ -197,7 +199,7 @@
 <h2>Pokuty a&nbsp;kontroly</h2>
 <p>Za porušení povinnosti zaslat údaje o&nbsp;tržbě lze uložit pokutu do 500&nbsp;000&nbsp;Kč. Stejná horní hranice platí pro závažné ztěžování nebo maření evidence. Je to nejvyšší možná částka, ne pevná sazba.</p>
 <p>Plnění povinností prověřují finanční úřady a&nbsp;celní úřady. Celní úřad může pokutu uložit příkazem na místě.</p>
-<p>V&nbsp;příručce k&nbsp;EET 2.0 stojí, že Finanční správa bude v&nbsp;úvodní fázi klást důraz hlavně na podporu podnikatelů a&nbsp;poradenství, ne na sankce. Zákon ale žádné období bez pokut nestanoví.</p>
+<p>V&nbsp;příručce k&nbsp;EET&nbsp;2.0 stojí, že Finanční správa bude v&nbsp;úvodní fázi klást důraz hlavně na podporu podnikatelů a&nbsp;poradenství, ne na sankce. Zákon ale žádné období bez pokut nestanoví.</p>
 </section>
 <section id="sleva-5000">
 <h2>Sleva na dani až 5&nbsp;000&nbsp;Kč</h2>
@@ -206,7 +208,7 @@
 <p>Sleva nezávisí na počtu pokladen ani na tom, že jste evidovali v&nbsp;původním EET. Nezáleží ani na tom, jestli jste plátce DPH.</p>
 <p>Výše slevy se počítá takto: 15&nbsp;% dílčího základu daně ze samostatné činnosti minus základní sleva na poplatníka, která je <a href="https://e-sbirka.gov.cz/sb/1992/586/2027-01-01#par_35ba" rel="noopener">30&nbsp;840&nbsp;Kč</a>. Sleva je nejvýše 5&nbsp;000&nbsp;Kč.</p>
 <div class="tbl"><table>
-  <thead><tr><th>Dílčí základ daně</th><th>15&nbsp;%</th><th>Po odečtení 30&nbsp;840&nbsp;Kč</th><th>Sleva</th></tr></thead>
+  <thead><tr><th scope="col">Dílčí základ daně</th><th scope="col">15&nbsp;%</th><th scope="col">Po odečtení 30&nbsp;840&nbsp;Kč</th><th scope="col">Sleva</th></tr></thead>
   <tbody>
     <tr><td>300&nbsp;000&nbsp;Kč</td><td>45&nbsp;000&nbsp;Kč</td><td>14&nbsp;160&nbsp;Kč</td><td>5&nbsp;000&nbsp;Kč</td></tr>
     <tr><td>220&nbsp;000&nbsp;Kč</td><td>33&nbsp;000&nbsp;Kč</td><td>2&nbsp;160&nbsp;Kč</td><td>2&nbsp;160&nbsp;Kč</td></tr>
@@ -223,23 +225,23 @@
   <li><strong>Pokladní certifikát.</strong> Je zdarma. Bez něj pokladna tržbu neodešle.</li>
   <li><strong>Zařízení s&nbsp;internetem.</strong> Může to být pokladna, počítač, tablet nebo mobil s&nbsp;vhodným programem.</li>
 </ul>
-<p>Novou pokladnu většinou kupovat nemusíte. Když už pokladnu máte, zeptejte se dodavatele, jestli bude umět EET 2.0. Přesný postup je v&nbsp;článku <a href="eet-2-0-krok-za-krokem.html">EET 2.0 krok za krokem</a>. Rozdíly mezi státní aplikací a&nbsp;pokladnou popisuje článek <a href="moje-eet-nebo-pokladna.html">MOJE eet, nebo pokladní systém</a>.</p>
-<p>Pokud pokladnu teprve vybíráte, SuperKasa má EET 2.0 v&nbsp;každém tarifu a&nbsp;spojení jsme vyzkoušeli v&nbsp;testovacím prostředí Finanční správy. Ceny najdete v&nbsp;<a href="cenik.html">ceníku</a>.</p>
+<p>Novou pokladnu většinou kupovat nemusíte. Když už pokladnu máte, zeptejte se dodavatele, jestli bude umět EET&nbsp;2.0. Přesný postup je v&nbsp;článku <a href="eet-2-0-krok-za-krokem.html">EET&nbsp;2.0 krok za krokem</a>. Rozdíly mezi státní aplikací a&nbsp;pokladnou popisuje článek <a href="moje-eet-nebo-pokladna.html">MOJE eet, nebo pokladní systém</a>.</p>
+<p>Pokud pokladnu teprve vybíráte, SuperKasa má EET&nbsp;2.0 v&nbsp;každém tarifu a&nbsp;spojení jsme vyzkoušeli v&nbsp;testovacím prostředí Finanční správy. Ceny najdete v&nbsp;<a href="cenik.html">ceníku</a>.</p>
 </section>
       <section id="otazky" class="faq"><h2>Časté otázky</h2>
         <details><summary>Musím evidovat v&nbsp;lednu 2027, když je pilotní režim?</summary><div><p>Ano. Podle harmonogramu Finanční správy jde v&nbsp;lednu o&nbsp;pilotní režim, ale už o&nbsp;standardní evidenci. Zákon stanoví povinnost od 1.&nbsp;1.&nbsp;2027 a&nbsp;žádný odklad neobsahuje.</p></div></details>
         <details><summary>Musím kvůli EET tisknout účtenku?</summary><div><p>Ne. Zákon o&nbsp;evidenci tržeb účtenku nepřikazuje. Povinnost vydat doklad ale může vzniknout podle zákona o&nbsp;DPH nebo zákona o&nbsp;ochraně spotřebitele.</p></div></details>
-        <details><summary>Musím si kvůli EET 2.0 koupit novou pokladnu?</summary><div><p>Ve většině případů ne. Zařízení si vybíráte sami, stačí vhodný program a&nbsp;internet. U&nbsp;staré pokladny obvykle pomůže aktualizace od dodavatele.</p></div></details>
+        <details><summary>Musím si kvůli EET&nbsp;2.0 koupit novou pokladnu?</summary><div><p>Ve většině případů ne. Zařízení si vybíráte sami, stačí vhodný program a&nbsp;internet. U&nbsp;staré pokladny obvykle pomůže aktualizace od dodavatele.</p></div></details>
         <details><summary>Eviduje se platba kartou?</summary><div><p>Ano, když zákazník platí kartou u&nbsp;vás v&nbsp;provozovně nebo při osobním kontaktu. Platba kartou přes platební bránu na webu e-shopu se neeviduje.</p></div></details>
         <details><summary>Eviduje se spropitné?</summary><div><p>Záleží na tom, komu patří. Spropitné, které si nechává podnik, se eviduje. Spropitné pro zaměstnance evidovat nemusíte, ale můžete, pokud v&nbsp;něm chcete mít přehled.</p></div></details>
         <details><summary>Musí evidovat i&nbsp;neplátce DPH?</summary><div><p>Ano. Povinnost nezávisí na registraci k&nbsp;DPH. Výjimkou je jen OSVČ, která splní podmínky a&nbsp;přihlásí se k&nbsp;režimu EET OFF.</p></div></details>
       </section>
       <section id="zdroje"><h2>Zdroje</h2>
-        <ul class="sources"><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/Uplne_zneni_Zakon_o_EET.pdf" rel="noopener">Zákon č. 180/2026 Sb., o&nbsp;evidenci tržeb, úplné znění (eet.gov.cz)</a></li><li><a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">Harmonogram EET 2.0 (Finanční správa)</a></li><li><a href="https://eet.gov.cz/cs/koho-se-eet-tyka/kdo-musi-evidovat-trzby" rel="noopener">Kdo musí evidovat tržby (Finanční správa)</a></li><li><a href="https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace" rel="noopener">Praktické informace: výpadek, porucha, sleva na dani (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/Prirucka_EET_2_0.pdf" rel="noopener">Příručka EET 2.0 (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET_popis_polozek_datove_zpravy.pdf" rel="noopener">Popis položek datové zprávy s&nbsp;příklady (Finanční správa)</a></li></ul>
+        <ul class="sources"><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/Uplne_zneni_Zakon_o_EET.pdf" rel="noopener">Zákon č. 180/2026 Sb., o&nbsp;evidenci tržeb, úplné znění (eet.gov.cz)</a></li><li><a href="https://eet.gov.cz/cs/o-eet/jaky-je-harmonogram-eet-2-0" rel="noopener">Harmonogram EET&nbsp;2.0 (Finanční správa)</a></li><li><a href="https://eet.gov.cz/cs/koho-se-eet-tyka/kdo-musi-evidovat-trzby" rel="noopener">Kdo musí evidovat tržby (Finanční správa)</a></li><li><a href="https://eet.gov.cz/cs/zacinam-s-eet/prakticke-informace" rel="noopener">Praktické informace: výpadek, porucha, sleva na dani (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/Prirucka_EET_2_0.pdf" rel="noopener">Příručka EET&nbsp;2.0 (Finanční správa)</a></li><li><a href="https://eet.gov.cz/assets/cs/cmsmedia/pro-vyvojare/EET_popis_polozek_datove_zpravy.pdf" rel="noopener">Popis položek datové zprávy s&nbsp;příklady (Finanční správa)</a></li></ul>
         <p class="disclaimer">Návod je obecná informace, ne právní ani daňová rada. U&nbsp;své konkrétní situace se poraďte s&nbsp;daňovým poradcem nebo finančním úřadem.</p>
       </section>
       <nav class="related" aria-label="Mohlo by vás zajímat"><h2>Mohlo by vás zajímat</h2><div class="guide-grid">
-        <a class="guide-card" href="eet-2-0-krok-za-krokem.html"><small>Krok za krokem</small><b>EET 2.0 krok za krokem: DIS+, evidenční jednotka a&nbsp;pokladní certifikát</b></a>
+        <a class="guide-card" href="eet-2-0-krok-za-krokem.html"><small>Krok za krokem</small><b>EET&nbsp;2.0 krok za krokem: DIS+, evidenční jednotka a&nbsp;pokladní certifikát</b></a>
         <a class="guide-card" href="eet-off-pausalni-dan.html"><small>Režim EET OFF</small><b>Režim EET OFF: kdo nemusí evidovat tržby a&nbsp;kolik to stojí</b></a>
         <a class="guide-card" href="moje-eet-nebo-pokladna.html"><small>Výběr řešení</small><b>MOJE eet, nebo pokladní systém: co státní aplikace umí a&nbsp;co ne</b></a>
       </div></nav>
@@ -275,7 +277,7 @@
           <li><a href="obory.html">Pro koho</a></li>
           <li><a href="funkce.html">Funkce</a></li>
           <li><a href="cenik.html">Ceník</a></li>
-          <li><a href="eet.html">EET 2.0</a></li>
+          <li><a href="eet.html">EET&nbsp;2.0</a></li>
           <li><a href="navody.html">Návody</a></li>
           <li><a href="jak-zacit.html">Jak začít</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
@@ -301,7 +303,7 @@
         <ul>
           <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
           <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
-          <li><a href="https://eet.gov.cz/" rel="noopener">EET 2.0 – Finanční správa</a></li>
+          <li><a href="https://eet.gov.cz/" rel="noopener">EET&nbsp;2.0 – Finanční správa</a></li>
         </ul>
       </div>
     </div>
